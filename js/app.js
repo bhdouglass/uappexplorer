@@ -42,9 +42,10 @@
 			});
 		}
 
-		//TODO loading indicator
+		$scope.loading = true;
 		clickapps.findAll().then(function() {
 			refresh();
+			$scope.loading = false;
 		});
 
 		$scope.showApp = function(app) {
