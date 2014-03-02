@@ -1,23 +1,32 @@
 (function() {
 	var app = angular.module('app', ['mgcrea.ngStrap.modal']);
 
-	app.controller('mainCtrl', function ($scope, $http, $timeout, $modal) {
+	app.controller('mainCtrl', function ($scope, $timeout, $modal, clickapps) {
 		$scope.apps = [];
-		$scope.filter = '';
-		$scope.$watch('filter', refresh);
+		$scope.categories = clickapps.categories;
+		$scope.search = '';
+		$scope.category = null;
 
-		var db = new Nedb();
-		function refresh() {
-			var regex = new RegExp($scope.filter, 'i');
-			console.log($scope.filter, regex);
-			db.find({title: regex}).sort({title: 1}).exec(function(error, docs) {
+		$scope.$watch('search', refresh);
+		$scope.$watch('category', refresh);
+
+		function refresh(refreshCategory) {
+			var regex = new RegExp($scope.search, 'i');
+			var filter = {title: regex}
+			if ($scope.category) {
+				filter.category = new RegExp($scope.category.replace(' > ', ';'));
+				console.log($scope.category);
+			}
+
+			clickapps.apps.find(filter).sort({title: 1}).exec(function(error, docs) {
 				$timeout(function() {
-					console.log(docs[0]);
 					//$scope.apps = docs;
 					var apps = [];
 					var row = [];
+
 					for (var i = 0; i < docs.length; i++) {
 						row.push(docs[i]);
+
 						if ((i + 1) % 6 == 0) {
 							apps.push(angular.copy(row));
 							row = [];
@@ -33,24 +42,20 @@
 			});
 		}
 
-		$http({url: 'click.php', method: 'GET'}).
-			success(function(data) {
-				db.insert(data);
-				refresh();
-
-			}).error(function() {
-				console.log('error');
-			});
+		//TODO loading indicator
+		clickapps.findAll().then(function() {
+			refresh();
+		});
 
 		$scope.showApp = function(app) {
-			$http({url: 'click.php', params: {url: app.resource_url}, method: 'GET'}).
-			success(function(data) {
-				$scope.app = data;
+			clickapps.find(app.name).then(function(response) {
+				$scope.app = response.data;
 				var modal = $modal({scope: $scope, template: 'modal.html'});
-
-			}).error(function() {
-				console.log('error');
 			});
+		};
+
+		$scope.changeCategory = function(app) {
+			$scope.category = app.category.split(';')[0];
 		};
 	});
 
@@ -95,5 +100,53 @@
 
 			return bytes.toFixed(2) + unit;
 		};
+	});
+
+	app.service('clickapps', function($http) {
+		var categories = [];
+		var apps = new Nedb();//TODO cache locally
+
+		var clickapps = {
+			categories: categories,
+
+			apps: apps,
+
+			findAll: function() {
+				return $http({url: 'http://localhost:8080/apps', method: 'GET'}).
+					success(function(data) {
+						apps.insert(data);
+						clickapps.categories.length = 0;
+
+						angular.forEach(data, function(app) {
+							if (app.category !== undefined) {
+								var parent = app.category.split(';')[0];
+								if (clickapps.categories.indexOf(parent) == -1) {
+									clickapps.categories.push(parent);
+								}
+
+								var category = app.category.replace(';', ' > ');
+								if (clickapps.categories.indexOf(category) == -1) {
+									clickapps.categories.push(category);
+								}
+							}
+						});
+						clickapps.categories.sort();
+
+					}).error(function(data, status) {
+						console.log('findAll error', data, status);
+					});
+			},
+
+			find: function(name) {
+				return $http({url: 'http://localhost:8080/app/' + name, method: 'GET'}).
+					success(function(data) {
+						//TODO insert into apps
+					}).error(function(data, status) {
+						console.log();
+					});
+			}
+		}
+
+		return clickapps;
 	});
 })();

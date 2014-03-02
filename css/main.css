@@ -19,3 +19,11 @@
 .search {
 	width: 300px;
 }
+
+.app {
+	margin-bottom: 10px;
+}
+
+.clickable {
+	cursor: pointer;
+}
