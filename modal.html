@@ -1,0 +1,73 @@
+<div class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" ng-click="$hide()">&times;</button>
+				<h4 class="modal-title" ng-bind="app.title"></h4>
+			</div>
+			<div class="modal-body">
+				<div>
+					<img ng-src="{{app.screenshot_url}}" ng-show="app.screenshot_url" class="screenshot" />
+				</div>
+
+				<br/>
+				<br/>
+
+				<img ng-src="{{app.icon_url}}" class="icon" />
+				<div class="btn-group">
+					<a class="btn btn-success" ng-bind="app.prices | price:'USD'" href="{{app.download_url}}"></a>
+					<a class="btn btn-info" ng-click="showChangelog = !showChangelog">v{{app.version}} - {{app.date_published | date}}</a>
+					<a class="btn btn-primary" ng-bind="app.category"></a>
+
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							App Info
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li ng-show="app.website">
+								<a href="{{app.website}}">Website: <span ng-bind="app.website"></span></a>
+							</li>
+							<li ng-show="app.support">
+								<a href="{{app.support}}">Support: <span ng-bind="app.support"></span></a>
+							</li>
+							<li ng-show="app.developer_name">
+								<a>Developer: <span ng-bind="app.developer_name"></span></a>
+							</li>
+							<li ng-show="app.publisher">
+								<a>Publisher: <span ng-bind="app.publisher"></span></a>
+							</li>
+							<li ng-show="app.company">
+								<a>Company: <span ng-bind="app.company"></span></a>
+							</li>
+							<li>
+								<a>Platforms: <span ng-bind="app.architecture"></span></a>
+							</li>
+							<li ng-show="app.license">
+								<a>License: <span ng-bind="app.license"></span></a>
+							</li>
+							<li>
+								<a>Size: <span ng-bind="app.binary_filesize | bytes"></span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<br/>
+				<br/>
+
+				<div class="well" ng-bind="app.description">
+				</div>
+
+				<div ng-show="app.changelog && showChangelog" class="well">
+					Recent Changes
+					<br/>
+					<span ng-bind="app.changelog"></span>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

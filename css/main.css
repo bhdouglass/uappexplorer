@@ -1,0 +1,21 @@
+.icon {
+	width: 64px;
+	height: 64px;
+	border-radius: 8px;
+	border: 1px solid #999999;
+}
+
+.screenshot {
+	width: 200px;
+	height: 300px;
+	border-radius: 8px;
+	border: 1px solid #999999;
+}
+
+.modal-backdrop {
+	opacity: 0.5;
+}
+
+.search {
+	width: 300px;
+}
