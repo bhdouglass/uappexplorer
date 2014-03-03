@@ -6,14 +6,16 @@
 				<h4 class="modal-title" ng-bind="app.title"></h4>
 			</div>
 			<div class="modal-body">
-				<div>
-					<img ng-src="{{app.screenshot_url}}" ng-show="app.screenshot_url" class="screenshot" />
+				<div ng-show="app.local_screenshot_urls">
+					<span ng-repeat="screenshot in app.local_screenshot_urls">
+						<img ng-src="{{screenshot}}" class="screenshot" />
+					</span>
 				</div>
 
 				<br/>
 				<br/>
 
-				<img ng-src="{{app.icon_url}}" class="icon" />
+				<img ng-src="{{app.local_icon_url}}" class="icon" />
 				<div class="btn-group">
 					<a class="btn btn-success" ng-bind="app.prices | price:'USD'" href="{{app.download_url}}"></a>
 					<a class="btn btn-info" ng-click="showChangelog = !showChangelog">v{{app.version}} - {{app.date_published | date}}</a>

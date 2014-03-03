@@ -56,7 +56,7 @@
 		<div class="container">
 			<div ng-repeat="row in apps" class="row">
 				<div ng-repeat="app in row" class="col-md-2 app">
-					<img ng-src="{{app.icon_url}}" class="icon clickable" ng-click="showApp(app)" />
+					<img ng-src="{{app.local_icon_url}}" class="icon clickable" ng-click="showApp(app)" />
 					<div ng-bind="app.title" class="clickable" ng-click="showApp(app)"></div>
 					<div class="label label-success" ng-bind="app.price | price"></div>
 					<div class="label label-info clickable" ng-bind="app.category.split(';')[0]" ng-click="changeCategory(app)"></div>

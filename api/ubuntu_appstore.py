@@ -21,7 +21,7 @@ class App(object):
 	_debug = False
 
 	basic_info_fields = [
-		'price', 'keywords', 'category', 'name', 'icon_url',
+		'price', 'keywords', 'category', 'name', 'local_icon_url',
 		'architecture', 'department', 'title', 'binary_filesize'
 	]
 

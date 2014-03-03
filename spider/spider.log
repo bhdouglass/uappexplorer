@@ -1,8 +1,0 @@
-2014-03-01 22:56:39,779 - INFO:__init__() 'Connecting to mongo'
-2014-03-01 22:56:39,780 - INFO:__init__() 'Connected to mongo'
-2014-03-01 22:56:39,781 - INFO:crawl() 'Sending initial request'
-2014-03-01 22:56:40,880 - INFO:crawl() 'Got 122 apps'
-2014-03-01 22:56:40,880 - INFO:crawl() 'Fetching com.ubuntu.developer.djain29.unit-converter (1/122)'
-2014-03-01 22:56:41,459 - INFO:crawl() 'Got com.ubuntu.developer.djain29.unit-converter'
-2014-03-01 22:56:41,460 - INFO:crawl() 'Found existing with id 53129b6976cebb31943d5543'
-2014-03-01 22:56:41,461 - INFO:crawl() 'Going to sleep for 14s'

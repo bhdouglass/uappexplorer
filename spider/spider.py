@@ -2,7 +2,7 @@
 
 from pymongo import MongoClient
 from datetime import datetime
-import requests, time, sys, random, logging, os
+import requests, time, sys, random, logging, os, shutil
 logger = logging.getLogger('spider')
 
 class Spider(object):
@@ -29,6 +29,15 @@ class Spider(object):
 
 		self.apps = {}
 
+	def fetch_image(self, url, filename):
+		logger.info('Going to fetch %s' % url)
+		response = requests.get(url, stream=True)
+
+		with open(filename, 'wb') as out_file:
+			shutil.copyfileobj(response.raw, out_file)
+
+		logger.info('Fetched to %s' % filename)
+
 	def crawl(self):
 		logger.info('Sending initial request')
 		r = requests.get(self.url)
@@ -47,13 +56,34 @@ class Spider(object):
 			app['last_crawled'] = datetime.now()
 			logger.info('Got %s' % app['name'])
 
-			#TODO cache images & detect if content changed
-
 			existing = self.collection.find_one({'name': app['name']})
 			if existing is not None:
 				app['_id'] = existing['_id']
 				logger.info('Found existing with id %s' % existing['_id'])
 
+			if not os.path.exists(app['name']):
+				os.makedirs(app['name'])
+
+			local_screenshot_urls = []
+			if 'screenshot_urls' in app:
+				for screenshot in app['screenshot_urls']:
+					filename = os.path.join(app['name'], os.path.basename(screenshot))
+					local_screenshot_urls.append(os.path.join('spider', filename))
+					self.fetch_image(screenshot, filename)
+
+			local_icon_urls = []
+			if 'icon_urls' in app:
+				for size, icon in app['icon_urls'].iteritems():
+					filename = os.path.join(app['name'], os.path.basename(icon))
+					local_icon_urls.append(os.path.join('spider', filename))
+					self.fetch_image(icon, filename)
+
+			local_icon_url = os.path.join(app['name'], os.path.basename(app['icon_url']))
+			self.fetch_image(app['icon_url'], local_icon_url)
+
+			app['local_screenshot_urls'] = local_screenshot_urls
+			app['local_icon_urls'] = local_icon_urls
+			app['local_icon_url'] = os.path.join('spider', local_icon_url)
 			self.collection.save(app)
 
 			sleep = random.randint(5, 30)
