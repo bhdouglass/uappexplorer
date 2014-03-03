@@ -19,7 +19,7 @@
 				<div class="btn-group">
 					<a class="btn btn-success" ng-bind="app.prices | price:'USD'" href="{{app.download_url}}"></a>
 					<a class="btn btn-info" ng-click="showChangelog = !showChangelog">v{{app.version}} - {{app.date_published | date}}</a>
-					<a class="btn btn-primary" ng-bind="app.category"></a>
+					<a class="btn btn-primary" ng-bind="app.category.replace(';', ' > ')" ng-click="hideAndChangeCategory($hide, app)"></a>
 
 					<div class="btn-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -28,10 +28,10 @@
 						</button>
 						<ul class="dropdown-menu">
 							<li ng-show="app.website">
-								<a href="{{app.website}}">Website: <span ng-bind="app.website"></span></a>
+								<a href="{{app.website}}" target="_blank">Website: <span ng-bind="app.website"></span></a>
 							</li>
 							<li ng-show="app.support">
-								<a href="{{app.support}}">Support: <span ng-bind="app.support"></span></a>
+								<a href="{{app.support}}" target="_blank">Support: <span ng-bind="app.support"></span></a>
 							</li>
 							<li ng-show="app.developer_name">
 								<a>Developer: <span ng-bind="app.developer_name"></span></a>

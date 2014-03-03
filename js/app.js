@@ -14,6 +14,7 @@
 			var regex = new RegExp($scope.search, 'i');
 			var filter = {title: regex}
 
+			console.log($scope.category);
 			if ($scope.category) {
 				var category = $scope.category.replace(' > ', ';').split(' ')[0];
 				if (category != 'Any') {
@@ -69,6 +70,15 @@
 			clickapps.find(app.name).then(function(response) {
 				$scope.app = response.data;
 				var modal = $modal({scope: $scope, template: 'modal.html'});
+			});
+		};
+
+		$scope.hideAndChangeCategory = function(hide, app) {
+			hide();
+			angular.forEach($scope.categories, function(category) {
+				if (category.replace(' > ', ';').split(' ')[0] == app.category) {
+					$scope.category = category;
+				}
 			});
 		};
 
