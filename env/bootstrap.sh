@@ -2,7 +2,8 @@
 
 apt-get update
 apt-get upgrade -y
-apt-get install -y nano bash-completion nginx python-pip python-pymongo mongodb
+apt-get remove apache2
+apt-get install -y nano bash-completion nginx python-pip python-pymongo mongodb python-requests
 
 pip install cherrypy
 
