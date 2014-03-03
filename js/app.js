@@ -3,7 +3,7 @@
 
 	app.controller('mainCtrl', function ($scope, $timeout, $modal, clickapps) {
 		$scope.apps = [];
-		$scope.categories = clickapps.categories;
+		$scope.categories = [];
 		$scope.search = '';
 		$scope.category = null;
 
@@ -13,14 +13,16 @@
 		function refresh(refreshCategory) {
 			var regex = new RegExp($scope.search, 'i');
 			var filter = {title: regex}
+
 			if ($scope.category) {
-				filter.category = new RegExp($scope.category.replace(' > ', ';'));
-				console.log($scope.category);
+				var category = $scope.category.replace(' > ', ';').split(' ')[0];
+				if (category != 'Any') {
+					filter.category = new RegExp(category);
+				}
 			}
 
 			clickapps.apps.find(filter).sort({title: 1}).exec(function(error, docs) {
 				$timeout(function() {
-					//$scope.apps = docs;
 					var apps = [];
 					var row = [];
 
@@ -41,6 +43,21 @@
 				});
 			});
 		}
+
+		clickapps.category_stats().then(function(response) {
+			var count = 0;
+			angular.forEach(response.data, function(value, key) {
+				$scope.categories.push(key.replace(';', ' > ') + ' (' + value + ')');
+
+				if (key == 'Any') {
+					$scope.category = $scope.categories[count];
+				}
+
+				count++;
+			});
+
+			$scope.categories.sort();
+		});
 
 		$scope.loading = true;
 		clickapps.findAll().then(function() {
@@ -104,34 +121,29 @@
 	});
 
 	app.service('clickapps', function($http) {
-		var categories = [];
 		var apps = new Nedb();//TODO cache locally
 
 		var clickapps = {
-			categories: categories,
-
 			apps: apps,
+
+			categories: function() {
+				return $http({url: 'http://localhost:8080/categories', method: 'GET'}).
+					error(function(data, status) {
+						console.log('categories error', data, status);
+					});
+			},
+
+			category_stats: function() {
+				return $http({url: 'http://localhost:8080/category_stats', method: 'GET'}).
+				error(function(data, status) {
+					console.log('category_stats error', data, status);
+				});
+			},
 
 			findAll: function() {
 				return $http({url: 'http://localhost:8080/apps', method: 'GET'}).
 					success(function(data) {
 						apps.insert(data);
-						clickapps.categories.length = 0;
-
-						angular.forEach(data, function(app) {
-							if (app.category !== undefined) {
-								var parent = app.category.split(';')[0];
-								if (clickapps.categories.indexOf(parent) == -1) {
-									clickapps.categories.push(parent);
-								}
-
-								var category = app.category.replace(';', ' > ');
-								if (clickapps.categories.indexOf(category) == -1) {
-									clickapps.categories.push(category);
-								}
-							}
-						});
-						clickapps.categories.sort();
 
 					}).error(function(data, status) {
 						console.log('findAll error', data, status);

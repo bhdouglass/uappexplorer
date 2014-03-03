@@ -3,9 +3,17 @@
 from bson import json_util
 import json, logging
 from pymongo import MongoClient
-from bottle import route, run, response
+import cherrypy
 
 logger = logging.getLogger('spider')
+
+def jsonify(function):
+	def return_json(*args):
+		cherrypy.response.headers["Access-Control-Allow-Origin"] = '*'
+		cherrypy.response.headers['Content-Type'] = 'application/json'
+		return json.dumps(function(*args), default=json_util.default)
+
+	return return_json
 
 class App(object):
 	_host = 'localhost'
@@ -22,11 +30,13 @@ class App(object):
 		self.db = self.client.ubuntu_apps
 		self.collection = self.db.ubuntu_click_apps
 
+		'''
 		formatter = logging.Formatter("%(asctime)s - %(levelname)s:%(funcName)s() '%(message)s'")
 		logger_sh = logging.StreamHandler()
 		logger_sh.setFormatter(formatter)
 		logger.addHandler(logger_sh)
 		logger.setLevel(logging.DEBUG)
+		'''
 
 	def basic_info(self, app):
 		info = {}
@@ -38,10 +48,8 @@ class App(object):
 
 		return info
 
-	def response(self):
-		response.headers['Access-Control-Allow-Origin'] = '*'
-		response.content_type = 'application/json'
-
+	@cherrypy.expose
+	@jsonify
 	def apps(self):
 		apps = []
 		docs = self.collection.find()
@@ -49,25 +57,43 @@ class App(object):
 		for app in docs:
 			apps.append(self.basic_info(app))
 
-		self.response()
-		return json.dumps(apps, default=json_util.default)
+		return apps
 
+	@cherrypy.expose
+	@jsonify
 	def app(self, name):
 		app = self.collection.find_one({'name': name})
+		return app
 
-		self.response()
-		return json.dumps(app, default=json_util.default)
+	@cherrypy.expose
+	@jsonify
+	def categories(self):
+		categories = self.collection.distinct('category')
+		for category in categories:
+			parent = category.split(';')[0]
+			if parent not in categories:
+				categories.append(parent)
 
+		return categories
+
+	@cherrypy.expose
+	@jsonify
+	def category_stats(self):
+		categories = json.loads(self.categories())
+
+		stats = {}
+		for category in categories:
+			stats[category] = self.collection.find({'category': {'$regex': category}}).count()
+
+		stats['Any'] = self.collection.count()
+
+		return stats
+
+	@cherrypy.expose
+	@jsonify
 	def alive(self):
 		return ''
 
-	def run(self):
-		 run(host=self._host, port=self._port, debug=self._debug)
-
 if __name__ == '__main__':
 	app = App()
-	route('/apps', method='GET')(app.apps)
-	route('/app/<name>', method='GET')(app.app)
-	route('/alive', method='GET')(app.alive)
-
-	app.run()
+	cherrypy.quickstart(app)
