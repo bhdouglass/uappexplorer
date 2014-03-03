@@ -1,0 +1,10 @@
+#!/bin/bash
+
+apt-get update
+apt-get upgrade -y
+apt-get install -y nano bash-completion nginx python-pip python-mongodb mongodb
+
+pip install cherrypy
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+bash $DIR/update_config.sh
