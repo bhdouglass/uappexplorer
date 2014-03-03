@@ -130,28 +130,28 @@
 		};
 	});
 
-	app.service('clickapps', function($http) {
+	app.service('clickapps', function($http, $location) {
 		var apps = new Nedb();//TODO cache locally
 
 		var clickapps = {
 			apps: apps,
 
 			categories: function() {
-				return $http({url: 'http://localhost:8080/categories', method: 'GET'}).
+				return $http({url: 'http://' + $location.host() + ':8080/categories', method: 'GET'}).
 					error(function(data, status) {
 						console.log('categories error', data, status);
 					});
 			},
 
 			category_stats: function() {
-				return $http({url: 'http://localhost:8080/category_stats', method: 'GET'}).
+				return $http({url: 'http://' + $location.host() + ':8080/category_stats', method: 'GET'}).
 				error(function(data, status) {
 					console.log('category_stats error', data, status);
 				});
 			},
 
 			findAll: function() {
-				return $http({url: 'http://localhost:8080/apps', method: 'GET'}).
+				return $http({url: 'http://' + $location.host() + ':8080/apps', method: 'GET'}).
 					success(function(data) {
 						apps.insert(data);
 
@@ -161,7 +161,7 @@
 			},
 
 			find: function(name) {
-				return $http({url: 'http://localhost:8080/app/' + name, method: 'GET'}).
+				return $http({url: 'http://' + $location.host() + ':8080/app/' + name, method: 'GET'}).
 					success(function(data) {
 						//TODO insert into apps
 					}).error(function(data, status) {
