@@ -22,7 +22,7 @@ class App(object):
 
 	basic_info_fields = [
 		'price', 'keywords', 'category', 'name', 'local_icon_url',
-		'architecture', 'department', 'title', 'binary_filesize'
+		'architecture', 'department', 'title', 'binary_filesize', 'date_published'
 	]
 
 	def __init__(self):

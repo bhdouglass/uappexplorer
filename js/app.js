@@ -7,8 +7,12 @@
 		$scope.search = '';
 		$scope.category = null;
 
+		$scope.sorts = ['Title A-Z', 'Title Z-A', 'Newest First', 'Oldest First'];
+		$scope.sort = $scope.sorts[0];
+
 		$scope.$watch('search', refresh);
 		$scope.$watch('category', refresh);
+		$scope.$watch('sort', refresh);
 
 		function refresh(refreshCategory) {
 			var regex = new RegExp($scope.search, 'i');
@@ -22,7 +26,18 @@
 				}
 			}
 
-			clickapps.apps.find(filter).sort({title: 1}).exec(function(error, docs) {
+			var sort = {title: 1};
+			if ($scope.sort == $scope.sorts[1]) {
+				sort = {title: 0};
+			}
+			else if ($scope.sort == $scope.sorts[2]) {
+				sort = {date_published: -1};
+			}
+			else if ($scope.sort == $scope.sorts[3]) {
+				sort = {date_published: 1};
+			}
+
+			clickapps.apps.find(filter).sort(sort).exec(function(error, docs) {
 				$timeout(function() {
 					var apps = [];
 					var row = [];
