@@ -72,14 +72,14 @@ class Spider(object):
 			if 'screenshot_urls' in app:
 				for screenshot in app['screenshot_urls']:
 					filename = os.path.join(img_dir, os.path.basename(screenshot))
-					local_screenshot_urls.append(filename.replace(img_dir, 'cache/img'))
+					local_screenshot_urls.append(filename.replace(self.img_dir, 'cache/img'))
 					self.fetch_image(screenshot, filename)
 
 			local_icon_urls = []
 			if 'icon_urls' in app:
 				for size, icon in app['icon_urls'].iteritems():
 					filename = os.path.join(img_dir, os.path.basename(icon))
-					local_icon_urls.append(filename.replace(img_dir, 'cache/img'))
+					local_icon_urls.append(filename.replace(self.img_dir, 'cache/img'))
 					self.fetch_image(icon, filename)
 
 			local_icon_url = os.path.join(img_dir, os.path.basename(app['icon_url']))
@@ -87,7 +87,7 @@ class Spider(object):
 
 			app['local_screenshot_urls'] = local_screenshot_urls
 			app['local_icon_urls'] = local_icon_urls
-			app['local_icon_url'] = local_icon_url.replace(img_dir, 'cache/img')
+			app['local_icon_url'] = local_icon_url.replace(self.img_dir, 'cache/img')
 			self.collection.save(app)
 
 			sleep = random.randint(5, 30)
