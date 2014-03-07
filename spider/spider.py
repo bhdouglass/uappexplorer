@@ -8,6 +8,7 @@ logger = logging.getLogger('spider')
 class Spider(object):
 	url = 'https://search.apps.ubuntu.com/api/v1/search'
 	log = 'spider.log'
+	img_dir = '/ubuntu-appstore-cache/img'
 
 	def __init__(self):
 		formatter = logging.Formatter("%(asctime)s - %(levelname)s:%(funcName)s() '%(message)s'")
@@ -60,30 +61,33 @@ class Spider(object):
 			if existing is not None:
 				app['_id'] = existing['_id']
 				logger.info('Found existing with id %s' % existing['_id'])
+			else:
+				logger.info('New app: %s' % app['name'])
 
-			if not os.path.exists(app['name']):
-				os.makedirs(app['name'])
+			img_dir = os.path.join(self.img_dir, app['name'])
+			if not os.path.exists(img_dir):
+				os.makedirs(img_dir)
 
 			local_screenshot_urls = []
 			if 'screenshot_urls' in app:
 				for screenshot in app['screenshot_urls']:
-					filename = os.path.join(app['name'], os.path.basename(screenshot))
-					local_screenshot_urls.append(os.path.join('spider', filename))
+					filename = os.path.join(img_dir, os.path.basename(screenshot))
+					local_screenshot_urls.append(filename.replace(img_dir, 'cache/img'))
 					self.fetch_image(screenshot, filename)
 
 			local_icon_urls = []
 			if 'icon_urls' in app:
 				for size, icon in app['icon_urls'].iteritems():
-					filename = os.path.join(app['name'], os.path.basename(icon))
-					local_icon_urls.append(os.path.join('spider', filename))
+					filename = os.path.join(img_dir, os.path.basename(icon))
+					local_icon_urls.append(filename.replace(img_dir, 'cache/img'))
 					self.fetch_image(icon, filename)
 
-			local_icon_url = os.path.join(app['name'], os.path.basename(app['icon_url']))
+			local_icon_url = os.path.join(img_dir, os.path.basename(app['icon_url']))
 			self.fetch_image(app['icon_url'], local_icon_url)
 
 			app['local_screenshot_urls'] = local_screenshot_urls
 			app['local_icon_urls'] = local_icon_urls
-			app['local_icon_url'] = os.path.join('spider', local_icon_url)
+			app['local_icon_url'] = local_icon_url.replace(img_dir, 'cache/img')
 			self.collection.save(app)
 
 			sleep = random.randint(5, 30)
