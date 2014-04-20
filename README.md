@@ -2,7 +2,7 @@
 
 [![Build Status](https://drone.io/github.com/bhdouglass/ubuntu-appstore/status.png)](https://drone.io/github.com/bhdouglass/ubuntu-appstore/latest)
 
-View and download apps from the Ubuntu click appstore - <http://appstore.bhdouglass.tk/>.
+View and download apps from the Ubuntu click appstore - <http://appstore.bhdouglass.com/>.
 
 While this app uses the Ubuntu click appstore api, it caches images and data to be kind to the api.
 

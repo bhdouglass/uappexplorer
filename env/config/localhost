@@ -2,11 +2,11 @@ server {
 	root /ubuntu-appstore;
 	index index.html;
 
-	location / {
-		try_files $uri $uri/ =404;
+	location ^~ /cache {
+		alias /ubuntu-appstore-cache;
 	}
 
-	location /cache {
-		root /ubuntu-appstore/cache;
+	location / {
+		try_files $uri $uri/ =404;
 	}
 }
