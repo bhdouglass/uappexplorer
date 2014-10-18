@@ -1,3 +1,0 @@
-# /etc/cron.d/ubuntu_appstore: crontab fragment for ubuntu_appstore spider
-
-0 0 */2 * * root /bin/bash /ubuntu-appstore/spider/run_spider.sh
