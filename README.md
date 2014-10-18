@@ -1,8 +1,26 @@
 # Ubuntu Appstore (Unofficial) #
 
-View and download apps from the Ubuntu click appstore - <http://appstore.bhdouglass.com/>.
+Browse, download, and search apps from the Ubuntu click appstore - <http://appstore.bhdouglass.com/>.
 
 While this app uses the Ubuntu click appstore api, it caches images and data to be kind to the api.
+
+## Development ##
+
+* Install [vagrant](http://vagrantup.com/):
+    * Ubuntu: `sudo apt-get install vagrant`
+    * Arch Linux: `pacman -S vagrant`
+* Install vagrant plugins:
+    * Run (may need sudo): `vagrant plugin install vagrant-omnibus vagrant-chef-zero vagrant-berkshelf`
+* Start vagrant:
+    * Run: `vagrant up`
+    * Ssh into the box: `vagrant ssh`
+* Start the webserver:
+    * Go to: `/srv/ubuntu-appstore/`
+    * Run: `npm start`
+* Visit the site:
+    * In your browser go to: `192.168.52.200:8080`
+    * You may want to put a friendly name in your host machine's `/etc/hosts`
+* Profit!
 
 ## License ##
 

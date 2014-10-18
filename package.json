@@ -1,0 +1,23 @@
+{
+  "name": "ubuntu-appstore",
+  "version": "1.0.0",
+  "description": "Unofficial Ubuntu Touch Appstore",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhdouglass/ubuntu-appstore.git"
+  },
+  "author": "Brian Douglass",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/bhdouglass/ubuntu-appstore/issues"
+  },
+  "homepage": "https://github.com/bhdouglass/ubuntu-appstore",
+  "dependencies": {
+    "express": "^4.9.8",
+    "mongoose": "^3.8.17"
+  }
+}

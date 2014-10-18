@@ -1,2 +1,7 @@
 *.kdev4
+.kateconfig
+
 *.log
+
+node_modules/
+.vagrant/
