@@ -18,6 +18,7 @@
   "homepage": "https://github.com/bhdouglass/ubuntu-appstore",
   "dependencies": {
     "express": "^4.9.8",
+    "lodash": "^2.4.1",
     "mongoose": "^3.8.17"
   }
 }

@@ -2,7 +2,8 @@
 
 Browse, download, and search apps from the Ubuntu click appstore - <http://appstore.bhdouglass.com/>.
 
-While this app uses the Ubuntu click appstore api, it caches images and data to be kind to the api.
+While this app uses the Ubuntu [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
+it caches images and data to be kind to the api.
 
 ## Development ##
 
