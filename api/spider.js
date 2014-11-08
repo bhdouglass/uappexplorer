@@ -87,7 +87,7 @@ function parseExtendedPackage(pkg) {
 
 function parsePackage(data) {
   return function(callback) {
-    //TODOchange to findOne
+    //TODO change to findOne
     db.Package.find({name: data.name}, function(err, packages) {
       var pkg = null
       if (err) {
