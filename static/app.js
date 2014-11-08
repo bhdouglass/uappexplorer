@@ -20,6 +20,11 @@ app.controller('indexCtrl', function ($scope, $http) {
     }
   ];
 
+  $scope.types = {
+    application: 'App',
+    scope: 'Scope'
+  };
+
   $scope.paging = {
     query: {},
     skip: 0,

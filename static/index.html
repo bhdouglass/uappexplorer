@@ -73,7 +73,8 @@
         <div class="col-md-2 center package" ng-repeat="pkg in chunk">
           <img ng-src="{{pkg.icon}}" alt="{{pkg.name}}" class="icon" /><!-- TODO use cached version -->
           <br/>
-          <span ng-bind="pkg.title"></span>
+          <div ng-bind="pkg.title"></div>
+          <div class="label" ng-class="{'label-success': types[pkg.type] == 'App', 'label-primary': types[pkg.type] == 'Scope'}" ng-bind="types[pkg.type]"></div>
         </div>
       </div>
     </div>
