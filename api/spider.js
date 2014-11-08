@@ -38,7 +38,7 @@ var propertyMap = {
 
 function map(pkg, data) {
   _.forEach(propertyMap, function(dataProperty, pkgProperty) {
-    pkg[pkgProperty] = data[dataProperty];
+    pkg[pkgProperty] = data[dataProperty]
     if (dataProperty.indexOf('_url') > -1) {
       pkg[pkgProperty] = utils.fixUrl(pkg[pkgProperty])
     }
@@ -62,7 +62,7 @@ function parseExtendedPackage(pkg) {
           data = JSON.parse(body)
           pkg = map(pkg, data)
           pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
-          console.log(pkg.icon_filename);
+          console.log(pkg.icon_filename)
 
           pkg.save(function(err, pkg) {
             if (err) {
@@ -74,7 +74,7 @@ function parseExtendedPackage(pkg) {
               var filename = path + '/' + pkg.icon_filename
 
               utils.download(pkg.icon, filename, function() {
-                console.log(filename + ' finished downloading');
+                console.log(filename + ' finished downloading')
               })
               callback(null, pkg)
             }
@@ -89,15 +89,15 @@ function parsePackage(data) {
   return function(callback) {
     //TODOchange to findOne
     db.Package.find({name: data.name}, function(err, packages) {
-      var pkg = null;
+      var pkg = null
       if (err) {
-        console.error(err);
+        console.error(err)
       }
       else if (packages.length == 0) {
-        pkg = new db.Package();
+        pkg = new db.Package()
       }
       else {
-        pkg = packages[0];
+        pkg = packages[0]
       }
 
       pkg = map(pkg, data)
@@ -118,7 +118,7 @@ function parsePackage(data) {
 function parsePackageList(list) {
   var packageCallbacks = []
   _.forEach(list, function(pkg) {
-    packageCallbacks.push(parsePackage(pkg));
+    packageCallbacks.push(parsePackage(pkg))
   })
   console.log('done parsing package list')
 
@@ -133,7 +133,7 @@ function parsePackageList(list) {
     })
 
     //For testing
-    //var extendedCallbacks = [extendedCallbacks[0]];
+    //var extendedCallbacks = [extendedCallbacks[0]]
     async.series(extendedCallbacks, function(err, results) {
       if (err) {
         console.error(err)
@@ -149,8 +149,9 @@ function packageList() {
   request('https://search.apps.ubuntu.com/api/v1/search', function(err, resp, body) {
     data = JSON.parse(body)
     console.log('got package list')
-    parsePackageList(data['_embedded']['clickindex:package']);
+    parsePackageList(data['_embedded']['clickindex:package'])
   })
 }
 
+packageList()
 exports.packageList = packageList

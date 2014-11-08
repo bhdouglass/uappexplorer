@@ -1,5 +1,4 @@
 var express = require('express')
-var spider = require('./api/spider')
 var db = require('./api/db')
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080
@@ -35,8 +34,6 @@ app.get('/api/apps/:name', function(req, res) {
     success(res, pkg)
   })
 })
-
-//spider.packageList()
 
 var server = app.listen(server_port, server_ip_address, function () {
   var host = server.address().address

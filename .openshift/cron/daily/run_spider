@@ -1,0 +1,6 @@
+#!/bin/bash
+
+run=$(expr $(date '+%j') % 2)
+if [ $run = 0 ]; then
+  node $OPENSHIFT_REPO_DIR/api/spider.js | tee $OPENSHIFT_LOG_DIR/spider.log
+fi
