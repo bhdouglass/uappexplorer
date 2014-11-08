@@ -1,6 +1,16 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/appstore', function (err, res) {
+var host = process.env.OPENSHIFT_MONGODB_DB_HOST || process.env.MONGODB_HOST || 'localhost'
+var port = process.env.OPENSHIFT_MONGODB_DB_PORT || process.env.MONGODB_PORT || 27017
+var database = process.env.MONGODB_DB || 'appstore'
+var options = {}
+
+if (process.env.OPENSHIFT_MONGODB_DB_HOST) {
+  options.user = 'admin'
+  options.pass = 'aGH5xLNHd_gh'
+}
+
+mongoose.connect('mongodb://' + host + ':' + port + '/' + database, function(err, res) {
   if (err) {
     console.log('Error connecting to mongo: ' + err);
   }
