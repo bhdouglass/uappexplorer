@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ubuntu Appstore</title>
+
+    <!-- jQuery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+    <!-- AngularJS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.css" />
+
+    <!-- LoDash -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+    <!-- App & Custom Stylesheet -->
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body ng-controller="indexCtrl">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand">
+            <img src="ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
+            Ubuntu Click Apps
+          </span>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <form class="navbar-form navbar-left" role="search">
+              <!--<div class="form-group">
+                Category:
+                <select ng-model="category" ng-options="c for c in categories" class="form-control">
+                </select>
+              </div>-->
+
+              <div class="form-group">
+                Sort By:
+                <select ng-model="paging.sort" ng-options="s.value as s.label for s in sorts" class="form-control">
+                </select>
+              </div>
+
+              <!--<div class="form-group">
+                <div class="input-group search">
+                  <span class="input-group-addon">
+                    <span class="fa fa-search"></span>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Search" ng-model="search" />
+                </span>
+              </div>-->
+            </form>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+      <div class="row packages" ng-repeat="chunk in package_chunks">
+        <div class="col-md-2 center package" ng-repeat="pkg in chunk">
+          <img ng-src="{{pkg.icon}}" alt="{{pkg.name}}" class="icon" /><!-- TODO use cached version -->
+          <br/>
+          <span ng-bind="pkg.title"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

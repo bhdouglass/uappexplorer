@@ -1,0 +1,49 @@
+.icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid #999999;
+}
+
+.screenshot {
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid #999999;
+}
+
+.modal-backdrop {
+  opacity: 0.5;
+}
+
+.search {
+  width: 300px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+img.logo {
+  width: 32px;
+  height: 32px;
+  margin-top: -10px;
+  display: inline-block;
+}
+
+.rotate {
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
+}
+
+.center {
+  text-align: center;
+}
+
+.package {
+    margin-bottom: 25px;
+}

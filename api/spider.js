@@ -85,15 +85,16 @@ function parseExtendedPackage(pkg) {
   }
 }
 
-function parsePackage(data, Package) {
+function parsePackage(data) {
   return function(callback) {
-    Package.find({name: data.name}, function(err, packages) {
+    //TODOchange to findOne
+    db.Package.find({name: data.name}, function(err, packages) {
       var pkg = null;
       if (err) {
         console.error(err);
       }
       else if (packages.length == 0) {
-        pkg = new Package();
+        pkg = new db.Package();
       }
       else {
         pkg = packages[0];
@@ -115,32 +116,30 @@ function parsePackage(data, Package) {
 }
 
 function parsePackageList(list) {
-  db.connect(function(Package) {
-    var packageCallbacks = []
-    _.forEach(list, function(pkg) {
-      packageCallbacks.push(parsePackage(pkg, Package));
+  var packageCallbacks = []
+  _.forEach(list, function(pkg) {
+    packageCallbacks.push(parsePackage(pkg));
+  })
+  console.log('done parsing package list')
+
+  async.parallel(packageCallbacks, function(err, pkgs) {
+    console.log('done saving packages')
+
+    var extendedCallbacks = []
+    _.forEach(pkgs, function(pkg) {
+      if (pkg) {
+        extendedCallbacks.push(parseExtendedPackage(pkg))
+      }
     })
-    console.log('done parsing package list')
 
-    async.parallel(packageCallbacks, function(err, pkgs) {
-      console.log('done saving packages')
+    //For testing
+    //var extendedCallbacks = [extendedCallbacks[0]];
+    async.series(extendedCallbacks, function(err, results) {
+      if (err) {
+        console.error(err)
+      }
 
-      var extendedCallbacks = []
-      _.forEach(pkgs, function(pkg) {
-        if (pkg) {
-          extendedCallbacks.push(parseExtendedPackage(pkg))
-        }
-      })
-
-      //For testing
-      //var extendedCallbacks = [extendedCallbacks[0]];
-      async.series(extendedCallbacks, function(err, results) {
-        if (err) {
-          console.error(err)
-        }
-
-        console.log('done spidering')
-      })
+      console.log('done spidering')
     })
   })
 }
