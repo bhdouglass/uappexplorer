@@ -19,6 +19,7 @@ app.get('/api/categories', function(req, res) {
   //TODO
 });
 
+//TODO cache this to speed up requests
 app.get('/api/apps', function(req, res) {
   db.Package.find({}, function(err, pkgs) {
     //TODO paging

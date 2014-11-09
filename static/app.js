@@ -1,6 +1,19 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['ui.router']);
 
-app.controller('indexCtrl', function ($scope, $http) {
+app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/apps');
+
+  $stateProvider.state('apps', {
+    url: '/apps',
+    templateUrl: '/apps.html'
+  }).state('app', {
+    url: '/app/:name',
+    templateUrl: 'app.html'
+  });
+});
+
+app.controller('indexCtrl', function ($scope, $http, $state) {
+  $scope.$state = $state;
   $scope.sorts = [
     {
       label: 'Title A-Z',
@@ -32,42 +45,64 @@ app.controller('indexCtrl', function ($scope, $http) {
     sort: 'title'
   };
 
-  $scope.packages = [];
-  function fetchPackages() {
+  $scope.$totals = [];
+  function fetchApps() {
     $http.get('/api/apps').then(function(res) {
       if (res.data.success) {
-        $scope.packages = _.sortBy(res.data.data, $scope.paging.sort);
+        $scope.apps = _.sortBy(res.data.data, $scope.paging.sort);
+
+        if ($scope.$state.current.name == 'app') {
+          $scope.select($scope.$state.params.name);
+        }
       }
       else {
-        //TODO
+        //TODO error handling
       }
     }, function(err) {
-      //TODO
+      //TODO error handling
     });
   }
-  fetchPackages();
+  fetchApps();
 
   //TODO remove once server side paged
   $scope.$watch('paging.sort', function() {
     if ($scope.paging.sort.indexOf('-') == 0) {
-      $scope.packages = _.sortBy($scope.packages, $scope.paging.sort.replace('-', '')).reverse();
+      $scope.apps = _.sortBy($scope.apps, $scope.paging.sort.replace('-', '')).reverse();
     }
     else {
-      $scope.packages = _.sortBy($scope.packages, $scope.paging.sort.replace('-', ''));
+      $scope.apps = _.sortBy($scope.apps, $scope.paging.sort.replace('-', ''));
     }
   });
 
-  $scope.package_chunks = [];
-  $scope.$watch('packages', function() {
-    var package_chunks = [];
-    _.forEach($scope.packages, function(pkg, index) {
+  $scope.app_chunks = [];
+  $scope.$watch('apps', function() {
+    var app_chunks = [];
+    _.forEach($scope.apps, function(app, index) {
       if (index % 6 == 0) {
-        package_chunks.push([]);
+        app_chunks.push([]);
       }
 
-      package_chunks[package_chunks.length - 1].push(pkg);
+      app_chunks[app_chunks.length - 1].push(app);
     });
 
-    $scope.package_chunks = package_chunks;
+    $scope.app_chunks = app_chunks;
   });
+
+  $scope.$on('$stateChangeSuccess', function() {
+    if ($scope.$state.current.name == 'app') {
+      $scope.select($scope.$state.params.name);
+    }
+  });
+
+  $scope.app = null;
+  $scope.select = function(name) { //TODO pull from api
+    _.forEach($scope.apps, function(app) {
+      if (app.name == name) {
+        $scope.app = app;
+        console.log($scope.app);
+
+        return false;
+      }
+    });
+  };
 });

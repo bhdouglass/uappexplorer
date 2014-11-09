@@ -1,0 +1,11 @@
+<div class="row apps" ng-repeat="chunk in app_chunks">
+  <div class="col-md-2 center" ng-repeat="app in chunk">
+    <a ui-sref="app({name: app.name})" class="link">
+      <img ng-src="{{app.icon}}" alt="{{app.name}}" class="icon" /><!-- TODO use cached version -->
+    </a>
+    <br/>
+    <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
+    <br/>
+    <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+  </div>
+</div>

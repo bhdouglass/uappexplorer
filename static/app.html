@@ -1,0 +1,18 @@
+<div class="app">
+  <div class="row">
+    <div class="col-md-6">
+      <img ng-src="{{app.icon}}" alt="{{app.name}}" class="icon-large pull-left" />
+      <div class="pull-left title-block">
+        <h1 ng-bind="app.title" class="title"></h1>
+        <span ng-bind="app.author"></span>
+        <span ng-show="app.company">-</span>
+        <span ng-bind="app.company"></span>
+      </div>
+      <div class="label type pull-left" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="description">Description</h2>
+      <p ng-bind="app.description"></p>
+    </div>
+  </div>
+</div>
