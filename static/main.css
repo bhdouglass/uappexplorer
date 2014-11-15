@@ -44,7 +44,7 @@ img.logo {
   text-align: center;
 }
 
-.apps {
+.apps .col-sm-2 {
     margin-bottom: 25px;
 }
 

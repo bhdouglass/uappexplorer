@@ -9,7 +9,7 @@ var propertyMap = {
   architecture:   'architecture',
   author:         'developer_name',
   average_rating: 'ratings_average',
-  categories:     'departments',
+  categories:     'department',
   changelog:      'changelog',
   company:        'company_name',
   description:    'description',

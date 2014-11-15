@@ -1,11 +1,27 @@
-<div class="row apps" ng-repeat="chunk in app_chunks">
-  <div class="col-md-2 center" ng-repeat="app in chunk">
-    <a ui-sref="app({name: app.name})" class="link">
-      <img ng-src="{{app.icon}}" alt="{{app.name}}" class="icon" /><!-- TODO use cached version -->
-    </a>
-    <br/>
-    <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
-    <br/>
-    <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+<div>
+  <div class="row apps" ng-repeat="chunk in app_chunks">
+    <div class="col-sm-2 center" ng-repeat="app in chunk">
+      <a ui-sref="app({name: app.name})" class="link">
+        <img ng-src="{{app.icon}}" alt="{{app.name}}" class="icon" /><!-- TODO use cached version -->
+      </a>
+      <br/>
+      <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
+      <br/>
+      <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="center">
+        <ul class="pagination">
+          <li><a ng-click="page(0)"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+          <li ng-repeat="p in pages track by $index">
+            <a ng-click="page($index)" ng-bind="$index + 1"></a>
+          </li>
+          <li><a ng-click="page(pages.length - 1)"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>

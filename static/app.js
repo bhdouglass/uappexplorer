@@ -14,6 +14,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('indexCtrl', function ($scope, $http, $state) {
   $scope.$state = $state;
+  $scope.app_chunks = [];
+  $scope.app = null;
+  $scope.apps = null;
+  $scope.app_count = 0;
+  $scope.pages = 1;
   $scope.sorts = [
     {
       label: 'Title A-Z',
@@ -41,40 +46,39 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
   $scope.paging = {
     query: {},
     skip: 0,
-    limit: 25,
-    sort: 'title'
+    limit: 30,
+    sort: 'title',
+    mini: true
   };
 
-  $scope.$totals = [];
   function fetchApps() {
-    $http.get('/api/apps').then(function(res) {
-      if (res.data.success) {
-        $scope.apps = _.sortBy(res.data.data, $scope.paging.sort);
+    $http.get('/api/apps', {
+      params: $scope.paging
+    }).then(function(res) {
+      $scope.apps = _.sortBy(res.data.data, $scope.paging.sort);
 
-        if ($scope.$state.current.name == 'app') {
-          $scope.select($scope.$state.params.name);
-        }
-      }
-      else {
-        //TODO error handling
+      if ($scope.$state.current.name == 'app') {
+        $scope.select($scope.$state.params.name);
       }
     }, function(err) {
       //TODO error handling
     });
+
+    $http.get('/api/apps?count=true', {
+      params: $scope.paging
+    }).then(function(res) {
+      $scope.app_count = res.data.data;
+      $scope.pages = new Array(Math.ceil($scope.app_count / $scope.paging.limit));
+    }, function(err) {
+      //TODO error handling
+    });
   }
-  fetchApps();
 
-  //TODO remove once server side paged
-  $scope.$watch('paging.sort', function() {
-    if ($scope.paging.sort.indexOf('-') == 0) {
-      $scope.apps = _.sortBy($scope.apps, $scope.paging.sort.replace('-', '')).reverse();
-    }
-    else {
-      $scope.apps = _.sortBy($scope.apps, $scope.paging.sort.replace('-', ''));
-    }
-  });
+  $scope.$watch('paging', fetchApps, true);
+  $scope.page = function(index) {
+    $scope.paging.skip = index * $scope.paging.limit;
+  };
 
-  $scope.app_chunks = [];
   $scope.$watch('apps', function() {
     var app_chunks = [];
     _.forEach($scope.apps, function(app, index) {
@@ -94,15 +98,12 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
     }
   });
 
-  $scope.app = null;
   $scope.select = function(name) { //TODO pull from api
-    _.forEach($scope.apps, function(app) {
-      if (app.name == name) {
-        $scope.app = app;
-        console.log($scope.app);
-
-        return false;
-      }
+    $http.get('/api/apps/' + name).then(function(res) {
+      $scope.app = res.data.data;
+    }, function(err) {
+      //TODO error handling
+      $scope.app = null;
     });
   };
 });
