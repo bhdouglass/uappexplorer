@@ -16,9 +16,12 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
   $scope.$state = $state;
   $scope.app_chunks = [];
   $scope.app = null;
-  $scope.apps = null;
+  $scope.apps = [];
   $scope.app_count = 0;
   $scope.pages = 1;
+  $scope.categories = [];
+  $scope.category = 'all';
+
   $scope.sorts = [
     {
       label: 'Title A-Z',
@@ -74,6 +77,34 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
     });
   }
 
+  function fetchCategories() {
+    $http.get('/api/categories').then(function(res) {
+      var categories = [{label: 'All', value: 'all'}];
+      _.forEach(res.data.data, function(category) {
+        categories.push({
+          label: category.charAt(0).toUpperCase() + category.slice(1),
+          value: category
+        });
+      });
+
+      $scope.categories = categories;
+      $scope.category = $scope.categories[0].value;
+    }, function(err) {
+      //TODO error handling
+    });
+  }
+  fetchCategories();
+
+  $scope.$watch('category', function() {
+    console.log($scope.category);
+    if ($scope.category == 'all' || !$scope.category) {
+      $scope.paging.query.categories = undefined;
+    }
+    else {
+      $scope.paging.query.categories = $scope.category;
+    }
+  }, true);
+
   $scope.$watch('paging', fetchApps, true);
   $scope.page = function(index) {
     $scope.paging.skip = index * $scope.paging.limit;
@@ -98,7 +129,7 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
     }
   });
 
-  $scope.select = function(name) { //TODO pull from api
+  $scope.select = function(name) { //TODO cache this
     $http.get('/api/apps/' + name).then(function(res) {
       $scope.app = res.data.data;
     }, function(err) {

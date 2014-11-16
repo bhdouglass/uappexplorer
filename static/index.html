@@ -45,11 +45,10 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav pull-right">
             <form class="navbar-form navbar-left" role="search">
-              <!--<div class="form-group">
+              <div class="form-group">
                 Category:
-                <select ng-model="category" ng-options="c for c in categories" class="form-control">
-                </select>
-              </div>-->
+                <select ng-model="category" ng-options="c.value as c.label for c in categories" class="form-control"></select>
+              </div>
 
               <div class="form-group">
                 Sort By:

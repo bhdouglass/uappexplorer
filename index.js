@@ -49,7 +49,7 @@ app.get('/api/categories', function(req, res) {
 
 //TODO cache this to speed up requests
 app.get('/api/apps', function(req, res) {
-  var findQuery = req.query.query ? req.query.query : {}
+  var findQuery = req.query.query ? JSON.parse(req.query.query) : {}
   if (req.query.count == 'true') {
     db.Package.count(findQuery, function(err, count) {
       if (err) {

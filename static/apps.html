@@ -1,6 +1,6 @@
 <div>
   <div class="row apps" ng-repeat="chunk in app_chunks">
-    <div class="col-sm-2 center" ng-repeat="app in chunk">
+    <div class="col-xs-6 col-sm-2 center" ng-repeat="app in chunk">
       <a ui-sref="app({name: app.name})" class="link">
         <img ng-src="{{app.icon}}" alt="{{app.name}}" class="icon" /><!-- TODO use cached version -->
       </a>
