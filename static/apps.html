@@ -1,6 +1,6 @@
 <div>
   <div class="row apps" ng-repeat="chunk in app_chunks">
-    <div class="col-xs-6 col-sm-2 center" ng-repeat="app in chunk">
+    <div class="col-xs-6 col-md-2 center" ng-repeat="app in chunk">
       <a ui-sref="app({name: app.name})" class="link">
         <img ng-src="{{app.icon}}" alt="{{app.name}}" class="icon" /><!-- TODO use cached version -->
       </a>
@@ -12,7 +12,7 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-12">
       <nav class="center">
         <ul class="pagination">
           <li><a ng-click="page(0)"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>

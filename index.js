@@ -75,6 +75,17 @@ app.get('/api/apps', function(req, res) {
       query.sort(req.query.sort)
     }
 
+    if (req.query.search) {
+      var regxp = new RegExp(req.query.search, 'i')
+      query.or([
+        {author: regxp},
+        {company: regxp},
+        {title: regxp},
+        {description: regxp},
+        {keywords: regxp}
+      ])
+    }
+
     query.exec(function(err, pkgs) {
       if (err) {
         error(res, err)

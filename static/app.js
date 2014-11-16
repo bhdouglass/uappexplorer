@@ -12,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 });
 
-app.controller('indexCtrl', function ($scope, $http, $state) {
+app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.$state = $state;
   $scope.app_chunks = [];
   $scope.app = null;
@@ -21,6 +21,7 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
   $scope.pages = 1;
   $scope.categories = [];
   $scope.category = 'all';
+  $scope.search = '';
 
   $scope.sorts = [
     {
@@ -51,7 +52,7 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
     skip: 0,
     limit: 30,
     sort: 'title',
-    mini: true
+    mini: true,
   };
 
   function fetchApps() {
@@ -96,7 +97,6 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
   fetchCategories();
 
   $scope.$watch('category', function() {
-    console.log($scope.category);
     if ($scope.category == 'all' || !$scope.category) {
       $scope.paging.query.categories = undefined;
     }
@@ -104,6 +104,23 @@ app.controller('indexCtrl', function ($scope, $http, $state) {
       $scope.paging.query.categories = $scope.category;
     }
   }, true);
+
+  var timeout = null;
+  $scope.$watch('search', function() {
+    if ($scope.search) {
+      if (timeout) {
+        $timeout.cancel(timeout);
+        timeout = null;
+      }
+
+      timeout = $timeout(function() {
+        $scope.paging.search = $scope.search;
+      }, 200);
+    }
+    else {
+      $scope.paging.search = undefined;
+    }
+  });
 
   $scope.$watch('paging', fetchApps, true);
   $scope.page = function(index) {

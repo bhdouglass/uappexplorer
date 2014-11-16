@@ -40,36 +40,37 @@
               Ubuntu Click Apps
             </a>
           </span>
-        </div>
-
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                Category:
-                <select ng-model="category" ng-options="c.value as c.label for c in categories" class="form-control"></select>
-              </div>
-
-              <div class="form-group">
-                Sort By:
-                <select ng-model="paging.sort" ng-options="s.value as s.label for s in sorts" class="form-control">
-                </select>
-              </div>
-
-              <!--<div class="form-group">
-                <div class="input-group search">
-                  <span class="input-group-addon">
-                    <span class="fa fa-search"></span>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Search" ng-model="search" />
-                </span>
-              </div>-->
-            </form>
-          </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div ui-view class="container"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="search">Search:</label>
+            <div class="input-group">
+              <input type="text" class="form-control" ng-model="search" id="search" />
+              <span class="input-group-addon">
+                <span class="fa fa-search"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="sort">Sort By:</label>
+            <select ng-model="paging.sort" ng-options="s.value as s.label for s in sorts" class="form-control" id="sort"></select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <select ng-model="category" ng-options="c.value as c.label for c in categories" class="form-control" id="category"></select>
+          </div>
+        </div>
+      </div>
+      <div ui-view></div>
+    </div>
   </body>
 </html>
