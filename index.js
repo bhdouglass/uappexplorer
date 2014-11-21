@@ -53,7 +53,20 @@ app.get('/api/categories', function(req, res) {
 app.get('/api/apps', function(req, res) {
   var findQuery = req.query.query ? JSON.parse(req.query.query) : {}
   if (req.query.count == 'true') {
-    db.Package.count(findQuery, function(err, count) {
+    var query = db.Package.count(findQuery)
+
+    if (req.query.search) {
+      var regxp = new RegExp(req.query.search, 'i')
+      query.or([
+        {author: regxp},
+        {company: regxp},
+        {title: regxp},
+        {description: regxp},
+        {keywords: regxp}
+      ])
+    }
+
+    query.exec(function(err, count) {
       if (err) {
         error(res, err)
       }
@@ -77,7 +90,7 @@ app.get('/api/apps', function(req, res) {
       query.sort(req.query.sort)
     }
 
-    if (req.query.search) { //TODO have count respect this filtering
+    if (req.query.search) {
       var regxp = new RegExp(req.query.search, 'i')
       query.or([
         {author: regxp},
