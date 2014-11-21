@@ -1,6 +1,22 @@
 #!/bin/bash
 
-run=$(expr $(date '+%j') % 2)
+if [ -z LOGDIR ]; then
+  if [ -z OPENSHIFT_LOG_DIR ]; then
+    LOGDIR = /tmp
+  else
+    LOGDIR = $OPENSHIFT_LOG_DIR
+  fi
+fi
+
+if [ -z SRCDIR ]; then
+  if [ -z OPENSHIFT_REPO_DIR ]; then
+    SRCDIR = /srv/ubuntu-appstore
+  else
+    SRCDIR = $OPENSHIFT_REPO_DIR
+  fi
+fi
+
+run=$(expr $(date '+%j') % 3)
 if [ $run = 0 ]; then
-  node $OPENSHIFT_REPO_DIR/api/spider.js | tee $OPENSHIFT_LOG_DIR/spider.log
+  node $SRCDIR/api/spider.js | tee $LOGDIR/spider.log
 fi

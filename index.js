@@ -4,9 +4,11 @@ var _ = require('lodash')
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || process.env.NODEJS_IP || '127.0.0.1'
+var data_dir = process.env.OPENSHIFTDATADIR || process.env.DATADIR || '/tmp'
 var app = express()
 
 app.use(express.static(__dirname + '/static'))
+app.use('/images', express.static(data_dir))
 
 function success(res, data, message) {
   res.send({
@@ -75,7 +77,7 @@ app.get('/api/apps', function(req, res) {
       query.sort(req.query.sort)
     }
 
-    if (req.query.search) {
+    if (req.query.search) { //TODO have count respect this filtering
       var regxp = new RegExp(req.query.search, 'i')
       query.or([
         {author: regxp},
@@ -96,7 +98,7 @@ app.get('/api/apps', function(req, res) {
           _.forEach(pkgs, function(pkg) {
             new_pkgs.push({
               name: pkg.name,
-              icon: pkg.icon,
+              icon_filename: pkg.icon_filename,
               title: pkg.title,
               type: pkg.type,
             })

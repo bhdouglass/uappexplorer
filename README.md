@@ -1,6 +1,6 @@
 # Ubuntu Appstore (Unofficial) #
 
-Browse, download, and search apps from the Ubuntu click appstore - <http://appstore.bhdouglass.com/>.
+Browse, download, and search apps from the Ubuntu click appstore - [appstore.bhdouglass.com](http://appstore.bhdouglass.com/).
 
 While this app uses the Ubuntu [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
 it caches images and data to be kind to the api.
@@ -26,9 +26,58 @@ it caches images and data to be kind to the api.
     * You may want to put a friendly name in your host machine's `/etc/hosts`
 * Profit!
 
+## Deploying ##
+
+This app is currently designed to be deployed on [OpenShift](https://www.openshift.com).
+The gear running the app needs to have the Nodejs, MongoDB, and Cron cartridge setup.
+This could be easily setup for a different service provided you setup the env varianles
+and the cron job (located in `.openshift/cron/daily/run_spider`).
+
+## Env Variables ##
+
+* NODEJS_PORT || OPENSHIFT_NODEJS_PORT
+    * The port for the web server to listen on
+    * Default: `8080`
+* NODEJS_IP || OPENSHIFT_NODEJS_IP
+    * IP address for the web server to listen on
+    * Default: `127.0.0.1`
+* DATADIR || OPENSHIFTDATADIR
+    * Directory where downloaded images are stored
+    * Default: `/tmp`
+* MONGODB_URI || OPENSHIFT_MONGODB_DB_URL
+    * The uri used to connect to MongoDB (may contain username/password)
+    * Default: `mongodb://localhost/`
+* MONGODB_DB
+    * Name of the database to use
+    * Default: `appstore`
+* LOGDIR || OPENSHIFT_LOG_DIR
+    * Directory where the logs get stored
+    * Default: `/tmp`
+* SRCDIR || OPENSHIFT_REPO_DIR
+    * Directory where the app code is stored
+    * Default: `/srv/ubuntu-appstore`
+
+## Libraries ##
+
+The following third party libraries are used in this app:
+
+* Server Side
+    * [Express](http://expressjs.com/)
+    * [Mongoose](http://mongoosejs.com/)
+    * [Lo-Dash](https://lodash.com/)
+    * [Request](https://github.com/request/request)
+    * [Async](https://github.com/caolan/async)
+* Client Side
+    * [Bootstrap](http://getbootstrap.com/)
+    * [jQuery](http://jquery.com/)
+    * [FontAwesome](http://fontawesome.io/)
+    * [AngularJS](https://angularjs.org/)
+    * [Angular UI](http://angular-ui.github.io/)
+    * [Lo-Dash](https://lodash.com/)
+
 ## License ##
 
-Copyright (C) 2014 Brian Douglass
+Copyright (C) 2014 [Brian Douglass](http://bhdouglass.com/)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.
