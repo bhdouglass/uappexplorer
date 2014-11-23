@@ -1,18 +1,88 @@
 <div class="app">
   <div class="row">
     <div class="col-md-6">
-      <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" class="icon-large pull-left" />
-      <div class="pull-left title-block">
-        <h1 ng-bind="app.title" class="title"></h1>
-        <span ng-bind="app.author"></span>
-        <span ng-show="app.company">-</span>
-        <span ng-bind="app.company"></span>
+      <div class="list-group">
+        <div class="list-group-item">
+          <div class="row-action-primary">
+            <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" class="icon-large pull-left" />
+          </div>
+
+          <div class="row-content">
+            <div class="least-content">
+              <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+            </div>
+            <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
+            <p class="list-group-item-text">
+              <stars ng-model="app.average_rating"></stars>
+              <br ng-show="app.autor" />
+              <span ng-bind="app.author" title="Autor"></span>
+              <br ng-show="app.company" />
+              <span ng-bind="app.company" title="Company"></span>
+            </p>
+          </div>
+
+        </div>
+        <div class="list-group-separator"></div>
+        <div class="list-group-item">
+          <div class="row-action-primary">
+            <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link">
+              <i class="fa fa-download"></i>
+            </a>
+          </div>
+
+          <div class="row-content">
+            <p class="list-group-item-text">
+              Version: <span ng-bind="app.version"></span>
+              <br/>
+              Updated: <span ng-bind="app.last_updated | date"></span>
+              <br/>
+              License: <span ng-bind="app.license"></span>
+            </p>
+          </div>
+
+        </div>
+        <div class="list-group-separator"></div>
       </div>
-      <div class="label type pull-left" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
     </div>
+
     <div class="col-md-6">
-      <h2 class="description">Description</h2>
-      <p ng-bind="app.description"></p>
+      <ul class="nav nav-pills">
+        <li ng-class="{active: app_tab == 'desc'}">
+          <a ng-click="app_tab = 'desc'">Description</a>
+        </li>
+        <li ng-class="{active: app_tab == 'change'}">
+          <a ng-click="app_tab = 'change'">Changelog</a>
+        </li>
+        <li ng-class="{active: app_tab == 'support'}">
+          <a ng-click="app_tab = 'support'">Support</a>
+        </li>
+      </ul>
+      <br/>
+
+      <div class="tab-content" ng-show="app_tab == 'desc'">
+        <pre ng-bind="app.description"></pre>
+      </div>
+
+      <div class="tab-content" ng-show="app_tab == 'change'">
+        <pre ng-bind="app.changelog"></pre>
+      </div>
+
+      <div class="tab-content" ng-show="app_tab == 'support'">
+        <div class="well">
+          <span ng-show="app.support">
+            Support: <a ng-href="app.support" ng-bind="app.support"></a>
+          </span>
+          <span ng-show="app.website">
+            <br/>
+            Website: <a ng-href="app.website" ng-bind="app.website"></a>
+          </span>
+          <span ng-show="app.terms">
+            <br/>
+            Terms:
+            <p ng-bind="app.terms"></p>
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

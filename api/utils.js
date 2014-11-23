@@ -28,7 +28,7 @@ function niceBytes(bytes) {
     }
   }
 
-  return bytes + ' ' + unit
+  return bytes.toFixed(1) + ' ' + unit
 }
 
 function fixUrl(url) {

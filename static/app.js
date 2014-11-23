@@ -22,6 +22,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.categories = [];
   $scope.category = 'all';
   $scope.search = '';
+  $scope.app_tab = 'desc';
 
   $scope.sorts = [
     {
@@ -155,6 +156,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   });
 
   $scope.select = function(name) { //TODO cache this
+    $scope.app_tab = 'desc';
+
     $http.get('/api/apps/' + name).then(function(res) {
       $scope.app = res.data.data;
     }, function(err) {

@@ -20,18 +20,22 @@
               <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" class="icon" />
             </a>
           </div>
+
           <div class="row-content">
             <div class="least-content">
               <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
             </div>
+
             <h4 class="list-group-item-heading">
               <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
             </h4>
+
             <p class="list-group-item-text">
               <stars ng-model="app.average_rating"></stars>
             </p>
           </div>
         </div>
+
         <div class="list-group-separator"></div>
       </div>
     </div>

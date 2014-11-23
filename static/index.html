@@ -63,7 +63,7 @@
 
     <div class="container">
       <!-- TODO move to apps partial -->
-      <div class="row">
+      <div class="row" ng-show="$state.current.name != 'app'">
         <div class="col-md-4">
           <div class="form-group">
             <label for="search">Search:</label>
@@ -88,6 +88,7 @@
           </div>
         </div>
       </div>
+
       <div ui-view></div>
     </div>
   </body>
