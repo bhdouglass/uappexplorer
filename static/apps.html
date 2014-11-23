@@ -12,7 +12,7 @@
   </div>-->
 
   <div class="row apps" ng-repeat="chunk in app_chunks">
-    <div class="col-xs-6 col-md-4" ng-repeat="app in chunk">
+    <div class="col-md-4" ng-repeat="app in chunk">
       <div class="list-group">
         <div class="list-group-item">
           <div class="row-action-primary">
@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" ng-show="pages.length > 1">
     <div class="col-md-12">
       <nav class="center">
         <ul class="pagination pagination-lg">

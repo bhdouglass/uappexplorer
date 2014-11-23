@@ -124,6 +124,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
 
       timeout = $timeout(function() {
         $scope.paging.search = $scope.search;
+        $scope.paging.skip = 0;
       }, 200);
     }
     else {
