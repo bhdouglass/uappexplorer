@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ubuntu Appstore</title>
+    <title>Ubuntu Touch Appstore (Unofficial)</title>
 
     <!-- jQuery -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- Boostrap -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" />
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" />-->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.6/css/ripples.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.6/css/material.min.css" />
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
@@ -43,7 +47,7 @@
             <a ui-sref="apps" class="link">
               <i class="fa fa-chevron-left" ng-show="$state.current.name == 'app'"></i>
               <img src="ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              Ubuntu Click Apps
+              Ubuntu Touch Appstore (Unofficial)
             </a>
           </span>
         </div>
@@ -58,6 +62,7 @@
     </nav>
 
     <div class="container">
+      <!-- TODO move to apps partial -->
       <div class="row">
         <div class="col-md-4">
           <div class="form-group">
@@ -65,7 +70,7 @@
             <div class="input-group">
               <input type="text" class="form-control" ng-model="search" id="search" />
               <span class="input-group-addon">
-                <span class="fa fa-search"></span>
+                <i class="fa fa-search"></i>
               </span>
             </div>
           </div>

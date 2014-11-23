@@ -81,3 +81,7 @@ img.logo {
 .app .description {
   margin-top: 0px;
 }
+
+select {
+  margin-top: 5px;
+}

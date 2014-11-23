@@ -39,7 +39,15 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     {
       label: 'Oldest First',
       value: '-published_date'
-    }
+    },
+    {
+      label: 'Highest Rated First',
+      value: '-average_rating'
+    },
+    {
+      label: 'Lowest Rated First',
+      value: 'average_rating'
+    },
   ];
 
   $scope.types = {
@@ -130,7 +138,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.$watch('apps', function() {
     var app_chunks = [];
     _.forEach($scope.apps, function(app, index) {
-      if (index % 6 == 0) {
+      if (index % 3 == 0) {
         app_chunks.push([]);
       }
 
@@ -153,5 +161,33 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       //TODO error handling
       $scope.app = null;
     });
+  };
+});
+
+app.directive('stars', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      model: '=ngModel'
+    },
+    template: '<div class="text-primary" title="{{model}}/5">' +
+                '<span ng-repeat="f in full track by $index"><i class="fa fa-star"></i></span>' +
+                '<span ng-repeat="h in half track by $index"><i class="fa fa-star-half-o"></i></span>' +
+                '<span ng-repeat="e in empty track by $index"><i class="fa fa-star-o"></i></span>' +
+              '</div>',
+    link: function($scope) {
+      $scope.full = [];
+      $scope.half = [];
+      $scope.empty = [];
+
+      $scope.$watch('model', function() {
+        var full = Math.floor($scope.model);
+        var empty = 5 - Math.ceil($scope.model);
+
+        $scope.full = new Array(full);
+        $scope.empty = new Array(empty);
+        $scope.half = new Array(5 - full - empty);
+      });
+    }
   };
 });
