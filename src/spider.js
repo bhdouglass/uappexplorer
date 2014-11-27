@@ -4,6 +4,7 @@ var db = require('./db')
 var utils = require('./utils')
 var async = require('async')
 var request = require('request')
+var schedule = require('node-schedule')
 
 var propertyMap = {
   architecture:   'architecture',
@@ -53,20 +54,20 @@ function map(pkg, data) {
 function parseExtendedPackage(pkg) {
   return function(callback) {
     setTimeout(function() {
-      console.log(pkg.url)
+      console.log('spider: ' + pkg.url)
       request(pkg.url, function(err, resp, body) {
         if (err) {
-          console.error(err)
+          console.error('spider: ' + err)
         }
         else {
           data = JSON.parse(body)
           pkg = map(pkg, data)
           pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
-          console.log(pkg.icon_filename)
+          console.log('spider: ' + pkg.icon_filename)
 
           pkg.save(function(err, pkg) {
             if (err) {
-              console.error(err)
+              console.error('spider: ' + err)
               callback(err)
             }
             else {
@@ -74,14 +75,14 @@ function parseExtendedPackage(pkg) {
               var filename = path + '/' + pkg.icon_filename
 
               utils.download(pkg.icon, filename, function() {
-                console.log(filename + ' finished downloading')
+                console.log('spider: ' + filename + ' finished downloading')
               })
               callback(null, pkg)
             }
           })
         }
       })
-    }, 120 * 1000)
+    }, 30 * 1000)
   }
 }
 
@@ -91,7 +92,7 @@ function parsePackage(data) {
     db.Package.find({name: data.name}, function(err, packages) {
       var pkg = null
       if (err) {
-        console.error(err)
+        console.error('spider: ' + err)
       }
       else if (packages.length == 0) {
         pkg = new db.Package()
@@ -104,7 +105,7 @@ function parsePackage(data) {
       pkg.url = utils.fixUrl(data._links.self.href)
       pkg.save(function(err, pkg) {
         if (err) {
-          console.error(err)
+          console.error('spider: ' + err)
           callback(err)
         }
         else {
@@ -120,10 +121,10 @@ function parsePackageList(list) {
   _.forEach(list, function(pkg) {
     packageCallbacks.push(parsePackage(pkg))
   })
-  console.log('done parsing package list')
+  console.log('spider: done parsing package list')
 
   async.parallel(packageCallbacks, function(err, pkgs) {
-    console.log('done saving packages')
+    console.log('spider: done saving packages')
 
     var extendedCallbacks = []
     _.forEach(pkgs, function(pkg) {
@@ -136,22 +137,36 @@ function parsePackageList(list) {
     //var extendedCallbacks = [extendedCallbacks[0]]
     async.series(extendedCallbacks, function(err, results) {
       if (err) {
-        console.error(err)
+        console.error('spider: ' + err)
       }
 
-      console.log('done spidering')
+      console.log('spider: done spidering')
     })
   })
 }
 
-function packageList() {
-  console.log('fetching package list')
+//TODO: make option to only download new packages
+function run() {
+  console.log('spider: fetching package list')
   request('https://search.apps.ubuntu.com/api/v1/search', function(err, resp, body) {
     data = JSON.parse(body)
-    console.log('got package list')
+    console.log('spider: got package list')
     parsePackageList(data['_embedded']['clickindex:package'])
   })
 }
 
-packageList()
-exports.packageList = packageList
+function setupSchedule() {
+  console.log('spider: scheduling spider');
+  var spider_rule = new schedule.RecurrenceRule()
+  spider_rule.dayOfWeek = [0, 2, 4]
+  spider_rule.hour = 0
+  spider_rule.minute = 0
+
+  var spider_job = schedule.scheduleJob(spider_rule, function() {
+    console.log('spider: running spider')
+    run()
+  });
+}
+
+exports.run = run
+exports.schedule = setupSchedule

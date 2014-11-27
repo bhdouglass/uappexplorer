@@ -1,5 +1,5 @@
 var express = require('express')
-var db = require('./api/db')
+var db = require('./db')
 var _ = require('lodash')
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080
@@ -19,6 +19,8 @@ function success(res, data, message) {
 }
 
 function error(res, message, code) {
+  console.error('server: ' + message)
+
   res.status(code ? code : 500)
   res.send({
     success: false,
@@ -141,9 +143,13 @@ app.get('/api/apps/:name', function(req, res) {
   })
 })
 
-var server = app.listen(server_port, server_ip_address, function () {
-  var host = server.address().address
-  var port = server.address().port
+function run() {
+  var server = app.listen(server_port, server_ip_address, function () {
+    var host = server.address().address
+    var port = server.address().port
 
-  console.log('Listening at http://%s:%s', host, port)
-})
+    console.log('server: listening at http://%s:%s', host, port)
+  })
+}
+
+exports.run = run

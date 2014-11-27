@@ -5,10 +5,10 @@ var database = process.env.MONGODB_DB || 'appstore'
 
 mongoose.connect(uri + database, function(err, res) {
   if (err) {
-    console.log('Error connecting to mongo: ' + err);
+    console.log('database: ' + err);
   }
   else {
-    console.log('Connected to mongo');
+    console.log('database: connected to mongo');
   }
 });
 

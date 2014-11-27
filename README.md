@@ -15,9 +15,12 @@ it caches images and data to be kind to the api.
 * Start vagrant:
     * Run: `vagrant up`
     * Ssh into the box: `vagrant ssh`
+* Insall Dependencies:
+    * Go to: `/srv/ubuntu-appstore/`
+    * Run: `npm install`
 * Run the spider:
     * Go to: `/srv/ubuntu-appstore/`
-    * Run: `nodejs api/spider.js`
+    * Run: `nodejs src/runSpider.js`
 * Start the webserver:
     * Go to: `/srv/ubuntu-appstore/`
     * Run: `npm start`
@@ -29,9 +32,8 @@ it caches images and data to be kind to the api.
 ## Deploying ##
 
 This app is currently designed to be deployed on [OpenShift](https://www.openshift.com).
-The gear running the app needs to have the Nodejs, MongoDB, and Cron cartridge setup.
-This could be easily setup for a different service provided you setup the env varianles
-and the cron job (located in `.openshift/cron/daily/run_spider`).
+The gear running the app needs to have the Nodejs and MongoDB cartridge setup.
+This could be easily setup for a different service provided you setup the env variables.
 
 ## Env Variables ##
 
@@ -50,12 +52,6 @@ and the cron job (located in `.openshift/cron/daily/run_spider`).
 * MONGODB_DB
     * Name of the database to use
     * Default: `appstore`
-* LOGDIR || OPENSHIFT_LOG_DIR
-    * Directory where the logs get stored
-    * Default: `/tmp`
-* SRCDIR || OPENSHIFT_REPO_DIR
-    * Directory where the app code is stored
-    * Default: `/srv/ubuntu-appstore`
 
 ## Libraries ##
 
