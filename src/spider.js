@@ -118,10 +118,30 @@ function parsePackage(data) {
 
 function parsePackageList(list) {
   var packageCallbacks = []
+  var packageNames = []
   _.forEach(list, function(pkg) {
     packageCallbacks.push(parsePackage(pkg))
+    packageNames.push(pkg.name)
   })
   console.log('spider: done parsing package list')
+
+  db.Package.find({}, function(err, packages) {
+    if (err) {
+      console.error('spider: ' + err)
+    }
+    else {
+      _.forEach(packages, function(pkg) {
+        if (packageNames.indexOf(pkg.name) == -1) {
+          console.log('spider: deleting ' + pkg.name);
+          pkg.remove(function(err) {
+            if (err) {
+              console.error('spider: ' + err)
+            }
+          })
+        }
+      })
+    }
+  })
 
   async.parallel(packageCallbacks, function(err, pkgs) {
     console.log('spider: done saving packages')
