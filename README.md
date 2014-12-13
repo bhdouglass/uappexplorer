@@ -1,5 +1,7 @@
 # Ubuntu Appstore (Unofficial) #
 
+[ ![Codeship Status for bhdouglass/ubuntu-appstore](https://codeship.com/projects/6a279da0-64a5-0132-af74-0639b0c195d6/status?branch=master)](https://codeship.com/projects/52618)
+
 Browse, download, and search apps from the Ubuntu click appstore - [appstore.bhdouglass.com](http://appstore.bhdouglass.com/).
 
 While this app uses the Ubuntu [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
