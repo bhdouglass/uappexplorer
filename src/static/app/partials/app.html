@@ -60,11 +60,11 @@
       <br/>
 
       <div class="tab-content" ng-show="app_tab == 'desc'">
-        <pre ng-bind="app.description"></pre>
+        <div class="well" ng-bind-html="app.description | nl2br"></div>
       </div>
 
       <div class="tab-content" ng-show="app_tab == 'change'">
-        <pre ng-bind="app.changelog"></pre>
+        <div class="well" ng-bind-html="app.changelog | nl2br"></div>
       </div>
 
       <div class="tab-content" ng-show="app_tab == 'support'">
