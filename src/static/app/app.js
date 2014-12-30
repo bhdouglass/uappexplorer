@@ -150,6 +150,11 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     }
   });
 
+  $scope.searchFor = function(search) {
+    $scope.search = search;
+    $state.go('apps');
+  };
+
   $scope.$watch('apps', function() {
     var app_chunks = [];
     _.forEach($scope.apps, function(app, index) {
