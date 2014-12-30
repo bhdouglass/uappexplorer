@@ -73,7 +73,7 @@
             <div class="input-group">
               <input type="text" class="form-control" ng-model="search" id="search" />
               <span class="input-group-addon">
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search" ng-click="searchFor('')" ng-class="{'fa-search': !search_hover, 'fa-times-circle-o': search_hover}" ng-mouseenter="search_hover = true" ng-mouseleave="search_hover = false" title="Clear search"></i>
               </span>
             </div>
           </div>
