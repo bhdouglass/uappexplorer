@@ -82,7 +82,7 @@ function parseExtendedPackage(pkg) {
           })
         }
       })
-    }, 30 * 1000)
+    }, 5 * 1000)
   }
 }
 
@@ -117,6 +117,7 @@ function parsePackage(data) {
 }
 
 function parsePackageList(list) {
+  console.log('spider: parsing ' + list.length + ' packagess')
   var packageCallbacks = []
   var packageNames = []
   _.forEach(list, function(pkg) {
@@ -132,7 +133,7 @@ function parsePackageList(list) {
     else {
       _.forEach(packages, function(pkg) {
         if (packageNames.indexOf(pkg.name) == -1) {
-          console.log('spider: deleting ' + pkg.name);
+          console.log('spider: deleting ' + pkg.name)
           pkg.remove(function(err) {
             if (err) {
               console.error('spider: ' + err)
@@ -165,18 +166,39 @@ function parsePackageList(list) {
   })
 }
 
-//TODO: make option to only download new packages
-function run() {
-  console.log('spider: fetching package list')
-  request('https://search.apps.ubuntu.com/api/v1/search', function(err, resp, body) {
-    data = JSON.parse(body)
-    console.log('spider: got package list')
-    parsePackageList(data['_embedded']['clickindex:package'])
+function fetchAppListPage(page, packageList, callback) {
+  request('https://search.apps.ubuntu.com/api/v1/search?size=100&page=' + page, function(err, resp, body) {
+    if (err) {
+      console.error('spider: ' + err)
+    }
+    else {
+      data = JSON.parse(body)
+      console.log('spider: got package list page #' + page)
+      if (data['_embedded'] && data['_embedded']['clickindex:package']) {
+        if (_.isArray(packageList)) {
+          packageList = packageList.concat(data['_embedded']['clickindex:package'])
+        }
+        else {
+          packageList = data['_embedded']['clickindex:package']
+        }
+
+        fetchAppListPage(page + 1, packageList, callback)
+      }
+      else {
+        callback(packageList)
+      }
+    }
   })
 }
 
+//TODO: make option to only download new packages
+function run() {
+  console.log('spider: fetching package list')
+  fetchAppListPage(1, [], parsePackageList)
+}
+
 function setupSchedule() {
-  console.log('spider: scheduling spider');
+  console.log('spider: scheduling spider')
   var spider_rule = new schedule.RecurrenceRule()
   spider_rule.dayOfWeek = [0, 2, 4]
   spider_rule.hour = 0
@@ -185,7 +207,14 @@ function setupSchedule() {
   var spider_job = schedule.scheduleJob(spider_rule, function() {
     console.log('spider: running spider')
     run()
-  });
+  })
+
+  //Schedule once for immediate updating of the apps when needed
+  var one_time = new Date(2014, 11, 29, 20, 35, 0)
+  var spider_job_one_time = schedule.scheduleJob(one_time, function() {
+    console.log('spider: running spider (once)')
+    run()
+  })
 }
 
 exports.run = run

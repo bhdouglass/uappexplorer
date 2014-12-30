@@ -35,11 +35,11 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     },
     {
       label: 'Newest First',
-      value: 'published_date'
+      value: '-published_date'
     },
     {
       label: 'Oldest First',
-      value: '-published_date'
+      value: 'published_date'
     },
     {
       label: 'Highest Rated First',
