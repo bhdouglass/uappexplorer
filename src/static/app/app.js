@@ -129,7 +129,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   }, true);
 
   $scope.$watch('current_page', function() {
-    $scope.paging.skip = ($scope.current_page + 1) * $scope.paging.limit;
+    $scope.paging.skip = $scope.current_page * $scope.paging.limit;
   });
 
   var timeout = null;
