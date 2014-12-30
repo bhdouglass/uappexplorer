@@ -18,7 +18,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.app = null;
   $scope.apps = [];
   $scope.app_count = 0;
+  $scope.current_page = 0;
   $scope.pages = 1;
+  $scope.pages_repeater = [];
   $scope.categories = [];
   $scope.category = 'all';
   $scope.search = '';
@@ -81,7 +83,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       params: $scope.paging
     }).then(function(res) {
       $scope.app_count = res.data.data;
-      $scope.pages = new Array(Math.ceil($scope.app_count / $scope.paging.limit));
+
+      $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
+      updatePaging();
     }, function(err) {
       //TODO error handling
     });
@@ -132,9 +136,50 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     }
   });
 
+  //TODO: split out paginator into a directive
+  function updatePaging() {
+    var pages_repeater = [];
+    var start = $scope.current_page - 2;
+    if (start < 0) {
+      start = 0;
+    }
+
+    if (start + 3 > $scope.pages) {
+      start - $scope.pages - 3;
+    }
+
+    for (var i = start; i < $scope.pages && i < start + 3; i++) {
+      pages_repeater.push(i);
+    }
+    $scope.pages_repeater = pages_repeater;
+  }
+
+  $scope.$watch('current_page', updatePaging);
+
   $scope.$watch('paging', fetchApps, true);
   $scope.page = function(index) {
+    $scope.current_page = index;
     $scope.paging.skip = index * $scope.paging.limit;
+  };
+
+  $scope.previous_page = function() {
+    $scope.current_page--;
+
+    if ($scope.current_page < 0) {
+      $scope.current_page = 0;
+    }
+
+    $scope.page($scope.current_page);
+  };
+
+  $scope.next_page = function() {
+    $scope.current_page++;
+
+    if ($scope.current_page >= $scope.pages) {
+      $scope.current_page = $scope.pages - 1;
+    }
+
+    $scope.page($scope.current_page);
   };
 
   $scope.$watch('apps', function() {
