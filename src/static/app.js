@@ -213,7 +213,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   };
 });
 
-app.directive('stars', function () {
+app.directive('stars', function() {
   return {
     restrict: 'E',
     scope: {
@@ -230,13 +230,26 @@ app.directive('stars', function () {
       $scope.empty = [];
 
       $scope.$watch('model', function() {
-        var full = Math.floor($scope.model);
-        var empty = 5 - Math.ceil($scope.model);
+        var model = $scope.model === undefined ? 0 : $scope.model;
+        var full = Math.floor(model);
+        var empty = 5 - Math.ceil(model);
 
         $scope.full = new Array(full);
         $scope.empty = new Array(empty);
         $scope.half = new Array(5 - full - empty);
       });
     }
+  };
+});
+
+app.filter('category', function() {
+  return function(category) {
+    if (category.indexOf('-') > 0) {
+      var index = category.indexOf('-') + 1;
+      category = category.substr(0, index) + category.charAt(index).toUpperCase() + category.substr(index + 1);
+      category = category.replace('-', ' / ');
+    }
+
+    return category;
   };
 });
