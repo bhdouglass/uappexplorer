@@ -52,6 +52,14 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       label: 'Lowest Rated First',
       value: 'average_rating'
     },
+    {
+      label: 'Apps First',
+      value: 'type'
+    },
+    {
+      label: 'Scopes First',
+      value: '-type'
+    },
   ];
 
   $scope.types = {
