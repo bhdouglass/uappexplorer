@@ -8,7 +8,7 @@ var data_dir = process.env.OPENSHIFTDATADIR || process.env.DATADIR || '/tmp'
 var app = express()
 
 app.use(express.static(__dirname + '/static'))
-app.use('/images', express.static(data_dir))
+app.use('/images', express.static(data_dir, {maxage: '2d'}))
 
 function success(res, data, message) {
   res.send({
