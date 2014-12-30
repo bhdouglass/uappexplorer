@@ -1,3 +1,5 @@
+'use strict';
+
 var app = angular.module('app', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -5,10 +7,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state('apps', {
     url: '/apps',
-    templateUrl: '/apps.html'
+    templateUrl: '/app/partials/apps.html'
   }).state('app', {
     url: '/app/:name',
-    templateUrl: 'app.html'
+    templateUrl: '/app/partials/app.html'
   });
 });
 
@@ -19,8 +21,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.apps = [];
   $scope.app_count = 0;
   $scope.current_page = 0;
-  $scope.pages = 1;
-  $scope.pages_repeater = [];
+  $scope.pages = 0;
   $scope.categories = [];
   $scope.category = 'all';
   $scope.search = '';
@@ -85,11 +86,12 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       $scope.app_count = res.data.data;
 
       $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
-      updatePaging();
     }, function(err) {
       //TODO error handling
     });
   }
+
+  $scope.$watch('paging', fetchApps, true);
 
   function fetchCategories() {
     $http.get('/api/categories').then(function(res) {
@@ -118,6 +120,10 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     }
   }, true);
 
+  $scope.$watch('current_page', function() {
+    $scope.paging.skip = ($scope.current_page + 1) * $scope.paging.limit;
+  });
+
   var timeout = null;
   $scope.$watch('search', function() {
     if ($scope.search) {
@@ -135,52 +141,6 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       $scope.paging.search = undefined;
     }
   });
-
-  //TODO: split out paginator into a directive
-  function updatePaging() {
-    var pages_repeater = [];
-    var start = $scope.current_page - 2;
-    if (start < 0) {
-      start = 0;
-    }
-
-    if (start + 3 > $scope.pages) {
-      start - $scope.pages - 3;
-    }
-
-    for (var i = start; i < $scope.pages && i < start + 3; i++) {
-      pages_repeater.push(i);
-    }
-    $scope.pages_repeater = pages_repeater;
-  }
-
-  $scope.$watch('current_page', updatePaging);
-
-  $scope.$watch('paging', fetchApps, true);
-  $scope.page = function(index) {
-    $scope.current_page = index;
-    $scope.paging.skip = index * $scope.paging.limit;
-  };
-
-  $scope.previous_page = function() {
-    $scope.current_page--;
-
-    if ($scope.current_page < 0) {
-      $scope.current_page = 0;
-    }
-
-    $scope.page($scope.current_page);
-  };
-
-  $scope.next_page = function() {
-    $scope.current_page++;
-
-    if ($scope.current_page >= $scope.pages) {
-      $scope.current_page = $scope.pages - 1;
-    }
-
-    $scope.page($scope.current_page);
-  };
 
   $scope.$watch('apps', function() {
     var app_chunks = [];
@@ -210,46 +170,5 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       //TODO error handling
       $scope.app = null;
     });
-  };
-});
-
-app.directive('stars', function() {
-  return {
-    restrict: 'E',
-    scope: {
-      model: '=ngModel'
-    },
-    template: '<div class="text-primary" title="{{model}}/5">' +
-                '<span ng-repeat="f in full track by $index"><i class="fa fa-star"></i></span>' +
-                '<span ng-repeat="h in half track by $index"><i class="fa fa-star-half-o"></i></span>' +
-                '<span ng-repeat="e in empty track by $index"><i class="fa fa-star-o"></i></span>' +
-              '</div>',
-    link: function($scope) {
-      $scope.full = [];
-      $scope.half = [];
-      $scope.empty = [];
-
-      $scope.$watch('model', function() {
-        var model = $scope.model === undefined ? 0 : $scope.model;
-        var full = Math.floor(model);
-        var empty = 5 - Math.ceil(model);
-
-        $scope.full = new Array(full);
-        $scope.empty = new Array(empty);
-        $scope.half = new Array(5 - full - empty);
-      });
-    }
-  };
-});
-
-app.filter('category', function() {
-  return function(category) {
-    if (category.indexOf('-') > 0) {
-      var index = category.indexOf('-') + 1;
-      category = category.substr(0, index) + category.charAt(index).toUpperCase() + category.substr(index + 1);
-      category = category.replace('-', ' / ');
-    }
-
-    return category;
   };
 });
