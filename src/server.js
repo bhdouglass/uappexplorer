@@ -1,12 +1,23 @@
 var express = require('express')
 var db = require('./db')
 var _ = require('lodash')
+var compression = require('compression')
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || process.env.NODEJS_IP || '127.0.0.1'
-var data_dir = process.env.OPENSHIFTDATADIR || process.env.DATADIR || '/tmp'
+var data_dir = process.env.OPENSHIFT_DATA_DIR || process.env.DATA_DIR || '/tmp'
 var app = express()
 
+app.use(compression({
+  threshold: 512,
+  filter: function(req, res) {
+    if (res.getHeader('content-type') == 'image/png') {
+      return true;
+    }
+
+    return compression.filter(req, res);
+  }
+}))
 app.use(express.static(__dirname + '/static'))
 app.use('/images', express.static(data_dir, {maxage: '2d'}))
 

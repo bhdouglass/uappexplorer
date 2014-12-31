@@ -71,7 +71,7 @@ function parseExtendedPackage(pkg) {
               callback(err)
             }
             else {
-              var path = process.env.OPENSHIFTDATADIR || process.env.DATADIR || '/tmp'
+              var path = process.env.OPENSHIFT_DATA_DIR || process.env.DATA_DIR || '/tmp'
               var filename = path + '/' + pkg.icon_filename
 
               utils.download(pkg.icon, filename, function() {

@@ -45,7 +45,7 @@ This could be easily setup for a different service provided you setup the env va
 * NODEJS_IP || OPENSHIFT_NODEJS_IP
     * IP address for the web server to listen on
     * Default: `127.0.0.1`
-* DATADIR || OPENSHIFTDATADIR
+* DATA_DIR || OPENSHIFT_DATA_DIR
     * Directory where downloaded images are stored
     * Default: `/tmp`
 * MONGODB_URI || OPENSHIFT_MONGODB_DB_URL
