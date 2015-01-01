@@ -27,6 +27,10 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.search = '';
   $scope.app_tab = 'desc';
 
+  $timeout(function() {
+    $('.fancybox').fancybox({loop: false});
+  });
+
   $scope.sorts = [
     {
       label: 'Title A-Z',

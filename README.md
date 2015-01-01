@@ -72,6 +72,7 @@ The following third party libraries are used in this app:
     * [AngularJS](https://angularjs.org/)
     * [Angular UI](http://angular-ui.github.io/)
     * [Lo-Dash](https://lodash.com/)
+    * [fancyBox](http://fancyapps.com/fancybox/)
 
 ## License ##
 
