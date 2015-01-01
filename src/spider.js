@@ -49,7 +49,6 @@ function map(pkg, data) {
     else if (pkgProperty == 'description') {
       if (pkg[pkgProperty]) {
         var split = pkg[pkgProperty].replace('\r', '').split('\n');
-        console.log(split);
         if (split.length == 2 && split[0] == split[1]) {
           pkg[pkgProperty] = split[0].replace('\n', '')
         }
@@ -231,3 +230,5 @@ function setupSchedule() {
 
 exports.run = run
 exports.schedule = setupSchedule
+exports.parsePackage = parsePackage
+exports.parseExtendedPackage = parseExtendedPackage
