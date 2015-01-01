@@ -39,18 +39,21 @@ var propertyMap = {
 
 function map(pkg, data) {
   _.forEach(propertyMap, function(dataProperty, pkgProperty) {
-    pkg[pkgProperty] = data[dataProperty]
-    if (dataProperty.indexOf('_url') > -1) {
-      pkg[pkgProperty] = utils.fixUrl(pkg[pkgProperty])
-    }
-    else if (pkgProperty == 'filesize') {
-      pkg[pkgProperty] = utils.niceBytes(pkg[pkgProperty])
-    }
-    else if (pkgProperty == 'description') {
-      if (pkg[pkgProperty]) {
-        var split = pkg[pkgProperty].replace('\r', '').split('\n');
-        if (split.length == 2 && split[0] == split[1]) {
-          pkg[pkgProperty] = split[0].replace('\n', '')
+    if (data[dataProperty] !== undefined) {
+      pkg[pkgProperty] = data[dataProperty]
+
+      if (dataProperty.indexOf('_url') > -1) {
+        pkg[pkgProperty] = utils.fixUrl(pkg[pkgProperty])
+      }
+      else if (pkgProperty == 'filesize') {
+        pkg[pkgProperty] = utils.niceBytes(pkg[pkgProperty])
+      }
+      else if (pkgProperty == 'description') {
+        if (pkg[pkgProperty]) {
+          var split = pkg[pkgProperty].replace('\r', '').split('\n');
+          if (split.length == 2 && split[0] == split[1]) {
+            pkg[pkgProperty] = split[0].replace('\n', '')
+          }
         }
       }
     }
