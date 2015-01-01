@@ -4,10 +4,12 @@
       <div class="list-group">
         <div class="list-group-item">
           <div class="row-action-primary">
-            <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" class="icon-large pull-left" />
+            <div class="icon-large ubuntu-shape">
+              <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" />
+            </div>
           </div>
 
-          <div class="row-content">
+          <div class="row-content app-info">
             <div class="least-content">
               <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
             </div>

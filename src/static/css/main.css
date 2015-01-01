@@ -1,8 +1,36 @@
 .icon {
-  width: 64px;
   height: 64px;
-  border-radius: 8px;
-  border: 1px solid #999999;
+  width: 64px;
+}
+
+.icon img {
+  border-radius: 1.4rem;
+}
+
+.ubuntu-shape {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 100;
+}
+
+.ubuntu-shape:after {
+  background: url(../img/ubuntu-shape.png) no-repeat;
+  background-size: 100% 100%;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ubuntu-shape img {
+  height: 100% !important;
+  width: 100% !important;
+  margin-bottom: 0;
+  display: inline-block;
 }
 
 .modal-backdrop {
@@ -51,10 +79,17 @@ img.logo {
 }
 
 .icon-large {
-  width: 96px;
-  height: 96px;
-  border-radius: 8px;
-  border: 1px solid #999999;
+  height: 92px;
+  width: 92px;
+  margin-bottom: 10px;
+}
+
+.icon-large img {
+  border-radius: 2rem;
+}
+
+.app-info {
+  width: calc(100% - 132px) !important;
 }
 
 .app .title-block {
