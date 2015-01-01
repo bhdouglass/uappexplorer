@@ -51,7 +51,7 @@
             <span class="icon-bar"></span>
           </button>
           <span class="navbar-brand">
-            <a ui-sref="apps" class="link">
+            <a ng-click="goToApps()" class="link clickable">
               <i class="fa fa-chevron-left" ng-show="$state.current.name == 'app'"></i>
               <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
               Ubuntu Touch Appstore

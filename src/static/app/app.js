@@ -188,4 +188,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       $scope.app = null;
     });
   };
+
+  $scope.goToApps = function() {
+    $state.go('apps');
+  };
 });
