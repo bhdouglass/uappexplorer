@@ -5,13 +5,6 @@
   border: 1px solid #999999;
 }
 
-.screenshot {
-  width: 200px;
-  height: 300px;
-  border-radius: 8px;
-  border: 1px solid #999999;
-}
-
 .modal-backdrop {
   opacity: 0.5;
 }
@@ -84,4 +77,26 @@ img.logo {
 
 select {
   margin-top: 5px;
+}
+
+.screenshot {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #999999;
+}
+
+.screenshot-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 230px;
+  white-space: nowrap;
+}
+
+.screenshot-scroll div {
+  display: inline-block;
 }

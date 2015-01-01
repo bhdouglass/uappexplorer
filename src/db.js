@@ -33,7 +33,7 @@ var packageSchema = mongoose.Schema({
   prices: {},
   published_date: String,
   screenshot: String,
-  screenshots: String,
+  screenshots: [String],
   status: String,
   support: String,
   terms: String,
