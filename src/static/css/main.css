@@ -79,10 +79,15 @@ select {
   margin-top: 5px;
 }
 
+.fancybox-image {
+  border-radius: 8px;
+  border: 1px solid #999999;
+}
+
 .screenshot {
   display: block;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
   width: auto;
   height: auto;
   margin: 5px;
@@ -93,7 +98,7 @@ select {
 .screenshot-scroll {
   overflow-x: auto;
   overflow-y: hidden;
-  height: 230px;
+  max-height: 330px;
   white-space: nowrap;
 }
 

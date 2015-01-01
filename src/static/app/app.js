@@ -176,6 +176,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     if ($scope.$state.current.name == 'app') {
       $scope.select($scope.$state.params.name);
     }
+    else {
+      $scope.app = null;
+    }
   });
 
   $scope.select = function(name) { //TODO cache this
