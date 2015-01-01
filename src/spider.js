@@ -218,7 +218,7 @@ function setupSchedule() {
   })
 
   //Schedule once for immediate updating of the apps when needed
-  var one_time = new Date(2014, 11, 29, 20, 35, 0)
+  var one_time = new Date(2015, 0, 1, 0, 55, 0)
   var now = new Date();
   if (one_time > now) {
     var spider_job_one_time = schedule.scheduleJob(one_time, function() {

@@ -140,3 +140,7 @@ select {
 .screenshot-scroll div {
   display: inline-block;
 }
+
+.action-icon i {
+  border-radius: 1.4rem !important;
+}
