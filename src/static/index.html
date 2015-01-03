@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-controller="indexCtrl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ubuntu Touch Appstore (Unofficial)</title>
+    <title ng-bind="title"></title>
+
+    <link rel="icon" type="image/png" href="/img/favicon.png">
 
     <!-- jQuery -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -40,7 +42,7 @@
     <script src="/app/filters/nl2br.js"></script>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
-  <body ng-controller="indexCtrl">
+  <body>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">

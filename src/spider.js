@@ -1,7 +1,8 @@
-var https = require('https')
-var _ = require('lodash')
 var db = require('./db')
 var utils = require('./utils')
+var config = require('./config.js')
+var https = require('https')
+var _ = require('lodash')
 var async = require('async')
 var request = require('request')
 var schedule = require('node-schedule')
@@ -82,8 +83,7 @@ function parseExtendedPackage(pkg) {
               callback(err)
             }
             else {
-              var path = process.env.OPENSHIFT_DATA_DIR || process.env.DATA_DIR || '/tmp'
-              var filename = path + '/' + pkg.icon_filename
+              var filename = config.data_dir + '/' + pkg.icon_filename
 
               utils.download(pkg.icon, filename, function() {
                 console.log('spider: ' + filename + ' finished downloading')

@@ -1,9 +1,7 @@
-var mongoose = require('mongoose');
+var config = require('./config')
+var mongoose = require('mongoose')
 
-var uri = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URI || 'mongodb://localhost/'
-var database = process.env.MONGODB_DB || 'appstore'
-
-mongoose.connect(uri + database, function(err, res) {
+mongoose.connect(config.mongo.uri + config.mongo.database, function(err, res) {
   if (err) {
     console.log('database: ' + err);
   }

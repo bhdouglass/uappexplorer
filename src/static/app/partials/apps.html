@@ -4,7 +4,7 @@
       <div class="list-group">
         <div class="list-group-item">
           <div class="row-action-primary">
-            <a ui-sref="app({name: app.name})" class="link">
+            <a ng-href="/#/app/{{app.name}}" class="link">
               <div class="icon ubuntu-shape">
                 <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" />
               </div>
@@ -17,7 +17,7 @@
             </div>
 
             <h4 class="list-group-item-heading">
-              <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
+              <a ng-href="/#/app/{{app.name}}" ng-bind="app.title" class="link"></a>
             </h4>
 
             <p class="list-group-item-text">

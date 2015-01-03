@@ -1,11 +1,9 @@
-var express = require('express')
 var db = require('./db')
+var config = require('./config')
+var express = require('express')
 var _ = require('lodash')
 var compression = require('compression')
 
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || process.env.NODEJS_IP || '127.0.0.1'
-var data_dir = process.env.OPENSHIFT_DATA_DIR || process.env.DATA_DIR || '/tmp'
 var app = express()
 
 app.use(compression({
@@ -19,7 +17,7 @@ app.use(compression({
   }
 }))
 app.use(express.static(__dirname + '/static'))
-app.use('/images', express.static(data_dir, {maxage: '2d'}))
+app.use('/images', express.static(config.data_dir, {maxage: '2d'}))
 
 function success(res, data, message) {
   res.send({
@@ -155,7 +153,7 @@ app.get('/api/apps/:name', function(req, res) {
 })
 
 function run() {
-  var server = app.listen(server_port, server_ip_address, function () {
+  var server = app.listen(config.server.port, config.server.ip, function () {
     var host = server.address().address
     var port = server.address().port
 

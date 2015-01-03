@@ -15,6 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
+  var title = 'Ubuntu Touch Appstore (Unofficial)';
+  $scope.title = title;
   $scope.$state = $state;
   $scope.app_chunks = [];
   $scope.app = null;
@@ -191,6 +193,15 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
       $scope.app = null;
     });
   };
+
+  $scope.$watch('app', function() {
+    if ($scope.app) {
+      $scope.title = $scope.app.title + ' - ' + title;
+    }
+    else {
+      $scope.title = title;
+    }
+  });
 
   $scope.goToApps = function() {
     $state.go('apps');
