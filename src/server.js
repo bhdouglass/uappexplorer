@@ -1,5 +1,6 @@
 var db = require('./db')
 var config = require('./config')
+var spider = require('./spider')
 var express = require('express')
 var _ = require('lodash')
 var compression = require('compression')
@@ -147,7 +148,27 @@ app.get('/api/apps/:name', function(req, res) {
       error(res, req.params.name + ' was not found', 404)
     }
     else {
+      pkg.reviews = undefined
       success(res, pkg)
+    }
+  })
+})
+
+app.get('/api/apps/reviews/:name', function(req, res) {
+  db.Package.findOne({name: req.params.name}, function(err, pkg) {
+    if (err) {
+      error(res, err)
+    }
+    else if (!pkg) {
+      error(res, req.params.name + ' was not found', 404)
+    }
+    else {
+      spider.fetchReviews(pkg, function(pkg2) {
+        success(res, {
+          reviews: pkg2.reviews,
+          name: pkg2.name,
+        })
+      })
     }
   })
 })

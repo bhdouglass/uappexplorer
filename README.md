@@ -65,6 +65,7 @@ The following third party libraries are used in this app:
     * [Lo-Dash](https://lodash.com/)
     * [Request](https://github.com/request/request)
     * [Async](https://github.com/caolan/async)
+    * [Moment.js](http://momentjs.com/)
 * Client Side
     * [Bootstrap](http://getbootstrap.com/)
     * [jQuery](http://jquery.com/)

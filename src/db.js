@@ -30,6 +30,8 @@ var packageSchema = mongoose.Schema({
   name: {type: String, index: true},
   prices: {},
   published_date: String,
+  reviews: [{}],
+  reviews_fetch_date: Number,
   screenshot: String,
   screenshots: [String],
   status: String,

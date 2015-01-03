@@ -188,6 +188,15 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
 
     $http.get('/api/apps/' + name).then(function(res) {
       $scope.app = res.data.data;
+      $scope.app.loading_reviews = true;
+
+      $http.get('/api/apps/reviews/' + name).then(function(res) {
+        if ($scope.app.name == res.data.data.name) {
+          $scope.app.reviews = res.data.data.reviews;
+        }
+      }).finally(function() {
+        $scope.app.loading_reviews = false;
+      });
     }, function(err) {
       //TODO error handling
       $scope.app = null;
@@ -206,4 +215,28 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
   $scope.goToApps = function() {
     $state.go('apps');
   };
+
+  //Adapted from http://stackoverflow.com/a/16348977
+  $scope.strToColor = function(str, css) {
+    str = str ? str : '';
+
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    var color = '#';
+    for (var i = 0; i < 3; i++) {
+        var value = (hash >> (i * 8)) & 0xFF;
+        color += ('00' + value.toString(16)).substr(-2);
+    }
+
+    var value = color;
+    if (css) {
+      value = {};
+      value[css] = color;
+    }
+
+    return value;
+  }
 });

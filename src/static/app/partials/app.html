@@ -29,7 +29,7 @@
           <div class="row-action-primary">
             <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link clickable" target="_blank">
               <div class="action-icon ubuntu-shape">
-                <i class="fa fa-download"></i>
+                <i class="fa fa-download" ng-style="strToColor(app.name, 'background-color')"></i>
               </div>
             </a>
           </div>
@@ -90,13 +90,67 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12 screenshot-scroll">
-      <div ng-repeat="s in app.screenshots|orderBy:'toString()'">
-        <a ng-href="{{s}}" rel="screenshot" class="fancybox">
-          <img ng-src="{{s}}" alt="" class="screenshot" />
-        </a>
+  <div ng-show="app.screenshots.length > 0 && app.screenshots[0] != ''">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Screenshots</h3>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 screenshot-scroll">
+        <div ng-repeat="s in app.screenshots|orderBy:'toString()'">
+          <a ng-href="{{s}}" rel="screenshot" class="fancybox">
+            <img ng-src="{{s}}" alt="" class="screenshot" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>User Reviews</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 text-center" ng-if="app.loading_reviews">
+      <i class="fa fa-spin fa-spinner fa-2x"></i>
+      Loading reviews...
+    </div>
+
+    <div ng-repeat="review in app.reviews|orderBy:'-date_created'">
+      <div class="col-sm-4" ng-class="{'col-sm-offset-4': ($last && (app.reviews.length % 3) == 1), 'col-sm-offset-2': (($index + 2) == app.reviews.length && (app.reviews.length % 3) == 2)}">
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <div class="action-icon ubuntu-shape">
+                <i class="fa fa-user" ng-style="strToColor(review.reviewer_username, 'background-color')"></i>
+              </div>
+            </div>
+
+            <div class="row-content">
+              <div class="least-content" ng-bind="review.date_created|date"></div>
+
+              <p class="list-group-item-heading">
+                <stars ng-model="review.rating"></stars>
+                <span ng-bind="review.reviewer_displayname">
+              </p>
+
+              <p class="list-group-item-text">
+                <span ng-bind="review.review_text"></span>
+                <br/>
+                For version: <span ng-bind="review.version"></span>
+              </p>
+            </div>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+      <div ng-class="{clearfix: ($index + 1) % 3 == 0}"></div>
+    </div>
+    <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && app.reviews.length == 0">
+      <h4>No reviews yet!</h4>
     </div>
   </div>
 </div>

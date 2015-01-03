@@ -6,6 +6,7 @@ var _ = require('lodash')
 var async = require('async')
 var request = require('request')
 var schedule = require('node-schedule')
+var moment = require('moment')
 
 var propertyMap = {
   architecture:   'architecture',
@@ -178,12 +179,12 @@ function parsePackageList(list) {
 }
 
 function fetchAppListPage(page, packageList, callback) {
-  request('https://search.apps.ubuntu.com/api/v1/search?size=100&page=' + page, function(err, resp, body) {
+  request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
     if (err) {
       console.error('spider: ' + err)
     }
     else {
-      data = JSON.parse(body)
+      var data = JSON.parse(body)
       console.log('spider: got package list page #' + page)
       if (data['_embedded'] && data['_embedded']['clickindex:package']) {
         if (_.isArray(packageList)) {
@@ -200,6 +201,35 @@ function fetchAppListPage(page, packageList, callback) {
       }
     }
   })
+}
+
+function fetchReviews(pkg, callback) {
+  var now = moment()
+  if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') > 3) {
+    request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
+      if (err) {
+        console.error('spider: ' + err)
+        callback(pkg)
+      }
+      else {
+        pkg.reviews = JSON.parse(body)
+        pkg.reviews_fetch_date = now.valueOf()
+
+        pkg.save(function(err, pkg2) {
+          if (err) {
+            console.error('spider: ' + err)
+            callback(pkg)
+          }
+          else {
+            callback(pkg2)
+          }
+        })
+      }
+    })
+  }
+  else {
+    callback(pkg)
+  }
 }
 
 //TODO: make option to only download new packages
@@ -235,3 +265,4 @@ exports.run = run
 exports.schedule = setupSchedule
 exports.parsePackage = parsePackage
 exports.parseExtendedPackage = parseExtendedPackage
+exports.fetchReviews = fetchReviews
