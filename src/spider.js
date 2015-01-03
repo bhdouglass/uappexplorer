@@ -70,7 +70,7 @@ function parseExtendedPackage(pkg) {
       console.log('spider: ' + pkg.url)
       request(pkg.url, function(err, resp, body) {
         if (err) {
-          console.error('spider: ' + err)
+          console.error('spider error: ' + err)
         }
         else {
           data = JSON.parse(body)
@@ -80,7 +80,7 @@ function parseExtendedPackage(pkg) {
 
           pkg.save(function(err, pkg) {
             if (err) {
-              console.error('spider: ' + err)
+              console.error('spider error: ' + err)
               callback(err)
             }
             else {
@@ -104,7 +104,7 @@ function parsePackage(data) {
     db.Package.find({name: data.name}, function(err, packages) {
       var pkg = null
       if (err) {
-        console.error('spider: ' + err)
+        console.error('spider error: ' + err)
       }
       else if (packages.length == 0) {
         pkg = new db.Package()
@@ -117,7 +117,7 @@ function parsePackage(data) {
       pkg.url = utils.fixUrl(data._links.self.href)
       pkg.save(function(err, pkg) {
         if (err) {
-          console.error('spider: ' + err)
+          console.error('spider error: ' + err)
           callback(err)
         }
         else {
@@ -140,7 +140,7 @@ function parsePackageList(list) {
 
   db.Package.find({}, function(err, packages) {
     if (err) {
-      console.error('spider: ' + err)
+      console.error('spider error: ' + err)
     }
     else {
       _.forEach(packages, function(pkg) {
@@ -148,7 +148,7 @@ function parsePackageList(list) {
           console.log('spider: deleting ' + pkg.name)
           pkg.remove(function(err) {
             if (err) {
-              console.error('spider: ' + err)
+              console.error('spider error: ' + err)
             }
           })
         }
@@ -170,7 +170,7 @@ function parsePackageList(list) {
     //var extendedCallbacks = [extendedCallbacks[0]]
     async.series(extendedCallbacks, function(err, results) {
       if (err) {
-        console.error('spider: ' + err)
+        console.error('spider error: ' + err)
       }
 
       console.log('spider: done spidering')
@@ -181,7 +181,7 @@ function parsePackageList(list) {
 function fetchAppListPage(page, packageList, callback) {
   request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
     if (err) {
-      console.error('spider: ' + err)
+      console.error('spider error: ' + err)
     }
     else {
       var data = JSON.parse(body)
@@ -208,7 +208,7 @@ function fetchReviews(pkg, callback) {
   if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') > 3) {
     request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
       if (err) {
-        console.error('spider: ' + err)
+        console.error('spider error: ' + err)
         callback(pkg)
       }
       else {
@@ -217,7 +217,7 @@ function fetchReviews(pkg, callback) {
 
         pkg.save(function(err, pkg2) {
           if (err) {
-            console.error('spider: ' + err)
+            console.error('spider error: ' + err)
             callback(pkg)
           }
           else {
@@ -251,7 +251,7 @@ function setupSchedule() {
   })
 
   //Schedule once for immediate updating of the apps when needed
-  var one_time = new Date(2015, 0, 1, 0, 55, 0)
+  var one_time = new Date(2015, 0, 3, 0, 55, 0)
   var now = new Date();
   if (one_time > now) {
     var spider_job_one_time = schedule.scheduleJob(one_time, function() {
