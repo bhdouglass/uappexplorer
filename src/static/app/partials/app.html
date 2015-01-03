@@ -27,9 +27,9 @@
         <div class="list-group-separator"></div>
         <div class="list-group-item">
           <div class="row-action-primary">
-            <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link clickable" target="_blank">
+            <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link" ng-class="{'clickable': app.download}" target="_blank">
               <div class="action-icon ubuntu-shape">
-                <i class="fa fa-download" ng-style="strToColor(app.name, 'background-color')"></i>
+                <i class="fa" ng-class="{'fa-download': app.download, 'fa-info-circle': !app.download}" ng-style="strToColor(app.name, 'background-color')"></i>
               </div>
             </a>
           </div>
