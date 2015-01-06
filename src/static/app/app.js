@@ -2,8 +2,9 @@
 
 var app = angular.module('app', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/apps');
+  $locationProvider.html5Mode(true)
 
   $stateProvider.state('apps', {
     url: '/apps',

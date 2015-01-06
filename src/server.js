@@ -173,6 +173,10 @@ app.get('/api/apps/reviews/:name', function(req, res) {
   })
 })
 
+app.all('/*', function(req, res, next) { //For html5mode on frontend
+  res.sendFile('index.html', {root: __dirname + '/static'});
+});
+
 function run() {
   var server = app.listen(config.server.port, config.server.ip, function () {
     var host = server.address().address
