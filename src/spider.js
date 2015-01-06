@@ -129,7 +129,7 @@ function parsePackage(data) {
 }
 
 function parsePackageList(list) {
-  console.log('spider: parsing ' + list.length + ' packagess')
+  console.log('spider: parsing ' + list.length + ' packages')
   var packageCallbacks = []
   var packageNames = []
   _.forEach(list, function(pkg) {
@@ -168,6 +168,66 @@ function parsePackageList(list) {
 
     //For testing
     //var extendedCallbacks = [extendedCallbacks[0]]
+    async.series(extendedCallbacks, function(err, results) {
+      if (err) {
+        console.error('spider error: ' + err)
+      }
+
+      console.log('spider: done spidering')
+    })
+  })
+}
+
+function parsePackageForUpdates(data) {
+  return function(callback) {
+    db.Package.findOne({name: data.name}, function(err, pkg) {
+      if (err) {
+        console.error('spider error: ' + err)
+      }
+      else if (!pkg) {
+        pkg = new db.Package()
+      }
+
+      if (pkg.version != data.version) {
+        pkg = map(pkg, data)
+        pkg.url = utils.fixUrl(data._links.self.href)
+        pkg.save(function(err, pkg) {
+          if (err) {
+            console.error('spider error: ' + err)
+            callback(err)
+          }
+          else {
+            callback(null, pkg)
+          }
+        })
+      }
+      else {
+        callback(null, null)
+      }
+    })
+  }
+}
+
+function parsePackageListForUpdates(list) {
+  console.log('spider: parsing ' + list.length + ' packages for updates')
+  var packageCallbacks = []
+  var packageNames = []
+  _.forEach(list, function(pkg) {
+    packageCallbacks.push(parsePackageForUpdates(pkg))
+    packageNames.push(pkg.name)
+  })
+  console.log('spider: done parsing package list')
+
+  async.parallel(packageCallbacks, function(err, pkgs) {
+    console.log('spider: done saving packages')
+
+    var extendedCallbacks = []
+    _.forEach(pkgs, function(pkg) {
+      if (pkg) {
+        extendedCallbacks.push(parseExtendedPackage(pkg))
+      }
+    })
+
     async.series(extendedCallbacks, function(err, results) {
       if (err) {
         console.error('spider error: ' + err)
@@ -232,10 +292,14 @@ function fetchReviews(pkg, callback) {
   }
 }
 
-//TODO: make option to only download new packages
-function run() {
+function run(onlyUpdates) {
   console.log('spider: fetching package list')
-  fetchAppListPage(1, [], parsePackageList)
+  if (onlyUpdates) {
+    fetchAppListPage(1, [], parsePackageListForUpdates)
+  }
+  else {
+    fetchAppListPage(1, [], parsePackageList)
+  }
 }
 
 function setupSchedule() {
@@ -248,6 +312,14 @@ function setupSchedule() {
   var spider_job = schedule.scheduleJob(spider_rule, function() {
     console.log('spider: running spider')
     run()
+  })
+
+  var spider_rule_updates = new schedule.RecurrenceRule()
+  spider_rule_updates.hour = new schedule.Range(0, 23, 4)
+
+  var spider_job_updates = schedule.scheduleJob(spider_rule_updates, function() {
+    console.log('spider: running spider fr updates')
+    run(true)
   })
 
   //Schedule once for immediate updating of the apps when needed
