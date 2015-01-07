@@ -11,7 +11,7 @@
 
           <div class="row-content app-info">
             <div class="least-content">
-              <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+              <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
             </div>
             <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
             <p class="list-group-item-text">
@@ -20,11 +20,15 @@
               <a ng-click="searchFor(app.author)" ng-bind="app.author" title="Author" class="clickable"></a>
               <br ng-show="app.company" />
               <span ng-bind="app.company" title="Company"></span>
+
+              <br/>
+              <span ng-show="isFree(app.prices)" class="label label-primary">Free</span>
+              <span ng-show="!isFree(app.prices)" class="label label-success price" ng-repeat="(currency, value) in app.prices" ng-bind="app.prices|dollars:currency"></span>
             </p>
           </div>
-
         </div>
         <div class="list-group-separator"></div>
+
         <div class="list-group-item">
           <div class="row-action-primary">
             <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link" ng-class="{'clickable': app.download}" target="_blank">

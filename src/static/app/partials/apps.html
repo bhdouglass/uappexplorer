@@ -2,7 +2,7 @@
   <div class="row apps" ng-repeat="chunk in app_chunks">
     <div class="col-md-4" ng-repeat="app in chunk">
       <div class="list-group">
-        <div class="list-group-item">
+        <div class="list-group-item clickable" ng-click="$state.go('app', {name: app.name})">
           <div class="row-action-primary">
             <a ui-sref="app({name: app.name})" class="link">
               <div class="icon ubuntu-shape">
@@ -13,7 +13,10 @@
 
           <div class="row-content">
             <div class="least-content">
-              <div class="label" ng-class="{'label-success': types[app.type] == 'App', 'label-primary': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+              <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+            </div>
+            <div class="least-content-lower">
+              <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
             </div>
 
             <h4 class="list-group-item-heading">

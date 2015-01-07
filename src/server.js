@@ -127,6 +127,7 @@ app.get('/api/apps', function(req, res) {
               title: pkg.title,
               type: pkg.type,
               average_rating: pkg.average_rating,
+              prices: pkg.prices,
             })
           })
 

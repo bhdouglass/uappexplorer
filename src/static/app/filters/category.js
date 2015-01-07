@@ -1,4 +1,4 @@
-'use cache';
+'use strict';
 
 app.filter('category', function() {
   return function(category) {

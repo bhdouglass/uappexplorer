@@ -144,3 +144,19 @@ select {
 .action-icon i {
   border-radius: 1.4rem !important;
 }
+
+.least-content-lower {
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  color: rgba(0,0,0,.54);
+  font-size: 14px;
+}
+
+.price {
+  margin-right: 5px;
+}
+
+.list-group-item-heading {
+  padding-right: 25px;
+}

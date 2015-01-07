@@ -15,7 +15,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   });
 });
 
-app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
+app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) {
   var title = 'Ubuntu Touch Appstore (Unofficial)';
   $scope.title = title;
   $scope.$state = $state;
@@ -66,6 +66,14 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
     {
       label: 'Scopes First',
       value: '-type'
+    },
+    {
+      label: 'Free First',
+      value: 'prices.USD'
+    },
+    {
+      label: 'Most Expensive First (USD)',
+      value: '-prices.USD'
     },
   ];
 
@@ -241,4 +249,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout) {
 
     return value;
   }
+
+  $scope.isFree = function(prices) {
+    return ($filter('dollars')(prices) == 'Free');
+  };
 });
