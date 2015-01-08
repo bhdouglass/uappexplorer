@@ -48,4 +48,13 @@ var packageSchema = mongoose.Schema({
 
 var Package = mongoose.model('Package', packageSchema)
 
+var departmentSchema = mongoose.Schema({
+  name: String,
+  internal_name: {type: String, index: true},
+  url: String,
+})
+
+var Department = mongoose.model('Department', departmentSchema)
+
 exports.Package = Package
+exports.Department = Department

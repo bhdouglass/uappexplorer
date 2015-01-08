@@ -118,16 +118,13 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
 
   function fetchCategories() {
     $http.get('/api/categories').then(function(res) {
-      var categories = [{label: 'All', value: 'all'}];
+      var categories = [{name: 'All', internal_name: 'all'}];
       _.forEach(res.data.data, function(category) {
-        categories.push({
-          label: category.charAt(0).toUpperCase() + category.slice(1),
-          value: category
-        });
+        categories.push(category);
       });
 
       $scope.categories = categories;
-      $scope.category = $scope.categories[0].value;
+      $scope.category = $scope.categories[0].internal_name;
     }, function(err) {
       //TODO error handling
     });

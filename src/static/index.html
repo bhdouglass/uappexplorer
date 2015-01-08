@@ -96,7 +96,7 @@
         <div class="col-md-4">
           <div class="form-group">
             <label for="category">Category:</label>
-            <select ng-model="category" ng-options="c.value as c.label|category for c in categories" class="form-control" id="category"></select>
+            <select ng-model="category" ng-options="c.internal_name as c.name for c in categories" class="form-control" id="category"></select>
           </div>
         </div>
       </div>

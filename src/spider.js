@@ -263,6 +263,39 @@ function fetchAppListPage(page, packageList, callback) {
   })
 }
 
+function parseDepartments() {
+  request(config.spider.departments_api, function(err, resp, body) {
+    if (err) {
+      console.error('spider error: ' + err)
+    }
+    else {
+      data = JSON.parse(body)
+      if (data['_embedded'] && data['_embedded']['clickindex:department']) {
+        _.forEach(data['_embedded']['clickindex:department'], function(d) {
+          db.Department.findOne({name: d.name}, function(err, dep) {
+            if (err) {
+              console.error('spider error: ' + err)
+            }
+            else if (!dep) {
+              dep = new db.Department()
+            }
+
+            dep.name = d.name
+            dep.internal_name = d.slug
+            dep.url = utils.fixUrl(d._links.self.href)
+            console.log(dep)
+            dep.save(function(err, dep) {
+              if (err) {
+                console.error('spider error: ' + err)
+              }
+            })
+          })
+        })
+      }
+    }
+  })
+}
+
 function fetchReviews(pkg, callback) {
   var now = moment()
   if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') > 3) {
@@ -316,10 +349,19 @@ function setupSchedule() {
 
   var spider_rule_updates = new schedule.RecurrenceRule()
   spider_rule_updates.hour = new schedule.Range(0, 23, 4)
+  spider_rule_updates.minute = 0
 
   var spider_job_updates = schedule.scheduleJob(spider_rule_updates, function() {
-    console.log('spider: running spider fr updates')
+    console.log('spider: running spider for updates')
     run(true)
+  })
+
+  var department_rule = new schedule.RecurrenceRule()
+  department_rule.dayOfWeek = 0
+
+  var department_job = schedule.scheduleJob(department_rule, function() {
+    console.log('spider: running department spider')
+    parseDepartments()
   })
 
   //Schedule once for immediate updating of the apps when needed
@@ -338,3 +380,4 @@ exports.schedule = setupSchedule
 exports.parsePackage = parsePackage
 exports.parseExtendedPackage = parseExtendedPackage
 exports.fetchReviews = fetchReviews
+exports.parseDepartments = parseDepartments

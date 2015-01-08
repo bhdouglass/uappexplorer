@@ -39,24 +39,13 @@ function error(res, message, code) {
   })
 }
 
-//TODO cache this to speed up requests
 app.get('/api/categories', function(req, res) {
-  db.Package.find({}, 'categories', function(err, pkgs) {
+  db.Department.find({}, function(err, deps) {
     if (err) {
       error(res, err)
     }
     else {
-      var categories = []
-      _.forEach(pkgs, function(pkg) {
-        _.forEach(pkg.categories, function(category) {
-          if (categories.indexOf(category) == -1) {
-            categories.push(category);
-          }
-        });
-      })
-
-      categories = _.sortBy(categories)
-      success(res, categories)
+      success(res, deps)
     }
   })
 });
