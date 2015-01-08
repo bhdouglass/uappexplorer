@@ -48,7 +48,29 @@ app.get('/api/categories', function(req, res) {
       success(res, deps)
     }
   })
-});
+})
+
+//TODO cache this to speed up requests
+app.get('/api/frameworks', function(req, res) {
+  db.Package.find({}, 'framework', function(err, pkgs) {
+    if (err) {
+      error(res, err)
+    }
+    else {
+      var frameworks = []
+      _.forEach(pkgs, function(pkg) {
+        _.forEach(pkg.framework, function(framework) {
+          if (frameworks.indexOf(framework) == -1) {
+            frameworks.push(framework);
+          }
+        });
+      })
+
+      frameworks = _.sortBy(frameworks)
+      success(res, frameworks)
+    }
+  })
+})
 
 //TODO cache this to speed up requests
 app.get('/api/apps', function(req, res) {

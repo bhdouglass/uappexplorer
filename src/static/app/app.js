@@ -28,6 +28,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   $scope.categories = [];
   $scope.category = 'all';
   $scope.architecture = 'Any';
+  $scope.frameworks = ['All'];
+  $scope.framework = 'All';
   $scope.search = '';
   $scope.app_tab = 'desc';
 
@@ -94,8 +96,16 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   };
 
   function fetchApps() {
+    var paging = angular.copy($scope.paging);
+    _.forEach(paging.query, function(q) {
+      if (_.isObject(q) && q['_$in']) {
+        q['$in'] = q['_$in'];
+        q['_$in'] = undefined;
+      }
+    });
+
     $http.get('/api/apps', {
-      params: $scope.paging
+      params: paging
     }).then(function(res) {
       $scope.apps = _.sortBy(res.data.data, $scope.paging.sort);
 
@@ -107,7 +117,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
     });
 
     $http.get('/api/apps?count=true', {
-      params: $scope.paging
+      params: paging
     }).then(function(res) {
       $scope.app_count = res.data.data;
 
@@ -134,6 +144,21 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   }
   fetchCategories();
 
+  function fetchFrameworks() {
+    $http.get('/api/frameworks').then(function(res) {
+      var frameworks = ['All'];
+      _.forEach(res.data.data, function(framework) {
+        frameworks.push(framework);
+      });
+
+      $scope.frameworks = frameworks;
+      $scope.framework = $scope.frameworks[0];
+    }, function(err) {
+      //TODO error handling
+    });
+  }
+  fetchFrameworks();
+
   $scope.$watch('category', function() {
     if ($scope.category == 'all' || !$scope.category) {
       $scope.paging.query.categories = undefined;
@@ -144,17 +169,26 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   }, true);
 
   $scope.$watch('architecture', function() {
-    var architecture = $scope.architecture.toLowerCase();
-    if (architecture == 'any' || !$scope.category) {
+    if (!$scope.architecture || $scope.architecture.toLowerCase() == 'any') {
       $scope.paging.query.architecture = undefined;
     }
     else {
-      var architectures = [architecture];
+      var architectures = [$scope.architecture.toLowerCase()];
       if (architecture != 'all') {
         architectures.push('all');
       }
 
-      $scope.paging.query.architecture = {'$in': architectures};
+      $scope.paging.query.architecture = {'_$in': architectures};
+    }
+  }, true);
+
+  $scope.$watch('framework', function() {
+    if ($scope.framework == 'All' || !$scope.framework) {
+      $scope.paging.query.framework = undefined;
+    }
+    else {
+      var frameworks = [$scope.framework];
+      $scope.paging.query.framework = {'_$in': frameworks};
     }
   }, true);
 

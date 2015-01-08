@@ -107,6 +107,12 @@
             <select ng-model="architecture" ng-options="a as a for a in architectures" class="form-control" id="architecture"></select>
           </div>
         </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="framework">Filter By Framework:</label>
+            <select ng-model="framework" ng-options="f as f for f in frameworks" class="form-control" id="framework"></select>
+          </div>
+        </div>
       </div>
 
       <div ui-view></div>
