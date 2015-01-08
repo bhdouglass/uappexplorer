@@ -283,7 +283,6 @@ function parseDepartments() {
             dep.name = d.name
             dep.internal_name = d.slug
             dep.url = utils.fixUrl(d._links.self.href)
-            console.log(dep)
             dep.save(function(err, dep) {
               if (err) {
                 console.error('spider error: ' + err)
