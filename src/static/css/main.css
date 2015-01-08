@@ -160,3 +160,11 @@ select {
 .list-group-item-heading {
   padding-right: 25px;
 }
+
+.filters {
+  margin-bottom: 10px;
+}
+
+.more-filters {
+  margin-left: 15px;
+}

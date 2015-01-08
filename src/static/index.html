@@ -100,17 +100,35 @@
         </div>
       </div>
 
-      <div class="row" ng-show="$state.current.name != 'app'">
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="architecture">Filter By Architecture:</label>
-            <select ng-model="architecture" ng-options="a as a for a in architectures" class="form-control" id="architecture"></select>
-          </div>
+      <div class="row filters" ng-show="$state.current.name != 'app'">
+        <div class="more-filters hidden-xs">
+          <a ng-show="!more_filters" ng-click="more_filters = true" class="clickable link">
+            <i class="fa fa-plus-circle"></i> More Filters
+          </a>
+          <a ng-show="more_filters" ng-click="more_filters = false" class="clickable link">
+            <i class="fa fa-plus-circle"></i> Less Filters
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="framework">Filter By Framework:</label>
-            <select ng-model="framework" ng-options="f as f for f in frameworks" class="form-control" id="framework"></select>
+        <div class="more-filters visible-xs text-center">
+          <a ng-show="!more_filters" ng-click="more_filters = true" class="clickable btn btn-primary btn-sm">
+            <i class="fa fa-plus-circle"></i> More Filters
+          </a>
+          <a ng-show="more_filters" ng-click="more_filters = false" class="clickable btn btn-primary btn-sm">
+            <i class="fa fa-plus-circle"></i> Less Filters
+          </a>
+        </div>
+        <div ng-show="more_filters">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="architecture">Filter By Architecture:</label>
+              <select ng-model="architecture" ng-options="a as a for a in architectures" class="form-control" id="architecture"></select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="framework">Filter By Framework:</label>
+              <select ng-model="framework" ng-options="f as f for f in frameworks" class="form-control" id="framework"></select>
+            </div>
           </div>
         </div>
       </div>

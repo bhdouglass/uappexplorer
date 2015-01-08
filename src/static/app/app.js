@@ -32,6 +32,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   $scope.framework = 'All';
   $scope.search = '';
   $scope.app_tab = 'desc';
+  $scope.more_filters = false;
 
   $timeout(function() {
     $('.fancybox').fancybox({loop: false});
