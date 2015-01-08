@@ -27,6 +27,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   $scope.pages = 0;
   $scope.categories = [];
   $scope.category = 'all';
+  $scope.architecture = 'Any';
   $scope.search = '';
   $scope.app_tab = 'desc';
 
@@ -76,6 +77,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
       value: '-prices.USD'
     },
   ];
+
+  $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
 
   $scope.types = {
     application: 'App',
@@ -137,6 +140,21 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
     }
     else {
       $scope.paging.query.categories = $scope.category;
+    }
+  }, true);
+
+  $scope.$watch('architecture', function() {
+    var architecture = $scope.architecture.toLowerCase();
+    if (architecture == 'any' || !$scope.category) {
+      $scope.paging.query.architecture = undefined;
+    }
+    else {
+      var architectures = [architecture];
+      if (architecture != 'all') {
+        architectures.push('all');
+      }
+
+      $scope.paging.query.architecture = {'$in': architectures};
     }
   }, true);
 
