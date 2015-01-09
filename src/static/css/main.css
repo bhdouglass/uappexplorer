@@ -168,3 +168,11 @@ select {
 .more-filters {
   margin-left: 15px;
 }
+
+.main {
+  margin-top: 10px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}

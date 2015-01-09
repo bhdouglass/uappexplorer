@@ -33,6 +33,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
   $scope.search = '';
   $scope.app_tab = 'desc';
   $scope.more_filters = false;
+  $scope.error = '';
+  $scope.errorCallback = null;
 
   $timeout(function() {
     $('.fancybox').fancybox({loop: false});
@@ -96,7 +98,17 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
     mini: true,
   };
 
+  $scope.dismissError = function() {
+    $scope.error = '';
+    console.log($scope.errorCallback);
+    if ($scope.errorCallback) {
+      $scope.errorCallback();
+      $scope.errorCallback = null;
+    }
+  };
+
   function fetchApps() {
+    console.log('fetch apps');
     var paging = angular.copy($scope.paging);
     _.forEach(paging.query, function(q) {
       if (_.isObject(q) && q['_$in']) {
@@ -114,7 +126,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
         $scope.select($scope.$state.params.name);
       }
     }, function(err) {
-      //TODO error handling
+      console.error(err);
+      $scope.error = 'Could not download app list, click to retry';
+      $scope.errorCallback = fetchApps;
     });
 
     $http.get('/api/apps?count=true', {
@@ -124,7 +138,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
 
       $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
     }, function(err) {
-      //TODO error handling
+      console.error(err);
+      $scope.error = 'Could not download app list, click to retry';
+      $scope.errorCallback = fetchApps;
     });
   }
 
@@ -140,7 +156,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
       $scope.categories = categories;
       $scope.category = $scope.categories[0].internal_name;
     }, function(err) {
-      //TODO error handling
+      console.error(err);
+      $scope.error = 'Could not download category list, click to retry';
+      $scope.errorCallback = fetchCategories;
     });
   }
   fetchCategories();
@@ -155,7 +173,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
       $scope.frameworks = frameworks;
       $scope.framework = $scope.frameworks[0];
     }, function(err) {
-      //TODO error handling
+      console.error(err);
+      $scope.error = 'Could not download framework list, click to retry';
+      $scope.errorCallback = fetchFrameworks;
     });
   }
   fetchFrameworks();
@@ -243,7 +263,11 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
     }
   });
 
+  var last_name = name;
   $scope.select = function(name) { //TODO cache this
+    if (!name) {
+      name = last_name;
+    }
     $scope.app_tab = 'desc';
 
     $http.get('/api/apps/' + name).then(function(res) {
@@ -258,7 +282,16 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter) 
         $scope.app.loading_reviews = false;
       });
     }, function(err) {
-      //TODO error handling
+      console.error(err);
+      if (err.status == 404) {
+        $scope.error = 'Could not find app ' + name;
+        $scope.errorCallback = $scope.goToApps;
+      }
+      else {
+        $scope.error = 'Could not download app data, click to retry';
+        $scope.errorCallback = $scope.select;
+      }
+
       $scope.app = null;
     });
   };

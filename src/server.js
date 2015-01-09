@@ -4,6 +4,7 @@ var spider = require('./spider')
 var express = require('express')
 var _ = require('lodash')
 var compression = require('compression')
+var moment = require('moment')
 
 var app = express()
 
@@ -50,26 +51,34 @@ app.get('/api/categories', function(req, res) {
   })
 })
 
-//TODO cache this to speed up requests
+var frameworks = []
+var frameworks_date = null;
 app.get('/api/frameworks', function(req, res) {
-  db.Package.find({}, 'framework', function(err, pkgs) {
-    if (err) {
-      error(res, err)
-    }
-    else {
-      var frameworks = []
-      _.forEach(pkgs, function(pkg) {
-        _.forEach(pkg.framework, function(framework) {
-          if (frameworks.indexOf(framework) == -1) {
-            frameworks.push(framework);
-          }
-        });
-      })
+  var now = moment()
+  if (!frameworks_date || now.diff(frameworks_date, 'hours') > 12 || frameworks.length == 0) { //Cache miss
+    db.Package.find({}, 'framework', function(err, pkgs) {
+      if (err) {
+        error(res, err)
+      }
+      else {
+        frameworks = []
+        _.forEach(pkgs, function(pkg) {
+          _.forEach(pkg.framework, function(framework) {
+            if (frameworks.indexOf(framework) == -1) {
+              frameworks.push(framework);
+            }
+          });
+        })
 
-      frameworks = _.sortBy(frameworks)
-      success(res, frameworks)
-    }
-  })
+        frameworks = _.sortBy(frameworks)
+        frameworks_date = moment()
+        success(res, frameworks)
+      }
+    })
+  }
+  else { //Cache hit
+    success(res, frameworks)
+  }
 })
 
 //TODO cache this to speed up requests

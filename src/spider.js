@@ -100,17 +100,12 @@ function parseExtendedPackage(pkg) {
 
 function parsePackage(data) {
   return function(callback) {
-    //TODO change to findOne
-    db.Package.find({name: data.name}, function(err, packages) {
-      var pkg = null
+    db.Package.findOne({name: data.name}, function(err, pkg) {
       if (err) {
         console.error('spider error: ' + err)
       }
-      else if (packages.length == 0) {
+      else if (!pkg) {
         pkg = new db.Package()
-      }
-      else {
-        pkg = packages[0]
       }
 
       pkg = map(pkg, data)
