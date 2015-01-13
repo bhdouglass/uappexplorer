@@ -36,6 +36,7 @@ it caches images and data to be kind to the api.
 This app is currently designed to be deployed on [OpenShift](https://www.openshift.com).
 The gear running the app needs to have the Nodejs and MongoDB cartridge setup.
 This could be easily setup for a different service provided you setup the env variables.
+To setup env variables on OpenShift, check out their [docs](https://developers.openshift.com/en/managing-environment-variables.html#custom-variables).
 
 ## Env Variables ##
 
