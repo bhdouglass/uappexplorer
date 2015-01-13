@@ -194,7 +194,7 @@ app.get('/api/apps/reviews/:name', function(req, res) {
   })
 })
 
-app.all('/*', function(req, res, next) { //For html5mode on frontend
+app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
   res.sendFile('index.html', {root: __dirname + '/static'});
 });
 

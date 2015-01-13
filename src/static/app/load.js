@@ -12,6 +12,7 @@ LazyLoad.js([
   '/app/services/utils.js',
   '/app/directives/stars.js',
   '/app/directives/pagination.js',
+  '/app/directives/search.js',
   '/app/filters/nl2br.js',
   '/app/filters/dollars.js',
 ]);
