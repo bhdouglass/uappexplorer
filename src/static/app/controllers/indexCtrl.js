@@ -1,6 +1,7 @@
 app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, api, utils) {
   var title = 'Ubuntu Touch Appstore (Unofficial)';
   $scope.title = title;
+  $scope.$state = $state;
   $scope.app_chunks = [];
   $scope.app = null;
   $scope.apps = [];
@@ -49,7 +50,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
       });
 
       $scope.app_chunks = app_chunks;
-      $scope.app_count = data.app_count;
+      $scope.app_count = data.count;
       $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
 
       if ($state.current.name == 'app') {
