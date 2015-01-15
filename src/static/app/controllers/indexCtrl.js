@@ -13,6 +13,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.app_tab = 'desc';
   $scope.error = '';
   $scope.errorCallback = null;
+  $scope.loading = false;
 
   $timeout(function() {
     $('.fancybox').fancybox({loop: false});
@@ -31,6 +32,23 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
     mini: true,
   };
 
+  var can_load = false;
+  function loading() {
+    can_load = true;
+    $scope.loading = false;
+    $timeout(function() {
+      if (can_load) {
+        console.log('loading');
+        $scope.loading = true;
+      }
+    }, 500); //0.5 seconds
+  }
+
+  function doneLoading() {
+    can_load = false;
+    $scope.loading = false;
+  }
+
   $scope.dismissError = function() {
     $scope.error = '';
     if ($scope.errorCallback) {
@@ -40,6 +58,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   };
 
   function fetchApps() {
+    loading();
     api.apps($scope.paging).then(function(data) {
       $scope.apps = data.apps;
       var app_chunks = [];
@@ -62,6 +81,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
     }, function(err) {
       console.error(err);
       $scope.setError('Could not download app list, click to retry', fetchApps);
+    }).finally(function() {
+      doneLoading();
     });
   }
 
@@ -92,6 +113,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
     }
     $scope.app_tab = 'desc';
 
+    loading();
     api.app(name).then(function(data) {
       $scope.app = data;
     }, function(err) {
@@ -104,6 +126,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
       }
 
       $scope.app = null;
+    }).finally(function() {
+      doneLoading();
     });
   };
 

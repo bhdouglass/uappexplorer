@@ -1,160 +1,168 @@
-<div class="app" ng-show="app">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="list-group">
-        <div class="list-group-item">
-          <div class="row-action-primary">
-            <div class="icon-large ubuntu-shape">
-              <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" />
-            </div>
-          </div>
-
-          <div class="row-content app-info">
-            <div class="least-content">
-              <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
-            </div>
-            <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
-            <p class="list-group-item-text">
-              <stars ng-model="app.average_rating"></stars>
-              <br ng-show="app.autor" />
-              <a ng-click="searchFor(app.author)" ng-bind="app.author" title="Author" class="clickable"></a>
-              <br ng-show="app.company" />
-              <span ng-bind="app.company" title="Company"></span>
-
-              <br/>
-              <span ng-show="isFree(app.prices)" class="label label-primary">Free</span>
-              <span ng-show="!isFree(app.prices)" class="label label-success price" ng-repeat="(currency, value) in app.prices" ng-bind="app.prices|dollars:currency"></span>
-            </p>
-          </div>
-        </div>
-        <div class="list-group-separator"></div>
-
-        <div class="list-group-item">
-          <div class="row-action-primary">
-            <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link" ng-class="{'clickable': app.download}" target="_blank">
-              <div class="action-icon ubuntu-shape">
-                <i class="fa" ng-class="{'fa-download': app.download, 'fa-info-circle': !app.download}" ng-style="strToColor(app.name, 'background-color')"></i>
-              </div>
-            </a>
-          </div>
-
-          <div class="row-content">
-            <p class="list-group-item-text">
-              Version: <span ng-bind="app.version"></span>
-              <br/>
-              Updated: <span ng-bind="app.last_updated | date"></span>
-              <br/>
-              License: <span ng-bind="app.license"></span>
-            </p>
-          </div>
-
-        </div>
-        <div class="list-group-separator"></div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <ul class="nav nav-pills">
-        <li ng-class="{active: app_tab == 'desc'}" class="clickable">
-          <a ng-click="app_tab = 'desc'">Description</a>
-        </li>
-        <li ng-class="{active: app_tab == 'change'}" class="clickable">
-          <a ng-click="app_tab = 'change'">Changelog</a>
-        </li>
-        <li ng-class="{active: app_tab == 'support'}" class="clickable">
-          <a ng-click="app_tab = 'support'">Support</a>
-        </li>
-      </ul>
-      <br/>
-
-      <div class="tab-content" ng-show="app_tab == 'desc'">
-        <div class="well" ng-bind-html="app.description | nl2br"></div>
-      </div>
-
-      <div class="tab-content" ng-show="app_tab == 'change'">
-        <div class="well" ng-bind-html="app.changelog | nl2br"></div>
-      </div>
-
-      <div class="tab-content" ng-show="app_tab == 'support'">
-        <div class="well">
-          <span ng-show="app.support">
-            Support: <a ng-href="{{app.support}}" ng-bind="app.support"></a>
-          </span>
-          <span ng-show="app.website">
-            <br/>
-            Website: <a ng-href="{{app.website}}" ng-bind="app.website"></a>
-          </span>
-          <span ng-show="app.terms">
-            <br/>
-            Terms:
-            <p ng-bind="app.terms"></p>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div ng-show="app.screenshots.length > 0 && app.screenshots[0] != ''">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h3>Screenshots</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 screenshot-scroll">
-        <div ng-repeat="s in app.screenshots|orderBy:'toString()'">
-          <a ng-href="{{s}}" rel="screenshot" class="fancybox">
-            <img ng-src="{{s}}" alt="" class="screenshot" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
+<div class="app">
+  <div class="row" ng-if="loading">
     <div class="col-md-12 text-center">
-      <h3>User Reviews</h3>
+      <i class="fa fa-spinner fa-spin fa-4x"></i>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12 text-center" ng-if="app.loading_reviews">
-      <i class="fa fa-spin fa-spinner fa-2x"></i>
-      Loading reviews...
-    </div>
-
-    <div ng-repeat="review in app.reviews|orderBy:'-date_created'">
-      <div class="col-sm-4" ng-class="{'col-sm-offset-4': ($last && (app.reviews.length % 3) == 1), 'col-sm-offset-2': (($index + 2) == app.reviews.length && (app.reviews.length % 3) == 2)}">
+  <div ng-show="app && !loading">
+    <div class="row">
+      <div class="col-md-6">
         <div class="list-group">
           <div class="list-group-item">
             <div class="row-action-primary">
-              <div class="action-icon ubuntu-shape">
-                <i class="fa fa-user" ng-style="strToColor(review.reviewer_username, 'background-color')"></i>
+              <div class="icon-large ubuntu-shape">
+                <img ng-src="/images/{{app.icon_filename}}" alt="{{app.name}}" />
               </div>
             </div>
 
-            <div class="row-content">
-              <div class="least-content" ng-bind="review.date_created|date"></div>
-
-              <p class="list-group-item-heading">
-                <stars ng-model="review.rating"></stars>
-                <span ng-bind="review.reviewer_displayname">
-              </p>
-
+            <div class="row-content app-info">
+              <div class="least-content">
+                <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+              </div>
+              <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
               <p class="list-group-item-text">
-                <span ng-bind="review.review_text"></span>
+                <stars ng-model="app.average_rating"></stars>
+                <br ng-show="app.autor" />
+                <a ng-click="searchFor(app.author)" ng-bind="app.author" title="Author" class="clickable"></a>
+                <br ng-show="app.company" />
+                <span ng-bind="app.company" title="Company"></span>
+
                 <br/>
-                For version: <span ng-bind="review.version"></span>
+                <span ng-show="isFree(app.prices)" class="label label-primary">Free</span>
+                <span ng-show="!isFree(app.prices)" class="label label-success price" ng-repeat="(currency, value) in app.prices" ng-bind="app.prices|dollars:currency"></span>
               </p>
             </div>
           </div>
           <div class="list-group-separator"></div>
+
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link" ng-class="{'clickable': app.download}" target="_blank">
+                <div class="action-icon ubuntu-shape">
+                  <i class="fa" ng-class="{'fa-download': app.download, 'fa-info-circle': !app.download}" ng-style="strToColor(app.name, 'background-color')"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="row-content">
+              <p class="list-group-item-text">
+                Version: <span ng-bind="app.version"></span>
+                <br/>
+                Updated: <span ng-bind="app.last_updated | date"></span>
+                <br/>
+                License: <span ng-bind="app.license"></span>
+              </p>
+            </div>
+
+          </div>
+          <div class="list-group-separator"></div>
         </div>
       </div>
-      <div ng-class="{clearfix: ($index + 1) % 3 == 0}"></div>
+
+      <div class="col-md-6">
+        <ul class="nav nav-pills">
+          <li ng-class="{active: app_tab == 'desc'}" class="clickable">
+            <a ng-click="app_tab = 'desc'">Description</a>
+          </li>
+          <li ng-class="{active: app_tab == 'change'}" class="clickable">
+            <a ng-click="app_tab = 'change'">Changelog</a>
+          </li>
+          <li ng-class="{active: app_tab == 'support'}" class="clickable">
+            <a ng-click="app_tab = 'support'">Support</a>
+          </li>
+        </ul>
+        <br/>
+
+        <div class="tab-content" ng-show="app_tab == 'desc'">
+          <div class="well" ng-bind-html="app.description | nl2br"></div>
+        </div>
+
+        <div class="tab-content" ng-show="app_tab == 'change'">
+          <div class="well" ng-bind-html="app.changelog | nl2br"></div>
+        </div>
+
+        <div class="tab-content" ng-show="app_tab == 'support'">
+          <div class="well">
+            <span ng-show="app.support">
+              Support: <a ng-href="{{app.support}}" ng-bind="app.support"></a>
+            </span>
+            <span ng-show="app.website">
+              <br/>
+              Website: <a ng-href="{{app.website}}" ng-bind="app.website"></a>
+            </span>
+            <span ng-show="app.terms">
+              <br/>
+              Terms:
+              <p ng-bind="app.terms"></p>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && app.reviews.length == 0">
-      <h4>No reviews yet!</h4>
+
+    <div ng-show="app.screenshots.length > 0 && app.screenshots[0] != ''">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>Screenshots</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 screenshot-scroll">
+          <div ng-repeat="s in app.screenshots|orderBy:'toString()'">
+            <a ng-href="{{s}}" rel="screenshot" class="fancybox">
+              <img ng-src="{{s}}" alt="" class="screenshot" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>User Reviews</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center" ng-if="app.loading_reviews">
+        <i class="fa fa-spin fa-spinner fa-2x"></i>
+        Loading reviews...
+      </div>
+
+      <div ng-repeat="review in app.reviews|orderBy:'-date_created'">
+        <div class="col-sm-4" ng-class="{'col-sm-offset-4': ($last && (app.reviews.length % 3) == 1), 'col-sm-offset-2': (($index + 2) == app.reviews.length && (app.reviews.length % 3) == 2)}">
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <div class="action-icon ubuntu-shape">
+                  <i class="fa fa-user" ng-style="strToColor(review.reviewer_username, 'background-color')"></i>
+                </div>
+              </div>
+
+              <div class="row-content">
+                <div class="least-content" ng-bind="review.date_created|date"></div>
+
+                <p class="list-group-item-heading">
+                  <stars ng-model="review.rating"></stars>
+                  <span ng-bind="review.reviewer_displayname">
+                </p>
+
+                <p class="list-group-item-text">
+                  <span ng-bind="review.review_text"></span>
+                  <br/>
+                  For version: <span ng-bind="review.version"></span>
+                </p>
+              </div>
+            </div>
+            <div class="list-group-separator"></div>
+          </div>
+        </div>
+        <div ng-class="{clearfix: ($index + 1) % 3 == 0}"></div>
+      </div>
+      <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && app.reviews.length == 0">
+        <h4>No reviews yet!</h4>
+      </div>
     </div>
   </div>
 </div>

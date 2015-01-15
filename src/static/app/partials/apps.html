@@ -1,6 +1,12 @@
 <div>
   <search ng-model="paging" search="search" error-callback="setError"></search>
 
+  <div class="row" ng-if="loading">
+    <div class="col-md-12 text-center">
+      <i class="fa fa-spinner fa-spin fa-4x"></i>
+    </div>
+  </div>
+
   <div class="row apps" ng-repeat="chunk in app_chunks">
     <div class="col-md-4" ng-repeat="app in chunk">
       <div class="list-group">

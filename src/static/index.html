@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="indexCtrl" itemscope itemtype="http://schema.org/MobileApplication">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title ng-bind="title"></title>
+    <title ng-bind="title">Ubuntu Touch Appstore (Unofficial)</title>
+    <base href="/" />
 
     <meta name="description" content="{{page_description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{og.title}}" />
@@ -27,10 +28,9 @@
     <meta property="og:description" content="{{og.description}}" />
     <meta property="og:site_name" content="{{title}}" />
 
-    <base href="/" />
-
     <link rel="icon" type="image/png" href="/img/favicon.png">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular-csp.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/lazyload/2.0.3/lazyload-min.js"></script>
     <script src="/app/load.js"></script>
   </head>
@@ -46,7 +46,7 @@
           </button>
           <span class="navbar-brand">
             <a ng-click="goToApps()" class="link clickable">
-              <i class="fa fa-chevron-left" ng-show="$state.current.name == 'app'"></i>
+              <i class="fa fa-chevron-left" ng-show="$state.current.name == 'app'"  ng-cloak></i>
               <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
               Ubuntu Touch Appstore
               <span class="hidden-xs">(Unofficial)</span>
@@ -63,7 +63,7 @@
       </div>
     </nav>
 
-    <div class="container" ng-show="error">
+    <div class="container" ng-cloak ng-show="error">
       <div class="row">
         <div class="col-sm-12 centered">
           <div class="alert alert-dismissable alert-warning clickable text-center"  ng-click="dismissError()">
