@@ -1,9 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="indexCtrl">
+<html lang="en" ng-app="app" ng-controller="indexCtrl" itemscope itemtype="http://schema.org/MobileApplication">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title ng-bind="title"></title>
+
+    <meta name="description" content="{{page_description}}" />
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{og.title}}" />
+    <meta itemprop="description" content="{{og.description}}" />
+    <meta itemprop="image" content="{{og.image}}" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@bhdouglass" />
+    <meta name="twitter:title" content="{{og.title}}" />
+    <meta name="twitter:description" content="{{og.description}}" />
+    <meta name="twitter:image:src" content="{{og.image}}" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{og.title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{og.url}}" />
+    <meta property="og:image" content="{{og.image}}" />
+    <meta property="og:description" content="{{og.description}}" />
+    <meta property="og:site_name" content="{{title}}" />
+
     <base href="/" />
 
     <link rel="icon" type="image/png" href="/img/favicon.png">

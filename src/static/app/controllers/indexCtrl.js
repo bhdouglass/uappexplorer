@@ -1,6 +1,8 @@
 app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, api, utils) {
   var title = 'Ubuntu Touch Appstore (Unofficial)';
   $scope.title = title;
+  $scope.page_description = title;
+  $scope.og = {};
   $scope.$state = $state;
   $scope.app_chunks = [];
   $scope.app = null;
@@ -108,9 +110,30 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.$watch('app', function() {
     if ($scope.app) {
       $scope.title = $scope.app.title + ' - ' + title;
+      $scope.page_description = title + ' - ' + $scope.app.title;
+
+      var description = $scope.app.description;
+      if ($scope.app.description && $scope.app.description.split('\n').length > 0) {
+        description = $scope.app.description.split('\n')[0];
+      }
+
+      $scope.og = {
+        title: $scope.app.title,
+        description: description,
+        image: 'http://appstore.bhdouglass.com/images/' + $scope.app.icon_filename,
+        url: 'http://appstore.bhdouglass.com/app/' + $scope.app.name,
+      };
     }
     else {
       $scope.title = title;
+      $scope.page_description = title;
+
+      $scope.og = {
+        title: title,
+        description: 'Browse and discover apps for Ubuntu Touch',
+        image: 'http://appstore.bhdouglass.com/img/ubuntu-logo.png',
+        url: 'http://appstore.bhdouglass.com/apps',
+      };
     }
   });
 
