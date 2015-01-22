@@ -23,7 +23,7 @@
               <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
               <p class="list-group-item-text">
                 <stars ng-model="app.average_rating"></stars>
-                <br ng-show="app.autor" />
+                <br ng-show="app.author" />
                 <a ng-click="searchFor(app.author)" ng-bind="app.author" title="Author" class="clickable"></a>
                 <br ng-show="app.company" />
                 <span ng-bind="app.company" title="Company"></span>
@@ -38,11 +38,26 @@
 
           <div class="list-group-item">
             <div class="row-action-primary">
-              <a ng-href="{{app.download}}" title="{{app.filesize}}" class="link" ng-class="{'clickable': app.download}" target="_blank">
                 <div class="action-icon ubuntu-shape">
-                  <i class="fa" ng-class="{'fa-download': app.download, 'fa-info-circle': !app.download}" ng-style="strToColor(app.name, 'background-color')"></i>
+                  <i class="fa fa-download" ng-style="strToColor(app.author, 'background-color')"></i>
                 </div>
-              </a>
+            </div>
+
+            <div class="row-content">
+              <p class="list-group-item-text">
+                <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.name}}" class="btn btn-success btn-sm">Install</a>
+                <!--<a ng-href="{{app.download}}" class="btn btn-primary btn-sm">Download</a>-->
+              </p>
+            </div>
+
+          </div>
+          <div class="list-group-separator"></div>
+
+          <div class="list-group-item">
+            <div class="row-action-primary">
+                <div class="action-icon ubuntu-shape">
+                  <i class="fa fa-info-circle" ng-style="strToColor(app.name, 'background-color')"></i>
+                </div>
             </div>
 
             <div class="row-content">
@@ -75,15 +90,15 @@
         <br/>
 
         <div class="tab-content" ng-show="app_tab == 'desc'">
-          <div class="well" ng-bind-html="app.description | nl2br"></div>
+          <div class="well app-tab" ng-bind-html="app.description | nl2br"></div>
         </div>
 
         <div class="tab-content" ng-show="app_tab == 'change'">
-          <div class="well" ng-bind-html="app.changelog | nl2br"></div>
+          <div class="well app-tab" ng-bind-html="app.changelog | nl2br"></div>
         </div>
 
         <div class="tab-content" ng-show="app_tab == 'support'">
-          <div class="well">
+          <div class="well app-tab">
             <span ng-show="app.support">
               Support: <a ng-href="{{app.support}}" ng-bind="app.support"></a>
             </span>

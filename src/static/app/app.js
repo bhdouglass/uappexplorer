@@ -2,7 +2,7 @@
 
 var app = angular.module('app', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $urlRouterProvider.otherwise('/apps');
   $locationProvider.html5Mode(true)
 
@@ -13,4 +13,6 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     url: '/app/:name',
     templateUrl: '/app/partials/app.html'
   });
+
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|scope):/);
 });

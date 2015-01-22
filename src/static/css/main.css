@@ -176,3 +176,7 @@ select {
 .navbar {
   margin-bottom: 0px;
 }
+
+.app-tab {
+  min-height: 225px;
+}
