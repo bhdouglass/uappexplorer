@@ -16,7 +16,6 @@ app.directive('search', function($timeout, api) {
       $scope.architecture = 'Any';
       $scope.frameworks = ['All'];
       $scope.framework = 'All';
-      $scope.search = '';
       $scope.more_filters = false;
 
       $scope.sorts = [

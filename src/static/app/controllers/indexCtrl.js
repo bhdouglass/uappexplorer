@@ -14,6 +14,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.error = '';
   $scope.errorCallback = null;
   $scope.loading = false;
+  $scope.search = { //avoid 2-way binding issues
+    q: '',
+  };
 
   $timeout(function() {
     $('.fancybox').fancybox({loop: false});
@@ -93,8 +96,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   });
 
   $scope.searchFor = function(search) {
-    $scope.search = search;
-     $scope.goToApps();
+    $scope.search.q = search;
+    $scope.goToApps();
   };
 
   $scope.$on('$stateChangeSuccess', function() {

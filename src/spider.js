@@ -292,7 +292,7 @@ function parseDepartments() {
 
 function fetchReviews(pkg, callback) {
   var now = moment()
-  if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') > 3) {
+  if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') >= 1) {
     request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
       if (err) {
         console.error('spider error: ' + err)
