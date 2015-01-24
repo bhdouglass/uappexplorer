@@ -1,10 +1,14 @@
 var db = require('./db')
 var config = require('./config')
 var spider = require('./spider')
+var utils = require('./utils')
 var express = require('express')
 var _ = require('lodash')
 var compression = require('compression')
 var moment = require('moment')
+var prerender = require('prerender-node')
+var fs = require('fs')
+var mime = require('mime')
 
 var app = express()
 
@@ -18,8 +22,8 @@ app.use(compression({
     return compression.filter(req, res);
   }
 }))
+app.use(prerender.whitelisted(['/app/.*']))
 app.use(express.static(__dirname + '/static'))
-app.use('/images', express.static(config.data_dir, {maxage: '2d'}))
 
 function success(res, data, message) {
   res.send({
@@ -39,6 +43,45 @@ function error(res, message, code) {
     message: message
   })
 }
+
+app.get('/api/icon/:name', function(req, res) {
+  db.Package.findOne({name: req.params.name}, function(err, pkg) {
+    if (err) {
+      error(res, err)
+    }
+    else if (!pkg) {
+      error(res, req.params.name + ' was not found', 404) //TODO: 404 image?
+    }
+    else {
+      if (pkg.icon) {
+        if (!pkg.icon_filename) {
+          pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
+        }
+
+        var filename = config.data_dir + '/' + pkg.icon_filename
+        fs.exists(filename, function(exists) {
+          if (exists) {
+            res.setHeader('Content-type', mime.lookup(filename))
+            res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+            fs.createReadStream(filename).pipe(res)
+          }
+          else {
+            utils.download(pkg.icon, filename, function(r) {
+              console.log(filename + ' finished downloading')
+
+              res.setHeader('Content-type', mime.lookup(filename))
+              res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+              fs.createReadStream(filename).pipe(res)
+            })
+          }
+        })
+      }
+      else {
+        error(res, req.params.name + ' was not found', 404) //TODO: 404 image?
+      }
+    }
+  })
+})
 
 app.get('/api/categories', function(req, res) {
   db.Department.find({}, function(err, deps) {

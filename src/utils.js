@@ -60,7 +60,10 @@ function fixUrl(url) {
 }
 
 function download(url, filename, callback) {
-  request(url).pipe(fs.createWriteStream(filename)).on('close', callback)
+  var r = request(url)
+  r.pipe(fs.createWriteStream(filename)).on('close', function() {
+    callback(r)
+  })
 }
 
 exports.download = download

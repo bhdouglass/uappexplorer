@@ -84,11 +84,6 @@ function parseExtendedPackage(pkg) {
               callback(err)
             }
             else {
-              var filename = config.data_dir + '/' + pkg.icon_filename
-
-              utils.download(pkg.icon, filename, function() {
-                console.log('spider: ' + filename + ' finished downloading')
-              })
               callback(null, pkg)
             }
           })
