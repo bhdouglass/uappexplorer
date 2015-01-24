@@ -9,6 +9,7 @@ var moment = require('moment')
 var prerender = require('prerender-node')
 var fs = require('fs')
 var mime = require('mime')
+var moment = require('moment')
 
 var app = express()
 
@@ -58,15 +59,17 @@ app.get('/api/icon/:name', function(req, res) {
           pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
         }
 
+        var now = moment()
         var filename = config.data_dir + '/' + pkg.icon_filename
         fs.exists(filename, function(exists) {
-          if (exists) {
+          if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
             res.setHeader('Content-type', mime.lookup(filename))
             res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
             fs.createReadStream(filename).pipe(res)
           }
           else {
             utils.download(pkg.icon, filename, function(r) {
+              pkg.icon_fetch_date = now.valueOf()
               console.log(filename + ' finished downloading')
 
               res.setHeader('Content-type', mime.lookup(filename))

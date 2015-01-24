@@ -22,6 +22,7 @@ var packageSchema = mongoose.Schema({
   filesize: String,
   framework: [String],
   icon: String,
+  icon_fetch_date: Number,
   icon_filename: String,
   icons: {},
   keywords: [String],
