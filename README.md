@@ -46,7 +46,8 @@ it caches images and data to be kind to the api.
 
 The appstore uses [iron.io](http://www.iron.io/) to process apps from the click
 appstore api into the database. Setup an iron.io account and download the iron.json
-config file to the repo root and install the [iron.io cli tool](http://dev.iron.io/worker/reference/cli/#installing).
+config file to the repo root and install the
+[iron.io cli tool](http://dev.iron.io/worker/reference/cli/#installing).
 Also setup a config.json file in the src directory containing the token and project
 id from the iron.json file. The config.json file is setup just like the config.js.
 
