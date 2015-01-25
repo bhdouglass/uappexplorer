@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="indexCtrl" itemscope itemtype="http://schema.org/MobileApplication">
   <head>
-    <title ng-bind="title">Ubuntu Touch Appstore (Unofficial)</title>
+    <title ng-bind="title">Ubuntu Touch Apps</title>
     <base href="/" />
 
-    <meta name="description" content="{{page_description}}" />
+    <meta name="description" content="App store for Ubuntu Touch" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
 
@@ -48,8 +48,7 @@
             <a ng-click="goToApps()" class="link clickable">
               <i class="fa fa-chevron-left" ng-show="$state.current.name == 'app'"  ng-cloak></i>
               <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              Ubuntu Touch Appstore
-              <span class="hidden-xs">(Unofficial)</span>
+              Ubuntu Touch Apps
             </a>
           </span>
         </div>

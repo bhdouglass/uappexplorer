@@ -8,7 +8,13 @@ if (process.argv[2]) {
     spider.parseDepartments()
   }
   else {
-    spider.parsePackage(process.argv[2])
+    spider.parsePackage(process.argv[2], function(err) {
+      if (err) {
+        process.exit(1)
+      }
+
+      process.exit(0)
+    })
   }
 }
 else {

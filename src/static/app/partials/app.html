@@ -124,7 +124,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 screenshot-scroll">
-          <div ng-repeat="s in app.screenshots|orderBy:'toString()'">
+          <div ng-repeat="s in app.screenshots">
             <a ng-href="{{s}}" rel="screenshot" class="fancybox">
               <img ng-src="{{s}}" alt="" class="screenshot" />
             </a>

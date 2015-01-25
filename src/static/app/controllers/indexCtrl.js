@@ -1,7 +1,6 @@
 app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, api, utils) {
-  var title = 'Ubuntu Touch Appstore (Unofficial)';
+  var title = 'Ubuntu Touch Apps';
   $scope.title = title;
-  $scope.page_description = title;
   $scope.og = {};
   $scope.$state = $state;
   $scope.app_chunks = [];
@@ -137,7 +136,6 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.$watch('app', function() {
     if ($scope.app) {
       $scope.title = $scope.app.title + ' - ' + title;
-      $scope.page_description = title + ' - ' + $scope.app.title;
 
       var description = $scope.app.description;
       if ($scope.app.description && $scope.app.description.split('\n').length > 0) {
@@ -153,7 +151,6 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
     }
     else {
       $scope.title = title;
-      $scope.page_description = title;
 
       $scope.og = {
         title: title,
