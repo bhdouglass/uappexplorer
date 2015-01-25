@@ -1,0 +1,16 @@
+#iron.io worker to parse a single package with payload {"package":"com.exampe.package.name"}
+
+runtime "node"
+stack "node-0.10"
+
+file "package.json"
+file "src/config.json"
+file "src/db.js"
+file "src/utils.js"
+file "src/config.js"
+file "src/spider.js"
+
+remote
+build "npm config set strict-ssl false; npm install --production"
+
+exec "src/worker/packageWorker.js"

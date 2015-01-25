@@ -230,7 +230,7 @@ app.get('/api/apps/reviews/:name', function(req, res) {
       error(res, req.params.name + ' was not found', 404)
     }
     else {
-      spider.fetchReviews(pkg, function(pkg2) {
+      spider.parseReviews(pkg, function(pkg2) {
         success(res, {
           reviews: pkg2.reviews,
           name: pkg2.name,

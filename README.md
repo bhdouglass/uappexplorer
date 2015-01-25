@@ -17,7 +17,7 @@ it caches images and data to be kind to the api.
 * Start vagrant:
     * Run: `vagrant up`
     * Ssh into the box: `vagrant ssh`
-* Insall Dependencies:
+* Install dependencies:
     * Go to: `/srv/ubuntu-appstore/`
     * Run: `npm install`
 * Run the spider:
@@ -31,6 +31,58 @@ it caches images and data to be kind to the api.
     * You may want to put a friendly name in your host machine's `/etc/hosts`
 * Profit!
 
+## Using the Spider ##
+
+* Fetch all packages
+    * Run: `nodejs src/runSpider.js`
+* Fetch only updated/missing packages
+    * Run: `nodejs src/runSpider.js update`
+* Fetch departments/categories
+    * Run: `nodejs src/runSpider.js department`
+* Fetch a single package
+    * Run: `nodejs src/runSpider.js com.example.pacakge.name`
+
+## Iron.io Workers ##
+
+The appstore uses [iron.io](http://www.iron.io/) to process apps from the click
+appstore api into the database. Setup an iron.io account and download the iron.json
+config file to the repo root and install the [iron.io cli tool](http://dev.iron.io/worker/reference/cli/#installing).
+Also setup a config.json file in the src directory containing the token and project
+id from the iron.json file. The config.json file is setup just like the config.js.
+
+The workers are:
+
+* department.worker
+    * Fetches all the departments and stores them in the database
+    * No payload is needed
+* package.worker
+    * Fetches a single package and stores it in the database
+    * Example payload: `{"package": "com.example.package.name"}`
+* package-list.worker
+    * Fetches the whole package list (or only updates) and creates package tasks
+    * Payload to update all packages: `{"full": true}`
+    * No payload needed to only do updates
+
+To run the iron.io workers locally run `iron_worker run <worker_name>.worker`.
+
+To upload the iron.io workers to iron.io run `iron_worker upload <worker_name>.worker`.
+
+## Using The Local Prerender ##
+
+* Start vagrant:
+    * Run: `vagrant up`
+    * Ssh into the box: `vagrant ssh`
+* Install dependencies:
+    * Go to: `/srv/ubuntu-appstore/prerender`
+    * Run: `npm install`
+* Start the prerender:
+    * Go to: `/srv/ubuntu-appstore/prerender`
+    * Run: `npm start`
+* Test the prerender:
+    * Visit an app url with `?_escaped_fragment_=`
+    * Example: `192.168.52.200:8080/app/name?_escaped_fragment_=`
+    * The page should be routed through the prerender, you can check the source as the prerender removes any script tags.
+
 ## Deploying ##
 
 This app is currently designed to be deployed on [OpenShift](https://www.openshift.com).
@@ -38,7 +90,16 @@ The gear running the app needs to have the Nodejs and MongoDB cartridge setup.
 This could be easily setup for a different service provided you setup the env variables.
 To setup env variables on OpenShift, check out their [docs](https://developers.openshift.com/en/managing-environment-variables.html#custom-variables).
 
-## Env Variables ##
+Alternatively an external mongo host could be used, like [MongoLab](https://mongolab.com/).
+
+In addition to a server, the appstore also uses [iron.io](http://www.iron.io/),
+see the section "Iron.io Workers" above for more details.
+
+## Configuration ##
+
+Default configuration can be found in src/config.js. The defaults can be overriden
+by a config.json file (setup like config.js's export). They can also be overriden
+by the following env variables.
 
 * NODEJS_PORT || OPENSHIFT_NODEJS_PORT
     * The port for the web server to listen on
@@ -55,6 +116,12 @@ To setup env variables on OpenShift, check out their [docs](https://developers.o
 * MONGODB_DB
     * Name of the database to use
     * Default: `appstore`
+* PRERENDER_SERVICE_URL
+    * Url to use for prerendering
+    * Default: `http://service.prerender.io/`
+* ALLOWED_DOMAINS
+    * The domains the local prerender server allows
+    * Default: `appstore.bhdouglass.com,local.appstore.bhdouglass.com,127.0.0.1,192.168.52.200`
 
 ## Libraries ##
 
@@ -67,6 +134,8 @@ The following third party libraries are used in this app:
     * [Request](https://github.com/request/request)
     * [Async](https://github.com/caolan/async)
     * [Moment.js](http://momentjs.com/)
+    * [prerender-node](https://github.com/prerender/prerender-node#using-your-own-prerender-service)
+    * [prerender](https://github.com/prerender/prerender)
 * Client Side
     * [Bootstrap](http://getbootstrap.com/)
     * [jQuery](http://jquery.com/)

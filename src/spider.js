@@ -1,12 +1,10 @@
-var db = require('./db')
+var config = require('./config')
 var utils = require('./utils')
-var config = require('./config.js')
-var https = require('https')
-var _ = require('lodash')
-var async = require('async')
+var db = require('./db')
 var request = require('request')
-var schedule = require('node-schedule')
+var _ = require('lodash')
 var moment = require('moment')
+var async = require('async')
 
 var propertyMap = {
   architecture:   'architecture',
@@ -52,8 +50,8 @@ function map(pkg, data) {
       }
       else if (pkgProperty == 'description') {
         if (pkg[pkgProperty]) {
-          var split = pkg[pkgProperty].replace('\r', '').split('\n');
-          if (split.length == 2 && split[0] == split[1]) {
+          var split = pkg[pkgProperty].replace('\r', '').split('\n')
+          if (split.length == 2 && split[0] == split[1]) { //Remove duplicated second line
             pkg[pkgProperty] = split[0].replace('\n', '')
           }
         }
@@ -64,178 +62,54 @@ function map(pkg, data) {
   return pkg
 }
 
-function parseExtendedPackage(pkg) {
-  return function(callback) {
-    setTimeout(function() {
-      console.log('spider: ' + pkg.url)
-      request(pkg.url, function(err, resp, body) {
-        if (err) {
-          console.error('spider error: ' + err)
-        }
-        else {
-          data = JSON.parse(body)
-          pkg = map(pkg, data)
-          pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
-          console.log('spider: ' + pkg.icon_filename)
-
-          pkg.save(function(err, pkg) {
-            if (err) {
-              console.error('spider error: ' + err)
-              callback(err)
-            }
-            else {
-              callback(null, pkg)
-            }
-          })
-        }
-      })
-    }, 5 * 1000)
-  }
-}
-
-function parsePackage(data) {
-  return function(callback) {
-    db.Package.findOne({name: data.name}, function(err, pkg) {
-      if (err) {
-        console.error('spider error: ' + err)
-      }
-      else if (!pkg) {
-        pkg = new db.Package()
-      }
-
-      pkg = map(pkg, data)
-      pkg.url = utils.fixUrl(data._links.self.href)
-      pkg.save(function(err, pkg) {
-        if (err) {
-          console.error('spider error: ' + err)
-          callback(err)
-        }
-        else {
-          callback(null, pkg)
-        }
-      })
-    })
-  }
-}
-
-function parsePackageList(list) {
-  console.log('spider: parsing ' + list.length + ' packages')
-  var packageCallbacks = []
-  var packageNames = []
-  _.forEach(list, function(pkg) {
-    packageCallbacks.push(parsePackage(pkg))
-    packageNames.push(pkg.name)
-  })
-  console.log('spider: done parsing package list')
-
-  db.Package.find({}, function(err, packages) {
+function parsePackage(name, callback) {
+  var url = config.spider.packages_api + name
+  console.log('parsing ' + url)
+  request(url, function(err, resp, body) {
     if (err) {
-      console.error('spider error: ' + err)
-    }
-    else {
-      _.forEach(packages, function(pkg) {
-        if (packageNames.indexOf(pkg.name) == -1) {
-          console.log('spider: deleting ' + pkg.name)
-          pkg.remove(function(err) {
-            if (err) {
-              console.error('spider error: ' + err)
-            }
-          })
-        }
-      })
-    }
-  })
-
-  async.parallel(packageCallbacks, function(err, pkgs) {
-    console.log('spider: done saving packages')
-
-    var extendedCallbacks = []
-    _.forEach(pkgs, function(pkg) {
-      if (pkg) {
-        extendedCallbacks.push(parseExtendedPackage(pkg))
-      }
-    })
-
-    //For testing
-    //var extendedCallbacks = [extendedCallbacks[0]]
-    async.series(extendedCallbacks, function(err, results) {
-      if (err) {
-        console.error('spider error: ' + err)
-      }
-
-      console.log('spider: done spidering')
-    })
-  })
-}
-
-function parsePackageForUpdates(data) {
-  return function(callback) {
-    db.Package.findOne({name: data.name}, function(err, pkg) {
-      if (err) {
-        console.error('spider error: ' + err)
-      }
-      else if (!pkg) {
-        pkg = new db.Package()
-      }
-
-      if (pkg.version != data.version) {
-        pkg = map(pkg, data)
-        pkg.url = utils.fixUrl(data._links.self.href)
-        pkg.save(function(err, pkg) {
-          if (err) {
-            console.error('spider error: ' + err)
-            callback(err)
-          }
-          else {
-            callback(null, pkg)
-          }
-        })
-      }
-      else {
-        callback(null, null)
-      }
-    })
-  }
-}
-
-function parsePackageListForUpdates(list) {
-  console.log('spider: parsing ' + list.length + ' packages for updates')
-  var packageCallbacks = []
-  var packageNames = []
-  _.forEach(list, function(pkg) {
-    packageCallbacks.push(parsePackageForUpdates(pkg))
-    packageNames.push(pkg.name)
-  })
-  console.log('spider: done parsing package list')
-
-  async.parallel(packageCallbacks, function(err, pkgs) {
-    console.log('spider: done saving packages')
-
-    var extendedCallbacks = []
-    _.forEach(pkgs, function(pkg) {
-      if (pkg) {
-        extendedCallbacks.push(parseExtendedPackage(pkg))
-      }
-    })
-
-    async.series(extendedCallbacks, function(err, results) {
-      if (err) {
-        console.error('spider error: ' + err)
-      }
-
-      console.log('spider: done spidering')
-    })
-  })
-}
-
-function fetchAppListPage(page, packageList, callback) {
-  request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
-    if (err) {
-      console.error('spider error: ' + err)
+      console.error('error requesting url: ' + err)
+      callback(err)
     }
     else {
       var data = JSON.parse(body)
-      console.log('spider: got package list page #' + page)
+      db.Package.findOne({name: data.name}, function(err, pkg) {
+        if (err) {
+          console.error('error finding package: ' + err)
+          callback(err)
+        }
+        else {
+          if (!pkg) {
+            pkg = new db.Package()
+          }
+
+          pkg = map(pkg, data)
+          pkg.url = utils.fixUrl(data._links.self.href)
+          pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
+
+          pkg.save(function(err, pkg) {
+            if (err) {
+              console.error('error saving package: ' + err)
+              callback(err)
+            }
+
+            console.log('saved ' + name)
+            callback()
+          })
+        }
+      })
+    }
+  })
+}
+
+function fetchListPage(page, packageList, callback) {
+  request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
+    if (err) {
+      console.error('error fetching page #' + page + ': ' + err)
+      process.exit(1)
+    }
+    else {
+      var data = JSON.parse(body)
+      console.log('got package list page #' + page)
       if (data['_embedded'] && data['_embedded']['clickindex:package']) {
         if (_.isArray(packageList)) {
           packageList = packageList.concat(data['_embedded']['clickindex:package'])
@@ -244,7 +118,7 @@ function fetchAppListPage(page, packageList, callback) {
           packageList = data['_embedded']['clickindex:package']
         }
 
-        fetchAppListPage(page + 1, packageList, callback)
+        fetchListPage(page + 1, packageList, callback)
       }
       else {
         callback(packageList)
@@ -253,39 +127,98 @@ function fetchAppListPage(page, packageList, callback) {
   })
 }
 
+function fetchList(callback) {
+  fetchListPage(1, [], callback)
+}
+
+function createTask(name) {
+  return {
+    code_name: config.iron.code_name,
+    payload: JSON.stringify({
+      package: name
+    })
+  }
+}
+
+function sendTasks(tasks, callback) {
+  if (tasks.length > 0) {
+    console.log('sending ' + tasks.length + ' tasks')
+    require('request').post({
+      uri: config.iron.task_api,
+      headers: {
+        'Authorization': 'OAuth ' + config.iron.token,
+        'Content-Type': 'application/json'
+      },
+      json: {
+        tasks: tasks
+      }
+    }, function(err, res, body) {
+      if (err) {
+        console.log('error sending tasks: ' + err)
+      }
+      else {
+        console.log(body)
+        console.log(res.statusCode)
+        callback()
+      }
+    })
+  }
+  else {
+    console.log('no tasks to send')
+    callback()
+  }
+}
+
+function saveDepartment(d, callback) {
+  console.log(d.name)
+  db.Department.findOne({name: d.name}, function(err, dep) {
+    if (err) {
+      console.error('error finding ' + d.name + ': ' + err)
+      callback(err)
+    }
+    else if (!dep) {
+      dep = new db.Department()
+    }
+
+    dep.name = d.name
+    dep.internal_name = d.slug
+    dep.url = utils.fixUrl(d._links.self.href)
+    dep.save(function(err, dep) {
+      if (err) {
+        console.error('error saving department: ' + err)
+        callback(err)
+      }
+      else {
+        console.log('saved ' + d.name)
+        callback()
+      }
+    })
+  })
+}
+
 function parseDepartments() {
   request(config.spider.departments_api, function(err, resp, body) {
     if (err) {
-      console.error('spider error: ' + err)
+      console.error('error fetching departments: ' + err)
+      process.exit(1)
     }
     else {
       data = JSON.parse(body)
       if (data['_embedded'] && data['_embedded']['clickindex:department']) {
-        _.forEach(data['_embedded']['clickindex:department'], function(d) {
-          db.Department.findOne({name: d.name}, function(err, dep) {
-            if (err) {
-              console.error('spider error: ' + err)
-            }
-            else if (!dep) {
-              dep = new db.Department()
-            }
+        async.each(data['_embedded']['clickindex:department'], saveDepartment, function(err) {
+          if (err) {
+            console.error(err)
+            process.exit(1)
+          }
 
-            dep.name = d.name
-            dep.internal_name = d.slug
-            dep.url = utils.fixUrl(d._links.self.href)
-            dep.save(function(err, dep) {
-              if (err) {
-                console.error('spider error: ' + err)
-              }
-            })
-          })
+          process.exit(0)
         })
       }
     }
   })
 }
 
-function fetchReviews(pkg, callback) {
+function parseReviews(pkg, callback) {
   var now = moment()
   if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') >= 1) {
     request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
@@ -314,59 +247,73 @@ function fetchReviews(pkg, callback) {
   }
 }
 
-function run(onlyUpdates) {
-  console.log('spider: fetching package list')
-  if (onlyUpdates) {
-    fetchAppListPage(1, [], parsePackageListForUpdates)
-  }
-  else {
-    fetchAppListPage(1, [], parsePackageList)
-  }
-}
+function parsePackageUpdates(noTasks) {
+  console.log('parsing package updates')
+  fetchList(function(list) {
+    var tasks = [];
+    var newList = [];
+    _.forEach(list, function(data) {
+      db.Package.findOne({name: data.name}, function(err, pkg) {
+        if (err) {
+          console.error('error finding ' + data.name + ': ' + err)
+          process.exit(1)
+        }
 
-function setupSchedule() {
-  console.log('spider: scheduling spider')
-  var spider_rule = new schedule.RecurrenceRule()
-  spider_rule.dayOfWeek = [0, 2, 4]
-  spider_rule.hour = 0
-  spider_rule.minute = 0
-
-  var spider_job = schedule.scheduleJob(spider_rule, function() {
-    console.log('spider: running spider')
-    run()
-  })
-
-  var spider_rule_updates = new schedule.RecurrenceRule()
-  spider_rule_updates.hour = new schedule.Range(0, 23, 4)
-  spider_rule_updates.minute = 0
-
-  var spider_job_updates = schedule.scheduleJob(spider_rule_updates, function() {
-    console.log('spider: running spider for updates')
-    run(true)
-  })
-
-  var department_rule = new schedule.RecurrenceRule()
-  department_rule.dayOfWeek = 0
-
-  var department_job = schedule.scheduleJob(department_rule, function() {
-    console.log('spider: running department spider')
-    parseDepartments()
-  })
-
-  //Schedule once for immediate updating of the apps when needed
-  var one_time = new Date(2015, 0, 3, 0, 55, 0)
-  var now = new Date();
-  if (one_time > now) {
-    var spider_job_one_time = schedule.scheduleJob(one_time, function() {
-      console.log('spider: running spider (once)')
-      run()
+        if (!pkg || pkg.version != data.version) {
+          newList.push(data.name)
+          tasks.push(createTask(data.name))
+        }
+      })
     })
-  }
+
+    if (noTasks) {
+      console.log('parsing inline')
+      async.each(newList, parsePackage, function(err) {
+        if (err) {
+          process.exit(1)
+        }
+
+        process.exit(0)
+      })
+    }
+    else {
+      sendTasks(tasks, function() {
+        process.exit(0)
+      })
+    }
+  })
 }
 
-exports.run = run
-exports.schedule = setupSchedule
+function parsePackages(noTasks) {
+  console.log('parsing all packages')
+  fetchList(function(list) {
+    var tasks = [];
+    var newList = [];
+    _.forEach(list, function(data) {
+      newList.push(data.name)
+      tasks.push(createTask(data.name))
+    })
+
+    if (noTasks) {
+      console.log('parsing inline')
+      async.each(newList, parsePackage, function(err) {
+        if (err) {
+          process.exit(1)
+        }
+
+        process.exit(0)
+      })
+    }
+    else {
+      sendTasks(tasks, function() {
+        process.exit(0)
+      })
+    }
+  })
+}
+
 exports.parsePackage = parsePackage
-exports.parseExtendedPackage = parseExtendedPackage
-exports.fetchReviews = fetchReviews
+exports.parsePackages = parsePackages
+exports.parsePackageUpdates = parsePackageUpdates
+exports.parseReviews = parseReviews
 exports.parseDepartments = parseDepartments

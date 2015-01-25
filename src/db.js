@@ -3,10 +3,11 @@ var mongoose = require('mongoose')
 
 mongoose.connect(config.mongo.uri + config.mongo.database, function(err, res) {
   if (err) {
-    console.log('database: ' + err);
+    console.log('database: ' + err)
+    process.exit(1)
   }
   else {
-    console.log('database: connected to mongo');
+    console.log('database: connected to mongo')
   }
 });
 

@@ -31,7 +31,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
     query: {},
     skip: 0,
     limit: 30,
-    sort: 'title',
+    sort: '-published_date',
     mini: true,
   };
 

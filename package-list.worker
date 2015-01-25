@@ -1,0 +1,16 @@
+#iron.io worker to fetch all packages if payload is {"full":true}, otherwise just do updated apps
+
+runtime "node"
+stack "node-0.10"
+
+file "package.json"
+file "src/config.json"
+file "src/db.js"
+file "src/utils.js"
+file "src/config.js"
+file "src/spider.js"
+
+remote
+build "npm config set strict-ssl false; npm install --production"
+
+exec "src/worker/packageListWorker.js"
