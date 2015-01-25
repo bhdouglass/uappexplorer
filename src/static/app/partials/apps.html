@@ -42,5 +42,11 @@
     </div>
   </div>
 
+  <div class="row" ng-show="app_chunks.length == 0">
+    <div class="col-md-12 text-center">
+      No apps found, try searching again.
+    </div>
+  </div>
+
   <pagination ng-model="$parent.current_page" pages="pages"></pagination>
 </div>
