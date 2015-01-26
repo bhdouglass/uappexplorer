@@ -20,13 +20,7 @@ var config = {
     reviews_api: 'https://reviews.ubuntu.com/click/api/1.0/reviews/',
     departments_api: 'https://search.apps.ubuntu.com/api/v1/departments',
     packages_api: 'https://search.apps.ubuntu.com/api/v1/package/',
-  },
-  iron: {
-    code_name: 'package',
-    token: '<TOKEN>',
-    project: '<PROJECT>',
-    task_api: 'https://worker-aws-us-east-1.iron.io/2/projects/<PROJECT>/tasks',
-  },
+  }
 }
 
 if (fs.existsSync(path.join(__dirname, 'config.json'))) {

@@ -5,6 +5,7 @@ var request = require('request')
 var _ = require('lodash')
 var moment = require('moment')
 var async = require('async')
+var schedule = require('node-schedule')
 
 var propertyMap = {
   architecture:   'architecture',
@@ -105,7 +106,6 @@ function fetchListPage(page, packageList, callback) {
   request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
     if (err) {
       console.error('error fetching page #' + page + ': ' + err)
-      process.exit(1)
     }
     else {
       var data = JSON.parse(body)
@@ -129,44 +129,6 @@ function fetchListPage(page, packageList, callback) {
 
 function fetchList(callback) {
   fetchListPage(1, [], callback)
-}
-
-function createTask(name) {
-  return {
-    code_name: config.iron.code_name,
-    payload: JSON.stringify({
-      package: name
-    })
-  }
-}
-
-function sendTasks(tasks, callback) {
-  if (tasks.length > 0) {
-    console.log('sending ' + tasks.length + ' tasks')
-    require('request').post({
-      uri: config.iron.task_api,
-      headers: {
-        'Authorization': 'OAuth ' + config.iron.token,
-        'Content-Type': 'application/json'
-      },
-      json: {
-        tasks: tasks
-      }
-    }, function(err, res, body) {
-      if (err) {
-        console.log('error sending tasks: ' + err)
-      }
-      else {
-        console.log(body)
-        console.log(res.statusCode)
-        callback()
-      }
-    })
-  }
-  else {
-    console.log('no tasks to send')
-    callback()
-  }
 }
 
 function saveDepartment(d, callback) {
@@ -200,7 +162,6 @@ function parseDepartments() {
   request(config.spider.departments_api, function(err, resp, body) {
     if (err) {
       console.error('error fetching departments: ' + err)
-      process.exit(1)
     }
     else {
       data = JSON.parse(body)
@@ -208,10 +169,7 @@ function parseDepartments() {
         async.each(data['_embedded']['clickindex:department'], saveDepartment, function(err) {
           if (err) {
             console.error(err)
-            process.exit(1)
           }
-
-          process.exit(0)
         })
       }
     }
@@ -247,68 +205,79 @@ function parseReviews(pkg, callback) {
   }
 }
 
-function parsePackageUpdates(noTasks) {
+function parsePackageUpdates(callback) {
   console.log('parsing package updates')
   fetchList(function(list) {
-    var tasks = [];
     var newList = [];
     _.forEach(list, function(data) {
       db.Package.findOne({name: data.name}, function(err, pkg) {
         if (err) {
           console.error('error finding ' + data.name + ': ' + err)
-          process.exit(1)
         }
-
-        if (!pkg || pkg.version != data.version) {
+        else if (!pkg || pkg.version != data.version) {
           newList.push(data.name)
-          tasks.push(createTask(data.name))
         }
       })
     })
 
-    if (noTasks) {
-      console.log('parsing inline')
-      async.each(newList, parsePackage, function(err) {
-        if (err) {
-          process.exit(1)
-        }
+    console.log('parsing ' + newList.length + ' updates')
+    async.eachSeries(newList, parsePackage, function(err) {
+      if (err) {
+        console.error(err)
+      }
 
-        process.exit(0)
-      })
-    }
-    else {
-      sendTasks(tasks, function() {
-        process.exit(0)
-      })
-    }
+      if (callback) {
+        callback()
+      }
+    })
   })
 }
 
-function parsePackages(noTasks) {
+function parsePackages(callback) {
   console.log('parsing all packages')
   fetchList(function(list) {
-    var tasks = [];
     var newList = [];
     _.forEach(list, function(data) {
       newList.push(data.name)
-      tasks.push(createTask(data.name))
     })
 
-    if (noTasks) {
-      console.log('parsing inline')
-      async.each(newList, parsePackage, function(err) {
-        if (err) {
-          process.exit(1)
-        }
+    async.eachSeries(newList, parsePackage, function(err) {
+      if (err) {
+        console.error(err)
+      }
 
-        process.exit(0)
-      })
-    }
-    else {
-      sendTasks(tasks, function() {
-        process.exit(0)
-      })
-    }
+      if (callback) {
+        callback()
+      }
+    })
+  })
+}
+
+function setupSchedule() {
+  console.log('scheduling spider')
+  var spider_rule = new schedule.RecurrenceRule()
+  spider_rule.dayOfWeek = 1
+  spider_rule.hour = 0
+  spider_rule.minute = 0
+
+  var spider_job = schedule.scheduleJob(spider_rule, function() {
+    parsePackages()
+  })
+
+  var spider_rule_updates = new schedule.RecurrenceRule()
+  spider_rule_updates.hour = new schedule.Range(0, 23, 4)
+  spider_rule_updates.minute = 0
+
+  var spider_job_updates = schedule.scheduleJob(spider_rule_updates, function() {
+    parsePackageUpdates()
+  })
+
+  var department_rule = new schedule.RecurrenceRule()
+  department_rule.dayOfWeek = 0
+
+  var department_job = schedule.scheduleJob(department_rule, function() {
+    console.log('spider: running department spider')
+    parseDepartments()
   })
 }
 
@@ -317,3 +286,4 @@ exports.parsePackages = parsePackages
 exports.parsePackageUpdates = parsePackageUpdates
 exports.parseReviews = parseReviews
 exports.parseDepartments = parseDepartments
+exports.setupSchedule = setupSchedule

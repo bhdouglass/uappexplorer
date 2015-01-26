@@ -42,32 +42,6 @@ it caches images and data to be kind to the api.
 * Fetch a single package
     * Run: `nodejs src/runSpider.js com.example.pacakge.name`
 
-## Iron.io Workers ##
-
-The appstore uses [iron.io](http://www.iron.io/) to process apps from the click
-appstore api into the database. Setup an iron.io account and download the iron.json
-config file to the repo root and install the
-[iron.io cli tool](http://dev.iron.io/worker/reference/cli/#installing).
-Also setup a config.json file in the src directory containing the token and project
-id from the iron.json file. The config.json file is setup just like the config.js.
-
-The workers are:
-
-* department.worker
-    * Fetches all the departments and stores them in the database
-    * No payload is needed
-* package.worker
-    * Fetches a single package and stores it in the database
-    * Example payload: `{"package": "com.example.package.name"}`
-* package-list.worker
-    * Fetches the whole package list (or only updates) and creates package tasks
-    * Payload to update all packages: `{"full": true}`
-    * No payload needed to only do updates
-
-To run the iron.io workers locally run `iron_worker run <worker_name>.worker`.
-
-To upload the iron.io workers to iron.io run `iron_worker upload <worker_name>.worker`.
-
 ## Using The Local Prerender ##
 
 * Start vagrant:
@@ -92,9 +66,6 @@ This could be easily setup for a different service provided you setup the env va
 To setup env variables on OpenShift, check out their [docs](https://developers.openshift.com/en/managing-environment-variables.html#custom-variables).
 
 Alternatively an external mongo host could be used, like [MongoLab](https://mongolab.com/).
-
-In addition to a server, the appstore also uses [iron.io](http://www.iron.io/),
-see the section "Iron.io Workers" above for more details.
 
 ## Configuration ##
 
