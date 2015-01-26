@@ -66,5 +66,4 @@ if (process.env.MONGODB_DB) {
   config.mongo.database = process.env.MONGODB_DB
 }
 
-console.log('config:', config)
 module.exports = config

@@ -187,6 +187,11 @@ app.get('/api/apps', function(req, res) {
         if (req.query.mini == 'true') {
           var new_pkgs = []
           _.forEach(pkgs, function(pkg) {
+            var description = pkg.description;
+            if (pkg.description && pkg.description.split('\n').length > 0) {
+              description = pkg.description.split('\n')[0];
+            }
+
             new_pkgs.push({
               name: pkg.name,
               icon_filename: pkg.icon_filename,
@@ -194,6 +199,7 @@ app.get('/api/apps', function(req, res) {
               type: pkg.type,
               average_rating: pkg.average_rating,
               prices: pkg.prices,
+              short_description: description,
             })
           })
 

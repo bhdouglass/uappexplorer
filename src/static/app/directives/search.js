@@ -7,16 +7,24 @@ app.directive('search', function($timeout, api) {
       paging: '=ngModel',
       search: '=search',
       errorCallback: '=errorCallback',
+      count: '=count',
+      view: '=view'
     },
     replace: true,
     templateUrl: '/app/partials/search.html',
     link: function($scope) {
       $scope.categories = [];
-      $scope.category = 'all';
-      $scope.architecture = 'Any';
+      $scope.category = {
+        name: 'All Apps',
+        internal_name: 'all',
+      };
       $scope.frameworks = ['All'];
-      $scope.framework = 'All';
       $scope.more_filters = false;
+
+      $scope.filters = {
+        architecture: 'Any',
+        framework: 'All',
+      };
 
       $scope.sorts = [
         {
@@ -66,7 +74,8 @@ app.directive('search', function($timeout, api) {
       function fetchCategories() {
         api.categories().then(function(data) {
           $scope.categories = data;
-          $scope.category = $scope.categories[0].internal_name;
+          $scope.category.name = $scope.categories[0].name;
+          $scope.category.internal_name = $scope.categories[0].internal_name;
         }, function(err) {
           console.error(err);
           $scope.errorCallback('Could not download category list, click to retry', fetchCategories);
@@ -85,22 +94,23 @@ app.directive('search', function($timeout, api) {
       }
       fetchFrameworks();
 
-      $scope.$watch('category', function() {
-        if ($scope.category == 'all' || !$scope.category) {
+      $scope.$watch('category.internal_name', function() {
+        if ($scope.category.internal_name == 'all' || !$scope.category.internal_name) {
           $scope.paging.query.categories = undefined;
         }
         else {
-          $scope.paging.query.categories = $scope.category;
+          $scope.paging.query.categories = $scope.category.internal_name;
         }
       }, true);
 
-      $scope.$watch('architecture', function() {
-        if (!$scope.architecture || $scope.architecture.toLowerCase() == 'any') {
+      $scope.$watch('filters.architecture', function() {
+
+        if (!$scope.filters.architecture || $scope.filters.architecture.toLowerCase() == 'any') {
           $scope.paging.query.architecture = undefined;
         }
         else {
-          var architectures = [$scope.architecture.toLowerCase()];
-          if (architecture != 'all') {
+          var architectures = [$scope.filters.architecture.toLowerCase()];
+          if ($scope.filters.architecture.toLowerCase() != 'all') {
             architectures.push('all');
           }
 
@@ -108,12 +118,12 @@ app.directive('search', function($timeout, api) {
         }
       }, true);
 
-      $scope.$watch('framework', function() {
-        if ($scope.framework == 'All' || !$scope.framework) {
+      $scope.$watch('filters.framework', function() {
+        if ($scope.filters.framework == 'All' || !$scope.filters.framework) {
           $scope.paging.query.framework = undefined;
         }
         else {
-          var frameworks = [$scope.framework];
+          var frameworks = [$scope.filters.framework];
           $scope.paging.query.framework = {'_$in': frameworks};
         }
       }, true);
@@ -136,6 +146,18 @@ app.directive('search', function($timeout, api) {
           $scope.paging.search = undefined;
         }
       });
+
+      $scope.categoryName = function(value) {
+        var name = 'Unknown';
+        _.forEach($scope.categories, function(category) {
+          if (category.internal_name == value) {
+            name = category.name;
+            return false;
+          }
+        });
+
+        return name;
+      };
     }
   };
 });

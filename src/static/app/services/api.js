@@ -38,7 +38,7 @@ app.factory('api', function($q, $http) {
     categories: function() {
       var deferred = $q.defer();
       $http.get('/api/categories').then(function(res) {
-        var categories = [{name: 'All', internal_name: 'all'}];
+        var categories = [{name: 'All Apps', internal_name: 'all'}];
         _.forEach(res.data.data, function(category) {
           categories.push(category);
         });

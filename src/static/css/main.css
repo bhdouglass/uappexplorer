@@ -65,8 +65,12 @@ img.logo {
   text-align: center;
 }
 
+.apps {
+  margin-top: 30px;
+}
+
 .apps .col-md-2 {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .link {
@@ -179,4 +183,13 @@ select {
 
 .app-tab {
   min-height: 225px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.app-search .btn-toolbar {
+  margin-top: 15px;
+  margin-left: 5px;
 }

@@ -3,7 +3,6 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.title = title;
   $scope.og = {};
   $scope.$state = $state;
-  $scope.app_chunks = [];
   $scope.app = null;
   $scope.apps = [];
   $scope.app_count = 0;
@@ -15,6 +14,9 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.loading = false;
   $scope.search = { //avoid 2-way binding issues
     q: '',
+  };
+  $scope.view = {
+    style: 'grid',
   };
 
   $timeout(function() {
@@ -63,16 +65,6 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
     loading();
     api.apps($scope.paging).then(function(data) {
       $scope.apps = data.apps;
-      var app_chunks = [];
-      _.forEach($scope.apps, function(app, index) {
-        if (index % 3 == 0) {
-          app_chunks.push([]);
-        }
-
-        app_chunks[app_chunks.length - 1].push(app);
-      });
-
-      $scope.app_chunks = app_chunks;
       $scope.app_count = data.count;
       $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
 

@@ -1,5 +1,5 @@
 <div>
-  <search ng-model="paging" search="search.q" error-callback="setError"></search>
+  <search ng-model="paging" search="search.q" error-callback="setError" count="app_count" view="view.style"></search>
 
   <div class="row" ng-if="loading">
     <div class="col-md-12 text-center">
@@ -7,38 +7,44 @@
     </div>
   </div>
 
-  <div class="row apps" ng-repeat="chunk in app_chunks">
-    <div class="col-md-4" ng-repeat="app in chunk">
-      <div class="list-group">
-        <div class="list-group-item clickable" ng-click="$state.go('app', {name: app.name})">
-          <div class="row-action-primary">
-            <a ui-sref="app({name: app.name})" class="link">
-              <div class="icon ubuntu-shape">
-                <img ng-src="/api/icon/{{app.name}}" alt="{{app.name}}" />
+  <div class="row apps">
+    <div ng-repeat="app in apps">
+      <div ng-class="{'col-sm-6 col-md-4': view.style == 'grid', 'col-sm-12': view.style != 'grid'}">
+        <div class="list-group">
+          <div class="list-group-item clickable" ng-click="$state.go('app', {name: app.name})">
+            <div class="row-action-primary">
+              <a ui-sref="app({name: app.name})" class="link">
+                <div class="icon ubuntu-shape">
+                  <img ng-src="/api/icon/{{app.name}}" alt="{{app.name}}" />
+                </div>
+              </a>
+            </div>
+
+            <div class="row-content">
+              <div class="least-content">
+                <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
               </div>
-            </a>
+              <div class="least-content-lower">
+                <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
+              </div>
+
+              <h4 class="list-group-item-heading">
+                <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
+              </h4>
+
+              <p class="list-group-item-text">
+                <stars ng-model="app.average_rating"></stars>
+              </p>
+
+              <p class="list-group-item-text" ng-show="view.style == 'list'" ng-bind="app.short_description"></p>
+            </div>
           </div>
 
-          <div class="row-content">
-            <div class="least-content">
-              <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
-            </div>
-            <div class="least-content-lower">
-              <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
-            </div>
-
-            <h4 class="list-group-item-heading">
-              <a ui-sref="app({name: app.name})" ng-bind="app.title" class="link"></a>
-            </h4>
-
-            <p class="list-group-item-text">
-              <stars ng-model="app.average_rating"></stars>
-            </p>
-          </div>
+          <div class="list-group-separator"></div>
         </div>
-
-        <div class="list-group-separator"></div>
       </div>
+      <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
+      <div class="visible-xs visible-sm" ng-class="{clearfix: $index % 2 == 1}"></div>
     </div>
   </div>
 
