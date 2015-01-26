@@ -92,6 +92,7 @@ app.get('/api/categories', function(req, res) {
       error(res, err)
     }
     else {
+      deps = _.sortBy(deps, 'name')
       success(res, deps)
     }
   })
