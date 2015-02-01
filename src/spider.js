@@ -209,26 +209,31 @@ function parsePackageUpdates(callback) {
   console.log('parsing package updates')
   fetchList(function(list) {
     var newList = [];
-    _.forEach(list, function(data) {
+    async.each(list, function(data, callback) {
       db.Package.findOne({name: data.name}, function(err, pkg) {
         if (err) {
           console.error('error finding ' + data.name + ': ' + err)
+          callback(err)
         }
         else if (!pkg || pkg.version != data.version) {
           newList.push(data.name)
+          callback(null)
+        }
+        else {
+          callback(null)
         }
       })
-    })
+    }, function(err) {
+      console.log('parsing ' + newList.length + '/' + list.length + ' updates')
+      async.eachSeries(newList, parsePackage, function(err) {
+        if (err) {
+          console.error(err)
+        }
 
-    console.log('parsing ' + newList.length + ' updates')
-    async.eachSeries(newList, parsePackage, function(err) {
-      if (err) {
-        console.error(err)
-      }
-
-      if (callback) {
-        callback()
-      }
+        if (callback) {
+          callback()
+        }
+      })
     })
   })
 }
@@ -265,6 +270,7 @@ function setupSchedule() {
   })
 
   var spider_rule_updates = new schedule.RecurrenceRule()
+  spider_rule_updates.dayOfWeek = new schedule.Range(0, 6, 1)
   spider_rule_updates.hour = new schedule.Range(0, 23, 4)
   spider_rule_updates.minute = 0
 
@@ -274,6 +280,8 @@ function setupSchedule() {
 
   var department_rule = new schedule.RecurrenceRule()
   department_rule.dayOfWeek = 0
+  department_rule.hour = 0
+  department_rule.minute = 0
 
   var department_job = schedule.scheduleJob(department_rule, function() {
     console.log('spider: running department spider')
