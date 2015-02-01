@@ -25,7 +25,7 @@ it caches images and data to be kind to the api.
     * Run: `nodejs src/runSpider.js`
 * Start the webserver:
     * Go to: `/srv/ubuntu-appstore/`
-    * Run: `./start.sh`
+    * Run: `npm start`
 * Visit the site:
     * In your browser go to: `192.168.52.200:8080`
     * You may want to put a friendly name in your host machine's `/etc/hosts`

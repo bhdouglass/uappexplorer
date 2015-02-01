@@ -45,7 +45,7 @@
 
             <div class="row-content">
               <p class="list-group-item-text">
-                <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.title}}" class="btn btn-success btn-sm">Install</a>
+                <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.title}}" class="btn btn-success btn-sm" analytics-on analytics-event="Install" analytics-label="{{app.name}}">Install</a>
                 <!--<a ng-href="{{app.download}}" class="btn btn-primary btn-sm">Download</a>-->
               </p>
             </div>
@@ -100,11 +100,11 @@
         <div class="tab-content" ng-show="app_tab == 'support'">
           <div class="well app-tab">
             <span ng-show="app.support">
-              Support: <a ng-href="{{app.support}}" ng-bind="app.support"></a>
+              Support: <a ng-href="{{app.support}}" ng-bind="app.support" analytics-on analytics-event="Support" analytics-label="{{app.support}}"></a>
             </span>
             <span ng-show="app.website">
               <br/>
-              Website: <a ng-href="{{app.website}}" ng-bind="app.website"></a>
+              Website: <a ng-href="{{app.website}}" ng-bind="app.website" analytics-on analytics-event="Website" analytics-label="{{app.website}}"></a>
             </span>
             <span ng-show="app.terms">
               <br/>

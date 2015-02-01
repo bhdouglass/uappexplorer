@@ -5,7 +5,10 @@ LazyLoad.js([
   '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js',
+  '//cdnjs.cloudflare.com/ajax/libs/angulartics/0.17.2/angulartics.min.js',
+  '//cdnjs.cloudflare.com/ajax/libs/angulartics/0.17.2/angulartics-ga.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js',
+  '//www.google-analytics.com/analytics.js',
   '/app/app.js',
   '/app/controllers/indexCtrl.js',
   '/app/services/api.js',
@@ -15,7 +18,9 @@ LazyLoad.js([
   '/app/directives/search.js',
   '/app/filters/nl2br.js',
   '/app/filters/dollars.js',
-]);
+], function() {
+  ga('create', 'UA-16555025-3', 'auto');
+});
 
 LazyLoad.css([
   '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css',
