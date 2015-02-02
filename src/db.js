@@ -1,15 +1,16 @@
 var config = require('./config')
+var logger = require('./logger')
 var mongoose = require('mongoose')
 
 mongoose.connect(config.mongo.uri + config.mongo.database, function(err, res) {
   if (err) {
-    console.log('database: ' + err)
+    logger.error('database: ' + err)
     process.exit(1)
   }
   else {
-    console.log('database: connected to mongo')
+    logger.debug('database: connected to mongo')
   }
-});
+})
 
 var packageSchema = mongoose.Schema({
   architecture: [String],

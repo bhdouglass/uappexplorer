@@ -20,6 +20,9 @@ var config = {
     reviews_api: 'https://reviews.ubuntu.com/click/api/1.0/reviews/',
     departments_api: 'https://search.apps.ubuntu.com/api/v1/departments',
     packages_api: 'https://search.apps.ubuntu.com/api/v1/package/',
+  },
+  logentries: {
+    token: ''
   }
 }
 
@@ -58,6 +61,10 @@ else if (process.env.MONGODB_URI) {
 
 if (process.env.MONGODB_DB) {
   config.mongo.database = process.env.MONGODB_DB
+}
+
+if (process.env.LOGENTRIES_TOKEN) {
+  config.logentries.token = process.env.LOGENTRIES_TOKEN
 }
 
 module.exports = config

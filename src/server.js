@@ -2,6 +2,7 @@ var db = require('./db')
 var config = require('./config')
 var spider = require('./spider')
 var utils = require('./utils')
+var logger = require('./logger')
 var express = require('express')
 var _ = require('lodash')
 var compression = require('compression')
@@ -35,7 +36,7 @@ function success(res, data, message) {
 }
 
 function error(res, message, code) {
-  console.error('server: ' + message)
+  logger.error('server: ' + message)
 
   res.status(code ? code : 500)
   res.send({
@@ -70,7 +71,7 @@ app.get('/api/icon/:name', function(req, res) {
           else {
             utils.download(pkg.icon, filename, function(r) {
               pkg.icon_fetch_date = now.valueOf()
-              console.log(filename + ' finished downloading')
+              logger.debug(filename + ' finished downloading')
 
               res.setHeader('Content-type', mime.lookup(filename))
               res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
@@ -256,7 +257,7 @@ function run() {
     var host = server.address().address
     var port = server.address().port
 
-    console.log('server: listening at http://%s:%s', host, port)
+    logger.info('listening at http://%s:%s', host, port)
   })
 }
 

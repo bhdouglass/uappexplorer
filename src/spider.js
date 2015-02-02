@@ -1,6 +1,7 @@
 var config = require('./config')
 var utils = require('./utils')
 var db = require('./db')
+var logger = require('./logger')
 var request = require('request')
 var _ = require('lodash')
 var moment = require('moment')
@@ -65,17 +66,17 @@ function map(pkg, data) {
 
 function parsePackage(name, callback) {
   var url = config.spider.packages_api + name
-  console.log('parsing ' + url)
+  logger.info('parsing ' + url)
   request(url, function(err, resp, body) {
     if (err) {
-      console.error('error requesting url: ' + err)
+      logger.error('error requesting url: ' + err)
       callback(err)
     }
     else {
       var data = JSON.parse(body)
       db.Package.findOne({name: data.name}, function(err, pkg) {
         if (err) {
-          console.error('error finding package: ' + err)
+          logger.error('error finding package: ' + err)
           callback(err)
         }
         else {
@@ -89,11 +90,11 @@ function parsePackage(name, callback) {
 
           pkg.save(function(err, pkg) {
             if (err) {
-              console.error('error saving package: ' + err)
+              logger.error('error saving package: ' + err)
               callback(err)
             }
 
-            console.log('saved ' + name)
+            logger.info('saved ' + name)
             callback()
           })
         }
@@ -105,11 +106,11 @@ function parsePackage(name, callback) {
 function fetchListPage(page, packageList, callback) {
   request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
     if (err) {
-      console.error('error fetching page #' + page + ': ' + err)
+      logger.error('error fetching page #' + page + ': ' + err)
     }
     else {
       var data = JSON.parse(body)
-      console.log('got package list page #' + page)
+      logger.info('got package list page #' + page)
       if (data['_embedded'] && data['_embedded']['clickindex:package']) {
         if (_.isArray(packageList)) {
           packageList = packageList.concat(data['_embedded']['clickindex:package'])
@@ -132,10 +133,10 @@ function fetchList(callback) {
 }
 
 function saveDepartment(d, callback) {
-  console.log(d.name)
+  logger.info('department: ' + d.name)
   db.Department.findOne({name: d.name}, function(err, dep) {
     if (err) {
-      console.error('error finding ' + d.name + ': ' + err)
+      logger.error('error finding ' + d.name + ': ' + err)
       callback(err)
     }
     else if (!dep) {
@@ -147,11 +148,11 @@ function saveDepartment(d, callback) {
     dep.url = utils.fixUrl(d._links.self.href)
     dep.save(function(err, dep) {
       if (err) {
-        console.error('error saving department: ' + err)
+        logger.error('error saving department: ' + err)
         callback(err)
       }
       else {
-        console.log('saved ' + d.name)
+        logger.info('saved ' + d.name)
         callback()
       }
     })
@@ -161,14 +162,14 @@ function saveDepartment(d, callback) {
 function parseDepartments() {
   request(config.spider.departments_api, function(err, resp, body) {
     if (err) {
-      console.error('error fetching departments: ' + err)
+      logger.error('error fetching departments: ' + err)
     }
     else {
       data = JSON.parse(body)
       if (data['_embedded'] && data['_embedded']['clickindex:department']) {
         async.each(data['_embedded']['clickindex:department'], saveDepartment, function(err) {
           if (err) {
-            console.error(err)
+            logger.error(err)
           }
         })
       }
@@ -181,7 +182,7 @@ function parseReviews(pkg, callback) {
   if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') >= 1) {
     request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
       if (err) {
-        console.error('spider error: ' + err)
+        logger.error('spider error: ' + err)
         callback(pkg)
       }
       else {
@@ -190,7 +191,7 @@ function parseReviews(pkg, callback) {
 
         pkg.save(function(err, pkg2) {
           if (err) {
-            console.error('spider error: ' + err)
+            logger.error('spider error: ' + err)
             callback(pkg)
           }
           else {
@@ -206,13 +207,13 @@ function parseReviews(pkg, callback) {
 }
 
 function parsePackageUpdates(callback) {
-  console.log('parsing package updates')
+  logger.info('parsing package updates')
   fetchList(function(list) {
     var newList = [];
     async.each(list, function(data, callback) {
       db.Package.findOne({name: data.name}, function(err, pkg) {
         if (err) {
-          console.error('error finding ' + data.name + ': ' + err)
+          logger.error('error finding ' + data.name + ': ' + err)
           callback(err)
         }
         else if (!pkg || pkg.version != data.version) {
@@ -224,10 +225,10 @@ function parsePackageUpdates(callback) {
         }
       })
     }, function(err) {
-      console.log('parsing ' + newList.length + '/' + list.length + ' updates')
+      logger.info('parsing ' + newList.length + '/' + list.length + ' updates')
       async.eachSeries(newList, parsePackage, function(err) {
         if (err) {
-          console.error(err)
+          logger.error(err)
         }
 
         if (callback) {
@@ -239,7 +240,7 @@ function parsePackageUpdates(callback) {
 }
 
 function parsePackages(callback) {
-  console.log('parsing all packages')
+  logger.info('parsing all packages')
   fetchList(function(list) {
     var newList = [];
     _.forEach(list, function(data) {
@@ -248,7 +249,7 @@ function parsePackages(callback) {
 
     async.eachSeries(newList, parsePackage, function(err) {
       if (err) {
-        console.error(err)
+        logger.error(err)
       }
 
       if (callback) {
@@ -259,7 +260,7 @@ function parsePackages(callback) {
 }
 
 function setupSchedule() {
-  console.log('scheduling spider')
+  logger.debug('scheduling spider')
   var spider_rule = new schedule.RecurrenceRule()
   spider_rule.dayOfWeek = 1
   spider_rule.hour = 0
@@ -284,7 +285,7 @@ function setupSchedule() {
   department_rule.minute = 0
 
   var department_job = schedule.scheduleJob(department_rule, function() {
-    console.log('spider: running department spider')
+    logger.info('spider: running department spider')
     parseDepartments()
   })
 }
