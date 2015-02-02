@@ -197,3 +197,7 @@ select {
 .search-box {
   margin-top: 5px;
 }
+
+a.list-group-item:hover, a.list-group-item:focus {
+  background-color: transparent;
+}
