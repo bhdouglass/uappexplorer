@@ -8,7 +8,7 @@ var _ = require('lodash')
 var config = {
   data_dir: '/tmp',
   server: {
-    ip: '127.0.0.1',
+    ip: '0.0.0.0',
     port: 8080,
   },
   mongo: {
@@ -57,6 +57,9 @@ if (process.env.OPENSHIFT_MONGODB_DB_URL) {
 }
 else if (process.env.MONGODB_URI) {
   config.mongo.uri = process.env.MONGODB_URI
+}
+else if (process.env.MONGO_PORT) { //From docker
+  config.mongo.uri = process.env.MONGO_PORT.replace('tcp', 'mongodb')
 }
 
 if (process.env.MONGODB_DB) {

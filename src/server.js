@@ -253,7 +253,7 @@ app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on f
 });
 
 function run() {
-  var server = app.listen(config.server.port, config.server.ip, function () {
+  var server = app.listen(config.server.port, config.server.ip, function() {
     var host = server.address().address
     var port = server.address().port
 

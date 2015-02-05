@@ -12,50 +12,43 @@ it caches images and data to be kind to the api.
 * Install [vagrant](http://vagrantup.com/):
     * Ubuntu: `sudo apt-get install vagrant`
     * Arch Linux: `pacman -S vagrant`
-* Install vagrant plugins:
-    * Run (may need sudo): `vagrant plugin install vagrant-omnibus vagrant-chef-zero vagrant-berkshelf`
-* Start vagrant:
-    * Run: `vagrant up`
-    * Ssh into the box: `vagrant ssh`
-* Install dependencies:
-    * Go to: `/srv/ubuntu-appstore/`
+* Install [docker](https://www.docker.com/)
+    * Ubuntu: `sudo apt-get install docker.io`
+    * Arch Linux: `pacman -S docker`
+* Install NPM dependencies:
     * Run: `npm install`
+* Start vagrant:
+    * Run: `vagrant up --no-parallel`
 * Run the spider:
-    * Go to: `/srv/ubuntu-appstore/`
-    * Run: `nodejs src/runSpider.js`
-* Start the webserver:
-    * Go to: `/srv/ubuntu-appstore/`
-    * Run: `npm start`
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js`
+* Attach to the docker container (if needed):
+    * Run: `docker attach --sig-proxy=false appstore_web`
 * Visit the site:
-    * In your browser go to: `192.168.52.200:8080`
+    * In your browser go to: `localhost:8080`
     * You may want to put a friendly name in your host machine's `/etc/hosts`
 * Profit!
 
 ## Using the Spider ##
 
 * Fetch all packages
-    * Run: `nodejs src/runSpider.js`
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js`
 * Fetch only updated/missing packages
-    * Run: `nodejs src/runSpider.js update`
+    * Run: `nvagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js update`
 * Fetch departments/categories
-    * Run: `nodejs src/runSpider.js department`
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js department`
 * Fetch a single package
-    * Run: `nodejs src/runSpider.js com.example.pacakge.name`
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js com.example.pacakge.name`
 
 ## Using The Local Prerender ##
 
-* Start vagrant:
-    * Run: `vagrant up`
-    * Ssh into the box: `vagrant ssh`
 * Install dependencies:
-    * Go to: `/srv/ubuntu-appstore/prerender`
+    * Go to: `./prerender`
     * Run: `npm install`
 * Start the prerender:
-    * Go to: `/srv/ubuntu-appstore/prerender`
-    * Run: `npm start`
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/prerender/server.js`
 * Test the prerender:
     * Visit an app url with `?_escaped_fragment_=`
-    * Example: `192.168.52.200:8080/app/name?_escaped_fragment_=`
+    * Example: `localhost/app/name?_escaped_fragment_=`
     * The page should be routed through the prerender, you can check the source as the prerender removes any script tags.
 
 ## Deploying ##
@@ -93,7 +86,7 @@ by the following env variables.
     * Default: `http://service.prerender.io/`
 * ALLOWED_DOMAINS
     * The domains the local prerender server allows
-    * Default: `appstore.bhdouglass.com,local.appstore.bhdouglass.com,127.0.0.1,192.168.52.200`
+    * Default: `appstore.bhdouglass.com,local.appstore.bhdouglass.com,127.0.0.1,localhost`
 
 ## Libraries ##
 
@@ -119,7 +112,7 @@ The following third party libraries are used in this app:
 
 ## License ##
 
-Copyright (C) 2014 [Brian Douglass](http://bhdouglass.com/)
+Copyright (C) 2015 [Brian Douglass](http://bhdouglass.com/)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.
