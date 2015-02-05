@@ -56,17 +56,17 @@
           <div class="list-group-item">
             <div class="row-action-primary">
                 <div class="action-icon ubuntu-shape">
-                  <i class="fa fa-info-circle" ng-style="strToColor(app.name, 'background-color')"></i>
+                  <i class="fa fa-share-alt" ng-style="strToColor(app.name, 'background-color')"></i>
                 </div>
             </div>
 
             <div class="row-content">
-              <p class="list-group-item-text">
-                Version: <span ng-bind="app.version"></span>
-                <br/>
-                Updated: <span ng-bind="app.last_updated | date"></span>
-                <br/>
-                License: <span ng-bind="app.license"></span>
+              <p class="list-group-item-text social-links">
+                <a ng-href="https://plus.google.com/share?url={{url}}app/{{app.name}}" class="mdi-material-red" title="Share on Google+"><i class="fa fa-google-plus-square fa-3x"></i></a>
+                <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}app/{{app.name}}" class="mdi-material-blue" title="Share on Facebook"><i class="fa fa-facebook-square fa-3x"></i></a>
+                <!--https://twitter.com/intent/tweet?text=TITLE&url=URL&via=TWITTER-HANDLE-->
+                <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}" class="mdi-material-lightblue" title="Share on Twitter"><i class="fa fa-twitter-square fa-3x"></i></a>
+                <a ng-href="https://www.reddit.com/submit?url={{url}}app/{{app.name}}" class="mdi-material-cyan" title="Share on Reddit"><i class="fa fa-reddit-square fa-3x"></i></a>
               </p>
             </div>
 
@@ -83,6 +83,9 @@
           <li ng-class="{active: app_tab == 'change'}" class="clickable">
             <a ng-click="app_tab = 'change'">Changelog</a>
           </li>
+          <li ng-class="{active: app_tab == 'info'}" class="clickable">
+            <a ng-click="app_tab = 'info'">Info</a>
+          </li>
           <li ng-class="{active: app_tab == 'support'}" class="clickable">
             <a ng-click="app_tab = 'support'">Support</a>
           </li>
@@ -95,6 +98,16 @@
 
         <div class="tab-content" ng-show="app_tab == 'change'">
           <div class="well app-tab" ng-bind-html="app.changelog | nl2br"></div>
+        </div>
+
+        <div class="tab-content" ng-show="app_tab == 'info'">
+          <div class="well app-tab">
+            Version: <span ng-bind="app.version"></span>
+            <br/>
+            Updated: <span ng-bind="app.last_updated | date"></span>
+            <br/>
+            License: <span ng-bind="app.license"></span>
+          </div>
         </div>
 
         <div class="tab-content" ng-show="app_tab == 'support'">

@@ -204,3 +204,11 @@ select {
 a.list-group-item:hover, a.list-group-item:focus {
   background-color: transparent;
 }
+
+.social-links a {
+  margin-right: 10px;
+}
+
+.social-links a:hover {
+  color: #000000;
+}

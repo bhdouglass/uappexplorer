@@ -1,4 +1,4 @@
-app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, api, utils) {
+app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, $location, api, utils) {
   var title = 'Ubuntu Touch Apps';
   $scope.title = title;
   $scope.og = {};
@@ -18,6 +18,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   $scope.view = {
     style: 'grid',
   };
+  $scope.url = $location.protocol() + '://' + $location.host() + '/';
 
   $timeout(function() {
     $('.swipebox').swipebox();
@@ -137,8 +138,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
       $scope.og = {
         title: $scope.app.title,
         description: description,
-        image: 'http://appstore.bhdouglass.com/images/' + $scope.app.icon_filename,
-        url: 'http://appstore.bhdouglass.com/app/' + $scope.app.name,
+        image: $scope.url + 'images/' + $scope.app.icon_filename,
+        url: $scope.url + 'app/' + $scope.app.name,
       };
     }
     else {
@@ -147,8 +148,8 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
       $scope.og = {
         title: title,
         description: 'Browse and discover apps for Ubuntu Touch',
-        image: 'http://appstore.bhdouglass.com/img/ubuntu-logo.png',
-        url: 'http://appstore.bhdouglass.com/apps',
+        image: $scope.url + 'img/ubuntu-logo.png',
+        url: $scope.url + 'apps',
       };
     }
   });
