@@ -20,7 +20,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
   };
 
   $timeout(function() {
-    $('.fancybox').fancybox({loop: false});
+    $('.swipebox').swipebox();
   });
 
   $scope.types = {
