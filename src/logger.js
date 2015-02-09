@@ -1,6 +1,6 @@
 var config = require('./config')
-var logentries = require('node-logentries')
 var winston = require('winston')
+var papertrail = require('winston-papertrail')
 var util = require('util')
 
 var logger = new (winston.Logger)({
@@ -11,32 +11,14 @@ var logger = new (winston.Logger)({
 
 logger.cli()
 
-if (config.logentries.token) {
-  var log = logentries.logger({
-    token: config.logentries.token
+if (config.papertrail.port) {
+  logger.add(winston.transports.Papertrail, {
+    host: config.papertrail.host,
+    port: config.papertrail.port
   })
-
-  var LogentriesLogger = winston.transports.LogentriesLogger = function(options) {
-    options = options || {}
-    this.name = 'logentries'
-    this.level = options.level || 'info'
-  }
-
-  util.inherits(LogentriesLogger, winston.Transport)
-  LogentriesLogger.prototype.log = function(level, msg, meta, callback) {
-    var data = msg
-    if (meta && Object.keys(meta)) {
-      data + ' ' + JSON.stringify(meta)
-    }
-
-    log.log(level, data)
-    callback(null, true)
-  }
-
-  logger.add(LogentriesLogger)
 }
 else {
-  logger.debug('No logentries token')
+  logger.debug('No papertrail token')
 }
 
 module.exports = logger

@@ -24,10 +24,10 @@
     "mime": "^1.2.11",
     "moment": "^2.8.4",
     "mongoose": "^3.8.17",
-    "node-logentries": "^0.1.4",
     "node-schedule": "^0.1.13",
     "prerender-node": "^1.2.0",
     "request": "^2.47.0",
-    "winston": "^0.8.3"
+    "winston": "^0.8.3",
+    "winston-papertrail": "^1.0.1"
   }
 }

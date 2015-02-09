@@ -21,8 +21,9 @@ var config = {
     departments_api: 'https://search.apps.ubuntu.com/api/v1/departments',
     packages_api: 'https://search.apps.ubuntu.com/api/v1/package/',
   },
-  logentries: {
-    token: ''
+  papertrail: {
+    host: '',
+    port: null
   }
 }
 
@@ -66,8 +67,12 @@ if (process.env.MONGODB_DB) {
   config.mongo.database = process.env.MONGODB_DB
 }
 
-if (process.env.LOGENTRIES_TOKEN) {
-  config.logentries.token = process.env.LOGENTRIES_TOKEN
+if (process.env.PAPERTRAIL_HOST) {
+  config.papertrail.host = process.env.PAPERTRAIL_HOST
+}
+
+if (process.env.PAPERTRAIL_PORT) {
+  config.papertrail.port = process.env.PAPERTRAIL_PORT
 }
 
 module.exports = config
