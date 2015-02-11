@@ -138,7 +138,7 @@ app.controller('indexCtrl', function ($scope, $http, $state, $timeout, $filter, 
       $scope.og = {
         title: $scope.app.title,
         description: description,
-        image: $scope.url + 'images/' + $scope.app.icon_filename,
+        image: $scope.url + 'api/icon/' + $scope.app.name,
         url: $scope.url + 'app/' + $scope.app.name,
       };
     }

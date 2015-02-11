@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web.vm.provider 'docker' do |d|
       d.build_dir = '.'
       d.name = 'appstore_web'
-      d.ports = ['8080:8080']
+      d.ports = ['8080:8080', '3000:3000']
 
       d.link('appstore_mongo:mongo')
     end
@@ -23,5 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web.vm.hostname = "ubuntu-appstore"
     web.vm.synced_folder "./", "/srv/ubuntu-appstore", id: "vagrant-root"
     web.vm.network "forwarded_port", guest: 8080, host: 8080
+    web.vm.network "forwarded_port", guest: 3000, host: 3000
   end
 end

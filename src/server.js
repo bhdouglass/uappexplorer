@@ -24,7 +24,7 @@ app.use(compression({
     return compression.filter(req, res);
   }
 }))
-app.use(prerender.whitelisted(['/app/.*']))
+app.use(prerender.whitelisted(['/app/.*', '/apps']))
 app.use(express.static(__dirname + '/static'))
 
 function success(res, data, message) {
