@@ -11,6 +11,7 @@ var prerender = require('prerender-node')
 var fs = require('fs')
 var mime = require('mime')
 var moment = require('moment')
+var sitemap = require('sitemap')
 
 var app = express()
 
@@ -252,6 +253,25 @@ app.get('/api/apps/reviews/:name', function(req, res) {
         })
       })
     }
+  })
+})
+
+sm = sitemap.createSitemap ({
+  hostname: config.server.host,
+  cacheTime: 1200000,  //2 hours
+  urls: [
+    {url: '/apps/',  changefreq: 'daily', priority: 1},
+  ]
+})
+
+app.get('/sitemap.xml', function(req, res) {
+  db.Package.find({}, 'name', function(err, pkgs) {
+    _.forEach(pkgs, function(pkg) {
+      sm.add({url: '/app/' + pkg.name, changefreq: 'weekly', priority: 0.7});
+    })
+
+    res.header('Content-Type', 'application/xml')
+    res.send(sm.toString())
   })
 })
 

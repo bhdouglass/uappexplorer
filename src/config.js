@@ -10,6 +10,7 @@ var config = {
   server: {
     ip: '0.0.0.0',
     port: 8080,
+    host: 'https://appstore.bhdouglass.com',
   },
   mongo: {
     uri: 'mongodb://localhost/',

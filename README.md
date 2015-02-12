@@ -101,6 +101,7 @@ The following third party libraries are used in this app:
     * [Moment.js](http://momentjs.com/)
     * [prerender-node](https://github.com/prerender/prerender-node#using-your-own-prerender-service)
     * [prerender](https://github.com/prerender/prerender)
+    * [sitemap](https://www.npmjs.com/package/sitemap)
 * Client Side
     * [Bootstrap](http://getbootstrap.com/)
     * [jQuery](http://jquery.com/)
