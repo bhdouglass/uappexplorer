@@ -47,12 +47,17 @@ function error(res, message, code) {
 }
 
 app.get('/api/icon/:name', function(req, res) {
-  db.Package.findOne({name: req.params.name}, function(err, pkg) {
+  var name = req.params.name;
+  if (name.indexOf('.png') == (name.length - 4)) {
+    name = name.replace('.png', '')
+  }
+
+  db.Package.findOne({name: name}, function(err, pkg) {
     if (err) {
       error(res, err)
     }
     else if (!pkg) {
-      error(res, req.params.name + ' was not found', 404) //TODO: 404 image?
+      error(res, name + ' was not found', 404) //TODO: 404 image?
     }
     else {
       if (pkg.icon) {
@@ -81,7 +86,7 @@ app.get('/api/icon/:name', function(req, res) {
         })
       }
       else {
-        error(res, req.params.name + ' was not found', 404) //TODO: 404 image?
+        error(res, name + ' was not found', 404) //TODO: 404 image?
       }
     }
   })
