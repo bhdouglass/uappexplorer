@@ -57,7 +57,8 @@ app.get('/api/icon/:name', function(req, res) {
       error(res, err)
     }
     else if (!pkg) {
-      error(res, name + ' was not found', 404) //TODO: 404 image?
+      res.status(404)
+      fs.createReadStream(__dirname + '/static/img/404.png').pipe(res)
     }
     else {
       if (pkg.icon) {
@@ -86,7 +87,8 @@ app.get('/api/icon/:name', function(req, res) {
         })
       }
       else {
-        error(res, name + ' was not found', 404) //TODO: 404 image?
+        res.status(404)
+        fs.createReadStream(__dirname + '/static/img/404.png').pipe(res)
       }
     }
   })
@@ -256,6 +258,17 @@ app.get('/api/apps/reviews/:name', function(req, res) {
 app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
   res.sendFile('index.html', {root: __dirname + '/static'});
 });
+
+app.use(function(req, res, next){
+  if (req.accepts('html')) {
+    var host = req.headers.host ? 'http://' + req.headers.host : 'https://appstore.bhdouglass.com/';
+    res.status(404)
+    fs.createReadStream(__dirname + '/static/404.html').pipe(res)
+  }
+  else { //if (req.accepts('json')) {
+    error(res, req.url + ' was not found', 404)
+  }
+})
 
 function run() {
   var server = app.listen(config.server.port, config.server.ip, function() {
