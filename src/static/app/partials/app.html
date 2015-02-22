@@ -44,10 +44,13 @@
             </div>
 
             <div class="row-content">
-              <p class="list-group-item-text">
+              <div class="list-group-item-text">
                 <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.title}}" class="btn btn-success btn-sm" analytics-on analytics-event="Install" analytics-label="{{app.name}}">Install</a>
                 <!--<a ng-href="{{app.download}}" class="btn btn-primary btn-sm">Download</a>-->
-              </p>
+                <p class="small-note">
+                  *Install will take you to the official appstore on an Ubuntu Touch device
+                </p>
+              </div>
             </div>
 
           </div>

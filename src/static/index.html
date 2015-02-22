@@ -4,29 +4,29 @@
     <title ng-bind="title">Ubuntu Touch Apps</title>
     <base href="/" />
 
-    <meta name="description" content="App store for Ubuntu Touch" />
+    <meta name="description" content="App store for Ubuntu Touch" ng-content="og.description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
 
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="{{og.title}}" />
-    <meta itemprop="description" content="{{og.description}}" />
-    <meta itemprop="image" content="{{og.image}}" />
+    <meta itemprop="name" content="Ubuntu Touch Apps" ng-content="og.title" />
+    <meta itemprop="description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
+    <meta itemprop="image" content="https://appstore.bhdouglass.com/img/ubuntu-logo.png" ng-content="og.image" />
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@bhdouglass" />
-    <meta name="twitter:title" content="{{og.title}}" />
-    <meta name="twitter:description" content="{{og.description}}" />
-    <meta name="twitter:image:src" content="{{og.image}}" />
+    <meta name="twitter:title" content="Ubuntu Touch Apps" ng-content="og.title" />
+    <meta name="twitter:description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
+    <meta name="twitter:image:src" content="https://appstore.bhdouglass.com/img/ubuntu-logo.png" ng-content="og.image" />
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="{{og.title}}" />
+    <meta property="og:title" content="Ubuntu Touch Apps" ng-content="og.title" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{og.url}}" />
-    <meta property="og:image" content="{{og.image}}" />
-    <meta property="og:description" content="{{og.description}}" />
-    <meta property="og:site_name" content="{{title}}" />
+    <meta property="og:url" content="https://appstore.bhdouglass.com/apps" ng-content="og.url" />
+    <meta property="og:image" content="https://appstore.bhdouglass.com/img/ubuntu-logo.png" ng-content="og.image" />
+    <meta property="og:description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
+    <meta property="og:site_name" content="Ubuntu Touch Apps" ng-content="title" />
 
     <link rel="icon" type="image/png" href="/img/favicon.png">
 

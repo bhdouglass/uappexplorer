@@ -212,3 +212,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 .social-links a:hover {
   color: #000000;
 }
+
+.small-note {
+  font-size: 12px;
+}

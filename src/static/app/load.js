@@ -16,6 +16,7 @@ LazyLoad.js([
   '/app/directives/stars.js',
   '/app/directives/pagination.js',
   '/app/directives/search.js',
+  '/app/directives/ngContent.js',
   '/app/filters/nl2br.js',
   '/app/filters/dollars.js',
 ], function() {
