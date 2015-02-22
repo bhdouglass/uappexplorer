@@ -220,3 +220,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 .small-note {
   font-size: 12px;
 }
+
+.category-dropdown .dropdown-menu {
+  max-height: 500px;
+  overflow-y: auto;
+}

@@ -7,9 +7,10 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $comp
   $locationProvider.html5Mode(true)
 
   $stateProvider.state('apps', {
-    url: '/apps',
+    url: '/apps?q&category&sort&view&arch&framework&page',
     templateUrl: '/app/partials/apps.html',
-    controller: 'appsCtrl'
+    controller: 'appsCtrl',
+    reloadOnSearch: false,
   }).state('app', {
     url: '/app/:name',
     templateUrl: '/app/partials/app.html',

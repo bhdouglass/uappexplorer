@@ -1,23 +1,80 @@
-app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, api, utils) {
-  console.log('loaded appsctrl');
+app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, api, utils) {
   $scope.apps = [];
   $scope.app_count = 0;
   $scope.current_page = 0;
   $scope.pages = 0;
   $scope.loading = false;
   $scope.can_load = false;
-  $scope.search = { //avoid 2-way binding issues
-    q: '',
-  };
+  $scope.search = '';
   $scope.view = {
     style: 'grid',
   };
   $rootScope.app = null;
+  $scope.categories = [];
+  $scope.category = {
+    name: 'All Apps',
+    internal_name: 'all',
+  };
+  $scope.defaultSort = '-published_date';
+  $scope.sort = $scope.defaultSort;
+  $scope.defaultView = 'grid';
+  $scope.view = $scope.defaultView;
+  $scope.frameworks = ['All'];
+  $scope.more_filters = false;
+  $scope.defaultArchitecture = 'Any'
+  $scope.architecture = $scope.defaultArchitecture;
+  $scope.defaultFramework = 'All';
+  $scope.framework = $scope.defaultFramework;
+
+  $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
 
   $scope.types = {
     application: 'App',
     scope: 'Scope'
   };
+
+  $scope.sorts = [
+    {
+      label: 'Title A-Z',
+      value: 'title'
+    },
+    {
+      label: 'Title Z-A',
+      value: '-title'
+    },
+    {
+      label: 'Newest First',
+      value: '-published_date'
+    },
+    {
+      label: 'Oldest First',
+      value: 'published_date'
+    },
+    {
+      label: 'Highest Rated First',
+      value: '-average_rating'
+    },
+    {
+      label: 'Lowest Rated First',
+      value: 'average_rating'
+    },
+    {
+      label: 'Apps First',
+      value: 'type'
+    },
+    {
+      label: 'Scopes First',
+      value: '-type'
+    },
+    {
+      label: 'Free First',
+      value: 'prices.USD'
+    },
+    {
+      label: 'Most Expensive First (USD)',
+      value: '-prices.USD'
+    },
+  ];
 
   $scope.paging = {
     query: {},
@@ -42,9 +99,205 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, api, 
     });
   }
 
+  //TODO cache this in local storage
+  function fetchCategories() {
+    api.categories().then(function(data) {
+      $scope.categories = data;
+      $scope.category.name = $scope.categories[0].name;
+      $scope.category.internal_name = $scope.categories[0].internal_name;
+
+      locationChange();
+    }, function(err) {
+      console.error(err);
+      $rootScope.errorCallback('Could not download category list, click to retry', fetchCategories);
+    });
+  }
+  fetchCategories();
+
+  //TODO cache this in local storage
+  function fetchFrameworks() {
+    api.frameworks().then(function(data) {
+      $scope.frameworks = data;
+      $scope.framework = $scope.frameworks[0];
+
+      locationChange();
+    }, function(err) {
+      console.error(err);
+      $rootScope.errorCallback('Could not download framework list, click to retry', fetchFrameworks);
+    });
+  }
+  fetchFrameworks();
+
   $scope.$watch('paging', fetchApps, true);
 
   $scope.$watch('current_page', function() {
     $scope.paging.skip = $scope.current_page * $scope.paging.limit;
   });
+
+  var searchTimeout = null;
+  $scope.$watch('search', function() {
+    if ($scope.search) {
+      if (searchTimeout) {
+        $timeout.cancel(searchTimeout);
+        searchTimeout = null;
+      }
+
+      searchTimeout = $timeout(function() {
+        $location.search('q', $scope.search);
+      }, 300);
+    }
+    else {
+      $location.search('q', undefined);
+    }
+  });
+
+  $scope.changeCategory = function(category) {
+    if (category.internal_name == 'all') {
+      $location.search('category', undefined);
+    }
+    else {
+      $location.search('category', category.internal_name);
+    }
+  };
+
+  $scope.changeSort = function(sort) {
+    if (sort == $scope.defaultSort) {
+      $location.search('sort', undefined);
+    }
+    else {
+      $location.search('sort', sort);
+    }
+  };
+
+  $scope.changeView = function(view) {
+    if (view == $scope.defaultView) {
+      $location.search('view', undefined);
+    }
+    else {
+      $location.search('view', view);
+    }
+  };
+
+  $scope.changeArchitecture = function(architecture) {
+    if (architecture == $scope.defaultArchitecture) {
+      $location.search('arch', undefined);
+    }
+    else {
+      $location.search('arch', architecture);
+    }
+  };
+
+  $scope.changeFramework = function(framework) {
+    if (framework == $scope.defaultFramework) {
+      $location.search('framework', undefined);
+    }
+    else {
+      $location.search('framework', framework);
+    }
+  };
+
+  function locationChange() {
+    //start search
+    $scope.search = $location.search().q;
+
+    $scope.current_page = 0;
+    $scope.paging.skip = 0;
+    if ($scope.search) {
+      $scope.paging.search = $scope.search;
+    }
+    else {
+      $scope.paging.search = undefined;
+    }
+    //end search
+
+    //start category
+    var internal_name = $location.search().category;
+    if (internal_name) {
+      _.forEach($scope.categories, function(category) {
+        if (category.internal_name == internal_name) {
+          $scope.category = category;
+          return false;
+        }
+      });
+    }
+    else {
+      $scope.category = {
+        name: 'All Apps',
+        internal_name: 'all',
+      };
+    }
+
+    if ($scope.category.internal_name == 'all' || !$scope.category.internal_name) {
+      $scope.paging.query.categories = undefined;
+    }
+    else {
+      $scope.paging.query.categories = $scope.category.internal_name;
+    }
+    //end category
+
+    //start sort
+    var sort = $location.search().sort;
+    if (!sort) {
+      $scope.sort = $scope.defaultSort;
+    }
+    else {
+      $scope.sort = sort;
+    }
+
+    $scope.paging.sort = $scope.sort
+    //end sort
+
+    //start view
+    var view = $location.search().view;
+    if (!view) {
+      $scope.view = $scope.defaultView;
+    }
+    else {
+      $scope.view = view;
+    }
+    //end view
+
+    //start arch
+    var architecture = $location.search().arch;
+    if (!architecture) {
+      $scope.architecture = $scope.defaultArchitecture;
+    }
+    else {
+      $scope.architecture = architecture;
+    }
+
+    if (!$scope.architecture || $scope.architecture.toLowerCase() == 'any') {
+      $scope.paging.query.architecture = undefined;
+    }
+    else {
+      var architectures = [$scope.architecture.toLowerCase()];
+      if ($scope.architecture.toLowerCase() != 'all') {
+        architectures.push('all');
+      }
+
+      $scope.paging.query.architecture = {'_$in': architectures};
+    }
+    //end arch
+
+    //start framework
+    var framework = $location.search().framework;
+    if (!framework) {
+      $scope.framework = $scope.defaultFramework;
+    }
+    else {
+      $scope.framework = framework;
+    }
+
+    if ($scope.framework == 'All' || !$scope.framework) {
+      $scope.paging.query.framework = undefined;
+    }
+    else {
+      var frameworks = [$scope.framework];
+      $scope.paging.query.framework = {'_$in': frameworks};
+    }
+    //end framework
+  }
+  locationChange();
+
+  $scope.$on('$locationChangeSuccess', locationChange);
 });

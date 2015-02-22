@@ -23,7 +23,6 @@ app.controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $loc
   }
 
   //TODO smart back button
-  //TODO error handling in rootScope
   //TODO better author search
 
   $rootScope.$watch('app', function() {
