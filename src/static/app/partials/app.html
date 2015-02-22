@@ -24,7 +24,7 @@
               <p class="list-group-item-text">
                 <stars ng-model="app.average_rating"></stars>
                 <br ng-show="app.author" />
-                <a ng-click="searchFor(app.author)" ng-bind="app.author" title="Author" class="clickable"></a>
+                <a ui-sref="apps({q: app.author})" ng-bind="app.author" title="Author" class="clickable"></a>
                 <br ng-show="app.company" />
                 <span ng-bind="app.company" title="Company"></span>
 

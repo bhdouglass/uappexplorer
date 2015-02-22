@@ -1,4 +1,6 @@
 app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, api, utils) {
+  $rootScope.app = null;
+  $rootScope.back = {};
   $scope.apps = [];
   $scope.app_count = 0;
   $scope.current_page = 0;
@@ -6,10 +8,6 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stat
   $scope.loading = false;
   $scope.can_load = false;
   $scope.search = '';
-  $scope.view = {
-    style: 'grid',
-  };
-  $rootScope.app = null;
   $scope.categories = [];
   $scope.category = {
     name: 'All Apps',
@@ -300,4 +298,8 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stat
   locationChange();
 
   $scope.$on('$locationChangeSuccess', locationChange);
+
+  $scope.$on('$stateChangeStart', function() {
+    $rootScope.back = $location.search();
+  });
 });

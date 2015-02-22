@@ -22,9 +22,6 @@ app.controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $loc
     $rootScope.errorCallback = errorCallback;
   }
 
-  //TODO smart back button
-  //TODO better author search
-
   $rootScope.$watch('app', function() {
     if ($rootScope.app) {
       $scope.title = $rootScope.app.title + ' - ' + title;
