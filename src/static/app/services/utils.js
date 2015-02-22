@@ -1,4 +1,4 @@
-app.factory('utils', function($filter) {
+app.factory('utils', function($filter, $timeout) {
   return {
     strToColor: function(str, css) { //Adapted from http://stackoverflow.com/a/16348977
       str = str ? str : '';
@@ -25,6 +25,22 @@ app.factory('utils', function($filter) {
 
     isFree: function(prices) {
       return ($filter('dollars')(prices) == 'Free');
+    },
+
+    loading: function($scope) {
+      $scope.can_load = true;
+      $scope.loading = false;
+      $timeout(function() {
+        if ($scope.can_load) {
+          console.log('loading');
+          $scope.loading = true;
+        }
+      }, 500); //0.5 seconds
+    },
+
+    doneLoading: function($scope) {
+      $scope.can_load = false;
+      $scope.loading = false;
     }
   };
 });

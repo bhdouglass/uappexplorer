@@ -11,6 +11,8 @@ LazyLoad.js([
   '//www.google-analytics.com/analytics.js',
   '/app/app.js',
   '/app/controllers/indexCtrl.js',
+  '/app/controllers/appsCtrl.js',
+  '/app/controllers/appCtrl.js',
   '/app/services/api.js',
   '/app/services/utils.js',
   '/app/directives/stars.js',

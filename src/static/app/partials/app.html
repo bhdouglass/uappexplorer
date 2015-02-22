@@ -83,7 +83,7 @@
           <li ng-class="{active: app_tab == 'desc'}" class="clickable">
             <a ng-click="app_tab = 'desc'">Description</a>
           </li>
-          <li ng-class="{active: app_tab == 'change'}" class="clickable">
+          <li ng-class="{active: app_tab == 'change'}" class="clickable" ng-show="app.changelog">
             <a ng-click="app_tab = 'change'">Changelog</a>
           </li>
           <li ng-class="{active: app_tab == 'info'}" class="clickable">

@@ -8,10 +8,12 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $comp
 
   $stateProvider.state('apps', {
     url: '/apps',
-    templateUrl: '/app/partials/apps.html'
+    templateUrl: '/app/partials/apps.html',
+    controller: 'appsCtrl'
   }).state('app', {
     url: '/app/:name',
-    templateUrl: '/app/partials/app.html'
+    templateUrl: '/app/partials/app.html',
+    controller: 'appCtrl'
   });
 
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|scope):/);
