@@ -129,11 +129,21 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stat
   $scope.$watch('paging', fetchApps, true);
 
   $scope.$watch('current_page', function() {
+    if ($scope.current_page) {
+      $location.search('page', $scope.current_page);
+    }
+
     $scope.paging.skip = $scope.current_page * $scope.paging.limit;
   });
 
   var searchTimeout = null;
-  $scope.$watch('search', function() {
+  $scope.$watch('search', function(oldValue, newValue) {
+    if (oldValue != newValue) {
+      $location.search('page', undefined);
+      $scope.current_page = 0;
+      $scope.paging.skip = 0;
+    }
+
     if ($scope.search) {
       if (searchTimeout) {
         $timeout.cancel(searchTimeout);
@@ -195,11 +205,16 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stat
   };
 
   function locationChange() {
+    //start page
+    var page = $location.search().page;
+    if (page) {
+      $scope.current_page = page;
+    }
+    //end page
+
     //start search
     $scope.search = $location.search().q;
 
-    $scope.current_page = 0;
-    $scope.paging.skip = 0;
     if ($scope.search) {
       $scope.paging.search = $scope.search;
     }
