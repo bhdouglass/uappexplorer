@@ -30,5 +30,6 @@ LazyLoad.css([
   '//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/css/swipebox.min.css',
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.css',
   '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css',
+  '//fonts.googleapis.com/css?family=Ubuntu',
   '/css/main.css',
 ]);
