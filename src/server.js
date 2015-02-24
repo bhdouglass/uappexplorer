@@ -275,13 +275,18 @@ app.get('/sitemap.xml', function(req, res) {
   })
 })
 
+app.get(['/app'], function(req, res) {
+  res.redirect(301, '/apps');
+})
+
 app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
   res.sendFile('index.html', {root: __dirname + '/static'});
 });
 
-app.use(function(req, res, next){
+app.use(function(req, res, next) {
   if (req.accepts('html')) {
     var host = req.headers.host ? 'http://' + req.headers.host : 'https://appstore.bhdouglass.com/';
+    res.header("Content-Type", "text/html")
     res.status(404)
     fs.createReadStream(__dirname + '/static/404.html').pipe(res)
   }
