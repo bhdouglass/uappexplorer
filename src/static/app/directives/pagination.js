@@ -1,6 +1,6 @@
 'use strict';
 
-app.directive('pagination', function() {
+angular.module('appstore').directive('pagination', function() {
   return {
     restrict: 'E',
     scope: {
@@ -20,7 +20,7 @@ app.directive('pagination', function() {
         }
 
         if (start + 3 > $scope.pages) {
-          start - $scope.pages - 3;
+          start = $scope.pages - 3;
         }
 
         for (var i = start; i < $scope.pages && i < start + 3; i++) {

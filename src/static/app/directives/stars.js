@@ -1,6 +1,6 @@
 'use strict';
 
-app.directive('stars', function() {
+angular.module('appstore').directive('stars', function() {
   return {
     restrict: 'E',
     scope: {

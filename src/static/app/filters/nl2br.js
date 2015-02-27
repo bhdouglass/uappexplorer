@@ -1,6 +1,6 @@
 'use strict';
 
-app.filter('nl2br', function($sce){
+angular.module('appstore').filter('nl2br', function($sce){
   return function(input) {
     var output = '';
     if (input) {
@@ -10,5 +10,5 @@ app.filter('nl2br', function($sce){
     output = output.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;');
     output = output.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br/>$2');
     return $sce.trustAsHtml(output);
-  }
+  };
 });

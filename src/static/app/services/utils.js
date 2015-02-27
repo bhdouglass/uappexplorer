@@ -1,4 +1,6 @@
-app.factory('utils', function($filter, $timeout) {
+'use strict';
+
+angular.module('appstore').factory('utils', function($filter, $timeout) {
   return {
     strToColor: function(str, css) { //Adapted from http://stackoverflow.com/a/16348977
       str = str ? str : '';
@@ -9,9 +11,9 @@ app.factory('utils', function($filter, $timeout) {
       }
 
       var color = '#';
-      for (var i = 0; i < 3; i++) {
-          var value = (hash >> (i * 8)) & 0xFF;
-          color += ('00' + value.toString(16)).substr(-2);
+      for (var j = 0; j < 3; j++) {
+          var v = (hash >> (j * 8)) & 0xFF;
+          color += ('00' + v.toString(16)).substr(-2);
       }
 
       var value = color;
@@ -32,7 +34,6 @@ app.factory('utils', function($filter, $timeout) {
       $scope.loading = false;
       $timeout(function() {
         if ($scope.can_load) {
-          console.log('loading');
           $scope.loading = true;
         }
       }, 500); //0.5 seconds

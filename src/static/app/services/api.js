@@ -1,11 +1,13 @@
-app.factory('api', function($q, $http) {
+'use strict';
+
+angular.module('appstore').factory('api', function($q, $http) {
   return {
     apps: function(paging) {
       paging = angular.copy(paging);
       _.forEach(paging.query, function(q) {
-        if (_.isObject(q) && q['_$in']) {
-          q['$in'] = q['_$in'];
-          q['_$in'] = undefined;
+        if (_.isObject(q) && q._$in) {
+          q.$in = q._$in;
+          q._$in = undefined;
         }
       });
 

@@ -1,4 +1,6 @@
-app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, api, utils) {
+'use strict';
+
+angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, api, utils) {
   $rootScope.app = null;
   $rootScope.back = {};
   $scope.apps = [];
@@ -19,7 +21,7 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stat
   $scope.view = $scope.defaultView;
   $scope.frameworks = ['All'];
   $scope.more_filters = false;
-  $scope.defaultArchitecture = 'Any'
+  $scope.defaultArchitecture = 'Any';
   $scope.architecture = $scope.defaultArchitecture;
   $scope.defaultFramework = 'All';
   $scope.framework = $scope.defaultFramework;
@@ -257,7 +259,7 @@ app.controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stat
       $scope.sort = sort;
     }
 
-    $scope.paging.sort = $scope.sort
+    $scope.paging.sort = $scope.sort;
     //end sort
 
     //start view

@@ -1,10 +1,10 @@
 'use strict';
 
-var app = angular.module('app', ['ui.router', 'angulartics', 'angulartics.google.analytics']);
+angular.module('appstore', ['ui.router', 'angulartics', 'angulartics.google.analytics']);
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
+angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $urlRouterProvider.otherwise('/apps');
-  $locationProvider.html5Mode(true)
+  $locationProvider.html5Mode(true);
 
   $stateProvider.state('apps', {
     url: '/apps?q&category&sort&view&arch&framework&page',

@@ -1,4 +1,6 @@
-app.controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location) {
+'use strict';
+
+angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location) {
   var title = 'Ubuntu Touch Apps';
   $scope.title = title;
   $scope.og = {};
@@ -20,7 +22,7 @@ app.controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $loc
   $rootScope.setError = function(error, errorCallback) {
     $rootScope.error = error;
     $rootScope.errorCallback = errorCallback;
-  }
+  };
 
   $rootScope.$watch('app', function() {
     if ($rootScope.app) {

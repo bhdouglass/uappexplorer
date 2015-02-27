@@ -15,6 +15,9 @@ module.exports = function(grunt) {
     },
 
     jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
       files: ['src/static/app/*.js', 'src/static/app/*/*.js'],
     },
 
@@ -114,6 +117,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['jshint'])
 
-  grunt.registerTask('default', ['clean', 'ngAnnotate', 'uglify', 'copy', 'targethtml', 'htmlmin', 'cssmin'])
+  grunt.registerTask('build', ['jshint', 'clean', 'ngAnnotate', 'uglify', 'copy', 'targethtml', 'htmlmin', 'cssmin'])
 
 };

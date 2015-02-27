@@ -1,6 +1,6 @@
 'use strict';
 
-app.filter('dollars', function() {
+angular.module('appstore').filter('dollars', function() {
   var currencies = {
     'USD': '$',
     'GBP': '£',

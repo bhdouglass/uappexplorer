@@ -1,4 +1,6 @@
-app.controller('appCtrl', function ($scope, $rootScope, $state, $timeout, api, utils) {
+'use strict';
+
+angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, api, utils) {
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
   $scope.app = null;
