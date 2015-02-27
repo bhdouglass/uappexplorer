@@ -26,7 +26,7 @@ app.use(compression({
   }
 }))
 app.use(prerender.whitelisted(['/app/.*', '/apps']))
-app.use(express.static(__dirname + '/static'))
+app.use(express.static(__dirname + config.server.static))
 
 function success(res, data, message) {
   res.send({
@@ -59,7 +59,7 @@ app.get('/api/icon/:name', function(req, res) {
     }
     else if (!pkg) {
       res.status(404)
-      fs.createReadStream(__dirname + '/static/img/404.png').pipe(res)
+      fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
     }
     else {
       if (pkg.icon) {
@@ -78,7 +78,6 @@ app.get('/api/icon/:name', function(req, res) {
           else {
             utils.download(pkg.icon, filename, function(r) {
               pkg.icon_fetch_date = now.valueOf()
-              logger.debug(filename + ' finished downloading')
 
               res.setHeader('Content-type', mime.lookup(filename))
               res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
@@ -89,7 +88,7 @@ app.get('/api/icon/:name', function(req, res) {
       }
       else {
         res.status(404)
-        fs.createReadStream(__dirname + '/static/img/404.png').pipe(res)
+        fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
       }
     }
   })
@@ -280,7 +279,7 @@ app.get(['/app'], function(req, res) {
 })
 
 app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
-  res.sendFile('index.html', {root: __dirname + '/static'});
+  res.sendFile('index.html', {root: __dirname + config.server.static});
 });
 
 app.use(function(req, res, next) {
@@ -288,7 +287,7 @@ app.use(function(req, res, next) {
     var host = req.headers.host ? 'http://' + req.headers.host : 'https://appstore.bhdouglass.com/';
     res.header("Content-Type", "text/html")
     res.status(404)
-    fs.createReadStream(__dirname + '/static/404.html').pipe(res)
+    fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res)
   }
   else { //if (req.accepts('json')) {
     error(res, req.url + ' was not found', 404)
@@ -299,8 +298,6 @@ function run() {
   var server = app.listen(config.server.port, config.server.ip, function() {
     var host = server.address().address
     var port = server.address().port
-
-    logger.info('listening at http://%s:%s', host, port)
   })
 }
 

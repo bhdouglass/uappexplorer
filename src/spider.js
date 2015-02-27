@@ -110,7 +110,7 @@ function fetchListPage(page, packageList, callback) {
     }
     else {
       var data = JSON.parse(body)
-      logger.info('got package list page #' + page)
+      logger.debug('got package list page #' + page)
       if (data['_embedded'] && data['_embedded']['clickindex:package']) {
         if (_.isArray(packageList)) {
           packageList = packageList.concat(data['_embedded']['clickindex:package'])

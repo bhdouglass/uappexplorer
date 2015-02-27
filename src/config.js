@@ -11,6 +11,7 @@ var config = {
     ip: '0.0.0.0',
     port: 8080,
     host: 'https://appstore.bhdouglass.com',
+    static: '/static',
   },
   mongo: {
     uri: 'mongodb://localhost/',
@@ -52,6 +53,10 @@ if (process.env.OPENSHIFT_NODEJS_PORT) {
 }
 else if (process.env.NODEJS_PORT) {
   config.server.port = process.env.NODEJS_PORT
+}
+
+if (process.env.NODEJS_STATIC) {
+  config.server.static = process.env.NODEJS_STATIC
 }
 
 if (process.env.OPENSHIFT_MONGODB_DB_URL) {

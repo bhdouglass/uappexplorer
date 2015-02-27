@@ -7,9 +7,6 @@ mongoose.connect(config.mongo.uri + config.mongo.database, function(err, res) {
     logger.error('database: ' + err)
     process.exit(1)
   }
-  else {
-    logger.debug('database: connected to mongo')
-  }
 })
 
 var packageSchema = mongoose.Schema({
