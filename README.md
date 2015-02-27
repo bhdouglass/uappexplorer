@@ -58,6 +58,9 @@ The gear running the app needs to have the Nodejs and MongoDB cartridge setup.
 This could be easily setup for a different service provided you setup the env variables.
 To setup env variables on OpenShift, check out their [docs](https://developers.openshift.com/en/managing-environment-variables.html#custom-variables).
 
+The postinstall of this package runs a grunt build and puts all the static files
+into `src/static/dist`. The built files are all minified and concatenated.
+
 Alternatively an external mongo host could be used, like [MongoLab](https://mongolab.com/).
 
 ## Configuration ##
@@ -72,6 +75,9 @@ by the following env variables.
 * NODEJS_IP || OPENSHIFT_NODEJS_IP
     * IP address for the web server to listen on
     * Default: `127.0.0.1`
+* NODEJS_STATIC
+    * Directory (relative to src/server.js) where the static content is stored
+    * Default: `/static` (change to `/static/dist` when using the build static files)
 * DATA_DIR || OPENSHIFT_DATA_DIR
     * Directory where downloaded images are stored
     * Default: `/tmp`
