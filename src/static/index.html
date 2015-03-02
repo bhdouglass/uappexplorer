@@ -100,10 +100,10 @@
       ];
 
       if (env == 'dist') {
-        css.push('/css/main.min.css');
+        css.push('/css/main.min.css' + v);
       }
       else {
-        css.push('/css/main.css');
+        css.push('/css/main.css' + v);
       }
 
       LazyLoad.css(css);
