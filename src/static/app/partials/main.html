@@ -1,0 +1,160 @@
+<div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Browse Apps</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <div class="list-group">
+        <a class="list-group-item clickable" href="/apps" title="Browse Apps &amp; Scopes">
+          <div class="row-action-primary">
+            <div class="action-icon ubuntu-shape">
+              <i class="fa fa-mobile background-material-deeporange"></i>
+            </div>
+          </div>
+
+          <div class="row-content">
+            <h4 class="list-group-item-heading">
+              Apps &amp; Scopes
+            </h4>
+            <p class="list-group-item-text" ng-if="app_count">
+              <span ng-bind="app_count"></span> Apps
+            </p>
+          </div>
+        </a>
+
+        <div class="list-group-separator"></div>
+
+        <div class="list-group">
+          <a class="list-group-item clickable" href="/apps?category=games" title="Browse Games">
+            <div class="row-action-primary">
+              <div class="action-icon ubuntu-shape">
+                <i class="fa fa-gamepad background-material-lightblue"></i>
+              </div>
+            </div>
+
+            <div class="row-content">
+              <h4 class="list-group-item-heading">
+                Games
+              </h4>
+              <p class="list-group-item-text" ng-if="game_count">
+                <span ng-bind="game_count"></span> Apps
+              </p>
+            </div>
+          </a>
+
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Popular Apps</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Apps</h2>
+        </div>
+      </div>
+      <div class="row" ng-repeat="app in popular.apps">
+        <div class="col-md-12">
+          <div class="list-group">
+            <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
+              <div class="row-action-primary">
+                <div class="icon ubuntu-shape">
+                  <img ng-src="/api/icon/{{app.name}}.png" alt="{{app.name}}" />
+                </div>
+              </div>
+
+              <div class="row-content">
+                <div class="least-content-lower">
+                  <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
+                </div>
+
+                <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
+                <p class="list-group-item-text">
+                  <stars ng-model="app.average_rating"></stars>
+                </p>
+              </div>
+            </a>
+
+            <div class="list-group-separator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Games</h2>
+        </div>
+      </div>
+      <div class="row" ng-repeat="app in popular.games">
+        <div class="col-md-12">
+          <div class="list-group">
+            <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
+              <div class="row-action-primary">
+                <div class="icon ubuntu-shape">
+                  <img ng-src="/api/icon/{{app.name}}.png" alt="{{app.name}}" />
+                </div>
+              </div>
+
+              <div class="row-content">
+                <div class="least-content-lower">
+                  <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
+                </div>
+
+                <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
+                <p class="list-group-item-text">
+                  <stars ng-model="app.average_rating"></stars>
+                </p>
+              </div>
+            </a>
+
+            <div class="list-group-separator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Web Apps</h2>
+        </div>
+      </div>
+      <div class="row" ng-repeat="app in popular.web_apps">
+        <div class="col-md-12">
+          <div class="list-group">
+            <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
+              <div class="row-action-primary">
+                <div class="icon ubuntu-shape">
+                  <img ng-src="/api/icon/{{app.name}}.png" alt="{{app.name}}" />
+                </div>
+              </div>
+
+              <div class="row-content">
+                <div class="least-content-lower">
+                  <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
+                </div>
+
+                <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
+                <p class="list-group-item-text">
+                  <stars ng-model="app.average_rating"></stars>
+                </p>
+              </div>
+            </a>
+
+            <div class="list-group-separator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

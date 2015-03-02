@@ -37,6 +37,22 @@ angular.module('appstore').factory('api', function($q, $http) {
       });
     },
 
+    count: function(query) {
+      var count_deferred = $q.defer();
+      $http.get('/api/apps?count=true', {
+        params: {
+          query: query
+        }
+      }).then(function(res) {
+        var app_count = res.data.data;
+        count_deferred.resolve(app_count);
+      }, function(err) {
+        count_deferred.reject(err);
+      });
+
+      return count_deferred.promise;
+    },
+
     categories: function() {
       var deferred = $q.defer();
       $http.get('/api/categories').then(function(res) {
@@ -84,6 +100,17 @@ angular.module('appstore').factory('api', function($q, $http) {
         });
 
         deferred.resolve(app);
+      }, function(err) {
+        deferred.reject(err);
+      });
+
+      return deferred.promise;
+    },
+
+    popular: function() {
+      var deferred = $q.defer();
+      $http.get('/api/apps/popular').then(function(res) {
+        deferred.resolve(res.data.data);
       }, function(err) {
         deferred.reject(err);
       });

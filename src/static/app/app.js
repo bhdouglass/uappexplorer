@@ -6,7 +6,11 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
   $urlRouterProvider.otherwise('/apps');
   $locationProvider.html5Mode(true);
 
-  $stateProvider.state('apps', {
+  $stateProvider.state('main', {
+    url: '/',
+    templateUrl: '/app/partials/main.html',
+    controller: 'mainCtrl'
+  }).state('apps', {
     url: '/apps?q&category&sort&view&arch&framework&page',
     templateUrl: '/app/partials/apps.html',
     controller: 'appsCtrl',

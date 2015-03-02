@@ -230,3 +230,55 @@ a.list-group-item:hover, a.list-group-item:focus {
   max-height: 500px;
   overflow-y: auto;
 }
+
+.background-material-red {
+  background-color: #f44336 !important;
+}
+.background-material-pink {
+  background-color: #e91e63 !important;
+}
+.background-material-purple {
+  background-color: #9c27b0 !important;
+}
+.background-material-deeppurple {
+  background-color: #673ab7 !important;
+}
+.background-material-indigo {
+  background-color: #3f51b5 !important;
+}
+.background-material-lightblue {
+  background-color: #03a9f4 !important;
+}
+.background-material-cyan {
+  background-color: #00bcd4 !important;
+}
+.background-material-teal {
+  background-color: #009688 !important;
+}
+.background-material-lightgreen {
+  background-color: #8bc34a !important;
+}
+.background-material-lime {
+  background-color: #cddc39 !important;
+}
+.background-material-lightyellow {
+  background-color: #ffeb3b !important;
+}
+.background-material-orange {
+  background-color: #ff9800 !important;
+}
+.background-material-deeporange {
+  background-color: #ff5722 !important;
+}
+.background-material-grey {
+  background-color: #9e9e9e !important;
+}
+.background-material-bluegrey {
+  background-color: #607d8b !important;
+}
+.background-material-brown {
+  background-color: #795548 !important;
+}
+.background-material-lightgrey {
+  background-color: #ececec !important;
+}

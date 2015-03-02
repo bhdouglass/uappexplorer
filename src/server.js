@@ -221,6 +221,45 @@ app.get('/api/apps', function(req, res) {
   }
 })
 
+//TODO cache this and don't hardcode it
+app.get('/api/apps/popular', function(req, res) {
+  var popular = [
+    'com.ubuntu.developer.mateosalta.inbox',
+    'com.ubuntu.developer.metallicamust.appstore',
+    'com.zeptolab.cuttherope.full',
+    'com.ubuntu.developer.mzanetti.machines-vs-machines',
+    'dekko.dekkoproject',
+    'com.ubuntu.telegram'
+  ];
+
+  db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
+    if (err) {
+      error(res, err)
+    }
+    else {
+      var response = {
+        games: [],
+        apps: [],
+        web_apps: []
+      };
+
+      _.forEach(pkgs, function(pkg) {
+        if (['com.ubuntu.developer.mateosalta.inbox', 'com.ubuntu.developer.metallicamust.appstore'].indexOf(pkg.name) > -1) {
+          response.web_apps.push(pkg)
+        }
+        else if (['com.zeptolab.cuttherope.full', 'com.ubuntu.developer.mzanetti.machines-vs-machines'].indexOf(pkg.name) > -1) {
+          response.games.push(pkg)
+        }
+        else if (['dekko.dekkoproject', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
+          response.apps.push(pkg)
+        }
+      })
+
+      success(res, response)
+    }
+  });
+});
+
 app.get('/api/apps/:name', function(req, res) {
   db.Package.findOne({name: req.params.name}, function(err, pkg) {
     if (err) {

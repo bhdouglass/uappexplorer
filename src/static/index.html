@@ -74,6 +74,7 @@
           '/app/controllers/indexCtrl.js' + v,
           '/app/controllers/appsCtrl.js' + v,
           '/app/controllers/appCtrl.js' + v,
+          '/app/controllers/mainCtrl.js' + v,
           '/app/services/api.js' + v,
           '/app/services/utils.js' + v,
           '/app/directives/stars.js' + v,
@@ -119,8 +120,13 @@
             <span class="icon-bar"></span>
           </button>
           <span class="navbar-brand">
-            <a ui-sref="apps(back)" class="link clickable">
-              <i class="fa fa-chevron-left" ng-show="$state.current.name == 'app'"  ng-cloak></i>
+            <a ui-sref="apps(back)" class="link clickable" ng-if="$state.current.name == 'app'">
+              <i class="fa fa-chevron-left ng-cloak"></i>
+              <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
+              Ubuntu Touch Apps
+            </a>
+            <a ui-sref="main" class="link clickable ng-cloak" ng-if="$state.current.name != 'app'">
+              <i class="fa fa-chevron-left" ng-show="$state.current.name == 'apps'"></i>
               <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
               Ubuntu Touch Apps
             </a>
