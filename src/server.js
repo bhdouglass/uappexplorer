@@ -26,7 +26,10 @@ app.use(compression({
   }
 }))
 app.use(prerender.whitelisted(['/app/.*', '/apps']))
-app.use(express.static(__dirname + config.server.static))
+
+if (config.use_app()) {
+  app.use(express.static(__dirname + config.server.static))
+}
 
 function success(res, data, message) {
   res.send({
@@ -47,279 +50,283 @@ function error(res, message, code) {
   })
 }
 
-app.get('/api/icon/:name', function(req, res) {
-  var name = req.params.name;
-  if (name.indexOf('.png') == (name.length - 4)) {
-    name = name.replace('.png', '')
-  }
-
-  db.Package.findOne({name: name}, function(err, pkg) {
-    if (err) {
-      error(res, err)
+if (config.use_api()) {
+  app.get('/api/icon/:name', function(req, res) {
+    var name = req.params.name;
+    if (name.indexOf('.png') == (name.length - 4)) {
+      name = name.replace('.png', '')
     }
-    else if (!pkg) {
-      res.status(404)
-      fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
-    }
-    else {
-      if (pkg.icon) {
-        if (!pkg.icon_filename) {
-          pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
-        }
 
-        var now = moment()
-        var filename = config.data_dir + '/' + pkg.icon_filename
-        fs.exists(filename, function(exists) {
-          if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
-            res.setHeader('Content-type', mime.lookup(filename))
-            res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-            fs.createReadStream(filename).pipe(res)
-          }
-          else {
-            utils.download(pkg.icon, filename, function(r) {
-              pkg.icon_fetch_date = now.valueOf()
-
-              res.setHeader('Content-type', mime.lookup(filename))
-              res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-              fs.createReadStream(filename).pipe(res)
-            })
-          }
-        })
+    db.Package.findOne({name: name}, function(err, pkg) {
+      if (err) {
+        error(res, err)
       }
-      else {
+      else if (!pkg) {
         res.status(404)
         fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
       }
-    }
-  })
-})
-
-app.get('/api/categories', function(req, res) {
-  db.Department.find({}, function(err, deps) {
-    if (err) {
-      error(res, err)
-    }
-    else {
-      deps = _.sortBy(deps, 'name')
-      success(res, deps)
-    }
-  })
-})
-
-var frameworks = []
-var frameworks_date = null;
-app.get('/api/frameworks', function(req, res) {
-  var now = moment()
-  if (!frameworks_date || now.diff(frameworks_date, 'hours') > 12 || frameworks.length == 0) { //Cache miss
-    db.Package.find({}, 'framework', function(err, pkgs) {
-      if (err) {
-        error(res, err)
-      }
       else {
-        frameworks = []
-        _.forEach(pkgs, function(pkg) {
-          _.forEach(pkg.framework, function(framework) {
-            if (frameworks.indexOf(framework) == -1) {
-              frameworks.push(framework);
+        if (pkg.icon) {
+          if (!pkg.icon_filename) {
+            pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
+          }
+
+          var now = moment()
+          var filename = config.data_dir + '/' + pkg.icon_filename
+          fs.exists(filename, function(exists) {
+            if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
+              res.setHeader('Content-type', mime.lookup(filename))
+              res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+              fs.createReadStream(filename).pipe(res)
             }
-          });
-        })
+            else {
+              utils.download(pkg.icon, filename, function(r) {
+                pkg.icon_fetch_date = now.valueOf()
 
-        frameworks = _.sortBy(frameworks)
-        frameworks_date = moment()
-        success(res, frameworks)
+                res.setHeader('Content-type', mime.lookup(filename))
+                res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+                fs.createReadStream(filename).pipe(res)
+              })
+            }
+          })
+        }
+        else {
+          res.status(404)
+          fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
+        }
       }
     })
-  }
-  else { //Cache hit
-    success(res, frameworks)
-  }
-})
+  })
 
-//TODO cache this to speed up requests
-app.get('/api/apps', function(req, res) {
-  var findQuery = req.query.query ? JSON.parse(req.query.query) : {}
-  if (req.query.count == 'true') {
-    var query = db.Package.count(findQuery)
-
-    if (req.query.search) {
-      var regxp = new RegExp(req.query.search, 'i')
-      query.or([
-        {author: regxp},
-        {company: regxp},
-        {title: regxp},
-        {description: regxp},
-        {keywords: regxp}
-      ])
-    }
-
-    query.exec(function(err, count) {
+  app.get('/api/categories', function(req, res) {
+    db.Department.find({}, function(err, deps) {
       if (err) {
         error(res, err)
       }
       else {
-        success(res, count)
+        deps = _.sortBy(deps, 'name')
+        success(res, deps)
       }
     })
-  }
-  else {
-    var query = db.Package.find(findQuery)
+  })
 
-    if (req.query.limit) {
-      query.limit(req.query.limit)
-    }
-
-    if (req.query.skip) {
-      query.skip(req.query.skip)
-    }
-
-    if (req.query.sort) {
-      query.sort(req.query.sort)
-    }
-
-    if (req.query.search) {
-      var regxp = new RegExp(req.query.search, 'i')
-      query.or([
-        {author: regxp},
-        {company: regxp},
-        {title: regxp},
-        {description: regxp},
-        {keywords: regxp}
-      ])
-    }
-
-    query.exec(function(err, pkgs) {
-      if (err) {
-        error(res, err)
-      }
-      else {
-        if (req.query.mini == 'true') {
-          var new_pkgs = []
+  var frameworks = []
+  var frameworks_date = null;
+  app.get('/api/frameworks', function(req, res) {
+    var now = moment()
+    if (!frameworks_date || now.diff(frameworks_date, 'hours') > 12 || frameworks.length == 0) { //Cache miss
+      db.Package.find({}, 'framework', function(err, pkgs) {
+        if (err) {
+          error(res, err)
+        }
+        else {
+          frameworks = []
           _.forEach(pkgs, function(pkg) {
-            var description = pkg.description;
-            if (pkg.description && pkg.description.split('\n').length > 0) {
-              description = pkg.description.split('\n')[0];
-            }
-
-            new_pkgs.push({
-              name: pkg.name,
-              icon_filename: pkg.icon_filename,
-              title: pkg.title,
-              type: pkg.type,
-              average_rating: pkg.average_rating,
-              prices: pkg.prices,
-              short_description: description,
-            })
+            _.forEach(pkg.framework, function(framework) {
+              if (frameworks.indexOf(framework) == -1) {
+                frameworks.push(framework);
+              }
+            });
           })
 
-          pkgs = new_pkgs;
+          frameworks = _.sortBy(frameworks)
+          frameworks_date = moment()
+          success(res, frameworks)
         }
+      })
+    }
+    else { //Cache hit
+      success(res, frameworks)
+    }
+  })
 
-        success(res, pkgs)
+  //TODO cache this to speed up requests
+  app.get('/api/apps', function(req, res) {
+    var findQuery = req.query.query ? JSON.parse(req.query.query) : {}
+    if (req.query.count == 'true') {
+      var query = db.Package.count(findQuery)
+
+      if (req.query.search) {
+        var regxp = new RegExp(req.query.search, 'i')
+        query.or([
+          {author: regxp},
+          {company: regxp},
+          {title: regxp},
+          {description: regxp},
+          {keywords: regxp}
+        ])
+      }
+
+      query.exec(function(err, count) {
+        if (err) {
+          error(res, err)
+        }
+        else {
+          success(res, count)
+        }
+      })
+    }
+    else {
+      var query = db.Package.find(findQuery)
+
+      if (req.query.limit) {
+        query.limit(req.query.limit)
+      }
+
+      if (req.query.skip) {
+        query.skip(req.query.skip)
+      }
+
+      if (req.query.sort) {
+        query.sort(req.query.sort)
+      }
+
+      if (req.query.search) {
+        var regxp = new RegExp(req.query.search, 'i')
+        query.or([
+          {author: regxp},
+          {company: regxp},
+          {title: regxp},
+          {description: regxp},
+          {keywords: regxp}
+        ])
+      }
+
+      query.exec(function(err, pkgs) {
+        if (err) {
+          error(res, err)
+        }
+        else {
+          if (req.query.mini == 'true') {
+            var new_pkgs = []
+            _.forEach(pkgs, function(pkg) {
+              var description = pkg.description;
+              if (pkg.description && pkg.description.split('\n').length > 0) {
+                description = pkg.description.split('\n')[0];
+              }
+
+              new_pkgs.push({
+                name: pkg.name,
+                icon_filename: pkg.icon_filename,
+                title: pkg.title,
+                type: pkg.type,
+                average_rating: pkg.average_rating,
+                prices: pkg.prices,
+                short_description: description,
+              })
+            })
+
+            pkgs = new_pkgs;
+          }
+
+          success(res, pkgs)
+        }
+      })
+    }
+  })
+
+  //TODO cache this and don't hardcode it
+  app.get('/api/apps/popular', function(req, res) {
+    var popular = [
+      'com.ubuntu.developer.mateosalta.inbox',
+      'com.ubuntu.developer.metallicamust.appstore',
+      'com.zeptolab.cuttherope.full',
+      'com.ubuntu.developer.mzanetti.machines-vs-machines',
+      'dekko.dekkoproject',
+      'com.ubuntu.telegram'
+    ];
+
+    db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
+      if (err) {
+        error(res, err)
+      }
+      else {
+        var response = {
+          games: [],
+          apps: [],
+          web_apps: []
+        };
+
+        _.forEach(pkgs, function(pkg) {
+          if (['com.ubuntu.developer.mateosalta.inbox', 'com.ubuntu.developer.metallicamust.appstore'].indexOf(pkg.name) > -1) {
+            response.web_apps.push(pkg)
+          }
+          else if (['com.zeptolab.cuttherope.full', 'com.ubuntu.developer.mzanetti.machines-vs-machines'].indexOf(pkg.name) > -1) {
+            response.games.push(pkg)
+          }
+          else if (['dekko.dekkoproject', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
+            response.apps.push(pkg)
+          }
+        })
+
+        success(res, response)
+      }
+    });
+  });
+
+  app.get('/api/apps/:name', function(req, res) {
+    db.Package.findOne({name: req.params.name}, function(err, pkg) {
+      if (err) {
+        error(res, err)
+      }
+      else if (!pkg) {
+        error(res, req.params.name + ' was not found', 404)
+      }
+      else {
+        pkg.reviews = undefined
+        success(res, pkg)
       }
     })
-  }
-})
-
-//TODO cache this and don't hardcode it
-app.get('/api/apps/popular', function(req, res) {
-  var popular = [
-    'com.ubuntu.developer.mateosalta.inbox',
-    'com.ubuntu.developer.metallicamust.appstore',
-    'com.zeptolab.cuttherope.full',
-    'com.ubuntu.developer.mzanetti.machines-vs-machines',
-    'dekko.dekkoproject',
-    'com.ubuntu.telegram'
-  ];
-
-  db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
-    if (err) {
-      error(res, err)
-    }
-    else {
-      var response = {
-        games: [],
-        apps: [],
-        web_apps: []
-      };
-
-      _.forEach(pkgs, function(pkg) {
-        if (['com.ubuntu.developer.mateosalta.inbox', 'com.ubuntu.developer.metallicamust.appstore'].indexOf(pkg.name) > -1) {
-          response.web_apps.push(pkg)
-        }
-        else if (['com.zeptolab.cuttherope.full', 'com.ubuntu.developer.mzanetti.machines-vs-machines'].indexOf(pkg.name) > -1) {
-          response.games.push(pkg)
-        }
-        else if (['dekko.dekkoproject', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
-          response.apps.push(pkg)
-        }
-      })
-
-      success(res, response)
-    }
-  });
-});
-
-app.get('/api/apps/:name', function(req, res) {
-  db.Package.findOne({name: req.params.name}, function(err, pkg) {
-    if (err) {
-      error(res, err)
-    }
-    else if (!pkg) {
-      error(res, req.params.name + ' was not found', 404)
-    }
-    else {
-      pkg.reviews = undefined
-      success(res, pkg)
-    }
   })
-})
 
-app.get('/api/apps/reviews/:name', function(req, res) {
-  db.Package.findOne({name: req.params.name}, function(err, pkg) {
-    if (err) {
-      error(res, err)
-    }
-    else if (!pkg) {
-      error(res, req.params.name + ' was not found', 404)
-    }
-    else {
-      spider.parseReviews(pkg, function(pkg2) {
-        success(res, {
-          reviews: pkg2.reviews,
-          name: pkg2.name,
+  app.get('/api/apps/reviews/:name', function(req, res) {
+    db.Package.findOne({name: req.params.name}, function(err, pkg) {
+      if (err) {
+        error(res, err)
+      }
+      else if (!pkg) {
+        error(res, req.params.name + ' was not found', 404)
+      }
+      else {
+        spider.parseReviews(pkg, function(pkg2) {
+          success(res, {
+            reviews: pkg2.reviews,
+            name: pkg2.name,
+          })
         })
-      })
-    }
-  })
-})
-
-sm = sitemap.createSitemap ({
-  hostname: config.server.host,
-  cacheTime: 1200000,  //2 hours
-  urls: [
-    {url: '/apps/',  changefreq: 'daily', priority: 1},
-  ]
-})
-
-app.get('/sitemap.xml', function(req, res) {
-  db.Package.find({}, 'name', function(err, pkgs) {
-    _.forEach(pkgs, function(pkg) {
-      sm.add({url: '/app/' + pkg.name, changefreq: 'weekly', priority: 0.7});
+      }
     })
-
-    res.header('Content-Type', 'application/xml')
-    res.send(sm.toString())
   })
-})
+}
 
-app.get(['/app'], function(req, res) {
-  res.redirect(301, '/apps');
-})
+if (config.use_app()) {
+  sm = sitemap.createSitemap ({
+    hostname: config.server.host,
+    cacheTime: 1200000,  //2 hours
+    urls: [
+      {url: '/apps/',  changefreq: 'daily', priority: 1},
+    ]
+  })
 
-app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
-  res.sendFile('index.html', {root: __dirname + config.server.static});
-});
+  app.get('/sitemap.xml', function(req, res) {
+    db.Package.find({}, 'name', function(err, pkgs) {
+      _.forEach(pkgs, function(pkg) {
+        sm.add({url: '/app/' + pkg.name, changefreq: 'weekly', priority: 0.7});
+      })
+
+      res.header('Content-Type', 'application/xml')
+      res.send(sm.toString())
+    })
+  })
+
+  app.get(['/app'], function(req, res) {
+    res.redirect(301, '/apps');
+  })
+
+  app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
+    res.sendFile('index.html', {root: __dirname + config.server.static});
+  })
+}
 
 app.use(function(req, res, next) {
   if (req.accepts('html')) {

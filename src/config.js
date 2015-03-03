@@ -7,6 +7,16 @@ var _ = require('lodash')
 
 var config = {
   data_dir: '/tmp',
+  capabilities: ['spider', 'app', 'api'],
+  use_spider: function() {
+    return (config.capabilities.indexOf('spider') > -1)
+  },
+  use_app: function() {
+    return (config.capabilities.indexOf('app') > -1)
+  },
+  use_api: function() {
+    return (config.capabilities.indexOf('api') > -1)
+  },
   server: {
     ip: '0.0.0.0',
     port: 8080,
@@ -57,6 +67,14 @@ else if (process.env.NODEJS_PORT) {
 
 if (process.env.NODEJS_STATIC) {
   config.server.static = process.env.NODEJS_STATIC
+}
+
+if (process.env.NODEJS_NO_SPIDER == 1) {
+  config.capabilities.splice(config.capabilities.indexOf('spider'), 1)
+}
+
+if (process.env.NODEJS_SPIDER_ONLY) {
+  config.capabilities = ['spider']
 }
 
 if (process.env.OPENSHIFT_MONGODB_DB_URL) {
