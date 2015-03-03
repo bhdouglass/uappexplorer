@@ -4,7 +4,7 @@
   "description": "Unofficial Ubuntu Touch Appstore",
   "main": "src/index.js",
   "scripts": {
-    "start": "supervisor -w src -i src/static src/index.js",
+    "start": "supervisor -w src -i src/static src/index.js"
   },
   "repository": {
     "type": "git",
