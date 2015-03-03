@@ -12,6 +12,7 @@ var fs = require('fs')
 var mime = require('mime')
 var moment = require('moment')
 var sitemap = require('sitemap')
+var cluster = require('cluster')
 
 var app = express()
 
@@ -51,6 +52,12 @@ function error(res, message, code) {
 }
 
 if (config.use_api()) {
+  app.get('/api/health', function(req, res) {
+    success(res, {
+      id: cluster.worker.id
+    })
+  })
+
   app.get('/api/icon/:name', function(req, res) {
     var name = req.params.name;
     if (name.indexOf('.png') == (name.length - 4)) {
