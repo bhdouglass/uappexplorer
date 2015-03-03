@@ -4,7 +4,8 @@
   "description": "Unofficial Ubuntu Touch Appstore",
   "main": "src/index.js",
   "scripts": {
-    "start": "supervisor -w src -i src/static src/index.js"
+    "start": "supervisor -w src -i src/static src/index.js",
+    "postinstall": "cd $OPENSHIFT_REPO_DIR; ./node_modules/grunt-cli/bin/grunt build"
   },
   "repository": {
     "type": "git",

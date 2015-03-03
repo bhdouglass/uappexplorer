@@ -1,2 +1,0 @@
-cd $OPENSHIFT_REPO_DIR
-./node_modules/grunt-cli/bin/grunt build
