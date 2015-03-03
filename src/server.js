@@ -348,10 +348,7 @@ app.use(function(req, res, next) {
 })
 
 function run() {
-  var server = app.listen(config.server.port, config.server.ip, function() {
-    var host = server.address().address
-    var port = server.address().port
-  })
+  var server = app.listen(config.server.port, config.server.ip)
 }
 
 exports.run = run

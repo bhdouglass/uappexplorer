@@ -7,6 +7,10 @@ var os = require('os')
 if (cluster.isMaster) {
   if (config.use_spider()) {
     spider.setupSchedule()
+
+    if (!config.use_app() && !config.use_api()) {
+      spider.server()
+    }
   }
 
   if (config.use_app() || config.use_api()) {

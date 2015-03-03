@@ -7,6 +7,7 @@ var _ = require('lodash')
 var moment = require('moment')
 var async = require('async')
 var schedule = require('node-schedule')
+var express = require('express')
 
 var propertyMap = {
   architecture:   'architecture',
@@ -290,9 +291,26 @@ function setupSchedule() {
   })
 }
 
+function server() {
+  var app = express()
+
+  app.get('/', function(req, res) {
+    res.send({
+      success: true,
+      data: {
+        alive: true
+      },
+      message: null
+    })
+  })
+
+  var server = app.listen(config.server.port, config.server.ip)
+}
+
 exports.parsePackage = parsePackage
 exports.parsePackages = parsePackages
 exports.parsePackageUpdates = parsePackageUpdates
 exports.parseReviews = parseReviews
 exports.parseDepartments = parseDepartments
 exports.setupSchedule = setupSchedule
+exports.server = server
