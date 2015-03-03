@@ -73,7 +73,7 @@ if (process.env.NODEJS_NO_SPIDER == 1) {
   config.capabilities.splice(config.capabilities.indexOf('spider'), 1)
 }
 
-if (process.env.NODEJS_SPIDER_ONLY) {
+if (process.env.NODEJS_SPIDER_ONLY == 1) {
   config.capabilities = ['spider']
 }
 

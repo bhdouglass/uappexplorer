@@ -93,6 +93,12 @@ by the following env variables.
 * ALLOWED_DOMAINS
     * The domains the local prerender server allows
     * Default: `appstore.bhdouglass.com,local.appstore.bhdouglass.com,127.0.0.1,localhost`
+* NODEJS_NO_SPIDER
+    * Set to 1 to disable the spider
+    * Default: 0
+* NODEJS_SPIDER_ONLY
+    * Set to 1 to disable the api/app server
+    * Default: 0
 
 ## Libraries ##
 
