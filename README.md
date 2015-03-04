@@ -99,6 +99,15 @@ by the following env variables.
 * NODEJS_SPIDER_ONLY
     * Set to 1 to disable the api/app server
     * Default: 0
+* CLOUDINARY_NAME
+    * Name of the cloudinary cloud
+    * Default: empty
+* CLOUDINARY_KEY
+    * Cloudinary api key
+    * Default: empty
+* CLOUDINARY_SECRET
+    * Cloudinary api secret
+    * Default: empty
 
 ## Libraries ##
 

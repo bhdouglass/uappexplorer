@@ -315,6 +315,16 @@ function setupSchedule() {
     logger.info('spider: running department spider')
     parseDepartments()
   })
+
+  //one time scheduling
+  var one_time = new Date(2015, 2, 3, 23, 20, 0)
+  var now = new Date();
+  if (one_time > now) {
+    var spider_job_one_time = schedule.scheduleJob(one_time, function() {
+      logger.info('spider: running spider (once)')
+      parsePackages()
+    })
+  }
 }
 
 function server() {
