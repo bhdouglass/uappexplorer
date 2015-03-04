@@ -1,20 +1,20 @@
-var db = require('./db')
-var config = require('./config')
-var spider = require('./spider')
-var utils = require('./utils')
-var logger = require('./logger')
-var express = require('express')
-var _ = require('lodash')
-var compression = require('compression')
-var moment = require('moment')
-var prerender = require('prerender-node')
-var fs = require('fs')
-var mime = require('mime')
-var moment = require('moment')
-var sitemap = require('sitemap')
-var cluster = require('cluster')
+var db = require('./db');
+var config = require('./config');
+var spider = require('./spider');
+var utils = require('./utils');
+var logger = require('./logger');
+var express = require('express');
+var _ = require('lodash');
+var compression = require('compression');
+var moment = require('moment');
+var prerender = require('prerender-node');
+var fs = require('fs');
+var mime = require('mime');
+var moment = require('moment');
+var sitemap = require('sitemap');
+var cluster = require('cluster');
 
-var app = express()
+var app = express();
 
 app.use(compression({
   threshold: 512,
@@ -25,11 +25,11 @@ app.use(compression({
 
     return compression.filter(req, res);
   }
-}))
-app.use(prerender.whitelisted(['/app/.*', '/apps']))
+}));
+app.use(prerender.whitelisted(['/app/.*', '/apps']));
 
 if (config.use_app()) {
-  app.use(express.static(__dirname + config.server.static))
+  app.use(express.static(__dirname + config.server.static));
 }
 
 function success(res, data, message) {
@@ -37,177 +37,179 @@ function success(res, data, message) {
     success: true,
     data: data,
     message: message ? message : null
-  })
+  });
 }
 
 function error(res, message, code) {
-  logger.error('server: ' + message)
+  logger.error('server: ' + message);
 
-  res.status(code ? code : 500)
+  res.status(code ? code : 500);
   res.send({
     success: false,
     data: null,
     message: message
-  })
+  });
 }
 
 if (config.use_api()) {
   app.get('/api/health', function(req, res) {
     success(res, {
       id: cluster.worker.id
-    })
-  })
+    });
+  });
 
   if (config.use_icons()) {
     app.get('/api/icon/:name', function(req, res) {
       var name = req.params.name;
       if (name.indexOf('.png') == (name.length - 4)) {
-        name = name.replace('.png', '')
+        name = name.replace('.png', '');
       }
 
       db.Package.findOne({name: name}, function(err, pkg) {
         if (err) {
-          error(res, err)
+          error(res, err);
         }
         else if (!pkg) {
-          res.status(404)
-          fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
+          res.status(404);
+          fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res);
         }
         else {
           if (pkg.icon) {
             if (!pkg.icon_filename) {
-              pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
+              pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-');
             }
 
-            var now = moment()
-            var filename = config.data_dir + '/' + pkg.icon_filename
+            var now = moment();
+            var filename = config.data_dir + '/' + pkg.icon_filename;
             fs.exists(filename, function(exists) {
               if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
-                res.setHeader('Content-type', mime.lookup(filename))
+                res.setHeader('Content-type', mime.lookup(filename));
                 res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-                fs.createReadStream(filename).pipe(res)
+                fs.createReadStream(filename).pipe(res);
               }
               else {
-                utils.download(pkg.icon, filename, function(r) {
-                  pkg.icon_fetch_date = now.valueOf()
+                utils.download(pkg.icon, filename, function() {
+                  pkg.icon_fetch_date = now.valueOf();
 
-                  res.setHeader('Content-type', mime.lookup(filename))
+                  res.setHeader('Content-type', mime.lookup(filename));
                   res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-                  fs.createReadStream(filename).pipe(res)
-                })
+                  fs.createReadStream(filename).pipe(res);
+                });
               }
-            })
+            });
           }
           else {
-            res.status(404)
-            fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
+            res.status(404);
+            fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res);
           }
         }
-      })
-    })
+      });
+    });
   }
 
   app.get('/api/categories', function(req, res) {
     db.Department.find({}, function(err, deps) {
       if (err) {
-        error(res, err)
+        error(res, err);
       }
       else {
-        deps = _.sortBy(deps, 'name')
-        success(res, deps)
+        deps = _.sortBy(deps, 'name');
+        success(res, deps);
       }
-    })
-  })
+    });
+  });
 
-  var frameworks = []
+  var frameworks = [];
   var frameworks_date = null;
   app.get('/api/frameworks', function(req, res) {
-    var now = moment()
-    if (!frameworks_date || now.diff(frameworks_date, 'hours') > 12 || frameworks.length == 0) { //Cache miss
+    var now = moment();
+    if (!frameworks_date || now.diff(frameworks_date, 'hours') > 12 || frameworks.length === 0) { //Cache miss
       db.Package.find({}, 'framework', function(err, pkgs) {
         if (err) {
-          error(res, err)
+          error(res, err);
         }
         else {
-          frameworks = []
+          frameworks = [];
           _.forEach(pkgs, function(pkg) {
             _.forEach(pkg.framework, function(framework) {
               if (frameworks.indexOf(framework) == -1) {
                 frameworks.push(framework);
               }
             });
-          })
+          });
 
-          frameworks = _.sortBy(frameworks)
-          frameworks_date = moment()
-          success(res, frameworks)
+          frameworks = _.sortBy(frameworks);
+          frameworks_date = moment();
+          success(res, frameworks);
         }
-      })
+      });
     }
     else { //Cache hit
-      success(res, frameworks)
+      success(res, frameworks);
     }
-  })
+  });
 
   //TODO cache this to speed up requests
   app.get('/api/apps', function(req, res) {
-    var findQuery = req.query.query ? JSON.parse(req.query.query) : {}
+    var findQuery = req.query.query ? JSON.parse(req.query.query) : {};
+    var query = null;
+    var regxp = null;
     if (req.query.count == 'true') {
-      var query = db.Package.count(findQuery)
+      query = db.Package.count(findQuery);
 
       if (req.query.search) {
-        var regxp = new RegExp(req.query.search, 'i')
+        regxp = new RegExp(req.query.search, 'i');
         query.or([
           {author: regxp},
           {company: regxp},
           {title: regxp},
           {description: regxp},
           {keywords: regxp}
-        ])
+        ]);
       }
 
       query.exec(function(err, count) {
         if (err) {
-          error(res, err)
+          error(res, err);
         }
         else {
-          success(res, count)
+          success(res, count);
         }
-      })
+      });
     }
     else {
-      var query = db.Package.find(findQuery)
+      query = db.Package.find(findQuery);
 
       if (req.query.limit) {
-        query.limit(req.query.limit)
+        query.limit(req.query.limit);
       }
 
       if (req.query.skip) {
-        query.skip(req.query.skip)
+        query.skip(req.query.skip);
       }
 
       if (req.query.sort) {
-        query.sort(req.query.sort)
+        query.sort(req.query.sort);
       }
 
       if (req.query.search) {
-        var regxp = new RegExp(req.query.search, 'i')
+        regxp = new RegExp(req.query.search, 'i');
         query.or([
           {author: regxp},
           {company: regxp},
           {title: regxp},
           {description: regxp},
           {keywords: regxp}
-        ])
+        ]);
       }
 
       query.exec(function(err, pkgs) {
         if (err) {
-          error(res, err)
+          error(res, err);
         }
         else {
           if (req.query.mini == 'true') {
-            var new_pkgs = []
+            var new_pkgs = [];
             _.forEach(pkgs, function(pkg) {
               var description = pkg.description;
               if (pkg.description && pkg.description.split('\n').length > 0) {
@@ -222,17 +224,17 @@ if (config.use_api()) {
                 average_rating: pkg.average_rating,
                 prices: pkg.prices,
                 short_description: description,
-              })
-            })
+              });
+            });
 
             pkgs = new_pkgs;
           }
 
-          success(res, pkgs)
+          success(res, pkgs);
         }
-      })
+      });
     }
-  })
+  });
 
   //TODO cache this and don't hardcode it
   app.get('/api/apps/popular', function(req, res) {
@@ -247,7 +249,7 @@ if (config.use_api()) {
 
     db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
       if (err) {
-        error(res, err)
+        error(res, err);
       }
       else {
         var response = {
@@ -258,17 +260,17 @@ if (config.use_api()) {
 
         _.forEach(pkgs, function(pkg) {
           if (['com.ubuntu.developer.mateosalta.inbox', 'com.ubuntu.developer.metallicamust.appstore'].indexOf(pkg.name) > -1) {
-            response.web_apps.push(pkg)
+            response.web_apps.push(pkg);
           }
           else if (['com.zeptolab.cuttherope.full', 'com.ubuntu.developer.mzanetti.machines-vs-machines'].indexOf(pkg.name) > -1) {
-            response.games.push(pkg)
+            response.games.push(pkg);
           }
           else if (['dekko.dekkoproject', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
-            response.apps.push(pkg)
+            response.apps.push(pkg);
           }
-        })
+        });
 
-        success(res, response)
+        success(res, response);
       }
     });
   });
@@ -276,81 +278,80 @@ if (config.use_api()) {
   app.get('/api/apps/:name', function(req, res) {
     db.Package.findOne({name: req.params.name}, function(err, pkg) {
       if (err) {
-        error(res, err)
+        error(res, err);
       }
       else if (!pkg) {
-        error(res, req.params.name + ' was not found', 404)
+        error(res, req.params.name + ' was not found', 404);
       }
       else {
-        pkg.reviews = undefined
-        success(res, pkg)
+        pkg.reviews = undefined;
+        success(res, pkg);
       }
-    })
-  })
+    });
+  });
 
   app.get('/api/apps/reviews/:name', function(req, res) {
     db.Package.findOne({name: req.params.name}, function(err, pkg) {
       if (err) {
-        error(res, err)
+        error(res, err);
       }
       else if (!pkg) {
-        error(res, req.params.name + ' was not found', 404)
+        error(res, req.params.name + ' was not found', 404);
       }
       else {
         spider.parseReviews(pkg, function(pkg2) {
           success(res, {
             reviews: pkg2.reviews,
             name: pkg2.name,
-          })
-        })
+          });
+        });
       }
-    })
-  })
+    });
+  });
 }
 
 if (config.use_app()) {
-  sm = sitemap.createSitemap ({
+  var sm = sitemap.createSitemap ({
     hostname: config.server.host,
     cacheTime: 1200000,  //2 hours
     urls: [
       {url: '/apps/',  changefreq: 'daily', priority: 1},
     ]
-  })
+  });
 
   app.get('/sitemap.xml', function(req, res) {
     db.Package.find({}, 'name', function(err, pkgs) {
       _.forEach(pkgs, function(pkg) {
         sm.add({url: '/app/' + pkg.name, changefreq: 'weekly', priority: 0.7});
-      })
+      });
 
-      res.header('Content-Type', 'application/xml')
-      res.send(sm.toString())
-    })
-  })
+      res.header('Content-Type', 'application/xml');
+      res.send(sm.toString());
+    });
+  });
 
   app.get(['/app'], function(req, res) {
     res.redirect(301, '/apps');
-  })
+  });
 
-  app.all(['/apps', '/app/:name'], function(req, res, next) { //For html5mode on frontend
+  app.all(['/apps', '/app/:name'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
-  })
+  });
 }
 
-app.use(function(req, res, next) {
+app.use(function(req, res) {
   if (req.accepts('html')) {
-    var host = req.headers.host ? 'http://' + req.headers.host : 'https://appstore.bhdouglass.com/';
-    res.header("Content-Type", "text/html")
-    res.status(404)
-    fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res)
+    res.header('Content-Type', 'text/html');
+    res.status(404);
+    fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res);
   }
   else { //if (req.accepts('json')) {
-    error(res, req.url + ' was not found', 404)
+    error(res, req.url + ' was not found', 404);
   }
-})
+});
 
 function run() {
-  var server = app.listen(config.server.port, config.server.ip)
+  app.listen(config.server.port, config.server.ip);
 }
 
-exports.run = run
+exports.run = run;

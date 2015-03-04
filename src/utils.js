@@ -1,71 +1,71 @@
-var fs = require('fs')
-var request = require('request')
-var _ = require('lodash')
+var fs = require('fs');
+var request = require('request');
+var _ = require('lodash');
 
 function niceBytes(bytes) {
-  var unit = 'B'
+  var unit = 'B';
 
   if (!bytes) {
-    bytes = 0
+    bytes = 0;
   }
   else if (bytes > 1024) {
-    bytes /= 1024
-    unit = 'KB'
+    bytes /= 1024;
+    unit = 'KB';
 
     if (bytes > 1024) {
-      bytes /= 1024
-      unit = 'MB'
+      bytes /= 1024;
+      unit = 'MB';
 
       if (bytes > 1024) {
-        bytes /= 1024
-        unit = 'GB'
+        bytes /= 1024;
+        unit = 'GB';
 
         if (bytes > 1024) {
-          bytes /= 1024
-          unit = 'TB'
+          bytes /= 1024;
+          unit = 'TB';
         }
       }
     }
   }
 
-  return bytes.toFixed(1) + ' ' + unit
+  return bytes.toFixed(1) + ' ' + unit;
 }
 
 function fixUrl(url) {
   if (!url) {
-    url = ''
+    url = '';
   }
 
   if (_.isArray(url)) {
     var newUrl = [];
     _.forEach(url, function(value) {
-      newUrl.push(value.replace(/\\/g, ''))
-    })
+      newUrl.push(value.replace(/\\/g, ''));
+    });
 
-    url = newUrl
+    url = newUrl;
   }
   else if (_.isObject(url)) {
-    var newUrl = {};
+    var urlObj = {};
     _.forEach(url, function(value, key) {
-      newUrl[key] = value.replace(/\\/g, '')
-    })
+      urlObj[key] = value.replace(/\\/g, '');
+    });
 
-    url = newUrl
+    url = urlObj;
   }
   else {
-    url = url.replace(/\\/g, '')
+    url = url.replace(/\\/g, '');
   }
 
-  return url
+  return url;
 }
 
 function download(url, filename, callback) {
-  var r = request(url)
+  var r = request(url);
   r.pipe(fs.createWriteStream(filename)).on('close', function() {
-    callback(r)
-  })
+    callback(r);
+  });
 }
 
-exports.download = download
-exports.niceBytes = niceBytes
-exports.fixUrl = fixUrl
+exports.download = download;
+exports.niceBytes = niceBytes;
+exports.fixUrl = fixUrl;

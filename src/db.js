@@ -1,13 +1,13 @@
-var config = require('./config')
-var logger = require('./logger')
-var mongoose = require('mongoose')
+var config = require('./config');
+var logger = require('./logger');
+var mongoose = require('mongoose');
 
-mongoose.connect(config.mongo.uri + config.mongo.database, function(err, res) {
+mongoose.connect(config.mongo.uri + config.mongo.database, function(err) {
   if (err) {
-    logger.error('database: ' + err)
-    process.exit(1)
+    logger.error('database: ' + err);
+    process.exit(1);
   }
-})
+});
 
 var packageSchema = mongoose.Schema({
   architecture: [String],
@@ -45,17 +45,17 @@ var packageSchema = mongoose.Schema({
   videos: [String],
   website: String,
   //TODO handle translations
-})
+});
 
-var Package = mongoose.model('Package', packageSchema)
+var Package = mongoose.model('Package', packageSchema);
 
 var departmentSchema = mongoose.Schema({
   name: String,
   internal_name: {type: String, index: true},
   url: String,
-})
+});
 
-var Department = mongoose.model('Department', departmentSchema)
+var Department = mongoose.model('Department', departmentSchema);
 
-exports.Package = Package
-exports.Department = Department
+exports.Package = Package;
+exports.Department = Department;

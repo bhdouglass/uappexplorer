@@ -15,10 +15,44 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      options: {
-        jshintrc: '.jshintrc'
+      front: {
+        options: {
+          node: true,
+          browser: true,
+          esnext: true,
+          curly: true,
+          immed: true,
+          indent: 2,
+          latedef: true,
+          newcap: true,
+          noarg: true,
+          quotmark: 'single',
+          undef: true,
+          unused: true,
+          strict: false,
+          globalstrict: true,
+          trailing: true,
+          smarttabs: true,
+          devel: true,
+          bitwise: false,
+          globals: {
+            angular: false,
+            '_': false,
+            '$': false
+          }
+        },
+        files: {
+          src: ['src/static/app/*.js', 'src/static/app/*/*.js']
+        }
       },
-      files: ['src/static/app/*.js', 'src/static/app/*/*.js'],
+      back: {
+        options: {
+          jshintrc: '.jshintrc'
+        },
+        files: {
+          src: ['src/*.js', 'Gruntfile.js']
+        }
+      }
     },
 
     copy: {
@@ -103,20 +137,20 @@ module.exports = function(grunt) {
       files: ['<%= jshint.files %>'],
       tasks: ['jshint']
     }
-  })
+  });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify')
-  grunt.loadNpmTasks('grunt-contrib-jshint')
-  grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.loadNpmTasks('grunt-contrib-copy')
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-htmlmin')
-  grunt.loadNpmTasks('grunt-contrib-cssmin')
-  grunt.loadNpmTasks('grunt-targethtml')
-  grunt.loadNpmTasks('grunt-ng-annotate')
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-targethtml');
+  grunt.loadNpmTasks('grunt-ng-annotate');
 
-  grunt.registerTask('test', ['jshint'])
+  grunt.registerTask('test', ['jshint:front', 'jshint:back']);
 
-  grunt.registerTask('build', ['jshint', 'clean', 'ngAnnotate', 'uglify', 'copy', 'targethtml', 'htmlmin', 'cssmin'])
+  grunt.registerTask('build', ['jshint:front', 'jshint:back', 'clean', 'ngAnnotate', 'uglify', 'copy', 'targethtml', 'htmlmin', 'cssmin']);
 
 };

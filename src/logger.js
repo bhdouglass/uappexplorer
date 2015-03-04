@@ -1,7 +1,6 @@
-var config = require('./config')
-var winston = require('winston')
-var papertrail = require('winston-papertrail')
-var util = require('util')
+var config = require('./config');
+var winston = require('winston');
+var papertrail = require('winston-papertrail');
 
 var logger = new (winston.Logger)({
   transports: [
@@ -9,16 +8,16 @@ var logger = new (winston.Logger)({
   ]
 });
 
-logger.cli()
+logger.cli();
 
 if (config.papertrail.port) {
-  logger.add(winston.transports.Papertrail, {
+  logger.add(papertrail.Papertrail, {
     host: config.papertrail.host,
-    port: config.papertrail.port
-  })
+    port: config.papertrail.port,
+  });
 }
 else {
-  logger.debug('No papertrail token')
+  logger.debug('No papertrail token');
 }
 
-module.exports = logger
+module.exports = logger;

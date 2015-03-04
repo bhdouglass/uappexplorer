@@ -2,7 +2,6 @@
   "node": true,
   "browser": true,
   "esnext": true,
-  "bitwise": true,
   "curly": true,
   "immed": true,
   "indent": 2,
@@ -17,10 +16,5 @@
   "trailing": true,
   "smarttabs": true,
   "devel": true,
-  "bitwise": false,
-  "globals": {
-    "angular": false,
-    "_": false,
-    "$": false
-  }
+  "bitwise": false
 }
