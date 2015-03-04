@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location) {
+angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, utils) {
   var title = 'Ubuntu Touch Apps';
   $scope.title = title;
   $scope.og = {};
@@ -36,7 +36,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
       $scope.og = {
         title: $rootScope.app.title,
         description: description,
-        image: $scope.url + 'api/icon/' + $rootScope.app.name + '.png',
+        image: utils.appIcon($rootScope.app),
         url: $scope.url + 'app/' + $rootScope.app.name,
       };
     }

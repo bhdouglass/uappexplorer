@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, api) {
+angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, api, utils) {
   $rootScope.app = null;
   $rootScope.back = {};
   $scope.popular = {};
   $scope.app_count = null;
   $scope.game_count = null;
+  $scope.appIcon = utils.appIcon;
 
   function refresh() {
     api.popular().then(function(data) {

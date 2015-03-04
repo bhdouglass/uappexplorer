@@ -7,7 +7,7 @@ var _ = require('lodash')
 
 var config = {
   data_dir: '/tmp',
-  capabilities: ['spider', 'app', 'api'],
+  capabilities: ['spider', 'app', 'api', 'icons'],
   use_spider: function() {
     return (config.capabilities.indexOf('spider') > -1)
   },
@@ -16,6 +16,12 @@ var config = {
   },
   use_api: function() {
     return (config.capabilities.indexOf('api') > -1)
+  },
+  use_icons: function() {
+    return (config.capabilities.indexOf('icons') > -1)
+  },
+  use_cloudinary: function() {
+    return !!config.cloudinary.api_key
   },
   server: {
     ip: '0.0.0.0',
@@ -36,6 +42,11 @@ var config = {
   papertrail: {
     host: '',
     port: null
+  },
+  cloudinary: {
+    cloud_name: '',
+    api_key: '',
+    api_secret: '',
   }
 }
 
@@ -74,7 +85,12 @@ if (process.env.NODEJS_NO_SPIDER == 1) {
 }
 
 if (process.env.NODEJS_SPIDER_ONLY == 1) {
-  config.capabilities = ['spider']
+  config.capabilities.splice(config.capabilities.indexOf('api'), 1)
+  config.capabilities.splice(config.capabilities.indexOf('app'), 1)
+}
+
+if (process.env.NODEJS_NO_ICONS == 1) {
+  config.capabilities.splice(config.capabilities.indexOf('icons'), 1)
 }
 
 if (process.env.OPENSHIFT_MONGODB_DB_URL) {
@@ -97,6 +113,18 @@ if (process.env.PAPERTRAIL_HOST) {
 
 if (process.env.PAPERTRAIL_PORT) {
   config.papertrail.port = process.env.PAPERTRAIL_PORT
+}
+
+if (process.env.CLOUDINARY_NAME) {
+  config.cloudinary.cloud_name = process.env.CLOUDINARY_NAME
+}
+
+if (process.env.CLOUDINARY_KEY) {
+  config.cloudinary.api_key = process.env.CLOUDINARY_KEY
+}
+
+if (process.env.CLOUDINARY_SECRET) {
+  config.cloudinary.api_secret = process.env.CLOUDINARY_SECRET
 }
 
 module.exports = config

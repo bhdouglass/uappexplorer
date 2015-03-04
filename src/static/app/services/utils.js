@@ -1,6 +1,11 @@
 'use strict';
 
-angular.module('appstore').factory('utils', function($filter, $timeout) {
+angular.module('appstore').factory('utils', function($filter, $timeout, $location) {
+  var url = $location.protocol() + '://' + $location.host() + '/';
+  if ($location.port() != 80) {
+    url = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/';
+  }
+
   return {
     strToColor: function(str, css) { //Adapted from http://stackoverflow.com/a/16348977
       str = str ? str : '';
@@ -42,6 +47,18 @@ angular.module('appstore').factory('utils', function($filter, $timeout) {
     doneLoading: function($scope) {
       $scope.can_load = false;
       $scope.loading = false;
+    },
+
+    appIcon: function(app) {
+      var icon = '';
+      if (app) {
+        icon = url + 'api/icon/' + app.name + '.png';
+        if (app.cloudinary_url) {
+          icon = app.cloudinary_url;
+        }
+      }
+
+      return icon;
     }
   };
 });

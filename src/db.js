@@ -15,6 +15,7 @@ var packageSchema = mongoose.Schema({
   average_rating: Number,
   categories: [String],
   changelog: String,
+  cloudinary_url: String,
   company: String,
   description: String,
   download: String,

@@ -25,6 +25,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.architecture = $scope.defaultArchitecture;
   $scope.defaultFramework = 'All';
   $scope.framework = $scope.defaultFramework;
+  $scope.appIcon = utils.appIcon;
 
   $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
 

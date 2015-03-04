@@ -8,6 +8,7 @@ var moment = require('moment')
 var async = require('async')
 var schedule = require('node-schedule')
 var express = require('express')
+var cloudinary = require('cloudinary')
 
 var propertyMap = {
   architecture:   'architecture',
@@ -38,6 +39,28 @@ var propertyMap = {
   version:        'version',
   videos:         'video_urls',
   website:        'website',
+}
+
+function cloudinaryUpload(pkg, data) {
+  if (config.use_cloudinary()) {
+    if (pkg.icon != data.icon_url || !pkg.cloudinary_url) {
+      cloudinary.config(config.cloudinary)
+
+      cloudinary.uploader.upload(
+        data.icon_url,
+        function(result) {
+          pkg.cloudinary_url = result.secure_url
+          pkg.save(function(err, pkg) {
+            if (err) {
+              logger.error('error saving package: ' + err)
+            }
+          })
+        }, {
+          public_id: pkg.name,
+        }
+      )
+    }
+  }
 }
 
 function map(pkg, data) {
@@ -84,6 +107,9 @@ function parsePackage(name, callback) {
           if (!pkg) {
             pkg = new db.Package()
           }
+
+          pkg.name = name
+          cloudinaryUpload(pkg, data)
 
           pkg = map(pkg, data)
           pkg.url = utils.fixUrl(data._links.self.href)

@@ -58,52 +58,54 @@ if (config.use_api()) {
     })
   })
 
-  app.get('/api/icon/:name', function(req, res) {
-    var name = req.params.name;
-    if (name.indexOf('.png') == (name.length - 4)) {
-      name = name.replace('.png', '')
-    }
-
-    db.Package.findOne({name: name}, function(err, pkg) {
-      if (err) {
-        error(res, err)
+  if (config.use_icons()) {
+    app.get('/api/icon/:name', function(req, res) {
+      var name = req.params.name;
+      if (name.indexOf('.png') == (name.length - 4)) {
+        name = name.replace('.png', '')
       }
-      else if (!pkg) {
-        res.status(404)
-        fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
-      }
-      else {
-        if (pkg.icon) {
-          if (!pkg.icon_filename) {
-            pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
-          }
 
-          var now = moment()
-          var filename = config.data_dir + '/' + pkg.icon_filename
-          fs.exists(filename, function(exists) {
-            if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
-              res.setHeader('Content-type', mime.lookup(filename))
-              res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-              fs.createReadStream(filename).pipe(res)
-            }
-            else {
-              utils.download(pkg.icon, filename, function(r) {
-                pkg.icon_fetch_date = now.valueOf()
-
-                res.setHeader('Content-type', mime.lookup(filename))
-                res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-                fs.createReadStream(filename).pipe(res)
-              })
-            }
-          })
+      db.Package.findOne({name: name}, function(err, pkg) {
+        if (err) {
+          error(res, err)
         }
-        else {
+        else if (!pkg) {
           res.status(404)
           fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
         }
-      }
+        else {
+          if (pkg.icon) {
+            if (!pkg.icon_filename) {
+              pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-')
+            }
+
+            var now = moment()
+            var filename = config.data_dir + '/' + pkg.icon_filename
+            fs.exists(filename, function(exists) {
+              if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
+                res.setHeader('Content-type', mime.lookup(filename))
+                res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+                fs.createReadStream(filename).pipe(res)
+              }
+              else {
+                utils.download(pkg.icon, filename, function(r) {
+                  pkg.icon_fetch_date = now.valueOf()
+
+                  res.setHeader('Content-type', mime.lookup(filename))
+                  res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+                  fs.createReadStream(filename).pipe(res)
+                })
+              }
+            })
+          }
+          else {
+            res.status(404)
+            fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res)
+          }
+        }
+      })
     })
-  })
+  }
 
   app.get('/api/categories', function(req, res) {
     db.Department.find({}, function(err, deps) {
@@ -214,7 +216,7 @@ if (config.use_api()) {
 
               new_pkgs.push({
                 name: pkg.name,
-                icon_filename: pkg.icon_filename,
+                cloudinary_url: pkg.cloudinary_url,
                 title: pkg.title,
                 type: pkg.type,
                 average_rating: pkg.average_rating,
