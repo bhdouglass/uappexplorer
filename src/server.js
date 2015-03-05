@@ -88,12 +88,18 @@ if (config.use_api()) {
                 fs.createReadStream(filename).pipe(res);
               }
               else {
-                utils.download(pkg.icon, filename, function() {
-                  pkg.icon_fetch_date = now.valueOf();
+                utils.download(pkg.icon, filename, function(err) {
+                  if (err) {
+                    res.status(500);
+                    fs.createReadStream(__dirname + config.server.static + '/img/404.png').pipe(res);
+                  }
+                  else {
+                    pkg.icon_fetch_date = now.valueOf();
 
-                  res.setHeader('Content-type', mime.lookup(filename));
-                  res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
-                  fs.createReadStream(filename).pipe(res);
+                    res.setHeader('Content-type', mime.lookup(filename));
+                    res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+                    fs.createReadStream(filename).pipe(res);
+                  }
                 });
               }
             });

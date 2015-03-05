@@ -1,3 +1,4 @@
+var logger = require('./logger');
 var fs = require('fs');
 var request = require('request');
 var _ = require('lodash');
@@ -61,9 +62,12 @@ function fixUrl(url) {
 
 function download(url, filename, callback) {
   var r = request(url);
-  r.pipe(fs.createWriteStream(filename)).on('close', function() {
-    callback(r);
-  });
+  r.on('error', function(err) {
+    logger.error(err);
+    callback(err);
+  }).on('close', function() {
+    callback(null, r);
+  }).pipe(fs.createWriteStream(filename));
 }
 
 exports.download = download;

@@ -49,6 +49,7 @@ function cloudinaryUpload(pkg, data) {
       cloudinary.uploader.upload(
         data.icon_url,
         function(result) {
+          logger.debug('got cloudinary url: ' + result.secure_url);
           pkg.cloudinary_url = result.secure_url;
           pkg.save(function(err) {
             if (err) {
@@ -58,6 +59,9 @@ function cloudinaryUpload(pkg, data) {
         }, {
           public_id: pkg.name,
       });
+    }
+    else {
+      logger.debug('not updating cloudinary url');
     }
   }
 }
