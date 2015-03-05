@@ -22,7 +22,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       }
     }).finally(function() {
       $scope.app.loading_reviews = false;
-    });;
+    });
   }, function(err) {
     console.error(err);
     if (err.status == 404) {
