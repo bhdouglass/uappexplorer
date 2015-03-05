@@ -89,17 +89,25 @@ angular.module('appstore').factory('api', function($q, $http) {
       var deferred = $q.defer();
       $http.get('/api/apps/' + name).then(function(res) {
         var app = res.data.data;
-        app.loading_reviews = true;
 
-        $http.get('/api/apps/reviews/' + name).then(function(res) {
-          if (app.name == res.data.data.name) {
-            app.reviews = res.data.data.reviews;
-          }
-        }).finally(function() {
-          app.loading_reviews = false;
-        });
 
         deferred.resolve(app);
+      }, function(err) {
+        deferred.reject(err);
+      });
+
+      return deferred.promise;
+    },
+
+    reviews: function(name, limit, skip) {
+      var deferred = $q.defer();
+      $http.get('/api/apps/reviews/' + name, {
+        params: {
+          limit: limit,
+          skip: skip
+        }
+      }).then(function(res) {
+        deferred.resolve(res.data.data);
       }, function(err) {
         deferred.reject(err);
       });

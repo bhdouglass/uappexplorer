@@ -282,7 +282,7 @@ if (config.use_api()) {
   });
 
   app.get('/api/apps/:name', function(req, res) {
-    db.Package.findOne({name: req.params.name}, function(err, pkg) {
+    db.Package.findOne({name: req.params.name}).select('-reviews').exec(function(err, pkg) {
       if (err) {
         error(res, err);
       }
@@ -297,7 +297,7 @@ if (config.use_api()) {
   });
 
   app.get('/api/apps/reviews/:name', function(req, res) {
-    db.Package.findOne({name: req.params.name}, function(err, pkg) {
+    db.Package.findOne({name: req.params.name}).select('reviews reviews_fetch_date name').exec(function(err, pkg) {
       if (err) {
         error(res, err);
       }
@@ -306,9 +306,25 @@ if (config.use_api()) {
       }
       else {
         spider.parseReviews(pkg, function(pkg2) {
+          var reviews = pkg2.reviews;
+          var limit = reviews.length;
+          var more = false;
+          if (!_.isNaN(parseInt(req.query.limit))) {
+            limit = parseInt(req.query.limit);
+          }
+
+          var skip = 0;
+          if (!_.isNaN(parseInt(req.query.skip))) {
+            skip = parseInt(req.query.skip);
+          }
+
+          more = ((skip + limit) < reviews.length);
+          reviews = reviews.slice(skip, skip + limit);
+
           success(res, {
-            reviews: pkg2.reviews,
+            reviews: reviews,
             name: pkg2.name,
+            more: more
           });
         });
       }

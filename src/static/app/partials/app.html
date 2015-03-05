@@ -195,5 +195,14 @@
         <h4>No reviews yet!</h4>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-4 col-md-offset-4 text-center" ng-show="app.more_reviews">
+        <a ng-click="loadMoreReview(app)" ng-if="!app.loading_more_reviews" class="clickable btn btn-info">Load more reviews</a>
+        <span ng-if="app.loading_more_reviews">
+          <i class="fa fa-spin fa-spinner"></i>
+          Loading more reviews...
+        </span>
+      </div>
+    </div>
   </div>
 </div>
