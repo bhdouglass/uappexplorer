@@ -50,12 +50,14 @@ function cloudinaryUpload(pkg, data) {
         data.icon_url,
         function(result) {
           logger.debug('got cloudinary url: ' + result.secure_url);
-          pkg.cloudinary_url = result.secure_url;
-          pkg.save(function(err) {
-            if (err) {
-              logger.error('error saving package: ' + err);
-            }
-          });
+          if (result && result.secure_url) {
+            pkg.cloudinary_url = result.secure_url;
+            pkg.save(function(err) {
+              if (err) {
+                logger.error('error saving package: ' + err);
+              }
+            });
+          }
         }, {
           public_id: pkg.name,
       });

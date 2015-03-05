@@ -2,7 +2,7 @@
 
 angular.module('appstore').factory('utils', function($filter, $timeout, $location) {
   var url = $location.protocol() + '://' + $location.host() + '/';
-  if ($location.port() != 80) {
+  if ($location.port() != 80 && $location.port() != 443) {
     url = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/';
   }
 
@@ -54,7 +54,7 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
       if (app) {
         icon = url + 'api/icon/' + app.name + '.png';
         if (app.cloudinary_url) {
-          icon = app.cloudinary_url;
+          icon = app.cloudinary_url.replace('image/upload/', 'image/upload/c_scale,w_92/');
         }
       }
 
