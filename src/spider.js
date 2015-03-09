@@ -308,7 +308,7 @@ function setupSchedule() {
 
   var spider_rule_updates = new schedule.RecurrenceRule();
   spider_rule_updates.dayOfWeek = new schedule.Range(0, 6, 1);
-  spider_rule_updates.hour = new schedule.Range(0, 23, 4);
+  spider_rule_updates.hour = new schedule.Range(0, 23, 2);
   spider_rule_updates.minute = 0;
 
   schedule.scheduleJob(spider_rule_updates, function() {
@@ -326,14 +326,14 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  var one_time = new Date(2015, 2, 3, 23, 40, 0);
+  /*var one_time = new Date(2015, 2, 3, 23, 40, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
       logger.info('spider: running spider (once)');
       parsePackages();
     });
-  }
+  }*/
 }
 
 function server() {
