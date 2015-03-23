@@ -53,9 +53,9 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
       var icon = '';
       if (app) {
         icon = url + 'api/icon/' + app.name + '.png';
-        if (app.cloudinary_url) {
+        /*if (app.cloudinary_url) {
           icon = app.cloudinary_url.replace('image/upload/', 'image/upload/c_scale,w_92/');
-        }
+        }*/
       }
 
       return icon;
