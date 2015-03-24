@@ -8,7 +8,7 @@ var moment = require('moment');
 var async = require('async');
 var schedule = require('node-schedule');
 var express = require('express');
-var cloudinary = require('cloudinary');
+//var cloudinary = require('cloudinary');
 
 var propertyMap = {
   architecture:   'architecture',
@@ -41,7 +41,7 @@ var propertyMap = {
   website:        'website',
 };
 
-function cloudinaryUpload(pkg, data) {
+/*function cloudinaryUpload(pkg, data) {
   if (config.use_cloudinary()) {
     if (pkg.icon != data.icon_url || !pkg.cloudinary_url) {
       cloudinary.config(config.cloudinary);
@@ -66,7 +66,7 @@ function cloudinaryUpload(pkg, data) {
       logger.debug('not updating cloudinary url');
     }
   }
-}
+}*/
 
 function map(pkg, data) {
   _.forEach(propertyMap, function(dataProperty, pkgProperty) {
