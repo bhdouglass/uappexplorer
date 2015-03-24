@@ -333,7 +333,7 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  var one_time = new Date(2015, 2, 24, 2, 15, 0);
+  var one_time = new Date(2015, 2, 24, 2, 30, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
