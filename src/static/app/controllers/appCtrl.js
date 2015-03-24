@@ -8,6 +8,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   $scope.strToColor = utils.strToColor;
   $scope.isFree = utils.isFree;
   $scope.appIcon = utils.appIcon;
+  $scope.types = utils.types;
 
   utils.loading($scope);
   api.app($scope.name).then(function(data) {

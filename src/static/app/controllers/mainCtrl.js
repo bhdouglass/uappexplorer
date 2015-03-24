@@ -6,6 +6,8 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
   $scope.popular = {};
   $scope.app_count = null;
   $scope.game_count = null;
+  $scope.webapp_count = null;
+  $scope.scope_count = null;
   $scope.appIcon = utils.appIcon;
 
   function refresh() {
@@ -16,8 +18,16 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
       $rootScope.setError('Could not fetch popular app list, click to retry', refresh);
     });
 
-    api.count().then(function(data) {
+    api.count({type: 'application'}).then(function(data) {
       $scope.app_count = data;
+    });
+
+    api.count({type: 'webapp'}).then(function(data) {
+      $scope.webapp_count = data;
+    });
+
+    api.count({type: 'scope'}).then(function(data) {
+      $scope.scope_count = data;
     });
 
     api.count({categories: 'games'}).then(function(data) {

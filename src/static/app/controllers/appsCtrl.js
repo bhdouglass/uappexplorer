@@ -25,57 +25,59 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.architecture = $scope.defaultArchitecture;
   $scope.defaultFramework = 'All';
   $scope.framework = $scope.defaultFramework;
+  $scope.type = 'all';
   $scope.appIcon = utils.appIcon;
+  $scope.types = utils.types;
 
   $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
-
-  $scope.types = {
-    application: 'App',
-    scope: 'Scope'
-  };
 
   $scope.sorts = [
     {
       label: 'Title A-Z',
       value: 'title'
-    },
-    {
+    }, {
       label: 'Title Z-A',
       value: '-title'
-    },
-    {
+    }, {
       label: 'Newest First',
       value: '-published_date'
-    },
-    {
+    }, {
       label: 'Oldest First',
       value: 'published_date'
-    },
-    {
+    }, {
       label: 'Highest Rated First',
       value: '-average_rating'
-    },
-    {
+    }, {
       label: 'Lowest Rated First',
       value: 'average_rating'
-    },
-    {
-      label: 'Apps First',
-      value: 'type'
-    },
-    {
-      label: 'Scopes First',
-      value: '-type'
-    },
-    {
+    }, {
       label: 'Free First',
       value: 'prices.USD'
-    },
-    {
+    }, {
       label: 'Most Expensive First (USD)',
       value: '-prices.USD'
     },
   ];
+
+  $scope.typeList = [
+    {
+      label: 'Apps',
+      value: 'application'
+    }, {
+      label: 'Web Apps',
+      value: 'webapp'
+    }, {
+      label: 'Scopes',
+      value: 'scope'
+    }
+  ];
+
+  $scope.countTypes = {
+    application: 'apps',
+    scope: 'scopes',
+    webapp: 'web apps',
+    all: 'apps & scopes'
+  };
 
   $scope.paging = {
     query: {},
@@ -207,6 +209,15 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }
   };
 
+  $scope.changeType = function(type) {
+    if (type == 'all') {
+      $location.search('type', undefined);
+    }
+    else {
+      $location.search('type', type);
+    }
+  };
+
   function locationChange() {
     //start page
     var page = $location.search().page;
@@ -312,6 +323,23 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       $scope.paging.query.framework = {'_$in': frameworks};
     }
     //end framework
+
+    //start type
+    var type = $location.search().type;
+    if (!type) {
+      $scope.type = 'all';
+    }
+    else {
+      $scope.type = type;
+    }
+
+    if ($scope.type == 'all' || !$scope.type) {
+      $scope.paging.query.type = undefined;
+    }
+    else {
+      $scope.paging.query.type = $scope.type;
+    }
+    //end type
   }
   locationChange();
 

@@ -90,6 +90,13 @@ function map(pkg, data) {
     }
   });
 
+  if (pkg.type == 'application') {
+    var desc = pkg.description.toLowerCase();
+    if (desc.indexOf('webapp') > -1 || desc.indexOf('web app') > -1) {
+      pkg.type = 'webapp';
+    }
+  }
+
   return pkg;
 }
 
@@ -114,7 +121,7 @@ function parsePackage(name, callback) {
           }
 
           pkg.name = name;
-          cloudinaryUpload(pkg, data);
+          //cloudinaryUpload(pkg, data);
 
           pkg = map(pkg, data);
           pkg.url = utils.fixUrl(data._links.self.href);
@@ -326,14 +333,14 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  /*var one_time = new Date(2015, 2, 3, 23, 40, 0);
+  var one_time = new Date(2015, 2, 24, 2, 15, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
       logger.info('spider: running spider (once)');
       parsePackages();
     });
-  }*/
+  }
 }
 
 function server() {

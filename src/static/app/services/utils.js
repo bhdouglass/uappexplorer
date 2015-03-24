@@ -59,6 +59,12 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
       }
 
       return icon;
+    },
+
+    types: {
+      application: 'App',
+      scope: 'Scope',
+      webapp: 'Web App',
     }
   };
 });

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6">
         <h1 ng-bind="category.name"></h1>
-        <span>{{app_count}} apps</span>
+        <span>{{app_count}} {{countTypes[type]}}</span>
         <div class="input-group search-box">
           <input type="text" class="form-control" ng-model="search" id="search" />
           <span class="input-group-addon">
@@ -24,6 +24,21 @@
                   <a ng-click="changeCategory(c)">
                     <i class="fa fa-fw" ng-class="{'fa-check': category.internal_name == c.internal_name}"></i>
                     <span ng-class="{'bold': category.internal_name == c.internal_name}" ng-bind="c.name"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="btn-group">
+              <a class="btn btn-material-lightblue dropdown-toggle" ng-class="{bold: type != 'all'}" data-toggle="dropdown">
+                Type
+                <i class="fa fa-certificate"></i>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li ng-repeat="t in typeList" class="clickable">
+                  <a ng-click="changeType(t.value)">
+                    <i class="fa fa-fw" ng-class="{'fa-check': type == t.value}"></i>
+                    <span ng-class="{'bold': type == t.value}" ng-bind="t.label"></span>
                   </a>
                 </li>
               </ul>
@@ -123,7 +138,7 @@
 
             <div class="row-content">
               <div class="least-content">
-                <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+                <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-cyan': types[app.type] == 'Web App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
               </div>
               <div class="least-content-lower">
                 <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
