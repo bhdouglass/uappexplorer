@@ -61,6 +61,10 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
 
   $scope.typeList = [
     {
+      label: 'All Types',
+      value: 'all'
+    },
+    {
       label: 'Apps',
       value: 'application'
     }, {

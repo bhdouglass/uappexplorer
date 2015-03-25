@@ -3,6 +3,7 @@ var config = require('./config');
 var spider = require('./spider');
 var utils = require('./utils');
 var logger = require('./logger');
+var feed = require('./feed');
 var express = require('express');
 var _ = require('lodash');
 var compression = require('compression');
@@ -327,6 +328,18 @@ if (config.use_api()) {
             more: more
           });
         });
+      }
+    });
+  });
+
+  app.get('/api/rss/new-apps.rss', function(req, res) {
+    feed.generateFeed(function(err, f) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        res.header('Content-Type', 'application/rss+xml');
+        res.send(f);
       }
     });
   });
