@@ -1,17 +1,16 @@
 var db = require('./db');
-var feed = require('feed');
+var rss = require('rss');
 var _ = require('lodash');
 
 function generateFeed(callback) {
-  var f = new feed({
+  var feed = new rss({
     title:       'Ubuntu Touch New Apps',
     description: 'New apps in the Ubuntu Touch appstore',
-    link:        'https://appstore.bhdouglass.com/',
-    image:       'https://appstore.bhdouglass.com/img/ubuntu-logo.png',
-    author: {
-      name:      'Brian Douglass',
-      link:      'http://bhdouglass.com/'
-    }
+    feed_url:    'https://appstore.bhdouglass.com/api/rss/new-apps.xml',
+    site_url:    'https://appstore.bhdouglass.com/',
+    image_url:   'https://appstore.bhdouglass.com/img/ubuntu-logo.png',
+    webMaster:   'Brian Douglass',
+    ttl:         240 //4 hours
   });
 
   var query = db.Package.find();
@@ -23,20 +22,16 @@ function generateFeed(callback) {
     }
     else {
       _.forEach(pkgs, function(pkg) {
-        f.item({
+        feed.item({
           title:       pkg.title,
-          link:        'https://appstore.bhdouglass.com/app/' + pkg.name,
-          description: pkg.description,
-          author: [{
-            name:      pkg.author,
-            link:      pkg.website
-          }],
-          date:        new Date(pkg.last_updated),
-          image:       'https://appstore.bhdouglass.com/api/icon/' + pkg.name + '.png'
+          url:         'https://appstore.bhdouglass.com/app/' + pkg.name,
+          description: '<a href="https://appstore.bhdouglass.com/app/' + pkg.name + '"><img src="https://appstore.bhdouglass.com/api/icon/' + pkg.name + '.png" />' + pkg.description,
+          author:      pkg.author,
+          date:        pkg.last_updated,
         });
       });
 
-      callback(null, f.render('rss-2.0'));
+      callback(null, feed.xml({indent: true}));
     }
   });
 }

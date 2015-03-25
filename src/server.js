@@ -332,13 +332,13 @@ if (config.use_api()) {
     });
   });
 
-  app.get('/api/rss/new-apps.rss', function(req, res) {
+  app.get('/api/rss/new-apps.xml', function(req, res) {
     feed.generateFeed(function(err, f) {
       if (err) {
         error(res, err);
       }
       else {
-        res.header('Content-Type', 'application/rss+xml');
+        res.header('Content-Type', 'text/xml');
         res.send(f);
       }
     });
