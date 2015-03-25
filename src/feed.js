@@ -24,7 +24,7 @@ function generateFeed(callback) {
         feed.item({
           title:       pkg.title,
           url:         'https://appstore.bhdouglass.com/app/' + pkg.name,
-          description: '<a href="https://appstore.bhdouglass.com/app/' + pkg.name + '"><img src="https://appstore.bhdouglass.com/api/icon/' + pkg.name + '.png" />' + pkg.description,
+          description: '<a href="https://appstore.bhdouglass.com/app/' + pkg.name + '"><img src="https://appstore.bhdouglass.com/api/icon/' + pkg.name + '.png" /></a><br/>' + pkg.description,
           author:      pkg.author,
           date:        pkg.last_updated,
         });
