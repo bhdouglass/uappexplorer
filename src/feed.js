@@ -9,7 +9,6 @@ function generateFeed(callback) {
     feed_url:    'https://appstore.bhdouglass.com/api/rss/new-apps.xml',
     site_url:    'https://appstore.bhdouglass.com/',
     image_url:   'https://appstore.bhdouglass.com/img/ubuntu-logo.png',
-    webMaster:   'Brian Douglass',
     ttl:         240 //4 hours
   });
 
