@@ -290,6 +290,25 @@ function parsePackages(callback) {
       newList.push(data.name);
     });
 
+    //Remove mising packages
+    db.Package.find({}, function(err, packages) {
+      if (err) {
+        logger.error(err);
+      }
+      else {
+        _.forEach(packages, function(pkg) {
+          if (newList.indexOf(pkg.name) == -1) {
+            logger.info('deleting ' + pkg.name);
+            pkg.remove(function(err) {
+              if (err) {
+                logger.error(err);
+              }
+            });
+          }
+        });
+      }
+    });
+
     async.eachSeries(newList, parsePackage, function(err) {
       if (err) {
         logger.error(err);
@@ -333,7 +352,7 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  var one_time = new Date(2015, 2, 24, 2, 30, 0);
+  var one_time = new Date(2015, 2, 25, 22, 50, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
