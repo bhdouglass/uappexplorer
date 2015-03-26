@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').directive('pagination', function() {
+angular.module('appstore').directive('pages', function() {
   return {
     restrict: 'E',
     scope: {
@@ -8,7 +8,7 @@ angular.module('appstore').directive('pagination', function() {
       pages: '=pages'
     },
     replace: true,
-    templateUrl: '/app/partials/pagination.html',
+    templateUrl: '/app/partials/pages.html',
     link: function($scope) {
       $scope.pages_repeater = [];
 

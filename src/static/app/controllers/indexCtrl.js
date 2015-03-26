@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, utils) {
+angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, utils) {
   var title = 'Ubuntu Touch Apps';
   $scope.title = title;
   $scope.og = {};
@@ -51,4 +51,10 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
       };
     }
   });
+
+  $scope.faq = function() {
+    $modal.open({
+      templateUrl: '/app/partials/faq.html'
+    });
+  };
 });

@@ -425,14 +425,15 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  /*var one_time = new Date(2015, 2, 25, 22, 50, 0);
+  var one_time = new Date(2015, 2, 26, 3, 10, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
       logger.info('spider: running spider (once)');
-      parsePackages();
+      //parsePackages();
+      parseReviews();
     });
-  }*/
+  }
 }
 
 function server() {
