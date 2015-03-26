@@ -282,3 +282,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 .background-material-lightgrey {
   background-color: #ececec !important;
 }
+
+.heart-rating {
+  margin-left: 5px;
+}
