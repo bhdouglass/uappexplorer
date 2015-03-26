@@ -14,6 +14,7 @@ var mime = require('mime');
 var moment = require('moment');
 var sitemap = require('sitemap');
 var cluster = require('cluster');
+var async = require('async');
 
 var app = express();
 
@@ -246,12 +247,14 @@ if (config.use_api()) {
   //TODO cache this and don't hardcode it
   app.get('/api/apps/popular', function(req, res) {
     var popular = [
-      'com.ubuntu.developer.mateosalta.inbox',
-      'com.ubuntu.developer.metallicamust.appstore',
+      'steam.vagueentertainment',
+      'soundtrap-app.vinzjobard',
       'com.zeptolab.cuttherope.full',
       'com.ubuntu.developer.mzanetti.machines-vs-machines',
-      'dekko.dekkoproject',
-      'com.ubuntu.telegram'
+      'com.ubuntu.developer.rpadovani.calculator',
+      'com.ubuntu.telegram',
+      'marvell.vtuson',
+      'com.ubuntu.developer.rschroll.gmail',
     ];
 
     db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
@@ -262,22 +265,90 @@ if (config.use_api()) {
         var response = {
           games: [],
           apps: [],
-          web_apps: []
+          web_apps: [],
+          scopes: []
         };
 
         _.forEach(pkgs, function(pkg) {
-          if (['com.ubuntu.developer.mateosalta.inbox', 'com.ubuntu.developer.metallicamust.appstore'].indexOf(pkg.name) > -1) {
+          if (['steam.vagueentertainment', 'soundtrap-app.vinzjobard'].indexOf(pkg.name) > -1) {
             response.web_apps.push(pkg);
           }
           else if (['com.zeptolab.cuttherope.full', 'com.ubuntu.developer.mzanetti.machines-vs-machines'].indexOf(pkg.name) > -1) {
             response.games.push(pkg);
           }
-          else if (['dekko.dekkoproject', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
+          else if (['com.ubuntu.developer.rpadovani.calculator', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
             response.apps.push(pkg);
+          }
+          else if (['marvell.vtuson', 'com.ubuntu.developer.rschroll.gmail'].indexOf(pkg.name) > -1) {
+            response.scopes.push(pkg);
           }
         });
 
         success(res, response);
+      }
+    });
+  });
+
+  //TODO cache this
+  app.get('/api/apps/counts', function(req, res) {
+    var counts = {
+      applications: 0,
+      webapps: 0,
+      scopes: 0,
+      games: 0,
+    };
+
+    async.series([
+      function(callback) {
+        db.Package.count({type: 'application'}, function(err, count) {
+          if (err) {
+            callback(res);
+          }
+          else {
+            callback(null, 'applications', count);
+          }
+        });
+      },
+      function(callback) {
+        db.Package.count({type: 'webapp'}, function(err, count) {
+          if (err) {
+            callback(res);
+          }
+          else {
+            callback(null, 'webapps', count);
+          }
+        });
+      },
+      function(callback) {
+        db.Package.count({type: 'scope'}, function(err, count) {
+          if (err) {
+            callback(res);
+          }
+          else {
+            callback(null, 'scopes', count);
+          }
+        });
+      },
+      function(callback) {
+        db.Package.count({categories: 'games'}, function(err, count) {
+          if (err) {
+            callback(res);
+          }
+          else {
+            callback(null, 'games', count);
+          }
+        });
+      }
+    ], function(err, result) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        _.forEach(result, function(r) {
+          counts[r[0]] = r[1];
+        });
+
+        success(res, counts);
       }
     });
   });

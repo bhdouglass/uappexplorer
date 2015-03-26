@@ -124,6 +124,17 @@ angular.module('appstore').factory('api', function($q, $http) {
       });
 
       return deferred.promise;
+    },
+
+    counts: function() {
+      var deferred = $q.defer();
+      $http.get('/api/apps/counts').then(function(res) {
+        deferred.resolve(res.data.data);
+      }, function(err) {
+        deferred.reject(err);
+      });
+
+      return deferred.promise;
     }
   };
 });

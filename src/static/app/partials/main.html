@@ -18,8 +18,8 @@
             <h4 class="list-group-item-heading">
               Apps
             </h4>
-            <p class="list-group-item-text" ng-if="app_count">
-              <span ng-bind="app_count"></span> apps
+            <p class="list-group-item-text" ng-if="counts.applications">
+              <span ng-bind="counts.applications"></span> apps
             </p>
           </div>
         </a>
@@ -41,8 +41,8 @@
             <h4 class="list-group-item-heading">
               Web Apps
             </h4>
-            <p class="list-group-item-text" ng-if="webapp_count">
-              <span ng-bind="webapp_count"></span> web apps
+            <p class="list-group-item-text" ng-if="counts.webapps">
+              <span ng-bind="counts.webapps"></span> web apps
             </p>
           </div>
         </a>
@@ -64,8 +64,8 @@
             <h4 class="list-group-item-heading">
               Games
             </h4>
-            <p class="list-group-item-text" ng-if="game_count">
-              <span ng-bind="game_count"></span> games
+            <p class="list-group-item-text" ng-if="counts.games">
+              <span ng-bind="counts.games"></span> games
             </p>
           </div>
         </a>
@@ -87,8 +87,8 @@
             <h4 class="list-group-item-heading">
               Scopes
             </h4>
-            <p class="list-group-item-text" ng-if="scope_count">
-              <span ng-bind="scope_count"></span> scopes
+            <p class="list-group-item-text" ng-if="counts.scopes">
+              <span ng-bind="counts.scopes"></span> scopes
             </p>
           </div>
         </a>
@@ -104,7 +104,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-2">
       <div class="row">
         <div class="col-md-12 text-center">
           <h3>Apps</h3>
@@ -137,7 +137,44 @@
         </div>
       </div>
     </div>
+
     <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>Web Apps</h3>
+        </div>
+      </div>
+      <div class="row" ng-repeat="app in popular.web_apps">
+        <div class="col-md-12">
+          <div class="list-group">
+            <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
+              <div class="row-action-primary">
+                <div class="icon ubuntu-shape">
+                  <img ng-src="{{appIcon(app)}}" alt="{{app.name}}" />
+                </div>
+              </div>
+
+              <div class="row-content">
+                <div class="least-content-lower">
+                  <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
+                </div>
+
+                <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
+                <p class="list-group-item-text">
+                  <stars ng-model="app.average_rating"></stars>
+                </p>
+              </div>
+            </a>
+
+            <div class="list-group-separator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2">
       <div class="row">
         <div class="col-md-12 text-center">
           <h3>Games</h3>
@@ -174,10 +211,10 @@
     <div class="col-md-4">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h3>Web Apps</h3>
+          <h3>Scopes</h3>
         </div>
       </div>
-      <div class="row" ng-repeat="app in popular.web_apps">
+      <div class="row" ng-repeat="app in popular.scopes">
         <div class="col-md-12">
           <div class="list-group">
             <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
