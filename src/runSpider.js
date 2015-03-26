@@ -10,7 +10,7 @@ if (process.argv[2]) {
     spider.parseDepartments();
   }
   else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {
-    spider.parseReviews(function(err) {
+    spider.parseReviews(process.argv[3], function(err) {
       if (err) {
         process.exit(1);
       }

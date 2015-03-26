@@ -57,7 +57,7 @@ var departmentSchema = mongoose.Schema({
 var Department = mongoose.model('Department', departmentSchema);
 
 var reviewSchema = mongoose.Schema({
-  name: String,
+  name: {type: String, index: true},
   reviews: [{}],
 });
 

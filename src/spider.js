@@ -12,7 +12,6 @@ var express = require('express');
 var propertyMap = {
   architecture:   'architecture',
   author:         'developer_name',
-  average_rating: 'ratings_average',
   categories:     'department',
   changelog:      'changelog',
   company:        'company_name',
@@ -237,7 +236,10 @@ function parseReview(pkg, callback) {
           rev.reviews = reviews;
 
           var points = 0;
+          var total_rating = 0;
           _.forEach(reviews, function(review) {
+            total_rating += review.rating;
+
             if (review.rating == 1) {
               points -= 1;
             }
@@ -253,6 +255,12 @@ function parseReview(pkg, callback) {
           });
 
           pkg.points = Math.round(points);
+          if (total_rating === 0 || reviews.length === 0) {
+            pkg.average_rating = 0;
+          }
+          else {
+            pkg.average_rating = Math.round(total_rating / reviews.length * 100) / 100;
+          }
 
           async.series([
             function(cb) {
@@ -289,8 +297,13 @@ function parseReview(pkg, callback) {
   });
 }
 
-function parseReviews(callback) {
-  db.Package.find({}, function(err, packages) {
+function parseReviews(pkgName, callback) {
+  var query = {};
+  if (pkgName) {
+    query.name = pkgName;
+  }
+
+  db.Package.find(query, function(err, packages) {
     if (err) {
       logger.error(err);
     }
