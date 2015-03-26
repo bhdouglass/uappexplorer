@@ -1,6 +1,5 @@
 var db = require('./db');
 var config = require('./config');
-var spider = require('./spider');
 var utils = require('./utils');
 var logger = require('./logger');
 var feed = require('./feed');
