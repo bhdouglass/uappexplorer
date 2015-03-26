@@ -232,6 +232,7 @@ if (config.use_api()) {
                 average_rating: pkg.average_rating,
                 prices: pkg.prices,
                 short_description: description,
+                points: pkg.points,
               });
             });
 
@@ -369,35 +370,33 @@ if (config.use_api()) {
   });
 
   app.get('/api/apps/reviews/:name', function(req, res) {
-    db.Package.findOne({name: req.params.name}).select('reviews reviews_fetch_date name').exec(function(err, pkg) {
+    db.Review.findOne({name: req.params.name}).exec(function(err, rev) {
       if (err) {
         error(res, err);
       }
-      else if (!pkg) {
+      else if (!rev) {
         error(res, req.params.name + ' was not found', 404);
       }
       else {
-        spider.parseReviews(pkg, function(pkg2) {
-          var reviews = pkg2.reviews;
-          var limit = reviews.length;
-          var more = false;
-          if (!_.isNaN(parseInt(req.query.limit))) {
-            limit = parseInt(req.query.limit);
-          }
+        var reviews = rev.reviews;
+        var limit = reviews.length;
+        var more = false;
+        if (!_.isNaN(parseInt(req.query.limit))) {
+          limit = parseInt(req.query.limit);
+        }
 
-          var skip = 0;
-          if (!_.isNaN(parseInt(req.query.skip))) {
-            skip = parseInt(req.query.skip);
-          }
+        var skip = 0;
+        if (!_.isNaN(parseInt(req.query.skip))) {
+          skip = parseInt(req.query.skip);
+        }
 
-          more = ((skip + limit) < reviews.length);
-          reviews = reviews.slice(skip, skip + limit);
+        more = ((skip + limit) < reviews.length);
+        reviews = reviews.slice(skip, skip + limit);
 
-          success(res, {
-            reviews: reviews,
-            name: pkg2.name,
-            more: more
-          });
+        success(res, {
+          reviews: reviews,
+          name: rev.name,
+          more: more
         });
       }
     });

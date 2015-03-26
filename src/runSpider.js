@@ -9,6 +9,15 @@ if (process.argv[2]) {
   else if (process.argv[2] == 'department' || process.argv[2] == 'departments') {
     spider.parseDepartments();
   }
+  else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {
+    spider.parseReviews(function(err) {
+      if (err) {
+        process.exit(1);
+      }
+
+      process.exit(0);
+    });
+  }
   else {
     spider.parsePackage(process.argv[2], function(err) {
       if (err) {

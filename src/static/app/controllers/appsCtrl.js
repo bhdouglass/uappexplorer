@@ -39,22 +39,28 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       label: 'Title Z-A',
       value: '-title'
     }, {
-      label: 'Newest First',
+      label: 'Newest ',
       value: '-published_date'
     }, {
-      label: 'Oldest First',
+      label: 'Oldest',
       value: 'published_date'
     }, {
-      label: 'Highest Rated First',
+      label: 'Highest Heart Rating',
+      value: '-points'
+    }, {
+      label: 'Lowest Heart Rating',
+      value: 'points'
+    }, {
+      label: 'Highest Star Rating',
       value: '-average_rating'
     }, {
-      label: 'Lowest Rated First',
+      label: 'Lowest Star Rating',
       value: 'average_rating'
     }, {
-      label: 'Free First',
+      label: 'Free',
       value: 'prices.USD'
     }, {
-      label: 'Most Expensive First (USD)',
+      label: 'Most Expensive (USD)',
       value: '-prices.USD'
     },
   ];

@@ -29,10 +29,9 @@ var packageSchema = mongoose.Schema({
   last_updated: String,
   license: String,
   name: {type: String, index: true},
+  points: Number,
   prices: {},
   published_date: String,
-  reviews: [{}],
-  reviews_fetch_date: Number,
   screenshot: String,
   screenshots: [String],
   status: String,
@@ -57,5 +56,13 @@ var departmentSchema = mongoose.Schema({
 
 var Department = mongoose.model('Department', departmentSchema);
 
+var reviewSchema = mongoose.Schema({
+  name: String,
+  reviews: [{}],
+});
+
+var Review = mongoose.model('Review', reviewSchema);
+
 exports.Package = Package;
 exports.Department = Department;
+exports.Review = Review;

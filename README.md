@@ -38,6 +38,8 @@ it caches images and data to be kind to the api.
     * Run: `nvagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js update`
 * Fetch departments/categories
     * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js department`
+* Fetch reviews
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js review`
 * Fetch a single package
     * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js com.example.pacakge.name`
 

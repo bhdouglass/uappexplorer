@@ -4,7 +4,6 @@ var db = require('./db');
 var logger = require('./logger');
 var request = require('request');
 var _ = require('lodash');
-var moment = require('moment');
 var async = require('async');
 var schedule = require('node-schedule');
 var express = require('express');
@@ -216,33 +215,97 @@ function parseDepartments() {
   });
 }
 
-function parseReviews(pkg, callback) {
-  var now = moment();
-  if (!pkg.reviews_fetch_date || now.diff(pkg.reviews_fetch_date, 'days') >= 1) {
-    request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
-      if (err) {
-        logger.error('spider error: ' + err);
-        callback(pkg);
-      }
-      else {
-        pkg.reviews = JSON.parse(body);
-        pkg.reviews_fetch_date = now.valueOf();
+function parseReview(pkg, callback) {
+  logger.info('parsing reviews for ' + pkg.name);
+  request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      var reviews = JSON.parse(body);
 
-        pkg.save(function(err, pkg2) {
-          if (err) {
-            logger.error('spider error: ' + err);
-            callback(pkg);
+      db.Review.findOne({name: pkg.name}, function(err, rev) {
+        if (err) {
+          callback(err);
+        }
+        else {
+          if (!rev) {
+            rev = new db.Review();
           }
-          else {
-            callback(pkg2);
-          }
-        });
-      }
-    });
-  }
-  else {
-    callback(pkg);
-  }
+
+          rev.name = pkg.name;
+          rev.reviews = reviews;
+
+          var points = 0;
+          _.forEach(reviews, function(review) {
+            if (review.rating == 1) {
+              points -= 1;
+            }
+            else if (review.rating == 2) {
+              points -= 0.5;
+            }
+            else if (review.rating == 4) {
+              points += 0.5;
+            }
+            else if (review.rating == 5) {
+              points += 1;
+            }
+          });
+
+          pkg.points = Math.round(points);
+
+          async.series([
+            function(cb) {
+              rev.save(function(err) {
+                if (err) {
+                  cb(err);
+                }
+                else {
+                  cb(null);
+                }
+              });
+            },
+            function(cb) {
+              pkg.save(function(err) {
+                if (err) {
+                  cb(err);
+                }
+                else {
+                  cb(null);
+                }
+              });
+            }
+          ], function(err) {
+            if (err) {
+              callback(err);
+            }
+            else {
+              callback(null);
+            }
+          });
+        }
+      });
+    }
+  });
+}
+
+function parseReviews(callback) {
+  db.Package.find({}, function(err, packages) {
+    if (err) {
+      logger.error(err);
+    }
+    else {
+      async.eachSeries(packages, parseReview, function(err) {
+        if (err) {
+          logger.error(err);
+        }
+
+        if (callback) {
+          callback();
+        }
+      });
+    }
+  });
 }
 
 function parsePackageUpdates(callback) {
@@ -291,7 +354,7 @@ function parsePackages(callback) {
     });
 
     //Remove mising packages
-    db.Package.find({}, function(err, packages) {
+    db.Package.find({}, function(err, packages) { //TODO remove reviews too
       if (err) {
         logger.error(err);
       }
@@ -351,15 +414,25 @@ function setupSchedule() {
     parseDepartments();
   });
 
+  var reviews_rule = new schedule.RecurrenceRule();
+  reviews_rule.dayOfWeek = new schedule.Range(0, 6, 1);
+  reviews_rule.hour = 1;
+  reviews_rule.minute = 0;
+
+  schedule.scheduleJob(reviews_rule, function() {
+    logger.info('spider: running review spider');
+    parseReviews();
+  });
+
   //one time scheduling
-  var one_time = new Date(2015, 2, 25, 22, 50, 0);
+  /*var one_time = new Date(2015, 2, 25, 22, 50, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
       logger.info('spider: running spider (once)');
       parsePackages();
     });
-  }
+  }*/
 }
 
 function server() {

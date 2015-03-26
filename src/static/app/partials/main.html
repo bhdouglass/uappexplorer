@@ -33,7 +33,7 @@
         <a class="list-group-item clickable" href="/apps?type=webapp" title="Browse Web Apps">
           <div class="row-action-primary">
             <div class="action-icon ubuntu-shape">
-              <i class="fa fa-mobile background-material-cyan"></i>
+              <i class="fa fa-bookmark background-material-cyan"></i>
             </div>
           </div>
 
@@ -79,7 +79,7 @@
         <a class="list-group-item clickable" href="/apps?type=scope" title="Browse Scopes">
           <div class="row-action-primary">
             <div class="action-icon ubuntu-shape">
-              <i class="fa fa-mobile background-material-deeporange"></i>
+              <i class="fa fa-search background-material-deeporange"></i>
             </div>
           </div>
 
@@ -128,6 +128,10 @@
                 <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
                 <p class="list-group-item-text">
                   <stars ng-model="app.average_rating"></stars>
+                  <span class="text-danger">
+                    <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
+                    <span ng-bind="app.points || 0"></span>
+                  </span>
                 </p>
               </div>
             </a>
@@ -162,6 +166,10 @@
                 <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
                 <p class="list-group-item-text">
                   <stars ng-model="app.average_rating"></stars>
+                  <span class="text-danger">
+                    <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
+                    <span ng-bind="app.points || 0"></span>
+                  </span>
                 </p>
               </div>
             </a>
@@ -198,6 +206,10 @@
                 <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
                 <p class="list-group-item-text">
                   <stars ng-model="app.average_rating"></stars>
+                  <span class="text-danger">
+                    <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
+                    <span ng-bind="app.points || 0"></span>
+                  </span>
                 </p>
               </div>
             </a>
@@ -232,6 +244,10 @@
                 <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
                 <p class="list-group-item-text">
                   <stars ng-model="app.average_rating"></stars>
+                  <span class="text-danger">
+                    <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
+                    <span ng-bind="app.points || 0"></span>
+                  </span>
                 </p>
               </div>
             </a>

@@ -147,6 +147,10 @@
               <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
               <p class="list-group-item-text">
                 <stars ng-model="app.average_rating"></stars>
+                <span class="text-danger">
+                  <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
+                  <span ng-bind="app.points || 0"></span>
+                </span>
               </p>
 
               <p class="list-group-item-text" ng-show="view == 'list'" ng-bind="app.short_description"></p>
