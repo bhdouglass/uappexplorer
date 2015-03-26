@@ -425,7 +425,7 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  var one_time = new Date(2015, 2, 26, 3, 10, 0);
+  var one_time = new Date(2015, 2, 26, 9, 40, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
