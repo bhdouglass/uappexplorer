@@ -135,6 +135,17 @@ angular.module('appstore').factory('api', function($q, $http) {
       });
 
       return deferred.promise;
+    },
+
+    essentials: function() {
+      var deferred = $q.defer();
+      $http.get('/api/apps/essentials').then(function(res) {
+        deferred.resolve(res.data.data);
+      }, function(err) {
+        deferred.reject(err);
+      });
+
+      return deferred.promise;
     }
   };
 });

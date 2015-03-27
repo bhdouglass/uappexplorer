@@ -4,6 +4,7 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
   $rootScope.app = null;
   $rootScope.back = {};
   $scope.popular = {};
+  $scope.essentials = [];
   $scope.counts = {
     applications: null,
     webapps: null,
@@ -22,6 +23,12 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
 
     api.counts().then(function(data) {
       $scope.counts = data;
+    });
+
+    api.essentials().then(function(data) {
+      $scope.essentials = _.shuffle(data);
+    }, function(err) {
+      console.error(err);
     });
   }
   refresh();

@@ -98,6 +98,26 @@
     </div>
   </div>
 
+  <div class="row" ng-if="essentials">
+    <div class="col-md-12 text-center">
+      <h1>Essentials</h1>
+    </div>
+  </div>
+  <div class="row" ng-if="essentials">
+    <div class="essentials margin-auto">
+      <carousel interval="3400">
+        <slide ng-repeat="app in essentials" class="ubuntu-shape">
+          <img ng-src="{{appIcon(app)}}" class="rounded">
+          <div class="carousel-caption">
+            <a ui-sref="app({name: app.name})">
+              <h3 ng-bind="app.title"></h3>
+            </a>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-12 text-center">
       <h1>Popular</h1>
@@ -110,7 +130,7 @@
           <h3>Apps</h3>
         </div>
       </div>
-      <div class="row" ng-repeat="app in popular.apps">
+      <div class="row" ng-repeat="app in popular.applications">
         <div class="col-md-12">
           <div class="list-group">
             <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
@@ -148,7 +168,7 @@
           <h3>Web Apps</h3>
         </div>
       </div>
-      <div class="row" ng-repeat="app in popular.web_apps">
+      <div class="row" ng-repeat="app in popular.webapps">
         <div class="col-md-12">
           <div class="list-group">
             <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">

@@ -14,6 +14,8 @@ var moment = require('moment');
 var sitemap = require('sitemap');
 var cluster = require('cluster');
 var async = require('async');
+var fs = require('fs');
+var path = require('path');
 
 var app = express();
 
@@ -50,6 +52,24 @@ function error(res, message, code) {
     data: null,
     message: message
   });
+}
+
+function miniPkg(pkg) {
+  var description = pkg.description;
+  if (pkg.description && pkg.description.split('\n').length > 0) {
+    description = pkg.description.split('\n')[0];
+  }
+
+  return {
+    name: pkg.name,
+    cloudinary_url: pkg.cloudinary_url,
+    title: pkg.title,
+    type: pkg.type,
+    average_rating: pkg.average_rating,
+    prices: pkg.prices,
+    short_description: description,
+    points: pkg.points,
+  };
 }
 
 if (config.use_api()) {
@@ -218,21 +238,7 @@ if (config.use_api()) {
           if (req.query.mini == 'true') {
             var new_pkgs = [];
             _.forEach(pkgs, function(pkg) {
-              var description = pkg.description;
-              if (pkg.description && pkg.description.split('\n').length > 0) {
-                description = pkg.description.split('\n')[0];
-              }
-
-              new_pkgs.push({
-                name: pkg.name,
-                cloudinary_url: pkg.cloudinary_url,
-                title: pkg.title,
-                type: pkg.type,
-                average_rating: pkg.average_rating,
-                prices: pkg.prices,
-                short_description: description,
-                points: pkg.points,
-              });
+              new_pkgs.push(miniPkg(pkg));
             });
 
             pkgs = new_pkgs;
@@ -244,47 +250,76 @@ if (config.use_api()) {
     }
   });
 
-  //TODO cache this and don't hardcode it
+  //TODO cache this
   app.get('/api/apps/popular', function(req, res) {
-    var popular = [
-      'steam.vagueentertainment',
-      'soundtrap-app.vinzjobard',
-      'com.zeptolab.cuttherope.full',
-      'com.ubuntu.developer.mzanetti.machines-vs-machines',
-      'com.ubuntu.developer.rpadovani.calculator',
-      'com.ubuntu.telegram',
-      'marvell.vtuson',
-      'com.ubuntu.developer.rschroll.gmail',
-    ];
-
-    db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
+    fs.readFile(path.join(__dirname, 'json/popular-apps.json'), function (err, data) {
       if (err) {
         error(res, err);
       }
       else {
-        var response = {
-          games: [],
-          apps: [],
-          web_apps: [],
-          scopes: []
-        };
+        var popularNames = JSON.parse(data);
 
-        _.forEach(pkgs, function(pkg) {
-          if (['steam.vagueentertainment', 'soundtrap-app.vinzjobard'].indexOf(pkg.name) > -1) {
-            response.web_apps.push(pkg);
-          }
-          else if (['com.zeptolab.cuttherope.full', 'com.ubuntu.developer.mzanetti.machines-vs-machines'].indexOf(pkg.name) > -1) {
-            response.games.push(pkg);
-          }
-          else if (['com.ubuntu.developer.rpadovani.calculator', 'com.ubuntu.telegram'].indexOf(pkg.name) > -1) {
-            response.apps.push(pkg);
-          }
-          else if (['marvell.vtuson', 'com.ubuntu.developer.rschroll.gmail'].indexOf(pkg.name) > -1) {
-            response.scopes.push(pkg);
-          }
+        var popular = [];
+        _.forEach(popularNames, function(names) {
+          popular = popular.concat(names);
         });
 
-        success(res, response);
+        db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
+          if (err) {
+            error(res, err);
+          }
+          else {
+            var response = {
+              games: [],
+              applications: [],
+              webapps: [],
+              scopes: []
+            };
+
+            _.forEach(pkgs, function(pkg) {
+              if (popularNames.webapps.indexOf(pkg.name) > -1) {
+                response.webapps.push(miniPkg(pkg));
+              }
+              else if (popularNames.games.indexOf(pkg.name) > -1) {
+                response.games.push(miniPkg(pkg));
+              }
+              else if (popularNames.applications.indexOf(pkg.name) > -1) {
+                response.applications.push(miniPkg(pkg));
+              }
+              else if (popularNames.scopes.indexOf(pkg.name) > -1) {
+                response.scopes.push(miniPkg(pkg));
+              }
+            });
+
+            success(res, response);
+          }
+        });
+      }
+    });
+  });
+
+  //TODO cache this
+  app.get('/api/apps/essentials', function(req, res) {
+    fs.readFile(path.join(__dirname, 'json/essential-apps.json'), function (err, data) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        var names = JSON.parse(data);
+
+        db.Package.find({name: {'$in': names}}, function(err, pkgs) {
+          if (err) {
+            error(res, err);
+          }
+          else {
+            var new_pkgs = [];
+            _.forEach(pkgs, function(pkg) {
+              new_pkgs.push(miniPkg(pkg));
+            });
+
+            success(res, new_pkgs);
+          }
+        });
       }
     });
   });

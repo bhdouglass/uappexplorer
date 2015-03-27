@@ -37,6 +37,11 @@
   display: inline-block;
 }
 
+.essentials .ubuntu-shape img {
+  border-radius: 6rem;
+  padding-bottom: 2px;
+}
+
 .modal-backdrop {
   opacity: 0.5;
 }
@@ -285,4 +290,30 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .heart-rating {
   margin-left: 5px;
+}
+
+.essentials {
+  width: 256px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0px;
+}
+
+.carousel-caption a {
+  color: #FFFFFF;
+}
+
+.carousel-control {
+  z-index: 200;
+  background-image: none !important;
+}
+
+.carousel-indicators {
+  z-index: 200;
 }
