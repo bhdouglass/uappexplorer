@@ -1,0 +1,18 @@
+{
+  "webapps": [
+    "steam.vagueentertainment",
+    "soundtrap-app.vinzjobard"
+  ],
+  "applications": [
+    "com.ubuntu.developer.rpadovani.calculator",
+    "com.ubuntu.telegram"
+  ],
+  "games": [
+    "com.zeptolab.cuttherope.full",
+    "com.ubuntu.developer.mzanetti.machines-vs-machines"
+  ],
+  "scopes": [
+    "marvell.vtuson",
+    "com.ubuntu.developer.rschroll.gmail"
+  ]
+}
