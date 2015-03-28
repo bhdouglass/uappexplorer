@@ -52,10 +52,10 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       value: 'points'
     }, {
       label: 'Highest Star Rating',
-      value: '-average_rating'
+      value: '-bayesian_average'
     }, {
       label: 'Lowest Star Rating',
-      value: 'average_rating'
+      value: 'bayesian_average'
     }, {
       label: 'Free',
       value: 'prices.USD'

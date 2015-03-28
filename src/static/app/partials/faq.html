@@ -5,11 +5,12 @@
 <div class="modal-body">
   <h4>What is the star rating?</h4>
   <div>
-    The star rating is the rating that a user gives to an app when the leave a review.
-    It can be between 1 and 5 stars. The average user star rating makes up an app's
-    star rating.
-    <br/>
-    Apps without a star rating have not yet been reviewed.
+    The star rating is the Bayesian average of the star ratings that user give
+    to an app when they leave a review. The Bayesian average allows apps with
+    more reviews to rank better than apps with less reviews. The star rating
+    can be between 1 and 5, where a 0 means that there have not been any reviews
+    yet. For more information about the Bayesian average calculation, check out
+    <a href="http://fulmicoton.com/posts/bayesian_rating/">this article</a>.
   </div>
 
   <h4>What is the heart rating?</h4>

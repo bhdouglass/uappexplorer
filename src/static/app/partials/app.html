@@ -22,7 +22,7 @@
               </div>
               <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
               <p class="list-group-item-text">
-                <stars ng-model="app.average_rating"></stars>
+                <stars ng-model="app.bayesian_average"></stars>
                 <span class="text-danger heart-rating">
                   <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
                   <span ng-bind="app.points || 0"></span>
