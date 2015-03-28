@@ -62,8 +62,8 @@ The gear running the app needs to have the Nodejs and MongoDB cartridge setup.
 This could be easily setup for a different service provided you setup the env variables.
 To setup env variables on OpenShift, check out their [docs](https://developers.openshift.com/en/managing-environment-variables.html#custom-variables).
 
-The postinstall of this package runs a grunt build and puts all the static files
-into `src/static/dist`. The built files are all minified and concatenated.
+The postinstall of this package runs a gulp build and puts all the static files
+into `src/server/static/dist`. The built files are all minified and concatenated.
 
 Alternatively an external mongo host could be used, like [MongoLab](https://mongolab.com/).
 
