@@ -1,5 +1,5 @@
 var server = require('./server');
-var spider = require('./spider');
+var spider = require('./spider/spider');
 var config = require('./config');
 var cluster = require('cluster');
 var os = require('os');

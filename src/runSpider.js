@@ -1,4 +1,4 @@
-var spider = require('./spider');
+var spider = require('./spider/spider');
 
 function callback(err) {
   if (err) {
@@ -13,7 +13,7 @@ if (process.argv[2]) {
     spider.parsePackageUpdates(callback);
   }
   else if (process.argv[2] == 'department' || process.argv[2] == 'departments') {
-    spider.parseDepartments();
+    spider.parseDepartments(callback);
   }
   else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {
     if (process.argv[3] == 'bayesian') {
