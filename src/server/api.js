@@ -240,7 +240,7 @@ function setup(app, success, error) {
             callback(null, name, count);
           }
         });
-      }
+      };
     }
 
     async.series([
