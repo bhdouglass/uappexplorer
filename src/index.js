@@ -1,4 +1,4 @@
-var server = require('./server');
+var server = require('./server/server');
 var spider = require('./spider/spider');
 var config = require('./config');
 var cluster = require('cluster');

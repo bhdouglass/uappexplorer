@@ -1,4 +1,4 @@
-var db = require('./db');
+var db = require('../db');
 var rss = require('rss');
 var _ = require('lodash');
 
@@ -35,4 +35,18 @@ function generateFeed(callback) {
   });
 }
 
-exports.generateFeed = generateFeed;
+function setup(app, success, error) {
+  app.get('/api/rss/new-apps.xml', function(req, res) {
+    generateFeed(function(err, f) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        res.header('Content-Type', 'text/xml');
+        res.send(f);
+      }
+    });
+  });
+}
+
+exports.setup = setup;

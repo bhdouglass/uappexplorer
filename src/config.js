@@ -7,7 +7,7 @@ var _ = require('lodash');
 
 var config = {
   data_dir: '/tmp',
-  capabilities: ['spider', 'app', 'api', 'icons'],
+  capabilities: ['spider', 'app', 'api', 'icons', 'feed'],
   use_spider: function() {
     return (config.capabilities.indexOf('spider') > -1);
   },
@@ -19,6 +19,9 @@ var config = {
   },
   use_icons: function() {
     return (config.capabilities.indexOf('icons') > -1);
+  },
+  use_feed: function() {
+    return (config.capabilities.indexOf('feed') > -1);
   },
   use_cloudinary: function() {
     return !!config.cloudinary.api_key;

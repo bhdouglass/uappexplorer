@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'src/static/dist/app/app.min.js': ['src/static/dist/app/app.js']
+          'src/server/static/dist/app/app.min.js': ['src/server/static/dist/app/app.js']
         }
       }
     },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['src/static/app/*.js', 'src/static/app/*/*.js']
+          src: ['src/server/static/app/*.js', 'src/server/static/app/*/*.js']
         }
       },
       back: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
           jshintrc: '.jshintrc'
         },
         files: {
-          src: ['src/*.js', 'src/spider/*.js', 'Gruntfile.js']
+          src: ['src/*.js', 'src/*/*.js', 'Gruntfile.js']
         }
       }
     },
@@ -60,22 +60,22 @@ module.exports = function(grunt) {
         files: [
           {
             flatten: true,
-            src: ['src/static/app/partials/*.html'],
-            dest: 'src/static/dist/app/partials/',
+            src: ['src/server/static/app/partials/*.html'],
+            dest: 'src/server/static/dist/app/partials/',
             filter: 'isFile',
             expand: true,
           },
           {
             flatten: true,
-            src: ['src/static/*.html'],
-            dest: 'src/static/dist/',
+            src: ['src/server/static/*.html'],
+            dest: 'src/server/static/dist/',
             filter: 'isFile',
             expand: true,
           },
           {
             flatten: true,
-            src: ['src/static/img/*'],
-            dest: 'src/static/dist/img',
+            src: ['src/server/static/img/*'],
+            dest: 'src/server/static/dist/img',
             filter: 'isFile',
             expand: true,
           },
@@ -91,9 +91,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'src/static/dist',
+          cwd: 'src/server/static/dist',
           src: '**/*.html',
-          dest: 'src/static/dist'
+          dest: 'src/server/static/dist'
         }]
       }
     },
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
     cssmin: {
       dis: {
         files: {
-          'src/static/dist/css/main.min.css': ['src/static/css/main.css']
+          'src/server/static/dist/css/main.min.css': ['src/server/static/css/main.css']
         }
       }
     },
@@ -114,8 +114,8 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'src/static/dist/index.html': 'src/static/dist/index.html',
-          'src/static/dist/404.html': 'src/static/dist/404.html',
+          'src/server/static/dist/index.html': 'src/server/static/dist/index.html',
+          'src/server/static/dist/404.html': 'src/server/static/dist/404.html',
         }
       }
     },
@@ -126,12 +126,12 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'src/static/dist/app/app.js': ['src/static/app/app.js', 'src/static/app/*/*.js']
+          'src/server/static/dist/app/app.js': ['src/server/static/app/app.js', 'src/server/static/app/*/*.js']
         }
       }
     },
 
-    clean: ['src/static/dist'],
+    clean: ['src/server/static/dist'],
 
     watch: {
       files: ['<%= jshint.files %>'],
