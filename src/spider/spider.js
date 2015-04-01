@@ -19,7 +19,7 @@ function setupSchedule() {
 
   var spider_rule_updates = new schedule.RecurrenceRule();
   spider_rule_updates.dayOfWeek = new schedule.Range(0, 6, 1);
-  spider_rule_updates.hour = new schedule.Range(0, 23, 2);
+  spider_rule_updates.hour = new schedule.Range(0, 23, 1);
   spider_rule_updates.minute = 0;
 
   schedule.scheduleJob(spider_rule_updates, function() {

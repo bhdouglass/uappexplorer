@@ -317,3 +317,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 .carousel-indicators {
   z-index: 200;
 }
+
+.disclaimer {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
