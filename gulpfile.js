@@ -55,7 +55,7 @@ gulp.task('lint-front', function() {
     }
   };
 
-  gulp.src(paths.front_js)
+  gulp.src(['src/server/static/app/**/*.js', '!src/server/static/app/load.js', '!src/server/static/app/services/angular-cookie.min.js'])
     .pipe(jshint(options))
     .pipe(jshint.reporter(stylish));
 });

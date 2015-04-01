@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, $cookies, utils) {
+angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, ipCookie, utils) {
   var title = 'Ubuntu Touch Apps';
   $scope.title = title;
   $scope.og = {};
@@ -58,12 +58,12 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     });
   };
 
-  if (!$cookies.disclaimer) {
+  if (!ipCookie('disclaimer')) {
     $modal.open({
       templateUrl: '/app/partials/disclaimer.html'
     });
 
     var now = new Date();
-    $cookies.disclaimer = Math.floor(now.getTime() / 1000);
+    ipCookie('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
   }
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ngCookies']);
+angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ipCookie']);
 
 angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $urlRouterProvider.otherwise('/apps');
