@@ -3,6 +3,7 @@ LazyLoad.js([
   '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/js/jquery.swipebox.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js',
+  '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-cookies.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap-tpls.min.js',
