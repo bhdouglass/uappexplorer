@@ -13,8 +13,9 @@ var del = require('del');
 
 var paths = {
   front_js: ['src/server/static/app/**/*.js', '!src/server/static/app/load.js'],
+  js_libs: 'src/server/static/js/*.js',
   load: 'src/server/static/app/load.js',
-  back_js: ['gulpfile.js', 'src/**/*.js', '!src/server/static/app/**/*.js'],
+  back_js: ['gulpfile.js', 'src/**/*.js', '!src/server/static/app/**/*.js', '!src/server/static/js/*.js'],
   imgs: 'src/server/static/img/*',
   css: 'src/server/static/css/*.css',
   html: ['src/server/static/*.html', 'src/server/static/app/**/*.html'],
@@ -55,7 +56,7 @@ gulp.task('lint-front', function() {
     }
   };
 
-  gulp.src(['src/server/static/app/**/*.js', '!src/server/static/app/load.js', '!src/server/static/app/services/angular-cookie.min.js'])
+  gulp.src(paths.front_js)
     .pipe(jshint(options))
     .pipe(jshint.reporter(stylish));
 });
@@ -107,6 +108,9 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('src/server/static/dist/app'));
+
+  gulp.src(paths.js_libs)
+    .pipe(gulp.dest('src/server/static/dist/js'));
 });
 
 gulp.task('lint', ['lint-front', 'lint-back']);

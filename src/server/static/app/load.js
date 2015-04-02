@@ -10,6 +10,7 @@ LazyLoad.js([
   '//cdnjs.cloudflare.com/ajax/libs/angulartics/0.17.2/angulartics-ga.min.js',
   '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js',
   '//www.google-analytics.com/analytics.js',
+  '/js/angular-cookie.min.js',
   '/app/app.js' + v,
   //@if ENV != 'production'
   '/app/controllers/indexCtrl.js' + v,
@@ -17,7 +18,6 @@ LazyLoad.js([
   '/app/controllers/appCtrl.js' + v,
   '/app/controllers/mainCtrl.js' + v,
   '/app/services/api.js' + v,
-  '/app/services/angular-cookie.min.js' + v, //TODO move this somewhere else
   '/app/services/utils.js' + v,
   '/app/directives/stars.js' + v,
   '/app/directives/pages.js' + v,
