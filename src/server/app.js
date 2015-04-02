@@ -32,7 +32,7 @@ function setup(app) {
     res.redirect(301, '/apps');
   });
 
-  app.all(['/apps', '/app/:name'], function(req, res) { //For html5mode on frontend
+  app.all(['/apps', '/app/:name', '/apps/request'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
   });
 }

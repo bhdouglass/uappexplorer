@@ -1,4 +1,5 @@
 var db = require('../db');
+var spider = require('../spider/spider');
 var _ = require('lodash');
 var fs = require('fs');
 var moment = require('moment');
@@ -258,6 +259,17 @@ function setup(app, success, error) {
         });
 
         success(res, counts);
+      }
+    });
+  });
+
+  app.get('/api/apps/find/:name', function(req, res) {
+    spider.parsePackage(req.params.name, function(err, pkg) {
+      if (err) {
+        error(res, err, 404);
+      }
+      else {
+        success(res, pkg);
       }
     });
   });

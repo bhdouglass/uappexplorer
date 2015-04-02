@@ -146,6 +146,17 @@ angular.module('appstore').factory('api', function($q, $http) {
       });
 
       return deferred.promise;
+    },
+
+    find: function(name) {
+      var deferred = $q.defer();
+      $http.get('/api/apps/find/' + name).then(function(res) {
+        deferred.resolve(res.data.data);
+      }, function(err) {
+        deferred.reject(err);
+      });
+
+      return deferred.promise;
     }
   };
 });

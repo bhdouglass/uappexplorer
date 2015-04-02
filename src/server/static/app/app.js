@@ -15,6 +15,16 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
     templateUrl: '/app/partials/apps.html',
     controller: 'appsCtrl',
     reloadOnSearch: false,
+  }).state('apps.request', {
+    url: '/request',
+    onEnter: ['$state', '$modal', function($state, $modal) {
+        $modal.open({
+            templateUrl: '/app/partials/request.html',
+            controller: 'requestCtrl'
+        }).result.finally(function() {
+            $state.go('^');
+        });
+    }]
   }).state('app', {
     url: '/app/:name',
     templateUrl: '/app/partials/app.html',

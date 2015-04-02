@@ -130,7 +130,7 @@ function parsePackage(name, callback) {
             }
 
             logger.info('saved ' + name);
-            callback();
+            callback(null, pkg);
           });
         }
       });
