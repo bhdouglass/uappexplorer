@@ -1,13 +1,15 @@
-# Ubuntu Appstore (Unofficial) #
+# uApp Explorer #
 
 [ ![Codeship Status for bhdouglass/ubuntu-appstore](https://codeship.com/projects/6a279da0-64a5-0132-af74-0639b0c195d6/status?branch=master)](https://codeship.com/projects/52618)
 
 Support this project via [Gratipay](https://gratipay.com/bhdouglass/)
 
-Browse, download, and search apps from the Ubuntu click appstore - [uappexplorer.com](http://uappexplorer.com/).
+Browse and search apps from the Ubuntu Touch click appstore - [uappexplorer.com](https://uappexplorer.com/).
 
-While this app uses the Ubuntu [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
-it caches images and data to be kind to the api.
+This site uses publically available data from the Ubuntu Touch [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
+This site is maintained by [Brian Douglass](http://bhdouglass.com) and is not
+endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are
+registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 
 ## Development ##
 
