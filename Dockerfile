@@ -13,6 +13,6 @@ RUN npm install supervisor -g
 
 EXPOSE 8080
 EXPOSE 3000
-ENV ALLOWED_DOMAINS=appstore.bhdouglass.com,local.appstore.bhdouglass.com,localhost,127.0.0.1
+ENV ALLOWED_DOMAINS=uappexplorer.com,local.uappexplorer.com,localhost,127.0.0.1
 ENV PRERENDER_SERVICE_URL=http://127.0.0.1:3000
 CMD npm start

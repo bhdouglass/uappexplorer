@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="appstore" ng-controller="indexCtrl" itemscope itemtype="http://schema.org/MobileApplication">
   <head>
-    <title ng-bind="title">Ubuntu Touch Apps</title>
+    <title ng-bind="title">uApp Explorer</title>
     <base href="/" />
 
     <meta name="description" content="App store for Ubuntu Touch" ng-content="og.description" />
@@ -11,20 +11,20 @@
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Ubuntu Touch Apps" ng-content="og.title" />
     <meta itemprop="description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
-    <meta itemprop="image" content="https://appstore.bhdouglass.com/img/ubuntu-logo.png" ng-content="og.image" />
+    <meta itemprop="image" content="https://uappexplorer.com/img/ubuntu-logo.png" ng-content="og.image" />
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@bhdouglass" />
     <meta name="twitter:title" content="Ubuntu Touch Apps" ng-content="og.title" />
     <meta name="twitter:description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
-    <meta name="twitter:image:src" content="https://appstore.bhdouglass.com/img/ubuntu-logo.png" ng-content="og.image" />
+    <meta name="twitter:image:src" content="https://uappexplorer.com/img/ubuntu-logo.png" ng-content="og.image" />
 
     <!-- Open Graph data -->
     <meta property="og:title" content="Ubuntu Touch Apps" ng-content="og.title" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://appstore.bhdouglass.com/apps" ng-content="og.url" />
-    <meta property="og:image" content="https://appstore.bhdouglass.com/img/ubuntu-logo.png" ng-content="og.image" />
+    <meta property="og:url" content="https://uappexplorer.com/apps" ng-content="og.url" />
+    <meta property="og:image" content="https://uappexplorer.com/img/ubuntu-logo.png" ng-content="og.image" />
     <meta property="og:description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
     <meta property="og:site_name" content="Ubuntu Touch Apps" ng-content="title" />
 
@@ -65,12 +65,12 @@
             <a ui-sref="apps(back)" class="link clickable" ng-if="$state.current.name == 'app'">
               <i class="fa fa-chevron-left ng-cloak"></i>
               <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              Ubuntu Touch Apps
+              uApp Explorer
             </a>
             <a ui-sref="main" class="link clickable ng-cloak" ng-if="$state.current.name != 'app'">
               <i class="fa fa-chevron-left" ng-show="$state.current.name == 'apps'"></i>
               <img src="/img/ubuntu-logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              Ubuntu Touch Apps
+              uApp Explorer
             </a>
           </span>
         </div>
@@ -106,7 +106,7 @@
     <div class="container main">
       <div class="row">
         <div class="col-sm-12 text-center disclaimer">
-          This is an unofficial appstore for Ubuntu Touch apps,
+          This is an unofficial app viewer for Ubuntu Touch apps,
           <a ng-click="faq()" class="clickable">learn more</a>.
         </div>
       </div>

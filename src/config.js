@@ -29,7 +29,7 @@ var config = {
   server: {
     ip: '0.0.0.0',
     port: 8080,
-    host: 'https://appstore.bhdouglass.com',
+    host: 'https://uappexplorer.com',
     static: '/static',
   },
   mongo: {

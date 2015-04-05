@@ -4,7 +4,7 @@
 
 Support this project via [Gratipay](https://gratipay.com/bhdouglass/)
 
-Browse, download, and search apps from the Ubuntu click appstore - [appstore.bhdouglass.com](http://appstore.bhdouglass.com/).
+Browse, download, and search apps from the Ubuntu click appstore - [uappexplorer.com](http://uappexplorer.com/).
 
 While this app uses the Ubuntu [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
 it caches images and data to be kind to the api.
@@ -98,7 +98,7 @@ by the following env variables.
     * Default: `http://service.prerender.io/`
 * ALLOWED_DOMAINS
     * The domains the local prerender server allows
-    * Default: `appstore.bhdouglass.com,local.appstore.bhdouglass.com,127.0.0.1,localhost`
+    * Default: `uappexplorer.com,local.uappexplorer.com,127.0.0.1,localhost`
 * NODEJS_NO_SPIDER
     * Set to 1 to disable the spider
     * Default: 0

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, ipCookie, utils) {
-  var title = 'Ubuntu Touch Apps';
+  var title = 'uApp Explorer';
   $scope.title = title;
   $scope.og = {};
   $scope.url = $location.protocol() + '://' + $location.host() + '/';
