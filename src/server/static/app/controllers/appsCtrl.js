@@ -116,8 +116,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   function fetchCategories() {
     api.categories().then(function(data) {
       $scope.categories = data;
-      $scope.category.name = $scope.categories[0].name;
-      $scope.category.internal_name = $scope.categories[0].internal_name;
+      $scope.category = $scope.categories[0];
 
       locationChange();
     }, function(err) {
@@ -258,13 +257,11 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       });
     }
     else {
-      $scope.category = {
-        name: 'All Apps',
-        internal_name: 'all',
-      };
+      $scope.category = $scope.categories[0];
     }
+    $scope.categoryModel = $scope.category;
 
-    if ($scope.category.internal_name == 'all' || !$scope.category.internal_name) {
+    if (!$scope.category || $scope.category.internal_name == 'all' || !$scope.category.internal_name) {
       $scope.paging.query.categories = undefined;
     }
     else {
@@ -282,6 +279,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }
 
     $scope.paging.sort = $scope.sort;
+    $scope.sortModel = $scope.sort;
     //end sort
 
     //start view
@@ -349,6 +347,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     else {
       $scope.paging.query.type = $scope.type;
     }
+    $scope.typeModel = $scope.type;
     //end type
   }
   locationChange();

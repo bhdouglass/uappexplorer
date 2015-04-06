@@ -322,3 +322,11 @@ a.list-group-item:hover, a.list-group-item:focus {
   font-size: 11px;
   margin-bottom: 10px;
 }
+
+.top-filters {
+  margin-top: 10px;
+}
+
+.more-filters-btn {
+  margin-right: 10px;
+}
