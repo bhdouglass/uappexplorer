@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, api, utils) {
+angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, $window, api, utils) {
   $rootScope.app = null;
   $rootScope.back = {};
   $scope.apps = [];
@@ -144,6 +144,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
 
   $scope.$watch('current_page', function() {
     if ($scope.current_page) {
+      $window.scrollTo(0, 0);
       $location.search('page', $scope.current_page);
     }
 
