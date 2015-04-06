@@ -196,7 +196,7 @@
         </div>
         <div ng-class="{clearfix: ($index + 1) % 3 == 0}"></div>
       </div>
-      <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && app.reviews.length == 0">
+      <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && (!app.reviews || app.reviews.length == 0)">
         <h4>No reviews yet!</h4>
       </div>
     </div>
