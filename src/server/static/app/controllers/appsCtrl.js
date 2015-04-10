@@ -45,6 +45,12 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       label: 'Oldest',
       value: 'published_date'
     }, {
+      label: 'Latest Update',
+      value: '-last_updated'
+    }, {
+      label: 'Oldest Update',
+      value: 'last_updated'
+    }, {
       label: 'Highest Heart Rating',
       value: '-points'
     }, {
