@@ -23,6 +23,10 @@ angular.module('appstore').directive('pages', function() {
           start = $scope.pages - 3;
         }
 
+        if (start < 0) {
+          start = 0;
+        }
+
         for (var i = start; i < $scope.pages && i < start + 3; i++) {
           pages_repeater.push(i);
         }

@@ -143,9 +143,14 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.$watch('paging', fetchApps, true);
 
   $scope.$watch('current_page', function() {
-    if ($scope.current_page) {
+    if ($scope.current_page !== undefined) {
       $window.scrollTo(0, 0);
-      $location.search('page', $scope.current_page);
+      if ($scope.current_page === 0) {
+        $location.search('page', undefined);
+      }
+      else {
+        $location.search('page', $scope.current_page);
+      }
     }
 
     $scope.paging.skip = $scope.current_page * $scope.paging.limit;
@@ -175,6 +180,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   });
 
   $scope.changeCategory = function(category) {
+    $scope.current_page = 0;
     if (category.internal_name == 'all') {
       $location.search('category', undefined);
     }
@@ -202,6 +208,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   };
 
   $scope.changeArchitecture = function(architecture) {
+    $scope.current_page = 0;
     if (architecture == $scope.defaultArchitecture) {
       $location.search('arch', undefined);
     }
@@ -211,6 +218,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   };
 
   $scope.changeFramework = function(framework) {
+    $scope.current_page = 0;
     if (framework == $scope.defaultFramework) {
       $location.search('framework', undefined);
     }
@@ -220,6 +228,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   };
 
   $scope.changeType = function(type) {
+    $scope.current_page = 0;
     if (type == 'all') {
       $location.search('type', undefined);
     }
@@ -231,7 +240,10 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   function locationChange() {
     //start page
     var page = $location.search().page;
-    if (page) {
+    if (page < 0) {
+        $scope.current_page = 0;
+    }
+    else if (page !== undefined) {
       $scope.current_page = page;
     }
     //end page
