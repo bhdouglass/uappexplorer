@@ -38,9 +38,9 @@ function extractData(data, file, callback) {
 
     _.forEach(fdata, function(line) {
       line = line.toLowerCase().trim();
-      if (line.indexOf('exec=') == 0) {
+      if (line.indexOf('exec=') === 0) {
         line = line.replace('exec=', '').trim();
-        if (line.indexOf('webapp-container') == 0) {
+        if (line.indexOf('webapp-container') === 0) {
           webapp = true;
         }
       }

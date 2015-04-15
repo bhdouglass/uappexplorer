@@ -93,6 +93,10 @@ function map(pkg, data) {
     }
   }
 
+  if (pkg.types.length === 0) {
+    pkg.types = [pkg.type];
+  }
+
   return pkg;
 }
 
