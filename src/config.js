@@ -50,6 +50,11 @@ var config = {
     cloud_name: '',
     api_key: '',
     api_secret: '',
+  },
+  ubuntu_sso: {
+    email: '',
+    password: '',
+    token_name: 'uappexplorer.com',
   }
 };
 
@@ -128,6 +133,14 @@ if (process.env.CLOUDINARY_KEY) {
 
 if (process.env.CLOUDINARY_SECRET) {
   config.cloudinary.api_secret = process.env.CLOUDINARY_SECRET;
+}
+
+if (process.env.UBUNTU_SSO_EMAIL) {
+  config.ubuntu_sso.email = process.env.UBUNTU_SSO_EMAIL;
+}
+
+if (process.env.UBUNTU_SSO_PASSWORD) {
+  config.ubuntu_sso.password = process.env.UBUNTU_SSO_PASSWORD;
 }
 
 module.exports = config;

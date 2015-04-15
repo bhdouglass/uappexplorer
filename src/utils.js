@@ -70,6 +70,19 @@ function download(url, filename, callback) {
   }).pipe(fs.createWriteStream(filename));
 }
 
+function isJson(string) {
+  var value = true;
+  try {
+    JSON.parse(string);
+  }
+  catch (e) {
+    value = false;
+  }
+
+  return value;
+}
+
 exports.download = download;
 exports.niceBytes = niceBytes;
 exports.fixUrl = fixUrl;
+exports.isJson = isJson;

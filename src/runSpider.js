@@ -26,6 +26,14 @@ if (process.argv[2]) {
       spider.parseReviews(process.argv[3], callback);
     }
   }
+  else if (process.argv[2] == 'type' || process.argv[2] == 'types') {
+    if (process.argv[3]) {
+      spider.parseClickPackageByName(process.argv[3], callback);
+    }
+    else {
+      spider.parseAllClickPackages(callback);
+    }
+  }
   else {
     spider.parsePackage(process.argv[2], callback);
   }

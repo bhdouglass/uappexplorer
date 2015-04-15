@@ -42,6 +42,7 @@ var packageSchema = mongoose.Schema({
   title: String,
   total_rating: Number,
   type: String,
+  types: [String],
   url: String,
   version: String,
   videos: [String],

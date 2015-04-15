@@ -15,7 +15,7 @@ var paths = {
   front_js: ['src/server/static/app/**/*.js', '!src/server/static/app/load.js'],
   js_libs: 'src/server/static/js/*.js',
   load: 'src/server/static/app/load.js',
-  back_js: ['gulpfile.js', 'src/**/*.js', '!src/server/static/app/**/*.js', '!src/server/static/js/*.js'],
+  back_js: ['gulpfile.js', 'src/**/*.js', '!src/server/static/app/**/*.js', '!src/server/static/**/*.js'],
   imgs: 'src/server/static/img/*',
   css: 'src/server/static/css/*.css',
   html: ['src/server/static/*.html', 'src/server/static/app/**/*.html'],

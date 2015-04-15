@@ -3,6 +3,7 @@ var logger = require('../logger');
 var department = require('./department');
 var review = require('./review');
 var package = require('./package');
+var packageParser = require('./packageParser');
 var schedule = require('node-schedule');
 var express = require('express');
 
@@ -15,6 +16,15 @@ function setupSchedule() {
 
   schedule.scheduleJob(spider_rule, function() {
     package.parsePackages();
+  });
+
+  var spider_rule_packages = new schedule.RecurrenceRule();
+  spider_rule_packages.dayOfWeek = 1;
+  spider_rule_packages.hour = 3;
+  spider_rule_packages.minute = 0;
+
+  schedule.scheduleJob(spider_rule_packages, function() {
+    packageParser.parseAllClickPackages();
   });
 
   var spider_rule_updates = new schedule.RecurrenceRule();
@@ -81,5 +91,8 @@ exports.parseDepartments = department.parseDepartments;
 exports.parseReviews = review.parseReviews;
 exports.refreshRatings = review.refreshRatings;
 exports.calculateBayesianAverages = review.calculateBayesianAverages;
+exports.parseClickPackage = packageParser.parseClickPackage;
+exports.parseClickPackageByName = packageParser.parseClickPackageByName;
+exports.parseAllClickPackages = packageParser.parseAllClickPackages;
 exports.setupSchedule = setupSchedule;
 exports.server = server;

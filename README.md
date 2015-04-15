@@ -116,6 +116,12 @@ by the following env variables.
 * CLOUDINARY_SECRET
     * Cloudinary api secret
     * Default: empty
+* UBUNTU_SSO_EMAIL
+    * Ubuntu single signon email address
+    * Default: empty
+* UBUNTU_SSO_PASSWORD
+    * Ubuntu single signon password
+    * Default: empty
 
 ## Libraries ##
 
