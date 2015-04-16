@@ -14,8 +14,6 @@ var async = require('async');
 var oauth = null;
 var token = null;
 
-//TODO download path from config
-
 function unlink(files) {
   _.forEach(files, function(file) {
     if (_.isArray(file)) {
@@ -25,6 +23,7 @@ function unlink(files) {
       if (file.indexOf(config.tmp_dir) != 0) {
         file = config.tmp_dir + '/' + file.replace('/', '__');
       }
+
       fs.unlink(file);
     }
   });
@@ -85,7 +84,7 @@ function parseControl(pkg, files, callback) {
           type.push('application');
           files.desktops.push(hook.desktop);
         }
-        else if (hook['bin-path']) {
+        else if (hook['bin-path'] || hook['snappy-systemd']) {
           type.push('application');
         }
         else if (hook.scope) {
