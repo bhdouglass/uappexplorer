@@ -22,14 +22,14 @@ function unlink(files) {
       unlink(file);
     }
     else {
-      file = file.replace('/', '__');
+      file = file.replace(/\//g, '__');
       fs.unlink(file);
     }
   });
 }
 
 function extractData(data, file, callback) {
-  var write_file = file.replace('/', '__');
+  var write_file = file.replace(/\//g, '__');
   var f = fs.createWriteStream(write_file)
   .on('finish', function() {
     var webapp = false;
