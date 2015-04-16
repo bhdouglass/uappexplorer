@@ -14,12 +14,12 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
   $scope.appIcon = utils.appIcon;
 
   function refresh() {
-    api.popular().then(function(data) {
+    /*api.popular().then(function(data) {
       $scope.popular = data;
     }, function(err) {
       console.error(err);
       $rootScope.setError('Could not fetch popular app list, click to retry', refresh);
-    });
+    });*/
 
     api.counts().then(function(data) {
       $scope.counts = data;

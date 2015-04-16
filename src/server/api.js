@@ -245,9 +245,9 @@ function setup(app, success, error) {
     }
 
     async.series([
-      count({type: 'application'}, 'applications'),
-      count({type: 'webapp'}, 'webapps'),
-      count({type: 'scope'}, 'scopes'),
+      count({types: {'$in': ['application']}}, 'applications'),
+      count({types: {'$in': ['webapp']}}, 'webapps'),
+      count({types: {'$in': ['scope']}}, 'scopes'),
       count({categories: 'games'}, 'games'),
     ], function(err, result) {
       if (err) {
