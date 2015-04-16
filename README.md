@@ -37,7 +37,7 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 * Fetch all packages
     * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js`
 * Fetch only updated/missing packages
-    * Run: `nvagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js update`
+    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js update`
 * Fetch departments/categories
     * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js department`
 * Fetch reviews

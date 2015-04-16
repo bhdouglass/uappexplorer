@@ -1,3 +1,4 @@
+var packageParser = require('./packageParser');
 var config = require('../config');
 var utils = require('../utils');
 var db = require('../db');
@@ -200,9 +201,15 @@ function parsePackageUpdates(callback) {
           logger.error(err);
         }
 
-        if (callback) {
-          callback();
-        }
+        async.eachSeries(newList, packageParser.parseClickPackageByName, function(err) {
+          if (err) {
+            logger.error(err);
+          }
+
+          if (callback) {
+            callback();
+          }
+        });
       });
     });
   });
