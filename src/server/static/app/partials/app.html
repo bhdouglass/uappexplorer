@@ -18,7 +18,9 @@
 
             <div class="row-content app-info">
               <div class="least-content">
-                <div class="label" ng-class="{'label-material-lightblue': types[app.type] == 'App', 'label-material-cyan': types[app.type] == 'Web App', 'label-material-orange': types[app.type] == 'Scope'}" ng-bind="types[app.type]"></div>
+                <span ng-repeat="type in app.types">
+                  <type ng-model="type"></type>
+                </span>
               </div>
               <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
               <p class="list-group-item-text">

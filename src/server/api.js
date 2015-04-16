@@ -17,7 +17,7 @@ function miniPkg(pkg) {
     name: pkg.name,
     cloudinary_url: pkg.cloudinary_url,
     title: pkg.title,
-    type: pkg.type,
+    types: pkg.types,
     bayesian_average: pkg.bayesian_average,
     prices: pkg.prices,
     short_description: description,

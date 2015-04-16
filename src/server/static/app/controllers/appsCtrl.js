@@ -27,7 +27,6 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.framework = $scope.defaultFramework;
   $scope.type = 'all';
   $scope.appIcon = utils.appIcon;
-  $scope.types = utils.types;
 
   $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
 
@@ -361,10 +360,11 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }
 
     if ($scope.type == 'all' || !$scope.type) {
-      $scope.paging.query.type = undefined;
+      $scope.paging.query.types = undefined;
     }
     else {
-      $scope.paging.query.type = $scope.type;
+      var types = [$scope.type];
+      $scope.paging.query.types = {'_$in': types};
     }
     $scope.typeModel = $scope.type;
     //end type
