@@ -7,6 +7,7 @@ var _ = require('lodash');
 
 var config = {
   data_dir: '/tmp',
+  tmp_dir: '/tmp',
   capabilities: ['spider', 'app', 'api', 'icons', 'feed'],
   use_spider: function() {
     return (config.capabilities.indexOf('spider') > -1);

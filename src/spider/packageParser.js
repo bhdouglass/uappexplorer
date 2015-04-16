@@ -22,14 +22,16 @@ function unlink(files) {
       unlink(file);
     }
     else {
-      file = file.replace(/\//g, '__');
+      if (file.indexOf(config.tmp_dir) != 0) {
+        file = config.tmp_dir + '/' + file.replace('/', '__');
+      }
       fs.unlink(file);
     }
   });
 }
 
 function extractData(data, file, callback) {
-  var write_file = file.replace(/\//g, '__');
+  var write_file = config.tmp_dir + '/' + file.replace('/', '__');
   var f = fs.createWriteStream(write_file)
   .on('finish', function() {
     var webapp = false;
@@ -83,12 +85,16 @@ function parseControl(pkg, files, callback) {
           type.push('application');
           files.desktops.push(hook.desktop);
         }
+        else if (hook['bin-path']) {
+          type.push('application');
+        }
         else if (hook.scope) {
           type.push('scope');
         }
       });
 
       if (type.length === 0) {
+        unlink(files);
         callback('No app or scope found in manifest');
       }
       else {
@@ -98,6 +104,7 @@ function parseControl(pkg, files, callback) {
     }
   }
   else {
+    unlink(files);
     callback('Invalid json in manifest');
   }
 }
@@ -130,10 +137,10 @@ function extractControl(pkg, files, callback) {
 
 function parseDownload(pkg, callback) {
   var files = {
-    click: pkg.name + '.click',
-    data: pkg.name + '.tar.gz',
-    manifest: pkg.name + '.manifest',
-    control: pkg.name + '.control.tar.gz',
+    click: config.tmp_dir + '/' + pkg.name + '.click',
+    data: config.tmp_dir + '/' + pkg.name + '.tar.gz',
+    manifest: config.tmp_dir + '/' + pkg.name + '.manifest',
+    control: config.tmp_dir + '/' + pkg.name + '.control.tar.gz',
     desktops: []
   };
 
@@ -179,7 +186,7 @@ function parseDownload(pkg, callback) {
               callback(err);
             }
             else {
-              if (webapps.length == _.compact(webapps).length) { //All the apps included are webapps
+              if (webapps.length > 0 && webapps.length == _.compact(webapps).length) { //All the apps included are webapps
                 var index = pkg.types.indexOf('application');
                 pkg.types.splice(index, 1);
                 pkg.types.push('webapp');
@@ -226,7 +233,7 @@ function downloadPackage(pkg, callback) {
   })
   .on('response', function(response) {
     if (response.statusCode == 200) {
-      var f = fs.createWriteStream(pkg.name + '.click');
+      var f = fs.createWriteStream(config.tmp_dir + '/' + pkg.name + '.click');
       f.on('finish', function() {
         parseDownload(pkg, callback);
       });
@@ -300,7 +307,7 @@ function parseClickPackage(pkg, callback) {
   else {
     downloadPackage(pkg, function(err) {
       if (err) {
-        logger.error('Failed to determine package type, falling back: ' + err);
+        logger.error('Failed to determine package type for ' + pkg.name + ', falling back: ' + err);
         fallbackType(pkg, callback);
       }
       else {
@@ -342,11 +349,13 @@ function parseAllClickPackages(callback) {
       callback(err);
     }
     else {
-      logger.debug('Going to parse ' + pkgs.length + ' packages');
+      logger.info('Going to parse ' + pkgs.length + ' packages');
       async.eachSeries(pkgs, parseClickPackage, function(err) {
         if (err) {
           logger.error(err);
         }
+
+        logger.info('Finished parsing click packages');
 
         if (callback) {
           callback();
