@@ -57,14 +57,14 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  var one_time = new Date(2015, 3, 15, 23, 15, 0);
+  var one_time = new Date(2015, 3, 15, 23, 50, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
       logger.info('spider: running spider (once)');
-      package.parsePackages();
+      //package.parsePackages();
       //review.parseReviews();
-      //packageParser.parseAllClickPackages();
+      packageParser.parseAllClickPackages();
     });
   }
 }
