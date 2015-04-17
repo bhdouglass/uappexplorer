@@ -1,13 +1,17 @@
 <div>
   <div class="row">
     <div class="col-md-12 text-center">
-      <h1>Browse</h1>
+      <h1>
+        <a href="/apps">
+          Browse
+        </a>
+      </h1>
     </div>
   </div>
   <div class="row">
     <div class="col-md-3">
       <div class="list-group">
-        <a class="list-group-item clickable" href="/apps" title="Browse Apps">
+        <a class="list-group-item clickable" href="/apps?type=application" title="Browse Apps">
           <div class="row-action-primary">
             <div class="action-icon ubuntu-shape">
               <i class="fa fa-mobile background-material-lightblue"></i>
@@ -100,7 +104,11 @@
 
   <div class="row" ng-if="essentials">
     <div class="col-md-12 text-center">
-      <h1>Essentials</h1>
+      <h1>
+        <a href="/apps?sort=-bayesian_average">
+          Essentials
+        </a>
+      </h1>
     </div>
   </div>
   <div class="row" ng-if="essentials">
