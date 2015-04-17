@@ -11,7 +11,7 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
     templateUrl: '/app/partials/main.html',
     controller: 'mainCtrl'
   }).state('apps', {
-    url: '/apps?q&category&sort&view&arch&framework&page',
+    url: '/apps?q&category&sort&view&arch&framework&page&type',
     templateUrl: '/app/partials/apps.html',
     controller: 'appsCtrl',
     reloadOnSearch: false,
