@@ -17,7 +17,7 @@
             </div>
 
             <div class="row-content app-info">
-              <div class="least-content">
+              <div class="least-content hidden-xs">
                 <span ng-repeat="type in app.types">
                   <type ng-model="type"></type>
                 </span>
@@ -37,6 +37,12 @@
                 <br/>
                 <span ng-show="isFree(app.prices)" class="label label-primary">Free</span>
                 <span ng-show="!isFree(app.prices)" class="label label-success price" ng-repeat="(currency, value) in app.prices" ng-bind="app.prices|dollars:currency"></span>
+
+                <span class="pull-right visible-xs">
+                    <span ng-repeat="type in app.types">
+                      <type ng-model="type"></type>
+                    </span>
+                </span>
               </p>
             </div>
           </div>
