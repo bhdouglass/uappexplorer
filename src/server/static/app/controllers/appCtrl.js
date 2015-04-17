@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, api, utils) {
+angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils) {
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
   $scope.app = null;
@@ -49,6 +49,15 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       app.more_reviews = false;
     }).finally(function() {
       app.loading_more_reivews = false;
+    });
+  };
+
+  $scope.qrCode = function() {
+    $scope.qrCodeUrl = $location.absUrl();
+    console.log($scope.qrCodeUrl);
+    $modal.open({
+      templateUrl: '/app/partials/qrcode.html',
+      scope: $scope
     });
   };
 });

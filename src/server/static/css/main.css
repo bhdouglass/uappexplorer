@@ -330,3 +330,14 @@ a.list-group-item:hover, a.list-group-item:focus {
 .more-filters-btn {
   margin-right: 10px;
 }
+
+.qr-button {
+  position: relative;
+}
+
+.qr-button .fa-2x {
+  position: absolute;
+  left:7px;
+  top:-15px;
+  z-index:100;
+}

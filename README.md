@@ -145,6 +145,7 @@ The following third party libraries are used in this app:
     * [Angular UI](http://angular-ui.github.io/)
     * [Lo-Dash](https://lodash.com/)
     * [SwipeBox](http://brutaldesign.github.io/swipebox/)
+    * [Angular QR Code](https://github.com/monospaced/angular-qrcode)
 
 ## License ##
 

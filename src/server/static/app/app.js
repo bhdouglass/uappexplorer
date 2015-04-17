@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ipCookie']);
+angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ipCookie', 'monospaced.qrcode']);
 
 angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $urlRouterProvider.otherwise('/apps');
@@ -32,4 +32,20 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
   });
 
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|scope):/);
+});
+
+angular.module('appstore').run(function($rootScope, $modalStack, $timeout) {
+  $rootScope.$on('$locationChangeStart', function(event) {
+    var top = $modalStack.getTop();
+    if (top) {
+      $modalStack.dismiss(top.key);
+      event.preventDefault();
+    }
+
+    $timeout(function() {
+      if ($.swipebox.isOpen) {
+        $.swipebox.close();
+      }
+    });
+  });
 });

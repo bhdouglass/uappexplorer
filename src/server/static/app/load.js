@@ -11,6 +11,8 @@ LazyLoad.js([
   '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js',
   '//www.google-analytics.com/analytics.js',
   '/js/angular-cookie.min.js',
+  '/js/qrcode-generator.js',
+  '/js/angular-qrcode.js',
   '/app/app.js' + v,
   //@if ENV != 'production'
   '/app/controllers/indexCtrl.js',
