@@ -64,7 +64,8 @@ gulp.task('lint-front', function() {
 gulp.task('lint-back', function() {
   gulp.src(paths.back_js)
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+    .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('build-html', function() {
@@ -110,6 +111,11 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('src/server/static/dist/app'));
 
   gulp.src(paths.js_libs)
+    .pipe(sourcemaps.init())
+    .pipe(concat('libs.js'))
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('src/server/static/dist/js'));
 });
 

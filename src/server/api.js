@@ -295,7 +295,7 @@ function setup(app, success, error) {
         error(res, err);
       }
       else if (!rev) {
-        error(res, req.params.name + ' was not found', 404);
+        error(res, 'No reviews found for ' + req.params.name, 404);
       }
       else {
         var reviews = rev.reviews;

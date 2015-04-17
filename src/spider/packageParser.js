@@ -20,8 +20,8 @@ function unlink(files) {
       unlink(file);
     }
     else {
-      if (file.indexOf(config.tmp_dir) != 0) {
-        file = config.tmp_dir + '/' + file.replace('/', '__');
+      if (file.indexOf(config.tmp_dir) !== 0) {
+        file = config.tmp_dir + '/' + file.replace(/\//g, '__');
       }
 
       fs.unlink(file);
@@ -30,7 +30,7 @@ function unlink(files) {
 }
 
 function extractData(data, file, callback) {
-  var write_file = config.tmp_dir + '/' + file.replace('/', '__');
+  var write_file = config.tmp_dir + '/' + file.replace(/\//g, '__');
   var f = fs.createWriteStream(write_file)
   .on('finish', function() {
     var webapp = false;
