@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, $window, api, utils) {
+angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, $window, $q, api, utils) {
   $rootScope.app = null;
   $rootScope.back = {};
   $scope.apps = [];
@@ -102,16 +102,22 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     mini: true,
   };
 
+  var canceler = $q.defer();
   function fetchApps() {
+    canceler.resolve(); //abort previous request
+    canceler = $q.defer();
+
     utils.loading($scope);
-    api.apps($scope.paging).then(function(data) {
+    api.apps($scope.paging, canceler).then(function(data) {
       $scope.apps = data.apps;
       $scope.app_count = data.count;
       $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
 
     }, function(err) {
-      console.error(err);
-      $rootScope.setError('Could not download app list, click to retry', fetchApps);
+      if (err.status > 0) { //0 means aborted
+        console.error(err);
+        $rootScope.setError('Could not download app list, click to retry', fetchApps);
+      }
     }).finally(function() {
       utils.doneLoading($scope);
     });
@@ -144,8 +150,6 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     });
   }
   fetchFrameworks();
-
-  $scope.$watch('paging', fetchApps, true);
 
   $scope.$watch('current_page', function() {
     if ($scope.current_page !== undefined) {
@@ -370,6 +374,9 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     //end type
   }
   locationChange();
+
+  //Moved down hear to pick up changes from locationChange()
+  $scope.$watch('paging', fetchApps, true);
 
   $scope.$on('$locationChangeSuccess', locationChange);
 

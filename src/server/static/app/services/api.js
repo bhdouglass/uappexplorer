@@ -2,7 +2,7 @@
 
 angular.module('appstore').factory('api', function($q, $http) {
   return {
-    apps: function(paging) {
+    apps: function(paging, canceler) {
       paging = angular.copy(paging);
       _.forEach(paging.query, function(q) {
         if (_.isObject(q) && q._$in) {
@@ -13,7 +13,8 @@ angular.module('appstore').factory('api', function($q, $http) {
 
       var apps_deferred = $q.defer();
       $http.get('/api/apps', {
-        params: paging
+        params: paging,
+        timeout: canceler.promise
       }).then(function(res) {
         var apps = _.sortBy(res.data.data, paging.sort);
         apps_deferred.resolve(apps);
@@ -23,7 +24,8 @@ angular.module('appstore').factory('api', function($q, $http) {
 
       var count_deferred = $q.defer();
       $http.get('/api/apps?count=true', {
-        params: paging
+        params: paging,
+        timeout: canceler.promise
       }).then(function(res) {
         var app_count = res.data.data;
         count_deferred.resolve(app_count);
