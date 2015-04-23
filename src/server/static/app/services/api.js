@@ -11,11 +11,16 @@ angular.module('appstore').factory('api', function($q, $http) {
         }
       });
 
+      var options = {
+        params: paging
+      };
+
+      if (canceler) {
+        options.timeout = canceler.promise;
+      }
+
       var apps_deferred = $q.defer();
-      $http.get('/api/apps', {
-        params: paging,
-        timeout: canceler.promise
-      }).then(function(res) {
+      $http.get('/api/apps', options).then(function(res) {
         var apps = _.sortBy(res.data.data, paging.sort);
         apps_deferred.resolve(apps);
       }, function(err) {
@@ -23,10 +28,7 @@ angular.module('appstore').factory('api', function($q, $http) {
       });
 
       var count_deferred = $q.defer();
-      $http.get('/api/apps?count=true', {
-        params: paging,
-        timeout: canceler.promise
-      }).then(function(res) {
+      $http.get('/api/apps?count=true', options).then(function(res) {
         var app_count = res.data.data;
         count_deferred.resolve(app_count);
       }, function(err) {
