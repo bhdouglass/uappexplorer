@@ -144,6 +144,8 @@
             Updated: <span ng-bind="app.last_updated | date"></span>
             <br/>
             License: <span ng-bind="app.license"></span>
+            <br/>
+            Architecture{{app.architecture.length > 1 ? 's' : ''}}: <span ng-bind="app.architecture.join(', ')"></span>
           </div>
         </div>
 
