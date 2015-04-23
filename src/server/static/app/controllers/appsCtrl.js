@@ -84,6 +84,9 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }, {
       label: 'Scopes',
       value: 'scope'
+    }, {
+      label: 'Snappy Apps',
+      value: 'snappy'
     }
   ];
 
@@ -91,6 +94,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     application: 'apps',
     scope: 'scopes',
     webapp: 'web apps',
+    snappy: 'snappy apps',
     all: 'apps & scopes'
   };
 

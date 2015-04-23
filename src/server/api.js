@@ -77,6 +77,14 @@ function setup(app, success, error) {
   //TODO cache this to speed up requests
   app.get('/api/apps', function(req, res) {
     var findQuery = req.query.query ? JSON.parse(req.query.query) : {};
+    if (!findQuery.types) {
+      findQuery.types = {'$in': [
+        'webapp',
+        'application',
+        'scope'
+      ]};
+    }
+
     var query = null;
     var regxp = null;
     if (req.query.count == 'true') {

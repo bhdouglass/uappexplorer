@@ -85,7 +85,7 @@ function parseControl(pkg, files, callback) {
           files.desktops.push(hook.desktop);
         }
         else if (hook['bin-path'] || hook['snappy-systemd']) {
-          type.push('application');
+          type.push('snappy');
         }
         else if (hook.scope) {
           type.push('scope');
