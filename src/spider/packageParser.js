@@ -29,6 +29,27 @@ function unlink(files) {
   });
 }
 
+function checkSnappy(data, callback) {
+  var found = false;
+  fs.createReadStream(data)
+  .on('error', function(err) {
+    callback(err);
+  })
+  .pipe(zlib.Unzip())
+  .pipe(tar.Parse())
+  .on('entry', function(entry) {
+    if (entry.path == './meta/package.yaml') {
+      found = true;
+      callback(null, true);
+    }
+  })
+  .on('end', function() {
+    if (!found) {
+      callback('Could not find package.yaml');
+    }
+  });
+}
+
 function extractData(data, file, callback) {
   var write_file = config.tmp_dir + '/' + file.replace(/\//g, '__');
   var f = fs.createWriteStream(write_file)
@@ -164,7 +185,20 @@ function parseDownload(pkg, callback) {
     pkg.types = [];
     extractControl(pkg, files, function(err) {
       if (err) {
-        callback(err);
+        checkSnappy(files.data, function(err2, snappy) {
+          if (err2) {
+            callback(err + ' ' + err2);
+          }
+          else {
+            if (snappy) {
+              pkg.types = ['snappy'];
+              pkg.save(callback);
+            }
+            else {
+              callback(err);
+            }
+          }
+        });
       }
       else {
         //Check if it's a web app
@@ -293,7 +327,7 @@ function parseClickPackage(pkg, callback) {
       else {
         downloadPackage(pkg, function(err) {
           if (err) {
-            logger.error('Failed to determine package type, falling back: ' + err);
+            logger.error('Failed to determine package type for ' + pkg.name + ', falling back: ' + err);
             fallbackType(pkg, callback);
           }
           else {
