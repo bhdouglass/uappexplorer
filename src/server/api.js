@@ -324,7 +324,8 @@ function setup(app, success, error) {
         success(res, {
           reviews: reviews,
           name: rev.name,
-          more: more
+          more: more,
+          stats: rev.stats,
         });
       }
     });

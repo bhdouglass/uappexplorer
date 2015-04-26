@@ -341,3 +341,12 @@ a.list-group-item:hover, a.list-group-item:focus {
   top:-15px;
   z-index:100;
 }
+
+.star-chart {
+  margin-bottom: 15px;
+}
+
+.star-chart span {
+  margin-top: -8px;
+  margin-right: 5px;
+}

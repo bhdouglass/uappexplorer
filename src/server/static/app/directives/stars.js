@@ -7,7 +7,7 @@ angular.module('appstore').directive('stars', function() {
       model: '=ngModel'
     },
     replace: true,
-    template: '<span class="text-primary" title="{{stars}}/5">' +
+    template: '<span class="text-primary" title="{{stars}} / 5">' +
                 '<span ng-repeat="f in full track by $index"><i class="fa fa-star"></i></span>' +
                 '<span ng-repeat="h in half track by $index"><i class="fa fa-star-half-o"></i></span>' +
                 '<span ng-repeat="e in empty track by $index"><i class="fa fa-star-o"></i></span>' +

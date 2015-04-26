@@ -18,6 +18,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
     api.reviews($scope.app.name, 9).then(function(data) {
       if ($scope.app.name == data.name) {
         $scope.app.reviews = data.reviews;
+        $scope.app.review_stats = data.stats;
         $scope.app.more_reviews = data.more;
       }
     }).finally(function() {
@@ -59,5 +60,16 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       templateUrl: '/app/partials/qrcode.html',
       scope: $scope
     });
+  };
+
+  $scope.stats = function(rating) {
+    var width = 0;
+    if ($scope.app && $scope.app.review_stats && $scope.app.review_stats.total > 0) {
+      width = $scope.app.review_stats[rating] / $scope.app.review_stats.total * 100;
+    }
+
+    return {
+      width: width + '%'
+    };
   };
 });

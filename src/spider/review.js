@@ -165,6 +165,20 @@ function parseReview(pkg, callback) {
 
           calculateRatings(pkg, reviews);
 
+          var stats = {
+            5: 0,
+            4: 0,
+            3: 0,
+            2: 0,
+            1: 0,
+            total: reviews.length,
+          };
+          _.forEach(reviews, function(review) {
+            stats[review.rating]++;
+          });
+
+          rev.stats = stats;
+
           async.series([
             function(cb) {
               rev.save(function(err) {
