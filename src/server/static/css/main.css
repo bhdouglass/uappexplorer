@@ -347,6 +347,19 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 
 .star-chart span {
-  margin-top: -8px;
+  margin-top: -6px;
   margin-right: 5px;
+}
+
+.star-chart .progress {
+  height: 8px;
+  margin-bottom: 16px;
+}
+
+.star-chart .left-panel {
+  margin-bottom: 15px;
+}
+
+.text-medium {
+  font-size: 16px;
 }
