@@ -76,7 +76,6 @@
     </div>
   </div>
 
-
   <div class="row" ng-if="loading">
     <div class="col-md-12 text-center">
       <i class="fa fa-spinner fa-spin fa-4x"></i>
@@ -86,39 +85,7 @@
   <div class="row apps">
     <div ng-repeat="app in apps">
       <div ng-class="{'col-sm-6 col-md-4': view == 'grid', 'col-sm-12': view != 'grid'}">
-        <div class="list-group">
-          <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
-            <div class="row-action-primary">
-              <div class="icon ubuntu-shape">
-                <img ng-src="{{appIcon(app)}}" alt="{{app.name}}" />
-              </div>
-            </div>
-
-            <div class="row-content">
-              <div class="least-content">
-                <span ng-repeat="type in app.types">
-                  <type ng-model="type"></type>
-                </span>
-              </div>
-              <div class="least-content-lower">
-                <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
-              </div>
-
-              <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
-              <p class="list-group-item-text">
-                <stars ng-model="app.bayesian_average"></stars>
-                <span class="text-danger heart-rating">
-                  <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
-                  <span ng-bind="app.points || 0"></span>
-                </span>
-              </p>
-
-              <p class="list-group-item-text" ng-show="view == 'list'" ng-bind="app.short_description"></p>
-            </div>
-          </a>
-
-          <div class="list-group-separator"></div>
-        </div>
+        <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>
       </div>
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
       <div class="visible-xs visible-sm" ng-class="{clearfix: $index % 2 == 1}"></div>

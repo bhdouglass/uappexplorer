@@ -29,6 +29,7 @@ LazyLoad.js([
   '/app/directives/pages.js',
   '/app/directives/ngContent.js',
   '/app/directives/type.js',
+  '/app/directives/appView.js',
   '/app/filters/nl2br.js',
   '/app/filters/dollars.js',
   //@endif

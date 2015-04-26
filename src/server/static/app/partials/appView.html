@@ -1,0 +1,33 @@
+<div class="list-group">
+  <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
+    <div class="row-action-primary">
+      <div class="icon ubuntu-shape">
+        <img ng-src="{{appIcon(app)}}" alt="{{app.name}}" />
+      </div>
+    </div>
+
+    <div class="row-content">
+      <div class="least-content">
+        <span ng-repeat="type in app.types">
+          <type ng-model="type"></type>
+        </span>
+      </div>
+      <div class="least-content-lower">
+        <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
+      </div>
+
+      <h4 class="list-group-item-heading" ng-bind="app.title"></h4>
+      <p class="list-group-item-text">
+        <stars ng-model="app.bayesian_average"></stars>
+        <span class="text-danger heart-rating">
+          <i class="fa" ng-class="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
+          <span ng-bind="app.points || 0"></span>
+        </span>
+      </p>
+
+      <p class="list-group-item-text" ng-show="showDescription == 'true'" ng-bind="app.short_description"></p>
+    </div>
+  </a>
+
+  <div class="list-group-separator"></div>
+</div>
