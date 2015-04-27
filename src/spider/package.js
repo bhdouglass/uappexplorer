@@ -88,7 +88,7 @@ function map(pkg, data) {
     }
   });
 
-  pkg.icon_hash = crypto.createHash('md5').update(pkg.icon).digest("hex");
+  pkg.icon_hash = crypto.createHash('md5').update(pkg.icon).digest('hex');
 
   if (pkg.type == 'application') {
     var desc = pkg.description.toLowerCase();
