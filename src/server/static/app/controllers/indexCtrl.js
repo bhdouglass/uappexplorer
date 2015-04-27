@@ -46,7 +46,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
       $scope.og = {
         title: title,
         description: 'Browse and discover apps for Ubuntu Touch',
-        image: $scope.url + 'img/ubuntu-logo.png',
+        image: $scope.url + 'img/logo.png',
         url: $scope.url + 'apps',
       };
     }

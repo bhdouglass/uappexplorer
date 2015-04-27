@@ -140,7 +140,7 @@ The following third party libraries are used in this app:
 * Client Side
     * [Bootstrap](http://getbootstrap.com/)
     * [jQuery](http://jquery.com/)
-    * [FontAwesome](http://fontawesome.io/)
+    * [FontAwesome](http://fontawesome.io/) - Logo is a modified version of the compass from FontAwesome
     * [AngularJS](https://angularjs.org/)
     * [Angular UI](http://angular-ui.github.io/)
     * [Lo-Dash](https://lodash.com/)
