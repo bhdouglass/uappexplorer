@@ -6,6 +6,7 @@ var logger = require('../logger');
 var _ = require('lodash');
 var async = require('async');
 var request = require('request');
+var crypto = require('crypto');
 //var cloudinary = require('cloudinary');
 
 var propertyMap = {
@@ -86,6 +87,8 @@ function map(pkg, data) {
       }
     }
   });
+
+  pkg.icon_hash = crypto.createHash('md5').update(pkg.icon).digest("hex");
 
   if (pkg.type == 'application') {
     var desc = pkg.description.toLowerCase();

@@ -6,7 +6,7 @@ var fs = require('fs');
 var mime = require('mime');
 
 function setup(app, success, error) {
-  app.get('/api/icon/:name', function(req, res) {
+  app.get(['/api/icon/:version/:name', '/api/icon/:name'], function(req, res) {
     var name = req.params.name;
     if (name.indexOf('.png') == (name.length - 4)) {
       name = name.replace('.png', '');
@@ -42,6 +42,7 @@ function setup(app, success, error) {
                 }
                 else {
                   pkg.icon_fetch_date = now.valueOf();
+                  pkg.save();
 
                   res.setHeader('Content-type', mime.lookup(filename));
                   res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days

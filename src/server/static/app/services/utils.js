@@ -52,7 +52,7 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
     appIcon: function(app) {
       var icon = '';
       if (app) {
-        icon = url + 'api/icon/' + app.name + '.png';
+        icon = url + 'api/icon/' + app.icon_hash + '/' + app.name + '.png';
         /*if (app.cloudinary_url) {
           icon = app.cloudinary_url.replace('image/upload/', 'image/upload/c_scale,w_92/');
         }*/
