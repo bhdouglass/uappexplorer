@@ -92,6 +92,18 @@ function map(pkg, data) {
     if (desc.indexOf('webapp') > -1 || desc.indexOf('web app') > -1) {
       pkg.type = 'webapp';
     }
+
+    var core = false;
+    _.forEach(pkg.framework, function(framework) {
+      if (framework.indexOf('ubuntu-core-') == 1) {
+        core = true;
+        return false;
+      }
+    });
+
+    if (core) {
+      pkg.type = 'snappy';
+    }
   }
 
   if (pkg.types.length === 0) {
