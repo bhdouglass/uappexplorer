@@ -1,5 +1,6 @@
 var db = require('../db');
 var spider = require('../spider/spider');
+var essential = require('./json/essential-apps.json');
 var _ = require('lodash');
 var fs = require('fs');
 var moment = require('moment');
@@ -157,75 +158,18 @@ function setup(app, success, error) {
   });
 
   //TODO cache this
-  app.get('/api/apps/popular', function(req, res) {
-    fs.readFile(path.join(__dirname, 'json/popular-apps.json'), function (err, data) {
-      if (err) {
-        error(res, err);
-      }
-      else {
-        var popularNames = JSON.parse(data);
-
-        var popular = [];
-        _.forEach(popularNames, function(names) {
-          popular = popular.concat(names);
-        });
-
-        db.Package.find({name: {'$in': popular}}, function(err, pkgs) {
-          if (err) {
-            error(res, err);
-          }
-          else {
-            var response = {
-              games: [],
-              applications: [],
-              webapps: [],
-              scopes: []
-            };
-
-            _.forEach(pkgs, function(pkg) {
-              if (popularNames.webapps.indexOf(pkg.name) > -1) {
-                response.webapps.push(miniPkg(pkg));
-              }
-              else if (popularNames.games.indexOf(pkg.name) > -1) {
-                response.games.push(miniPkg(pkg));
-              }
-              else if (popularNames.applications.indexOf(pkg.name) > -1) {
-                response.applications.push(miniPkg(pkg));
-              }
-              else if (popularNames.scopes.indexOf(pkg.name) > -1) {
-                response.scopes.push(miniPkg(pkg));
-              }
-            });
-
-            success(res, response);
-          }
-        });
-      }
-    });
-  });
-
-  //TODO cache this
   app.get('/api/apps/essentials', function(req, res) {
-    fs.readFile(path.join(__dirname, 'json/essential-apps.json'), function (err, data) {
+    db.Package.find({name: {'$in': essential}}, function(err, pkgs) {
       if (err) {
         error(res, err);
       }
       else {
-        var names = JSON.parse(data);
-
-        db.Package.find({name: {'$in': names}}, function(err, pkgs) {
-          if (err) {
-            error(res, err);
-          }
-          else {
-            var new_pkgs = [];
-            _.forEach(pkgs, function(pkg) {
-              new_pkgs.push(miniPkg(pkg));
-            });
-
-            success(res, new_pkgs);
-          }
+        var new_pkgs = [];
+        _.forEach(pkgs, function(pkg) {
+          new_pkgs.push(miniPkg(pkg));
         });
+
+        success(res, new_pkgs);
       }
     });
   });
