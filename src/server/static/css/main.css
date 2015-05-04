@@ -365,26 +365,30 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 
 @media (max-width: 768px) {
-  .list-group .row-action-primary {
+  .app-view .row-action-primary {
     float: none !important;
   }
 
-  .list-group .row-content {
+  .app-view .row-content {
     display: block !important;
     width: auto !important;
   }
 
-  .list-group .least-content {
+  .app-view .least-content {
     position: static !important;
     display: inline-block !important;
   }
 
-  .list-group .least-content-lower {
+  .app-view .least-content-lower {
     position: static !important;
     display: inline-block !important;
   }
 
-  .list-group .list-group-separator:before {
+  .app-view .list-group-separator:before {
     width: 100% !important;
+  }
+
+  .app-view .list-group-item-heading {
+    padding-right: 0px !important;
   }
 }

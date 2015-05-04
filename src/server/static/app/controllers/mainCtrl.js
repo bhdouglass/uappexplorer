@@ -27,7 +27,7 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
       $scope.top = data.apps;
     });
 
-    api.apps({sort: '-published_date', limit: 3}).then(function(data) {
+    api.apps({sort: '-published_date', limit: 6}).then(function(data) {
       $scope.new = data.apps;
     });
 
