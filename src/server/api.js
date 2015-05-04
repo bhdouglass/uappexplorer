@@ -2,11 +2,9 @@ var db = require('../db');
 var spider = require('../spider/spider');
 var essential = require('./json/essential-apps.json');
 var _ = require('lodash');
-var fs = require('fs');
 var moment = require('moment');
 var cluster = require('cluster');
 var async = require('async');
-var path = require('path');
 
 function miniPkg(pkg) {
   var description = pkg.description;

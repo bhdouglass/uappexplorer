@@ -47,18 +47,6 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 * Fetch a single package
     * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js com.example.pacakge.name`
 
-## Using The Local Prerender ##
-
-* Install dependencies:
-    * Go to: `./prerender`
-    * Run: `npm install`
-* Start the prerender:
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/prerender/server.js`
-* Test the prerender:
-    * Visit an app url with `?_escaped_fragment_=`
-    * Example: `localhost/app/name?_escaped_fragment_=`
-    * The page should be routed through the prerender, you can check the source as the prerender removes any script tags.
-
 ## Deploying ##
 
 This app is currently designed to be deployed on [OpenShift](https://www.openshift.com).
@@ -95,12 +83,6 @@ by the following env variables.
 * MONGODB_DB
     * Name of the database to use
     * Default: `appstore`
-* PRERENDER_SERVICE_URL
-    * Url to use for prerendering
-    * Default: `http://service.prerender.io/`
-* ALLOWED_DOMAINS
-    * The domains the local prerender server allows
-    * Default: `uappexplorer.com,local.uappexplorer.com,127.0.0.1,localhost`
 * NODEJS_NO_SPIDER
     * Set to 1 to disable the spider
     * Default: 0
@@ -134,8 +116,6 @@ The following third party libraries are used in this app:
     * [Request](https://github.com/request/request)
     * [Async](https://github.com/caolan/async)
     * [Moment.js](http://momentjs.com/)
-    * [prerender-node](https://github.com/prerender/prerender-node#using-your-own-prerender-service)
-    * [prerender](https://github.com/prerender/prerender)
     * [sitemap](https://www.npmjs.com/package/sitemap)
 * Client Side
     * [Bootstrap](http://getbootstrap.com/)
