@@ -363,3 +363,28 @@ a.list-group-item:hover, a.list-group-item:focus {
 .text-medium {
   font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .list-group .row-action-primary {
+    float: none !important;
+  }
+
+  .list-group .row-content {
+    display: block !important;
+    width: auto !important;
+  }
+
+  .list-group .least-content {
+    position: static !important;
+    display: inline-block !important;
+  }
+
+  .list-group .least-content-lower {
+    position: static !important;
+    display: inline-block !important;
+  }
+
+  .list-group .list-group-separator:before {
+    width: 100% !important;
+  }
+}

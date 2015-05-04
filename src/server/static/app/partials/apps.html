@@ -84,7 +84,7 @@
 
   <div class="row apps">
     <div ng-repeat="app in apps">
-      <div ng-class="{'col-sm-6 col-md-4': view == 'grid', 'col-sm-12': view != 'grid'}">
+      <div ng-class="{'col-sm-6 col-md-4 col-xs-6': view == 'grid', 'col-sm-12': view != 'grid'}">
         <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>
       </div>
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
