@@ -98,7 +98,7 @@ function setup(app) {
               data = data.replace(/meta property="og:url" content="(?:[\S\s]*?)"/gi,          'meta property="og:url" content="' + url + '"');
               data = data.replace(/meta property="og:image" content="(?:[\S\s]*?)"/gi,        'meta property="og:image" content="' + image + '"');
               data = data.replace(/meta property="og:description" content="(?:[\S\s]*?)"/gi,  'meta property="og:description" content="' + description + '"');
-              data = data.replace(/meta property="og:site_name" content="(?:[\S\s]*?)"/gi,    'meta property="og:site_name" content="' + pkg.title + '"');
+              data = data.replace(/meta property="og:site_name" content="(?:[\S\s]*?)"/gi,    'meta property="og:site_name" content="' + pkg.title + ' - uApp Explorer' + '"');
 
               res.send(data);
             }
