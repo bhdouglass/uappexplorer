@@ -179,7 +179,7 @@ select {
 }
 
 .list-group-item-heading {
-  padding-right: 40px;
+  padding-right: 50px;
 }
 
 .filters {
@@ -391,4 +391,8 @@ a.list-group-item:hover, a.list-group-item:focus {
   .app-view .list-group-item-heading {
     padding-right: 0px !important;
   }
+}
+
+.word-break {
+  word-wrap: break-word;
 }
