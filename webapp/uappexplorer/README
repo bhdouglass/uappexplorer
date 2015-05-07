@@ -1,0 +1,39 @@
+This is a new approach of an alternate webapp container that
+does not use a toolbar at the top but instead provides a bottom
+menu with navigation objects, similar to the one the dekko mail
+app uses. This way you do not have a jiggly toolbar that always
+expands and collapses in your app.
+
+To make use of this with your own webapp just follow the steps below.
+
+Fist of all branch this tree locally ...
+
+    bzr branch lp:~ogra/junk/alternate-webapp-container
+
+== Building ==
+
+Edit the value of applicationName at the top of qml/Main.qml to match
+your application name to work around https://launchpad.net/bugs/1435778
+
+Edit config.js to add webappName, webappUrl and webappUrlPattern 
+similar to how you would use them as commandline options to webapp-container.
+
+Optionally you can set the webappUA variable in config.js to override
+the User Agent string.
+
+Edit app.desktop and manifest.json to your liking.
+Replace icon.png with your own icon.
+
+Now run:
+    click build .
+
+This will create a .click package with you webapp.
+
+== Installing ==
+
+Push the click to your device via adb, then:
+
+    adb shell pkcon install-local --allow-untrusted /path/to/click
+
+You will see a bunch of progress bars ... once they are done,
+pull down the app scope to refresh it and find your new app in there.

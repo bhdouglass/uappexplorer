@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=uApp Explorer
-Comment=webapp for uappexplorer
-Type=Application
-Icon=uappexplorer.png
-Exec=webapp-container --store-session-cookies --webappUrlPatterns=https://uappexplorer.com/* http://uappexplorer.com %u
-Terminal=false
-X-Ubuntu-Touch=true

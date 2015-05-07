@@ -5,3 +5,4 @@ iron.json
 src/config.json
 src/server/static/dist
 build-uappexplorer-*
+*.user*
