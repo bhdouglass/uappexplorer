@@ -178,10 +178,6 @@ select {
   margin-right: 5px;
 }
 
-.list-group-item-heading {
-  padding-right: 50px;
-}
-
 .filters {
   margin-bottom: 10px;
 }
@@ -362,6 +358,10 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .text-medium {
   font-size: 16px;
+}
+
+.app-view .list-group-item-heading {
+  padding-right: 50px;
 }
 
 @media (max-width: 768px) {

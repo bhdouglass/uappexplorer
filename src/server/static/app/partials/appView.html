@@ -16,7 +16,7 @@
         <div class="label" ng-class="{'label-success': !isFree(app.prices), 'label-primary': isFree(app.prices)}" ng-bind="app.prices|dollars"></div>
       </div>
 
-      <h4 class="list-group-item-heading" ng-class="{'word-break': app.title.indexOf(' ') == -1}" ng-bind="app.title"></h4>
+      <h4 class="list-group-item-heading word-break" ng-bind="app.title"></h4>
       <p class="list-group-item-text">
         <stars ng-model="app.bayesian_average"></stars>
         <span class="text-danger heart-rating">
