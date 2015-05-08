@@ -237,7 +237,7 @@
         </div>
       </div>
 
-      <div ng-repeat="review in app.reviews|orderBy:'-date_created'">
+      <div ng-repeat="review in app.reviews|orderBy:'-date_created'" class="review">
         <div class="col-sm-4" ng-class="{'col-sm-offset-4': ($last && (app.reviews.length % 3) == 1), 'col-sm-offset-2': (($index + 2) == app.reviews.length && (app.reviews.length % 3) == 2)}">
           <div class="list-group">
             <div class="list-group-item">
@@ -252,22 +252,24 @@
 
                 <p class="list-group-item-heading">
                   <stars ng-model="review.rating"></stars>
-                  <br/>
-                  <span ng-bind="review.reviewer_displayname">
                 </p>
 
-                <p class="list-group-item-text">
+                <p class="list-group-item-text review-author">
+                  <span ng-bind="review.reviewer_displayname"></span>
+                </p>
+              </div>
+                <p class="list-group-item-text review-text">
                   <span ng-bind="review.review_text"></span>
                   <br/>
                   For version: <span ng-bind="review.version"></span>
                 </p>
-              </div>
             </div>
             <div class="list-group-separator"></div>
           </div>
         </div>
         <div ng-class="{clearfix: ($index + 1) % 3 == 0}"></div>
       </div>
+
       <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && (!app.reviews || app.reviews.length == 0)">
         <h4>No reviews yet!</h4>
       </div>

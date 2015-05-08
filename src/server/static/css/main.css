@@ -385,14 +385,31 @@ a.list-group-item:hover, a.list-group-item:focus {
   }
 
   .app-view .list-group-separator:before {
-    width: 100% !important;
+    width: calc(100% - 15px); !important;
   }
 
   .app-view .list-group-item-heading {
     padding-right: 0px !important;
+    font-size: 16px !important;
   }
 }
 
 .word-break {
   word-wrap: break-word;
+}
+
+.review .list-group .list-group-item .row-content {
+  width: calc(100% - 73px);
+}
+
+.review .review-author {
+  font-size: 17px;
+}
+
+.review .review-text {
+  clear: both;
+}
+
+.review .list-group .list-group-separator:before {
+  width: calc(100% - 15px);;
 }
