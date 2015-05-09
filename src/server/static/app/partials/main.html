@@ -140,8 +140,12 @@
       <div class="col-md-4 col-sm-6 col-xs-6 grid-view">
         <app-view ng-model="app"></app-view>
       </div>
+
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
       <div class="visible-xs visible-sm" ng-class="{clearfix: $index % 2 == 1}"></div>
+
+      <div class="separator hidden-xs hidden-sm" ng-show="$index % 3 == 2"></div>
+      <div class="separator visible-sm visible-xs" ng-show="$index % 2 == 1"></div>
     </div>
   </div>
 
@@ -159,8 +163,12 @@
       <div class="col-md-4 col-sm-6 col-xs-6 grid-view">
         <app-view ng-model="app"></app-view>
       </div>
+
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
       <div class="visible-xs visible-sm" ng-class="{clearfix: $index % 2 == 1}"></div>
+
+      <div class="separator hidden-xs hidden-sm" ng-show="$index % 3 == 2"></div>
+      <div class="separator visible-sm visible-xs" ng-show="$index % 2 == 1"></div>
     </div>
   </div>
 </div>

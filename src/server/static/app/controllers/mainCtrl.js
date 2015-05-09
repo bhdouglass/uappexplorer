@@ -16,14 +16,7 @@ angular.module('appstore').controller('mainCtrl', function ($scope, $rootScope, 
   $scope.appIcon = utils.appIcon;
 
   function refresh() {
-    /*api.popular().then(function(data) {
-      $scope.popular = data;
-    }, function(err) {
-      console.error(err);
-      $rootScope.setError('Could not fetch popular app list, click to retry', refresh);
-    });*/
-
-    api.apps({sort: '-points', limit: 9}).then(function(data) {
+    api.apps({sort: '-points', limit: 12}).then(function(data) {
       $scope.top = data.apps;
     });
 

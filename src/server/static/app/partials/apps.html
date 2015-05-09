@@ -82,13 +82,24 @@
     </div>
   </div>
 
-  <div class="row apps">
+  <div class="row apps" ng-class="{'grid-view': view == 'grid', 'list-view': view != 'grid'}">
     <div ng-repeat="app in apps">
-      <div ng-class="{'col-sm-6 col-md-4 col-xs-6 grid-view': view == 'grid', 'list-view col-sm-12': view != 'grid'}">
+      <div ng-class="{'col-md-4 col-sm-6 col-xs-6 grid-view': view == 'grid', 'list-view col-sm-12': view != 'grid'}">
         <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>
       </div>
+
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
       <div class="visible-xs visible-sm" ng-class="{clearfix: $index % 2 == 1}"></div>
+
+      <span class="grid">
+        <div class="separator hidden-xs hidden-sm" ng-show="$index % 3 == 2"></div>
+      </span>
+      <span class="grid">
+        <div class="separator visible-sm visible-xs" ng-show="$index % 2 == 1"></div>
+      </span>
+      <span class="list">
+        <div class="separator"></div>
+      </span>
     </div>
   </div>
 
