@@ -343,21 +343,40 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 
 .star-chart span {
-  margin-top: -6px;
+  margin-top: -2px;
   margin-right: 5px;
 }
 
 .star-chart .progress {
-  height: 8px;
-  margin-bottom: 16px;
+  height: 17px;
+  margin-bottom: 2px;
+}
+
+.star-chart .progress-bar {
+  color: #000000;
 }
 
 .star-chart .left-panel {
   margin-bottom: 15px;
 }
 
+@media (max-width: 768px) {
+  .star-chart .right-panel {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+}
+
 .text-medium {
   font-size: 16px;
+}
+
+.text-med-large {
+  font-size: 20px;
+}
+
+.text-large {
+  font-size: 30px;
 }
 
 .app-view .list-group-item-heading {

@@ -68,8 +68,14 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       width = $scope.app.review_stats[rating] / $scope.app.review_stats.total * 100;
     }
 
-    return {
+    var style = {
       width: width + '%'
     };
+
+    if ($scope.app && $scope.app.review_stats && $scope.app && $scope.app.review_stats[rating] == 0) {
+      style['display'] = 'none';
+    }
+
+    return style;
   };
 });
