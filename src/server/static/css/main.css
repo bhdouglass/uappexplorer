@@ -404,6 +404,9 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .review .review-author {
   font-size: 17px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
 
 .review .review-text {
