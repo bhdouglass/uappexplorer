@@ -124,12 +124,12 @@ MainView {
             visible: true
             actions: [
                 RadialAction {
-                    id: reload
-                    iconName: "reload"
+                    id: home
+                    iconName: "home"
                     onTriggered: {
-                        webview.reload()
+                        webview.url = 'https://uappexplorer.com/'
                     }
-                    text: qsTr("Reload")
+                    text: qsTr("Home")
                 },
                 RadialAction {
                     id: forward
@@ -139,7 +139,15 @@ MainView {
                         webview.goForward()
                     }
                    text: qsTr("Forward")
-                 },
+                },
+                RadialAction {
+                    id: reload
+                    iconName: "reload"
+                    onTriggered: {
+                        webview.reload()
+                    }
+                    text: qsTr("Reload")
+                },
                 RadialAction {
                     id: back
                     enabled: webview.canGoBack

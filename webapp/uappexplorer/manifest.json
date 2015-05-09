@@ -3,7 +3,7 @@
     "description": "Discover apps for you Ubuntu Touch device",
     "architecture": "all",
     "title": "uApp Explorer",
-    "version": "2.0",
+    "version": "2.1",
     "maintainer": "Brian Douglass <bhdouglass@gmail.com>",
     "framework": "ubuntu-sdk-14.10",
     "hooks": {
