@@ -365,30 +365,30 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 
 @media (max-width: 768px) {
-  .app-view .row-action-primary {
+  .grid-view .app-view .row-action-primary {
     float: none !important;
   }
 
-  .app-view .row-content {
+  .grid-view .app-view .row-content {
     display: block !important;
     width: auto !important;
   }
 
-  .app-view .least-content {
+  .grid-view .app-view .least-content {
     position: static !important;
     display: inline-block !important;
   }
 
-  .app-view .least-content-lower {
+  .grid-view .app-view .least-content-lower {
     position: static !important;
     display: inline-block !important;
   }
 
-  .app-view .list-group-separator:before {
+  .grid-view .app-view .list-group-separator:before {
     width: calc(100% - 15px); !important;
   }
 
-  .app-view .list-group-item-heading {
+  .grid-view .app-view .list-group-item-heading {
     padding-right: 0px !important;
     font-size: 16px !important;
   }
@@ -412,4 +412,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .review .list-group .list-group-separator:before {
   width: calc(100% - 15px);;
+}
+
+.view-button {
+  background-color: #4285f4 !important;
 }

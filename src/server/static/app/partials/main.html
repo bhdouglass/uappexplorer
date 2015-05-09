@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6">
       <div class="list-group">
         <a class="list-group-item clickable" href="/apps?type=application" title="Browse Apps">
           <div class="row-action-primary">
@@ -28,11 +28,11 @@
           </div>
         </a>
 
-        <div class="list-group-separator"></div>
+        <div class="list-group-separator visible-xs visible-sm"></div>
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6">
       <div class="list-group">
         <a class="list-group-item clickable" href="/apps?type=webapp" title="Browse Web Apps">
           <div class="row-action-primary">
@@ -51,11 +51,11 @@
           </div>
         </a>
 
-        <div class="list-group-separator"></div>
+        <div class="list-group-separator visible-xs visible-sm"></div>
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6">
       <div class="list-group">
         <a class="list-group-item clickable" href="/apps?category=games" title="Browse Games">
           <div class="row-action-primary">
@@ -74,11 +74,11 @@
           </div>
         </a>
 
-        <div class="list-group-separator"></div>
+        <div class="list-group-separato visible-xs visible-sm"></div>
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6">
       <div class="list-group">
         <a class="list-group-item clickable" href="/apps?type=scope" title="Browse Scopes">
           <div class="row-action-primary">
@@ -97,7 +97,7 @@
           </div>
         </a>
 
-        <div class="list-group-separator"></div>
+        <div class="list-group-separator visible-xs visible-sm"></div>
       </div>
     </div>
   </div>
@@ -137,7 +137,7 @@
   </div>
   <div class="row apps">
     <div ng-repeat="app in top">
-      <div class="col-md-4 col-sm-6 col-xs-6">
+      <div class="col-md-4 col-sm-6 col-xs-6 grid-view">
         <app-view ng-model="app"></app-view>
       </div>
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
@@ -156,7 +156,7 @@
   </div>
   <div class="row apps">
     <div ng-repeat="app in new">
-      <div class="col-md-4 col-sm-6 col-xs-6">
+      <div class="col-md-4 col-sm-6 col-xs-6 grid-view">
         <app-view ng-model="app"></app-view>
       </div>
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>

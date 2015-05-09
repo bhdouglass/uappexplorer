@@ -43,14 +43,14 @@
             </div>
           </div>
 
-          <div class="btn-toolbar pull-right hidden-xs">
+          <div class="btn-toolbar pull-right">
             <div class="btn-group">
-              <a class="btn clickable" ng-class="{'bold btn-primary': view == 'grid'}" ng-click="changeView('grid')" ng-disabled="view == 'grid'">
-                Grid
+              <a class="btn clickable" ng-class="{'bold btn-primary view-button': view == 'grid'}" ng-click="changeView('grid')" ng-disabled="view == 'grid'">
+                <span class="hidden-xs">Grid</span>
                 <i class="fa fa-th-large"></i>
               </a>
-              <a class="btn clickable" ng-class="{'bold btn-primary': view == 'list'}" ng-click="changeView('list')" ng-disabled="view == 'list'">
-                List
+              <a class="btn clickable" ng-class="{'bold btn-primary view-button': view == 'list'}" ng-click="changeView('list')" ng-disabled="view == 'list'">
+                  <span class="hidden-xs">List</span>
                 <i class="fa fa-list"></i>
               </a>
             </div>
@@ -84,7 +84,7 @@
 
   <div class="row apps">
     <div ng-repeat="app in apps">
-      <div ng-class="{'col-sm-6 col-md-4 col-xs-6': view == 'grid', 'col-sm-12': view != 'grid'}">
+      <div ng-class="{'col-sm-6 col-md-4 col-xs-6 grid-view': view == 'grid', 'list-view col-sm-12': view != 'grid'}">
         <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>
       </div>
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
