@@ -1,4 +1,4 @@
-<div>
+<div class="apps">
   <div class="app-search">
     <div class="row">
       <div class="col-md-6">
@@ -82,7 +82,7 @@
     </div>
   </div>
 
-  <div class="row apps" ng-class="{'grid-view': view == 'grid', 'list-view': view != 'grid'}">
+  <div class="row app-list" ng-class="{'grid-view': view == 'grid', 'list-view': view != 'grid'}">
     <div ng-repeat="app in apps">
       <div ng-class="{'col-md-4 col-sm-6 col-xs-6 grid-view': view == 'grid', 'list-view col-sm-12': view != 'grid'}">
         <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>

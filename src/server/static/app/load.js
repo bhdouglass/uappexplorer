@@ -12,6 +12,7 @@ LazyLoad.js([
   '//www.google-analytics.com/analytics.js',
   '/js/libs.js' + v,
   //@if ENV != 'production'
+  '//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js',
   '/js/angular-cookie.min.js',
   '/js/qrcode-generator.js',
   '/js/angular-qrcode.js',
@@ -45,5 +46,5 @@ LazyLoad.css([
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.css',
   '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css',
   '//fonts.googleapis.com/css?family=Ubuntu',
-  '/css/main.css' + v,
+  //'/css/main.css' + v,
 ]);

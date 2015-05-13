@@ -45,7 +45,12 @@
     <!-- @endif -->
 
     <!-- @if ENV != 'production' -->
+    <link rel="stylesheet/less" type="text/css" href="/less/master.less" />
     <script>
+      less = {
+        env: 'development'
+      };
+
       v = '';
       LazyLoad.js('app/load.js');
     </script>
