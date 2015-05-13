@@ -9,6 +9,9 @@ var minifyCSS = require('gulp-minify-css');
 var template = require('gulp-template');
 var preprocess = require('gulp-preprocess');
 var htmlmin = require('gulp-htmlmin');
+var less = require('gulp-less');
+var autoprefixer = require('gulp-autoprefixer');
+var recess = require('gulp-recess');
 var del = require('del');
 
 var paths = {
@@ -17,7 +20,7 @@ var paths = {
   load: 'src/server/static/app/load.js',
   back_js: ['gulpfile.js', 'src/**/*.js', '!src/server/static/app/**/*.js', '!src/server/static/**/*.js'],
   imgs: 'src/server/static/img/*',
-  css: 'src/server/static/css/*.css',
+  less: 'src/server/static/less/*.less',
   html: ['src/server/static/*.html', 'src/server/static/app/**/*.html'],
   dist: 'src/server/static/dist/**'
 };
@@ -60,6 +63,13 @@ gulp.task('lint-front', function() {
     .pipe(jshint(options))
     .pipe(jshint.reporter(stylish))
     .pipe(jshint.reporter('fail'));
+
+  gulp.src(paths.less)
+    .pipe(recess({
+      noIDs: false,
+      noOverqualifying: false
+    }))
+    .pipe(recess.reporter());
 });
 
 gulp.task('lint-back', function() {
@@ -83,9 +93,14 @@ gulp.task('build-html', function() {
     .pipe(gulp.dest('src/server/static/dist'));
 });
 
-gulp.task('build-css', function() {
-  gulp.src(paths.css)
+gulp.task('build-less', function() {
+  gulp.src(paths.less)
+    .pipe(less())
     .pipe(concat('main.css'))
+    .pipe(autoprefixer({
+      cascade: false,
+      remove: false
+    }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('src/server/static/dist/css'));
 });
@@ -121,4 +136,4 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('lint', ['lint-front', 'lint-back']);
-gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-css', 'build-html']);
+gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-html']);

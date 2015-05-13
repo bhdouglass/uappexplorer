@@ -46,5 +46,5 @@ LazyLoad.css([
   '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.css',
   '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css',
   '//fonts.googleapis.com/css?family=Ubuntu',
-  //'/css/main.css' + v,
+  '/css/main.css' + v,
 ]);
