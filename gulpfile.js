@@ -58,7 +58,8 @@ gulp.task('lint-front', function() {
 
   gulp.src(paths.front_js)
     .pipe(jshint(options))
-    .pipe(jshint.reporter(stylish));
+    .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('lint-back', function() {

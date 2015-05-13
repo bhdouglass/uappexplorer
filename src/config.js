@@ -30,8 +30,9 @@ var config = {
   server: {
     ip: '0.0.0.0',
     port: 8080,
-    host: 'https://uappexplorer.com',
+    host: 'http://local.uappexplorer.com:8080',
     static: '/static',
+    session_secret: 'uappexplorer'
   },
   mongo: {
     uri: 'mongodb://localhost/',
@@ -87,6 +88,14 @@ else if (process.env.NODEJS_PORT) {
 
 if (process.env.NODEJS_STATIC) {
   config.server.static = process.env.NODEJS_STATIC;
+}
+
+if (process.env.NODEJS_HOST) {
+  config.server.host = process.env.NODEJS_HOST;
+}
+
+if (process.env.SESSION_SECRET) {
+  config.server.session_secret = process.env.SESSION_SECRET;
 }
 
 if (process.env.NODEJS_NO_SPIDER == 1) {

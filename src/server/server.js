@@ -4,6 +4,7 @@ var feed = require('./feed');
 var icons = require('./icons');
 var api = require('./api');
 var app = require('./app');
+var auth = require('./auth');
 var express = require('express');
 var compression = require('compression');
 var fs = require('fs');
@@ -54,6 +55,7 @@ if (config.use_api()) {
 
 if (config.use_app()) {
   app.setup(app_express, success, error);
+  auth.setup(app_express, success, error);
 }
 
 app_express.use(function(req, res) {

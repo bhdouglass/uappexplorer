@@ -69,6 +69,17 @@ var reviewSchema = mongoose.Schema({
 
 var Review = mongoose.model('Review', reviewSchema);
 
+var userSchema = mongoose.Schema({
+  name: String,
+  username: String,
+  ubuntu_id: {type: String, index: true},
+  language: String,
+  email: String,
+});
+
+var User = mongoose.model('User', userSchema);
+
 exports.Package = Package;
 exports.Department = Department;
 exports.Review = Review;
+exports.User = User;

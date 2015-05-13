@@ -71,6 +71,12 @@ by the following env variables.
 * NODEJS_IP || OPENSHIFT_NODEJS_IP
     * IP address for the web server to listen on
     * Default: `127.0.0.1`
+* NODEJS_HOST
+    * Host name for the server
+    * Default: `http://local.uappexplorer.com:8080`
+* SESSION_SECRET
+    * The secret for the cookie session
+    * Default: `uappexplorer`
 * NODEJS_STATIC
     * Directory (relative to src/server.js) where the static content is stored
     * Default: `/static` (change to `/static/dist` when using the build static files)
@@ -117,6 +123,7 @@ The following third party libraries are used in this app:
     * [Async](https://github.com/caolan/async)
     * [Moment.js](http://momentjs.com/)
     * [sitemap](https://www.npmjs.com/package/sitemap)
+    * [passport](http://passportjs.org/)
 * Client Side
     * [Bootstrap](http://getbootstrap.com/)
     * [jQuery](http://jquery.com/)

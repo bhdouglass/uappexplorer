@@ -12,23 +12,25 @@ function saveDepartment(d, callback) {
       logger.error('error finding ' + d.name + ': ' + err);
       callback(err);
     }
-    else if (!dep) {
-      dep = new db.Department();
-    }
+    else {
+      if (!dep) {
+        dep = new db.Department();
+      }
 
-    dep.name = d.name;
-    dep.internal_name = d.slug;
-    dep.url = utils.fixUrl(d._links.self.href);
-    dep.save(function(err) {
-      if (err) {
-        logger.error('error saving department: ' + err);
-        callback(err);
-      }
-      else {
-        logger.info('saved ' + d.name);
-        callback(null);
-      }
-    });
+      dep.name = d.name;
+      dep.internal_name = d.slug;
+      dep.url = utils.fixUrl(d._links.self.href);
+      dep.save(function(err) {
+        if (err) {
+          logger.error('error saving department: ' + err);
+          callback(err);
+        }
+        else {
+          logger.info('saved ' + d.name);
+          callback(null);
+        }
+      });
+    }
   });
 }
 

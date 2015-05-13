@@ -284,8 +284,8 @@ function fetchOAuth(callback) {
     url: 'https://login.ubuntu.com/api/v2/tokens/oauth',
     method: 'POST',
     json: {
-      email: config.ubuntu_sso.email, //TODO get from config
-      password: config.ubuntu_sso.password, //TODO get from config
+      email: config.ubuntu_sso.email,
+      password: config.ubuntu_sso.password,
       token_name: config.ubuntu_sso.token_name,
     }
   }, function(err, resp, body) {

@@ -72,8 +72,8 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       width: width + '%'
     };
 
-    if ($scope.app && $scope.app.review_stats && $scope.app && $scope.app.review_stats[rating] == 0) {
-      style['display'] = 'none';
+    if ($scope.app && $scope.app.review_stats && $scope.app && $scope.app.review_stats[rating] === 0) {
+      style.display = 'none';
     }
 
     return style;
