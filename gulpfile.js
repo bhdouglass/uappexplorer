@@ -61,7 +61,7 @@ var paths = {
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.ttf',
     'www/bower_components/bootstrap-material-design/fonts/Material-Design-Icons.woff',
     'www/bower_components/bootstrap-material-design/fonts/Material-Design-Icons.ttf',
-  ],
+  ]
 };
 
 gulp.task('clean', function() {
