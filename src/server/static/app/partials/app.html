@@ -150,8 +150,11 @@
 
         <div class="tab-content" ng-show="app_tab == 'support'">
           <div class="well app-tab">
-            <span ng-show="app.support">
-              Support: <a ng-href="{{app.support}}" rel="nofollow" ng-bind="app.support" analytics-on analytics-event="Support" analytics-label="{{app.support}}"></a>
+            <span ng-show="app.support && app.support.indexOf('mailhide') > -1">
+              Support: <a ng-href="{{app.support}}" target="_blank" rel="nofollow" analytics-on analytics-event="Support" analytics-label="Email Support">Email Support</a>
+            </span>
+            <span ng-show="app.support && app.support.indexOf('mailhide') == -1">
+              Support: <a ng-href="{{app.support}}" target="_blank" rel="nofollow" ng-bind="app.support" analytics-on analytics-event="Support" analytics-label="{{app.support}}"></a>
             </span>
             <span ng-show="app.website">
               <br/>

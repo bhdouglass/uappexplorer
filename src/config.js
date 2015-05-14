@@ -53,6 +53,10 @@ var config = {
     api_key: '',
     api_secret: '',
   },
+  mailhide: {
+    privateKey: '',
+    publicKey: '',
+  },
   ubuntu_sso: {
     email: '',
     password: '',
@@ -143,6 +147,14 @@ if (process.env.CLOUDINARY_KEY) {
 
 if (process.env.CLOUDINARY_SECRET) {
   config.cloudinary.api_secret = process.env.CLOUDINARY_SECRET;
+}
+
+if (process.env.MAILHIDE_PRIVATEKEY) {
+  config.mailhide.privateKey = process.env.MAILHIDE_PRIVATEKEY;
+}
+
+if (process.env.MAILHIDE_PUBLICKEY) {
+  config.mailhide.publicKey = process.env.MAILHIDE_PUBLICKEY;
 }
 
 if (process.env.UBUNTU_SSO_EMAIL) {

@@ -104,11 +104,17 @@ by the following env variables.
 * CLOUDINARY_SECRET
     * Cloudinary api secret
     * Default: empty
+* MAILHIDE_PRIVATEKEY
+    * reCPTCHA Mailhide api private key
+    * Default: empty
+* MAILHIDE_PUBLICKEY
+    * reCPTCHA Mailhide api public key
+    * Default: empty
 * UBUNTU_SSO_EMAIL
-    * Ubuntu single signon email address
+    * Ubuntu single signon email address (for parsing package types)
     * Default: empty
 * UBUNTU_SSO_PASSWORD
-    * Ubuntu single signon password
+    * Ubuntu single signon password (for parsing package types)
     * Default: empty
 
 ## Libraries ##

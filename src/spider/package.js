@@ -7,7 +7,13 @@ var _ = require('lodash');
 var async = require('async');
 var request = require('request');
 var crypto = require('crypto');
+var Mailhide = require('mailhide');
 //var cloudinary = require('cloudinary');
+
+var mailhider = null;
+if (config.mailhide.privateKey && config.mailhide.publicKey) {
+  mailhider = new Mailhide(config.mailhide);
+}
 
 var propertyMap = {
   architecture:   'architecture',
@@ -74,7 +80,8 @@ function map(pkg, data) {
       if (dataProperty.indexOf('_url') > -1) {
         pkg[pkgProperty] = utils.fixUrl(pkg[pkgProperty]);
       }
-      else if (pkgProperty == 'filesize') {
+
+      if (pkgProperty == 'filesize') {
         pkg[pkgProperty] = utils.niceBytes(pkg[pkgProperty]);
       }
       else if (pkgProperty == 'description') {
@@ -84,6 +91,9 @@ function map(pkg, data) {
             pkg[pkgProperty] = split[0].replace('\n', '');
           }
         }
+      }
+      else if (pkgProperty == 'support' && pkg[pkgProperty].indexOf('mailto:') === 0 && mailhider) {
+        pkg[pkgProperty] = mailhider.url(pkg[pkgProperty].replace('mailto:', ''));
       }
     }
   });
