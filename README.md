@@ -21,6 +21,10 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
     * Arch Linux: `pacman -S docker`
 * Install NPM dependencies:
     * Run: `npm install`
+* Install gulp and bower:
+    * Run `npm install -g gulp bower`
+* Install bower dependencies:
+    * Run `bower instll`
 * Start vagrant:
     * Run: `vagrant up --no-parallel`
 * Run the spider:

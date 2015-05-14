@@ -4,6 +4,5 @@ node_modules/
 iron.json
 src/config.json
 www/dist
-www/bower_components
 build-uappexplorer-*
 *.user*

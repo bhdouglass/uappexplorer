@@ -1,0 +1,14 @@
+{
+  "name": "qrcode-generator",
+  "homepage": "https://github.com/kazuhikoarase/qrcode-generator",
+  "_release": "b362f571f1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "b362f571f198340026928a1050bcff0c23aba27d"
+  },
+  "_source": "git://github.com/kazuhikoarase/qrcode-generator.git",
+  "_target": "*",
+  "_originalSource": "kazuhikoarase/qrcode-generator",
+  "_direct": true
+}

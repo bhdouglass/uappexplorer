@@ -4,7 +4,7 @@ OLD_HOME=$HOME
 cd $OPENSHIFT_REPO_DIR
 export HOME=$OPENSHIFT_REPO_DIR
 
-./node_modules/bower/bin/bower install
+#./node_modules/bower/bin/bower install
 ./node_modules/gulp/bin/gulp.js build
 
 export HOME=$OLD_HOME
