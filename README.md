@@ -79,7 +79,7 @@ by the following env variables.
     * Default: `uappexplorer`
 * NODEJS_STATIC
     * Directory (relative to src/server.js) where the static content is stored
-    * Default: `/static` (change to `/static/dist` when using the build static files)
+    * Default: `/../../www` (change to `/../../www/dist` when using the build static files)
 * DATA_DIR || OPENSHIFT_DATA_DIR
     * Directory where downloaded images are stored
     * Default: `/tmp`

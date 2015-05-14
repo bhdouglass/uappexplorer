@@ -55,7 +55,6 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
 
   $scope.qrCode = function() {
     $scope.qrCodeUrl = $location.absUrl();
-    console.log($scope.qrCodeUrl);
     $modal.open({
       templateUrl: '/app/partials/qrcode.html',
       scope: $scope

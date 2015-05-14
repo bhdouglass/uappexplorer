@@ -3,6 +3,7 @@ node_modules/
 .vagrant/
 iron.json
 src/config.json
-src/server/static/dist
+www/dist
+www/bower_components
 build-uappexplorer-*
 *.user*

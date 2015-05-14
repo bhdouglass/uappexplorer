@@ -31,7 +31,7 @@ var config = {
     ip: '0.0.0.0',
     port: 8080,
     host: 'http://local.uappexplorer.com:8080',
-    static: '/static',
+    static: '/../../www',
     session_secret: 'uappexplorer'
   },
   mongo: {
