@@ -29,6 +29,8 @@ var paths = {
     'www/bower_components/bootstrap/dist/js/bootstrap.min.js',
     'www/bower_components/swipebox/src/js/jquery.swipebox.min.js',
     'www/bower_components/angular/angular.min.js',
+    'www/bower_components/angular-touch/angular-touch.min.js',
+    'www/bower_components/angular-animate/angular-animate.min.js',
     'www/bower_components/angular-ui/build/angular-ui.min.js',
     'www/bower_components/angular-ui-router/release/angular-ui-router.min.js',
     'www/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ipCookie', 'monospaced.qrcode']);
+angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ipCookie', 'monospaced.qrcode', 'ngTouch', 'ngAnimate']);
 
 angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $urlRouterProvider.otherwise('/apps');

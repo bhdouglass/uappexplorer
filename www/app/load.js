@@ -7,6 +7,8 @@ LazyLoad.js([
   '/bower_components/bootstrap/dist/js/bootstrap.min.js',
   '/bower_components/swipebox/src/js/jquery.swipebox.min.js',
   '/bower_components/angular/angular.min.js',
+  '/bower_components/angular-touch/angular-touch.min.js',
+  '/bower_components/angular-animate/angular-animate.min.js',
   '/bower_components/angular-ui/build/angular-ui.min.js',
   '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
   '/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
