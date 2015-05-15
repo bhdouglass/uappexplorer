@@ -55,14 +55,9 @@ var paths = {
     'www/bower_components/swipebox/src/img/loader.gif',
   ],
   fonts: [
-    'www/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2',
-    'www/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff',
-    'www/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf',
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.woff2',
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.woff',
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.ttf',
-    'www/bower_components/bootstrap-material-design/fonts/Material-Design-Icons.woff',
-    'www/bower_components/bootstrap-material-design/fonts/Material-Design-Icons.ttf',
   ]
 };
 

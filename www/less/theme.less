@@ -178,3 +178,23 @@ a.list-group-item:focus {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   content: '';
 }
+
+//Fake glyphicons using fontawesome
+.glyphicon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-family: 'FontAwesome' !important;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  transform: translate(0, 0);
+  -moz-osx-font-smoothing: grayscale;
+
+  &.glyphicon-chevron-left:before {
+    content: '\f053';
+  }
+
+  &.glyphicon-chevron-right:before {
+    content: '\f054';
+  }
+}
