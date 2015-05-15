@@ -245,7 +245,19 @@ function setup(app, success, error) {
         error(res, err);
       }
       else if (!rev) {
-        error(res, 'No reviews found for ' + req.params.name, 404);
+        success(res, {
+          reviews: [],
+          name: req.params.name,
+          more: false,
+          stats: {
+            5: 0,
+            4: 0,
+            3: 0,
+            2: 0,
+            1: 0,
+            total: 0,
+          }
+        });
       }
       else {
         var reviews = rev.reviews;
