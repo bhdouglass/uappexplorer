@@ -192,14 +192,18 @@
         <div class="col-md-12 text-center">
           <h3>
             <a ui-sref="apps({q: 'author:' + app.author})">
-              More Apps by this Developer
+              More Apps by {{app.author}}
             </a>
           </h3>
         </div>
       </div>
 
       <div class="row grid-view">
-        <div class="col-md-4 col-xs-6" ng-repeat="author_app in app.author_apps" ng-class="{'hidden-xs hidden-sm': $last}">
+        <div class="col-md-4 col-xs-6" ng-repeat="author_app in app.author_apps" ng-class="{
+            'hidden-xs hidden-sm': ($last && app.author_apps.length == 3),
+            'col-md-offset-4 col-xs-offset-3': (app.author_apps.length == 1),
+            'col-md-offset-2': ($first && app.author_apps.length == 2)
+        }">
           <app-view ng-model="author_app"></app-view>
         </div>
       </div>
