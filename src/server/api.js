@@ -131,19 +131,21 @@ function setup(app, success, error) {
         query.sort(req.query.sort);
       }
 
-      if (req.query.search.indexOf('author:') === 0) {
-        regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
-        query.where({author: regxp});
-      }
-      else {
-        regxp = new RegExp(req.query.search, 'i');
-        query.or([
-          {author: regxp},
-          {company: regxp},
-          {title: regxp},
-          {description: regxp},
-          {keywords: regxp}
-        ]);
+      if (req.query.search) {
+        if (req.query.search.indexOf('author:') === 0) {
+          regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
+          query.where({author: regxp});
+        }
+        else {
+          regxp = new RegExp(req.query.search, 'i');
+          query.or([
+            {author: regxp},
+            {company: regxp},
+            {title: regxp},
+            {description: regxp},
+            {keywords: regxp}
+          ]);
+        }
       }
 
       query.exec(function(err, pkgs) {

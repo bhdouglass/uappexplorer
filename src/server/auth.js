@@ -1,4 +1,3 @@
-var UbuntuStrategy = require('./ubuntuStrategy').Strategy;
 var config = require('../config');
 var db = require('../db');
 var passport = require('passport');
@@ -6,6 +5,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var session = require('cookie-session');
+var UbuntuStrategy = require('passport-ubuntu').Strategy;
 
 function setup(app) {
   app.use(cookieParser());
@@ -66,11 +66,9 @@ function setup(app) {
           if (profile.language && profile.language != user.language) {
             user.language = profile.language;
             save = true;
-            console.log('lang');
           }
 
           if (save) {
-            console.log('saving user', user);
             user.save(function(err) {
               done(err, user);
             });
