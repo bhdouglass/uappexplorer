@@ -1,0 +1,15 @@
+{
+    "name": "uappexplorer-donate.bhdouglass",
+    "description": "Discover apps for you Ubuntu Touch device (Donation version)",
+    "architecture": "all",
+    "title": "uApp Explorer (Donate)",
+    "version": "2.1",
+    "maintainer": "Brian Douglass <bhdouglass@gmail.com>",
+    "framework": "ubuntu-sdk-14.10",
+    "hooks": {
+        "uappexplorer": {
+            "apparmor": "app.json",
+            "desktop": "app.desktop"
+        }
+    }
+}

@@ -58,12 +58,20 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     });
   };
 
-  if (!ipCookie('disclaimer')) {
+  $rootScope.donate = function() {
     $modal.open({
-      templateUrl: '/app/partials/disclaimer.html'
+      templateUrl: '/app/partials/donate.html'
     });
+  };
 
-    var now = new Date();
-    ipCookie('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
-  }
+  $timeout(function() {
+    if (!ipCookie('disclaimer')) {
+      $modal.open({
+        templateUrl: '/app/partials/disclaimer.html'
+      });
+
+      var now = new Date();
+      ipCookie('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
+    }
+  });
 });

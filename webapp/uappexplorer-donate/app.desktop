@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=uApp Explorer
-Comment=Webapp for uApp Explorer
+Name=uApp Explorer (Donate)
+Comment=Webapp for uApp Explorer (Donation version)
 Type=Application
 Icon=icon.png
 Exec=qmlscene qml/Main.qml
