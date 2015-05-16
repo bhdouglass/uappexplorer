@@ -1,5 +1,6 @@
 var db = require('../db');
 var spider = require('../spider/spider');
+var logger = require('../logger');
 var essential = require('./json/essential-apps.json');
 var _ = require('lodash');
 var moment = require('moment');
@@ -90,14 +91,20 @@ function setup(app, success, error) {
       query = db.Package.count(findQuery);
 
       if (req.query.search) {
-        regxp = new RegExp(req.query.search, 'i');
-        query.or([
-          {author: regxp},
-          {company: regxp},
-          {title: regxp},
-          {description: regxp},
-          {keywords: regxp}
-        ]);
+        if (req.query.search.indexOf('author:') === 0) {
+          regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
+          query.where({author: regxp});
+        }
+        else {
+          regxp = new RegExp(req.query.search, 'i');
+          query.or([
+            {author: regxp},
+            {company: regxp},
+            {title: regxp},
+            {description: regxp},
+            {keywords: regxp}
+          ]);
+        }
       }
 
       query.exec(function(err, count) {
@@ -124,7 +131,11 @@ function setup(app, success, error) {
         query.sort(req.query.sort);
       }
 
-      if (req.query.search) {
+      if (req.query.search.indexOf('author:') === 0) {
+        regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
+        query.where({author: regxp});
+      }
+      else {
         regxp = new RegExp(req.query.search, 'i');
         query.or([
           {author: regxp},
@@ -234,7 +245,22 @@ function setup(app, success, error) {
       }
       else {
         pkg.reviews = undefined;
-        success(res, pkg);
+
+        //TODO cache this
+        db.Package.find({author: pkg.author, name: {'$ne': pkg.name}}).sort('-points').limit(3).exec(function(err, pkgs) {
+          if (err) {
+            logger.error('server: ' + err);
+            pkgs = [];
+          }
+
+          pkg = JSON.parse(JSON.stringify(pkg));
+          pkg.author_apps = [];
+          _.forEach(pkgs, function(p) {
+            pkg.author_apps.push(miniPkg(p));
+          });
+
+          success(res, pkg);
+        });
       }
     });
   });

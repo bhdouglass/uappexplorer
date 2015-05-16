@@ -30,7 +30,7 @@
                   <span ng-bind="app.points || 0"></span>
                 </span>
                 <br ng-show="app.author" />
-                <a ui-sref="apps({q: app.author})" ng-bind="app.author" title="Author" class="clickable"></a>
+                <a ui-sref="apps({q: 'author:' + app.author})" ng-bind="app.author" title="Author" class="clickable"></a>
                 <br ng-show="app.company" />
                 <span ng-bind="app.company" title="Company"></span>
 
@@ -183,6 +183,24 @@
               <img ng-src="{{s}}" alt="" class="screenshot" />
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div ng-if="app.author_apps.length > 0">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>
+            <a ui-sref="apps({q: 'author:' + app.author})">
+              More Apps by this Developer
+            </a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="row grid-view">
+        <div class="col-md-4 col-xs-6" ng-repeat="author_app in app.author_apps" ng-class="{'hidden-xs hidden-sm': $last}">
+          <app-view ng-model="author_app"></app-view>
         </div>
       </div>
     </div>
