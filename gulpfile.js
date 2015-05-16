@@ -60,7 +60,7 @@ var paths = {
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.woff2',
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.woff',
     'www/bower_components/font-awesome/fonts/fontawesome-webfont.ttf',
-  ]
+  ],
 };
 
 gulp.task('clean', function() {
