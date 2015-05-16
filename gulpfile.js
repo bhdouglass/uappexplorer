@@ -12,6 +12,7 @@ var htmlmin = require('gulp-htmlmin');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var recess = require('gulp-recess');
+var templateCache = require('gulp-angular-templatecache');
 var del = require('del');
 var merge = require('merge-stream');
 
@@ -21,7 +22,8 @@ var paths = {
   back_js: ['gulpfile.js', 'src/**/*.js', '!www/app/**/*.js', '!www/**/*.js'],
   imgs: 'www/img/*',
   less: 'www/less/*.less',
-  html: ['www/*.html', 'www/app/**/*.html'],
+  html: ['www/*.html'],
+  partial_html: ['www/app/**/*.html'],
   dist: 'www/dist/**',
   js_libs: [
     'www/bower_components/less/dist/less.min.js',
@@ -172,22 +174,19 @@ gulp.task('build-libs', function() {
 });
 
 gulp.task('build-js', function() {
-  var load = gulp.src(paths.load)
-    .pipe(preprocess({
-      context: {ENV: 'production'}
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('www/dist/app'));
+  var partial_html = gulp.src(paths.partial_html)
+    .pipe(templateCache('templates.js', {
+      module: 'appstore',
+      root: '/app'
+    }));
 
-  var front_js = gulp.src(paths.front_js, {base: 'www/app'})
+  return merge(gulp.src(paths.front_js, {base: 'www/app'}), partial_html)
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
-    .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('www/dist/app'));
-
-  return merge(load, front_js);
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('www/dist/js'));
 });
 
 gulp.task('lint', ['lint-front', 'lint-back']);

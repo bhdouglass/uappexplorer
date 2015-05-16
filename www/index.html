@@ -36,22 +36,27 @@
       }
     </style>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lazyload/2.0.3/lazyload-min.js"></script>
     <!-- @if ENV = 'production' !>
+    <link rel="stylesheet" href="/css/libs.css?v=<%= version %>" />
+    <link rel="stylesheet" href="/css/main.css?v=<%= version %>" />
+
+    <script src="/js/libs.js?v=<%= version %>"></script>
+    <script src="/js/app.js?v=<%= version %>"></script>
+    <script src="//www.google-analytics.com/analytics.js"></script>
+
     <script>
-      v = '?v=<%= version %>';
-      LazyLoad.js('app/load.js' + v);
+        ga('create', 'UA-16555025-3', 'auto')
     </script>
     <!-- @endif -->
 
     <!-- @if ENV != 'production' -->
+    <script src="/bower_components/rgrove-lazyload/lazyload.js"></script>
     <link rel="stylesheet/less" type="text/css" href="/less/master.less" />
     <script>
       less = {
         env: 'development'
       };
 
-      v = '';
       LazyLoad.js('app/load.js');
     </script>
     <!-- @endif -->
