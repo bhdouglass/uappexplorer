@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=uApp Explorer
-Comment=Webapp for uApp Explorer
-Type=Application
-Icon=icon.png
-Exec=qmlscene qml/Main.qml
-Terminal=false
-X-Ubuntu-Touch=true
