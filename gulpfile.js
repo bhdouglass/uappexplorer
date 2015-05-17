@@ -70,56 +70,25 @@ gulp.task('clean', function() {
   del.sync(paths.dist);
 });
 
-gulp.task('lint-front', function() {
-  var options = {
-    node: true,
-    browser: true,
-    esnext: true,
-    curly: true,
-    immed: true,
-    indent: 2,
-    latedef: true,
-    newcap: true,
-    noarg: true,
-    quotmark: 'single',
-    undef: true,
-    unused: true,
-    strict: false,
-    globalstrict: true,
-    trailing: true,
-    smarttabs: true,
-    devel: true,
-    bitwise: false,
-    globals: {
-      angular: false,
-      '_': false,
-      '$': false,
-      LazyLoad: false,
-      v: false,
-      ga: false
-    }
-  };
+gulp.task('lint', function() {
+  return merge(
+    gulp.src(paths.front_js)
+      .pipe(jshint(require('./.jshintrc-front.json')))
+      .pipe(jshint.reporter(stylish))
+      .pipe(jshint.reporter('fail')),
 
-  var front_js = gulp.src(paths.front_js)
-    .pipe(jshint(options))
-    .pipe(jshint.reporter(stylish))
-    .pipe(jshint.reporter('fail'));
+    gulp.src(paths.less)
+      .pipe(recess({
+        noIDs: false,
+        noOverqualifying: false
+      }))
+      .pipe(recess.reporter()),
 
-  var less = gulp.src(paths.less)
-    .pipe(recess({
-      noIDs: false,
-      noOverqualifying: false
-    }))
-    .pipe(recess.reporter());
-
-  return merge(front_js, less);
-});
-
-gulp.task('lint-back', function() {
-  return gulp.src(paths.back_js)
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    .pipe(jshint.reporter('fail'));
+    gulp.src(paths.back_js)
+      .pipe(jshint())
+      .pipe(jshint.reporter(stylish))
+      .pipe(jshint.reporter('fail'))
+  );
 });
 
 gulp.task('build-html', function() {
@@ -154,36 +123,38 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('build-libs', function() {
-  var js_libs = gulp.src(paths.js_libs)
-    .pipe(sourcemaps.init())
-    .pipe(concat('libs.js'))
-    .pipe(ngAnnotate())
-    .pipe(uglify())
-    .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('dist/www/js'));
+  return merge(
+    gulp.src(paths.js_libs)
+      .pipe(sourcemaps.init())
+      .pipe(concat('libs.js'))
+      .pipe(ngAnnotate())
+      .pipe(uglify())
+      .pipe(sourcemaps.write('maps'))
+      .pipe(gulp.dest('dist/www/js')),
 
-  var css_libs = gulp.src(paths.css_libs)
-    .pipe(concat('libs.css'))
-    .pipe(minifyCSS())
-    .pipe(gulp.dest('dist/www/css'));
+    gulp.src(paths.css_libs)
+      .pipe(concat('libs.css'))
+      .pipe(minifyCSS())
+      .pipe(gulp.dest('dist/www/css')),
 
-  var fonts = gulp.src(paths.fonts)
-    .pipe(gulp.dest('dist/www/fonts'));
+    gulp.src(paths.fonts)
+      .pipe(gulp.dest('dist/www/fonts')),
 
-  var img_libs = gulp.src(paths.img_libs)
-    .pipe(gulp.dest('dist/www/img'));
-
-  return merge(js_libs, css_libs, fonts, img_libs);
+    gulp.src(paths.img_libs)
+      .pipe(gulp.dest('dist/www/img'))
+  );
 });
 
 gulp.task('build-js', function() {
-  var partial_html = gulp.src(paths.partial_html)
-    .pipe(templateCache('templates.js', {
-      module: 'appstore',
-      root: '/app'
-    }));
+  return merge(
+      gulp.src(paths.front_js, {base: 'www/app'}),
 
-  return merge(gulp.src(paths.front_js, {base: 'www/app'}), partial_html)
+      gulp.src(paths.partial_html)
+        .pipe(templateCache('templates.js', {
+          module: 'appstore',
+          root: '/app'
+        }))
+    )
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(ngAnnotate())
@@ -193,20 +164,19 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('build-back', function() {
-  var back_js = gulp.src(paths.back_js)
-    .pipe(gulp.dest('dist/src'));
+  return merge(
+    gulp.src(paths.back_js)
+      .pipe(gulp.dest('dist/src')),
 
-  var back_extra = gulp.src(paths.back_extra, {base: '.'})
-    .pipe(gulp.dest('dist'));
+    gulp.src(paths.back_extra, {base: '.'})
+      .pipe(gulp.dest('dist')),
 
-  var back_gitignore = gulp.src('.gitignore-deploy')
-    .pipe(rename('.gitignore'))
-    .pipe(gulp.dest('dist'));
-
-  return merge(back_js, back_extra, back_gitignore);
+    gulp.src('.gitignore-deploy')
+      .pipe(rename('.gitignore'))
+      .pipe(gulp.dest('dist'))
+  );
 });
 
-gulp.task('lint', ['lint-front', 'lint-back']);
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html', 'build-back']);
 gulp.task('build-back-only', ['lint', 'clean', 'build-back', 'build-html']);
 
