@@ -13,18 +13,21 @@ var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var recess = require('gulp-recess');
 var templateCache = require('gulp-angular-templatecache');
+var rename = require('gulp-rename');
+var push = require('git-push');
 var del = require('del');
 var merge = require('merge-stream');
 
 var paths = {
   front_js: ['www/app/**/*.js', '!www/app/load.js', '!www/bower_components/**/*'],
   load: 'www/app/load.js',
-  back_js: ['gulpfile.js', 'src/**/*.js', '!www/app/**/*.js', '!www/**/*.js'],
+  back_js: ['gulpfile.js', 'src/**/*.js'],
+  back_extra: ['package.json', 'src/**/*.json', '.openshift/**/*'],
   imgs: 'www/img/*',
   less: 'www/less/*.less',
   html: ['www/*.html'],
   partial_html: ['www/app/**/*.html'],
-  dist: 'www/dist/**',
+  dist: ['dist/**', '!dist/.git'],
   js_libs: [
     'www/bower_components/less/dist/less.min.js',
     'www/bower_components/jquery/dist/jquery.min.js',
@@ -130,7 +133,7 @@ gulp.task('build-html', function() {
         version: today.getTime()
     }))
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('www/dist'));
+    .pipe(gulp.dest('dist/www'));
 });
 
 gulp.task('build-less', function() {
@@ -142,12 +145,12 @@ gulp.task('build-less', function() {
       remove: false
     }))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('www/dist/css'));
+    .pipe(gulp.dest('dist/www/css'));
 });
 
 gulp.task('build-img', function() {
   return gulp.src(paths.imgs)
-    .pipe(gulp.dest('www/dist/img'));
+    .pipe(gulp.dest('dist/www/img'));
 });
 
 gulp.task('build-libs', function() {
@@ -157,18 +160,18 @@ gulp.task('build-libs', function() {
     .pipe(ngAnnotate())
     .pipe(uglify())
     .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('www/dist/js'));
+    .pipe(gulp.dest('dist/www/js'));
 
   var css_libs = gulp.src(paths.css_libs)
     .pipe(concat('libs.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('www/dist/css'));
+    .pipe(gulp.dest('dist/www/css'));
 
   var fonts = gulp.src(paths.fonts)
-    .pipe(gulp.dest('www/dist/fonts'));
+    .pipe(gulp.dest('dist/www/fonts'));
 
   var img_libs = gulp.src(paths.img_libs)
-    .pipe(gulp.dest('www/dist/img'));
+    .pipe(gulp.dest('dist/www/img'));
 
   return merge(js_libs, css_libs, fonts, img_libs);
 });
@@ -186,8 +189,43 @@ gulp.task('build-js', function() {
     .pipe(ngAnnotate())
     .pipe(uglify())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('www/dist/js'));
+    .pipe(gulp.dest('dist/www/js'));
+});
+
+gulp.task('build-back', function() {
+  var back_js = gulp.src(paths.back_js)
+    .pipe(gulp.dest('dist/src'));
+
+  var back_extra = gulp.src(paths.back_extra, {base: '.'})
+    .pipe(gulp.dest('dist'));
+
+  var back_gitignore = gulp.src('.gitignore-deploy')
+    .pipe(rename('.gitignore'))
+    .pipe(gulp.dest('dist'));
+
+  return merge(back_js, back_extra, back_gitignore);
 });
 
 gulp.task('lint', ['lint-front', 'lint-back']);
-gulp.task('build', ['lint', 'clean', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html']);
+gulp.task('build', ['lint', 'clean', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html', 'build-back']);
+gulp.task('build-back-only', ['lint', 'clean', 'build-back', 'build-html']);
+
+gulp.task('config-app', function() {
+  gulp.src('config.json.app')
+    .pipe(rename('config.json'))
+    .pipe(gulp.dest('dist/src'));
+});
+
+gulp.task('deploy-app', ['build', 'config-app'], function(callback) {
+  push('./dist', process.env.UAPPEXPLORER_APP_GIT, callback);
+});
+
+gulp.task('config-spider', function() {
+  gulp.src('config.json.spider')
+    .pipe(rename('config.json'))
+    .pipe(gulp.dest('dist/src'));
+});
+
+gulp.task('deploy-spider', ['build-back-only', 'config-spider'], function(callback) {
+  push('./dist', process.env.UAPPEXPLORER_SPIDER_GIT, callback);
+});

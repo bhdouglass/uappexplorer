@@ -1,8 +1,6 @@
 *.log
 node_modules/
 .vagrant/
-iron.json
-src/config.json
-www/dist
-build-uappexplorer-*
-*.user*
+config.json*
+dist
+
