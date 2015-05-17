@@ -29,7 +29,7 @@ function setup(app, success, error) {
           var now = moment();
           var filename = config.data_dir + '/' + pkg.icon_filename;
           fs.exists(filename, function(exists) {
-            if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
+            if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 30) {
               res.setHeader('Content-type', mime.lookup(filename));
               res.setHeader('Cache-Control', 'public, max-age=2592000'); //30 days
               fs.createReadStream(filename).pipe(res);
