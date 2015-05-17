@@ -31,7 +31,7 @@ function setup(app, success, error) {
           fs.exists(filename, function(exists) {
             if (exists && now.diff(pkg.icon_fetch_date, 'days') <= 2) {
               res.setHeader('Content-type', mime.lookup(filename));
-              res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+              res.setHeader('Cache-Control', 'public, max-age=2592000'); //30 days
               fs.createReadStream(filename).pipe(res);
             }
             else {
@@ -45,7 +45,7 @@ function setup(app, success, error) {
                   pkg.save();
 
                   res.setHeader('Content-type', mime.lookup(filename));
-                  res.setHeader('Cache-Control', 'public, max-age=172800'); //2 days
+                  res.setHeader('Cache-Control', 'public, max-age=2592000'); //30 days
                   fs.createReadStream(filename).pipe(res);
                 }
               });

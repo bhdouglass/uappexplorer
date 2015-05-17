@@ -12,6 +12,4 @@ WORKDIR /srv/ubuntu-appstore
 RUN npm install supervisor -g
 
 EXPOSE 8080
-EXPOSE 3000
-ENV ALLOWED_DOMAINS=uappexplorer.com,local.uappexplorer.com,localhost,127.0.0.1
 CMD npm start
