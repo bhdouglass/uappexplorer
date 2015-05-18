@@ -178,24 +178,12 @@ gulp.task('build-back', function() {
 });
 
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html', 'build-back']);
-gulp.task('build-back-only', ['lint', 'clean', 'build-back', 'build-html']);
+gulp.task('build-back-only', ['lint', 'clean', 'build-back']);
 
-gulp.task('config-app', function() {
-  gulp.src('config.json.app')
-    .pipe(rename('config.json'))
-    .pipe(gulp.dest('dist/src'));
-});
-
-gulp.task('deploy-app', ['build', 'config-app'], function(callback) {
+gulp.task('deploy-app', ['build'], function(callback) {
   push('./dist', process.env.UAPPEXPLORER_APP_GIT, callback);
 });
 
-gulp.task('config-spider', function() {
-  gulp.src('config.json.spider')
-    .pipe(rename('config.json'))
-    .pipe(gulp.dest('dist/src'));
-});
-
-gulp.task('deploy-spider', ['build-back-only', 'config-spider'], function(callback) {
+gulp.task('deploy-spider', ['build-back-only'], function(callback) {
   push('./dist', process.env.UAPPEXPLORER_SPIDER_GIT, callback);
 });

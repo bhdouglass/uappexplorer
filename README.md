@@ -1,24 +1,27 @@
 # uApp Explorer #
 
-[ ![Codeship Status for bhdouglass/ubuntu-appstore](https://codeship.com/projects/6a279da0-64a5-0132-af74-0639b0c195d6/status?branch=master)](https://codeship.com/projects/52618)
+[ ![uApp Explorer](https://uappexplorer.com/img/app-logo.png)](https://uappexplorer.com/)
 
-Support this project via [Gratipay](https://gratipay.com/bhdouglass/)
+![Codeship Status](https://img.shields.io/codeship/6a279da0-64a5-0132-af74-0639b0c195d6/master.svg)
+![Github Stars](https://img.shields.io/github/stars/bhdouglass/ubuntu-appstore.svg)
+![Github Issues](https://img.shields.io/github/issues-raw/bhdouglass/ubuntu-appstore.svg)
+![License](https://img.shields.io/github/license/bhdouglass/ubuntu-appstore.svg)
+[ ![Gratipay](https://img.shields.io/gratipay/bhdouglass.svg) ](https://gratipay.com/bhdouglass/)
 
-Browse and search apps from the Ubuntu Touch click appstore - [uappexplorer.com](https://uappexplorer.com/).
+Browse and search apps from the Ubuntu Touch click appstore -
+[uappexplorer.com](https://uappexplorer.com/).
 
-This site uses publically available data from the Ubuntu Touch [click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
-This site is maintained by [Brian Douglass](http://bhdouglass.com) and is not
+uApp Explorer uses publically available data from the Ubuntu Touch
+[click appstore api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex),
+It is maintained by [Brian Douglass](http://bhdouglass.com) and is not
 endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are
 registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 
 ## Development ##
 
-* Install [vagrant](http://vagrantup.com/):
-    * Ubuntu: `sudo apt-get install vagrant`
-    * Arch Linux: `pacman -S vagrant`
-* Install [docker](https://www.docker.com/)
-    * Ubuntu: `sudo apt-get install docker.io`
-    * Arch Linux: `pacman -S docker`
+* Install [vagrant](http://vagrantup.com/) and [docker](https://www.docker.com/):
+    * Ubuntu: `sudo apt-get install vagrant docker.io`
+    * Arch Linux: `pacman -S vagrant docker`
 * Install NPM dependencies:
     * Run: `npm install`
 * Install gulp and bower:
@@ -26,9 +29,9 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 * Start vagrant:
     * Run: `vagrant up --no-parallel`
 * Run the spider:
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js`
+    * Run: `./bin/spider`
 * Attach to the docker container (if needed):
-    * Run: `docker attach --sig-proxy=false appstore_web`
+    * Run: `./bin/attach`
 * Visit the site:
     * In your browser go to: `localhost:8080`
     * You may want to put a friendly name in your host machine's `/etc/hosts`
@@ -36,111 +39,68 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 
 ## Using the Spider ##
 
-* Fetch all packages
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js`
-* Fetch only updated/missing packages
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js update`
-* Fetch departments/categories
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js department`
-* Fetch reviews
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js review`
-* Fetch reviews for a single package
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js review com.example.pacakge.name`
-* Fetch a single package
-    * Run: `vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js com.example.pacakge.name`
+* Fetch all packages - `./bin/spider`
+* Fetch only updated/missing packages - `./bin/spider update`
+* Fetch departments/categories - `./bin/spider department`
+* Fetch reviews - `./bin/spider review`
+* Fetch reviews for a single package - `./bin/spider review com.example.pacakge.name`
+* Fetch a single package - `./bin/spider com.example.pacakge.name`
 
 ## Deploying ##
 
-This app is currently designed to be deployed on [OpenShift](https://www.openshift.com).
-The gear running the app needs to have the Nodejs and MongoDB cartridge setup.
-This could be easily setup for a different service provided you setup the env variables.
-To setup env variables on OpenShift, check out their [docs](https://developers.openshift.com/en/managing-environment-variables.html#custom-variables).
+uApp Explorer is setup to deploy to [Openshift](https://www.openshift.com/) via [Codeship](https://codeship.com/).
+After code is pushed to the Github repo [Codeship](https://codeship.com/) runs the following to deploy:
 
-The postinstall of this package runs a gulp build and puts all the static files
-into `src/server/static/dist`. The built files are all minified and concatenated.
+~~~
+#Switch to node v0.12.0
+nvm install 0.12.0
+nvm use 0.12.0
 
-Alternatively an external mongo host could be used, like [MongoLab](https://mongolab.com/).
+#Install dependencied
+npm install
+
+#Lint the code
+gulp lint
+
+#Deploy to the app server
+git config --global user.email "$EMAIL"
+git config --global user.name "$NAME"
+echo yes | gulp deploy-app
+
+#Deploy to the spider server
+echo yes | gulp deploy-spider
+~~~
+
+With the following env vars:
+
+* UAPPEXPLORER_APP_GIT - Git uri for the [Openshift](https://www.openshift.com/) deploy repo (app/api)
+* UAPPEXPLORER_SPIDER_GIT - Git uri for the [Openshift](https://www.openshift.com/) deploy repo (spider)
+* EMAIL- Git email, so git doesn't complain
+* NAME - Git full name
+
+## Infastructure ##
+
+uApp Explorer is currently setup on 2 small [Openshift](https://www.openshift.com/) "gears"
+(one for the app and api, another for the spider). Deployment is done via
+[Codeship](https://codeship.com/). The mongo database is hosted on [Mongolab](https://mongolab.com/).
+uApp Explorer uses the [Ubuntu Click api]((https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex)
+to get app data and for parsing app packages. [Papertrail](https://papertrailapp.com/)
+is used for logging and [Mailhide](http://www.google.com/recaptcha/mailhide/apikey)
+is used to protect email addresses.
+
+Checkout the stack on [Stackshare](http://stackshare.io/bhdouglass/uapp-explorer).
 
 ## Configuration ##
 
-Default configuration can be found in src/config.js. The defaults can be overriden
-by a config.json file (setup like config.js's export). They can also be overriden
-by the following env variables.
-
-* NODEJS_PORT || OPENSHIFT_NODEJS_PORT
-    * The port for the web server to listen on
-    * Default: `8080`
-* NODEJS_IP || OPENSHIFT_NODEJS_IP
-    * IP address for the web server to listen on
-    * Default: `127.0.0.1`
-* NODEJS_HOST
-    * Host name for the server
-    * Default: `http://local.uappexplorer.com:8080`
-* SESSION_SECRET
-    * The secret for the cookie session
-    * Default: `uappexplorer`
-* NODEJS_STATIC
-    * Directory (relative to src/server.js) where the static content is stored
-    * Default: `/../../www` (change to `/../../www/dist` when using the build static files)
-* DATA_DIR || OPENSHIFT_DATA_DIR
-    * Directory where downloaded images are stored
-    * Default: `/tmp`
-* MONGODB_URI || OPENSHIFT_MONGODB_DB_URL
-    * The uri used to connect to MongoDB (may contain username/password)
-    * Default: `mongodb://localhost/`
-* MONGODB_DB
-    * Name of the database to use
-    * Default: `appstore`
-* NODEJS_NO_SPIDER
-    * Set to 1 to disable the spider
-    * Default: 0
-* NODEJS_SPIDER_ONLY
-    * Set to 1 to disable the api/app server
-    * Default: 0
-* CLOUDINARY_NAME
-    * Name of the cloudinary cloud
-    * Default: empty
-* CLOUDINARY_KEY
-    * Cloudinary api key
-    * Default: empty
-* CLOUDINARY_SECRET
-    * Cloudinary api secret
-    * Default: empty
-* MAILHIDE_PRIVATEKEY
-    * reCPTCHA Mailhide api private key
-    * Default: empty
-* MAILHIDE_PUBLICKEY
-    * reCPTCHA Mailhide api public key
-    * Default: empty
-* UBUNTU_SSO_EMAIL
-    * Ubuntu single signon email address (for parsing package types)
-    * Default: empty
-* UBUNTU_SSO_PASSWORD
-    * Ubuntu single signon password (for parsing package types)
-    * Default: empty
+See `src/config.js` for more info about configuring uApp Explorer.
 
 ## Libraries ##
 
-The following third party libraries are used in this app:
+See `package.json` and `bower.json` for a list of third party dependencies. A big thank you to all those projects!
 
-* Server Side
-    * [Express](http://expressjs.com/)
-    * [Mongoose](http://mongoosejs.com/)
-    * [Lo-Dash](https://lodash.com/)
-    * [Request](https://github.com/request/request)
-    * [Async](https://github.com/caolan/async)
-    * [Moment.js](http://momentjs.com/)
-    * [sitemap](https://www.npmjs.com/package/sitemap)
-    * [passport](http://passportjs.org/)
-* Client Side
-    * [Bootstrap](http://getbootstrap.com/)
-    * [jQuery](http://jquery.com/)
-    * [FontAwesome](http://fontawesome.io/) - Logo is a modified version of the compass from FontAwesome
-    * [AngularJS](https://angularjs.org/)
-    * [Angular UI](http://angular-ui.github.io/)
-    * [Lo-Dash](https://lodash.com/)
-    * [SwipeBox](http://brutaldesign.github.io/swipebox/)
-    * [Angular QR Code](https://github.com/monospaced/angular-qrcode)
+## Logo ##
+
+The logo is derived from the compass icon from [FontAwesome](http://fontawesome.io/).
 
 ## License ##
 

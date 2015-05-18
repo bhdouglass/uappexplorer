@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vagrant docker-run web -- node /srv/ubuntu-appstore/src/runSpider.js $@

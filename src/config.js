@@ -1,14 +1,11 @@
-var fs = require('fs');
-var path = require('path');
-var _ = require('lodash');
-
-//Override defaults with a config.json file in the same directory as this file
-//Override defaults and config.json with env variables
-
 var config = {
-  data_dir: '/tmp',
+  //Directory to store images and other data
+  data_dir: process.env.OPENSHIFT_DATA_DIR || process.env.DATA_DIR || '/tmp',
+  //Temporary directory for storing files being processed (like click packages)
   tmp_dir: '/tmp',
+  //Which features to turn on
   capabilities: ['spider', 'app', 'api', 'icons', 'feed'],
+  //Convenience functions
   use_spider: function() {
     return (config.capabilities.indexOf('spider') > -1);
   },
@@ -28,141 +25,73 @@ var config = {
     return !!config.cloudinary.api_key;
   },
   server: {
-    ip: '0.0.0.0',
-    port: 8080,
-    host: 'http://local.uappexplorer.com:8080',
-    static: '/../../www',
-    session_secret: 'uappexplorer'
+    //The ip address to bind the server to
+    ip: process.env.OPENSHIFT_NODEJS_IP || process.env.NODEJS_IP || '0.0.0.0',
+    //The port to bind the server to
+    port: process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080,
+    //Full domain name of the server
+    host: process.env.NODEJS_HOST || 'http://local.uappexplorer.com:8080',
+    //The location of the frontend files
+    static: process.env.NODEJS_STATIC || '/../../www',
+    //Secret for the session cookie
+    session_secret: process.env.SESSION_SECRET || 'uappexplorer',
   },
   mongo: {
-    uri: 'mongodb://localhost/',
-    database: 'appstore',
+    //The uri (with username/password) for accessing a mongo database
+    uri: process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URI || 'mongodb://localhost/',
+    //The name of the mongo database to use
+    database: process.env.MONGODB_DB || 'appstore',
   },
+  //Urls for the click apps api
   spider: {
     search_api: 'https://search.apps.ubuntu.com/api/v1/search',
     reviews_api: 'https://reviews.ubuntu.com/click/api/1.0/reviews/',
     departments_api: 'https://search.apps.ubuntu.com/api/v1/departments',
     packages_api: 'https://search.apps.ubuntu.com/api/v1/package/',
   },
+  //Credentials for logging to Papertrail - https://papertrailapp.com
   papertrail: {
-    host: '',
-    port: null
+    host: process.env.PAPERTRAIL_HOST,
+    port: process.env.PAPERTRAIL_PORT,
   },
+  //Credentials for pushing images on Cloudinary - http://cloudinary.com
   cloudinary: {
-    cloud_name: '',
-    api_key: '',
-    api_secret: '',
+    cloud_name: process.env.CLOUDINARY_NAME,
+    api_key: process.env.CLOUDINARY_KEY,
+    api_secret: process.env.CLOUDINARY_SECRET,
   },
+  //Credentials for encrypting email addresses with Mailhide - http://www.google.com/recaptcha/mailhide/apikey
   mailhide: {
-    privateKey: '',
-    publicKey: '',
+    privateKey: process.env.MAILHIDE_PRIVATEKEY,
+    publicKey: process.env.MAILHIDE_PUBLICKEY,
   },
+  //Credentials for downloading click packages (normal Ubuntu login) - https://login.ubuntu.com
   ubuntu_sso: {
-    email: '',
-    password: '',
+    email: process.env.UBUNTU_SSO_EMAIL,
+    password: process.env.UBUNTU_SSO_PASSWORD,
     token_name: 'uappexplorer.com',
   }
 };
 
-if (fs.existsSync(path.join(__dirname, 'config.json'))) {
-  var config_file = fs.readFileSync(path.join(__dirname, 'config.json'));
-  _.extend(config, JSON.parse(config_file));
-}
-
-if (process.env.OPENSHIFT_DATA_DIR) {
-  config.data_dir = process.env.OPENSHIFT_DATA_DIR;
-}
-else if (process.env.DATA_DIR) {
-  config.data_dir = process.env.DATA_DIR;
-}
-
-if (process.env.OPENSHIFT_NODEJS_IP) {
-  config.server.ip = process.env.OPENSHIFT_NODEJS_IP;
-}
-else if (process.env.NODEJS_IP) {
-  config.server.ip = process.env.NODEJS_IP;
-}
-
-if (process.env.OPENSHIFT_NODEJS_PORT) {
-  config.server.port = process.env.OPENSHIFT_NODEJS_PORT;
-}
-else if (process.env.NODEJS_PORT) {
-  config.server.port = process.env.NODEJS_PORT;
-}
-
-if (process.env.NODEJS_STATIC) {
-  config.server.static = process.env.NODEJS_STATIC;
-}
-
-if (process.env.NODEJS_HOST) {
-  config.server.host = process.env.NODEJS_HOST;
-}
-
-if (process.env.SESSION_SECRET) {
-  config.server.session_secret = process.env.SESSION_SECRET;
-}
-
+//Disable spider
 if (process.env.NODEJS_NO_SPIDER == 1) {
   config.capabilities.splice(config.capabilities.indexOf('spider'), 1);
 }
 
+//Disable web/api
 if (process.env.NODEJS_SPIDER_ONLY == 1) {
   config.capabilities.splice(config.capabilities.indexOf('api'), 1);
   config.capabilities.splice(config.capabilities.indexOf('app'), 1);
 }
 
+//Disable icons
 if (process.env.NODEJS_NO_ICONS == 1) {
   config.capabilities.splice(config.capabilities.indexOf('icons'), 1);
 }
 
-if (process.env.OPENSHIFT_MONGODB_DB_URL) {
-  config.mongo.uri = process.env.OPENSHIFT_MONGODB_DB_URL;
-}
-else if (process.env.MONGODB_URI) {
-  config.mongo.uri = process.env.MONGODB_URI;
-}
-else if (process.env.MONGO_PORT) { //From docker
+//Mongo uri from docker
+if (process.env.MONGO_PORT) {
   config.mongo.uri = process.env.MONGO_PORT.replace('tcp', 'mongodb');
-}
-
-if (process.env.MONGODB_DB) {
-  config.mongo.database = process.env.MONGODB_DB;
-}
-
-if (process.env.PAPERTRAIL_HOST) {
-  config.papertrail.host = process.env.PAPERTRAIL_HOST;
-}
-
-if (process.env.PAPERTRAIL_PORT) {
-  config.papertrail.port = process.env.PAPERTRAIL_PORT;
-}
-
-if (process.env.CLOUDINARY_NAME) {
-  config.cloudinary.cloud_name = process.env.CLOUDINARY_NAME;
-}
-
-if (process.env.CLOUDINARY_KEY) {
-  config.cloudinary.api_key = process.env.CLOUDINARY_KEY;
-}
-
-if (process.env.CLOUDINARY_SECRET) {
-  config.cloudinary.api_secret = process.env.CLOUDINARY_SECRET;
-}
-
-if (process.env.MAILHIDE_PRIVATEKEY) {
-  config.mailhide.privateKey = process.env.MAILHIDE_PRIVATEKEY;
-}
-
-if (process.env.MAILHIDE_PUBLICKEY) {
-  config.mailhide.publicKey = process.env.MAILHIDE_PUBLICKEY;
-}
-
-if (process.env.UBUNTU_SSO_EMAIL) {
-  config.ubuntu_sso.email = process.env.UBUNTU_SSO_EMAIL;
-}
-
-if (process.env.UBUNTU_SSO_PASSWORD) {
-  config.ubuntu_sso.password = process.env.UBUNTU_SSO_PASSWORD;
 }
 
 module.exports = config;
