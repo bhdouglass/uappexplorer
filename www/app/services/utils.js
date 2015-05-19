@@ -41,7 +41,7 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
         if ($scope.can_load) {
           $scope.loading = true;
         }
-      }, 500); //0.5 seconds
+      }, 250); //0.25 seconds
     },
 
     doneLoading: function($scope) {

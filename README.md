@@ -3,9 +3,9 @@
 [ ![uApp Explorer](https://uappexplorer.com/img/app-logo.png)](https://uappexplorer.com/)
 
 ![Codeship Status](https://img.shields.io/codeship/6a279da0-64a5-0132-af74-0639b0c195d6/master.svg)
-![Github Stars](https://img.shields.io/github/stars/bhdouglass/ubuntu-appstore.svg)
-![Github Issues](https://img.shields.io/github/issues-raw/bhdouglass/ubuntu-appstore.svg)
-![License](https://img.shields.io/github/license/bhdouglass/ubuntu-appstore.svg)
+![Github Stars](https://img.shields.io/github/stars/bhdouglass/uappexplorer.svg)
+![Github Issues](https://img.shields.io/github/issues-raw/bhdouglass/uappexplorer.svg)
+![License](https://img.shields.io/github/license/bhdouglass/uappexplorer.svg)
 [ ![Gratipay](https://img.shields.io/gratipay/bhdouglass.svg) ](https://gratipay.com/bhdouglass/)
 
 Browse and search apps from the Ubuntu Touch click appstore -

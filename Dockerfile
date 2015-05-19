@@ -7,8 +7,8 @@ RUN apt-get install -y apt-utils openssh-server sudo curl wget nfs-common g++ fo
 RUN apt-get clean
 
 #Setup app
-RUN mkdir -p /srv/ubuntu-appstore
-WORKDIR /srv/ubuntu-appstore
+RUN mkdir -p /srv/uappexplorer
+WORKDIR /srv/uappexplorer
 RUN npm install supervisor -g
 
 EXPOSE 8080

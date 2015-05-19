@@ -20,9 +20,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       d.link('appstore_mongo:mongo')
     end
 
-    web.vm.hostname = "ubuntu-appstore"
-    web.vm.synced_folder "./", "/srv/ubuntu-appstore", id: "vagrant-root"
+    web.vm.hostname = "uappexplorer"
+    web.vm.synced_folder "./", "/srv/uappexplorer", id: "vagrant-root"
     web.vm.network "forwarded_port", guest: 8080, host: 8080
-    web.vm.network "forwarded_port", guest: 3000, host: 3000
   end
 end
