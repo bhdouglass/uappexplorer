@@ -249,7 +249,7 @@ function setup(app, success, error) {
         pkg.reviews = undefined;
 
         //TODO cache this
-        db.Package.find({author: pkg.author, name: {'$ne': pkg.name}}).sort('-points').limit(3).exec(function(err, pkgs) {
+        db.Package.find({author: pkg.author, name: {$ne: pkg.name}}).sort('-points').limit(3).exec(function(err, pkgs) {
           if (err) {
             logger.error('server: ' + err);
             pkgs = [];
@@ -257,11 +257,49 @@ function setup(app, success, error) {
 
           pkg = JSON.parse(JSON.stringify(pkg));
           pkg.author_apps = [];
+          pkg.related_apps = [];
+
+          var author_app_names = [pkg.name];
           _.forEach(pkgs, function(p) {
             pkg.author_apps.push(miniPkg(p));
+            author_app_names.push(p.name);
           });
 
-          success(res, pkg);
+          if (pkg.keywords.length > 0) {
+            //TODO cache this
+            db.Package.aggregate([
+              {$match: {
+                keywords: {$in: pkg.keywords},
+                name: {$nin: author_app_names},
+                categories: {$in: pkg.categories},
+              }},
+              {$unwind: '$keywords'},
+              {$match: {keywords: {$in: pkg.keywords}}},
+              {$group: {
+                _id: '$_id',
+                like_keywords: {$sum: 1},
+                pkgs: {$addToSet: '$$ROOT'}}
+              },
+              {$sort: {like_keywords: -1, 'pkgs.points': -1}},
+              {$limit: 3}
+            ], function(err, data) {
+              if (err) {
+                logger.error('server: ' + err);
+                data = [];
+              }
+
+              _.forEach(data, function(item) {
+                if (item.pkgs.length > 0) {
+                  pkg.related_apps.push(miniPkg(item.pkgs[0]));
+                }
+              });
+
+              success(res, pkg);
+            });
+          }
+          else {
+            success(res, pkg);
+          }
         });
       }
     });
