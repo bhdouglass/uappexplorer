@@ -2,13 +2,35 @@ var db = require('../db');
 var rss = require('rss');
 var _ = require('lodash');
 
+var typeMap = {
+  application: 'App',
+  scope: 'Scope',
+  webapp: 'Web App',
+  snappy: 'Snappy App',
+};
+
+function type(types) {
+  var t = 'application';
+  if (types.indexOf('application')) {
+    t = 'application';
+  }
+  else if (types.indexOf('webapp')) {
+    t = 'webapp';
+  }
+  else if (types.length > 0) {
+    t = types[0];
+  }
+
+  return typeMap[t];
+}
+
 function generateFeed(callback) {
   var feed = new rss({
     title:       'uApp Explorer New Apps',
-    description: 'New apps in the Ubuntu Touch appstore',
+    description: 'New apps in the uApp Explorer',
     feed_url:    'https://uappexplorer.com/api/rss/new-apps.xml',
     site_url:    'https://uappexplorer.com/',
-    image_url:   'https://uappexplorer.com/img/ubuntu-logo.png',
+    image_url:   'https://uappexplorer.com/img/app-logo.png',
     ttl:         240 //4 hours
   });
 
@@ -22,7 +44,7 @@ function generateFeed(callback) {
     else {
       _.forEach(pkgs, function(pkg) {
         feed.item({
-          title:       pkg.title,
+          title:       'New ' + type(pkg.types) + ': ' + pkg.title,
           url:         'https://uappexplorer.com/app/' + pkg.name,
           description: '<a href="https://uappexplorer.com/app/' + pkg.name + '"><img src="https://uappexplorer.com/api/icon/' + pkg.name + '.png" /></a><br/>' + pkg.description,
           author:      pkg.author,
