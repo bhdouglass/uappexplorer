@@ -89,6 +89,29 @@ angular.module('appstore').factory('api', function($q, $http) {
       return deferred.promise;
     },
 
+    licenses: function() {
+      var deferred = $q.defer();
+      $http.get('/api/licenses').then(function(res) {
+        var licenses = [
+          {label: 'Open Source', value: 'open_source'},
+          {label: 'Proprietary', value: 'proprietary'}
+        ];
+
+        _.forEach(res.data.data, function(license) {
+          licenses.push({
+            label: license,
+            value: license.replace(/ /g, '_').replace(/\//g, '_').toLowerCase()
+          });
+        });
+
+        deferred.resolve(licenses);
+      }, function(err) {
+        deferred.reject(err);
+      });
+
+      return deferred.promise;
+    },
+
     app: function(name) {
       var deferred = $q.defer();
       $http.get('/api/apps/' + name).then(function(res) {

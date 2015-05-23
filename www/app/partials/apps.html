@@ -60,12 +60,19 @@
         <div class="row" ng-show="more_filters">
           <form>
             <fieldset>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
+                <label for="license" class="control-label">License:</label>
+                <select id="license" class="form-control" ng-options="l.value as l.label for l in licenses" ng-model="license" ng-change="changeLicense(license)">
+                  <option value="">All</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
                 <label for="architecture" class="control-label">Architecture:</label>
                 <select id="architecture" class="form-control" ng-options="a for a in architectures" ng-model="architecture" ng-change="changeArchitecture(architecture)"></select>
               </div>
 
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <label for="framework" class="control-label">Framework:</label>
                 <select id="framework" class="form-control" ng-options="f for f in frameworks" ng-model="framework" ng-change="changeFramework(framework)"></select>
               </div>

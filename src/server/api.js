@@ -2,6 +2,7 @@ var db = require('../db');
 var spider = require('../spider/spider');
 var logger = require('../logger');
 var essential = require('./json/essential-apps.json');
+var licenses = require('./json/open-source-licenses.json');
 var _ = require('lodash');
 var moment = require('moment');
 var cluster = require('cluster');
@@ -74,15 +75,23 @@ function setup(app, success, error) {
     }
   });
 
+  app.get('/api/licenses', function(req, res) {
+    success(res, licenses);
+  });
+
   //TODO cache this to speed up requests
   app.get('/api/apps', function(req, res) {
     var findQuery = req.query.query ? JSON.parse(req.query.query) : {};
     if (!findQuery.types) {
-      findQuery.types = {'$in': [
+      findQuery.types = {$in: [
         'webapp',
         'application',
         'scope'
       ]};
+    }
+
+    if (findQuery.license == 'Open Source') {
+      findQuery.license = {$in: licenses};
     }
 
     var query = null;

@@ -26,6 +26,8 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.defaultFramework = 'All';
   $scope.framework = $scope.defaultFramework;
   $scope.type = 'all';
+  $scope.licenses = [];
+  $scope.license = null;
   $scope.appIcon = utils.appIcon;
 
   $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
@@ -155,6 +157,19 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   }
   fetchFrameworks();
 
+  //TODO cache this in local storage
+  function fetchLicenses() {
+    api.licenses().then(function(data) {
+      $scope.licenses = data;
+
+      locationChange();
+    }, function(err) {
+      console.error(err);
+      $rootScope.errorCallback('Could not download license list, click to retry', fetchLicenses);
+    });
+  }
+  fetchLicenses();
+
   $scope.$watch('current_page', function() {
     if ($scope.current_page !== undefined) {
       $window.scrollTo(0, 0);
@@ -237,6 +252,16 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }
     else {
       $location.search('framework', framework);
+    }
+  };
+
+  $scope.changeLicense = function(license) {
+    $scope.current_page = 0;
+    if (license == $scope.defaultLicense) {
+      $location.search('license', undefined);
+    }
+    else {
+      $location.search('license', license);
     }
   };
 
@@ -358,6 +383,20 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }
     //end framework
 
+    //start license
+    $scope.license = $location.search().license;
+    if ($scope.license == 'All' || !$scope.license) {
+      $scope.paging.query.license = undefined;
+    }
+    else {
+      _.forEach($scope.licenses, function(l) {
+        if (l.value == $scope.license) {
+          $scope.paging.query.license = l.label;
+        }
+      });
+    }
+    //end license
+
     //start type
     var type = $location.search().type;
     if (!type) {
@@ -376,6 +415,11 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     }
     $scope.typeModel = $scope.type;
     //end type
+
+    //Check if we need to open the extra filters
+    if ($scope.architecture != $scope.defaultArchitecture || $scope.framework != $scope.defaultFramework || $scope.license) {
+      $scope.more_filters = true;
+    }
   }
   locationChange();
 
