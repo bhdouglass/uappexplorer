@@ -1,3 +1,58 @@
 <div>
-    <h1>Welcome {{user.name ? user.name : user.username}}</h1>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h1>Welcome {{user.name ? user.name : user.username}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>
+                App Lists
+                <i class="fa fa-spinner fa-spin" ng-if="working"></i>
+            </h3>
+        </div>
+    </div>
+
+    <div class="row lists">
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="name">Name</th>
+                        <th>Sort By</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon">New:</span>
+                                <input type="text" ng-model="newList.name" class="form-control" />
+                            </div>
+                        </td>
+                        <td class="list-sorts">
+                            <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="newList.sort"></select>
+                        </td>
+                        <td>
+                            <a ng-click="create(newList)" class="clickable" ng-show="newList.name"><i class="fa fa-plus"></i></a>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="list in lists">
+                        <td>
+                            <input type="text" ng-model="list.name" class="form-control" />
+                        </td>
+                        <td class="list-sorts">
+                            <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="list.sort"></select>
+                        </td>
+                        <td>
+                            <a ng-click="update(list)" class="clickable"><i class="fa fa-save"></i></a>
+                            <a ng-click="delete(list)" class="clickable"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

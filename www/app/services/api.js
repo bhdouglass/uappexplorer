@@ -184,6 +184,71 @@ angular.module('appstore').factory('api', function($q, $http) {
       });
 
       return deferred.promise;
+    },
+
+    lists: {
+      findAll: function(user) {
+        return $http.get('/api/lists', {
+          data: {
+            user: user
+          }
+        })
+        .then(function(res) {
+          return res.data.data;
+        }, function() {
+          return [];
+        });
+      },
+      find: function(id) {
+        return $http.get('/api/lists/' + id).then(function(res) {
+          return res.data.data;
+        }, function() {
+          return null;
+        });
+      },
+      create: function(list) {
+        delete list.user;
+        delete list.user_name;
+
+        return $http({
+          url: '/api/lists',
+          method: 'POST',
+          data: list,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(function(res) {
+          return res.data.data;
+        }, function() {
+          return null;
+        });
+      },
+      update: function(id, list) {
+        delete list.user;
+        delete list.user_name;
+
+        return $http({
+          url: '/api/lists/' + id,
+          method: 'PUT',
+          data: list,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(function(res) {
+          return res.data.data;
+        }, function() {
+          return null;
+        });
+      },
+      delete: function(id) {
+        return $http.delete('/api/lists/' + id).then(function() {
+          return true;
+        }, function() {
+          return false;
+        });
+      }
     }
   };
 });

@@ -60,5 +60,45 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
 
       return icon;
     },
+
+    sorts: [
+      {
+        label: 'Title A-Z',
+        value: 'title'
+      }, {
+        label: 'Title Z-A',
+        value: '-title'
+      }, {
+        label: 'Newest ',
+        value: '-published_date'
+      }, {
+        label: 'Oldest',
+        value: 'published_date'
+      }, {
+        label: 'Latest Update',
+        value: '-last_updated'
+      }, {
+        label: 'Oldest Update',
+        value: 'last_updated'
+      }, {
+        label: 'Highest Heart Rating',
+        value: '-points'
+      }, {
+        label: 'Lowest Heart Rating',
+        value: 'points'
+      }, {
+        label: 'Highest Star Rating',
+        value: '-bayesian_average'
+      }, {
+        label: 'Lowest Star Rating',
+        value: 'bayesian_average'
+      }, {
+        label: 'Free',
+        value: 'prices.USD'
+      }, {
+        label: 'Most Expensive (USD)',
+        value: '-prices.USD'
+      },
+    ]
   };
 });

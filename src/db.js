@@ -81,7 +81,18 @@ var userSchema = mongoose.Schema({
 
 var User = mongoose.model('User', userSchema);
 
+var listSchema = mongoose.Schema({
+  name: String,
+  packages: [String],
+  sort: String,
+  user_name: String,
+  user: {type: String, index: true},
+});
+
+var List = mongoose.model('List', listSchema);
+
 exports.Package = Package;
 exports.Department = Department;
 exports.Review = Review;
 exports.User = User;
+exports.List = List;

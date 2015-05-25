@@ -1,7 +1,6 @@
 var config = require('../config');
 var db = require('../db');
 var passport = require('passport');
-var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var session = require('cookie-session');
@@ -11,8 +10,6 @@ var uuid = require('node-uuid');
 
 function setup(app, success, error) {
   app.use(cookieParser());
-  app.use(bodyParser.urlencoded({extended: false}));
-  app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(session({
     secret: config.server.session_secret,

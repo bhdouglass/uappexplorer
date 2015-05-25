@@ -5,9 +5,11 @@ var icons = require('./icons');
 var api = require('./api');
 var app = require('./app');
 var auth = require('./auth');
+var lists = require('./lists');
 var express = require('express');
 var compression = require('compression');
 var fs = require('fs');
+var bodyParser = require('body-parser');
 
 var app_express = express();
 
@@ -54,8 +56,12 @@ if (config.use_api()) {
 }
 
 if (config.use_app()) {
+  app_express.use(bodyParser.json());
+  app_express.use(bodyParser.urlencoded({extended: false}));
+
   app.setup(app_express, success, error);
   auth.setup(app_express, success, error);
+  lists.setup(app_express, success, error);
 }
 
 app_express.use(function(req, res) {
