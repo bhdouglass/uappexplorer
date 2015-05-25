@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('appstore', ['ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics', 'ipCookie', 'monospaced.qrcode', 'ngTouch', 'ngAnimate']);
+angular.module('appstore', [
+  'ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics',
+  'ipCookie', 'monospaced.qrcode', 'ngTouch', 'ngAnimate', 'base64'
+]);
 
 angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $urlRouterProvider.otherwise('/apps');
@@ -10,12 +13,14 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
     url: '/',
     templateUrl: '/app/partials/main.html',
     controller: 'mainCtrl'
-  }).state('apps', {
+  })
+  .state('apps', {
     url: '/apps?q&category&sort&view&arch&framework&page&type',
     templateUrl: '/app/partials/apps.html',
     controller: 'appsCtrl',
     reloadOnSearch: false,
-  }).state('apps.request', {
+  })
+  .state('apps.request', {
     url: '/request',
     onEnter: ['$state', '$modal', function($state, $modal) {
         $modal.open({
@@ -25,10 +30,16 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
             $state.go('^');
         });
     }]
-  }).state('app', {
+  })
+  .state('app', {
     url: '/app/:name',
     templateUrl: '/app/partials/app.html',
     controller: 'appCtrl'
+  })
+  .state('me', {
+    url: '/me',
+    templateUrl: '/app/partials/me.html',
+    controller: 'meCtrl'
   });
 
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|scope):/);

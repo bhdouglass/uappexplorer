@@ -6,8 +6,10 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var session = require('cookie-session');
 var UbuntuStrategy = require('passport-ubuntu').Strategy;
+var BasicStrategy = require('passport-http').BasicStrategy;
+var uuid = require('node-uuid');
 
-function setup(app) {
+function setup(app, success, error) {
   app.use(cookieParser());
   app.use(bodyParser.urlencoded({extended: false}));
   app.use(bodyParser.json());
@@ -28,6 +30,20 @@ function setup(app) {
     db.User.findOne({ubuntu_id: identifier}, done);
   });
 
+  passport.use(new BasicStrategy(function(apikey, apisecret, done) {
+    db.User.findOne({apikey: apikey, apisecret: apisecret}, function (err, user) {
+      if (err) {
+        done(err);
+      }
+      else if (!user) {
+        done(null, false);
+      }
+      else {
+        done(null, user);
+      }
+    });
+  }));
+
   passport.use(new UbuntuStrategy({
       returnURL: config.server.host + '/auth/ubuntu/return',
       realm: config.server.host,
@@ -42,8 +58,10 @@ function setup(app) {
           var save = false;
           if (!user) {
             user = new db.User();
+            user.apikey = uuid.v4();
+            user.apisecret = uuid.v4();
             user.ubuntu_id = identifier;
-            user.username = Math.random();
+            user.username = uuid.v4();
             user.language = 'en';
             save = true;
           }
@@ -83,16 +101,23 @@ function setup(app) {
 
   app.post('/auth/ubuntu', passport.authenticate('ubuntu'));
   app.get('/auth/ubuntu/return', passport.authenticate('ubuntu', {
-    successRedirect: '/auth/me',
-    failureRedirect: '/auth/login'
+    successRedirect: '/me',
+    failureRedirect: '/'
   }));
 
-  app.get('/auth/login', function(req, res) {
-    res.send('<h1>This feature is not yet available, go browse some apps!</h1><form action="/auth/ubuntu" method="post"><div><input type="submit" value="Sign In"/></div></form>');
-  });
-
   app.get('/auth/me', function(req, res) {
-    res.send(req.user);
+    if (req.user) {
+      success(res, {
+        name: req.user.name,
+        language: req.user.language,
+        username: req.user.username,
+        apikey: req.user.apikey,
+        apisecret: req.user.apisecret,
+      });
+    }
+    else {
+      error(res, 'User not logged in', 401);
+    }
   });
 
   app.get('/auth/logout', function(req, res){

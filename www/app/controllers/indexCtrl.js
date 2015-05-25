@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, ipCookie, utils) {
+angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, ipCookie, utils, auth) {
   var title = 'uApp Explorer';
   $scope.title = title;
   $scope.og = {};
   $scope.url = $location.protocol() + '://' + $location.host() + '/';
   $scope.$state = $state;
+  $scope.loggedin = false;
 
   $timeout(function() {
     $('.swipebox').swipebox();
@@ -63,6 +64,20 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
       templateUrl: '/app/partials/donate.html'
     });
   };
+
+  $rootScope.login = function() {
+    $modal.open({
+      templateUrl: '/app/partials/login.html'
+    });
+  };
+
+  $rootScope.logout = function() {
+    auth.logout();
+  };
+
+  auth.loggedin(function(user) {
+    $scope.loggedin = !!user;
+  });
 
   $timeout(function() {
     if (!ipCookie('disclaimer')) {

@@ -45,6 +45,7 @@ var paths = {
     'www/bower_components/angular-cookie/angular-cookie.min.js',
     'www/bower_components/qrcode-generator/js/qrcode.js',
     'www/bower_components/angular-qrcode/qrcode.js',
+    'www/bower_components/angular-base64/angular-base64.js',
   ],
   css_libs: [
     'www/bower_components/bootstrap/dist/css/bootstrap.min.css',

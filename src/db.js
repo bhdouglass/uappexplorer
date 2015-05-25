@@ -22,10 +22,10 @@ var packageSchema = mongoose.Schema({
   download: String,
   filesize: String,
   framework: [String],
-  icon: String,
   icon_fetch_date: Number,
   icon_filename: String,
   icon_hash: String,
+  icon: String,
   icons: {},
   keywords: [String],
   last_updated: String,
@@ -54,8 +54,8 @@ var packageSchema = mongoose.Schema({
 var Package = mongoose.model('Package', packageSchema);
 
 var departmentSchema = mongoose.Schema({
-  name: String,
   internal_name: {type: String, index: true},
+  name: String,
   url: String,
 });
 
@@ -70,11 +70,13 @@ var reviewSchema = mongoose.Schema({
 var Review = mongoose.model('Review', reviewSchema);
 
 var userSchema = mongoose.Schema({
-  name: String,
-  username: String,
-  ubuntu_id: {type: String, index: true},
-  language: String,
+  apikey: String,
+  apisecret: String,
   email: String,
+  language: String,
+  name: String,
+  ubuntu_id: {type: String, index: true},
+  username: String,
 });
 
 var User = mongoose.model('User', userSchema);
