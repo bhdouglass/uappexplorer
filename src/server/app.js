@@ -111,7 +111,7 @@ function setup(app) {
     }
   });
 
-  app.all(['/apps', '/apps/request', '/me'], function(req, res) { //For html5mode on frontend
+  app.all(['/apps', '/apps/request', '/me', '/list/:id'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
   });
 }

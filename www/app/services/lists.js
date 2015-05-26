@@ -16,7 +16,7 @@ angular.module('appstore').factory('lists', function($http, $q, auth) {
 
   var service = {
     api: {
-      findAll: function(user) {
+      findAll: function(user) { //TODO make this populate service.store
         return $http.get('/api/lists', {
           data: {
             user: user

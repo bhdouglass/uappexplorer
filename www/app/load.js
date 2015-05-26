@@ -20,6 +20,7 @@ LazyLoad.js([
   '/app/controllers/appCtrl.js',
   '/app/controllers/appsCtrl.js',
   '/app/controllers/indexCtrl.js',
+  '/app/controllers/listCtrl.js',
   '/app/controllers/mainCtrl.js',
   '/app/controllers/meCtrl.js',
   '/app/controllers/requestCtrl.js',

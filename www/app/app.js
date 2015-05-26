@@ -40,6 +40,11 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
     url: '/me',
     templateUrl: '/app/partials/me.html',
     controller: 'meCtrl'
+  })
+  .state('list', {
+    url: '/list/:id',
+    templateUrl: '/app/partials/list.html',
+    controller: 'listCtrl'
   });
 
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|scope):/);

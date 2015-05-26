@@ -58,7 +58,7 @@ function setup(app, success, error) {
             user.apikey = uuid.v4();
             user.apisecret = uuid.v4();
             user.ubuntu_id = identifier;
-            user.username = uuid.v4();
+            user.username = 'User ' + uuid.v4();
             user.language = 'en';
             save = true;
           }
