@@ -88,8 +88,7 @@
                   </a>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                  <!--https://twitter.com/intent/tweet?text=TITLE&url=URL&via=TWITTER-HANDLE-->
-                  <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}" class="text-material-lightblue" title="Share on Twitter">
+                  <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}&via=uappexplorer" class="text-material-lightblue" title="Share on Twitter">
                     <i class="fa fa-twitter-square fa-3x"></i>
                   </a>
                 </div>
@@ -109,6 +108,33 @@
 
           </div>
           <div class="list-group-separator"></div>
+
+          <div ng-show="loggedin">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                  <div class="action-icon ubuntu-shape">
+                    <i class="fa fa-list-ul" ng-style="strToColor(app.title, 'background-color')"></i>
+                  </div>
+              </div>
+
+              <div class="row-content">
+                <div class="list-group-item-text">
+                  <div ng-if="lists.length > 0">
+                    Add to list:
+                    <select class="form-control" ng-options="l._id as l.name for l in lists" ng-model="list" ng-change="addToList(list)">
+                      <option value="">- Choose a list -</option>
+                    </select>
+                  </div>
+
+                  <div ng-if="!lists">
+                    No lists, <a href="/me">create one</a>!
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="list-group-separator"></div>
+          </div>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $location, auth, api, utils) {
+angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $location, auth, lists, utils) {
   $scope.sorts = utils.sorts;
   $scope.user = null;
   $scope.working = true;
@@ -15,7 +15,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   auth.login().then(function(user) {
     $scope.user = user;
 
-    return api.lists.findAll($scope.user._id);
+    return lists.api.findAll($scope.user._id);
   })
   .then(function(lists) {
     $scope.working = false;
@@ -25,9 +25,9 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   $scope.create = function(list) {
     $scope.working = true;
 
-    api.lists.create(list).then(function() {
+    lists.api.create(list).then(function() {
       $scope.newList = angular.copy($scope.defaultNewList);
-      return api.lists.findAll($scope.user._id);
+      return lists.api.findAll($scope.user._id);
     }, function() {
       //TODO acutal error message
       console.log('could not create list');
@@ -41,8 +41,8 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   $scope.update = function(list) {
     $scope.working = true;
 
-    api.lists.update(list._id, list).then(function() {
-      return api.lists.findAll($scope.user._id);
+    lists.api.update(list._id, list).then(function() {
+      return lists.api.findAll($scope.user._id);
     }, function() {
       //TODO acutal error message
       console.log('could not update list');
@@ -56,8 +56,8 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   $scope.delete = function(list) {
     $scope.working = true;
 
-    api.lists.delete(list._id).then(function() {
-      return api.lists.findAll($scope.user._id);
+    lists.api.delete(list._id).then(function() {
+      return lists.api.findAll($scope.user._id);
     }, function() {
       //TODO acutal error message
       console.log('could not update list');

@@ -32,6 +32,7 @@ LazyLoad.js([
   '/app/filters/nl2br.js',
   '/app/services/api.js',
   '/app/services/auth.js',
+  '/app/services/lists.js',
   '/app/services/utils.js',
 ]);
 

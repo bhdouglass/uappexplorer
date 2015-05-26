@@ -6,7 +6,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   $scope.og = {};
   $scope.url = $location.protocol() + '://' + $location.host() + '/';
   $scope.$state = $state;
-  $scope.loggedin = false;
+  $rootScope.loggedin = false;
 
   $timeout(function() {
     $('.swipebox').swipebox();
@@ -76,7 +76,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   };
 
   auth.loggedin(function(user) {
-    $scope.loggedin = !!user;
+    $rootScope.loggedin = !!user;
   });
 
   $timeout(function() {
@@ -88,5 +88,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
       var now = new Date();
       ipCookie('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
     }
+
+    auth.check();
   });
 });

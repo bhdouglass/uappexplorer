@@ -96,6 +96,9 @@
               <a ng-click="login()" class="clickable">Log In</a>
             </li>
             <li ng-if="loggedin">
+              <a href="/me" class="clickable">My Lists</a>
+            </li>
+            <li ng-if="loggedin">
               <a ng-click="logout()" class="clickable">Log Out</a>
             </li>
           </ul>

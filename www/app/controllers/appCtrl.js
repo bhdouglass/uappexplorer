@@ -1,10 +1,13 @@
 'use strict';
 
-angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils) {
+angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils, lists) {
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
+  $scope.lists = [];
+  $scope.listService = lists;
   $scope.app = null;
   $rootScope.app = null;
+
   $scope.strToColor = utils.strToColor;
   $scope.isFree = utils.isFree;
   $scope.appIcon = utils.appIcon;
@@ -14,6 +17,8 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
     $scope.app = data;
     $rootScope.app = data;
     $scope.app.loading_reviews = true;
+
+    refreshLists();
 
     api.reviews($scope.app.name, 9).then(function(data) {
       if ($scope.app.name == data.name) {
@@ -42,6 +47,28 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   }).finally(function() {
     utils.doneLoading($scope);
   });
+
+  function refreshLists() {
+    var lists = [];
+    _.forEach($scope.listService.store, function(list) {
+      if (!$scope.app || list.packages.indexOf($scope.app.name) == -1) {
+        lists.push(list);
+      }
+    });
+    $scope.lists = lists;
+  }
+
+  $scope.$watch('listService.store', refreshLists, true);
+
+  $scope.addToList = function(listID) {
+    lists.api.addApp(listID, $scope.app.name).then(function() {
+      console.log('success');
+      //TODO success message
+    }, function() {
+      //TODO fail message
+      console.log('fail');
+    });
+  };
 
   $scope.loadMoreReview = function(app) {
     app.loading_more_reivews = true;
