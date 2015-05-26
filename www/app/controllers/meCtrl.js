@@ -15,7 +15,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   auth.login().then(function(user) {
     $scope.user = user;
 
-    return lists.api.findAll($scope.user._id);
+    return lists.api.findAll();
   })
   .then(function(lists) {
     $scope.working = false;
@@ -27,7 +27,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
 
     lists.api.create(list).then(function() {
       $scope.newList = angular.copy($scope.defaultNewList);
-      return lists.api.findAll($scope.user._id);
+      return lists.api.findAll();
     }, function() {
       //TODO acutal error message
       console.log('could not create list');
@@ -42,7 +42,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
     $scope.working = true;
 
     lists.api.update(list._id, list).then(function() {
-      return lists.api.findAll($scope.user._id);
+      return lists.api.findAll();
     }, function() {
       //TODO acutal error message
       console.log('could not update list');
@@ -57,7 +57,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
     $scope.working = true;
 
     lists.api.delete(list._id).then(function() {
-      return lists.api.findAll($scope.user._id);
+      return lists.api.findAll();
     }, function() {
       //TODO acutal error message
       console.log('could not update list');

@@ -5,8 +5,8 @@ var _ = require('lodash');
 function setup(app, success, error) {
   app.get('/api/lists', function(req, res) {
     var query = {};
-    if (req.body.user) {
-      query.user = req.body.user;
+    if (req.query.user) {
+      query.user = req.query.user;
     }
 
     db.List.find(query, function(err, lists) {
@@ -56,7 +56,7 @@ function setup(app, success, error) {
   });
 
   app.put('/api/lists/:id', passport.authenticate('basic', {session: false}), function(req, res) {
-    db.List.findOne({_id: req.params.id}, function(err, list) {
+    db.List.findOne({_id: req.params.id, user: req.user._id}, function(err, list) {
       if (err) {
         error(res, err);
       }
@@ -90,7 +90,7 @@ function setup(app, success, error) {
   });
 
   app.delete('/api/lists/:id', passport.authenticate('basic', {session: false}), function(req, res) {
-    db.List.findOne({_id: req.params.id}, function(err, list) {
+    db.List.findOne({_id: req.params.id, user: req.user._id}, function(err, list) {
       if (err) {
         error(res, err);
       }

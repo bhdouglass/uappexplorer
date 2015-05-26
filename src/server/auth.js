@@ -105,6 +105,7 @@ function setup(app, success, error) {
   app.get('/auth/me', function(req, res) {
     if (req.user) {
       success(res, {
+        _id: req.user._id,
         name: req.user.name,
         language: req.user.language,
         username: req.user.username,
