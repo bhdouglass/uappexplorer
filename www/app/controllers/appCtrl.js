@@ -4,6 +4,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
   $scope.lists = [];
+  $scope.appLists = [];
   $scope.listService = lists;
   $scope.app = null;
   $rootScope.app = null;
@@ -50,12 +51,18 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
 
   function refreshLists() {
     var lists = [];
+    var appLists = [];
     _.forEach($scope.listService.store, function(list) {
-      if (!$scope.app || list.packages.indexOf($scope.app.name) == -1) {
+      if ($scope.app && list.packages.indexOf($scope.app.name) > -1) {
+        appLists.push(list);
+      }
+      else {
         lists.push(list);
       }
     });
+
     $scope.lists = lists;
+    $scope.appLists = appLists;
   }
 
   $scope.$watch('listService.store', refreshLists, true);
@@ -63,10 +70,11 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   $scope.addToList = function(listID) {
     lists.api.addApp(listID, $scope.app.name).then(function() {
       console.log('success');
-      //TODO success message
-    }, function() {
-      //TODO fail message
-      console.log('fail');
+      listID = null;
+      $rootScope.setError('Added this app to your list', null, 'success');
+    }, function(err) {
+      console.error(err);
+      $rootScope.setError('Could not add app to list at this time, please try again later');
     });
   };
 

@@ -3,7 +3,6 @@
 angular.module('appstore').factory('auth', function($http, $location, $base64, ipCookie) {
   var currentUser = null;
   var loggedinCallbacks = [];
-  //TODO save to cookie
 
   function executeCallbacks(user) {
     _.forEach(loggedinCallbacks, function(callback) {
@@ -44,6 +43,7 @@ angular.module('appstore').factory('auth', function($http, $location, $base64, i
       return currentUser;
     },
     loggedin: function(callback) {
+      callback(currentUser);
       loggedinCallbacks.push(callback);
     },
     check: function() {

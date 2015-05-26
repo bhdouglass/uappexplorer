@@ -28,9 +28,9 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
     lists.api.create(list).then(function() {
       $scope.newList = angular.copy($scope.defaultNewList);
       return lists.api.findAll();
-    }, function() {
-      //TODO acutal error message
-      console.log('could not create list');
+    }, function(err) {
+      console.error(err);
+      $rootScope.setError('Could not create a new list at this time, please try again later');
     })
     .then(function(lists) {
       $scope.working = false;
@@ -43,9 +43,9 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
 
     lists.api.update(list._id, list).then(function() {
       return lists.api.findAll();
-    }, function() {
-      //TODO acutal error message
-      console.log('could not update list');
+    }, function(err) {
+      console.error(err);
+      $rootScope.setError('Could not update the list at this time, please try again later');
     })
     .then(function(lists) {
       $scope.working = false;
@@ -58,9 +58,9 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
 
     lists.api.delete(list._id).then(function() {
       return lists.api.findAll();
-    }, function() {
-      //TODO acutal error message
-      console.log('could not update list');
+    }, function(err) {
+      console.error(err);
+      $rootScope.setError('Could not delete the list at this time, please try again later');
     })
     .then(function(lists) {
       $scope.working = false;

@@ -20,9 +20,10 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }
   };
 
-  $rootScope.setError = function(error, errorCallback) {
+  $rootScope.setError = function(error, errorCallback, errorClass) { //TODO refactor these var/fn names
     $rootScope.error = error;
     $rootScope.errorCallback = errorCallback;
+    $rootScope.errorClass = errorClass;
   };
 
   $rootScope.$watch('app', function() {

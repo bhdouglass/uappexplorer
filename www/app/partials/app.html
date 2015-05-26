@@ -126,9 +126,15 @@
                     </select>
                   </div>
 
-                  <div ng-if="lists.length <= 0">
+                  <div ng-if="lists.length == 0 && appLists.length == 0">
                     No lists, <a href="/me">create one</a>!
                   </div>
+
+                  <br/>
+                  <p ng-if="appLists.length > 0">
+                    This app is on these lists:
+                    <a class="label label-success list-label" ng-repeat="list in appLists" ng-href="/list/{{list._id}}" ng-bind="list.name"></a>
+                  </p>
                 </div>
               </div>
 

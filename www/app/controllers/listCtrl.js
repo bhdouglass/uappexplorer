@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('appstore').controller('listCtrl', function ($scope, $state, lists, api, auth) {
+angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, lists, api, auth, utils) {
   $scope.listID = $state.params.id;
   $scope.list = null;
   $scope.apps = [];
   $scope.view = 'grid';
   $scope.editable = false;
   $scope.user = null;
+  $scope.loading = false;
 
   function checkEditable() {
     $scope.editable = ($scope.user && $scope.list && $scope.user._id == $scope.list.user);
@@ -18,28 +19,46 @@ angular.module('appstore').controller('listCtrl', function ($scope, $state, list
   });
 
   function refreshList() {
+    utils.loading($scope);
     lists.api.find($scope.listID).then(function(list) {
-      $scope.list = list;
-      checkEditable();
+      if (list) {
+        $scope.list = list;
+        checkEditable();
 
-      return api.apps({
-        query: {
-          name: {$in: list.packages}
-        },
-        mini: true,
+        return api.apps({
+          query: {
+            name: {$in: list.packages}
+          },
+          mini: true,
+        });
+      }
+      else {
+        $rootScope.setError('Could not find this list, it may not exist any more', function() {
+          $state.go('main');
+        });
+
+        return null;
+      }
+    }, function(err) {
+      console.error(err);
+      $rootScope.setError('Could not find this list, it may not exist any more', function() {
+        $state.go('main');
       });
-    }, function() {
-      console.log('list not found');
-      //TODO failure message
+
       return null;
     })
     .then(function(apps) {
       if (apps) {
         $scope.apps = apps.apps;
       }
-    }, function() {
-      console.log('apps failed');
-      //TODO failure message
+    }, function(err) {
+      console.error(err);
+      $rootScope.setError('Could not load the apps for this list, please try again later', function() {
+        $state.go('list', {id:  $state.params.id});
+      });
+    })
+    .finally(function() {
+      utils.doneLoading($scope);
     });
   }
   refreshList();
@@ -53,9 +72,9 @@ angular.module('appstore').controller('listCtrl', function ($scope, $state, list
       lists.api.removeApp($scope.list._id, appName).then(function() {
         console.log('removed app');
         refreshList();
-      }, function() {
-        console.log('failed to remove app');
-        //TODO error message
+      }, function(err) {
+        console.error(err);
+        $rootScope.setError('Could not remove the app from this list, please try again later');
       });
     }
   };
