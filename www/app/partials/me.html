@@ -5,56 +5,57 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row lists">
     <div class="col-sm-12">
+      <button class="btn btn-primary btn-sm pull-right" ng-click="edit(newList())">
+        <i class="fa fa-plus"></i>
+        <span class="hidden-xs">New List</span>
+      </button>
+
       <h3>
         App Lists
-        <i class="fa fa-spinner fa-spin" ng-if="working"></i>
       </h3>
     </div>
   </div>
 
-  <!-- TODO make this interface mobile friendly -->
-  <div class="row lists">
-    <div class="col-sm-12">
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="name">Name</th>
-            <th>Sort By</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="input-group">
-                <span class="input-group-addon">New:</span>
-                <input type="text" ng-model="newList.name" class="form-control" />
+  <div ng-repeat="list in lists | orderBy:'name'">
+    <div class="row lists">
+      <div class="col-xs-12">
+        <div class="pull-right">
+          <button class="btn btn-success btn-sm" ng-click="edit(list)">
+            <i class="fa fa-edit"></i>
+            <span class="hidden-xs">Edit</span>
+          </button>
+
+          <button class="btn btn-danger btn-sm" ng-click="remove(list)">
+            <i class="fa fa-trash"></i>
+            <span class="hidden-xs">Delete</span>
+          </button>
+        </div>
+
+        <div class="list-group">
+          <a class="list-group-item clickable" ui-sref="list({id: list._id})" title="Browse Apps">
+            <div class="row-action-primary">
+              <div class="action-icon ubuntu-shape">
+                <i class="fa {{icon(list.name)}}" ng-style="strToColor(list.name, 'background-color')"></i>
               </div>
-            </td>
-            <td class="list-sorts">
-              <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="newList.sort"></select>
-            </td>
-            <td>
-              <a ng-click="create(newList)" class="clickable" ng-show="newList.name"><i class="fa fa-plus"></i></a>
-            </td>
-          </tr>
-          <tr ng-repeat="list in lists">
-            <td>
-              <input type="text" ng-model="list.name" class="form-control" />
-            </td>
-            <td class="list-sorts">
-              <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="list.sort"></select>
-            </td>
-            <td>
-              <a ng-click="update(list)" class="clickable"><i class="fa fa-save"></i></a>
-              <a ng-click="delete(list)" class="clickable"><i class="fa fa-trash"></i></a>
-              <a ng-href="/list/{{list._id}}"><i class="fa fa-external-link"></i></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </div>
+
+            <div class="row-content">
+              <h4 class="list-group-item-heading" ng-bind="list.name"></h4>
+              <p class="list-group-item-text">
+                <span ng-bind="list.packages.length"></span> apps
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="separator"></div>
+      </div>
     </div>
   </div>
 </div>
