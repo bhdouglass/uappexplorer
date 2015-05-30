@@ -50,7 +50,7 @@ function isAuthenticated(req, res, next) {
     next();
   }
   else {
-    error(res, 'You must log in to access this', 401);
+    error(res, 'You must log in to access this', 401, true);
   }
 }
 

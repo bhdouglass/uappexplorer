@@ -46,6 +46,27 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     auth.logout();
   };
 
+  $rootScope.backLink = function() {
+    var href = '/';
+    if ($state.current.name == 'app' && $rootScope.back) {
+      href = $state.href('apps', $rootScope.back);
+    }
+    else if ($state.current.name == 'list' && $rootScope.loggedin) {
+      href = '/me';
+    }
+
+    return href;
+  };
+
+  $rootScope.showBack = function() {
+    var show = false;
+    if (['apps', 'app', 'list', 'me'].indexOf($state.current.name) > -1) {
+      show = true;
+    }
+
+    return show;
+  };
+
   auth.loggedin(function(user) {
     $rootScope.loggedin = !!user;
   });

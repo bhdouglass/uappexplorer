@@ -72,13 +72,8 @@
             <span class="icon-bar"></span>
           </button>
           <span class="navbar-brand">
-            <a ui-sref="apps(back)" class="link clickable" ng-if="$state.current.name == 'app'">
-              <i class="fa fa-chevron-left ng-cloak"></i>
-              <img src="/img/logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              uApp Explorer
-            </a>
-            <a ui-sref="main" class="link clickable ng-cloak" ng-if="$state.current.name != 'app'">
-              <i class="fa fa-chevron-left" ng-show="$state.current.name == 'apps'"></i>
+            <a ng-href="{{backLink()}}" class="link clickable">
+              <i class="fa fa-chevron-left ng-cloak" ng-show="showBack()"></i>
               <img src="/img/logo.svg" class="logo" ng-class="{'rotate': loading}" />
               uApp Explorer
             </a>
