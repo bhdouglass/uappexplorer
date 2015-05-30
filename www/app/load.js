@@ -34,6 +34,7 @@ LazyLoad.js([
   '/app/services/api.js',
   '/app/services/auth.js',
   '/app/services/lists.js',
+  '/app/services/og.js',
   '/app/services/utils.js',
 ]);
 

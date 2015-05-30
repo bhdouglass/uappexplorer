@@ -40,7 +40,7 @@ function setup(app, success, error) {
   app.post('/api/lists', passport.authenticate('basic', {session: false}), function(req, res) {
     var list = new db.List();
     list.user = req.user._id;
-    list.user_name = req.user.name;
+    list.user_name = req.user.username;
     list.name = req.body.name;
     list.sort = req.body.sort;
     list.packages = _.isArray(req.body.packages) ? req.body.packages : [];

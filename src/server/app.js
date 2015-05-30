@@ -53,6 +53,30 @@ function setup(app) {
     res.redirect(301, '/apps');
   });
 
+  function openGraphData(html, og) {
+    og = _.extend(defaultOg = {
+      title: 'uApp Explorer',
+      description: 'Browse and discover apps for Ubuntu Touch',
+      image: config.server.host + '/img/logo.png',
+      url: config.server.host + '/apps',
+    }, og);
+
+    html = html.replace(/meta name="description" content="(?:[\S\s]*?)"/gi,         'meta name="description" content="' + og.description + '"');
+    html = html.replace(/meta itemprop="name" content="(?:[\S\s]*?)"/gi,            'meta itemprop="name" content="' + og.title + '"');
+    html = html.replace(/meta itemprop="description" content="(?:[\S\s]*?)"/gi,     'meta itemprop="description" content="' + og.description + '"');
+    html = html.replace(/meta itemprop="image" content="(?:[\S\s]*?)"/gi,           'meta itemprop="image" content="' + og.image + '"');
+    html = html.replace(/meta name="twitter:title" content="(?:[\S\s]*?)"/gi,       'meta name="twitter:title" content="' + og.title + '"');
+    html = html.replace(/meta name="twitter:description" content="(?:[\S\s]*?)"/gi, 'meta name="twitter:description" content="' + og.description + '"');
+    html = html.replace(/meta name="twitter:image:src" content="(?:[\S\s]*?)"/gi,   'meta name="twitter:image:src" content="' + og.image + '"');
+    html = html.replace(/meta property="og:title" content="(?:[\S\s]*?)"/gi,        'meta property="og:title" content="' + og.title + '"');
+    html = html.replace(/meta property="og:url" content="(?:[\S\s]*?)"/gi,          'meta property="og:url" content="' + og.url + '"');
+    html = html.replace(/meta property="og:image" content="(?:[\S\s]*?)"/gi,        'meta property="og:image" content="' + og.image + '"');
+    html = html.replace(/meta property="og:description" content="(?:[\S\s]*?)"/gi,  'meta property="og:description" content="' + og.description + '"');
+    html = html.replace(/meta property="og:site_name" content="(?:[\S\s]*?)"/gi,    'meta property="og:site_name" content="' + og.title + ' - uApp Explorer' + '"');
+
+    return html;
+  }
+
   app.get('/app/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
     var useragent = req.headers['user-agent'];
     var match = useragents.some(function(ua) {
@@ -80,27 +104,26 @@ function setup(app) {
             else {
               res.status(200);
 
-              var url = config.server.host + '/app/' + pkg.name;
-              var image = config.server.host + '/api/icon/' + pkg.icon_hash + '/' + pkg.name + '.png';
-              var description = pkg.description;
+              var og = {
+                title: pkg.title,
+                url: config.server.host + '/app/' + pkg.name,
+                image: config.server.host + '/api/icon/' + pkg.icon_hash + '/' + pkg.name + '.png',
+                description: pkg.description,
+              };
+
               if (pkg.description && pkg.description.split('\n').length > 0) {
-                description = pkg.description.split('\n')[0];
+                og.description = pkg.description.split('\n')[0];
               }
 
-              data = data.replace(/meta name="description" content="(?:[\S\s]*?)"/gi,         'meta name="description" content="' + description + '"');
-              data = data.replace(/meta itemprop="name" content="(?:[\S\s]*?)"/gi,            'meta itemprop="name" content="' + pkg.title + '"');
-              data = data.replace(/meta itemprop="description" content="(?:[\S\s]*?)"/gi,     'meta itemprop="description" content="' + description + '"');
-              data = data.replace(/meta itemprop="image" content="(?:[\S\s]*?)"/gi,           'meta itemprop="image" content="' + image + '"');
-              data = data.replace(/meta name="twitter:title" content="(?:[\S\s]*?)"/gi,       'meta name="twitter:title" content="' + pkg.title + '"');
-              data = data.replace(/meta name="twitter:description" content="(?:[\S\s]*?)"/gi, 'meta name="twitter:description" content="' + description + '"');
-              data = data.replace(/meta name="twitter:image:src" content="(?:[\S\s]*?)"/gi,   'meta name="twitter:image:src" content="' + image + '"');
-              data = data.replace(/meta property="og:title" content="(?:[\S\s]*?)"/gi,        'meta property="og:title" content="' + pkg.title + '"');
-              data = data.replace(/meta property="og:url" content="(?:[\S\s]*?)"/gi,          'meta property="og:url" content="' + url + '"');
-              data = data.replace(/meta property="og:image" content="(?:[\S\s]*?)"/gi,        'meta property="og:image" content="' + image + '"');
-              data = data.replace(/meta property="og:description" content="(?:[\S\s]*?)"/gi,  'meta property="og:description" content="' + description + '"');
-              data = data.replace(/meta property="og:site_name" content="(?:[\S\s]*?)"/gi,    'meta property="og:site_name" content="' + pkg.title + ' - uApp Explorer' + '"');
+              if (og.description.toLowerCase() == pkg.title.toLowerCase() && pkg.description.split('\n').length > 1) {
+                og.description = pkg.description.split('\n')[1];
+              }
 
-              res.send(data);
+              if (og.description.length > 50) {
+                og.description = og.description.substring(0, 50) + '...';
+              }
+
+              res.send(openGraphData(data, og));
             }
           });
         }
@@ -111,7 +134,51 @@ function setup(app) {
     }
   });
 
-  app.all(['/apps', '/apps/request', '/me', '/list/:id'], function(req, res) { //For html5mode on frontend
+  app.get('/list/:id', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
+    var useragent = req.headers['user-agent'];
+    var match = useragents.some(function(ua) {
+      return useragent.toLowerCase().indexOf(ua.toLowerCase()) !== -1;
+    });
+
+    if (match || !_.isUndefined(req.query._escaped_fragment_)) {
+      res.header('Content-Type', 'text/html');
+      db.List.findOne({_id: req.params.id}, function(err, list) {
+        if (err) {
+          logger.error('server: ' + err);
+          res.status(500);
+          res.send();
+        }
+        else if (!list) {
+          res.status(404);
+          fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res);
+        }
+        else {
+          fs.readFile(__dirname + config.server.static + '/index.html', {encoding: 'utf8'}, function(err, data) {
+            if (err) {
+              res.status(500);
+              res.send();
+            }
+            else {
+              res.status(200);
+
+              var og = {
+                title: 'User List - ' + list.name,
+                url: config.server.host + '/list/' + list._id,
+                description: 'User list by ' + list.user_name,
+              };
+
+              res.send(openGraphData(data, og));
+            }
+          });
+        }
+      });
+    }
+    else {
+      res.sendFile('index.html', {root: __dirname + config.server.static});
+    }
+  });
+
+  app.all(['/apps', '/apps/request', '/me'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
   });
 }

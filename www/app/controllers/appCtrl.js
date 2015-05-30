@@ -1,23 +1,32 @@
 'use strict';
 
-angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils, lists) {
+angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils, lists, og) {
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
   $scope.lists = [];
   $scope.appLists = [];
   $scope.listService = lists;
   $scope.app = null;
-  $rootScope.app = null;
 
   $scope.strToColor = utils.strToColor;
   $scope.isFree = utils.isFree;
   $scope.appIcon = utils.appIcon;
 
   utils.loading($scope);
-  api.app($scope.name).then(function(data) {
-    $scope.app = data;
-    $rootScope.app = data;
+  api.app($scope.name).then(function(app) {
+    $scope.app = app;
     $scope.app.loading_reviews = true;
+
+    var description = app.description; //TODO detect when this is the same as the title
+    if (app.description && app.description.split('\n').length > 0) {
+      description = app.description.split('\n')[0];
+    }
+
+    og.set(app.title, {
+      description: description,
+      image: utils.appIcon(app),
+      url: '{url}app/' + app.name,
+    });
 
     refreshLists();
 
@@ -44,7 +53,6 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
     }
 
     $scope.app = null;
-    $rootScope.app = null;
   }).finally(function() {
     utils.doneLoading($scope);
   });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, lists, api, auth, utils) {
+angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, lists, api, auth, utils, og) {
   $scope.listID = $state.params.id;
   $scope.list = null;
   $scope.apps = [];
@@ -24,6 +24,11 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
       if (list) {
         $scope.list = list;
         checkEditable();
+
+        og.set('User List - ' + list.name, {
+          description: 'User list by ' + list.user_name,
+          url: '{url}list/' + list._id,
+        });
 
         return api.apps({
           query: {
