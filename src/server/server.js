@@ -32,8 +32,10 @@ function success(res, data, message) {
   });
 }
 
-function error(res, message, code) {
-  logger.error('server: ' + message);
+function error(res, message, code, noLog) {
+  if (!noLog) {
+    logger.error('server: ' + message);
+  }
 
   res.status(code ? code : 500);
   res.send({
@@ -43,15 +45,24 @@ function error(res, message, code) {
   });
 }
 
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    next();
+  }
+  else {
+    error(res, 'You must log in to access this', 401);
+  }
+}
+
 if (config.use_api()) {
-  api.setup(app_express, success, error);
+  api.setup(app_express, success, error, isAuthenticated);
 
   if (config.use_api()) {
-    icons.setup(app_express, success, error);
+    icons.setup(app_express, success, error, isAuthenticated);
   }
 
   if (config.use_feed()) {
-    feed.setup(app_express, success, error);
+    feed.setup(app_express, success, error, isAuthenticated);
   }
 }
 
@@ -59,9 +70,9 @@ if (config.use_app()) {
   app_express.use(bodyParser.json());
   app_express.use(bodyParser.urlencoded({extended: false}));
 
-  app.setup(app_express, success, error);
-  auth.setup(app_express, success, error);
-  lists.setup(app_express, success, error);
+  app.setup(app_express, success, error, isAuthenticated);
+  auth.setup(app_express, success, error, isAuthenticated);
+  lists.setup(app_express, success, error, isAuthenticated);
 }
 
 app_express.use(function(req, res) {

@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var session = require('cookie-session');
 var UbuntuStrategy = require('passport-ubuntu').Strategy;
-var BasicStrategy = require('passport-http').BasicStrategy;
+//var BasicStrategy = require('passport-http').BasicStrategy;
 var uuid = require('node-uuid');
 
 function setup(app, success, error) {
@@ -27,7 +27,7 @@ function setup(app, success, error) {
     db.User.findOne({ubuntu_id: identifier}, done);
   });
 
-  passport.use(new BasicStrategy(function(apikey, apisecret, done) {
+  /*passport.use(new BasicStrategy(function(apikey, apisecret, done) {
     db.User.findOne({apikey: apikey, apisecret: apisecret}, function (err, user) {
       if (err) {
         done(err);
@@ -39,7 +39,7 @@ function setup(app, success, error) {
         done(null, user);
       }
     });
-  }));
+  }));*/
 
   passport.use(new UbuntuStrategy({
       returnURL: config.server.host + '/auth/ubuntu/return',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, lists, api, auth, utils, og) {
+angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, $modal, $location, lists, api, auth, utils, og) {
   $scope.listID = $state.params.id;
   $scope.list = null;
   $scope.apps = [];
@@ -82,5 +82,13 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
         $rootScope.setError('Could not remove the app from this list, please try again later');
       });
     }
+  };
+
+  $scope.qrCode = function() {
+    $scope.qrCodeUrl = $location.absUrl();
+    $modal.open({
+      templateUrl: '/app/partials/qrcode.html',
+      scope: $scope
+    });
   };
 });

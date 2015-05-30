@@ -22,6 +22,11 @@
     <div class="row lists">
       <div class="col-xs-12">
         <div class="pull-right">
+          <a class="btn btn-info btn-sm hidden-xs" ui-sref="list({id: list._id})">
+            <i class="fa fa-eye"></i>
+            View
+          </a>
+
           <button class="btn btn-success btn-sm" ng-click="edit(list)">
             <i class="fa fa-edit"></i>
             <span class="hidden-xs">Edit</span>

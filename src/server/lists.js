@@ -1,8 +1,7 @@
 var db = require('../db');
-var passport = require('passport');
 var _ = require('lodash');
 
-function setup(app, success, error) {
+function setup(app, success, error, isAuthenticated) {
   app.get('/api/lists', function(req, res) {
     var query = {};
     if (req.query.user) {
@@ -37,7 +36,7 @@ function setup(app, success, error) {
     });
   });
 
-  app.post('/api/lists', passport.authenticate('basic', {session: false}), function(req, res) {
+  app.post('/api/lists', isAuthenticated, function(req, res) {
     var list = new db.List();
     list.user = req.user._id;
     list.user_name = req.user.username;
@@ -55,7 +54,7 @@ function setup(app, success, error) {
     });
   });
 
-  app.put('/api/lists/:id', passport.authenticate('basic', {session: false}), function(req, res) {
+  app.put('/api/lists/:id', isAuthenticated, function(req, res) {
     db.List.findOne({_id: req.params.id, user: req.user._id}, function(err, list) {
       if (err) {
         error(res, err);
@@ -89,7 +88,7 @@ function setup(app, success, error) {
     });
   });
 
-  app.delete('/api/lists/:id', passport.authenticate('basic', {session: false}), function(req, res) {
+  app.delete('/api/lists/:id', isAuthenticated, function(req, res) {
     db.List.findOne({_id: req.params.id, user: req.user._id}, function(err, list) {
       if (err) {
         error(res, err);
