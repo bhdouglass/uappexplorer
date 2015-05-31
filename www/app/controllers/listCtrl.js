@@ -85,6 +85,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
   };
 
   $scope.qrCode = function() {
+    $scope.qrCodeTitle = $scope.list.name;
     $scope.qrCodeUrl = $location.absUrl();
     $modal.open({
       templateUrl: '/app/partials/qrcode.html',
