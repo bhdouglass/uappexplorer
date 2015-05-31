@@ -11,7 +11,7 @@ angular.module('appstore').factory('lists', function($http, $q, auth) {
 
     list.packages.push(appName);
     list.packages = _.uniq(list.packages);
-    return service.api.update(listID, {packages: list.packages});
+    return service.api.update(listID, {append_package: appName});
   }
 
   function removeApp(listID, appName) {
@@ -27,7 +27,7 @@ angular.module('appstore').factory('lists', function($http, $q, auth) {
       list.packages.splice(index, 1);
     }
 
-    return service.api.update(listID, {packages: list.packages});
+    return service.api.update(listID, {remove_package: appName});
   }
 
   function findAll() {

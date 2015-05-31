@@ -76,7 +76,6 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
   $scope.removeApp = function(appName) {
     if ($scope.editable) {
       lists.api.removeApp($scope.list._id, appName).then(function() {
-        console.log('removed app');
         refreshList();
       }, function(err) {
         console.error(err);

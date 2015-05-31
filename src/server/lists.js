@@ -76,6 +76,17 @@ function setup(app, success, error, isAuthenticated) {
           }
         });
 
+        if (req.body.append_package) {
+          list.packages.push(req.body.append_package);
+        }
+
+        if (req.body.remove_package) {
+          var index = list.packages.indexOf(req.body.remove_package);
+          if (index > -1) {
+            list.packages.splice(index, 1);
+          }
+        }
+
         list.save(function(err) {
           if (err) {
             error(res, err);
