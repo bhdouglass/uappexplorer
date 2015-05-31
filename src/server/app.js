@@ -54,7 +54,7 @@ function setup(app) {
   });
 
   function openGraphData(html, og) {
-    og = _.extend(defaultOg = {
+    og = _.extend({
       title: 'uApp Explorer',
       description: 'Browse and discover apps for Ubuntu Touch',
       image: config.server.host + '/img/logo.png',

@@ -38,7 +38,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
       sort: '-points',
       packages: [],
     };
-  }
+  };
 
   var modal = null;
   $scope.edit = function(list) {
@@ -51,7 +51,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
 
   $scope.save = function(list) {
     if (list.name) {
-      var update = !!list._id
+      var update = !!list._id;
       utils.loading($scope);
 
       var promise = null;

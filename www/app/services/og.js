@@ -32,5 +32,5 @@ angular.module('appstore').service('og', function($rootScope, $state, $location)
       $rootScope.title = title;
       $rootScope.og = og;
     }
-  }
+  };
 });
