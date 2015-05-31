@@ -34,6 +34,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
           query: {
             name: {$in: list.packages}
           },
+          sort: list.sort,
           mini: true,
         });
       }

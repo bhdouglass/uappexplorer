@@ -48,8 +48,13 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
 
   $rootScope.backLink = function() {
     var href = '/';
-    if ($state.current.name == 'app' && $rootScope.back) {
-      href = $state.href('apps', $rootScope.back);
+    if ($state.current.name == 'app') {
+      if ($rootScope.back) {
+        href = $state.href('apps', $rootScope.back);
+      }
+      else {
+        href = '/apps';
+      }
     }
     else if ($state.current.name == 'list' && $rootScope.loggedin) {
       href = '/me';
