@@ -1,4 +1,4 @@
-var db = require('../db');
+var db = require('../db/db');
 var rss = require('rss');
 var _ = require('lodash');
 

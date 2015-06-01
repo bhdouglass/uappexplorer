@@ -1,4 +1,4 @@
-var db = require('../db');
+var db = require('../db/db');
 var config = require('../config');
 var logger = require('../logger');
 var express = require('express');

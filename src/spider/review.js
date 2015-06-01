@@ -1,5 +1,5 @@
 var config = require('../config');
-var db = require('../db');
+var db = require('../db/db');
 var logger = require('../logger');
 var request = require('request');
 var _ = require('lodash');

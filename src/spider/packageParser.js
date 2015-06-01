@@ -1,5 +1,5 @@
 var utils = require('../utils');
-var db = require('../db');
+var db = require('../db/db');
 var logger = require('../logger');
 var config = require('../config');
 var request = require('request');
