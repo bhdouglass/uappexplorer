@@ -1,12 +1,17 @@
 'use strict';
 
-angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $location, $modal, auth, lists, utils) {
+angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $location, $timeout, $modal, auth, lists, utils, api) {
   $scope.sorts = utils.sorts;
   $scope.strToColor = utils.strToColor;
 
   $scope.user = null;
   $scope.loading = false;
   $scope.lists = [];
+  $scope.apps = [];
+  $scope.searchApps = [];
+  $scope.search = '';
+  $scope.appsError = false;
+  $scope.searchError = false;
 
   utils.loading($scope);
   auth.login().then(function(user) {
@@ -40,9 +45,82 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
     };
   };
 
+  $scope.removeApp = function(appName) {
+    var index = -1;
+    _.forEach($scope.apps, function(app, i) {
+      if (app.name == appName) {
+        index = i;
+        return false;
+      }
+    });
+
+    if (index > -1) {
+      $scope.apps.splice(index, 1);
+    }
+
+    var listIndex = $scope.selectedList.packages.indexOf(appName);
+    if (listIndex > -1) {
+      $scope.selectedList.packages.splice(listIndex, 1);
+    }
+  };
+
+  $scope.addApp = function(app) {
+    $scope.apps.push(app);
+    $scope.selectedList.packages.push(app.name);
+  };
+
+  $scope.updateSearch = function(search) {
+    $scope.search = search;
+  };
+
+  var searchTimeout = null;
+  $scope.$watch('search', function(oldValue, newValue) {
+    if ($scope.search) {
+      if (searchTimeout) {
+        $timeout.cancel(searchTimeout);
+        searchTimeout = null;
+      }
+
+      searchTimeout = $timeout(function() {
+        $scope.searchError = false;
+        api.apps({
+          search: $scope.search,
+          sort: $scope.selectedList.sort,
+          mini: true,
+          limit: 5,
+        }).then(function(apps) {
+          $scope.searchApps = apps.apps;
+        }, function() {
+          $scope.searchApps = [];
+          $scope.searchError = true;
+        });
+      }, 300);
+    }
+    else {
+      $scope.searchApps = [];
+    }
+  });
+
   var modal = null;
   $scope.edit = function(list) {
     $scope.selectedList = angular.copy(list);
+
+    $scope.searchApps = [];
+    $scope.apps = [];
+    $scope.appsError = false;
+    api.apps({
+      query: {
+        name: {$in: list.packages}
+      },
+      sort: list.sort,
+      mini: true,
+    }).then(function(apps) {
+      $scope.apps = apps.apps;
+    }, function() {
+      $scope.appsError = true;
+      $scope.apps = [];
+    });
+
     modal = $modal.open({
       templateUrl: '/app/partials/listEdit.html',
       scope: $scope

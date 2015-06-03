@@ -1,5 +1,5 @@
 <div class="list-group app-view">
-  <a class="list-group-item clickable" ui-sref="app({name: app.name})" title="{{app.short_description}}">
+  <a class="list-group-item clickable" ng-href="{{(link === 'false') ? '' : $state.href('app', {name: app.name})}}" title="{{app.short_description}}">
     <div class="row-action-primary">
       <div class="icon ubuntu-shape">
         <img ng-src="{{appIcon(app)}}" alt="{{app.name}}" />
