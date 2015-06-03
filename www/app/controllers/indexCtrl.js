@@ -24,19 +24,31 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     $rootScope.errorClass = errorClass;
   };
 
+  function collapse() {
+    $timeout(function() {
+      $('.navbar-collapse.collapse').collapse('hide');
+    });
+  }
+
   $scope.faq = function() {
+    collapse();
+
     $modal.open({
       templateUrl: '/app/partials/faq.html'
     });
   };
 
   $rootScope.donate = function() {
+    collapse();
+
     $modal.open({
       templateUrl: '/app/partials/donate.html'
     });
   };
 
   $rootScope.login = function() {
+    collapse();
+
     $modal.open({
       templateUrl: '/app/partials/login.html'
     });

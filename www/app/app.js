@@ -59,6 +59,8 @@ angular.module('appstore').run(function($rootScope, $modalStack, $timeout) {
     }
 
     $timeout(function() {
+      $('.navbar-collapse.collapse').collapse('hide');
+
       if ($.swipebox.isOpen) {
         $.swipebox.close();
       }
