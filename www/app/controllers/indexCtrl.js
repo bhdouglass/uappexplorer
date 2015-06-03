@@ -4,7 +4,55 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   og.set('uApp Explorer', {});
   $scope.url = $location.protocol() + '://' + $location.host() + '/';
   $scope.$state = $state;
+
   $rootScope.loggedin = false;
+  $rootScope.showSearch = false;
+  $scope.showSearch = false;
+  $scope.search = undefined;
+
+  $rootScope.$watch('showSearch', function() {
+    $scope.showSearch = $rootScope.showSearch;
+  });
+
+  $rootScope.toggleSearch = function() {
+    $rootScope.showSearch = !$rootScope.showSearch;
+
+    if ($rootScope.showSearch && $rootScope.seach === undefined) {
+      $timeout(function() {
+        $('.search-box input').focus();
+      });
+    }
+  };
+
+  $rootScope.setSearch = function(search) {
+    $rootScope.search = search;
+  };
+
+  var searchTimeout = null;
+  $rootScope.$watch('search', function() {
+    $scope.search = $rootScope.search;
+    if ($rootScope.search) {
+      $rootScope.showSearch = true;
+    }
+
+    if ($state.current.name != 'apps') {
+      if ($rootScope.search) {
+        if (searchTimeout) {
+          $timeout.cancel(searchTimeout);
+          searchTimeout = null;
+        }
+
+        searchTimeout = $timeout(function() {
+          $location.path('/apps');
+          $location.search('q', $rootScope.search);
+        }, 300);
+      }
+      else if ($rootScope.search !== undefined) {
+        $location.path('/apps');
+        $location.search('q', undefined);
+      }
+    }
+  });
 
   $timeout(function() {
     $('.swipebox').swipebox();
@@ -24,14 +72,14 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     $rootScope.errorClass = errorClass;
   };
 
-  function collapse() {
+  $scope.collapse = function() {
     $timeout(function() {
-      $('.navbar-collapse.collapse').collapse('hide');
+      $('#main-menu').collapse('hide');
     });
-  }
+  };
 
   $scope.faq = function() {
-    collapse();
+    $scope.collapse();
 
     $modal.open({
       templateUrl: '/app/partials/faq.html'
@@ -39,7 +87,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   };
 
   $rootScope.donate = function() {
-    collapse();
+    $scope.collapse();
 
     $modal.open({
       templateUrl: '/app/partials/donate.html'
@@ -47,7 +95,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   };
 
   $rootScope.login = function() {
-    collapse();
+    $scope.collapse();
 
     $modal.open({
       templateUrl: '/app/partials/login.html'

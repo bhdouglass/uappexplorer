@@ -9,7 +9,6 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.pages = 0;
   $scope.loading = false;
   $scope.can_load = false;
-  $scope.search = '';
   $scope.categories = [];
   $scope.category = {
     name: 'All Apps',
@@ -147,21 +146,21 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   });
 
   var searchTimeout = null;
-  $scope.$watch('search', function(oldValue, newValue) {
+  $rootScope.$watch('search', function(oldValue, newValue) {
     if (oldValue != newValue) {
       $location.search('page', undefined);
       $scope.current_page = 0;
       $scope.paging.skip = 0;
     }
 
-    if ($scope.search) {
+    if ($rootScope.search) {
       if (searchTimeout) {
         $timeout.cancel(searchTimeout);
         searchTimeout = null;
       }
 
       searchTimeout = $timeout(function() {
-        $location.search('q', $scope.search);
+        $location.search('q', $rootScope.search);
       }, 300);
     }
     else {
@@ -238,6 +237,10 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   };
 
   function locationChange() {
+    if ($location.path() == '/apps') {
+      $rootScope.back = $location.search();
+    }
+
     //start page
     var page = $location.search().page;
     if (page < 0) {
@@ -249,10 +252,10 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     //end page
 
     //start search
-    $scope.search = $location.search().q;
+    $rootScope.search = $location.search().q;
 
-    if ($scope.search) {
-      $scope.paging.search = $scope.search;
+    if ($rootScope.search) {
+      $scope.paging.search = $rootScope.search;
     }
     else {
       $scope.paging.search = undefined;
@@ -389,8 +392,4 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.$watch('paging', fetchApps, true);
 
   $scope.$on('$locationChangeSuccess', locationChange);
-
-  $scope.$on('$stateChangeStart', function() {
-    $rootScope.back = $location.search();
-  });
 });

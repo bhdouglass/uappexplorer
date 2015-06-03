@@ -50,7 +50,7 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|scope):/);
 });
 
-angular.module('appstore').run(function($rootScope, $modalStack, $timeout) {
+angular.module('appstore').run(function($rootScope, $modalStack, $timeout, $location) {
   $rootScope.$on('$locationChangeStart', function(event) {
     var top = $modalStack.getTop();
     if (top) {
@@ -59,7 +59,15 @@ angular.module('appstore').run(function($rootScope, $modalStack, $timeout) {
     }
 
     $timeout(function() {
-      $('.navbar-collapse.collapse').collapse('hide');
+      if ($location.path() == '/apps') {
+        $rootScope.showSearch = true;
+      }
+      else {
+        $rootScope.showSearch = false;
+        $rootScope.search = undefined;
+      }
+
+      $('#main-menu').collapse('hide');
 
       if ($.swipebox.isOpen) {
         $.swipebox.close();

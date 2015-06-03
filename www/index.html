@@ -65,32 +65,65 @@
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <i class="fa fa-ellipsis-v fa-inverse"></i>
           </button>
+
+          <a class="navbar-toggle clickable" ng-if="!loggedin" ng-click="login()">
+            <i class="fa fa-user-plus fa-inverse"></i>
+          </a>
+
+          <a href="/me" class="navbar-toggle clickable" ng-if="loggedin">
+            <i class="fa fa-user fa-inverse"></i>
+          </a>
+
+          <button type="button" class="navbar-toggle" ng-click="toggleSearch()">
+            <i class="fa fa-search fa-inverse"></i>
+          </button>
+
           <span class="navbar-brand">
             <a ng-href="{{backLink()}}" class="link clickable">
               <i class="fa fa-chevron-left ng-cloak" ng-show="showBack()"></i>
               <img src="/img/logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              uApp Explorer
+              <span ng-if="!showSearch" class="visible-xs-inline">uApp Explorer</span>
+              <span class="hidden-xs">uApp Explorer</span>
             </a>
           </span>
+
+          <div ng-if="showSearch" class="visible-xs">
+            <div class="input-group search-box">
+              <input type="text" class="form-control" ng-model="search" id="search" ng-change="setSearch(search)" />
+              <!--<span class="input-group-addon">
+                <i class="fa fa-times-circle-o fa-inverse" ng-click="search = ''" title="Clear search"></i>
+              </span>-->
+            </div>
+          </div>
         </div>
-        <div class="navbar-collapse collapse navbar-right">
+
+        <div class="navbar-collapse collapse navbar-right" id="main-menu">
           <ul class="nav navbar-nav">
+            <li ng-if="showSearch">
+              <div class="input-group hidden-xs search-box">
+                <input type="text" class="form-control" ng-model="search" id="search" ng-change="setSearch(search)" />
+                <!--<span class="input-group-addon">
+                  <i class="fa fa-times-circle-o fa-inverse" ng-click="search = ''" title="Clear search"></i>
+                </span>-->
+              </div>
+            </li>
+            <li class="hidden-xs">
+              <a ng-click="toggleSearch()" class="clickable"><i class="fa fa-search fa-inverse"></i></a>
+            </li>
             <li>
               <a ng-click="faq()" class="clickable">FAQ</a>
             </li>
             <li>
               <a ng-click="donate()" class="clickable">Donate</a>
             </li>
-            <li ng-if="!loggedin">
+            <li ng-if="!loggedin" class="hidden-xs">
               <a ng-click="login()" class="clickable">Log In</a>
             </li>
-            <li ng-if="loggedin">
+            <li ng-if="loggedin" class="hidden-xs">
               <a href="/me" class="clickable">My Lists</a>
             </li>
             <li ng-if="loggedin">

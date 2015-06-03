@@ -4,12 +4,10 @@
       <div class="col-md-6">
         <h1 ng-bind="category.name"></h1>
         <span>{{app_count}} {{countTypes[type]}}</span>
-        <div class="input-group search-box">
-          <input type="text" class="form-control" ng-model="search" id="search" />
-          <span class="input-group-addon">
-            <i class="fa fa-search" ng-click="search = ''" ng-class="{'fa-search': !search_hover, 'fa-times-circle-o': search_hover}" ng-mouseenter="search_hover = true" ng-mouseleave="search_hover = false" title="Clear search"></i>
-          </span>
-        </div>
+        <span ng-if="search">
+          <br/>
+          Containing: "{{search}}"
+        </span>
       </div>
       <div class="col-md-6">
         <div class="row">
