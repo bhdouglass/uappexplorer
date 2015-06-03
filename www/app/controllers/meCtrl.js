@@ -74,7 +74,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   };
 
   var searchTimeout = null;
-  $scope.$watch('search', function(oldValue, newValue) {
+  $scope.$watch('search', function() {
     if ($scope.search) {
       if (searchTimeout) {
         $timeout.cancel(searchTimeout);
