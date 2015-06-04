@@ -1,4 +1,5 @@
 var db = require('../db/db');
+var config = require('../config');
 var rss = require('rss');
 var _ = require('lodash');
 
@@ -24,13 +25,13 @@ function type(types) {
   return typeMap[t];
 }
 
-function generateFeed(callback) {
+function generateNewFeed(callback) {
   var feed = new rss({
     title:       'uApp Explorer New Apps',
-    description: 'New apps in the uApp Explorer',
-    feed_url:    'https://uappexplorer.com/api/rss/new-apps.xml',
-    site_url:    'https://uappexplorer.com/',
-    image_url:   'https://uappexplorer.com/img/app-logo.png',
+    description: 'New apps in uApp Explorer',
+    feed_url:    config.server.host + '/api/rss/new-apps.xml',
+    site_url:    config.server.host,
+    image_url:   config.server.host + '/img/app-logo.png',
     ttl:         240 //4 hours
   });
 
@@ -45,8 +46,46 @@ function generateFeed(callback) {
       _.forEach(pkgs, function(pkg) {
         feed.item({
           title:       'New ' + type(pkg.types) + ': ' + pkg.title,
-          url:         'https://uappexplorer.com/app/' + pkg.name,
-          description: '<a href="https://uappexplorer.com/app/' + pkg.name + '"><img src="https://uappexplorer.com/api/icon/' + pkg.name + '.png" /></a><br/>' + pkg.description,
+          url:         config.server.host + '/app/' + pkg.name,
+          description: '<a href="' + config.server.host + '/app/' + pkg.name +
+                       '"><img src="' + config.server.host + '/api/icon/' +
+                       pkg.name + '.png" /></a><br/>' + pkg.description,
+          author:      pkg.author,
+          date:        pkg.last_updated,
+        });
+      });
+
+      callback(null, feed.xml({indent: true}));
+    }
+  });
+}
+
+function generateUpdatesFeed(callback) {
+  var feed = new rss({
+    title:       'uApp Explorer Updated Apps',
+    description: 'Updated apps in uApp Explorer',
+    feed_url:    config.server.host + '/api/rss/updated-apps.xml',
+    site_url:    config.server.host,
+    image_url:   config.server.host + '/img/app-logo.png',
+    ttl:         240 //4 hours
+  });
+
+  var query = db.Package.find();
+  query.limit(10);
+  query.sort('-last_updated');
+  query.exec(function(err, pkgs) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      _.forEach(pkgs, function(pkg) {
+        feed.item({
+          title:       type(pkg.types) + ': ' + pkg.title,
+          url:         config.server.host + '/app/' + pkg.name,
+          description: '<a href="' + config.server.host + '/app/' + pkg.name +
+                       '"><img src="' + config.server.host + '/api/icon/' +
+                       pkg.name + '.png" /></a><br/><br/>' +
+                       pkg.changelog.replace('\n', '<br/>'),
           author:      pkg.author,
           date:        pkg.last_updated,
         });
@@ -59,7 +98,19 @@ function generateFeed(callback) {
 
 function setup(app, success, error) {
   app.get('/api/rss/new-apps.xml', function(req, res) {
-    generateFeed(function(err, f) {
+    generateNewFeed(function(err, f) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        res.header('Content-Type', 'text/xml');
+        res.send(f);
+      }
+    });
+  });
+
+  app.get('/api/rss/updated-apps.xml', function(req, res) {
+    generateUpdatesFeed(function(err, f) {
       if (err) {
         error(res, err);
       }
