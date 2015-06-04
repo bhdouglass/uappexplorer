@@ -23,12 +23,12 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
   .state('apps.request', {
     url: '/request',
     onEnter: ['$state', '$modal', function($state, $modal) {
-        $modal.open({
-            templateUrl: '/app/apps/partials/request.html',
-            controller: 'requestCtrl'
-        }).result.finally(function() {
-            $state.go('^');
-        });
+      $modal.open({
+        templateUrl: '/app/apps/partials/request.html',
+        controller: 'requestCtrl'
+      }).result.finally(function() {
+        $state.go('^');
+      });
     }]
   })
   .state('app', {
@@ -40,6 +40,19 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
     url: '/me',
     templateUrl: '/app/lists/partials/me.html',
     controller: 'meCtrl'
+  })
+  .state('me.listedit', {
+    url: '/list/:id',
+    onEnter: ['$state', '$modal', '$timeout', function($state, $modal, $timeout) {
+      $timeout(function() {
+        $modal.open({
+          templateUrl: '/app/lists/partials/listEdit.html',
+          controller: 'listEditCtrl'
+        }).result.finally(function() {
+          $state.go('^');
+        });
+      });
+    }]
   })
   .state('list', {
     url: '/list/:id',

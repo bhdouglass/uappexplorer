@@ -7,7 +7,7 @@
 
   <div class="row lists">
     <div class="col-sm-12">
-      <button class="btn btn-primary btn-sm pull-right" ng-click="edit(newList())">
+      <button class="btn btn-primary btn-sm pull-right" ui-sref="me.listedit({id: 'new'})">
         <i class="fa fa-plus"></i>
         <span class="hidden-xs">New List</span>
       </button>
@@ -27,10 +27,10 @@
             View
           </a>
 
-          <button class="btn btn-success btn-sm" ng-click="edit(list)">
+          <a class="btn btn-success btn-sm" ui-sref="me.listedit({id: list._id})">
             <i class="fa fa-edit"></i>
             <span class="hidden-xs">Edit</span>
-          </button>
+          </a>
 
           <button class="btn btn-danger btn-sm" ng-click="remove(list)">
             <i class="fa fa-trash"></i>

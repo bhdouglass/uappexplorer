@@ -1,6 +1,6 @@
 <div class="modal-header">
   <h3 class="modal-title">
-    {{selectedList._id ? 'Edit List' : 'Create List'}}
+    {{list._id ? 'Edit List' : 'Create List'}}
   </h3>
 </div>
 
@@ -9,14 +9,14 @@
     <div class="form-group">
       <label for="name" class="col-sm-3 control-label">List Name:</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control" id="name" placeholder="Name" ng-model="selectedList.name" />
+        <input type="text" class="form-control" id="name" placeholder="Name" ng-model="list.name" />
       </div>
     </div>
 
     <div class="form-group">
       <label for="name" class="col-sm-3 control-label">Sort Apps By:</label>
       <div class="col-sm-9">
-        <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="selectedList.sort"></select>
+        <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="list.sort"></select>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
       <label for="name" class="col-sm-3 control-label">Add Apps:</label>
       <div class="col-sm-9">
         <div class="input-group search-box">
-          <input type="text" class="form-control" ng-model="search" id="search" ng-change="updateSearch(search)" />
+          <input type="text" class="form-control" ng-model="search" id="search" />
           <span class="input-group-addon">
             <i class="fa fa-search" ng-click="search = ''" ng-class="{'fa-search': !search_hover, 'fa-times-circle-o': search_hover}" ng-mouseenter="search_hover = true" ng-mouseleave="search_hover = false" title="Clear search"></i>
           </span>
@@ -68,12 +68,12 @@
     Close
   </button>
 
-  <button class="btn btn-success" ng-click="save(selectedList)" ng-if="selectedList._id" ng-disabled="!selectedList.name">
+  <button class="btn btn-success" ng-click="save(list)" ng-if="list._id" ng-disabled="!list.name">
     <i class="fa fa-check"></i>
     Save
   </button>
 
-  <button class="btn btn-success" ng-click="save(selectedList)" ng-if="!selectedList._id" ng-disabled="!selectedList.name">
+  <button class="btn btn-success" ng-click="save(list)" ng-if="!list._id" ng-disabled="!list.name">
     <i class="fa fa-plus"></i>
     Create
   </button>
