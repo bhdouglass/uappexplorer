@@ -11,12 +11,12 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
 
   $stateProvider.state('main', {
     url: '/',
-    templateUrl: '/app/partials/main.html',
+    templateUrl: '/app/main/partials/main.html',
     controller: 'mainCtrl'
   })
   .state('apps', {
     url: '/apps?q&category&sort&view&arch&framework&page&type',
-    templateUrl: '/app/partials/apps.html',
+    templateUrl: '/app/apps/partials/apps.html',
     controller: 'appsCtrl',
     reloadOnSearch: false,
   })
@@ -24,7 +24,7 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
     url: '/request',
     onEnter: ['$state', '$modal', function($state, $modal) {
         $modal.open({
-            templateUrl: '/app/partials/request.html',
+            templateUrl: '/app/apps/partials/request.html',
             controller: 'requestCtrl'
         }).result.finally(function() {
             $state.go('^');
@@ -33,17 +33,17 @@ angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $
   })
   .state('app', {
     url: '/app/:name',
-    templateUrl: '/app/partials/app.html',
+    templateUrl: '/app/apps/partials/app.html',
     controller: 'appCtrl'
   })
   .state('me', {
     url: '/me',
-    templateUrl: '/app/partials/me.html',
+    templateUrl: '/app/lists/partials/me.html',
     controller: 'meCtrl'
   })
   .state('list', {
     url: '/list/:id',
-    templateUrl: '/app/partials/list.html',
+    templateUrl: '/app/lists/partials/list.html',
     controller: 'listCtrl'
   });
 

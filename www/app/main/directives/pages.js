@@ -8,7 +8,7 @@ angular.module('appstore').directive('pages', function() {
       pages: '=pages'
     },
     replace: true,
-    templateUrl: '/app/partials/pages.html',
+    templateUrl: '/app/main/partials/pages.html',
     link: function($scope) {
       $scope.pages_repeater = [];
 

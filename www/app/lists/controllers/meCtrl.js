@@ -122,7 +122,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
     });
 
     modal = $modal.open({
-      templateUrl: '/app/partials/listEdit.html',
+      templateUrl: '/app/lists/partials/listEdit.html',
       scope: $scope
     });
   };
@@ -164,7 +164,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
     $scope.selectedList = list;
 
     modal = $modal.open({
-      templateUrl: '/app/partials/listDelete.html',
+      templateUrl: '/app/lists/partials/listDelete.html',
       scope: $scope
     });
   };

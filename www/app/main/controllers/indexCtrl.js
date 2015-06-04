@@ -82,7 +82,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     $scope.collapse();
 
     $modal.open({
-      templateUrl: '/app/partials/faq.html'
+      templateUrl: '/app/main/partials/faq.html'
     });
   };
 
@@ -90,7 +90,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     $scope.collapse();
 
     $modal.open({
-      templateUrl: '/app/partials/donate.html'
+      templateUrl: '/app/main/partials/donate.html'
     });
   };
 
@@ -98,7 +98,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     $scope.collapse();
 
     $modal.open({
-      templateUrl: '/app/partials/login.html'
+      templateUrl: '/app/lists/partials/login.html'
     });
   };
 
@@ -139,7 +139,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   $timeout(function() {
     if (!ipCookie('disclaimer')) {
       $modal.open({
-        templateUrl: '/app/partials/disclaimer.html'
+        templateUrl: '/app/main/partials/disclaimer.html'
       });
 
       var now = new Date();

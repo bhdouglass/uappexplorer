@@ -9,7 +9,7 @@ angular.module('appstore').directive('appView', function(utils, $state) {
       link: '@'
     },
     replace: true,
-    templateUrl: '/app/partials/appView.html',
+    templateUrl: '/app/apps/partials/appView.html',
     link: function($scope) {
       $scope.$state = $state;
       $scope.isFree = utils.isFree;
