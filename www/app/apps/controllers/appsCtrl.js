@@ -75,22 +75,29 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     canceler = $q.defer();
 
     utils.loading($scope);
-    api.apps($scope.paging, canceler).then(function(data) {
-      $scope.apps = data.apps;
-      $scope.app_count = data.count;
-      $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
-
+    var appsPromise = api.apps($scope.paging, canceler).then(function(apps) {
+      $scope.apps = apps;
     }, function(err) {
       if (err.status > 0) { //0 means aborted
         console.error(err);
         $rootScope.setError('Could not download app list, click to retry', fetchApps);
       }
-    }).finally(function() {
+    });
+
+    var countPromise = api.count($scope.paging, canceler).then(function(count) {
+      $scope.app_count = count;
+      $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
+    }, function(err) {
+      if (err.status > 0) { //0 means aborted
+        console.error(err);
+      }
+    });
+
+    $q.all([appsPromise, countPromise]).finally(function() {
       utils.doneLoading($scope);
     });
   }
 
-  //TODO cache this in local storage
   function fetchCategories() {
     api.categories().then(function(data) {
       $scope.categories = data;
@@ -104,7 +111,6 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   }
   fetchCategories();
 
-  //TODO cache this in local storage
   function fetchFrameworks() {
     api.frameworks().then(function(data) {
       $scope.frameworks = data;
@@ -118,7 +124,6 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   }
   fetchFrameworks();
 
-  //TODO cache this in local storage
   function fetchLicenses() {
     api.licenses().then(function(data) {
       $scope.licenses = data;

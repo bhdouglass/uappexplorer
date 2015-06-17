@@ -16,6 +16,7 @@ LazyLoad.js([
   '/bower_components/qrcode-generator/js/qrcode.js',
   '/bower_components/angular-qrcode/qrcode.js',
   '/bower_components/angular-base64/angular-base64.js',
+  '/bower_components/moment/min/moment.min.js',
   '/app/app.js',
   '/app/apps/controllers/appCtrl.js',
   '/app/apps/controllers/appsCtrl.js',
