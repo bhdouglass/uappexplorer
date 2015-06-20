@@ -131,4 +131,22 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
 
     return style;
   };
+
+  $scope.next = function() {
+    if ($scope.next_app) {
+      $scope.slideOutLeft = true;
+      $timeout(function() {
+        $state.go('app', {name: $scope.next_app.name});
+      }, 350);
+    }
+  };
+
+  $scope.previous = function() {
+    if ($scope.previous_app) {
+      $scope.slideOutRight = true;
+      $timeout(function() {
+        $state.go('app', {name: $scope.previous_app.name});
+      }, 350);
+    }
+  };
 });

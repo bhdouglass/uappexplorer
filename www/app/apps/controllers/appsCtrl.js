@@ -71,7 +71,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
 
   var canceler = $q.defer();
   function fetchApps(oldValue, newValue) {
-    if (!angular.equals(oldValue, newValue)) {
+    if (!angular.equals(oldValue, newValue) || $scope.apps.length === 0) {
       canceler.resolve(); //abort previous request
       canceler = $q.defer();
 

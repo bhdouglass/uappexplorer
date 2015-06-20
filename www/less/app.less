@@ -11,6 +11,16 @@
 .app {
   position: relative;
 
+  &.slideOutLeft {
+    -webkit-animation: slideOutLeft 0.5s;
+    animation: slideOutLeft 0.5s;
+  }
+
+  &.slideOutRight {
+    -webkit-animation: slideOutRight 0.5s;
+    animation: slideOutRight 0.5s;
+  }
+
   .app-info {
     width: ~'calc(100% - 132px)' !important;
   }

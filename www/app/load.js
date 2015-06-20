@@ -47,4 +47,5 @@ LazyLoad.css([
   '/bower_components/swipebox/src/css/swipebox.min.css',
   '/bower_components/angular-ui/build/angular-ui.min.css',
   '/bower_components/font-awesome/css/font-awesome.min.css',
+  '/bower_components/animate.css/animate.min.css',
 ]);

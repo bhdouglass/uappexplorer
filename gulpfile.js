@@ -55,6 +55,7 @@ var paths = {
     'www/bower_components/swipebox/src/css/swipebox.min.css',
     'www/bower_components/angular-ui/build/angular-ui.min.css',
     'www/bower_components/font-awesome/css/font-awesome.min.css',
+    'www/bower_components/animate.css/animate.min.css',
   ],
   img_libs: [
     'www/bower_components/swipebox/src/img/icons.png',

@@ -1,19 +1,19 @@
-<div class="app">
+<div class="app" ng-class="{slideOutLeft: slideOutLeft, slideOutRight: slideOutRight}">
   <div class="row" ng-if="loading">
     <div class="col-md-12 text-center">
       <i class="fa fa-spinner fa-spin fa-4x"></i>
     </div>
   </div>
 
-  <div ng-show="app && !loading">
-    <div class="previous-app" ng-if="previous_app">
-      <a ui-sref="app({name: previous_app.name})" title="Previous App: {{previous_app.title}}" class="text-material-grey">
+  <div ng-show="app && !loading" ng-swipe-left="next()" ng-swipe-right="previous()" ng-swipe-disable-mouse>
+    <div class="previous-app" ng-if="previous_app" ng-hide="slideOutLeft || slideOutRight">
+      <a ng-click="previous()" title="Previous App: {{previous_app.title}}" class="text-material-grey clickable">
         <i class="fa fa-2x fa-chevron-left"></i>
       </a>
     </div>
 
-    <div class="next-app" ng-if="next_app">
-      <a ui-sref="app({name: next_app.name})" title="Next App: {{next_app.title}}" class="text-material-grey">
+    <div class="next-app" ng-if="next_app" ng-hide="slideOutLeft || slideOutRight">
+      <a ng-click="next()" title="Next App: {{next_app.title}}" class="text-material-grey clickable">
         <i class="fa fa-2x fa-chevron-right"></i>
       </a>
     </div>
