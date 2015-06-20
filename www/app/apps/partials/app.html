@@ -6,6 +6,18 @@
   </div>
 
   <div ng-show="app && !loading">
+    <div class="previous-app" ng-if="previous_app">
+      <a ui-sref="app({name: previous_app.name})" title="Previous App: {{previous_app.title}}" class="text-material-grey">
+        <i class="fa fa-2x fa-chevron-left"></i>
+      </a>
+    </div>
+
+    <div class="next-app" ng-if="next_app">
+      <a ui-sref="app({name: next_app.name})" title="Next App: {{next_app.title}}" class="text-material-grey">
+        <i class="fa fa-2x fa-chevron-right"></i>
+      </a>
+    </div>
+
     <div class="row">
       <div class="col-md-6">
         <div class="list-group">

@@ -22,6 +22,7 @@
     "_": false,
     "$": false,
     "LazyLoad": false,
-    "ga": false
+    "ga": false,
+    "moment": false
   }
 }

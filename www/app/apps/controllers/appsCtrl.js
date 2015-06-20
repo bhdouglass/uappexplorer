@@ -70,32 +70,34 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   };
 
   var canceler = $q.defer();
-  function fetchApps() {
-    canceler.resolve(); //abort previous request
-    canceler = $q.defer();
+  function fetchApps(oldValue, newValue) {
+    if (!angular.equals(oldValue, newValue)) {
+      canceler.resolve(); //abort previous request
+      canceler = $q.defer();
 
-    utils.loading($scope);
-    var appsPromise = api.apps($scope.paging, canceler).then(function(apps) {
-      $scope.apps = apps;
-    }, function(err) {
-      if (err.status > 0) { //0 means aborted
-        console.error(err);
-        $rootScope.setError('Could not download app list, click to retry', fetchApps);
-      }
-    });
+      utils.loading($scope);
+      var appsPromise = api.apps($scope.paging, canceler).then(function(apps) {
+        $scope.apps = apps;
+      }, function(err) {
+        if (err.status > 0) { //0 means aborted
+          console.error(err);
+          $rootScope.setError('Could not download app list, click to retry', fetchApps);
+        }
+      });
 
-    var countPromise = api.count($scope.paging, canceler).then(function(count) {
-      $scope.app_count = count;
-      $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
-    }, function(err) {
-      if (err.status > 0) { //0 means aborted
-        console.error(err);
-      }
-    });
+      var countPromise = api.count($scope.paging, canceler).then(function(count) {
+        $scope.app_count = count;
+        $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
+      }, function(err) {
+        if (err.status > 0) { //0 means aborted
+          console.error(err);
+        }
+      });
 
-    $q.all([appsPromise, countPromise]).finally(function() {
-      utils.doneLoading($scope);
-    });
+      $q.all([appsPromise, countPromise]).finally(function() {
+        utils.doneLoading($scope);
+      });
+    }
   }
 
   function fetchCategories() {
@@ -244,6 +246,9 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   function locationChange() {
     if ($location.path() == '/apps') {
       $rootScope.back = $location.search();
+    }
+    else {
+      return;
     }
 
     //start page

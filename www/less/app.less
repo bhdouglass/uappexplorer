@@ -9,6 +9,8 @@
 }
 
 .app {
+  position: relative;
+
   .app-info {
     width: ~'calc(100% - 132px)' !important;
   }
@@ -37,6 +39,10 @@
 
   .nav-pills {
     margin-bottom: 5px;
+  }
+
+  .tab-content {
+    margin-right: 15px;
   }
 
   .app-tab {
@@ -110,5 +116,19 @@
   .list-label {
     display: inline-block;
     margin-right: 5px;
+  }
+
+  .previous-app {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    z-index: 100;
+  }
+
+  .next-app {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    z-index: 100;
   }
 }

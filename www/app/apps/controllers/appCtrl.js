@@ -17,11 +17,9 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   var paging = api.get_last_page();
   api.next_app($scope.name, paging).then(function(app) {
     $scope.next_app = app;
-    console.log(app, 'next');
   });
   api.previous_app($scope.name, paging).then(function(app) {
     $scope.previous_app = app;
-    console.log(app, 'previous');
   });
 
   utils.loading($scope);

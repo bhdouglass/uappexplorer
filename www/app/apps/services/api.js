@@ -24,7 +24,7 @@ angular.module('appstore').factory('api', function($q, $http) {
   }
 
   function next_previous_app(name, paging, direction) {
-    return apps(last_page).then(function(data) {
+    return apps(paging).then(function(data) {
       var app = null;
       var appIndex = null;
       _.forEach(data, function(app, index) {
@@ -37,12 +37,12 @@ angular.module('appstore').factory('api', function($q, $http) {
       if (appIndex === null) {
         app = null;
       }
-      if (appIndex >= data.length) {
+      else if (appIndex >= data.length) {
         paging.skip += paging.limit;
         app = apps(paging);
       }
       else if (appIndex < 0) {
-        if (last_page.skip === 0) {
+        if (paging.skip === 0) {
           app = null; //No previous pages to get
         }
         else {
@@ -85,16 +85,24 @@ angular.module('appstore').factory('api', function($q, $http) {
   function apps(paging, canceler) {
     var promise = null;
     last_page = angular.copy(paging);
+    var p = angular.copy(paging);
 
-    var cache_key = JSON.stringify(paging);
-    var cachedData = apps_cache_fetch(paging);
+    var cache_key = JSON.stringify(p);
+    var cachedData = apps_cache_fetch(p);
     if (cachedData !== null) {
       promise = $q.when(cachedData);
     }
 
     if (!promise) {
+      _.forEach(p.query, function(q) {
+        if (_.isObject(q) && q._$in) {
+          q.$in = q._$in;
+          q._$in = undefined;
+        }
+      });
+
       var options = {
-        params: paging
+        params: p
       };
 
       if (canceler) {
@@ -102,7 +110,7 @@ angular.module('appstore').factory('api', function($q, $http) {
       }
 
       promise = $http.get('/api/apps', options).then(function(res) {
-        var apps = _.sortBy(res.data.data, paging.sort);
+        var apps = _.sortBy(res.data.data, p.sort);
 
         app_cache[cache_key] = {
           data: apps,
@@ -120,8 +128,16 @@ angular.module('appstore').factory('api', function($q, $http) {
     apps: apps,
 
     count: function(paging, canceler) {
+      var p = angular.copy(paging);
+      _.forEach(p.query, function(q) {
+        if (_.isObject(q) && q._$in) {
+          q.$in = q._$in;
+          q._$in = undefined;
+        }
+      });
+
       var options = {
-        params: paging
+        params: p
       };
 
       if (canceler) {
@@ -134,7 +150,7 @@ angular.module('appstore').factory('api', function($q, $http) {
     },
 
     get_last_page: function() {
-      return last_page;
+      return angular.copy(last_page);
     },
 
     //TODO cache this in local storage
@@ -228,5 +244,5 @@ angular.module('appstore').factory('api', function($q, $http) {
         return res.data.data;
       });
     },
-  }
+  };
 });
