@@ -39,20 +39,24 @@ angular.module('appstore').factory('api', function($q, $http) {
         app = null;
       }
       else if (appIndex >= data.length) {
-        paging.skip += paging.limit;
-        app = apps(paging, null, true);
+        if (paging.limit) {
+          paging.skip += paging.limit;
+          app = apps(paging, null, true);
+        }
       }
       else if (appIndex < 0) {
         if (paging.skip === 0) {
           app = null; //No previous pages to get
         }
         else {
-          paging.skip -= paging.limit;
-          if (paging.skip >= 0) {
-            app = apps(paging, null, true);
-          }
-          else {
-            app = null;
+          if (paging.limit) {
+            paging.skip -= paging.limit;
+            if (paging.skip >= 0) {
+              app = apps(paging, null, true);
+            }
+            else {
+              app = null;
+            }
           }
         }
       }
