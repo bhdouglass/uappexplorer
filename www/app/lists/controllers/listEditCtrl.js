@@ -34,7 +34,7 @@ angular.module('appstore').controller('listEditCtrl', function($scope, $timeout,
         return $location.path('/me');
       }
     }).then(function(apps) {
-      $scope.apps = apps.apps;
+      $scope.apps = apps;
     }, function() {
       $scope.appsError = true;
       $scope.apps = [];
@@ -112,7 +112,7 @@ angular.module('appstore').controller('listEditCtrl', function($scope, $timeout,
           mini: true,
           limit: 5,
         }).then(function(apps) {
-          $scope.searchApps = apps.apps;
+          $scope.searchApps = apps;
         }, function() {
           $scope.searchApps = [];
           $scope.searchError = true;

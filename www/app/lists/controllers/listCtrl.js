@@ -32,7 +32,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
 
         return api.apps({
           query: {
-            name: {$in: list.packages}
+            name: {_$in: list.packages}
           },
           sort: list.sort,
           mini: true,
@@ -55,7 +55,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
     })
     .then(function(apps) {
       if (apps) {
-        $scope.apps = apps.apps;
+        $scope.apps = apps;
       }
     }, function(err) {
       console.error(err);
