@@ -8,6 +8,7 @@ angular.module('appstore').factory('api', function($q, $http) {
     sort: '-published_date',
     mini: true,
   }; //TODO store this in local storage
+  var last_requested_page = angular.copy(last_page);
   var app_cache = {};
 
   function apps_cache_fetch(paging) {
@@ -39,7 +40,7 @@ angular.module('appstore').factory('api', function($q, $http) {
       }
       else if (appIndex >= data.length) {
         paging.skip += paging.limit;
-        app = apps(paging);
+        app = apps(paging, null, true);
       }
       else if (appIndex < 0) {
         if (paging.skip === 0) {
@@ -48,7 +49,7 @@ angular.module('appstore').factory('api', function($q, $http) {
         else {
           paging.skip -= paging.limit;
           if (paging.skip >= 0) {
-            app = apps(paging);
+            app = apps(paging, null, true);
           }
           else {
             app = null;
@@ -73,6 +74,10 @@ angular.module('appstore').factory('api', function($q, $http) {
         else if (direction == -1) {
           app = data[data.length - 1];
         }
+
+        if (app) {
+          app.different_page = true;
+        }
       }
       else {
         app = appOrApps;
@@ -82,10 +87,14 @@ angular.module('appstore').factory('api', function($q, $http) {
     });
   }
 
-  function apps(paging, canceler) {
+  function apps(paging, canceler, dontSaveLastPage) {
     var promise = null;
-    last_page = angular.copy(paging);
     var p = angular.copy(paging);
+    last_requested_page = angular.copy(paging);
+
+    if (!dontSaveLastPage) {
+      last_page = angular.copy(paging);
+    }
 
     var cache_key = JSON.stringify(p);
     var cachedData = apps_cache_fetch(p);
@@ -151,6 +160,14 @@ angular.module('appstore').factory('api', function($q, $http) {
 
     get_last_page: function() {
       return angular.copy(last_page);
+    },
+
+    set_last_page: function(paging){
+      if (!paging) {
+        paging = last_requested_page;
+      }
+
+      last_page = angular.copy(paging);
     },
 
     //TODO cache this in local storage

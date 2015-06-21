@@ -135,6 +135,11 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   $scope.next = function() {
     if ($scope.next_app) {
       $scope.slideOutLeft = true;
+
+      if ($scope.next_app.different_page) {
+        api.set_last_page();
+      }
+
       $timeout(function() {
         $state.go('app', {name: $scope.next_app.name});
       }, 350);
@@ -144,6 +149,11 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   $scope.previous = function() {
     if ($scope.previous_app) {
       $scope.slideOutRight = true;
+
+      if ($scope.previous_app.different_page) {
+        api.set_last_page();
+      }
+
       $timeout(function() {
         $state.go('app', {name: $scope.previous_app.name});
       }, 350);
