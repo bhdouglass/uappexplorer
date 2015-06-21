@@ -69,10 +69,13 @@
 
             <div class="row-content">
               <div class="list-group-item-text">
-                <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.title}}" class="btn btn-success btn-sm" analytics-on analytics-event="Install" analytics-label="{{app.name}}">Install</a>
+                <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.title}}" class="btn btn-sm" ng-class="{'btn-success': !app.webapp_inject, 'btn-warning': app.webapp_inject}" analytics-on analytics-event="Install" analytics-label="{{app.name}}">Install</a>
                 <!--<a ng-href="{{app.download}}" class="btn btn-primary btn-sm">Download</a>-->
                 <p class="small-note">
                   *Install will take you to the official appstore on an Ubuntu Touch device
+                </p>
+                <p class="small-note text-danger" ng-show="app.webapp_inject">
+                  *This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.
                 </p>
               </div>
             </div>
