@@ -72,6 +72,8 @@ angular.module('appstore').run(function($rootScope, $modalStack, $timeout, $loca
     }
 
     $timeout(function() {
+      $rootScope.dismissError();
+
       if ($location.path() == '/apps') {
         $rootScope.showSearch = true;
       }
