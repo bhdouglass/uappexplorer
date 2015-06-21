@@ -69,7 +69,7 @@ function download(url, filename, callback) {
   .on('response', function(response) {
     if (response.statusCode == 200) {
       var f = fs.createWriteStream(filename);
-      f.on('error', function() {
+      f.on('error', function(err) {
         logger.error(err);
         callback(err);
       })
