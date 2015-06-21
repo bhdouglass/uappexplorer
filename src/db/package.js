@@ -38,6 +38,7 @@ var packageSchema = mongoose.Schema({
   url: String,
   version: String,
   videos: [String],
+  webapp_inject: Boolean,
   website: String,
   //TODO handle translations
 });

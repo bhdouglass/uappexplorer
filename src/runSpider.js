@@ -1,8 +1,12 @@
 var spider = require('./spider/spider');
 
-function callback(err) {
+function callback(err, value) {
   if (err) {
     process.exit(1);
+  }
+
+  if (value) {
+    console.log(value);
   }
 
   process.exit(0);
