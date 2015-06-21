@@ -65,9 +65,26 @@ function download(url, filename, callback) {
   r.on('error', function(err) {
     logger.error(err);
     callback(err);
-  }).on('close', function() {
-    callback(null, r);
-  }).pipe(fs.createWriteStream(filename));
+  })
+  .on('response', function(response) {
+    if (response.statusCode == 200) {
+      var f = fs.createWriteStream(filename);
+      f.on('error', function() {
+        logger.error(err);
+        callback(err);
+      })
+      .on('finish', function() {
+        callback();
+      });
+
+      r.pipe(f);
+    }
+    else {
+      var msg = 'Failed to download "' + url + '": ' + response.statusCode;
+      logger.error(msg);
+      callback(msg);
+    }
+  });
 }
 
 function isJson(string) {
