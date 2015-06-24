@@ -137,7 +137,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
         }
       });
     }
-  }
+  };
 
   $scope.stats = function(rating) {
     var width = 0;

@@ -58,7 +58,7 @@ angular.module('appstore').factory('auth', function($http, $location, $base64, i
     },
 
     caxton_token: function(code) {
-      return $http.post('/auth/caxton/' + code).then(function(res) {
+      return $http.post('/auth/caxton/' + code).then(function() {
         return login();
       });
     },

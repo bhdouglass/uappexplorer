@@ -115,5 +115,5 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
         }
       });
     }
-  }
+  };
 });
