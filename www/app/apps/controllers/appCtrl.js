@@ -118,7 +118,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   $scope.caxtonSent = false;
   $scope.caxton = function() {
     if (!$scope.caxtonSent) {
-      auth.caxton_send($location.absUrl(), $scope.app.title).then(function() {
+      auth.caxton_send('scope://com.canonical.scopes.clickstore?q=' + $scope.app.title, $scope.app.title).then(function() {
         $scope.caxtonSent = true;
       }, function(err) {
         if (err.status == 401) {
