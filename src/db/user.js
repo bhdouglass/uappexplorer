@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var userSchema = mongoose.Schema({
   apikey: String,
   apisecret: String,
+  caxton_token: String,
   email: String,
   language: String,
   name: String,

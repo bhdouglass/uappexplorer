@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils, lists, og) {
+angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils, lists, og, auth) {
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
   $scope.lists = [];
@@ -114,6 +114,30 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       scope: $scope
     });
   };
+
+  $scope.caxtonSent = false;
+  $scope.caxton = function() {
+    if (!$scope.caxtonSent) {
+      auth.caxton_send($location.absUrl(), $scope.app.title).then(function() {
+        $scope.caxtonSent = true;
+      }, function(err) {
+        if (err.status == 401) {
+          $rootScope.setError('Please login to send via Caxton', function() {
+            $rootScope.login();
+          }, 'info');
+        }
+        else if (err.status == 400) {
+          $rootScope.setError('You do not have your account connected to Caxton, click to go to your settings', function() {
+            $location.url('/me');
+          }, 'info');
+        }
+        else {
+          console.error(err);
+          $rootScope.setError('Could not connect to Caxton at this time, please try again later');
+        }
+      });
+    }
+  }
 
   $scope.stats = function(rating) {
     var width = 0;

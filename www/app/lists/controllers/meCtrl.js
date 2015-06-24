@@ -6,6 +6,9 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
   $scope.user = null;
   $scope.loading = false;
   $scope.lists = [];
+  $scope.settings = {
+    caxton_code: ''
+  };
 
   utils.loading($scope);
   auth.login().then(function(user) {
@@ -55,6 +58,17 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
       utils.doneLoading($scope);
       $scope.lists = lists;
     });
+  };
+
+  $scope.saveSettings = function() {
+    if ($scope.settings.caxton_code) {
+      auth.caxton_token($scope.settings.caxton_code).then(function(user) {
+        $scope.user = user;
+      }, function(err) {
+        console.error(err);
+        $rootScope.setError('Could save your settings at this time, please try again later');
+      });
+    }
   };
 
   $scope.$on('$locationChangeStart', function() {

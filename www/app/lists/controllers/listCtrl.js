@@ -92,4 +92,28 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
       scope: $scope
     });
   };
+
+  $scope.caxtonSent = false;
+  $scope.caxton = function() {
+    if (!$scope.caxtonSent) {
+      auth.caxton_send($location.absUrl(), $scope.list.name).then(function() {
+        $scope.caxtonSent = true;
+      }, function(err) {
+        if (err.status == 401) {
+          $rootScope.setError('Please login to send via Caxton', function() {
+            $rootScope.login();
+          }, 'info');
+        }
+        else if (err.status == 400) {
+          $rootScope.setError('You do not have your account connected to Caxton, click to go to your settings', function() {
+            $location.url('/me');
+          }, 'info');
+        }
+        else {
+          console.error(err);
+          $rootScope.setError('Could not connect to Caxton at this time, please try again later');
+        }
+      });
+    }
+  }
 });

@@ -5,6 +5,33 @@
     </div>
   </div>
 
+  <div class="row settings">
+    <div class="col-sm-offset-2 col-sm-8">
+      <h3>Settings</h3>
+
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="caxton_code" class="col-sm-3 control-label">
+            <a href="https://caxton.herokuapp.com/" target="_blank">Caxton Code</a>:
+          </label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="caxton_code" placeholder="Code" ng-model="settings.caxton_code" />
+            <span class="small-note" ng-if="user.has_caxton">
+              You are already connected via Caxton!
+            </span>
+          </div>
+        </div>
+
+        <div class="pull-right">
+          <button class="btn btn-success" ng-click="saveSettings()" ng-disabled="!settings.caxton_code">
+            <i class="fa" ng-class="{'fa-check': !saving, 'fa-spinner fa-spin': saving}"></i>
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div class="row lists">
     <div class="col-sm-12">
       <button class="btn btn-primary btn-sm pull-right" ui-sref="me.listedit({id: 'new'})">

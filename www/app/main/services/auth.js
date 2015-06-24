@@ -38,19 +38,33 @@ angular.module('appstore').factory('auth', function($http, $location, $base64, i
 
   return {
     login: login,
+
     logout: logout,
+
     user: function() {
       return currentUser;
     },
+
     loggedin: function(callback) {
       callback(currentUser);
       loggedinCallbacks.push(callback);
     },
+
     check: function() {
       if (ipCookie('authorization')) {
         $http.defaults.headers.common.Authorization = 'Basic ' + ipCookie('authorization');
         login();
       }
+    },
+
+    caxton_token: function(code) {
+      return $http.post('/auth/caxton/' + code).then(function(res) {
+        return login();
+      });
+    },
+
+    caxton_send: function(url, message) {
+      return $http.post('/auth/caxton/send', {url: url, message: message});
     }
   };
 });

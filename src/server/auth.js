@@ -7,8 +7,9 @@ var session = require('cookie-session');
 var UbuntuStrategy = require('passport-ubuntu').Strategy;
 //var BasicStrategy = require('passport-http').BasicStrategy;
 var uuid = require('node-uuid');
+var caxton = require('caxton');
 
-function setup(app, success, error) {
+function setup(app, success, error, isAuthenticated) {
   app.use(cookieParser());
   app.use(methodOverride());
   app.use(session({
@@ -111,6 +112,7 @@ function setup(app, success, error) {
         username: req.user.username,
         apikey: req.user.apikey,
         apisecret: req.user.apisecret,
+        has_caxton: !!req.user.caxton_token,
       });
     }
     else {
@@ -118,9 +120,56 @@ function setup(app, success, error) {
     }
   });
 
-  app.get('/auth/logout', function(req, res){
+  app.get('/auth/logout', function(req, res) {
     req.logout();
+    req.session = null;
     res.redirect('/');
+  });
+
+  app.post('/auth/caxton/:code', isAuthenticated, function(req, res) {
+    var appname = config.server.host.replace('http://', '').replace('https://', '');
+
+    if (req.params.code == 'send') { //Send message
+      if (!req.user.caxton_token) {
+        error(res, 'No Caxton Token!', 400);
+      }
+      else if (!req.body.url) {
+        error(res, 'No url specified!', 400);
+      }
+      else {
+        var message = null;
+        if (req.body.message) {
+          message = req.body.message + ' - uApp Explorer';
+        }
+
+        caxton.send(appname, req.user.caxton_token, req.body.url, {message: message}, function(err) {
+          if (err) {
+            error(res, err);
+          }
+          else {
+            success(res, true);
+          }
+        });
+      }
+    }
+    else { //Request token
+      caxton.token(appname, req.params.code, function(err, token) {
+        if (err) {
+          error(res, err, 400);
+        }
+        else {
+          req.user.caxton_token = token;
+          req.user.save(function(err) {
+            if (err) {
+              error(res, err);
+            }
+            else {
+              success(res, true);
+            }
+          });
+        }
+      });
+    }
   });
 }
 

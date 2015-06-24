@@ -30,7 +30,7 @@
       </div>
 
       <div class="external-links row text-center">
-        <div class="col-sm-offset-2 col-sm-2 col-xs-3">
+        <div class="col-sm-2 col-xs-3">
           <a ng-href="https://plus.google.com/share?url={{url}}list/{{list._id}}" class="text-material-red" title="Share on Google+" style="display:block !important;">
             <i class="fa fa-gps fa-3x"></i>
           </a>
@@ -50,8 +50,15 @@
             <i class="fa fa-rs fa-3x"></i>
           </a>
         </div>
+        <div class="col-sm-2 col-xs-3 hidden-xs">
+          <a class="text-material-grey caxton-button clickable" title="Send via Caxton" ng-click="caxton()">
+            <i class="fa fa-square fa-3x"></i>
+            <img src="/img/caxton.svg" ng-show="!caxtonSent" title="Send via Caxton" />
+            <i class="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="Sent via Caxton"></i>
+          </a>
+        </div>
         <div class="col-xs-2 hidden-xs hidden-sm">
-          <a class="text-material-grey qr-button clickable" title="QR Code" ng-click="qrCode()">
+          <a class="text-material-lightgreen qr-button clickable" title="QR Code" ng-click="qrCode()">
             <i class="fa fa-square fa-3x"></i>
             <i class="fa fa-qrcode fa-2x fa-inverse"></i>
           </a>
