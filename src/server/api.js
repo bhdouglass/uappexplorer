@@ -23,6 +23,7 @@ function miniPkg(pkg) {
     prices: pkg.prices,
     short_description: description,
     points: pkg.points,
+    icon_hash: pkg.icon_hash,
   };
 }
 
