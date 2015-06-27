@@ -231,7 +231,7 @@
           <h3>Screenshots</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row" ng-swipe-left="stop($event)" ng-swipe-right="stop($event)">
         <div class="col-md-12 screenshot-scroll">
           <div ng-repeat="s in app.screenshots">
             <a ng-href="{{s}}" class="swipebox" rel="nofollow">

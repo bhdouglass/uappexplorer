@@ -183,4 +183,8 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
       }, 350);
     }
   };
+
+  $scope.stop = function($event) {
+    $event.stopPropagation();
+  };
 });
