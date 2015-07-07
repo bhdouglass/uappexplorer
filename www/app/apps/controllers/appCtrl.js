@@ -27,7 +27,7 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
     $scope.app = app;
     $scope.app.loading_reviews = true;
 
-    var description = app.description; //TODO detect when this is the same as the title
+    var description = app.description; //TODO detect when this is the same as the title (do this on the backend)
     if (app.description && app.description.split('\n').length > 0) {
       description = app.description.split('\n')[0];
     }

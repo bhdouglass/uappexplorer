@@ -63,6 +63,10 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
 
     sorts: [
       {
+        label: 'Most Relevant',
+        value: 'relevance',
+      },
+      {
         label: 'Title A-Z',
         value: 'title'
       }, {

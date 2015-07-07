@@ -168,6 +168,10 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
 
       searchTimeout = $timeout(function() {
         $location.search('q', $rootScope.search);
+        if ($scope.sort == $scope.defaultSort) {
+          $scope.sort = 'relevance';
+          $location.search('sort', $scope.sort);
+        }
       }, 300);
     }
     else {

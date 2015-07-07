@@ -43,6 +43,24 @@ var packageSchema = mongoose.Schema({
   //TODO handle translations
 });
 
+packageSchema.index({
+  title: 'text',
+  description: 'text',
+  keywords: 'text',
+  author: 'text',
+  company: 'text',
+},
+{
+  weights: {
+    title: 10,
+    description: 5,
+    keywords: 3,
+    author: 1,
+    company: 1,
+  },
+  name: 'searchIndex',
+});
+
 var Package = mongoose.model('Package', packageSchema);
 
 exports.Package = Package;

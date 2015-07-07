@@ -106,14 +106,7 @@ function setup(app, success, error) {
           query.where({author: regxp});
         }
         else {
-          regxp = new RegExp(req.query.search, 'i');
-          query.or([
-            {author: regxp},
-            {company: regxp},
-            {title: regxp},
-            {description: regxp},
-            {keywords: regxp}
-          ]);
+          query.where({$text: {$search: req.query.search}});
         }
       }
 
@@ -137,24 +130,29 @@ function setup(app, success, error) {
         query.skip(req.query.skip);
       }
 
-      if (req.query.sort) {
-        query.sort(req.query.sort);
-      }
-
+      var sort = true;
       if (req.query.search) {
         if (req.query.search.indexOf('author:') === 0) {
           regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
           query.where({author: regxp});
         }
         else {
-          regxp = new RegExp(req.query.search, 'i');
-          query.or([
-            {author: regxp},
-            {company: regxp},
-            {title: regxp},
-            {description: regxp},
-            {keywords: regxp}
-          ]);
+          query.where({$text: {$search: req.query.search}});
+
+          if (req.query.sort == 'relevance') {
+            query.sort({score : {$meta : 'textScore'}});
+            query.select({score : {$meta : 'textScore'}});
+            sort = false;
+          }
+        }
+      }
+
+      if (req.query.sort && sort) {
+        if (req.query.sort == 'relevance') {
+          query.sort('-points');
+        }
+        else {
+          query.sort(req.query.sort);
         }
       }
 

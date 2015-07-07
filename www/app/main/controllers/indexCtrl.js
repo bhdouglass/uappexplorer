@@ -45,6 +45,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
         searchTimeout = $timeout(function() {
           $location.path('/apps');
           $location.search('q', $rootScope.search);
+          $location.search('sort', 'relevance');
         }, 300);
       }
       else if ($rootScope.search !== undefined) {
