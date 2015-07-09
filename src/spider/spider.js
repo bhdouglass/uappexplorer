@@ -1,6 +1,5 @@
 var config = require('../config');
 var logger = require('../logger');
-var db = require('../db/db');
 var department = require('./department');
 var review = require('./review');
 var package = require('./package');
@@ -8,50 +7,6 @@ var packageParser = require('./packageParser');
 var schedule = require('node-schedule');
 var express = require('express');
 var elasticsearch = require('elasticsearch');
-
-function migrateToElasticsearch(callback) {
-  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
-  db.Package.find({}, function(err, pkgs) {
-    if (err) {
-      logger.error(err);
-    }
-    else {
-      var body = [];
-
-      pkgs.forEach(function(pkg) {
-        pkg = JSON.parse(JSON.stringify(pkg));
-        delete pkg.__v;
-        delete pkg._id;
-
-        body.push({update: {
-          _id: pkg.name,
-          _type: 'package',
-          _index: 'packages',
-          _retry_on_conflict : 3
-        }});
-        body.push({
-          doc: pkg,
-          doc_as_upsert: true
-        });
-      });
-
-      client.bulk({
-        body: body,
-      },
-      function(err, res) {
-        if (err) {
-          logger.error('failed to migrate: ' + err);
-          logger.error(res);
-          callback(err);
-        }
-        else {
-          logger.debug('migrated to elasticsearch');
-          callback();
-        }
-      });
-    }
-  });
-}
 
 function setupSchedule() {
   logger.debug('scheduling spider');
@@ -134,6 +89,7 @@ function server() {
 exports.parsePackage = package.parsePackage;
 exports.parsePackages = package.parsePackages;
 exports.parsePackageUpdates = package.parsePackageUpdates;
+exports.mongoToElasticsearch = package.mongoToElasticsearch;
 exports.parseDepartments = department.parseDepartments;
 exports.parseReviews = review.parseReviews;
 exports.refreshRatings = review.refreshRatings;
@@ -141,6 +97,5 @@ exports.calculateBayesianAverages = review.calculateBayesianAverages;
 exports.parseClickPackage = packageParser.parseClickPackage;
 exports.parseClickPackageByName = packageParser.parseClickPackageByName;
 exports.parseAllClickPackages = packageParser.parseAllClickPackages;
-exports.migrateToElasticsearch = migrateToElasticsearch;
 exports.setupSchedule = setupSchedule;
 exports.server = server;

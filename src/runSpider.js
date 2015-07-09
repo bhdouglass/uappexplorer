@@ -1,4 +1,5 @@
 var spider = require('./spider/spider');
+var elasticsearchPackage = require('./db/elasticsearchPackage');
 
 function callback(err, value) {
   if (err) {
@@ -21,10 +22,14 @@ if (process.argv[2]) {
   }
   else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {
     if (process.argv[3] == 'bayesian') {
-      spider.calculateBayesianAverages(callback);
+      spider.calculateBayesianAverages(function() {
+        spider.mongoToElasticsearch(null, callback);
+      });
     }
     else if (process.argv[3] == 'refresh') {
-      spider.refreshRatings(callback);
+      spider.refreshRatings(function() {
+        spider.mongoToElasticsearch(null, callback);
+      });
     }
     else {
       spider.parseReviews(process.argv[3], callback);
@@ -35,14 +40,18 @@ if (process.argv[2]) {
       spider.parseClickPackageByName(process.argv[3], callback);
     }
     else {
-      spider.parseAllClickPackages(callback);
+      spider.parseAllClickPackages(function() {
+        spider.mongoToElasticsearch(null, callback);
+      });
     }
   }
-  else if (process.argv[2] == 'migrateToElasticsearch') {
-    spider.migrateToElasticsearch(callback);
+  else if (process.argv[2] == 'mongoToElasticsearch') {
+    spider.mongoToElasticsearch(null, callback);
   }
   else {
-    spider.parsePackage(process.argv[2], callback);
+    spider.parsePackage(process.argv[2], function(err, pkg) {
+      elasticsearchPackage.upsert(pkg, callback);
+    });
   }
 }
 else {

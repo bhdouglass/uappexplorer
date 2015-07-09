@@ -2,12 +2,14 @@ var packageParser = require('./packageParser');
 var config = require('../config');
 var utils = require('../utils');
 var db = require('../db/db');
+var elasticsearchPackage = require('../db/elasticsearchPackage');
 var logger = require('../logger');
 var _ = require('lodash');
 var async = require('async');
 var request = require('request');
 var crypto = require('crypto');
 var Mailhide = require('mailhide');
+var elasticsearch = require('elasticsearch');
 //var cloudinary = require('cloudinary');
 
 var mailhider = null;
@@ -231,9 +233,7 @@ function parsePackageUpdates(callback) {
             logger.error(err);
           }
 
-          if (callback) {
-            callback();
-          }
+          mongoToElasticsearch(null, callback);
         });
       });
     });
@@ -254,9 +254,12 @@ function parsePackages(callback) {
         logger.error(err);
       }
       else {
+        var removals = [];
         _.forEach(packages, function(pkg) {
           if (newList.indexOf(pkg.name) == -1) {
             logger.info('deleting ' + pkg.name);
+
+            removals.push(pkg);
             pkg.remove(function(err) {
               if (err) {
                 logger.error(err);
@@ -264,21 +267,31 @@ function parsePackages(callback) {
             });
           }
         });
+
+        async.eachSeries(newList, parsePackage, function(err) {
+          if (err) {
+            logger.error(err);
+          }
+
+          mongoToElasticsearch(removals, callback);
+        });
       }
     });
+  });
+}
 
-    async.eachSeries(newList, parsePackage, function(err) {
-      if (err) {
-        logger.error(err);
-      }
-
-      if (callback) {
-        callback();
-      }
-    });
+function mongoToElasticsearch(removals, callback) {
+  db.Package.find({}, function(err, pkgs) {
+    if (err) {
+      logger.error(err);
+    }
+    else {
+      elasticsearchPackage.bulk(pkgs, removals, callback);
+    }
   });
 }
 
 exports.parsePackage = parsePackage;
 exports.parsePackages = parsePackages;
 exports.parsePackageUpdates = parsePackageUpdates;
+exports.mongoToElasticsearch = mongoToElasticsearch;

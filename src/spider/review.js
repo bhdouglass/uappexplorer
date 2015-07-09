@@ -1,3 +1,4 @@
+var package = require('./package');
 var config = require('../config');
 var db = require('../db/db');
 var logger = require('../logger');
@@ -233,9 +234,7 @@ function parseReviews(pkgName, callback) {
               logger.error(err);
             }
 
-            if (callback) {
-              callback(err);
-            }
+            package.mongoToElasticsearch(null, callback);
           });
         }
       });
