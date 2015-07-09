@@ -18,8 +18,8 @@ function migrateToElasticsearch() {
     else {
       pkgs.forEach(function(pkg) {
         pkg = JSON.parse(JSON.stringify(pkg));
-        delete pkg.__v
-        delete pkg._id
+        delete pkg.__v;
+        delete pkg._id;
 
         client.update({
           index: 'packages',
@@ -29,7 +29,8 @@ function migrateToElasticsearch() {
             doc: pkg,
             doc_as_upsert: true,
           },
-        }, function(err, response) {
+        },
+        function(err) {
           if (err) {
             logger.error(err);
           }

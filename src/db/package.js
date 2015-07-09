@@ -62,7 +62,8 @@ packageSchema.post('save', function(pkg) {
       doc: pkg,
       doc_as_upsert: true,
     },
-  }, function(err, response) {
+  },
+  function(err) {
     if (err) {
       logger.error(err);
     }
