@@ -42,6 +42,9 @@ var config = {
     //The name of the mongo database to use
     database: process.env.MONGODB_DB || 'appstore',
   },
+  elasticsearch: {
+    uri: process.env.ELASTICSEARCH_URI || 'http://localhost:9200/',
+  },
   //Urls for the click apps api
   spider: {
     search_api: 'https://search.apps.ubuntu.com/api/v1/search',
@@ -92,6 +95,11 @@ if (process.env.NODEJS_NO_ICONS == 1) {
 //Mongo uri from docker
 if (process.env.MONGO_PORT) {
   config.mongo.uri = process.env.MONGO_PORT.replace('tcp', 'mongodb');
+}
+
+//Elasticsearch uri from docker
+if (process.env.ELASTICSEARCH_PORT) {
+  config.elasticsearch.uri = process.env.ELASTICSEARCH_PORT.replace('tcp', 'http');
 }
 
 module.exports = config;

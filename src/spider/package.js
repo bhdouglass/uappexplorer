@@ -169,7 +169,7 @@ function parsePackage(name, callback) {
 }
 
 function fetchListPage(page, packageList, callback) {
-  request(config.spider.search_api + '?size=100&page=' + page, function(err, resp, body) {
+  request(config.spider.search_api + '?size=200&page=' + page, function(err, resp, body) {
     if (err) {
       logger.error('error fetching page #' + page + ': ' + err);
     }

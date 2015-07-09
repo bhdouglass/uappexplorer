@@ -11,6 +11,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
+  config.vm.define "elasticsearch" do |elasticsearch|
+    elasticsearch.vm.provider 'docker' do |d|
+      d.image = 'library/elasticsearch'
+      d.name = 'appstore_elasticsearch'
+      d.ports = ['9200:9200']
+    end
+  end
+
   config.vm.define "web" do |web|
     web.vm.provider 'docker' do |d|
       d.build_dir = '.'
@@ -18,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       d.ports = ['8080:8080', '3000:3000']
 
       d.link('appstore_mongo:mongo')
+      d.link('appstore_elasticsearch:elasticsearch')
     end
 
     web.vm.hostname = "uappexplorer"

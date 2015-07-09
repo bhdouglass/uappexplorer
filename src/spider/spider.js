@@ -1,11 +1,46 @@
 var config = require('../config');
 var logger = require('../logger');
+var db = require('../db/db');
 var department = require('./department');
 var review = require('./review');
 var package = require('./package');
 var packageParser = require('./packageParser');
 var schedule = require('node-schedule');
 var express = require('express');
+var elasticsearch = require('elasticsearch');
+
+function migrateToElasticsearch() {
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+  db.Package.find({}, function(err, pkgs) {
+    if (err) {
+      logger.error(err);
+    }
+    else {
+      pkgs.forEach(function(pkg) {
+        pkg = JSON.parse(JSON.stringify(pkg));
+        delete pkg.__v
+        delete pkg._id
+
+        client.update({
+          index: 'packages',
+          type: 'package',
+          id: pkg.name,
+          body: {
+            doc: pkg,
+            doc_as_upsert: true,
+          },
+        }, function(err, response) {
+          if (err) {
+            logger.error(err);
+          }
+          else {
+            logger.debug(pkg.name + ' saved to elasticsearch');
+          }
+        });
+      });
+    }
+  });
+}
 
 function setupSchedule() {
   logger.debug('scheduling spider');
@@ -57,7 +92,7 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  var one_time = new Date(2015, 3, 27, 0, 15, 0);
+  /*var one_time = new Date(2015, 3, 27, 0, 15, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
@@ -66,7 +101,7 @@ function setupSchedule() {
       //review.parseReviews();
       //packageParser.parseAllClickPackages();
     });
-  }
+  }*/
 }
 
 function server() {
@@ -95,5 +130,6 @@ exports.calculateBayesianAverages = review.calculateBayesianAverages;
 exports.parseClickPackage = packageParser.parseClickPackage;
 exports.parseClickPackageByName = packageParser.parseClickPackageByName;
 exports.parseAllClickPackages = packageParser.parseAllClickPackages;
+exports.migrateToElasticsearch = migrateToElasticsearch;
 exports.setupSchedule = setupSchedule;
 exports.server = server;

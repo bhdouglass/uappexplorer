@@ -38,6 +38,9 @@ if (process.argv[2]) {
       spider.parseAllClickPackages(callback);
     }
   }
+  else if (process.argv[2] = 'migrateToElasticsearch') {
+    spider.migrateToElasticsearch();
+  }
   else {
     spider.parsePackage(process.argv[2], callback);
   }

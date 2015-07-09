@@ -1,4 +1,7 @@
+var config = require('../config');
+var logger = require('../logger');
 var mongoose = require('mongoose');
+var elasticsearch = require('elasticsearch');
 
 var packageSchema = mongoose.Schema({
   architecture: [String],
@@ -41,6 +44,32 @@ var packageSchema = mongoose.Schema({
   webapp_inject: Boolean,
   website: String,
   //TODO handle translations
+});
+
+packageSchema.post('save', function(pkg) {
+  logger.debug(pkg.name + ' saved to mongo');
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
+  pkg = JSON.parse(JSON.stringify(pkg));
+  delete pkg.__v;
+  delete pkg._id;
+
+  client.update({
+    index: 'packages',
+    type: 'package',
+    id: pkg.name,
+    body: {
+      doc: pkg,
+      doc_as_upsert: true,
+    },
+  }, function(err, response) {
+    if (err) {
+      logger.error(err);
+    }
+    else {
+      logger.debug(pkg.name + ' saved to elasticsearch');
+    }
+  });
 });
 
 packageSchema.index({
