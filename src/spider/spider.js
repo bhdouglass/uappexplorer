@@ -9,36 +9,45 @@ var schedule = require('node-schedule');
 var express = require('express');
 var elasticsearch = require('elasticsearch');
 
-function migrateToElasticsearch() {
+function migrateToElasticsearch(callback) {
   var client = new elasticsearch.Client({host: config.elasticsearch.uri});
   db.Package.find({}, function(err, pkgs) {
     if (err) {
       logger.error(err);
     }
     else {
+      var body = [];
+
       pkgs.forEach(function(pkg) {
         pkg = JSON.parse(JSON.stringify(pkg));
         delete pkg.__v;
         delete pkg._id;
 
-        client.update({
-          index: 'packages',
-          type: 'package',
-          id: pkg.name,
-          body: {
-            doc: pkg,
-            doc_as_upsert: true,
-          },
-        },
-        function(err, res) {
-          if (err) {
-            logger.error(pkg.name + ' failed to save: ' + err);
-            logger.error(res);
-          }
-          else {
-            logger.debug(pkg.name + ' saved to elasticsearch');
-          }
+        body.push({update: {
+          _id: pkg.name,
+          _type: 'package',
+          _index: 'packages',
+          _retry_on_conflict : 3
+        }});
+        body.push({
+          doc: pkg,
+          doc_as_upsert: true
         });
+      });
+
+      client.bulk({
+        body: body,
+      },
+      function(err, res) {
+        if (err) {
+          logger.error('failed to migrate: ' + err);
+          logger.error(res);
+          callback(err);
+        }
+        else {
+          logger.debug('migrated to elasticsearch');
+          callback();
+        }
       });
     }
   });

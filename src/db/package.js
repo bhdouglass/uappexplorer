@@ -58,6 +58,7 @@ packageSchema.post('save', function(pkg) {
     index: 'packages',
     type: 'package',
     id: pkg.name,
+    retryOnConflict: 3,
     body: {
       doc: pkg,
       doc_as_upsert: true,
