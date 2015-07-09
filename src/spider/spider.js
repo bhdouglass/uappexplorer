@@ -30,9 +30,10 @@ function migrateToElasticsearch() {
             doc_as_upsert: true,
           },
         },
-        function(err) {
+        function(err, res) {
           if (err) {
-            logger.error(err);
+            logger.error(pkg.name + ' failed to save: ' + err);
+            logger.error(res);
           }
           else {
             logger.debug(pkg.name + ' saved to elasticsearch');
