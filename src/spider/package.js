@@ -9,7 +9,6 @@ var async = require('async');
 var request = require('request');
 var crypto = require('crypto');
 var Mailhide = require('mailhide');
-var elasticsearch = require('elasticsearch');
 //var cloudinary = require('cloudinary');
 
 var mailhider = null;
@@ -126,6 +125,17 @@ function map(pkg, data) {
   }
 
   return pkg;
+}
+
+function mongoToElasticsearch(removals, callback) {
+  db.Package.find({}, function(err, pkgs) {
+    if (err) {
+      logger.error(err);
+    }
+    else {
+      elasticsearchPackage.bulk(pkgs, removals, callback);
+    }
+  });
 }
 
 function parsePackage(name, callback) {
@@ -277,17 +287,6 @@ function parsePackages(callback) {
         });
       }
     });
-  });
-}
-
-function mongoToElasticsearch(removals, callback) {
-  db.Package.find({}, function(err, pkgs) {
-    if (err) {
-      logger.error(err);
-    }
-    else {
-      elasticsearchPackage.bulk(pkgs, removals, callback);
-    }
   });
 }
 

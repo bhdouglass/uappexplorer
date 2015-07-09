@@ -1,4 +1,3 @@
-var elasticsearchPackage = require('./elasticsearchPackage');
 var mongoose = require('mongoose');
 
 var packageSchema = mongoose.Schema({

@@ -6,7 +6,6 @@ var package = require('./package');
 var packageParser = require('./packageParser');
 var schedule = require('node-schedule');
 var express = require('express');
-var elasticsearch = require('elasticsearch');
 
 function setupSchedule() {
   logger.debug('scheduling spider');
