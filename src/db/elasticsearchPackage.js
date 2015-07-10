@@ -10,6 +10,7 @@ function upsert(pkg, callback) {
   pkg = JSON.parse(JSON.stringify(pkg));
   delete pkg.__v;
   delete pkg._id;
+  pkg.raw_title = pkg.title;
 
   client.update({
     index: index,
@@ -64,6 +65,7 @@ function bulk(upserts, removals, callback) {
     pkg = JSON.parse(JSON.stringify(pkg));
     delete pkg.__v;
     delete pkg._id;
+    pkg.raw_title = pkg.title;
 
     body.push({update: {
       _id: pkg.name,

@@ -9,6 +9,7 @@ var async = require('async');
 var request = require('request');
 var crypto = require('crypto');
 var Mailhide = require('mailhide');
+var elasticsearch = require('elasticsearch');
 //var cloudinary = require('cloudinary');
 
 var mailhider = null;
@@ -128,13 +129,57 @@ function map(pkg, data) {
 }
 
 function mongoToElasticsearch(removals, callback) {
-  db.Package.find({}, function(err, pkgs) {
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
+  client.indices.create({
+    index: 'packages',
+    body: {packages: 'packages'}
+  },
+  function (err) {
     if (err) {
       logger.error(err);
     }
-    else {
-      elasticsearchPackage.bulk(pkgs, removals, callback);
-    }
+
+    client.indices.putMapping({
+      index: 'packages',
+      type: 'package',
+      body: {
+        'package': {
+          'properties': {
+            'license': {
+              'type': 'string',
+              'index': 'not_analyzed'
+            },
+            'framework': {
+              'type': 'string',
+              'index': 'not_analyzed'
+            },
+            'architecture': {
+              'type': 'string',
+              'index': 'not_analyzed'
+            },
+            'raw_title': {
+              'type': 'string',
+              'index': 'not_analyzed'
+            }
+          }
+        }
+      }
+    },
+    function(err) {
+      if (err) {
+        logger.error(err);
+      }
+
+      db.Package.find({}, function(err, pkgs) {
+        if (err) {
+          logger.error(err);
+        }
+        else {
+          elasticsearchPackage.bulk(pkgs, removals, callback);
+        }
+      });
+    });
   });
 }
 

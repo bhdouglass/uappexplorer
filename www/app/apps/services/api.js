@@ -91,7 +91,7 @@ angular.module('appstore').factory('api', function($q, $http) {
     });
   }
 
-  function apps(paging, canceler, dontSaveLastPage) {
+  function apps(paging, canceler, dontSaveLastPage, includeCount) {
     var promise = null;
     var p = angular.copy(paging);
     last_requested_page = angular.copy(paging);
@@ -103,6 +103,10 @@ angular.module('appstore').factory('api', function($q, $http) {
     var cache_key = JSON.stringify(p);
     var cachedData = apps_cache_fetch(p);
     if (cachedData !== null) {
+      if (!includeCount) {
+        cachedData = cachedData.apps;
+      }
+
       promise = $q.when(cachedData);
     }
 
@@ -123,14 +127,27 @@ angular.module('appstore').factory('api', function($q, $http) {
       }
 
       promise = $http.get('/api/apps', options).then(function(res) {
-        var apps = _.sortBy(res.data.data, p.sort);
+        var count = res.data.data.count;
+        var apps = _.sortBy(res.data.data.apps, p.sort);
 
         app_cache[cache_key] = {
-          data: apps,
+          data: {
+            count: count,
+            apps: apps,
+          },
           date: moment(),
         };
 
-        return apps;
+        var result = {};
+        if (includeCount) {
+          result.count = count;
+          result.apps = apps;
+        }
+        else {
+          result = apps;
+        }
+
+        return result;
       });
     }
 
@@ -139,28 +156,6 @@ angular.module('appstore').factory('api', function($q, $http) {
 
   return {
     apps: apps,
-
-    count: function(paging, canceler) {
-      var p = angular.copy(paging);
-      _.forEach(p.query, function(q) {
-        if (_.isObject(q) && q._$in) {
-          q.$in = q._$in;
-          q._$in = undefined;
-        }
-      });
-
-      var options = {
-        params: p
-      };
-
-      if (canceler) {
-        options.timeout = canceler.promise;
-      }
-
-      return $http.get('/api/apps?count=true', options).then(function(res) {
-        return res.data.data;
-      });
-    },
 
     get_last_page: function() {
       return angular.copy(last_page);

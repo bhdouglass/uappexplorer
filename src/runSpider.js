@@ -17,7 +17,7 @@ if (process.argv[2]) {
   if (process.argv[2] == 'update' || process.argv[2] == 'updates') {
     spider.parsePackageUpdates(callback);
   }
-  else if (process.argv[2] == 'department' || process.argv[2] == 'departments') {
+  else if (process.argv[2] == 'dep' || process.argv[2] == 'department' || process.argv[2] == 'departments') {
     spider.parseDepartments(callback);
   }
   else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {

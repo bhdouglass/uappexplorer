@@ -76,25 +76,18 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       canceler = $q.defer();
 
       utils.loading($scope);
-      var appsPromise = api.apps($scope.paging, canceler).then(function(apps) {
-        $scope.apps = apps;
-      }, function(err) {
+      api.apps($scope.paging, canceler, false, true).then(function(data) {
+        $scope.apps = data.apps;
+        $scope.app_count = data.count;
+        $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
+      },
+      function(err) {
         if (err.status > 0) { //0 means aborted
           console.error(err);
           $rootScope.setError('Could not download app list, click to retry', fetchApps);
         }
-      });
-
-      var countPromise = api.count($scope.paging, canceler).then(function(count) {
-        $scope.app_count = count;
-        $scope.pages = Math.ceil($scope.app_count / $scope.paging.limit);
-      }, function(err) {
-        if (err.status > 0) { //0 means aborted
-          console.error(err);
-        }
-      });
-
-      $q.all([appsPromise, countPromise]).finally(function() {
+      })
+      .finally(function() {
         utils.doneLoading($scope);
       });
     }

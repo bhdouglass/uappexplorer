@@ -1,12 +1,14 @@
 var db = require('../db/db');
 var spider = require('../spider/spider');
 var logger = require('../logger');
+var config = require('../config');
 var essential = require('./json/essential-apps.json');
 var licenses = require('./json/open-source-licenses.json');
 var _ = require('lodash');
 var moment = require('moment');
 var cluster = require('cluster');
 var async = require('async');
+var elasticsearch = require('elasticsearch');
 
 function miniPkg(pkg) {
   var description = pkg.description;
@@ -80,6 +82,160 @@ function setup(app, success, error) {
     success(res, licenses);
   });
 
+  function appsFromMongo(findQuery, req, res) {
+    var regxp = null;
+
+    var countQuery = db.Package.count(findQuery);
+    if (req.query.search) {
+      if (req.query.search.indexOf('author:') === 0) {
+        regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
+        countQuery.where({author: regxp});
+      }
+    }
+
+    countQuery.exec(function(err, count) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        var query = db.Package.find(findQuery);
+        if (req.query.limit) {
+          query.limit(req.query.limit);
+        }
+
+        if (req.query.skip) {
+          query.skip(req.query.skip);
+        }
+
+        if (req.query.search) {
+          if (req.query.search.indexOf('author:') === 0) {
+            regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
+            query.where({author: regxp});
+          }
+        }
+
+        if (req.query.sort) {
+          if (req.query.sort == 'relevance') {
+            query.sort('-points');
+          }
+          else {
+            query.sort(req.query.sort);
+          }
+        }
+
+        query.exec(function(err, pkgs) {
+          if (err) {
+            error(res, err);
+          }
+          else {
+            if (req.query.mini == 'true') {
+              var new_pkgs = [];
+              _.forEach(pkgs, function(pkg) {
+                new_pkgs.push(miniPkg(pkg));
+              });
+
+              pkgs = new_pkgs;
+            }
+
+            success(res, {
+              count: count,
+              apps: pkgs,
+            });
+          }
+        });
+      }
+    });
+  }
+
+  function appsFromElasticsearch(findQuery, req, res) {
+    var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
+    var eQuery = {};
+    if (findQuery) {
+      eQuery.and = [];
+
+      _.forEach(findQuery, function(value, name) {
+        if (_.isObject(value) && value.$in) {
+          var i = {};
+          i[name] = value.$in;
+          eQuery.and.push({in: i});
+        }
+        else {
+          var terms = {};
+          terms[name] = [value];
+          eQuery.and.push({terms: terms});
+        }
+      });
+    }
+
+    var sort = '';
+    var direction = 'asc';
+    if (req.query.sort && req.query.sort != 'relevance') {
+      if (req.query.sort.charAt(0) == '-') {
+        direction = 'desc';
+        sort = req.query.sort.substring(1);
+      }
+      else {
+        sort = req.query.sort;
+      }
+    }
+
+    if (sort == 'title') {
+      sort = 'raw_title';
+    }
+
+    var body = {
+      'from' : req.query.skip ? req.query.skip : 0,
+      'size' : req.query.limit ? req.query.limit : 30,
+      'query': {
+        'multi_match': {
+          'query': req.query.search,
+          'fields': ['title^3', 'description^2', 'keywords^2', 'author', 'company'],
+          'slop': 10,
+          'max_expansions': 50,
+          'type': 'phrase_prefix',
+        }
+      }
+    };
+
+    if (eQuery) {
+      body.filter = eQuery;
+    }
+
+    if (sort) {
+      var s = {};
+      s[sort] = direction;
+      body.sort = [s];
+    }
+
+    client.search({
+      index: 'packages',
+      type: 'package',
+      body: body
+    }, function (err, response) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        var pkgs = [];
+        response.hits.hits.forEach(function(hit) {
+          var pkg = hit._source;
+          if (req.query.mini == 'true') {
+            pkgs.push(miniPkg(pkg));
+          }
+          else {
+            pkgs.push(pkg);
+          }
+        });
+
+        success(res, {
+          count: response.hits.total,
+          apps: pkgs,
+        });
+      }
+    });
+  }
+
   //TODO cache this to speed up requests
   app.get('/api/apps', function(req, res) {
     var findQuery = req.query.query ? JSON.parse(req.query.query) : {};
@@ -95,84 +251,16 @@ function setup(app, success, error) {
       findQuery.license = {$in: licenses};
     }
 
-    var query = null;
-    var regxp = null;
-    if (req.query.count == 'true') {
-      query = db.Package.count(findQuery);
-
-      if (req.query.search) {
-        if (req.query.search.indexOf('author:') === 0) {
-          regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
-          query.where({author: regxp});
-        }
-        else {
-          query.where({$text: {$search: req.query.search}});
-        }
+    if (req.query.search) {
+      if (req.query.search.indexOf('author:') === 0) {
+        appsFromMongo(findQuery, req, res);
       }
-
-      query.exec(function(err, count) {
-        if (err) {
-          error(res, err);
-        }
-        else {
-          success(res, count);
-        }
-      });
+      else {
+        appsFromElasticsearch(findQuery, req, res);
+      }
     }
     else {
-      query = db.Package.find(findQuery);
-
-      if (req.query.limit) {
-        query.limit(req.query.limit);
-      }
-
-      if (req.query.skip) {
-        query.skip(req.query.skip);
-      }
-
-      var sort = true;
-      if (req.query.search) {
-        if (req.query.search.indexOf('author:') === 0) {
-          regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
-          query.where({author: regxp});
-        }
-        else {
-          query.where({$text: {$search: req.query.search}});
-
-          if (req.query.sort == 'relevance') {
-            query.sort({score : {$meta : 'textScore'}});
-            query.select({score : {$meta : 'textScore'}});
-            sort = false;
-          }
-        }
-      }
-
-      if (req.query.sort && sort) {
-        if (req.query.sort == 'relevance') {
-          query.sort('-points');
-        }
-        else {
-          query.sort(req.query.sort);
-        }
-      }
-
-      query.exec(function(err, pkgs) {
-        if (err) {
-          error(res, err);
-        }
-        else {
-          if (req.query.mini == 'true') {
-            var new_pkgs = [];
-            _.forEach(pkgs, function(pkg) {
-              new_pkgs.push(miniPkg(pkg));
-            });
-
-            pkgs = new_pkgs;
-          }
-
-          success(res, pkgs);
-        }
-      });
+      appsFromMongo(findQuery, req, res);
     }
   });
 
