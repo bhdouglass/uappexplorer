@@ -12,10 +12,10 @@ var typeMap = {
 
 function type(types) {
   var t = 'application';
-  if (types.indexOf('application')) {
+  if (types.indexOf('application') > -1) {
     t = 'application';
   }
-  else if (types.indexOf('webapp')) {
+  else if (types.indexOf('webapp') > -1) {
     t = 'webapp';
   }
   else if (types.length > 0) {
