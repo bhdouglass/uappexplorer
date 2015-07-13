@@ -189,7 +189,7 @@ function setup(app, success, error) {
       'size' : req.query.limit ? req.query.limit : 30,
       'query': {
         'multi_match': {
-          'query': req.query.search,
+          'query': req.query.search.toLowerCase(),
           'fields': ['title^3', 'description^2', 'keywords^2', 'author', 'company'],
           'slop': 10,
           'max_expansions': 50,

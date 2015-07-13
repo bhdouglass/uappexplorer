@@ -133,19 +133,42 @@ function mongoToElasticsearch(removals, callback) {
 
   client.indices.create({
     index: 'packages',
-    body: {packages: 'packages'}
-  },
-  function (err) {
-    if (err) {
-      logger.error(err);
-    }
-
-    client.indices.putMapping({
-      index: 'packages',
-      type: 'package',
-      body: {
+    body: {
+      packages: 'packages',
+      settings: {
+        'analysis':{
+          'analyzer': {
+            'lower_standard': {
+              'type': 'custom',
+              'tokenizer': 'standard',
+              'filter': 'lowercase'
+            }
+          }
+        }
+      },
+      mappings: {
         'package': {
           'properties': {
+            'title': {
+              'type': 'string',
+              'analyzer': 'lower_standard'
+            },
+            'description': {
+              'type': 'string',
+              'analyzer': 'lower_standard'
+            },
+            'keywords': {
+              'type': 'string',
+              'analyzer': 'lower_standard'
+            },
+            'author': {
+              'type': 'string',
+              'analyzer': 'lower_standard'
+            },
+            'company': {
+              'type': 'string',
+              'analyzer': 'lower_standard'
+            },
             'license': {
               'type': 'string',
               'index': 'not_analyzed'
@@ -165,20 +188,20 @@ function mongoToElasticsearch(removals, callback) {
           }
         }
       }
-    },
-    function(err) {
+    }
+  },
+  function (err) {
+    if (err) {
+      logger.error(err);
+    }
+
+    db.Package.find({}, function(err, pkgs) {
       if (err) {
         logger.error(err);
       }
-
-      db.Package.find({}, function(err, pkgs) {
-        if (err) {
-          logger.error(err);
-        }
-        else {
-          elasticsearchPackage.bulk(pkgs, removals, callback);
-        }
-      });
+      else {
+        elasticsearchPackage.bulk(pkgs, removals, callback);
+      }
     });
   });
 }

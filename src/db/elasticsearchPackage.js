@@ -1,6 +1,7 @@
 var config = require('../config');
 var logger = require('../logger');
 var elasticsearch = require('elasticsearch');
+var _ = require('lodash');
 
 var index = 'packages';
 var type = 'package';
@@ -66,6 +67,13 @@ function bulk(upserts, removals, callback) {
     delete pkg.__v;
     delete pkg._id;
     pkg.raw_title = pkg.title;
+
+    var keywords = [];
+    _.forEach(pkg.keywords, function(keyword) {
+      keywords.push(keyword.toLowerCase());
+    });
+
+    pkg.keywords = keywords;
 
     body.push({update: {
       _id: pkg.name,
