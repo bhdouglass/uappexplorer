@@ -11,11 +11,6 @@ var async = require('async');
 var elasticsearch = require('elasticsearch');
 
 function miniPkg(pkg) {
-  var description = pkg.description;
-  if (pkg.description && pkg.description.split('\n').length > 0) {
-    description = pkg.description.split('\n')[0];
-  }
-
   return {
     name: pkg.name,
     cloudinary_url: pkg.cloudinary_url,
@@ -23,7 +18,8 @@ function miniPkg(pkg) {
     types: pkg.types,
     bayesian_average: pkg.bayesian_average,
     prices: pkg.prices,
-    short_description: description,
+    short_description: pkg.tagline,
+    tagline: pkg.tagline,
     points: pkg.points,
     icon_hash: pkg.icon_hash,
   };
@@ -273,7 +269,13 @@ function setup(app, success, error) {
       else {
         var new_pkgs = [];
         _.forEach(pkgs, function(pkg) {
-          new_pkgs.push(miniPkg(pkg));
+          if (req.query.mini == 'true') {
+            new_pkgs.push(miniPkg(pkg));
+          }
+          else {
+            pkg.short_description = pkg.tagline;
+            new_pkgs.push(pkg);
+          }
         });
 
         success(res, new_pkgs);

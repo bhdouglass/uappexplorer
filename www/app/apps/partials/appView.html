@@ -1,5 +1,5 @@
 <div class="list-group app-view">
-  <a class="list-group-item clickable" ng-href="{{(link === 'false') ? '' : $state.href('app', {name: app.name})}}" title="{{app.short_description}}">
+  <a class="list-group-item clickable" ng-href="{{(link === 'false') ? '' : $state.href('app', {name: app.name})}}" title="{{app.tagline}}">
     <div class="row-action-primary">
       <div class="icon ubuntu-shape">
         <img ng-src="{{appIcon(app)}}" alt="{{app.name}}" />
@@ -25,7 +25,7 @@
         </span>
       </p>
 
-      <p class="list-group-item-text" ng-show="showDescription == 'true'" ng-bind="app.short_description"></p>
+      <p class="list-group-item-text" ng-show="showDescription == 'true'" ng-bind="app.tagline"></p>
     </div>
   </a>
 </div>

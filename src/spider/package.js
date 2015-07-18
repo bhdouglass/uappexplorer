@@ -125,6 +125,29 @@ function map(pkg, data) {
     pkg.types = [pkg.type];
   }
 
+  if (pkg.description && pkg.description.split('\n').length > 0) {
+    var tagline = pkg.description.split('\n')[0];
+    if (tagline == pkg.title) {
+      tagline = '';
+
+      if (pkg.description.split('\n').length > 1) {
+        tagline = pkg.description.split('\n')[1];
+
+        if (tagline.length > 50) {
+          var pos = tagline.substring(0, 50).lastIndexOf(' ');
+          if (pos > -1) {
+            tagline = tagline.substring(0, pos) + '...';
+          }
+          else {
+            tagline = tagline.substring(0, 50) + '...';
+          }
+        }
+      }
+    }
+
+    pkg.tagline = tagline;
+  }
+
   return pkg;
 }
 

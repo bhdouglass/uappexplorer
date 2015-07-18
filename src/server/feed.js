@@ -45,13 +45,14 @@ function generateNewFeed(callback) {
     else {
       _.forEach(pkgs, function(pkg) {
         feed.item({
-          title:       'New ' + type(pkg.types) + ': ' + pkg.title,
-          url:         config.server.host + '/app/' + pkg.name,
-          description: '<a href="' + config.server.host + '/app/' + pkg.name +
-                       '"><img src="' + config.server.host + '/api/icon/' +
-                       pkg.name + '.png" /></a><br/>' + pkg.description,
-          author:      pkg.author,
-          date:        pkg.last_updated,
+          title:           'New ' + type(pkg.types) + ': ' + pkg.title,
+          url:             config.server.host + '/app/' + pkg.name,
+          description:     '<a href="' + config.server.host + '/app/' + pkg.name +
+                           '"><img src="' + config.server.host + '/api/icon/' +
+                           pkg.name + '.png" /></a><br/>' + pkg.description,
+          author:          pkg.author,
+          date:            pkg.last_updated,
+          custom_elements: [{tagline: pkg.tagline}],
         });
       });
 
@@ -80,14 +81,15 @@ function generateUpdatesFeed(callback) {
     else {
       _.forEach(pkgs, function(pkg) {
         feed.item({
-          title:       type(pkg.types) + ': ' + pkg.title,
-          url:         config.server.host + '/app/' + pkg.name,
-          description: '<a href="' + config.server.host + '/app/' + pkg.name +
-                       '"><img src="' + config.server.host + '/api/icon/' +
-                       pkg.name + '.png" /></a><br/><br/>' +
-                       pkg.changelog.replace('\n', '<br/>'),
-          author:      pkg.author,
-          date:        pkg.last_updated,
+          title:           type(pkg.types) + ': ' + pkg.title,
+          url:             config.server.host + '/app/' + pkg.name,
+          description:     '<a href="' + config.server.host + '/app/' + pkg.name +
+                           '"><img src="' + config.server.host + '/api/icon/' +
+                           pkg.name + '.png" /></a><br/><br/>' +
+                           pkg.changelog.replace('\n', '<br/>'),
+          author:          pkg.author,
+          date:            pkg.last_updated,
+          custom_elements: [{tagline: pkg.tagline}],
         });
       });
 

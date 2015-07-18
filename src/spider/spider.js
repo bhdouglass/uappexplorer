@@ -57,7 +57,7 @@ function setupSchedule() {
   });
 
   //one time scheduling
-  /*var one_time = new Date(2015, 3, 27, 0, 15, 0);
+  var one_time = new Date(2015, 6, 18, 1, 45, 0);
   var now = new Date();
   if (one_time > now) {
     schedule.scheduleJob(one_time, function() {
@@ -66,7 +66,7 @@ function setupSchedule() {
       //review.parseReviews();
       //packageParser.parseAllClickPackages();
     });
-  }*/
+  }
 }
 
 function server() {

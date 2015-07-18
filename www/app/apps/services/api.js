@@ -250,7 +250,7 @@ angular.module('appstore').factory('api', function($q, $http) {
     },
 
     essentials: function() {
-      return $http.get('/api/apps/essentials').then(function(res) {
+      return $http.get('/api/apps/essentials?mini=true').then(function(res) {
         return res.data.data;
       });
     },

@@ -108,20 +108,8 @@ function setup(app) {
                 title: pkg.title,
                 url: config.server.host + '/app/' + pkg.name,
                 image: config.server.host + '/api/icon/' + pkg.icon_hash + '/' + pkg.name + '.png',
-                description: pkg.description,
+                description: pkg.tagline,
               };
-
-              if (pkg.description && pkg.description.split('\n').length > 0) {
-                og.description = pkg.description.split('\n')[0];
-              }
-
-              if (og.description.toLowerCase() == pkg.title.toLowerCase() && pkg.description.split('\n').length > 1) {
-                og.description = pkg.description.split('\n')[1];
-              }
-
-              if (og.description.length > 50) {
-                og.description = og.description.substring(0, 50) + '...';
-              }
 
               res.send(openGraphData(data, og));
             }
