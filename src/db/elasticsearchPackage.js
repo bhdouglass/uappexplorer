@@ -5,9 +5,10 @@ var _ = require('lodash');
 
 var index = 'packages';
 var type = 'package';
-var client = new elasticsearch.Client({host: config.elasticsearch.uri});
 
 function upsert(pkg, callback) {
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
   pkg = JSON.parse(JSON.stringify(pkg));
   delete pkg.__v;
   delete pkg._id;
@@ -39,6 +40,8 @@ function upsert(pkg, callback) {
 }
 
 function remove(pkg, callback) {
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
   client.delete({
     index: index,
     type: type,
@@ -61,6 +64,8 @@ function remove(pkg, callback) {
 }
 
 function bulk(upserts, removals, callback) {
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
   var body = [];
   upserts.forEach(function(pkg) {
     pkg = JSON.parse(JSON.stringify(pkg));
