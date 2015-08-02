@@ -109,8 +109,8 @@ function map(pkg, data) {
     }
 
     var core = false;
-    _.forEach(pkg.framework, function(framework) {
-      if (framework.indexOf('ubuntu-core-') == 1) {
+    _.forEach(data.framework, function(framework) {
+      if (framework.indexOf('ubuntu-core-') == 0) {
         core = true;
         return false;
       }
@@ -146,6 +146,10 @@ function map(pkg, data) {
     }
 
     pkg.tagline = tagline;
+  }
+
+  if (data.allow_unauthenticated && data.anon_download_url) {
+    pkg.download = data.anon_download_url;
   }
 
   return pkg;

@@ -30,6 +30,9 @@ function downloadPackage(pkg, callback) {
     if (response.statusCode == 200) {
       var filename = config.tmp_dir + '/' + pkg.name + '.click';
       var f = fs.createWriteStream(filename);
+      f.on('error', function(err) {
+        callback(err);
+      });
       f.on('finish', function() {
         parse(filename, function(err, data) {
           if (err) {
