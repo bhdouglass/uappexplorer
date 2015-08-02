@@ -40,11 +40,28 @@ function downloadPackage(pkg, callback) {
           }
           else {
             fs.unlink(filename);
-            if (data.types) {
-              pkg.types = _.uniq(data.types);
+
+            pkg.webapp_inject = false;
+            var types = [];
+            _.forEach(data.apps, function(app) {
+              if (app.webappInject) {
+                pkg.webapp_inject = true;
+              }
+
+              var type = app.type;
+              if (type == 'app') {
+                type = 'application';
+              }
+
+              if (type != 'push') {
+                types.push(type);
+              }
+            });
+
+            if (types.length > 0) {
+              pkg.types = _.uniq(types);
             }
 
-            pkg.webapp_inject = data.webappInject;
             pkg.save(callback);
           }
         });
