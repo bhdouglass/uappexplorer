@@ -110,7 +110,7 @@ function map(pkg, data) {
 
     var core = false;
     _.forEach(data.framework, function(framework) {
-      if (framework.indexOf('ubuntu-core-') == 0) {
+      if (framework.indexOf('ubuntu-core-') === 0) {
         core = true;
         return false;
       }
