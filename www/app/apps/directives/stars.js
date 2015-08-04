@@ -20,14 +20,15 @@ angular.module('appstore').directive('stars', function() {
 
       $scope.$watch('model', function() {
         var model = $scope.model === undefined ? 0 : $scope.model;
+        $scope.stars = Math.round(model * 100) / 100;
+
+        model = Math.round(model * 2) / 2; //round to nearest 1/2
         var full = Math.floor(model);
         var empty = 5 - Math.ceil(model);
 
         $scope.full = new Array(full);
         $scope.empty = new Array(empty);
         $scope.half = new Array(5 - full - empty);
-
-        $scope.stars = Math.round(model * 100) / 100;
       });
     }
   };
