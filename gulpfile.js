@@ -22,7 +22,7 @@ var paths = {
   front_js: ['www/app/**/*.js', '!www/app/load.js', '!www/bower_components/**/*'],
   load: 'www/app/load.js',
   back_js: ['gulpfile.js', 'src/**/*.js'],
-  back_extra: ['package.json', 'src/**/*.json', '.openshift/**/*'],
+  back_extra: ['package.json', 'npm-shrinkwrap.json', 'src/**/*.json', '.openshift/**/*'],
   imgs: 'www/img/*',
   less: 'www/less/*.less',
   html: ['www/*.html'],
