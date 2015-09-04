@@ -93,34 +93,35 @@
             <div class="row-content">
               <p class="list-group-item-text external-links row">
                 <!-- The display block is to override the styles set by an adblocker. Some people actually want to be able to use an adblocker and still share to social media -->
-                <div class="col-sm-2 col-xs-3">
+                <div class="col-sm-2 col-xs-4">
                   <a ng-href="https://plus.google.com/share?url={{url}}app/{{app.name}}" class="text-material-red" title="Share on Google+" style="display:block !important;">
                     <i class="fa fa-gps fa-3x"></i>
                   </a>
                 </div>
-                <div class="col-sm-2 col-xs-3">
+                <div class="col-sm-2 col-xs-4">
                   <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}app/{{app.name}}" class="text-material-blue" title="Share on Facebook" style="display:block !important;">
                     <i class="fa fa-fs fa-3x"></i>
                   </a>
                 </div>
-                <div class="col-sm-2 col-xs-3">
+                <div class="col-sm-2 col-xs-4">
                   <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}&via=uappexplorer" class="text-material-lightblue" title="Share on Twitter" style="display:block !important;">
                     <i class="fa fa-ts fa-3x"></i>
                   </a>
                 </div>
-                <div class="col-sm-2 col-xs-3">
+                <div class="clear-fix visible-xs"></div>
+                <div class="col-sm-2 col-xs-4">
                   <a ng-href="https://www.reddit.com/submit?url={{url}}app/{{app.name}}" class="text-material-cyan" title="Share on Reddit" style="display:block !important;">
                     <i class="fa fa-rs fa-3x"></i>
                   </a>
                 </div>
-                <div class="col-sm-2 col-xs-3 hidden-xs">
+                <div class="col-sm-2 col-xs-4">
                   <a class="text-material-grey caxton-button clickable" title="Send via Caxton" ng-click="caxton()">
                     <i class="fa fa-square fa-3x"></i>
                     <img src="/img/caxton.svg" ng-show="!caxtonSent" title="Send via Caxton" />
                     <i class="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="Sent via Caxton"></i>
                   </a>
                 </div>
-                <div class="col-sm-2 col-xs-3 hidden-xs hidden-sm">
+                <div class="col-sm-2 col-xs-4">
                   <a class="text-material-lightgreen qr-button clickable" title="QR Code" ng-click="qrCode()">
                     <i class="fa fa-square fa-3x"></i>
                     <i class="fa fa-qrcode fa-2x fa-inverse"></i>
