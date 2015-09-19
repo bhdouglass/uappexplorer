@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, $modal, $location, lists, api, auth, utils, og) {
+angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, $state, $modal, $location, gettextCatalog, lists, api, auth, utils, og) {
   $scope.listID = $state.params.id;
   $scope.list = null;
   $scope.apps = [];
@@ -39,7 +39,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
         });
       }
       else {
-        $rootScope.setError('Could not find this list, it may not exist any more', function() {
+        $rootScope.setError(gettextCatalog.getString('Could not find this list, it may not exist any more'), function() {
           $state.go('main');
         });
 
@@ -47,7 +47,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
       }
     }, function(err) {
       console.error(err);
-      $rootScope.setError('Could not find this list, it may not exist any more', function() {
+      $rootScope.setError(gettextCatalog.getString('Could not find this list, it may not exist any more'), function() {
         $state.go('main');
       });
 
@@ -59,7 +59,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
       }
     }, function(err) {
       console.error(err);
-      $rootScope.setError('Could not load the apps for this list, please try again later', function() {
+      $rootScope.setError(gettextCatalog.getString('Could not load the apps for this list, please try again later'), function() {
         $state.go('list', {id:  $state.params.id});
       });
     })
@@ -79,7 +79,7 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
         refreshList();
       }, function(err) {
         console.error(err);
-        $rootScope.setError('Could not remove the app from this list, please try again later');
+        $rootScope.setError(gettextCatalog.getString('Could not remove the app from this list, please try again later'));
       });
     }
   };
@@ -100,18 +100,18 @@ angular.module('appstore').controller('listCtrl', function ($scope, $rootScope, 
         $scope.caxtonSent = true;
       }, function(err) {
         if (err.status == 401) {
-          $rootScope.setError('Please login to send via Caxton', function() {
+          $rootScope.setError(gettextCatalog.getString('Please login to send via Caxton'), function() {
             $rootScope.login();
           }, 'info');
         }
         else if (err.status == 400) {
-          $rootScope.setError('You do not have your account connected to Caxton, click to go to your settings', function() {
+          $rootScope.setError(gettextCatalog.getString('You do not have your account connected to Caxton, click to go to your settings'), function() {
             $location.url('/me');
           }, 'info');
         }
         else {
           console.error(err);
-          $rootScope.setError('Could not connect to Caxton at this time, please try again later');
+          $rootScope.setError(gettextCatalog.getString('Could not connect to Caxton at this time, please try again later'));
         }
       });
     }

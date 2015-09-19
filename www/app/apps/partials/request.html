@@ -1,27 +1,30 @@
 <div class="modal-header">
-  <h3 class="modal-title">Missing an app?</h3>
+  <h3 class="modal-title" translate>Missing an app?</h3>
 </div>
 
 <div class="modal-body">
   <div class="row">
     <div class="col-sm-12">
       <div class="alert alert-warning text-center" ng-if="success === false">
-        <h4>Could not find the requested app</h4>
+        <h4 translate>Could not find the requested app</h4>
       </div>
       <div class="alert alert-success text-center" ng-if="success === true">
-        <h4>Found the requested app</h4>
-        <a ng-href="/app/{{appName}}" ng-click="$dismiss(appName)">Go there now <i class="fa fa-external-link"></i></a>
+        <h4 translate>Found the requested app</h4>
+        <a ng-href="/app/{{appName}}" ng-click="$dismiss(appName)">
+          <span translate>Go there now</span>
+          <i class="fa fa-external-link"></i>
+        </a>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-12">
-      Find an app that has not yet been fetched from the official appstore.
+      <span translate>Find an app that has not yet been fetched from the official appstore.</span>
       <br/>
       <br/>
       <div class="form-group">
-        <label class="control-label" for="name">App Name (example: com.ubuntu.developer.example)</label>
+        <label class="control-label" for="name" translate>App Name (example: com.ubuntu.developer.example)</label>
         <input type="text" class="form-control" id="name" ng-model="name" />
       </div>
     </div>
@@ -29,6 +32,6 @@
 </div>
 
 <div class="modal-footer">
-  <button class="btn btn-warning" ng-click="$dismiss('close')">Close</button>
-  <button class="btn btn-info" ng-click="find(name)">Find</button>
+  <button class="btn btn-warning" ng-click="$dismiss('close')" translate>Close</button>
+  <button class="btn btn-info" ng-click="find(name)" translate>Find</button>
 </div>

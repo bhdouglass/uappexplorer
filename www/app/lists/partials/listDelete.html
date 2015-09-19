@@ -1,15 +1,15 @@
 <div class="modal-header">
-  <h4 class="modal-title">Are you sure you want to delete "{{selectedList.name}}"?</h4>
+  <h4 class="modal-title" translate>Are you sure you want to delete "{{selectedList.name}}"?</h4>
 </div>
 
 <div class="modal-footer">
   <button class="btn btn-info" ng-click="$dismiss('close')">
     <i class="fa fa-close"></i>
-    No
+    <span translate>No</span>
   </button>
 
   <button class="btn btn-success" ng-click="delete(selectedList)">
     <i class="fa fa-check"></i>
-    Yes
+    <span translate>Yes</span>
   </button>
 </div>

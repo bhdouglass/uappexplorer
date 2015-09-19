@@ -2,7 +2,7 @@
 
 angular.module('appstore', [
   'ui.router', 'ui.bootstrap', 'angulartics', 'angulartics.google.analytics',
-  'ipCookie', 'monospaced.qrcode', 'ngTouch', 'ngAnimate', 'base64'
+  'ipCookie', 'monospaced.qrcode', 'ngTouch', 'ngAnimate', 'base64', 'gettext'
 ]);
 
 angular.module('appstore').config(function($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {

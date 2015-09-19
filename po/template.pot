@@ -1,0 +1,817 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: apps/partials/app.html:149
+msgid "- Choose a list -"
+msgstr ""
+
+#: main/partials/donate.html:25
+msgid "(Don't worry, there is a free version too!)"
+msgstr ""
+
+#: main/partials/main.html:25
+msgid "{{counts.applications}} apps"
+msgid_plural "{{counts.applications}} apps"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/partials/main.html:73
+msgid "{{counts.games}} games"
+msgid_plural "{{counts.games}} games"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/partials/main.html:97
+msgid "{{counts.scopes}} scopes"
+msgid_plural "{{counts.scopes}} scopes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/partials/main.html:49
+msgid "{{counts.webapps}} web apps"
+msgid_plural "{{counts.webapps}} web apps"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lists/partials/me.html:79
+msgid "{{list.packages.length}} apps"
+msgid_plural "{{list.packages.length}} apps"
+msgstr[0] ""
+msgstr[1] ""
+
+#: apps/partials/app.html:73
+msgid "*Install will take you to the official appstore on an Ubuntu Touch device"
+msgstr ""
+
+#: apps/partials/app.html:76
+msgid ""
+"*This webapp injects custom code into the website which can add\n"
+"                  extra features or be malicious. Only use this app if you trust the author."
+msgstr ""
+
+#: lists/partials/listEdit.html:37
+msgid "Add Apps:"
+msgstr ""
+
+#: apps/partials/app.html:147
+msgid "Add to list:"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:92
+msgid "Added this app to your list"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:21
+#: apps/controllers/appsCtrl.js:36
+msgid "All"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:14
+msgid "All Apps"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:46
+msgid "All Types"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:23
+#: apps/controllers/appsCtrl.js:34
+msgid "Any"
+msgstr ""
+
+#: apps/directives/type.js:25
+msgid "App"
+msgstr ""
+
+#: apps/partials/request.html:27
+msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:50
+#: main/partials/main.html:22
+msgid "Apps"
+msgstr ""
+
+#: main/partials/faq.html:25
+msgid "Apps are not installed via this site, but via the official appstore."
+msgstr ""
+
+#: lists/partials/listEdit.html:23
+msgid "Apps:"
+msgstr ""
+
+#. CPU architecture
+#: apps/partials/app.html:203
+#: apps/partials/apps.html:69
+msgid "Architecture:"
+msgstr ""
+
+#: lists/partials/listDelete.html:2
+msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
+msgstr ""
+
+#. Browse Apps
+#: main/partials/main.html:5
+msgid "Browse"
+msgstr ""
+
+#: main/partials/main.html:14
+msgid "Browse Apps"
+msgstr ""
+
+#: main/partials/main.html:62
+msgid "Browse Games"
+msgstr ""
+
+#: main/partials/main.html:86
+msgid "Browse Scopes"
+msgstr ""
+
+#: main/partials/main.html:38
+msgid "Browse Web Apps"
+msgstr ""
+
+#: main/partials/donate.html:19
+msgid "Buy the Webapp"
+msgstr ""
+
+#: main/partials/donate.html:21
+msgid "Buy the webapp from the Ubuntu Touch app store"
+msgstr ""
+
+#. User list author
+#: lists/partials/list.html:13
+msgid "By: {{list.user_name}}"
+msgstr ""
+
+#: apps/partials/apps.html:17
+msgid "Category:"
+msgstr ""
+
+#: lists/partials/me.html:18
+msgid "Caxton Code"
+msgstr ""
+
+#. App changelog
+#: apps/partials/app.html:177
+msgid "Changelog"
+msgstr ""
+
+#: lists/partials/listEdit.html:42
+msgid "Clear search"
+msgstr ""
+
+#: apps/partials/request.html:35
+#: lists/partials/listEdit.html:67
+#: lists/partials/login.html:9
+#: main/partials/disclaimer.html:16
+#: main/partials/faq.html:98
+#: main/partials/qrcode.html:15
+msgid "Close"
+msgstr ""
+
+#. Apps containing: {search term}
+#: apps/partials/apps.html:9
+msgid "Containing:"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:95
+msgid "Could not add app to list at this time, please try again later"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:136
+#: lists/controllers/listCtrl.js:114
+msgid "Could not connect to Caxton at this time, please try again later"
+msgstr ""
+
+#: lists/controllers/listEditCtrl.js:62
+msgid "Could not create a new list at this time, please try again later"
+msgstr ""
+
+#: lists/controllers/meCtrl.js:55
+msgid "Could not delete the list at this time, please try again later"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:60
+msgid "Could not download app data, click to retry"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:95
+msgid "Could not download app list, click to retry"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:112
+msgid "Could not download category list, click to retry"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:125
+msgid "Could not download framework list, click to retry"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:137
+msgid "Could not download license list, click to retry"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:55
+msgid "Could not find app"
+msgstr ""
+
+#: apps/partials/request.html:9
+msgid "Could not find the requested app"
+msgstr ""
+
+#: lists/controllers/listCtrl.js:42
+#: lists/controllers/listCtrl.js:50
+msgid "Could not find this list, it may not exist any more"
+msgstr ""
+
+#: lists/controllers/listCtrl.js:62
+msgid "Could not load the apps for this list, please try again later"
+msgstr ""
+
+#: lists/controllers/listCtrl.js:82
+msgid "Could not remove the app from this list, please try again later"
+msgstr ""
+
+#: lists/partials/listEdit.html:30
+msgid "Could not retrieve app list at this time, please try again later."
+msgstr ""
+
+#: lists/partials/listEdit.html:56
+msgid "Could not retrieve search at this time, please try again later."
+msgstr ""
+
+#: lists/controllers/listEditCtrl.js:64
+msgid "Could not update the list at this time, please try again later"
+msgstr ""
+
+#: lists/controllers/meCtrl.js:69
+msgid "Could save your settings at this time, please try again later"
+msgstr ""
+
+#: lists/partials/listEdit.html:77
+msgid "Create"
+msgstr ""
+
+#: lists/partials/listEdit.html:3
+msgid "Create List"
+msgstr ""
+
+#: lists/partials/me.html:65
+msgid "Delete"
+msgstr ""
+
+#. App description
+#: apps/partials/app.html:174
+msgid "Description"
+msgstr ""
+
+#: index.html:120
+#: main/partials/donate.html:2
+msgid "Donate"
+msgstr ""
+
+#: main/partials/donate.html:44
+msgid "Donate via Bitcoin"
+msgstr ""
+
+#: main/partials/donate.html:37
+msgid "Donate via Gratipay"
+msgstr ""
+
+#: main/partials/donate.html:30
+#: main/partials/donate.html:34
+msgid "Donate via Paypal"
+msgstr ""
+
+#: main/partials/donate.html:7
+msgid ""
+"Donating to uApp Explorer is just one way you can help make it better. If you\n"
+"    choose to donate, you money will go towards infrastructure costs. Costs include\n"
+"    domain names, hosting, etc. uApp Explorer will always be a free and open source\n"
+"    service, regardless of the number of donations."
+msgstr ""
+
+#. The uApp Explorer donation app download link
+#: index.html:174
+msgid "Donation Web App"
+msgstr ""
+
+#: lists/partials/me.html:60
+msgid "Edit"
+msgstr ""
+
+#: lists/partials/listEdit.html:2
+msgid "Edit List"
+msgstr ""
+
+#: main/partials/main.html:112
+msgid "Essential Apps"
+msgstr ""
+
+#: index.html:117
+#: main/partials/faq.html:2
+msgid "FAQ"
+msgstr ""
+
+#: apps/partials/apps.html:39
+msgid "Filters"
+msgstr ""
+
+#: apps/partials/request.html:36
+msgid "Find"
+msgstr ""
+
+#: apps/partials/request.html:23
+msgid "Find an app that has not yet been fetched from the official appstore."
+msgstr ""
+
+#. Comment below reviews
+#: apps/partials/app.html:364
+msgid "For version:"
+msgstr ""
+
+#: apps/partials/request.html:12
+msgid "Found the requested app"
+msgstr ""
+
+#. Ubuntu sdk framework
+#: apps/partials/apps.html:74
+msgid "Framework:"
+msgstr ""
+
+#. No Cost
+#: apps/partials/app.html:50
+#: main/services/utils.js:100
+msgid "Free"
+msgstr ""
+
+#: main/partials/main.html:70
+msgid "Games"
+msgstr ""
+
+#: main/partials/qrcode.html:8
+msgid "Get a QR scanner for your Ubuntu Touch device"
+msgstr ""
+
+#: apps/partials/request.html:14
+msgid "Go there now"
+msgstr ""
+
+#. Grid view
+#: apps/partials/apps.html:47
+#: lists/partials/list.html:22
+msgid "Grid"
+msgstr ""
+
+#: main/partials/faq.html:49
+msgid ""
+"Heart ratings are calculated from the star rating where a 5 star review is\n"
+"      1 heart point, 4 stars = 0.5 hears, 3 stars = 0 hears, 2 stars = -0.5 hears,\n"
+"      and 1 star = -1 hears."
+msgstr ""
+
+#: main/services/utils.js:88
+msgid "Highest Heart Rating"
+msgstr ""
+
+#: main/services/utils.js:94
+msgid "Highest Star Rating"
+msgstr ""
+
+#: main/partials/faq.html:77
+msgid "How can I help improve this site?"
+msgstr ""
+
+#: main/partials/faq.html:18
+msgid "How do I install apps?"
+msgstr ""
+
+#: main/partials/faq.html:60
+msgid "I just published my app, why don't I see it?"
+msgstr ""
+
+#: main/partials/faq.html:79
+msgid "If you want to contribute code visit the GitHub repo."
+msgstr ""
+
+#: main/partials/faq.html:83
+msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
+msgstr ""
+
+#: main/partials/faq.html:91
+msgid "If you would like to contact the author, visit his website."
+msgstr ""
+
+#: main/partials/faq.html:87
+msgid "If you would like to contribute monetarily, there are multiple options for donating."
+msgstr ""
+
+#. App info
+#: apps/partials/app.html:180
+msgid "Info"
+msgstr ""
+
+#: main/partials/faq.html:54
+msgid "It is possible to have a negative heart rating."
+msgstr ""
+
+#: main/services/utils.js:82
+msgid "Latest Update"
+msgstr ""
+
+#: apps/partials/app.html:201
+#: apps/partials/apps.html:62
+msgid "License:"
+msgstr ""
+
+#. List view
+#: apps/partials/apps.html:51
+#: lists/partials/list.html:26
+msgid "List"
+msgstr ""
+
+#: lists/partials/listEdit.html:9
+msgid "List Name:"
+msgstr ""
+
+#: apps/partials/app.html:387
+msgid "Loading more reviews..."
+msgstr ""
+
+#: apps/partials/app.html:295
+msgid "Loading reviews..."
+msgstr ""
+
+#: index.html:123
+#: lists/partials/login.html:2
+msgid "Log In"
+msgstr ""
+
+#: lists/partials/login.html:14
+msgid "Log in via Ubuntu"
+msgstr ""
+
+#: index.html:129
+msgid "Log Out"
+msgstr ""
+
+#: main/services/utils.js:91
+msgid "Lowest Heart Rating"
+msgstr ""
+
+#: main/services/utils.js:97
+msgid "Lowest Star Rating"
+msgstr ""
+
+#: apps/partials/request.html:2
+msgid "Missing an app?"
+msgstr ""
+
+#: apps/partials/app.html:250
+msgid "More Apps by {{app.author}}"
+msgstr ""
+
+#: main/services/utils.js:103
+msgid "Most Expensive (USD)"
+msgstr ""
+
+#: main/services/utils.js:66
+msgid "Most Relevant"
+msgstr ""
+
+#: index.html:126
+#: lists/partials/me.html:45
+msgid "My Lists"
+msgstr ""
+
+#. The new apps rss feed link
+#: index.html:184
+#: main/partials/main.html:159
+msgid "New Apps"
+msgstr ""
+
+#: main/partials/faq.html:62
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either\n"
+"      wait until the new apps are fetched or use\n"
+"      the request form to request that the app be found early."
+msgstr ""
+
+#: lists/partials/me.html:42
+msgid "New List"
+msgstr ""
+
+#: main/services/utils.js:76
+msgid "Newest"
+msgstr ""
+
+#: apps/partials/app.html:16
+msgid "Next App:"
+msgstr ""
+
+#: lists/partials/listDelete.html:8
+msgid "No"
+msgstr ""
+
+#: lists/partials/listEdit.html:52
+msgid "No apps found"
+msgstr ""
+
+#: apps/partials/apps.html:112
+msgid "No apps found, try searching again."
+msgstr ""
+
+#: apps/partials/app.html:154
+msgid "No lists, create one!"
+msgstr ""
+
+#: apps/partials/app.html:379
+msgid "No reviews yet!"
+msgstr ""
+
+#: main/services/utils.js:79
+msgid "Oldest"
+msgstr ""
+
+#: main/services/utils.js:85
+msgid "Oldest Update"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:125
+#: lists/controllers/listCtrl.js:103
+msgid "Please login to send via Caxton"
+msgstr ""
+
+#: apps/partials/app.html:10
+msgid "Previous App:"
+msgstr ""
+
+#: apps/partials/app.html:125
+#: lists/partials/list.html:63
+msgid "QR Code"
+msgstr ""
+
+#: main/partials/qrcode.html:2
+msgid "QR Code for {{qrCodeTitle}}"
+msgstr ""
+
+#: lists/partials/list.html:78
+msgid "Remove this app from your list"
+msgstr ""
+
+#: lists/partials/listEdit.html:72
+#: lists/partials/me.html:31
+msgid "Save"
+msgstr ""
+
+#. The uApp Explorer scope download link
+#: apps/directives/type.js:26
+#: index.html:170
+msgid "Scope"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:56
+#: main/partials/main.html:94
+msgid "Scopes"
+msgstr ""
+
+#: apps/partials/app.html:232
+msgid "Screenshots"
+msgstr ""
+
+#: apps/partials/app.html:118
+#: apps/partials/app.html:120
+#: lists/partials/list.html:56
+#: lists/partials/list.html:58
+msgid "Send via Caxton"
+msgstr ""
+
+#: apps/partials/app.html:121
+#: lists/partials/list.html:59
+msgid "Sent via Caxton"
+msgstr ""
+
+#: lists/partials/me.html:13
+msgid "Settings"
+msgstr ""
+
+#: apps/partials/app.html:102
+#: lists/partials/list.html:41
+msgid "Share on Facebook"
+msgstr ""
+
+#: apps/partials/app.html:97
+#: lists/partials/list.html:36
+msgid "Share on Google+"
+msgstr ""
+
+#: apps/partials/app.html:113
+#: lists/partials/list.html:51
+msgid "Share on Reddit"
+msgstr ""
+
+#: apps/partials/app.html:107
+#: lists/partials/list.html:46
+msgid "Share on Twitter"
+msgstr ""
+
+#: apps/partials/app.html:271
+msgid "Similar Apps"
+msgstr ""
+
+#: apps/directives/type.js:28
+msgid "Snappy App"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:59
+msgid "Snappy Apps"
+msgstr ""
+
+#: lists/partials/listEdit.html:16
+msgid "Sort Apps By:"
+msgstr ""
+
+#: apps/partials/apps.html:27
+msgid "Sort By:"
+msgstr ""
+
+#. App support links
+#: apps/partials/app.html:183
+msgid "Support"
+msgstr ""
+
+#: apps/partials/app.html:210
+#: apps/partials/app.html:213
+msgid "Support:"
+msgstr ""
+
+#. Terms and conditions
+#: apps/partials/app.html:221
+msgid "Terms:"
+msgstr ""
+
+#: main/partials/donate.html:52
+msgid "Thank you!"
+msgstr ""
+
+#: main/partials/faq.html:44
+msgid ""
+"The heart rating is similar to the star rating, but it rewards apps for having\n"
+"      more good reviews. An app with more 5 star ratings will have a higher heart\n"
+"      rating than an app with only a few 5 star ratings."
+msgstr ""
+
+#: main/partials/faq.html:32
+msgid ""
+"The star rating is the Bayesian average of the star ratings that user give\n"
+"    to an app when they leave a review. The Bayesian average allows apps with\n"
+"    more reviews to rank better than apps with less reviews. The star rating\n"
+"    can be between 1 and 5, where a 0 means that there have not been any reviews\n"
+"    yet. For more information about the Bayesian average calculation, check out\n"
+"    <a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
+msgstr ""
+
+#: apps/partials/app.html:159
+msgid "This app is on these lists:"
+msgstr ""
+
+#: index.html:154
+msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgstr ""
+
+#: lists/partials/list.html:73
+msgid "This list is empty!"
+msgstr ""
+
+#: main/partials/disclaimer.html:5
+#: main/partials/faq.html:7
+msgid ""
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for\n"
+"  the apps comes from a publicly accessible\n"
+"  <a href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a>.\n"
+"  This site is maintained by <a href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
+"  and is not endorsed by or affiliated with Ubuntu or Canonical.\n"
+"  Ubuntu and Canonical are registered trademarks of\n"
+"  <a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
+msgstr ""
+
+#: main/services/utils.js:70
+msgid "Title A-Z"
+msgstr ""
+
+#: main/services/utils.js:73
+msgid "Title Z-A"
+msgstr ""
+
+#: main/partials/faq.html:20
+msgid ""
+"To install an app, visit this site on your Ubuntu Touch device. Find the app\n"
+"      that you wish to install and click the \"Install\" button. You will then be\n"
+"      taken to the official appstore on your device where you can install the app."
+msgstr ""
+
+#: main/partials/faq.html:70
+msgid ""
+"To report a problem or request a new feature visit the issues page for\n"
+"    this site on\n"
+"    <a href=\"https://github.com/bhdouglass/uappexplorer/issues\">GitHub</a>."
+msgstr ""
+
+#: main/partials/main.html:136
+msgid "Top Apps"
+msgstr ""
+
+#. App type (scope/app/etc)
+#: apps/partials/apps.html:22
+msgid "Type:"
+msgstr ""
+
+#. The updated apps rss feed link
+#: index.html:188
+msgid "Updated Apps"
+msgstr ""
+
+#: apps/partials/app.html:199
+msgid "Updated:"
+msgstr ""
+
+#: lists/partials/list.html:11
+msgid "User List:"
+msgstr ""
+
+#: apps/partials/app.html:288
+msgid "User Reviews"
+msgstr ""
+
+#: apps/partials/app.html:197
+msgid "Version:"
+msgstr ""
+
+#: lists/partials/me.html:55
+msgid "View"
+msgstr ""
+
+#. The uApp Explorer app download link
+#: apps/directives/type.js:27
+#: index.html:166
+msgid "Web App"
+msgstr ""
+
+#: apps/controllers/appsCtrl.js:53
+#: main/partials/main.html:46
+msgid "Web Apps"
+msgstr ""
+
+#: apps/partials/app.html:217
+msgid "Website:"
+msgstr ""
+
+#. Welcome {{username}}
+#: lists/partials/me.html:5
+msgid "Welcome"
+msgstr ""
+
+#: main/partials/disclaimer.html:2
+msgid "Welcome to uApp Explorer!"
+msgstr ""
+
+#: main/partials/faq.html:42
+msgid "What is the heart rating?"
+msgstr ""
+
+#: main/partials/faq.html:31
+msgid "What is the star rating?"
+msgstr ""
+
+#: main/partials/faq.html:6
+msgid "What is this site?"
+msgstr ""
+
+#: main/partials/faq.html:69
+msgid "Where can I report a problem or request a new feature?"
+msgstr ""
+
+#: main/partials/donate.html:14
+msgid "Whether you choose to donate or not, I still appreciate you support. Thank you!"
+msgstr ""
+
+#: main/partials/donate.html:6
+msgid "Why donate?"
+msgstr ""
+
+#: lists/partials/listDelete.html:13
+msgid "Yes"
+msgstr ""
+
+#: lists/partials/me.html:22
+msgid "You are already connected via Caxton!"
+msgstr ""
+
+#: apps/controllers/appCtrl.js:130
+#: lists/controllers/listCtrl.js:108
+msgid "You do not have your account connected to Caxton, click to go to your settings"
+msgstr ""

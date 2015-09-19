@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, api, utils, lists, og, auth) {
+angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $state, $timeout, $modal, $location, gettextCatalog, api, utils, lists, og, auth) {
   $scope.name = $state.params.name;
   $scope.app_tab = 'desc';
   $scope.lists = [];
@@ -52,12 +52,12 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
   }, function(err) {
     console.error(err);
     if (err.status == 404) {
-      $rootScope.setError('Could not find app ' + $scope.name, function() {
+      $rootScope.setError(gettextCatalog.getString('Could not find app') + ' ' + $scope.name, function() {
         $state.go('apps');
       });
     }
     else {
-      $rootScope.setError('Could not download app data, click to retry', function() {
+      $rootScope.setError(gettextCatalog.getString('Could not download app data, click to retry'), function() {
         $state.go('app', {name: $scope.name}, {reload: true});
       });
     }
@@ -89,10 +89,10 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
     lists.api.addApp(listID, $scope.app.name).then(function() {
       console.log('success');
       listID = null;
-      $rootScope.setError('Added this app to your list', null, 'success');
+      $rootScope.setError(gettextCatalog.getString('Added this app to your list'), null, 'success');
     }, function(err) {
       console.error(err);
-      $rootScope.setError('Could not add app to list at this time, please try again later');
+      $rootScope.setError(gettextCatalog.getString('Could not add app to list at this time, please try again later'));
     });
   };
 
@@ -122,18 +122,18 @@ angular.module('appstore').controller('appCtrl', function ($scope, $rootScope, $
         $scope.caxtonSent = true;
       }, function(err) {
         if (err.status == 401) {
-          $rootScope.setError('Please login to send via Caxton', function() {
+          $rootScope.setError(gettextCatalog.getString('Please login to send via Caxton'), function() {
             $rootScope.login();
           }, 'info');
         }
         else if (err.status == 400) {
-          $rootScope.setError('You do not have your account connected to Caxton, click to go to your settings', function() {
+          $rootScope.setError(gettextCatalog.getString('You do not have your account connected to Caxton, click to go to your settings'), function() {
             $location.url('/me');
           }, 'info');
         }
         else {
           console.error(err);
-          $rootScope.setError('Could not connect to Caxton at this time, please try again later');
+          $rootScope.setError(gettextCatalog.getString('Could not connect to Caxton at this time, please try again later'));
         }
       });
     }

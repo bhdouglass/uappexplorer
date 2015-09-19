@@ -6,7 +6,7 @@
         <span>{{app_count}} {{countTypes[type]}}</span>
         <span ng-if="search">
           <br/>
-          Containing: "{{search}}"
+          <span translate translate-comment="Apps containing: {search term}">Containing:</span> "{{search}}"
         </span>
       </div>
       <div class="col-md-6">
@@ -14,17 +14,17 @@
           <form class="top-filters">
             <fieldset>
               <div class="form-group col-md-4">
-                <label for="category" class="control-label hidden-xs">Category:</label>
+                <label for="category" class="control-label hidden-xs" translate>Category:</label>
                 <select id="category" class="form-control" ng-options="c.name for c in categories" ng-model="categoryModel" ng-change="changeCategory(categoryModel)"></select>
               </div>
 
               <div class="form-group col-md-4">
-                <label for="type" class="control-label hidden-xs">Type:</label>
+                <label for="type" class="control-label hidden-xs" translate translate-comment="App type (scope/app/etc)">Type:</label>
                 <select id="type" class="form-control" ng-options="t.value as t.label for t in typeList" ng-model="typeModel" ng-change="changeType(typeModel)"></select>
               </div>
 
               <div class="form-group col-md-4">
-                <label for="sort" class="control-label hidden-xs">Sort By:</label>
+                <label for="sort" class="control-label hidden-xs" translate>Sort By:</label>
                 <select id="sort" class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="sortModel" ng-change="changeSort(sortModel)"></select>
               </div>
             </fieldset>
@@ -36,7 +36,7 @@
             <div class="btn-group">
               <a ng-click="more_filters = !more_filters" class="btn btn-primary clickable">
                 <i class="fa fa-plus-circle" ng-class="{'fa-plus-circle': !more_filters, 'fa-minus-circle': more_filters}"></i>
-                Filters
+                <span translate>Filters</span>
               </a>
             </div>
           </div>
@@ -44,11 +44,11 @@
           <div class="btn-toolbar pull-right">
             <div class="btn-group">
               <a class="btn clickable" ng-class="{'bold btn-primary view-button': view == 'grid'}" ng-click="changeView('grid')" ng-disabled="view == 'grid'">
-                <span class="hidden-xs">Grid</span>
+                <span class="hidden-xs" translate translate-comment="Grid view">Grid</span>
                 <i class="fa fa-th-large"></i>
               </a>
               <a class="btn clickable" ng-class="{'bold btn-primary view-button': view == 'list'}" ng-click="changeView('list')" ng-disabled="view == 'list'">
-                  <span class="hidden-xs">List</span>
+                  <span class="hidden-xs" translate translate-comment="List view">List</span>
                 <i class="fa fa-list"></i>
               </a>
             </div>
@@ -59,19 +59,19 @@
           <form>
             <fieldset>
               <div class="form-group col-md-4">
-                <label for="license" class="control-label">License:</label>
+                <label for="license" class="control-label" translate>License:</label>
                 <select id="license" class="form-control" ng-options="l.value as l.label for l in licenses" ng-model="license" ng-change="changeLicense(license)">
                   <option value="">All</option>
                 </select>
               </div>
 
               <div class="form-group col-md-4">
-                <label for="architecture" class="control-label">Architecture:</label>
+                <label for="architecture" class="control-label" translate translate-comment="CPU architecture">Architecture:</label>
                 <select id="architecture" class="form-control" ng-options="a for a in architectures" ng-model="architecture" ng-change="changeArchitecture(architecture)"></select>
               </div>
 
               <div class="form-group col-md-4">
-                <label for="framework" class="control-label">Framework:</label>
+                <label for="framework" class="control-label" translate translate-comment="Ubuntu sdk framework">Framework:</label>
                 <select id="framework" class="form-control" ng-options="f for f in frameworks" ng-model="framework" ng-change="changeFramework(framework)"></select>
               </div>
             </fieldset>
@@ -109,7 +109,7 @@
   </div>
 
   <div class="row" ng-show="app_chunks.length == 0">
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center" translate>
       No apps found, try searching again.
     </div>
   </div>

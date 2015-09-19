@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $location, $modal, auth, lists, utils) {
+angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $location, $modal, gettextCatalog, auth, lists, utils) {
   $scope.strToColor = utils.strToColor;
 
   $scope.user = null;
@@ -52,7 +52,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
       return lists.api.findAll();
     }, function(err) {
       console.error(err);
-      $rootScope.setError('Could not delete the list at this time, please try again later');
+      $rootScope.setError(gettextCatalog.getString('Could not delete the list at this time, please try again later'));
     })
     .then(function(lists) {
       utils.doneLoading($scope);
@@ -66,7 +66,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
         $scope.user = user;
       }, function(err) {
         console.error(err);
-        $rootScope.setError('Could save your settings at this time, please try again later');
+        $rootScope.setError(gettextCatalog.getString('Could save your settings at this time, please try again later'));
       });
     }
   };

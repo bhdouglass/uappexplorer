@@ -5,7 +5,6 @@
         <li ng-class="{clickable: current != 0, disabled: current == 0}">
           <a ng-click="previous_page()">
             <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
           </a>
         </li>
         <li ng-show="pages_repeater.indexOf(0) == -1" class="clickable hidden-xs">
@@ -26,7 +25,6 @@
         <li ng-class="{clickable: current != (pages - 1), disabled: current == (pages - 1)}">
           <a ng-click="next_page()">
             <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
           </a>
         </li>
       </ul>

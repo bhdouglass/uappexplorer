@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('listEditCtrl', function($scope, $timeout, $location, $rootScope, $state, lists, api, utils) {
+angular.module('appstore').controller('listEditCtrl', function($scope, $timeout, $location, $rootScope, $state, gettextCatalog, lists, api, utils) {
   $scope.sorts = utils.sorts;
 
   $scope.list = null;
@@ -59,9 +59,9 @@ angular.module('appstore').controller('listEditCtrl', function($scope, $timeout,
       }, function(err) {
         console.error(err);
 
-        var message = 'Could not create a new list at this time, please try again later';
+        var message = gettextCatalog.getString('Could not create a new list at this time, please try again later');
         if (update) {
-          message = 'Could not update the list at this time, please try again later';
+          message = gettextCatalog.getString('Could not update the list at this time, please try again later');
         }
 
         $rootScope.setError(message);

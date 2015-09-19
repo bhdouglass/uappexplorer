@@ -1,22 +1,25 @@
 <div>
   <div class="row">
     <div class="col-sm-12 text-center">
-      <h1>Welcome {{user.name ? user.name : user.username}}</h1>
+      <h1>
+        <span translate translate-comment="Welcome {{username}}">Welcome</span>
+        {{user.name ? user.name : user.username}}
+      </h1>
     </div>
   </div>
 
   <div class="row settings">
     <div class="col-sm-offset-2 col-sm-8">
-      <h3>Settings</h3>
+      <h3 translate>Settings</h3>
 
       <form class="form-horizontal" role="form">
         <div class="form-group">
           <label for="caxton_code" class="col-sm-3 control-label">
-            <a href="https://caxton.herokuapp.com/" target="_blank">Caxton Code</a>:
+            <a href="https://caxton.herokuapp.com/" target="_blank" translate>Caxton Code</a>:
           </label>
           <div class="col-sm-9">
             <input type="text" class="form-control" id="caxton_code" placeholder="Code" ng-model="settings.caxton_code" />
-            <span class="small-note" ng-if="user.has_caxton">
+            <span class="small-note" ng-if="user.has_caxton" translate>
               You are already connected via Caxton!
             </span>
           </div>
@@ -25,7 +28,7 @@
         <div class="pull-right">
           <button class="btn btn-success" ng-click="saveSettings()" ng-disabled="!settings.caxton_code">
             <i class="fa" ng-class="{'fa-check': !saving, 'fa-spinner fa-spin': saving}"></i>
-            Save
+            <span translate>Save</span>
           </button>
         </div>
       </form>
@@ -36,12 +39,10 @@
     <div class="col-sm-12">
       <button class="btn btn-primary btn-sm pull-right" ui-sref="me.listedit({id: 'new'})">
         <i class="fa fa-plus"></i>
-        <span class="hidden-xs">New List</span>
+        <span class="hidden-xs" translate>New List</span>
       </button>
 
-      <h3>
-        My App Lists
-      </h3>
+      <h3 translate>My Lists</h3>
     </div>
   </div>
 
@@ -51,22 +52,22 @@
         <div class="pull-right">
           <a class="btn btn-info btn-sm hidden-xs" ui-sref="list({id: list._id})">
             <i class="fa fa-eye"></i>
-            View
+            <span translate>View</span>
           </a>
 
           <a class="btn btn-success btn-sm" ui-sref="me.listedit({id: list._id})">
             <i class="fa fa-edit"></i>
-            <span class="hidden-xs">Edit</span>
+            <span class="hidden-xs" translate>Edit</span>
           </a>
 
           <button class="btn btn-danger btn-sm" ng-click="remove(list)">
             <i class="fa fa-trash"></i>
-            <span class="hidden-xs">Delete</span>
+            <span class="hidden-xs" translate>Delete</span>
           </button>
         </div>
 
         <div class="list-group">
-          <a class="list-group-item clickable" ui-sref="list({id: list._id})" title="Browse Apps">
+          <a class="list-group-item clickable" ui-sref="list({id: list._id})">
             <div class="row-action-primary">
               <div class="action-icon ubuntu-shape">
                 <i class="fa {{icon(list.name)}}" ng-style="strToColor(list.name, 'background-color')"></i>
@@ -75,8 +76,9 @@
 
             <div class="row-content">
               <h4 class="list-group-item-heading" ng-bind="list.name"></h4>
-              <p class="list-group-item-text">
-                <span ng-bind="list.packages.length"></span> apps
+              <p class="list-group-item-text"
+                translate translate-n="list.packages.length" translate-plural="{{list.packages.length}} apps">
+                {{list.packages.length}} apps
               </p>
             </div>
           </a>

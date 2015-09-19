@@ -7,13 +7,13 @@
 
   <div ng-show="app && !loading" ng-swipe-left="next()" ng-swipe-right="previous()" ng-swipe-disable-mouse>
     <div class="previous-app" ng-if="previous_app" ng-hide="slideOutLeft || slideOutRight">
-      <a ng-click="previous()" title="Previous App: {{previous_app.title}}" class="text-material-grey clickable">
+      <a ng-click="previous()" title="{{'Previous App:'|translate}} {{previous_app.title}}" class="text-material-grey clickable">
         <i class="fa fa-2x fa-chevron-left"></i>
       </a>
     </div>
 
     <div class="next-app" ng-if="next_app" ng-hide="slideOutLeft || slideOutRight">
-      <a ng-click="next()" title="Next App: {{next_app.title}}" class="text-material-grey clickable">
+      <a ng-click="next()" title="{{'Next App:'|translate}} {{next_app.title}}" class="text-material-grey clickable">
         <i class="fa fa-2x fa-chevron-right"></i>
       </a>
     </div>
@@ -47,7 +47,7 @@
                 <span ng-bind="app.company" title="Company"></span>
 
                 <br/>
-                <span ng-show="isFree(app.prices)" class="label label-primary">Free</span>
+                <span ng-show="isFree(app.prices)" class="label label-primary" translate translate-comment="No Cost">Free</span>
                 <span ng-show="!isFree(app.prices)" class="label label-success price" ng-repeat="(currency, value) in app.prices" ng-bind="app.prices|dollars:currency"></span>
 
                 <span class="pull-right visible-xs">
@@ -70,12 +70,12 @@
             <div class="row-content">
               <div class="list-group-item-text">
                 <a ng-href="scope://com.canonical.scopes.clickstore?q={{app.title}}" class="btn btn-sm" ng-class="{'btn-success': !app.webapp_inject, 'btn-warning': app.webapp_inject}" analytics-on analytics-event="Install" analytics-label="{{app.name}}">Install</a>
-                <!--<a ng-href="{{app.download}}" class="btn btn-primary btn-sm">Download</a>-->
-                <p class="small-note">
+                <p class="small-note" translate>
                   *Install will take you to the official appstore on an Ubuntu Touch device
                 </p>
-                <p class="small-note text-danger" ng-show="app.webapp_inject">
-                  *This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.
+                <p class="small-note text-danger" ng-show="app.webapp_inject" translate>
+                  *This webapp injects custom code into the website which can add
+                  extra features or be malicious. Only use this app if you trust the author.
                 </p>
               </div>
             </div>
@@ -94,35 +94,35 @@
               <p class="list-group-item-text external-links row">
                 <!-- The display block is to override the styles set by an adblocker. Some people actually want to be able to use an adblocker and still share to social media -->
                 <div class="col-sm-2 col-xs-4">
-                  <a ng-href="https://plus.google.com/share?url={{url}}app/{{app.name}}" class="text-material-red" title="Share on Google+" style="display:block !important;">
+                  <a ng-href="https://plus.google.com/share?url={{url}}app/{{app.name}}" class="text-material-red" title="{{'Share on Google+'|translate}}'" style="display:block !important;">
                     <i class="fa fa-gps fa-3x"></i>
                   </a>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                  <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}app/{{app.name}}" class="text-material-blue" title="Share on Facebook" style="display:block !important;">
+                  <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}app/{{app.name}}" class="text-material-blue" title="{{'Share on Facebook'|translate}}" style="display:block !important;">
                     <i class="fa fa-fs fa-3x"></i>
                   </a>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                  <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}&via=uappexplorer" class="text-material-lightblue" title="Share on Twitter" style="display:block !important;">
+                  <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}&via=uappexplorer" class="text-material-lightblue" title="{{'Share on Twitter'|translate}}" style="display:block !important;">
                     <i class="fa fa-ts fa-3x"></i>
                   </a>
                 </div>
                 <div class="clear-fix visible-xs"></div>
                 <div class="col-sm-2 col-xs-4">
-                  <a ng-href="https://www.reddit.com/submit?url={{url}}app/{{app.name}}" class="text-material-cyan" title="Share on Reddit" style="display:block !important;">
+                  <a ng-href="https://www.reddit.com/submit?url={{url}}app/{{app.name}}" class="text-material-cyan" title="{{'Share on Reddit'|translate}}" style="display:block !important;">
                     <i class="fa fa-rs fa-3x"></i>
                   </a>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                  <a class="text-material-grey caxton-button clickable" title="Send via Caxton" ng-click="caxton()">
+                  <a class="text-material-grey caxton-button clickable" title="{{'Send via Caxton'|translate}}" ng-click="caxton()">
                     <i class="fa fa-square fa-3x"></i>
-                    <img src="/img/caxton.svg" ng-show="!caxtonSent" title="Send via Caxton" />
-                    <i class="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="Sent via Caxton"></i>
+                    <img src="/img/caxton.svg" ng-show="!caxtonSent" title="{{'Send via Caxton'|translate}}" />
+                    <i class="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="{{'Sent via Caxton'|translate}}"></i>
                   </a>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                  <a class="text-material-lightgreen qr-button clickable" title="QR Code" ng-click="qrCode()">
+                  <a class="text-material-lightgreen qr-button clickable" title="{{'QR Code'|translate}}" ng-click="qrCode()">
                     <i class="fa fa-square fa-3x"></i>
                     <i class="fa fa-qrcode fa-2x fa-inverse"></i>
                   </a>
@@ -144,19 +144,19 @@
               <div class="row-content">
                 <div class="list-group-item-text">
                   <div ng-if="lists.length > 0">
-                    Add to list:
+                    <span translate>Add to list:</span>
                     <select class="form-control" ng-options="l._id as l.name for l in lists" ng-model="list" ng-change="addToList(list)">
-                      <option value="">- Choose a list -</option>
+                      <option value="" translate>- Choose a list -</option>
                     </select>
                   </div>
 
                   <div ng-if="lists.length == 0 && appLists.length == 0">
-                    No lists, <a href="/me">create one</a>!
+                    <a href="/me" translate>No lists, create one!</a>
                   </div>
 
                   <br/>
                   <p ng-if="appLists.length > 0">
-                    This app is on these lists:
+                    <span translate>This app is on these lists:</span>
                     <a class="label label-success list-label" ng-repeat="list in appLists" ng-href="/list/{{list._id}}" ng-bind="list.name"></a>
                   </p>
                 </div>
@@ -171,16 +171,16 @@
       <div class="col-md-6">
         <ul class="nav nav-pills">
           <li ng-class="{active: app_tab == 'desc'}" class="clickable">
-            <a ng-click="app_tab = 'desc'">Description</a>
+            <a ng-click="app_tab = 'desc'" translate translate-comment="App description">Description</a>
           </li>
           <li ng-class="{active: app_tab == 'change'}" class="clickable" ng-show="app.changelog">
-            <a ng-click="app_tab = 'change'">Changelog</a>
+            <a ng-click="app_tab = 'change'" translate translate-comment="App changelog">Changelog</a>
           </li>
           <li ng-class="{active: app_tab == 'info'}" class="clickable">
-            <a ng-click="app_tab = 'info'">Info</a>
+            <a ng-click="app_tab = 'info'" translate translate-comment="App info">Info</a>
           </li>
           <li ng-class="{active: app_tab == 'support'}" class="clickable">
-            <a ng-click="app_tab = 'support'">Support</a>
+            <a ng-click="app_tab = 'support'" translate translate-comment="App support links">Support</a>
           </li>
         </ul>
 
@@ -194,31 +194,31 @@
 
         <div class="tab-content" ng-show="app_tab == 'info'">
           <div class="well app-tab">
-            Version: <span ng-bind="app.version"></span>
+            <span translate>Version:</span> <span ng-bind="app.version"></span>
             <br/>
-            Updated: <span ng-bind="app.last_updated | date"></span>
+            <span translate>Updated:</span> <span ng-bind="app.last_updated | date"></span>
             <br/>
-            License: <span ng-bind="app.license"></span>
+            <span translate>License:</span> <span ng-bind="app.license"></span>
             <br/>
-            Architecture{{app.architecture.length > 1 ? 's' : ''}}: <span ng-bind="app.architecture.join(', ')"></span>
+            <span translate translate-comment="CPU architecture">Architecture:</span> <span ng-bind="app.architecture.join(', ')"></span>
           </div>
         </div>
 
         <div class="tab-content" ng-show="app_tab == 'support'">
           <div class="well app-tab">
             <span ng-show="app.support && app.support.indexOf('mailhide') > -1">
-              Support: <a ng-href="{{app.support}}" target="_blank" rel="nofollow" analytics-on analytics-event="Support" analytics-label="Email Support">Email Support</a>
+              <span translate>Support:</span> <a ng-href="{{app.support}}" target="_blank" rel="nofollow" analytics-on analytics-event="Support" analytics-label="Email Support">Email Support</a>
             </span>
             <span ng-show="app.support && app.support.indexOf('mailhide') == -1">
-              Support: <a ng-href="{{app.support}}" target="_blank" rel="nofollow" ng-bind="app.support" analytics-on analytics-event="Support" analytics-label="{{app.support}}"></a>
+              <span translate>Support:</span> <a ng-href="{{app.support}}" target="_blank" rel="nofollow" ng-bind="app.support" analytics-on analytics-event="Support" analytics-label="{{app.support}}"></a>
             </span>
             <span ng-show="app.website">
               <br/>
-              Website: <a ng-href="{{app.website}}" rel="nofollow" ng-bind="app.website" analytics-on analytics-event="Website" analytics-label="{{app.website}}"></a>
+              <span translate>Website:</span> <a ng-href="{{app.website}}" rel="nofollow" ng-bind="app.website" analytics-on analytics-event="Website" analytics-label="{{app.website}}"></a>
             </span>
             <span ng-show="app.terms">
               <br/>
-              Terms:
+              <span translate translate-comment="Terms and conditions">Terms:</span>
               <p ng-bind="app.terms"></p>
             </span>
           </div>
@@ -229,7 +229,7 @@
     <div ng-show="app.screenshots.length > 0 && app.screenshots[0] != ''">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h3>Screenshots</h3>
+          <h3 translate>Screenshots</h3>
         </div>
       </div>
       <div class="row" ng-swipe-left="stop($event)" ng-swipe-right="stop($event)">
@@ -247,7 +247,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <h3>
-            <a ui-sref="apps({q: 'author:' + app.author})">
+            <a ui-sref="apps({q: 'author:' + app.author})" translate>
               More Apps by {{app.author}}
             </a>
           </h3>
@@ -268,9 +268,7 @@
     <div ng-if="app.related_apps.length > 0">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h3>
-            Similar Apps
-          </h3>
+          <h3 translate>Similar Apps</h3>
         </div>
       </div>
 
@@ -287,14 +285,14 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <h3>User Reviews</h3>
+        <h3 translate>User Reviews</h3>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12 text-center" ng-if="app.loading_reviews">
         <i class="fa fa-spin fa-spinner fa-2x"></i>
-        Loading reviews...
+        <span translate>Loading reviews...</span>
       </div>
 
       <div class="col-md-12">
@@ -363,7 +361,7 @@
                 <p class="list-group-item-text review-text">
                   <span ng-bind="review.review_text"></span>
                   <br/>
-                  For version: <span ng-bind="review.version"></span>
+                  <span translate translate-comment="Comment below reviews">For version:</span> <span ng-bind="review.version"></span>
                 </p>
             </div>
           </div>
@@ -378,7 +376,7 @@
       </div>
 
       <div class="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && (!app.reviews || app.reviews.length == 0)">
-        <h4>No reviews yet!</h4>
+        <h4 translate>No reviews yet!</h4>
       </div>
     </div>
     <div class="row">
@@ -386,7 +384,7 @@
         <a ng-click="loadMoreReview(app)" ng-if="!app.loading_more_reviews" class="btn btn-info">Load more reviews</a>
         <span ng-if="app.loading_more_reviews">
           <i class="fa fa-spin fa-spinner"></i>
-          Loading more reviews...
+          <span translate>Loading more reviews...</span>
         </span>
       </div>
     </div>

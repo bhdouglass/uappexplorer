@@ -1,60 +1,59 @@
 <div class="modal-header">
-  <h3 class="modal-title">
-    {{list._id ? 'Edit List' : 'Create List'}}
-  </h3>
+  <h3 class="modal-title" ng-if="list._id" translate>Edit List</h3>
+  <h3 class="modal-title" ng-if="!list._id" translate>Create List</h3>
 </div>
 
 <div class="modal-body list-edit">
   <form class="form-horizontal" role="form">
     <div class="form-group">
-      <label for="name" class="col-sm-3 control-label">List Name:</label>
+      <label for="name" class="col-sm-3 control-label" translate>List Name:</label>
       <div class="col-sm-9">
         <input type="text" class="form-control" id="name" placeholder="Name" ng-model="list.name" />
       </div>
     </div>
 
     <div class="form-group">
-      <label for="name" class="col-sm-3 control-label">Sort Apps By:</label>
+      <label for="name" class="col-sm-3 control-label" translate>Sort Apps By:</label>
       <div class="col-sm-9">
         <select class="form-control" ng-options="s.value as s.label for s in sorts" ng-model="list.sort"></select>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="name" class="col-sm-3 control-label">Apps:</label>
+      <label for="name" class="col-sm-3 control-label" translate>Apps:</label>
       <div class="col-sm-9">
         <div ng-repeat="app in apps">
           <span ng-bind="app.title"></span>
           <a ng-click="removeApp(app.name)" class="clickable"><i class="fa fa-remove"></i></a>
         </div>
 
-        <div ng-show="appsError" class="text-center text-danger">
+        <div ng-show="appsError" class="text-center text-danger" translate>
           Could not retrieve app list at this time, please try again later.
         </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="name" class="col-sm-3 control-label">Add Apps:</label>
+      <label for="name" class="col-sm-3 control-label" translate>Add Apps:</label>
       <div class="col-sm-9">
         <div class="input-group search-box">
           <input type="text" class="form-control" ng-model="search" id="search" />
           <span class="input-group-addon">
-            <i class="fa fa-search" ng-click="search = ''" ng-class="{'fa-search': !search_hover, 'fa-times-circle-o': search_hover}" ng-mouseenter="search_hover = true" ng-mouseleave="search_hover = false" title="Clear search"></i>
+            <i class="fa fa-search" ng-click="search = ''" ng-class="{'fa-search': !search_hover, 'fa-times-circle-o': search_hover}" ng-mouseenter="search_hover = true" ng-mouseleave="search_hover = false" title="{{'Clear search'|translate}}"></i>
           </span>
         </div>
 
         <div class="row" ng-repeat="app in searchApps">
           <div class="col-md-12">
-            <app-view ng-model="app" ng-click="addApp(app);" link="false"></app-view>
+            <app-view ng-model="app" ng-click="addApp(app)" link="false"></app-view>
           </div>
         </div>
 
-        <div ng-show="searchApps.length === 0 && !searchError" class="text-center">
+        <div ng-show="searchApps.length === 0 && !searchError" class="text-center" translate>
           No apps found
         </div>
 
-        <div ng-show="searchError" class="text-center text-danger">
+        <div ng-show="searchError" class="text-center text-danger" translate>
           Could not retrieve search at this time, please try again later.
         </div>
       </div>
@@ -65,16 +64,16 @@
 <div class="modal-footer">
   <button class="btn btn-info" ng-click="$dismiss('close')">
     <i class="fa fa-close"></i>
-    Close
+    <span translate>Close</span>
   </button>
 
   <button class="btn btn-success" ng-click="save(list)" ng-if="list._id" ng-disabled="!list.name">
     <i class="fa fa-check"></i>
-    Save
+    <span translate>Save</span>
   </button>
 
   <button class="btn btn-success" ng-click="save(list)" ng-if="!list._id" ng-disabled="!list.name">
     <i class="fa fa-plus"></i>
-    Create
+    <span translate>Create</span>
   </button>
 </div>

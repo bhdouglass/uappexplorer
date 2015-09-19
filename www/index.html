@@ -66,7 +66,6 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-            <span class="sr-only">Toggle navigation</span>
             <i class="fa fa-ellipsis-v fa-inverse"></i>
           </button>
 
@@ -115,19 +114,19 @@
               <a ng-click="toggleSearch()" class="clickable"><i class="fa fa-search fa-inverse"></i></a>
             </li>
             <li>
-              <a ng-click="faq()" class="clickable">FAQ</a>
+              <a ng-click="faq()" class="clickable" translate>FAQ</a>
             </li>
             <li>
-              <a ng-click="donate()" class="clickable">Donate</a>
+              <a ng-click="donate()" class="clickable" translate>Donate</a>
             </li>
             <li ng-if="!loggedin" class="hidden-xs">
-              <a ng-click="login()" class="clickable">Log In</a>
+              <a ng-click="login()" class="clickable" translate>Log In</a>
             </li>
             <li ng-if="loggedin" class="hidden-xs">
-              <a href="/me" class="clickable">My Lists</a>
+              <a href="/me" class="clickable" translate>My Lists</a>
             </li>
             <li ng-if="loggedin">
-              <a ng-click="logout()" class="clickable">Log Out</a>
+              <a ng-click="logout()" class="clickable" translate>Log Out</a>
             </li>
           </ul>
         </div>
@@ -152,8 +151,9 @@
     <div class="container main">
       <div class="row" ng-hide="$state.current.name == 'me'">
         <div class="col-sm-12 text-center disclaimer">
-          This is an unofficial app viewer for Ubuntu Touch apps,
-          <a ng-click="faq()" class="clickable">learn more</a>.
+          <a ng-click="faq()" class="clickable" translate>
+            This is an unofficial app viewer for Ubuntu Touch apps.
+          </a>
         </div>
       </div>
 
@@ -161,17 +161,32 @@
 
       <div class="row text-center footer">
         <div class="col-sm-4">
-          <a href="https://uappexplorer.com/app/uappexplorer.bhdouglass"><i class="fa fa-mobile"></i> Webapp</a>
-          <a href="https://uappexplorer.com/app/uappexplorer-scope.bhdouglass"><i class="fa fa-mobile"></i> Scope</a>
-          <a href="https://uappexplorer.com/app/uappexplorer-donate.bhdouglass" class="hidden-xs"><i class="fa fa-mobile"></i> Donation Webapp</a>
+          <a href="https://uappexplorer.com/app/uappexplorer.bhdouglass">
+            <i class="fa fa-mobile"></i>
+            <span translate translate-comment="The uApp Explorer app download link">Web App</span>
+          </a>
+          <a href="https://uappexplorer.com/app/uappexplorer-scope.bhdouglass">
+            <i class="fa fa-mobile"></i>
+            <span translate translate-comment="The uApp Explorer scope download link">Scope</span>
+          </a>
+          <a href="https://uappexplorer.com/app/uappexplorer-donate.bhdouglass" class="hidden-xs">
+            <i class="fa fa-mobile"></i>
+            <span translate translate-comment="The uApp Explorer donation app download link">Donation Web App</span>
+          </a>
         </div>
         <div class="col-sm-4">
           <a href="https://twitter.com/uappexplorer" style="display:inline-block !important;"><i class="fa fa-t"></i> Twitter</a>
           <a href="https://plus.google.com/+Uappexplorer-ubuntu" style="display:inline-block !important;"><i class="fa fa-gp"></i> Google+</a>
         </div>
         <div class="col-sm-4">
-          <a href="http://feeds.feedburner.com/UbuntuTouchNewApps"><i class="fa fa-rss-square"></i> New Apps</a>
-          <a href="http://feeds.feedburner.com/uAppExplorerUpdatedApps"><i class="fa fa-rss-square"></i> Updated Apps</a>
+          <a href="http://feeds.feedburner.com/UbuntuTouchNewApps">
+            <i class="fa fa-rss-square"></i>
+            <span translate translate-comment="The new apps rss feed link">New Apps</span>
+          </a>
+          <a href="http://feeds.feedburner.com/uAppExplorerUpdatedApps">
+            <i class="fa fa-rss-square"></i>
+            <span translate translate-comment="The updated apps rss feed link">Updated Apps</span>
+          </a>
         </div>
       </div>
     </div>

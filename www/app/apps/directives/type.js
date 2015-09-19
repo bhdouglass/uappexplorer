@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').directive('type', function() {
+angular.module('appstore').directive('type', function(gettextCatalog) {
   return {
     restrict: 'E',
     scope: {
@@ -19,6 +19,13 @@ angular.module('appstore').directive('type', function() {
         scope: 'Scope',
         webapp: 'Web App',
         snappy: 'Snappy App',
+      };
+
+      $scope.typesTranslated = {
+        application: gettextCatalog.getString('App'),
+        scope: gettextCatalog.getString('Scope'),
+        webapp: gettextCatalog.getString('Web App'),
+        snappy: gettextCatalog.getString('Snappy App'),
       };
     }
   };

@@ -7,8 +7,10 @@
 
   <div class="row list-header" ng-show="list">
     <div class="col-md-8">
-      <h1 ng-show="list.name">User List: {{list.name}}</h1>
-      <span ng-show="list.user_name">By: {{list.user_name}}</span>
+      <h1 ng-show="list.name">
+        <span translate>User List:</span> {{list.name}}
+      </h1>
+      <span ng-show="list.user_name" translate translate-comment="User list author">By: {{list.user_name}}</span>
     </div>
 
     <div class="col-md-4">
@@ -17,11 +19,11 @@
           <div class="btn-toolbar pull-right">
             <div class="btn-group">
               <a class="btn clickable" ng-class="{'bold btn-primary view-button': view == 'grid'}" ng-click="changeView('grid')" ng-disabled="view == 'grid'">
-                <span class="hidden-xs">Grid</span>
+                <span class="hidden-xs" translate translate-comment="Grid view">Grid</span>
                 <i class="fa fa-th-large"></i>
               </a>
               <a class="btn clickable" ng-class="{'bold btn-primary view-button': view == 'list'}" ng-click="changeView('list')" ng-disabled="view == 'list'">
-                <span class="hidden-xs">List</span>
+                <span class="hidden-xs" translate translate-comment="List view">List</span>
                 <i class="fa fa-list"></i>
               </a>
             </div>
@@ -31,34 +33,34 @@
 
       <div class="external-links row text-center">
         <div class="col-sm-2 col-xs-2">
-          <a ng-href="https://plus.google.com/share?url={{url}}list/{{list._id}}" class="text-material-red" title="Share on Google+" style="display:block !important;">
+          <a ng-href="https://plus.google.com/share?url={{url}}list/{{list._id}}" class="text-material-red" title="{{'Share on Google+'|translate}}'" style="display:block !important;">
             <i class="fa fa-gps fa-3x"></i>
           </a>
         </div>
         <div class="col-sm-2 col-xs-2">
-          <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}v" class="text-material-blue" title="Share on Facebook" style="display:block !important;">
+          <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}v" class="text-material-blue" title="{{'Share on Facebook'|translate}}" style="display:block !important;">
             <i class="fa fa-fs fa-3x"></i>
           </a>
         </div>
         <div class="col-sm-2 col-xs-2">
-          <a ng-href="https://twitter.com/intent/tweet?text={{list.name}}&url={{url}}list/{{list._id}}&via=uappexplorer" class="text-material-lightblue" title="Share on Twitter" style="display:block !important;">
+          <a ng-href="https://twitter.com/intent/tweet?text={{list.name}}&url={{url}}list/{{list._id}}&via=uappexplorer" class="text-material-lightblue" title="{{'Share on Twitter'|translate}}" style="display:block !important;">
             <i class="fa fa-ts fa-3x"></i>
           </a>
         </div>
         <div class="col-sm-2 col-xs-2">
-          <a ng-href="https://www.reddit.com/submit?url={{url}}list/{{list._id}}" class="text-material-cyan" title="Share on Reddit" style="display:block !important;">
+          <a ng-href="https://www.reddit.com/submit?url={{url}}list/{{list._id}}" class="text-material-cyan" title="{{'Share on Reddit'|translate}}" style="display:block !important;">
             <i class="fa fa-rs fa-3x"></i>
           </a>
         </div>
         <div class="col-sm-2 col-xs-2">
-          <a class="text-material-grey caxton-button clickable" title="Send via Caxton" ng-click="caxton()">
+          <a class="text-material-grey caxton-button clickable" title="{{'Send via Caxton'|translate}}" ng-click="caxton()">
             <i class="fa fa-square fa-3x"></i>
-            <img src="/img/caxton.svg" ng-show="!caxtonSent" title="Send via Caxton" />
-            <i class="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="Sent via Caxton"></i>
+            <img src="/img/caxton.svg" ng-show="!caxtonSent" title="{{'Send via Caxton'|translate}}" />
+            <i class="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="{{'Sent via Caxton'|translate}}"></i>
           </a>
         </div>
         <div class="col-sm-2 col-xs-2">
-          <a class="text-material-lightgreen qr-button clickable" title="QR Code" ng-click="qrCode()">
+          <a class="text-material-lightgreen qr-button clickable" title="{{'QR Code'|translate}}" ng-click="qrCode()">
             <i class="fa fa-square fa-3x"></i>
             <i class="fa fa-qrcode fa-2x fa-inverse"></i>
           </a>
@@ -68,12 +70,12 @@
   </div>
 
   <div class="row app-list" ng-class="{'grid-view': view == 'grid', 'list-view': view != 'grid'}" ng-show="list">
-    <h3 ng-if="apps.length == 0" class="text-center">This list is empty!</h3>
+    <h3 ng-if="apps.length == 0" class="text-center" translate>This list is empty!</h3>
 
     <div ng-repeat="app in apps">
       <div ng-class="{'col-md-4 col-sm-6 col-xs-6 grid-view': view == 'grid', 'list-view col-sm-12': view != 'grid'}">
         <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>
-        <a ng-if="editable" ng-click="removeApp(app.name)" class="clickable top-right" title="Remove '{{app.title}}' for your list"><i class="fa fa-close"></i></a>
+        <a ng-if="editable" ng-click="removeApp(app.name)" class="clickable top-right" title="{{'Remove this app from your list'|translate}}"><i class="fa fa-close"></i></a>
       </div>
 
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>

@@ -17,6 +17,7 @@ var rename = require('gulp-rename');
 var push = require('git-push');
 var del = require('del');
 var merge = require('merge-stream');
+var gettext = require('gulp-angular-gettext');
 
 var paths = {
   front_js: ['www/app/**/*.js', '!www/app/load.js', '!www/bower_components/**/*'],
@@ -41,6 +42,7 @@ var paths = {
     'www/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
     'www/bower_components/angulartics/dist/angulartics.min.js',
     'www/bower_components/angulartics/dist/angulartics-ga.min.js',
+    'www/bower_components/angular-gettext/dist/angular-gettext.min.js',
     'www/bower_components/lodash/lodash.min.js',
     'www/bower_components/angular-cookie/angular-cookie.min.js',
     'www/bower_components/qrcode-generator/js/qrcode.js',
@@ -178,6 +180,20 @@ gulp.task('build-back', function() {
       .pipe(rename('.gitignore'))
       .pipe(gulp.dest('dist'))
   );
+});
+
+gulp.task('pot', function () {
+  return gulp.src(paths.front_js.concat(paths.html).concat(paths.partial_html))
+    .pipe(gettext.extract('template.pot', {}))
+    .pipe(gulp.dest('po/'));
+});
+
+gulp.task('translations', function () {
+  return gulp.src('po/**/*.po')
+    .pipe(gettext.compile({
+      format: 'json'
+    }))
+    .pipe(gulp.dest('dist/translations/'));
 });
 
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html', 'build-back']);

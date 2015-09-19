@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, $window, $q, api, utils) {
+angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, $timeout, $state, $stateParams, $location, $window, $q, gettextCatalog, api, utils) {
   $rootScope.app = null;
   $rootScope.back = {};
   $scope.apps = [];
@@ -11,16 +11,16 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.can_load = false;
   $scope.categories = [];
   $scope.category = {
-    name: 'All Apps',
+    name: gettextCatalog.getString('All Apps'),
     internal_name: 'all',
   };
   $scope.defaultSort = '-published_date';
   $scope.sort = $scope.defaultSort;
   $scope.defaultView = 'grid';
   $scope.view = $scope.defaultView;
-  $scope.frameworks = ['All'];
+  $scope.frameworks = [gettextCatalog.getString('All')]; //TODO translate without potentially breaking the code
   $scope.more_filters = false;
-  $scope.defaultArchitecture = 'Any';
+  $scope.defaultArchitecture = gettextCatalog.getString('Any'); //TODO translate without potentially breaking the code
   $scope.architecture = $scope.defaultArchitecture;
   $scope.defaultFramework = 'All';
   $scope.framework = $scope.defaultFramework;
@@ -29,26 +29,34 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.license = null;
   $scope.appIcon = utils.appIcon;
 
-  $scope.architectures = ['Any', 'All', 'armhf', 'i386', 'x86_64'];
+  $scope.architectures = [
+    ///CPU architecture
+    gettextCatalog.getString('Any'),
+    ///CPU architecture
+    gettextCatalog.getString('All'),
+    'armhf',
+    'i386',
+    'x86_64'
+  ];
 
   $scope.sorts = utils.sorts;
 
   $scope.typeList = [
     {
-      label: 'All Types',
+      label: gettextCatalog.getString('All Types'),
       value: 'all'
     },
     {
-      label: 'Apps',
+      label: gettextCatalog.getString('Apps'),
       value: 'application'
     }, {
-      label: 'Web Apps',
+      label: gettextCatalog.getString('Web Apps'),
       value: 'webapp'
     }, {
-      label: 'Scopes',
+      label: gettextCatalog.getString('Scopes'),
       value: 'scope'
     }, {
-      label: 'Snappy Apps',
+      label: gettextCatalog.getString('Snappy Apps'),
       value: 'snappy'
     }
   ];
@@ -84,7 +92,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       function(err) {
         if (err.status > 0) { //0 means aborted
           console.error(err);
-          $rootScope.setError('Could not download app list, click to retry', fetchApps);
+          $rootScope.setError(gettextCatalog.getString('Could not download app list, click to retry'), fetchApps);
         }
       })
       .finally(function() {
@@ -101,7 +109,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       locationChange();
     }, function(err) {
       console.error(err);
-      $rootScope.errorCallback('Could not download category list, click to retry', fetchCategories);
+      $rootScope.errorCallback(gettextCatalog.getString('Could not download category list, click to retry'), fetchCategories);
     });
   }
   fetchCategories();
@@ -114,7 +122,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       locationChange();
     }, function(err) {
       console.error(err);
-      $rootScope.errorCallback('Could not download framework list, click to retry', fetchFrameworks);
+      $rootScope.errorCallback(gettextCatalog.getString('Could not download framework list, click to retry'), fetchFrameworks);
     });
   }
   fetchFrameworks();
@@ -126,7 +134,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
       locationChange();
     }, function(err) {
       console.error(err);
-      $rootScope.errorCallback('Could not download license list, click to retry', fetchLicenses);
+      $rootScope.errorCallback(gettextCatalog.getString('Could not download license list, click to retry'), fetchLicenses);
     });
   }
   fetchLicenses();

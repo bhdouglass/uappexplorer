@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').factory('utils', function($filter, $timeout, $location) {
+angular.module('appstore').factory('utils', function($filter, $timeout, $location, gettextCatalog) {
   var url = $location.protocol() + '://' + $location.host() + '/';
   if ($location.port() != 80 && $location.port() != 443) {
     url = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/';
@@ -63,44 +63,44 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
 
     sorts: [
       {
-        label: 'Most Relevant',
+        label: gettextCatalog.getString('Most Relevant'),
         value: 'relevance',
       },
       {
-        label: 'Title A-Z',
+        label: gettextCatalog.getString('Title A-Z'),
         value: 'title'
       }, {
-        label: 'Title Z-A',
+        label: gettextCatalog.getString('Title Z-A'),
         value: '-title'
       }, {
-        label: 'Newest ',
+        label: gettextCatalog.getString('Newest'),
         value: '-published_date'
       }, {
-        label: 'Oldest',
+        label: gettextCatalog.getString('Oldest'),
         value: 'published_date'
       }, {
-        label: 'Latest Update',
+        label: gettextCatalog.getString('Latest Update'),
         value: '-last_updated'
       }, {
-        label: 'Oldest Update',
+        label: gettextCatalog.getString('Oldest Update'),
         value: 'last_updated'
       }, {
-        label: 'Highest Heart Rating',
+        label: gettextCatalog.getString('Highest Heart Rating'),
         value: '-points'
       }, {
-        label: 'Lowest Heart Rating',
+        label: gettextCatalog.getString('Lowest Heart Rating'),
         value: 'points'
       }, {
-        label: 'Highest Star Rating',
+        label: gettextCatalog.getString('Highest Star Rating'),
         value: '-bayesian_average'
       }, {
-        label: 'Lowest Star Rating',
+        label: gettextCatalog.getString('Lowest Star Rating'),
         value: 'bayesian_average'
       }, {
-        label: 'Free',
+        label: gettextCatalog.getString('Free'),
         value: 'prices.USD'
       }, {
-        label: 'Most Expensive (USD)',
+        label: gettextCatalog.getString('Most Expensive (USD)'),
         value: '-prices.USD'
       },
     ]
