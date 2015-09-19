@@ -45,6 +45,7 @@ var propertyMap = {
   version:        'version',
   videos:         'video_urls',
   website:        'website',
+  translations:   'translations',
 };
 
 /*function cloudinaryUpload(pkg, data) {

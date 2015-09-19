@@ -41,7 +41,7 @@ var packageSchema = mongoose.Schema({
   videos: [String],
   webapp_inject: Boolean,
   website: String,
-  //TODO handle translations
+  translations: {},
 });
 
 packageSchema.index({

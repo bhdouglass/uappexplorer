@@ -61,6 +61,42 @@ function generateNewFeed(callback) {
   });
 }
 
+function generateNewFeed2(callback) {
+  var feed = new rss({
+    title:       'uApp Explorer New Apps',
+    description: 'New apps in uApp Explorer',
+    feed_url:    config.server.host + '/api/rss/new-apps2.xml',
+    site_url:    config.server.host,
+    image_url:   config.server.host + '/img/app-logo.png',
+    ttl:         240 //4 hours
+  });
+
+  var query = db.Package.find();
+  query.limit(10);
+  query.sort('-published_date');
+  query.exec(function(err, pkgs) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      _.forEach(pkgs, function(pkg) {
+        feed.item({
+          title:           'New ' + type(pkg.types) + ': ' + pkg.title + ' - ' + pkg.tagline,
+          url:             config.server.host + '/app/' + pkg.name,
+          description:     '<a href="' + config.server.host + '/app/' + pkg.name +
+                           '"><img src="' + config.server.host + '/api/icon/' +
+                           pkg.name + '.png" /></a><br/>' + pkg.description,
+          author:          pkg.author,
+          date:            pkg.last_updated,
+          custom_elements: [{tagline: pkg.tagline}],
+        });
+      });
+
+      callback(null, feed.xml({indent: true}));
+    }
+  });
+}
+
 function generateUpdatesFeed(callback) {
   var feed = new rss({
     title:       'uApp Explorer Updated Apps',
@@ -102,6 +138,18 @@ function generateUpdatesFeed(callback) {
 function setup(app, success, error) {
   app.get('/api/rss/new-apps.xml', function(req, res) {
     generateNewFeed(function(err, f) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        res.header('Content-Type', 'text/xml');
+        res.send(f);
+      }
+    });
+  });
+
+  app.get('/api/rss/new-apps2.xml', function(req, res) {
+    generateNewFeed2(function(err, f) {
       if (err) {
         error(res, err);
       }

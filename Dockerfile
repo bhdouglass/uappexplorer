@@ -1,12 +1,11 @@
-FROM node:0.10
+FROM ubuntu:trusty
 
-#Install needed packages
-RUN apt-get update --fix-missing
-RUN apt-get install -y apt-utils openssh-server sudo curl wget nfs-common g++ fontconfig mongodb
-#Cleanup to reduce image size
-RUN apt-get clean
+RUN apt-get update --fix-missing && \
+    apt-get install -y nodejs npm curl wget g++ mongodb && \
+    apt-get clean
 
-#Setup app
+RUN ln -s `which nodejs` /usr/bin/node
+
 RUN mkdir -p /srv/uappexplorer
 WORKDIR /srv/uappexplorer
 RUN npm install supervisor -g
