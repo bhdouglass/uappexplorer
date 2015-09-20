@@ -67,12 +67,12 @@
 
               <div class="form-group col-md-4">
                 <label for="architecture" class="control-label" translate translate-comment="CPU architecture">Architecture:</label>
-                <select id="architecture" class="form-control" ng-options="a for a in architectures" ng-model="architecture" ng-change="changeArchitecture(architecture)"></select>
+                <select id="architecture" class="form-control" ng-options="a.value as a.label for a in architectures" ng-model="architecture" ng-change="changeArchitecture(architecture)"></select>
               </div>
 
               <div class="form-group col-md-4">
                 <label for="framework" class="control-label" translate translate-comment="Ubuntu sdk framework">Framework:</label>
-                <select id="framework" class="form-control" ng-options="f for f in frameworks" ng-model="framework" ng-change="changeFramework(framework)"></select>
+                <select id="framework" class="form-control" ng-options="f.value as f.label for f in frameworks" ng-model="framework" ng-change="changeFramework(framework)"></select>
               </div>
             </fieldset>
           </form>

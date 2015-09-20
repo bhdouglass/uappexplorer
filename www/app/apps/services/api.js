@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').factory('api', function($q, $http) {
+angular.module('appstore').factory('api', function($q, $http, gettextCatalog) {
   var last_page = {
     query: {},
     skip: 0,
@@ -172,7 +172,12 @@ angular.module('appstore').factory('api', function($q, $http) {
     //TODO cache this in local storage
     categories: function() {
       return $http.get('/api/categories').then(function(res) {
-        var categories = [{name: 'All Apps', internal_name: 'all'}];
+        var categories = [
+          {
+            name: gettextCatalog.getString('All Apps'),
+            internal_name: 'all'
+          }
+        ];
         _.forEach(res.data.data, function(category) {
           categories.push(category);
         });
@@ -184,9 +189,17 @@ angular.module('appstore').factory('api', function($q, $http) {
     //TODO cache this in local storage
     frameworks: function() {
       return $http.get('/api/frameworks').then(function(res) {
-        var frameworks = ['All'];
+        var frameworks = [
+          {
+            label: gettextCatalog.getString('All'),
+            value: 'All',
+          }
+        ];
         _.forEach(res.data.data, function(framework) {
-          frameworks.push(framework);
+          frameworks.push({
+            label: framework,
+            value: framework,
+          });
         });
 
         return frameworks;

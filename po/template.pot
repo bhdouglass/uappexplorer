@@ -64,21 +64,22 @@ msgstr ""
 msgid "Added this app to your list"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:21
-#: apps/controllers/appsCtrl.js:36
+#: apps/controllers/appsCtrl.js:23
+#: apps/controllers/appsCtrl.js:44
+#: apps/services/api.js:194
 msgid "All"
 msgstr ""
 
 #: apps/controllers/appsCtrl.js:14
+#: apps/services/api.js:177
 msgid "All Apps"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:46
+#: apps/controllers/appsCtrl.js:62
 msgid "All Types"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:23
-#: apps/controllers/appsCtrl.js:34
+#: apps/controllers/appsCtrl.js:40
 msgid "Any"
 msgstr ""
 
@@ -90,7 +91,7 @@ msgstr ""
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:50
+#: apps/controllers/appsCtrl.js:65
 #: main/partials/main.html:22
 msgid "Apps"
 msgstr ""
@@ -199,19 +200,19 @@ msgstr ""
 msgid "Could not download app data, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:95
+#: apps/controllers/appsCtrl.js:110
 msgid "Could not download app list, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:112
+#: apps/controllers/appsCtrl.js:127
 msgid "Could not download category list, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:125
+#: apps/controllers/appsCtrl.js:140
 msgid "Could not download framework list, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:137
+#: apps/controllers/appsCtrl.js:152
 msgid "Could not download license list, click to retry"
 msgstr ""
 
@@ -574,7 +575,7 @@ msgstr ""
 msgid "Scope"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:56
+#: apps/controllers/appsCtrl.js:71
 #: main/partials/main.html:94
 msgid "Scopes"
 msgstr ""
@@ -627,7 +628,7 @@ msgstr ""
 msgid "Snappy App"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:59
+#: apps/controllers/appsCtrl.js:74
 msgid "Snappy Apps"
 msgstr ""
 
@@ -761,7 +762,7 @@ msgstr ""
 msgid "Web App"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:53
+#: apps/controllers/appsCtrl.js:68
 #: main/partials/main.html:46
 msgid "Web Apps"
 msgstr ""

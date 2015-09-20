@@ -18,9 +18,14 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.sort = $scope.defaultSort;
   $scope.defaultView = 'grid';
   $scope.view = $scope.defaultView;
-  $scope.frameworks = [gettextCatalog.getString('All')]; //TODO translate without potentially breaking the code
+  $scope.frameworks = [
+    {
+      label: gettextCatalog.getString('All'),
+      value: 'All',
+    }
+  ];
   $scope.more_filters = false;
-  $scope.defaultArchitecture = gettextCatalog.getString('Any'); //TODO translate without potentially breaking the code
+  $scope.defaultArchitecture = 'Any';
   $scope.architecture = $scope.defaultArchitecture;
   $scope.defaultFramework = 'All';
   $scope.framework = $scope.defaultFramework;
@@ -30,13 +35,24 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.appIcon = utils.appIcon;
 
   $scope.architectures = [
-    ///CPU architecture
-    gettextCatalog.getString('Any'),
-    ///CPU architecture
-    gettextCatalog.getString('All'),
-    'armhf',
-    'i386',
-    'x86_64'
+    {
+      ///CPU architecture
+      label: gettextCatalog.getString('Any'),
+      value: 'Any',
+    }, {
+      ///CPU architecture
+      label: gettextCatalog.getString('All'),
+      value: 'All',
+    }, {
+      label: 'armhf',
+      value: 'armhf',
+    }, {
+      label: 'i386',
+      value: 'i386',
+    }, {
+      label: 'x86_64',
+      value: 'x86_64',
+    }
   ];
 
   $scope.sorts = utils.sorts;
@@ -45,8 +61,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     {
       label: gettextCatalog.getString('All Types'),
       value: 'all'
-    },
-    {
+    }, {
       label: gettextCatalog.getString('Apps'),
       value: 'application'
     }, {
@@ -117,7 +132,7 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   function fetchFrameworks() {
     api.frameworks().then(function(data) {
       $scope.frameworks = data;
-      $scope.framework = $scope.frameworks[0];
+      $scope.framework = $scope.frameworks[0].value;
 
       locationChange();
     }, function(err) {
