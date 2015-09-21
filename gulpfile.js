@@ -184,7 +184,7 @@ gulp.task('build-back', function() {
 
 gulp.task('pot', function () {
   return gulp.src(paths.front_js.concat(paths.html).concat(paths.partial_html))
-    .pipe(gettext.extract('template.pot', {}))
+    .pipe(gettext.extract('uappexplorer.pot', {}))
     .pipe(gulp.dest('po/'));
 });
 
