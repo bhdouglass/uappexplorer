@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "web" do |web|
     web.vm.provider 'docker' do |d|
-      d.build_dir = '.'
+      d.build_dir = './docker'
       d.name = 'appstore_web'
       d.ports = ['8080:8080', '3000:3000']
 

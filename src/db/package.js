@@ -31,6 +31,7 @@ var packageSchema = mongoose.Schema({
   status: String,
   support: String,
   tagline: String,
+  takedown: Boolean,
   terms: String,
   title: String,
   total_rating: Number,

@@ -1,3 +1,4 @@
+var takedowns = require('../server/json/takedowns.json');
 var packageParser = require('./packageParser');
 var config = require('../config');
 var utils = require('../utils');
@@ -260,6 +261,10 @@ function parsePackage(name, callback) {
           pkg = map(pkg, data);
           pkg.url = utils.fixUrl(data._links.self.href);
           pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-');
+
+          if (takedowns.apps.indexOf(pkg.name) > -1) {
+            pkg.takedown = true;
+          }
 
           pkg.save(function(err) {
             if (err) {

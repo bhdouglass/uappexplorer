@@ -83,6 +83,16 @@ msgstr ""
 msgid "Any"
 msgstr ""
 
+#: main/partials/faq.html:70
+msgid ""
+"Any requests to remove copyright or trademark infringing content should be\n"
+"    taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the app's\n"
+"    author (an author usually has a method of contact listed under the \"Support\"\n"
+"    tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
+"    and does not host any apps. uApp Explorer only displays publically available\n"
+"    information about the official Ubuntu Touch appstore."
+msgstr ""
+
 #: apps/directives/type.js:25
 msgid "App"
 msgstr ""
@@ -169,7 +179,7 @@ msgstr ""
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:98
+#: main/partials/faq.html:108
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr ""
@@ -383,7 +393,7 @@ msgstr ""
 msgid "Highest Star Rating"
 msgstr ""
 
-#: main/partials/faq.html:77
+#: main/partials/faq.html:87
 msgid "How can I help improve this site?"
 msgstr ""
 
@@ -395,19 +405,19 @@ msgstr ""
 msgid "I just published my app, why don't I see it?"
 msgstr ""
 
-#: main/partials/faq.html:79
+#: main/partials/faq.html:89
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 
-#: main/partials/faq.html:83
+#: main/partials/faq.html:93
 msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
-#: main/partials/faq.html:91
+#: main/partials/faq.html:101
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
-#: main/partials/faq.html:87
+#: main/partials/faq.html:97
 msgid "If you would like to contribute monetarily, there are multiple options for donating."
 msgstr ""
 
@@ -715,7 +725,7 @@ msgid ""
 "      taken to the official appstore on your device where you can install the app."
 msgstr ""
 
-#: main/partials/faq.html:70
+#: main/partials/faq.html:80
 msgid ""
 "To report a problem or request a new feature visit the issues page for\n"
 "    this site on\n"
@@ -780,6 +790,10 @@ msgstr ""
 msgid "Welcome to uApp Explorer!"
 msgstr ""
 
+#: main/partials/faq.html:69
+msgid "What do I do if I find copyright or trademark infringing content?"
+msgstr ""
+
 #: main/partials/faq.html:42
 msgid "What is the heart rating?"
 msgstr ""
@@ -792,7 +806,7 @@ msgstr ""
 msgid "What is this site?"
 msgstr ""
 
-#: main/partials/faq.html:69
+#: main/partials/faq.html:79
 msgid "Where can I report a problem or request a new feature?"
 msgstr ""
 

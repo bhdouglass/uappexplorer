@@ -81,6 +81,7 @@ function setup(app, success, error) {
   function appsFromMongo(findQuery, req, res) {
     var regxp = null;
 
+    findQuery.takedown = {'$ne': true};
     var countQuery = db.Package.count(findQuery);
     if (req.query.search) {
       if (req.query.search.indexOf('author:') === 0) {
@@ -214,13 +215,19 @@ function setup(app, success, error) {
       }
       else {
         var pkgs = [];
+        var count = response.hits.total;
         response.hits.hits.forEach(function(hit) {
           var pkg = hit._source;
-          if (req.query.mini == 'true') {
-            pkgs.push(miniPkg(pkg));
+          if (pkg.takedown) {
+            count--;
           }
           else {
-            pkgs.push(pkg);
+            if (req.query.mini == 'true') {
+              pkgs.push(miniPkg(pkg));
+            }
+            else {
+              pkgs.push(pkg);
+            }
           }
         });
 
@@ -336,7 +343,7 @@ function setup(app, success, error) {
   });
 
   app.get('/api/apps/:name', function(req, res) {
-    db.Package.findOne({name: req.params.name}).select('-reviews').exec(function(err, pkg) {
+    db.Package.findOne({name: req.params.name, takedown: {'$ne': true}}).select('-reviews').exec(function(err, pkg) {
       if (err) {
         error(res, err);
       }
