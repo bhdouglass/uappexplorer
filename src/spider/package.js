@@ -122,6 +122,9 @@ function map(pkg, data) {
       pkg.type = 'snappy';
     }
   }
+  else if (pkg.type == 'oem') {
+    pkg.type = 'snappy';
+  }
 
   if (pkg.types.length === 0) {
     pkg.types = [pkg.type];
