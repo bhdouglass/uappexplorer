@@ -12,16 +12,17 @@ var elasticsearch = require('elasticsearch');
 
 function miniPkg(pkg) {
   return {
-    name: pkg.name,
-    cloudinary_url: pkg.cloudinary_url,
-    title: pkg.title,
-    types: pkg.types,
     bayesian_average: pkg.bayesian_average,
+    cloudinary_url: pkg.cloudinary_url,
+    icon_hash: pkg.icon_hash,
+    monthly_popularity: pkg.monthly_popularity,
+    name: pkg.name,
+    points: pkg.points,
     prices: pkg.prices,
     short_description: pkg.tagline,
     tagline: pkg.tagline,
-    points: pkg.points,
-    icon_hash: pkg.icon_hash,
+    title: pkg.title,
+    types: pkg.types,
   };
 }
 

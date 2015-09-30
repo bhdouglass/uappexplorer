@@ -6,7 +6,8 @@ angular.module('appstore').directive('appView', function(utils, $state) {
     scope: {
       app: '=ngModel',
       showDescription: '@',
-      link: '@'
+      link: '@',
+      showPopularity: '@',
     },
     replace: true,
     templateUrl: '/app/apps/partials/appView.html',

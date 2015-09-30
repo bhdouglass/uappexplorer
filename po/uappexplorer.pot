@@ -83,13 +83,13 @@ msgstr ""
 msgid "Any"
 msgstr ""
 
-#: main/partials/faq.html:70
+#: main/partials/faq.html:79
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be\n"
 "    taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the app's\n"
 "    author (an author usually has a method of contact listed under the \"Support\"\n"
 "    tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
-"    and does not host any apps. uApp Explorer only displays publically available\n"
+"    and does not host any apps. uApp Explorer only displays publicly available\n"
 "    information about the official Ubuntu Touch appstore."
 msgstr ""
 
@@ -179,7 +179,7 @@ msgstr ""
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:108
+#: main/partials/faq.html:118
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr ""
@@ -356,7 +356,7 @@ msgstr ""
 
 #. No Cost
 #: apps/partials/app.html:50
-#: main/services/utils.js:100
+#: main/services/utils.js:106
 msgid "Free"
 msgstr ""
 
@@ -378,11 +378,15 @@ msgstr ""
 msgid "Grid"
 msgstr ""
 
+#: apps/partials/appView.html:23
+msgid "Heart Rating"
+msgstr ""
+
 #: main/partials/faq.html:49
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is\n"
-"      1 heart point, 4 stars = 0.5 hears, 3 stars = 0 hears, 2 stars = -0.5 hears,\n"
-"      and 1 star = -1 hears."
+"      1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 hearts,\n"
+"      and 1 star = -1 hearts."
 msgstr ""
 
 #: main/services/utils.js:88
@@ -393,7 +397,7 @@ msgstr ""
 msgid "Highest Star Rating"
 msgstr ""
 
-#: main/partials/faq.html:87
+#: main/partials/faq.html:97
 msgid "How can I help improve this site?"
 msgstr ""
 
@@ -402,22 +406,26 @@ msgid "How do I install apps?"
 msgstr ""
 
 #: main/partials/faq.html:60
+msgid "How is the popularity determined?"
+msgstr ""
+
+#: main/partials/faq.html:69
 msgid "I just published my app, why don't I see it?"
 msgstr ""
 
-#: main/partials/faq.html:89
+#: main/partials/faq.html:99
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 
-#: main/partials/faq.html:93
+#: main/partials/faq.html:103
 msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
-#: main/partials/faq.html:101
+#: main/partials/faq.html:111
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
-#: main/partials/faq.html:97
+#: main/partials/faq.html:107
 msgid "If you would like to contribute monetarily, there are multiple options for donating."
 msgstr ""
 
@@ -432,6 +440,10 @@ msgstr ""
 
 #: main/services/utils.js:82
 msgid "Latest Update"
+msgstr ""
+
+#: main/services/utils.js:103
+msgid "Least Popular (This Month)"
 msgstr ""
 
 #: apps/partials/app.html:201
@@ -482,12 +494,20 @@ msgstr ""
 msgid "Missing an app?"
 msgstr ""
 
+#: apps/partials/appView.html:28
+msgid "Monthly Popularity"
+msgstr ""
+
 #: apps/partials/app.html:250
 msgid "More Apps by {{app.author}}"
 msgstr ""
 
-#: main/services/utils.js:103
+#: main/services/utils.js:109
 msgid "Most Expensive (USD)"
+msgstr ""
+
+#: main/services/utils.js:100
+msgid "Most Popular (This Month)"
 msgstr ""
 
 #: main/services/utils.js:66
@@ -505,7 +525,7 @@ msgstr ""
 msgid "New Apps"
 msgstr ""
 
-#: main/partials/faq.html:62
+#: main/partials/faq.html:71
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either\n"
 "      wait until the new apps are fetched or use\n"
@@ -555,6 +575,12 @@ msgstr ""
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
+msgstr ""
+
+#: main/partials/faq.html:62
+msgid ""
+"Popularity is based on the number of 4 and 5 star reviews given to and\n"
+"      app during the current month."
 msgstr ""
 
 #: apps/partials/app.html:10
@@ -725,11 +751,10 @@ msgid ""
 "      taken to the official appstore on your device where you can install the app."
 msgstr ""
 
-#: main/partials/faq.html:80
+#: main/partials/faq.html:90
 msgid ""
 "To report a problem or request a new feature visit the issues page for\n"
-"    this site on\n"
-"    <a href=\"https://github.com/bhdouglass/uappexplorer/issues\">GitHub</a>."
+"      this site on GitHub."
 msgstr ""
 
 #: main/partials/main.html:136
@@ -790,7 +815,7 @@ msgstr ""
 msgid "Welcome to uApp Explorer!"
 msgstr ""
 
-#: main/partials/faq.html:69
+#: main/partials/faq.html:78
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 
@@ -806,7 +831,7 @@ msgstr ""
 msgid "What is this site?"
 msgstr ""
 
-#: main/partials/faq.html:79
+#: main/partials/faq.html:88
 msgid "Where can I report a problem or request a new feature?"
 msgstr ""
 

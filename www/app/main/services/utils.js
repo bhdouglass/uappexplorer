@@ -97,6 +97,12 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
         label: gettextCatalog.getString('Lowest Star Rating'),
         value: 'bayesian_average'
       }, {
+        label: gettextCatalog.getString('Most Popular (This Month)'),
+        value: '-monthly_popularity'
+      }, {
+        label: gettextCatalog.getString('Least Popular (This Month)'),
+        value: 'monthly_popularity'
+      }, {
         label: gettextCatalog.getString('Free'),
         value: 'prices.USD'
       }, {

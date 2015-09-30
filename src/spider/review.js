@@ -5,6 +5,7 @@ var logger = require('../logger');
 var request = require('request');
 var _ = require('lodash');
 var async = require('async');
+var moment = require('moment');
 
 //Maths from:
 //http://fulmicoton.com/posts/bayesian_rating/
@@ -54,6 +55,7 @@ function calculateBayesianAverages(callback) {
 function calculateRatings(pkg, reviews) {
   var points = 0;
   var total_rating = 0;
+  var monthly_popularity = 0;
   _.forEach(reviews, function(review) {
     total_rating += review.rating;
 
@@ -69,11 +71,18 @@ function calculateRatings(pkg, reviews) {
     else if (review.rating == 5) {
       points += 1;
     }
+
+    var reviewDate = moment(review.date_created);
+    var now = moment();
+    if (review.rating >= 4 && reviewDate.month() == now.month() && reviewDate.year() == now.year()) {
+      monthly_popularity++;
+    }
   });
 
   pkg.points = Math.round(points);
   pkg.num_reviews = reviews.length;
   pkg.total_rating = total_rating;
+  pkg.monthly_popularity = monthly_popularity;
   if (total_rating === 0 || reviews.length === 0) {
     pkg.average_rating = 0;
   }
@@ -150,62 +159,70 @@ function parseReview(pkg, callback) {
       callback(err);
     }
     else {
-      var reviews = JSON.parse(body);
+      var reviews = null;
+      try {
+        reviews = JSON.parse(body);
+      }
+      catch (e) {
+        console.error('Failed to parse reviews for pkg.name');
+      }
 
-      db.Review.findOne({name: pkg.name}, function(err, rev) {
-        if (err) {
-          callback(err);
-        }
-        else {
-          if (!rev) {
-            rev = new db.Review();
-          }
-
-          rev.name = pkg.name;
-          rev.reviews = reviews;
-
-          calculateRatings(pkg, reviews);
-
-          var stats = {
-            5: 0,
-            4: 0,
-            3: 0,
-            2: 0,
-            1: 0,
-            total: reviews.length,
-          };
-          _.forEach(reviews, function(review) {
-            stats[review.rating]++;
-          });
-
-          rev.stats = stats;
-
-          async.series([
-            function(cb) {
-              rev.save(function(err) {
-                if (err) {
-                  cb(err);
-                }
-                else {
-                  cb(null);
-                }
-              });
-            },
-            function(cb) {
-              pkg.save(function(err) {
-                if (err) {
-                  cb(err);
-                }
-                else {
-                  cb(null);
-                }
-              });
-            }
-          ], function(err) {
+      if (reviews) {
+        db.Review.findOne({name: pkg.name}, function(err, rev) {
+          if (err) {
             callback(err);
-          });
-        }
-      });
+          }
+          else {
+            if (!rev) {
+              rev = new db.Review();
+            }
+
+            rev.name = pkg.name;
+            rev.reviews = reviews;
+
+            calculateRatings(pkg, reviews);
+
+            var stats = {
+              5: 0,
+              4: 0,
+              3: 0,
+              2: 0,
+              1: 0,
+              total: reviews.length,
+            };
+            _.forEach(reviews, function(review) {
+              stats[review.rating]++;
+            });
+
+            rev.stats = stats;
+
+            async.series([
+              function(cb) {
+                rev.save(function(err) {
+                  if (err) {
+                    cb(err);
+                  }
+                  else {
+                    cb(null);
+                  }
+                });
+              },
+              function(cb) {
+                pkg.save(function(err) {
+                  if (err) {
+                    cb(err);
+                  }
+                  else {
+                    cb(null);
+                  }
+                });
+              }
+            ], function(err) {
+              callback(err);
+            });
+          }
+        });
+      }
     }
   });
 }

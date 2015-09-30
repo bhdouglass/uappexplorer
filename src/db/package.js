@@ -21,6 +21,7 @@ var packageSchema = mongoose.Schema({
   keywords: [String],
   last_updated: String,
   license: String,
+  monthly_popularity: Number,
   name: {type: String, index: true},
   num_reviews: Number,
   points: Number,
@@ -35,6 +36,7 @@ var packageSchema = mongoose.Schema({
   terms: String,
   title: String,
   total_rating: Number,
+  translations: {},
   type: String,
   types: [String],
   url: String,
@@ -42,7 +44,6 @@ var packageSchema = mongoose.Schema({
   videos: [String],
   webapp_inject: Boolean,
   website: String,
-  translations: {},
 });
 
 packageSchema.index({

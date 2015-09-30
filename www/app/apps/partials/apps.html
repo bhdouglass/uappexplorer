@@ -90,7 +90,7 @@
   <div class="row app-list" ng-class="{'grid-view': view == 'grid', 'list-view': view != 'grid'}">
     <div ng-repeat="app in apps">
       <div ng-class="{'col-md-4 col-sm-6 col-xs-6 grid-view': view == 'grid', 'list-view col-sm-12': view != 'grid'}">
-        <app-view ng-model="app" show-description="{{view != 'grid'}}"></app-view>
+        <app-view ng-model="app" show-description="{{view != 'grid'}}" show-popularity="{{sortModel == 'monthly_popularity' || sortModel == '-monthly_popularity'}}"></app-view>
       </div>
 
       <div class="hidden-xs hidden-sm" ng-class="{clearfix: $index % 3 == 2}"></div>
