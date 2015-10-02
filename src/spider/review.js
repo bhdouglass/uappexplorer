@@ -7,6 +7,47 @@ var _ = require('lodash');
 var async = require('async');
 var moment = require('moment');
 
+//Calculate heart rating, monthly popularity, and average stars
+function calculateRatings(pkg, reviews) {
+  var points = 0; //Heart rating
+  var total_rating = 0;
+  var monthly_popularity = 0;
+  _.forEach(reviews, function(review) {
+    total_rating += review.rating;
+
+    if (review.rating == 1) {
+      points -= 1;
+    }
+    else if (review.rating == 2) {
+      points -= 0.5;
+    }
+    else if (review.rating == 4) {
+      points += 0.5;
+    }
+    else if (review.rating == 5) {
+      points += 1;
+    }
+
+    var reviewDate = moment(review.date_created);
+    var now = moment();
+    if (review.rating >= 4 && reviewDate.month() == now.month() && reviewDate.year() == now.year()) {
+      monthly_popularity++;
+    }
+  });
+
+  pkg.points = Math.round(points);
+  pkg.num_reviews = reviews.length;
+  pkg.total_rating = total_rating;
+
+  pkg.monthly_popularity = monthly_popularity;
+  if (total_rating === 0 || reviews.length === 0) {
+    pkg.average_rating = 0;
+  }
+  else {
+    pkg.average_rating = total_rating / reviews.length;
+  }
+}
+
 //Maths from:
 //http://fulmicoton.com/posts/bayesian_rating/
 //http://www.frontendjunkie.com/2011/02/using-bayesian-average-to-rank-content.html
@@ -28,61 +69,23 @@ function refreshRatings(callback) {
           });
 
           var total_num_reviews = 0;
-          var total_rating = 0;
+          var total_all_rating = 0;
           var total_packages = 0;
           _.forEach(packages, function(pkg) {
             logger.debug('reviews - ' + pkg.name);
-            //Calculate heart rating, monthly popularity, and average stars
             if (reviewMap[pkg.name]) {
-              var review = reviewMap[pkg.name];
-              var points = 0; //Heart rating
-              var total_rating = 0;
-              var monthly_popularity = 0;
-              _.forEach(reviews, function(review) {
-                total_rating += review.rating;
-
-                if (review.rating == 1) {
-                  points -= 1;
-                }
-                else if (review.rating == 2) {
-                  points -= 0.5;
-                }
-                else if (review.rating == 4) {
-                  points += 0.5;
-                }
-                else if (review.rating == 5) {
-                  points += 1;
-                }
-
-                var reviewDate = moment(review.date_created);
-                var now = moment();
-                if (review.rating >= 4 && reviewDate.month() == now.month() && reviewDate.year() == now.year()) {
-                  monthly_popularity++;
-                }
-              });
-
-              pkg.points = Math.round(points);
-              pkg.num_reviews = reviews.length;
-              pkg.total_rating = total_rating;
-
-              pkg.monthly_popularity = monthly_popularity;
-              if (total_rating === 0 || reviews.length === 0) {
-                pkg.average_rating = 0;
-              }
-              else {
-                pkg.average_rating = total_rating / reviews.length;
-              }
+              calculateRatings(pkg, reviewMap[pkg.name].reviews);
             }
 
             //Sum everything for bayesian average
             if (pkg.num_reviews > 0) { //Don't count unreviewed apps
               total_num_reviews += pkg.num_reviews;
-              total_rating += pkg.average_rating;
+              total_all_rating += pkg.average_rating;
               total_packages++;
             }
           });
 
-          var total_average_rating = total_rating / total_packages;
+          var total_average_rating = total_all_rating / total_packages;
           var average_num_reviews = total_num_reviews / total_packages;
           async.each(packages, function(pkg, cb) {
             //Calculate bayesian average for each app
@@ -203,7 +206,7 @@ function parseReviews(pkgName, callback) {
           }
         }
         else {
-          calculateBayesianAverages(function(err) {
+          refreshRatings(function(err) {
             if (err) {
               logger.error(err);
             }

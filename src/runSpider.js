@@ -21,12 +21,7 @@ if (process.argv[2]) {
     spider.parseDepartments(callback);
   }
   else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {
-    if (process.argv[3] == 'bayesian') {
-      spider.calculateBayesianAverages(function() {
-        spider.mongoToElasticsearch(null, callback);
-      });
-    }
-    else if (process.argv[3] == 'refresh') {
+    if (process.argv[3] == 'refresh') {
       spider.refreshRatings(function() {
         spider.mongoToElasticsearch(null, callback);
       });
