@@ -363,7 +363,7 @@ function parsePackages(callback) {
     });
 
     //Remove mising packages
-    db.Package.find({}, function(err, packages) { //TODO remove reviews too
+    db.Package.find({}, function(err, packages) {
       if (err) {
         logger.error(err);
       }
@@ -377,6 +377,33 @@ function parsePackages(callback) {
             pkg.remove(function(err) {
               if (err) {
                 logger.error(err);
+              }
+            });
+
+            //Also remove from elasticsearch
+            elasticsearchPackage.remove(pkg, function(err) {
+              if (err) {
+                logger.error(err);
+              }
+              else {
+                logger.debug('deleted elasticsearch for ' + pkg.name);
+              }
+            });
+
+            //Also remove review
+            db.Review.findOne({name: pkg.name}, function(err, rev) {
+              if (err) {
+                logger.error(err);
+              }
+              else if (rev) {
+                rev.remove(function(err) {
+                  if (err) {
+                    logger.error(err);
+                  }
+                  else {
+                    logger.debug('deleted reviews for ' + pkg.name);
+                  }
+                });
               }
             });
           }
