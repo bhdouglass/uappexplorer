@@ -107,12 +107,13 @@ function setup(app, success, error, isAuthenticated) {
     if (req.user) {
       success(res, {
         _id: req.user._id,
-        name: req.user.name,
-        language: req.user.language,
-        username: req.user.username,
         apikey: req.user.apikey,
         apisecret: req.user.apisecret,
         has_caxton: !!req.user.caxton_token,
+        language: req.user.language,
+        name: req.user.name,
+        selectedLanguage: req.user.selectedLanguage,
+        username: req.user.username,
       });
     }
     else {
@@ -124,6 +125,18 @@ function setup(app, success, error, isAuthenticated) {
     req.logout();
     req.session = null;
     res.redirect('/');
+  });
+
+  app.post('/auth/language/:lang', isAuthenticated, function(req, res) {
+    req.user.selectedLanguage = req.params.lang;
+    req.user.save(function(err) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        success(res, true);
+      }
+    });
   });
 
   app.post('/auth/caxton/:code', isAuthenticated, function(req, res) {

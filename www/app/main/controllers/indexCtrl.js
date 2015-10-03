@@ -133,17 +133,30 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     return show;
   };
 
-  $rootScope.language = 'en';
   $rootScope.setLanguage = function(lang) {
     $rootScope.language = lang;
     gettextCatalog.setCurrentLanguage(lang);
     if (lang != 'en') {
       gettextCatalog.loadRemote('/translations/uappexplorer-' + lang + '.json');
     }
+
+    if ($rootScope.loggedin) {
+      auth.set_language(lang);
+    }
+
+    ipCookie('language', lang, {expires: 365});
   };
+
+  $rootScope.language = 'en';
+  if (ipCookie('language')) {
+    $rootScope.setLanguage(ipCookie('language'));
+  }
 
   auth.loggedin(function(user) {
     $rootScope.loggedin = !!user;
+    if ($rootScope.loggedin && user.selectedLanguage) {
+      $rootScope.setLanguage(user.selectedLanguage);
+    }
   });
 
   $timeout(function() {

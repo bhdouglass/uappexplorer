@@ -65,6 +65,12 @@ angular.module('appstore').factory('auth', function($http, $location, $base64, i
 
     caxton_send: function(url, message) {
       return $http.post('/auth/caxton/send', {url: url, message: message});
-    }
+    },
+
+    set_language: function(language) {
+      return $http.post('/auth/language/' + language).then(function() {
+        console.log('Language settings saved');
+      });
+    },
   };
 });

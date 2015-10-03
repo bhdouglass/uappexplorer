@@ -5,8 +5,9 @@ var userSchema = mongoose.Schema({
   apisecret: String,
   caxton_token: String,
   email: String,
-  language: String,
+  language: String, //language from ubuntu
   name: String,
+  selectedLanguage: String, //user selected language from interface
   ubuntu_id: {type: String, index: true},
   username: String,
 });
