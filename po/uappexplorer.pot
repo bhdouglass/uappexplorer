@@ -4,7 +4,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: apps/partials/app.html:149
+#: apps/partials/app.html:152
 msgid "- Choose a list -"
 msgstr ""
 
@@ -47,16 +47,14 @@ msgid "*Install will take you to the official appstore on an Ubuntu Touch device
 msgstr ""
 
 #: apps/partials/app.html:76
-msgid ""
-"*This webapp injects custom code into the website which can add\n"
-"                  extra features or be malicious. Only use this app if you trust the author."
+msgid "*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author."
 msgstr ""
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
 msgstr ""
 
-#: apps/partials/app.html:147
+#: apps/partials/app.html:150
 msgid "Add to list:"
 msgstr ""
 
@@ -86,14 +84,14 @@ msgstr ""
 msgid "Any"
 msgstr ""
 
-#: main/partials/faq.html:79
+#: main/partials/faq.html:75
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be\n"
-"    taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the app's\n"
-"    author (an author usually has a method of contact listed under the \"Support\"\n"
-"    tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
-"    and does not host any apps. uApp Explorer only displays publicly available\n"
-"    information about the official Ubuntu Touch appstore."
+"taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the app's\n"
+"author (an author usually has a method of contact listed under the \"Support\"\n"
+"tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
+"and does not host any apps. uApp Explorer only displays publicly available\n"
+"information about the official Ubuntu Touch appstore."
 msgstr ""
 
 #: apps/directives/type.js:26
@@ -118,7 +116,7 @@ msgid "Apps:"
 msgstr ""
 
 #. CPU architecture
-#: apps/partials/app.html:203
+#: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
 msgstr ""
@@ -170,7 +168,7 @@ msgid "Caxton Code"
 msgstr ""
 
 #. App changelog
-#: apps/partials/app.html:177
+#: apps/partials/app.html:180
 msgid "Changelog"
 msgstr ""
 
@@ -182,7 +180,7 @@ msgstr ""
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:118
+#: main/partials/faq.html:113
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr ""
@@ -279,7 +277,7 @@ msgid "Delete"
 msgstr ""
 
 #. App description
-#: apps/partials/app.html:174
+#: apps/partials/app.html:177
 msgid "Description"
 msgstr ""
 
@@ -304,9 +302,9 @@ msgstr ""
 #: main/partials/donate.html:7
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If you\n"
-"    choose to donate, you money will go towards infrastructure costs. Costs include\n"
-"    domain names, hosting, etc. uApp Explorer will always be a free and open source\n"
-"    service, regardless of the number of donations."
+"choose to donate, you money will go towards infrastructure costs. Costs include\n"
+"domain names, hosting, etc. uApp Explorer will always be a free and open source\n"
+"service, regardless of the number of donations."
 msgstr ""
 
 #. The uApp Explorer donation app download link
@@ -345,7 +343,7 @@ msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
 
 #. Comment below reviews
-#: apps/partials/app.html:364
+#: apps/partials/app.html:367
 msgid "For version:"
 msgstr ""
 
@@ -387,11 +385,11 @@ msgstr ""
 msgid "Heart Rating"
 msgstr ""
 
-#: main/partials/faq.html:49
+#: main/partials/faq.html:47
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is\n"
-"      1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 hearts,\n"
-"      and 1 star = -1 hearts."
+"1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 hearts,\n"
+"and 1 star = -1 hearts."
 msgstr ""
 
 #: main/services/utils.js:89
@@ -402,7 +400,7 @@ msgstr ""
 msgid "Highest Star Rating"
 msgstr ""
 
-#: main/partials/faq.html:97
+#: main/partials/faq.html:92
 msgid "How can I help improve this site?"
 msgstr ""
 
@@ -410,36 +408,36 @@ msgstr ""
 msgid "How do I install apps?"
 msgstr ""
 
-#: main/partials/faq.html:60
+#: main/partials/faq.html:56
 msgid "How is the popularity determined?"
 msgstr ""
 
-#: main/partials/faq.html:69
+#: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
 msgstr ""
 
-#: main/partials/faq.html:99
+#: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 
-#: main/partials/faq.html:103
+#: main/partials/faq.html:98
 msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
-#: main/partials/faq.html:111
+#: main/partials/faq.html:106
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
-#: main/partials/faq.html:107
+#: main/partials/faq.html:102
 msgid "If you would like to contribute monetarily, there are multiple options for donating."
 msgstr ""
 
 #. App info
-#: apps/partials/app.html:180
+#: apps/partials/app.html:183
 msgid "Info"
 msgstr ""
 
-#: main/partials/faq.html:54
+#: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
 msgstr ""
 
@@ -455,7 +453,7 @@ msgstr ""
 msgid "Least Popular (This Month)"
 msgstr ""
 
-#: apps/partials/app.html:201
+#: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
 msgstr ""
@@ -470,11 +468,11 @@ msgstr ""
 msgid "List Name:"
 msgstr ""
 
-#: apps/partials/app.html:387
+#: apps/partials/app.html:390
 msgid "Loading more reviews..."
 msgstr ""
 
-#: apps/partials/app.html:295
+#: apps/partials/app.html:298
 msgid "Loading reviews..."
 msgstr ""
 
@@ -507,7 +505,7 @@ msgstr ""
 msgid "Monthly Popularity"
 msgstr ""
 
-#: apps/partials/app.html:250
+#: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
 msgstr ""
 
@@ -534,11 +532,11 @@ msgstr ""
 msgid "New Apps"
 msgstr ""
 
-#: main/partials/faq.html:71
+#: main/partials/faq.html:67
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either\n"
-"      wait until the new apps are fetched or use\n"
-"      the request form to request that the app be found early."
+"wait until the new apps are fetched or use the request form to request that the\n"
+"app be found early."
 msgstr ""
 
 #: lists/partials/me.html:42
@@ -565,11 +563,11 @@ msgstr ""
 msgid "No apps found, try searching again."
 msgstr ""
 
-#: apps/partials/app.html:154
+#: apps/partials/app.html:157
 msgid "No lists, create one!"
 msgstr ""
 
-#: apps/partials/app.html:379
+#: apps/partials/app.html:382
 msgid "No reviews yet!"
 msgstr ""
 
@@ -586,17 +584,17 @@ msgstr ""
 msgid "Please login to send via Caxton"
 msgstr ""
 
-#: main/partials/faq.html:62
+#: main/partials/faq.html:58
 msgid ""
-"Popularity is based on the number of 4 and 5 star reviews given to and\n"
-"      app during the current month."
+"Popularity is based on the number of 4 and 5 star reviews given to and app\n"
+"during the current month."
 msgstr ""
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
 msgstr ""
 
-#: apps/partials/app.html:125
+#: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
 msgstr ""
@@ -625,18 +623,18 @@ msgstr ""
 msgid "Scopes"
 msgstr ""
 
-#: apps/partials/app.html:232
+#: apps/partials/app.html:235
 msgid "Screenshots"
 msgstr ""
 
-#: apps/partials/app.html:118
-#: apps/partials/app.html:120
+#: apps/partials/app.html:121
+#: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
 msgstr ""
 
-#: apps/partials/app.html:121
+#: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
 msgstr ""
@@ -645,27 +643,27 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: apps/partials/app.html:102
+#: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
 msgstr ""
 
-#: apps/partials/app.html:97
+#: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
 msgstr ""
 
-#: apps/partials/app.html:113
+#: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
 msgstr ""
 
-#: apps/partials/app.html:107
+#: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
 msgstr ""
 
-#: apps/partials/app.html:271
+#: apps/partials/app.html:274
 msgid "Similar Apps"
 msgstr ""
 
@@ -686,17 +684,17 @@ msgid "Sort By:"
 msgstr ""
 
 #. App support links
-#: apps/partials/app.html:183
+#: apps/partials/app.html:186
 msgid "Support"
 msgstr ""
 
-#: apps/partials/app.html:210
 #: apps/partials/app.html:213
+#: apps/partials/app.html:216
 msgid "Support:"
 msgstr ""
 
 #. Terms and conditions
-#: apps/partials/app.html:221
+#: apps/partials/app.html:224
 msgid "Terms:"
 msgstr ""
 
@@ -704,24 +702,24 @@ msgstr ""
 msgid "Thank you!"
 msgstr ""
 
-#: main/partials/faq.html:44
+#: main/partials/faq.html:42
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for having\n"
-"      more good reviews. An app with more 5 star ratings will have a higher heart\n"
-"      rating than an app with only a few 5 star ratings."
+"more good reviews. An app with more 5 star ratings will have a higher heart\n"
+"rating than an app with only a few 5 star ratings."
 msgstr ""
 
-#: main/partials/faq.html:32
+#: main/partials/faq.html:30
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give\n"
-"    to an app when they leave a review. The Bayesian average allows apps with\n"
-"    more reviews to rank better than apps with less reviews. The star rating\n"
-"    can be between 1 and 5, where a 0 means that there have not been any reviews\n"
-"    yet. For more information about the Bayesian average calculation, check out\n"
-"    <a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
+"to an app when they leave a review. The Bayesian average allows apps with\n"
+"more reviews to rank better than apps with less reviews. The star rating\n"
+"can be between 1 and 5, where a 0 means that there have not been any reviews\n"
+"yet. For more information about the Bayesian average calculation, check out\n"
+"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
 
-#: apps/partials/app.html:159
+#: apps/partials/app.html:162
 msgid "This app is on these lists:"
 msgstr ""
 
@@ -737,12 +735,12 @@ msgstr ""
 #: main/partials/faq.html:7
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for\n"
-"  the apps comes from a publicly accessible\n"
-"  <a href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a>.\n"
-"  This site is maintained by <a href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
-"  and is not endorsed by or affiliated with Ubuntu or Canonical.\n"
-"  Ubuntu and Canonical are registered trademarks of\n"
-"  <a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
+"the apps comes from a publicly accessible\n"
+"<a href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a>.\n"
+"This site is maintained by <a href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
+"and is not endorsed by or affiliated with Ubuntu or Canonical.\n"
+"Ubuntu and Canonical are registered trademarks of\n"
+"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
 
 #: main/services/utils.js:71
@@ -756,14 +754,12 @@ msgstr ""
 #: main/partials/faq.html:20
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app\n"
-"      that you wish to install and click the \"Install\" button. You will then be\n"
-"      taken to the official appstore on your device where you can install the app."
+"that you wish to install and click the \"Install\" button. You will then be\n"
+"taken to the official appstore on your device where you can install the app."
 msgstr ""
 
-#: main/partials/faq.html:90
-msgid ""
-"To report a problem or request a new feature visit the issues page for\n"
-"      this site on GitHub."
+#: main/partials/faq.html:86
+msgid "To report a problem or request a new feature visit the issues page for this site on GitHub."
 msgstr ""
 
 #: main/partials/main.html:136
@@ -780,7 +776,7 @@ msgstr ""
 msgid "Updated Apps"
 msgstr ""
 
-#: apps/partials/app.html:199
+#: apps/partials/app.html:202
 msgid "Updated:"
 msgstr ""
 
@@ -788,11 +784,11 @@ msgstr ""
 msgid "User List:"
 msgstr ""
 
-#: apps/partials/app.html:288
+#: apps/partials/app.html:291
 msgid "User Reviews"
 msgstr ""
 
-#: apps/partials/app.html:197
+#: apps/partials/app.html:200
 msgid "Version:"
 msgstr ""
 
@@ -811,7 +807,7 @@ msgstr ""
 msgid "Web Apps"
 msgstr ""
 
-#: apps/partials/app.html:217
+#: apps/partials/app.html:220
 msgid "Website:"
 msgstr ""
 
@@ -824,15 +820,15 @@ msgstr ""
 msgid "Welcome to uApp Explorer!"
 msgstr ""
 
-#: main/partials/faq.html:78
+#: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 
-#: main/partials/faq.html:42
+#: main/partials/faq.html:40
 msgid "What is the heart rating?"
 msgstr ""
 
-#: main/partials/faq.html:31
+#: main/partials/faq.html:29
 msgid "What is the star rating?"
 msgstr ""
 
@@ -840,7 +836,7 @@ msgstr ""
 msgid "What is this site?"
 msgstr ""
 
-#: main/partials/faq.html:88
+#: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
 msgstr ""
 
