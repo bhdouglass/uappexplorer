@@ -21,6 +21,7 @@ var gettext = require('gulp-angular-gettext');
 
 var paths = {
   front_js: ['www/app/**/*.js', '!www/app/load.js', '!www/bower_components/**/*'],
+  lint: ['www/app/**/*.js', '!www/app/load.js', '!www/bower_components/**/*'],
   load: 'www/app/load.js',
   back_js: ['gulpfile.js', 'src/**/*.js'],
   back_extra: ['package.json', 'npm-shrinkwrap.json', 'src/**/*.json', '.openshift/**/*'],
@@ -28,7 +29,9 @@ var paths = {
   less: 'www/less/*.less',
   html: ['www/*.html'],
   partial_html: ['www/app/**/*.html'],
+  po: 'po/**/*.po',
   dist: ['dist/**', '!dist/.git'],
+  dist_translations: 'dist/translations/**',
   js_libs: [
     'www/bower_components/less/dist/less.min.js',
     'www/bower_components/jquery/dist/jquery.min.js',
@@ -77,7 +80,7 @@ gulp.task('clean', function() {
 
 gulp.task('lint', function() {
   return merge(
-    gulp.src(paths.front_js)
+    gulp.src(paths.lint)
       .pipe(jshint(require('./.jshintrc-front.json')))
       .pipe(jshint.reporter(stylish))
       .pipe(jshint.reporter('fail')),
@@ -188,15 +191,13 @@ gulp.task('pot', function () {
     .pipe(gulp.dest('po/'));
 });
 
-gulp.task('translations', function () {
-  return gulp.src('po/**/*.po')
-    .pipe(gettext.compile({
-      format: 'json'
-    }))
-    .pipe(gulp.dest('dist/translations/'));
+gulp.task('build-translations', function () {
+  return gulp.src(paths.po)
+    .pipe(gettext.compile({format: 'json'}))
+    .pipe(gulp.dest('dist/www/translations/'));
 });
 
-gulp.task('build', ['lint', 'clean', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html', 'build-back']);
+gulp.task('build', ['lint', 'clean', 'build-translations', 'build-js', 'build-libs', 'build-img', 'build-less', 'build-html', 'build-back']);
 
 gulp.task('deploy-app', ['build'], function(callback) {
   push('./dist', process.env.UAPPEXPLORER_APP_GIT, callback);

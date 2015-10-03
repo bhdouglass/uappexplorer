@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').filter('dollars', function() {
+angular.module('appstore').filter('dollars', function(gettextCatalog) {
   var currencies = {
     'USD': '$',
     'GBP': '£',
@@ -16,7 +16,7 @@ angular.module('appstore').filter('dollars', function() {
       }
     }
 
-    var output = 'Free';
+    var output = gettextCatalog.getString('Free');
     if (dollars) {
       var amount = 0;
       if (dollars && dollars[currency]) {

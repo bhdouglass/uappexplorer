@@ -93,9 +93,6 @@
           <div ng-if="showSearch" class="visible-xs">
             <div class="input-group search-box">
               <input type="text" class="form-control" ng-model="search" id="search" ng-change="setSearch(search)" />
-              <!--<span class="input-group-addon">
-                <i class="fa fa-times-circle-o fa-inverse" ng-click="search = ''" title="Clear search"></i>
-              </span>-->
             </div>
           </div>
         </div>
@@ -105,16 +102,13 @@
             <li ng-if="showSearch">
               <div class="input-group hidden-xs search-box">
                 <input type="text" class="form-control" ng-model="search" id="search" ng-change="setSearch(search)" />
-                <!--<span class="input-group-addon">
-                  <i class="fa fa-times-circle-o fa-inverse" ng-click="search = ''" title="Clear search"></i>
-                </span>-->
               </div>
             </li>
             <li class="hidden-xs">
               <a ng-click="toggleSearch()" class="clickable"><i class="fa fa-search fa-inverse"></i></a>
             </li>
             <li>
-              <a ng-click="faq()" class="clickable" translate>FAQ</a>
+              <a ng-click="faq()" class="clickable" translate translate-comment="Keep this as an abbreviation if possible">FAQ</a>
             </li>
             <li>
               <a ng-click="donate()" class="clickable" translate>Donate</a>
@@ -127,6 +121,20 @@
             </li>
             <li ng-if="loggedin">
               <a ng-click="logout()" class="clickable" translate>Log Out</a>
+            </li>
+
+            <li>
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button">
+                <span translate>Language</span> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li ng-class="{active: language == 'en'}">
+                  <a ng-click="setLanguage('en')" class="clickable">English</a>
+                </li>
+                <li ng-class="{active: language == 'gl'}">
+                  <a ng-click="setLanguage('gl')" class="clickable">Galician</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

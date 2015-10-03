@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, ipCookie, utils, auth, og) {
+angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope, $state, $timeout, $location, $modal, ipCookie, gettextCatalog, utils, auth, og) {
   og.set('uApp Explorer', {});
   $scope.url = $location.protocol() + '://' + $location.host() + '/';
   $scope.$state = $state;
@@ -131,6 +131,15 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }
 
     return show;
+  };
+
+  $rootScope.language = 'en';
+  $rootScope.setLanguage = function(lang) {
+    $rootScope.language = lang;
+    gettextCatalog.setCurrentLanguage(lang);
+    if (lang != 'en') {
+      gettextCatalog.loadRemote('/translations/uappexplorer-' + lang + '.json');
+    }
   };
 
   auth.loggedin(function(user) {

@@ -61,54 +61,56 @@ angular.module('appstore').factory('utils', function($filter, $timeout, $locatio
       return icon;
     },
 
-    sorts: [
-      {
-        label: gettextCatalog.getString('Most Relevant'),
-        value: 'relevance',
-      },
-      {
-        label: gettextCatalog.getString('Title A-Z'),
-        value: 'title'
-      }, {
-        label: gettextCatalog.getString('Title Z-A'),
-        value: '-title'
-      }, {
-        label: gettextCatalog.getString('Newest'),
-        value: '-published_date'
-      }, {
-        label: gettextCatalog.getString('Oldest'),
-        value: 'published_date'
-      }, {
-        label: gettextCatalog.getString('Latest Update'),
-        value: '-last_updated'
-      }, {
-        label: gettextCatalog.getString('Oldest Update'),
-        value: 'last_updated'
-      }, {
-        label: gettextCatalog.getString('Highest Heart Rating'),
-        value: '-points'
-      }, {
-        label: gettextCatalog.getString('Lowest Heart Rating'),
-        value: 'points'
-      }, {
-        label: gettextCatalog.getString('Highest Star Rating'),
-        value: '-bayesian_average'
-      }, {
-        label: gettextCatalog.getString('Lowest Star Rating'),
-        value: 'bayesian_average'
-      }, {
-        label: gettextCatalog.getString('Most Popular (This Month)'),
-        value: '-monthly_popularity'
-      }, {
-        label: gettextCatalog.getString('Least Popular (This Month)'),
-        value: 'monthly_popularity'
-      }, {
-        label: gettextCatalog.getString('Free'),
-        value: 'prices.USD'
-      }, {
-        label: gettextCatalog.getString('Most Expensive (USD)'),
-        value: '-prices.USD'
-      },
-    ]
+    getSorts: function() {
+      return [
+        {
+          label: gettextCatalog.getString('Most Relevant'),
+          value: 'relevance',
+        },
+        {
+          label: gettextCatalog.getString('Title A-Z'),
+          value: 'title'
+        }, {
+          label: gettextCatalog.getString('Title Z-A'),
+          value: '-title'
+        }, {
+          label: gettextCatalog.getString('Newest'),
+          value: '-published_date'
+        }, {
+          label: gettextCatalog.getString('Oldest'),
+          value: 'published_date'
+        }, {
+          label: gettextCatalog.getString('Latest Update'),
+          value: '-last_updated'
+        }, {
+          label: gettextCatalog.getString('Oldest Update'),
+          value: 'last_updated'
+        }, {
+          label: gettextCatalog.getString('Highest Heart Rating'),
+          value: '-points'
+        }, {
+          label: gettextCatalog.getString('Lowest Heart Rating'),
+          value: 'points'
+        }, {
+          label: gettextCatalog.getString('Highest Star Rating'),
+          value: '-bayesian_average'
+        }, {
+          label: gettextCatalog.getString('Lowest Star Rating'),
+          value: 'bayesian_average'
+        }, {
+          label: gettextCatalog.getString('Most Popular (This Month)'),
+          value: '-monthly_popularity'
+        }, {
+          label: gettextCatalog.getString('Least Popular (This Month)'),
+          value: 'monthly_popularity'
+        }, {
+          label: gettextCatalog.getString('Free'),
+          value: 'prices.USD'
+        }, {
+          label: gettextCatalog.getString('Most Expensive (USD)'),
+          value: '-prices.USD'
+        },
+      ];
+    },
   };
 });

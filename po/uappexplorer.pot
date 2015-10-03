@@ -64,22 +64,25 @@ msgstr ""
 msgid "Added this app to your list"
 msgstr ""
 
+#: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
-#: apps/controllers/appsCtrl.js:44
+#: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
 msgstr ""
 
+#: apps/controllers/appsCtrl.js:108
+#: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:62
+#: apps/controllers/appsCtrl.js:63
 msgid "All Types"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:40
+#: apps/controllers/appsCtrl.js:41
 msgid "Any"
 msgstr ""
 
@@ -93,7 +96,7 @@ msgid ""
 "    information about the official Ubuntu Touch appstore."
 msgstr ""
 
-#: apps/directives/type.js:25
+#: apps/directives/type.js:26
 msgid "App"
 msgstr ""
 
@@ -101,7 +104,7 @@ msgstr ""
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:65
+#: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
 msgstr ""
@@ -198,7 +201,7 @@ msgstr ""
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
 
-#: lists/controllers/listEditCtrl.js:62
+#: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
 
@@ -210,19 +213,19 @@ msgstr ""
 msgid "Could not download app data, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:110
+#: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:127
+#: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:140
+#: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:152
+#: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
 msgstr ""
 
@@ -255,7 +258,7 @@ msgstr ""
 msgid "Could not retrieve search at this time, please try again later."
 msgstr ""
 
-#: lists/controllers/listEditCtrl.js:64
+#: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
 
@@ -280,7 +283,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: index.html:120
+#: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
 msgstr ""
@@ -307,7 +310,7 @@ msgid ""
 msgstr ""
 
 #. The uApp Explorer donation app download link
-#: index.html:174
+#: index.html:182
 msgid "Donation Web App"
 msgstr ""
 
@@ -323,7 +326,8 @@ msgstr ""
 msgid "Essential Apps"
 msgstr ""
 
-#: index.html:117
+#. Keep this as an abbreviation if possible
+#: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
 msgstr ""
@@ -356,7 +360,8 @@ msgstr ""
 
 #. No Cost
 #: apps/partials/app.html:50
-#: main/services/utils.js:106
+#: main/filters/dollars.js:19
+#: main/services/utils.js:107
 msgid "Free"
 msgstr ""
 
@@ -389,11 +394,11 @@ msgid ""
 "      and 1 star = -1 hearts."
 msgstr ""
 
-#: main/services/utils.js:88
+#: main/services/utils.js:89
 msgid "Highest Heart Rating"
 msgstr ""
 
-#: main/services/utils.js:94
+#: main/services/utils.js:95
 msgid "Highest Star Rating"
 msgstr ""
 
@@ -438,11 +443,15 @@ msgstr ""
 msgid "It is possible to have a negative heart rating."
 msgstr ""
 
-#: main/services/utils.js:82
+#: index.html:128
+msgid "Language"
+msgstr ""
+
+#: main/services/utils.js:83
 msgid "Latest Update"
 msgstr ""
 
-#: main/services/utils.js:103
+#: main/services/utils.js:104
 msgid "Least Popular (This Month)"
 msgstr ""
 
@@ -469,7 +478,7 @@ msgstr ""
 msgid "Loading reviews..."
 msgstr ""
 
-#: index.html:123
+#: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
 msgstr ""
@@ -478,15 +487,15 @@ msgstr ""
 msgid "Log in via Ubuntu"
 msgstr ""
 
-#: index.html:129
+#: index.html:123
 msgid "Log Out"
 msgstr ""
 
-#: main/services/utils.js:91
+#: main/services/utils.js:92
 msgid "Lowest Heart Rating"
 msgstr ""
 
-#: main/services/utils.js:97
+#: main/services/utils.js:98
 msgid "Lowest Star Rating"
 msgstr ""
 
@@ -502,25 +511,25 @@ msgstr ""
 msgid "More Apps by {{app.author}}"
 msgstr ""
 
-#: main/services/utils.js:109
+#: main/services/utils.js:110
 msgid "Most Expensive (USD)"
 msgstr ""
 
-#: main/services/utils.js:100
+#: main/services/utils.js:101
 msgid "Most Popular (This Month)"
 msgstr ""
 
-#: main/services/utils.js:66
+#: main/services/utils.js:67
 msgid "Most Relevant"
 msgstr ""
 
-#: index.html:126
+#: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
 msgstr ""
 
 #. The new apps rss feed link
-#: index.html:184
+#: index.html:192
 #: main/partials/main.html:159
 msgid "New Apps"
 msgstr ""
@@ -536,7 +545,7 @@ msgstr ""
 msgid "New List"
 msgstr ""
 
-#: main/services/utils.js:76
+#: main/services/utils.js:77
 msgid "Newest"
 msgstr ""
 
@@ -564,11 +573,11 @@ msgstr ""
 msgid "No reviews yet!"
 msgstr ""
 
-#: main/services/utils.js:79
+#: main/services/utils.js:80
 msgid "Oldest"
 msgstr ""
 
-#: main/services/utils.js:85
+#: main/services/utils.js:86
 msgid "Oldest Update"
 msgstr ""
 
@@ -606,12 +615,12 @@ msgid "Save"
 msgstr ""
 
 #. The uApp Explorer scope download link
-#: apps/directives/type.js:26
-#: index.html:170
+#: apps/directives/type.js:27
+#: index.html:178
 msgid "Scope"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:71
+#: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
 msgstr ""
@@ -660,11 +669,11 @@ msgstr ""
 msgid "Similar Apps"
 msgstr ""
 
-#: apps/directives/type.js:28
+#: apps/directives/type.js:29
 msgid "Snappy App"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:74
+#: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
 msgstr ""
 
@@ -716,7 +725,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-#: index.html:154
+#: index.html:162
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
 
@@ -736,11 +745,11 @@ msgid ""
 "  <a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
 
-#: main/services/utils.js:70
+#: main/services/utils.js:71
 msgid "Title A-Z"
 msgstr ""
 
-#: main/services/utils.js:73
+#: main/services/utils.js:74
 msgid "Title Z-A"
 msgstr ""
 
@@ -767,7 +776,7 @@ msgid "Type:"
 msgstr ""
 
 #. The updated apps rss feed link
-#: index.html:188
+#: index.html:196
 msgid "Updated Apps"
 msgstr ""
 
@@ -792,12 +801,12 @@ msgid "View"
 msgstr ""
 
 #. The uApp Explorer app download link
-#: apps/directives/type.js:27
-#: index.html:166
+#: apps/directives/type.js:28
+#: index.html:174
 msgid "Web App"
 msgstr ""
 
-#: apps/controllers/appsCtrl.js:68
+#: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
 msgstr ""

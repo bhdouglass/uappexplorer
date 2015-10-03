@@ -12,7 +12,7 @@ angular.module('appstore').directive('type', function(gettextCatalog) {
                 '\'label-material-cyan\': types[model] == \'Web App\',' +
                 '\'label-material-orange\': types[model] == \'Scope\',' +
                 '\'label-material-deeppurple\': types[model] == \'Snappy App\',' +
-              '}" ng-bind="types[model]"></span>',
+              '}" ng-bind="typesTranslated[model]"></span>',
     link: function($scope) {
       $scope.types = {
         application: 'App',
@@ -21,12 +21,17 @@ angular.module('appstore').directive('type', function(gettextCatalog) {
         snappy: 'Snappy App',
       };
 
-      $scope.typesTranslated = {
-        application: gettextCatalog.getString('App'),
-        scope: gettextCatalog.getString('Scope'),
-        webapp: gettextCatalog.getString('Web App'),
-        snappy: gettextCatalog.getString('Snappy App'),
-      };
+      function updateTranslated() {
+        $scope.typesTranslated = {
+          application: gettextCatalog.getString('App'),
+          scope: gettextCatalog.getString('Scope'),
+          webapp: gettextCatalog.getString('Web App'),
+          snappy: gettextCatalog.getString('Snappy App'),
+        };
+      }
+
+      updateTranslated();
+      $scope.$on('gettextLanguageChanged', updateTranslated);
     }
   };
 });

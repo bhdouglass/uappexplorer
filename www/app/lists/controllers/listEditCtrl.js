@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('appstore').controller('listEditCtrl', function($scope, $timeout, $location, $rootScope, $state, gettextCatalog, lists, api, utils) {
-  $scope.sorts = utils.sorts;
+  $scope.sorts = utils.getSorts();
+  $scope.$on('gettextLanguageChanged', function() {
+    $scope.sorts = utils.getSorts();
+  });
 
   $scope.list = null;
   $scope.apps = [];

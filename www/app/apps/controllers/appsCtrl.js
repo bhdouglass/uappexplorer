@@ -34,47 +34,53 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
   $scope.license = null;
   $scope.appIcon = utils.appIcon;
 
-  $scope.architectures = [
-    {
-      ///CPU architecture
-      label: gettextCatalog.getString('Any'),
-      value: 'Any',
-    }, {
-      ///CPU architecture
-      label: gettextCatalog.getString('All'),
-      value: 'All',
-    }, {
-      label: 'armhf',
-      value: 'armhf',
-    }, {
-      label: 'i386',
-      value: 'i386',
-    }, {
-      label: 'x86_64',
-      value: 'x86_64',
-    }
-  ];
+  function getArchitectures() {
+    return [
+      {
+        ///CPU architecture
+        label: gettextCatalog.getString('Any'),
+        value: 'Any',
+      }, {
+        ///CPU architecture
+        label: gettextCatalog.getString('All'),
+        value: 'All',
+      }, {
+        label: 'armhf',
+        value: 'armhf',
+      }, {
+        label: 'i386',
+        value: 'i386',
+      }, {
+        label: 'x86_64',
+        value: 'x86_64',
+      }
+    ];
+  }
 
-  $scope.sorts = utils.sorts;
+  function getTypes() {
+    return [
+      {
+        label: gettextCatalog.getString('All Types'),
+        value: 'all'
+      }, {
+        label: gettextCatalog.getString('Apps'),
+        value: 'application'
+      }, {
+        label: gettextCatalog.getString('Web Apps'),
+        value: 'webapp'
+      }, {
+        label: gettextCatalog.getString('Scopes'),
+        value: 'scope'
+      }, {
+        label: gettextCatalog.getString('Snappy Apps'),
+        value: 'snappy'
+      }
+    ];
+  }
 
-  $scope.typeList = [
-    {
-      label: gettextCatalog.getString('All Types'),
-      value: 'all'
-    }, {
-      label: gettextCatalog.getString('Apps'),
-      value: 'application'
-    }, {
-      label: gettextCatalog.getString('Web Apps'),
-      value: 'webapp'
-    }, {
-      label: gettextCatalog.getString('Scopes'),
-      value: 'scope'
-    }, {
-      label: gettextCatalog.getString('Snappy Apps'),
-      value: 'snappy'
-    }
-  ];
+  $scope.architectures = getArchitectures();
+  $scope.sorts = utils.getSorts();
+  $scope.typeList = getTypes();
 
   $scope.countTypes = {
     application: 'apps',
@@ -91,6 +97,27 @@ angular.module('appstore').controller('appsCtrl', function ($scope, $rootScope, 
     sort: '-published_date',
     mini: true,
   };
+
+  $scope.$on('gettextLanguageChanged', function() {
+    $scope.architectures = getArchitectures();
+    $scope.sorts = utils.getSorts();
+    $scope.typeList = getTypes();
+
+    _.forEach($scope.categories, function(category) {
+      if (category.internal_name == 'all') {
+        category.name = gettextCatalog.getString('All Apps');
+      }
+    });
+
+    if ($scope.category && $scope.category.internal_name == 'all') {
+      $scope.category.name = gettextCatalog.getString('All Apps');
+    }
+    _.forEach($scope.frameworks, function(framework) {
+      if (framework.value == 'All') {
+        framework.label = gettextCatalog.getString('All');
+      }
+    });
+  });
 
   var canceler = $q.defer();
   function fetchApps(oldValue, newValue) {
