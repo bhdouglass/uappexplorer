@@ -1,4 +1,4 @@
-# Galician translation for uappexplorer
+# Italian translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,61 +8,60 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-03 16:51+0000\n"
-"PO-Revision-Date: 2015-09-30 06:38+0000\n"
-"Last-Translator: Reidotoxo <Unknown>\n"
-"Language-Team: Galician <gl@li.org>\n"
+"PO-Revision-Date: 2015-10-03 17:51+0000\n"
+"Last-Translator: Leon083 <Unknown>\n"
+"Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-10-04 02:20+0000\n"
 "X-Generator: Launchpad (build 17783)\n"
-"Language: gl\n"
+"Language: it\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "-Escolla unha lista-"
+msgstr "- Scegliere un elenco -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Non se preocupe, ten tamén unha versión gratuita!)"
+msgstr "(Niente paura, c'è anche una versione gratuita!)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} aplicación"
-msgstr[1] "{{counts.applications}} aplicacións"
+msgstr[0] "{{counts.applications}} applicazione"
+msgstr[1] "{{counts.applications}} applicazioni"
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} xogo"
-msgstr[1] "{{counts.games}} xogos"
+msgstr[0] "{{counts.games}} gioco"
+msgstr[1] "{{counts.games}} giochi"
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} ámbito"
-msgstr[1] "{{counts.scopes}} ámbitos"
+msgstr[0] "{{counts.scopes}} ambito"
+msgstr[1] "{{counts.scopes}} ambiti"
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{{counts.webapps}} web app"
-msgstr[1] "{{counts.webapps}} web apps"
+msgstr[0] "{{counts.webapps}} applicazione web"
+msgstr[1] "{{counts.webapps}} applicazioni web"
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} aplicacion"
-msgstr[1] "{{list.packages.length}} aplicacións"
+msgstr[0] "{{list.packages.length}} applicazione"
+msgstr[1] "{{list.packages.length}} applicazioni"
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Ap pulsar Instalar será levado á tenda de aplicacións oficial nun "
-"dispositivo Ubuntu Touch"
+"*Installa vi porterà sull' appstore ufficiale del dispositivo Ubuntu Touch"
 
 #: apps/partials/app.html:76
 msgid ""
@@ -72,37 +71,37 @@ msgstr ""
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "Engadir aplicacións:"
+msgstr "Aggiungere Applicazione:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Engadir á lista:"
+msgstr "Aggiungi all'elenco:"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Engadir esta aplicación á túa lista"
+msgstr "Questa applicazione è statta aggiunta al proprio elenco"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Todo"
+msgstr "Tutto"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr "Todas as aplicacións"
+msgstr "Tutte le applicazioni"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr "Todos os tipos"
+msgstr "Tutti i tipi"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Calquera"
+msgstr "Qualsiasi"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -118,87 +117,87 @@ msgstr ""
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr "Aplicación"
+msgstr "Applicazione"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Nome da aplicación (exemplo: com.ubuntu.developer.example)"
+msgstr "Nome applicazione (esempio: com.ubuntu.developer.example)"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr "Aplicacións"
+msgstr "Applicazioni"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"As aplicacións non son instaladas a través deste sitio, senón da tenda "
-"oficial."
+"Le applicazioni non sono installate tramite questo sito, ma tramite "
+"l'appstore ufficiale"
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr "Aplicacións:"
+msgstr "Applicazioni:"
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Arquitectura:"
+msgstr "Architettura:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Está seguro de querer eliminar \"{{selectedList.name}}\"?"
+msgstr "Si è sicuri di voler eliminare \"{{selectedList.name}}\"?"
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr "Explorar"
+msgstr "Sfoglia"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr "Explorar aplicacións"
+msgstr "Sfoglia applicazioni"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr "Explorar xogos"
+msgstr "Sfoglia giochi"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr "Explorar ámbitos"
+msgstr "Sfoglia ambiti"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr "Explorar web apps"
+msgstr "Sfoglia applicazioni web"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr "Mercar a web app"
+msgstr "Acquista l'applicazione web"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Merque a web app dende a tenda de software de Ubuntu Touch"
+msgstr "Acquista l'applicazione web da app store di Ubuntu Touch"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "Por: {{list.user_name}}"
+msgstr "Da: {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr "Categoría:"
+msgstr "Categoria:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr "Código Caxton"
+msgstr "Codice Caxton"
 
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "Rexistro de cambios"
+msgstr "Elenco modifiche"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr "Limpar a busca"
+msgstr "Pulisci ricerca"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -207,146 +206,141 @@ msgstr "Limpar a busca"
 #: main/partials/faq.html:113
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr "Pechar"
+msgstr "Chiudi"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr "Contendo:"
+msgstr "Contenuto:"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Non foi posíbel engadir a aplicación á lista neste momento, por favor ténteo "
-"de novo máis tarde."
+"Impossibile aggiungere un'applicazione all'elenco in questo momento, si "
+"prega di riprovare più tardi"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Non foi posíbel conectarse a Caxton neste momento, por favor ténteo de novo "
-"máis tarde."
+"Impossibile connettersi a Caxton in questo momento, si prega di riprovare "
+"più tardi"
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Non foi posíbel crear unha nova lista neste momento, por favor ténteo de "
-"novo máis tarde"
+"Impossibile creare un nuovo elenco in questo momento, si prega di riprovare "
+"più tardi"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
-"Non foi posíbel eliminar a lista neste momento, por favor ténteo de novo "
-"máis tarde"
+"Impossibile eliminare l'elenco in questo momento, si prega di riprovare più "
+"tardi"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
-msgstr ""
-"Non foi posíbel descargar os datos da aplicación, prema para reintentalo"
+msgstr "Impossibile scaricare i dati applicazione, fare clic per riprovare"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
-msgstr ""
-"Non foi posíbel descargar a lista de aplicacións, prema para reintentalo"
+msgstr "Impossibile scaricare l'elenco applicazioni, fare clic per riprovare"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
-msgstr ""
-"Non foi posíbel descargar a lista de categorías, prema para reintentalo"
+msgstr "Impossibile scaricare l'elenco categorie, fare clic per riprovare"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
-msgstr ""
-"Non foi posíbel descargar a lista de frameworks, prema para reintentalo"
+msgstr "Impossibile scaricare l'elenco framework, fare clic per riprovare"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
-msgstr ""
-"Non foi posíbel descargar a lista de licenzas, prema para reintentalo"
+msgstr "Impossibile scaricare l'elenco licenze, fare clic per riprovare"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr "Non foi posíbel atopar a aplicación"
+msgstr "Impossibile trovare applicazioni"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr "Non foi posíbel atopar a aplicación solicitada"
+msgstr "Impossibile trovare l'applicazione richiesta"
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr "Non foi posíbel atopar esta lista, pode ser que xa non exista"
+msgstr "Impossibile trovare questo elenco, potrebbe non esistere più"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
 msgstr ""
-"Non foi posíbel cargar as aplicacións para esta listaxe, por favor ténteo de "
-"novo máis tarde"
+"Impossibile caricare le applicazioni per questo elenco, si prega di "
+"riprovare più tardi"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
-"Non foi posíbel eliminar a aplicación desta listaxe, por favor ténteo de "
-"novo máis tarde"
+"Impossibile rimuovere l'applicazione da questo elenco, si prega di riprovare "
+"più tardi"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
 msgstr ""
-"Non foi posíbel recuperar a listaxe de aplicacións neste momento, por favor "
-"ténteo de novo máis tarde"
+"Impossibile recuperare l'elenco applicazioni in questo momento, si prega di "
+"riprovare più tardi."
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
 msgstr ""
-"Non foi posíbel recuperar a búsqueda nestes momentos, por favor ténteo de "
-"novo máis tarde"
+"Impossibile recuperare la ricerca in questo momento, si prega di riprovare "
+"più tardi."
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
-"Non foi posíbel actualizar a listaxe neste momento, por favor ténteo de novo "
-"máis tarde"
+"Impossibile aggiornare l'elenco in questo momento, si prega di riprovare più "
+"tardi"
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could save your settings at this time, please try again later"
 msgstr ""
-"Non foi posíbel gardar as súas configuracións neste momento, por favor "
-"ténteo de novo máis tarde"
+"Impossibile salvare le impostazioni in questo momento, si prega di riprovare "
+"più tardi"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr "Crear"
+msgstr "Crea"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "Crear unha listaxe"
+msgstr "Crea elenco"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Rimuovi"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr "Descrición"
+msgstr "Descrizione"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr "Doar"
+msgstr "Dona"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Doar via Bitcoin"
+msgstr "Dona tramite Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Doar via Gratipay"
+msgstr "Dona tramite Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Doar via Paypal"
+msgstr "Donate tramite Paypal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -358,51 +352,58 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"Donare a uApp Explorer è solo un modo per contribuire a renderlo migliore. \n"
+"Se scegli di donare, i soldi andranno a coprire i costi di infrastruttura. I "
+"costi includono\n"
+"il dominio, hosting, ecc. uApp Explorer sarà sempre un servizio libero e "
+"open source,\n"
+"indipendentemente dal numero di donazioni."
 
 #. The uApp Explorer donation app download link
 #: index.html:182
 msgid "Donation Web App"
-msgstr "Web App de doazón"
+msgstr "Donazione applicazione web"
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr "Editar"
+msgstr "Modifica"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "Editar listaxe"
+msgstr "Modifica elenco"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr "Aplicacións esenciais"
+msgstr "Applicazioni essenziali"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr "Preguntas máis frecuentes"
+msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr "Filtros"
+msgstr "Filtri"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr "Buscar"
+msgstr "Trova"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
-"Busca unha aplicación que aínda non fora traída dende a tenda oficial."
+"Trovare un applicazione che non è stata ancora recuperata dall'appstore "
+"ufficiale."
 
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr "Para a versión:"
+msgstr "Per versione:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr "Atopouse a aplicación solicitada"
+msgstr "Applicazione richiesta trovata"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
@@ -414,29 +415,29 @@ msgstr "Framework:"
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr "Gratis"
+msgstr "Gratuito"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr "Xogos"
+msgstr "Giochi"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "Faite cun lector de códigos QR para o teu dispositivo Ubuntu Touch"
+msgstr "Ottenere una scansione QR per il proprio dispositivo Ubuntu Touch"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr "Ir aló agora"
+msgstr "Procedere ora"
 
 #. Grid view
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr "Grade"
+msgstr "Griglia"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr "Puntuación de corazóns"
+msgstr "Valutazione cuore"
 
 #: main/partials/faq.html:47
 msgid ""
@@ -448,69 +449,71 @@ msgstr ""
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr "Máxima puntuación de corazóns"
+msgstr "Punteggio cuore più alto"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr "Máxima puntuación de estrelas"
+msgstr "Punteggio stella più alto"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr "Como podo axudar a mellorar este sitio?"
+msgstr "Come contribuire per migliorare questo sito?"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr "Como instalo aplicacións?"
+msgstr "Come installare le applicazioni?"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr "Como se determina a popularidade?"
+msgstr "Come viene determinata la popolarità?"
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr "Acabo de publicar a miña aplicación, por que non podo vela?"
+msgstr "Ho appena pubblicato la mia applicazione, perché non la vedo?"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "Se quere contribuír código, visite o repositorio en GitHub"
+msgstr "Se si vuole contribuire al codice visitare il repo GitHub"
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
-"Se quere reportar erros ou solicitar algunha novidade visite a páxina de "
-"problemas en GitHub."
+"Se si desidera inviare segnalazioni errori o richieste visitare la pagina "
+"dei problemi su GitHub."
 
 #: main/partials/faq.html:106
 msgid "If you would like to contact the author, visit his website."
-msgstr "Se quere contactar co autor, visite a súa web."
+msgstr "Se si desidera contattare l'autore, visitare il suo sito."
 
 #: main/partials/faq.html:102
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
-msgstr "Se quere contribuír economicamente, ten varias opcións para doar."
+msgstr ""
+"Se si vuole contribuire monetariamente, ci sono diverse opzioni per la "
+"donazione."
 
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr "Información"
+msgstr "Info"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr "É posíbel ter unha puntuación de corazóns negativa"
+msgstr "E' possibile avere un punteggio cuore negativo."
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "Lingua"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr "Última actualización"
+msgstr "Ultimo aggiornamento"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr "Menos populares (este mes)"
+msgstr "Meno popolare (questo mese)"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
@@ -521,75 +524,75 @@ msgstr "Licenza:"
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr "Listaxe"
+msgstr "Elenco"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr "Nome da listaxe:"
+msgstr "Nome elenco:"
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr "A cargar máis críticas..."
+msgstr "Caricamento di altre recensioni ..."
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr "A cargar críticas..."
+msgstr "Caricamento recensioni ..."
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr "Iniciar sesión"
+msgstr "Accedi"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr "Iniciar sesión con Ubuntu"
+msgstr "Accedere tramite Ubuntu"
 
 #: index.html:123
 msgid "Log Out"
-msgstr "Saír da sesión"
+msgstr "Uscire"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr "Mínima puntuación de corazóns"
+msgstr "Valutazione cuore peggiore"
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr "Mínima puntuación de estrelas"
+msgstr "Valutazione stella peggiore"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr "Bota en falta unha aplicación?"
+msgstr "Manca un applicazione?"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr "Popularidade mensual"
+msgstr "Popolarità mensile"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr "Máis aplicacións de {{app.author}}"
+msgstr "Altre applicazioni da {{app.author}}"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr "Máis caras (USD)"
+msgstr "Più costoso (USD)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr "Máis populares (este mes)"
+msgstr "Più popolare (questo mese)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr "Máis relevantes"
+msgstr "Più rilevanti"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr "As miñas listaxes"
+msgstr "Propri elenchi"
 
 #. The new apps rss feed link
 #: index.html:192
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr "Aplicacións novas"
+msgstr "Nuove applicazioni"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -601,166 +604,169 @@ msgstr ""
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr "Nova listaxe"
+msgstr "Nuovo elenco"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr "Máis novas"
+msgstr "Più recente"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr "Seguinte aplicación:"
+msgstr "Applicazione successiva:"
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr "Non"
+msgstr "No"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr "Non se atoparon aplicacións"
+msgstr "Nessuna applicazione trovata"
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr "Non se atoparon aplicacións, ténteo de novo"
+msgstr "Nessuna applicazione trovata, riprovare la ricerca."
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr "Non existen listaxes, cree algunha!"
+msgstr "Nessun elenco, crearne uno!"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr "Aínda non hai críticas!"
+msgstr "Ancora nessuna recensione!"
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr "Máis antigas"
+msgstr "Meno recenti"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr "Actualización máis antiga"
+msgstr "Aggiornamento meno recente"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr "Por favor, inicie sesión para enviar via Caxton"
+msgstr "Effettuare l'accesso per inviare tramite Caxton"
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
 msgstr ""
+"La popolarità è basata sul numero di recensioni da 4 e 5 stelle ricevuta "
+"dall' app\n"
+"durante il mese corrente."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr "Aplicación anterior:"
+msgstr "Applicazione precedente:"
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr "Código QR"
+msgstr "Codice QR"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr "QR Code para {{qrCodeTitle}}"
+msgstr "Codice QR per {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr "Eliminar esta aplicación da túa listaxe"
+msgstr "Rimuovere questa applicazione dal proprio elenco"
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr "Gardar"
+msgstr "Salva"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
 #: index.html:178
 msgid "Scope"
-msgstr "Ámbito"
+msgstr "Ambito"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr "Ámbitos"
+msgstr "Ambiti"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr "Capturas de pantalla"
+msgstr "Screenshots"
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr "Enviar via Caxton"
+msgstr "Invia tramite Caxton"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr "Enviada via Caxton"
+msgstr "Inviato tramite Caxton"
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr "Axustes"
+msgstr "Impostazioni"
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr "Compartir no Facebook"
+msgstr "Condividere su Facebook"
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr "Compartir en Google+"
+msgstr "Condividere su Google+"
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr "Compartir en Reddit"
+msgstr "Condividere su Reddit"
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr "Compartir no Twitter"
+msgstr "Condividere su Twitter"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr "Aplicacións semellantes"
+msgstr "Applicazioni simili"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr "Aplicación Snappy"
+msgstr "Applicazione Snappy"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr "Aplicacións Snappy"
+msgstr "Applicazioni Snappy"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr "Ordenar aplicacións por:"
+msgstr "Ordina applicazioni per:"
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr "Ordenar por:"
+msgstr "Ordina per:"
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr "Asistencia"
+msgstr "Supporto"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr "Asistencia:"
+msgstr "Supporto:"
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr "Termos:"
+msgstr "Termini:"
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr "Grazas!"
+msgstr "Grazie!"
 
 #: main/partials/faq.html:42
 msgid ""
@@ -783,16 +789,17 @@ msgstr ""
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr "Esta aplicación esta nas seguintes listaxes:"
+msgstr "Questa applicazione è in questi elenchi:"
 
 #: index.html:162
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
-"Esta aplicación es un expositor no oficial de aplicaciones para Ubuntu Touch."
+"Questa è un applicazione di visualizzazione non ufficiale delle applicazioni "
+"Ubuntu Touch."
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr "Esta listaxe está vacía!"
+msgstr "Questo elenco è vuoto!"
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -811,11 +818,11 @@ msgstr ""
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
-msgstr "Título A-Z"
+msgstr "Titolo A-Z"
 
 #: main/services/utils.js:74
 msgid "Title Z-A"
-msgstr "Título Z-A"
+msgstr "Titolo Z-A"
 
 #: main/partials/faq.html:20
 msgid ""
@@ -833,7 +840,7 @@ msgstr ""
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr "As mellores aplicacións"
+msgstr "Applicazioni migliori"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
@@ -843,94 +850,95 @@ msgstr "Tipo:"
 #. The updated apps rss feed link
 #: index.html:196
 msgid "Updated Apps"
-msgstr "Aplicacións actualizadas"
+msgstr "Applicazioni aggiornate"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr "Actualizadas:"
+msgstr "Aggiornato:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr "Lista do usuario:"
+msgstr "Elenco utenti:"
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr "Críticas do usuario"
+msgstr "Recensione degli utenti"
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr "Versión:"
+msgstr "Versione:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr "Ver"
+msgstr "Vista"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:174
 msgid "Web App"
-msgstr "Web App"
+msgstr "Applicazione web"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr "Web Apps"
+msgstr "Applicazioni web"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr "Sitio web:"
+msgstr "Sito web:"
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr "Benvido"
+msgstr "Benvenuto"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr "Benvido a uApp Explorer!"
+msgstr "Benvenuto su uApp Explorer!"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr ""
-"Que facer se atopo contido que infrinxe os dereitos de autor ou marca?"
+msgstr "Cosa fare se si trova una violazione di copyright o marchi?"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
-msgstr "Que é a puntuación de corazóns?"
+msgstr "Cos'è la valutazione cuore?"
 
 #: main/partials/faq.html:29
 msgid "What is the star rating?"
-msgstr "Que é a puntuación de estrelas?"
+msgstr "Cos'è la valutazione stella?"
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr "Que é este sitio?"
+msgstr "Cos'è questo sito?"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr "Onde pode informar dun problema ou pedir algunha novidade?"
+msgstr "Dove segnalare un problema o richiedere una nuova funzione?"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr "Tanto se escolle doar como se non, aprecio o seu soporte. Grazas!"
+msgstr "Se si sceglie di donare o no, apprezzo comunque il supporto. Grazie!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr "Por que doar?"
+msgstr "Perchè donare?"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr "Si"
+msgstr "Sì"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr "Xa está conectado via Caxton!"
+msgstr "Si è già connessi tramite Caxton!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr "A súa conta non está ligada a Caxton, prema para ir aos axustes."
+msgstr ""
+"Il proprio account non è connesso a Caxton, fare clic per andare alle "
+"impostazioni"
