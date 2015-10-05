@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-03 16:51+0000\n"
-"PO-Revision-Date: 2015-10-03 16:25+0000\n"
-"Last-Translator: Michael Zanetti <michael.zanetti@canonical.com>\n"
+"POT-Creation-Date: 2015-10-05 04:51+0000\n"
+"PO-Revision-Date: 2015-10-05 10:34+0000\n"
+"Last-Translator: Jasper Nalbach <jasper@bluetreehouse.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-05 04:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
 "X-Generator: Launchpad (build 17783)\n"
 "Language: de\n"
 
@@ -64,6 +64,9 @@ msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"*Diese Webapp fügt zusätzlichen Code zur Website hinzu, wodurch zusätzliche "
+"Features bereitgestellt werden können, aber auch Schadcode eingefügt werden "
+"kann. Benutzen Sie diese App nur, falls Sie dem Autor vertrauen."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
@@ -71,18 +74,18 @@ msgstr "Apps hinzufügen:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr ""
+msgstr "Zur Liste hinzufügen"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr ""
+msgstr "Zur Liste hinzugefügt"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
@@ -93,11 +96,11 @@ msgstr ""
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr ""
+msgstr "Alle Typen"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr ""
+msgstr "Jede"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -136,16 +139,16 @@ msgstr ""
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr ""
+msgstr "Architektur:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr ""
+msgstr "Wollen Sie \"{{selectedList.name}}\" wirklich löschen?"
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr ""
+msgstr "Durchsuchen"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
@@ -174,11 +177,11 @@ msgstr ""
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr ""
+msgstr "Von: {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr ""
+msgstr "Kategorie:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
@@ -187,20 +190,20 @@ msgstr ""
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr ""
+msgstr "Änderungsprotokoll"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr ""
+msgstr "Suche zurücksetzen"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:113
+#: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
@@ -219,10 +222,12 @@ msgstr ""
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
+"Liste konnte nicht erstellt werden, bitte versuchen Sie es später noch einmal"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
+"Liste konnte nicht gelöscht werden, bitte versuchen Sie es später noch einmal"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
@@ -283,38 +288,38 @@ msgstr ""
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr ""
+msgstr "Erstellen"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr ""
+msgstr "Liste erstellen"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr ""
+msgstr "Spenden"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr ""
+msgstr "Spenden mit Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr ""
+msgstr "Spenden mit Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Spenden mit Paypal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -328,17 +333,17 @@ msgid ""
 msgstr ""
 
 #. The uApp Explorer donation app download link
-#: index.html:182
+#: index.html:211
 msgid "Donation Web App"
 msgstr ""
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr ""
+msgstr "Liste bearbeiten"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
@@ -348,15 +353,15 @@ msgstr ""
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr ""
+msgstr "Suchen"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
@@ -365,7 +370,7 @@ msgstr ""
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr ""
+msgstr "Für Verion:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
@@ -374,18 +379,18 @@ msgstr ""
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr ""
+msgstr "Framework:"
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr ""
+msgstr "Kostenlos"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr ""
+msgstr "Spiele"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
@@ -399,7 +404,7 @@ msgstr ""
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr ""
+msgstr "Raster"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
@@ -412,6 +417,10 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
+
+#: index.html:164
+msgid "Help translate!"
+msgstr "Helfe beim Übersetzen"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
@@ -441,16 +450,20 @@ msgstr ""
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 
+#: main/partials/faq.html:102
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr ""
+
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
-#: main/partials/faq.html:106
+#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
-#: main/partials/faq.html:102
+#: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
@@ -551,7 +564,7 @@ msgid "My Lists"
 msgstr ""
 
 #. The new apps rss feed link
-#: index.html:192
+#: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
 msgstr ""
@@ -639,7 +652,7 @@ msgstr ""
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
-#: index.html:178
+#: index.html:207
 msgid "Scope"
 msgstr ""
 
@@ -750,7 +763,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-#: index.html:162
+#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
 
@@ -805,7 +818,7 @@ msgid "Type:"
 msgstr ""
 
 #. The updated apps rss feed link
-#: index.html:196
+#: index.html:225
 msgid "Updated Apps"
 msgstr ""
 
@@ -831,7 +844,7 @@ msgstr ""
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
-#: index.html:174
+#: index.html:203
 msgid "Web App"
 msgstr ""
 

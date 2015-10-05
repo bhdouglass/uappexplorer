@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-03 16:51+0000\n"
-"PO-Revision-Date: 2015-10-04 05:11+0000\n"
+"POT-Creation-Date: 2015-10-05 04:51+0000\n"
+"PO-Revision-Date: 2015-10-05 10:50+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-05 04:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
 "X-Generator: Launchpad (build 17783)\n"
 "Language: el\n"
 
@@ -42,8 +42,8 @@ msgstr[1] "{{counts.games}} παιχνίδια"
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} scope"
-msgstr[1] "{{counts.scopes}} scopes"
+msgstr[0] "{{counts.scopes}} επισκόπιο"
+msgstr[1] "{{counts.scopes}} επισκόπια"
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
@@ -168,7 +168,7 @@ msgstr "Πλοήγηση σε παιχνίδια"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr "Πλοήγηση σε scopes"
+msgstr "Πλοήγηση σε επισκόπια"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
@@ -194,7 +194,7 @@ msgstr "Κατηγορία:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr "Κωδικός Caxton"
+msgstr "Κώδικας Caxton"
 
 #. App changelog
 #: apps/partials/app.html:180
@@ -209,7 +209,7 @@ msgstr "Καθαρισμός αναζήτησης"
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:113
+#: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr "Κλείσιμο"
@@ -222,80 +222,106 @@ msgstr "Που περιέχουν:"
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Κατέστη αδύνατη η προσθήκη της εφαρμογής στη λίστα αυτή τη στιγμή, παρακαλώ "
-"προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή αυτή τη στιγμή η προσθήκη της εφαρμογής στη λίστα, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Κατέστη αδύνατη η σύνδεση στο Caxton αυτή τη στιγμή, παρακαλώ προσπαθήστε "
+"Δεν κατέστη δυνατή αυτή τη στιγμή η σύνδεση στο Caxton, παρακαλώ προσπαθήστε "
 "ξανά αργότερα"
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέας λίστας, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή της λίστας, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη των δεδομένων της εφαρμογής, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τις εφαρμογές, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τις κατηγορίες, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τους σκελετούς, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τις άδειες χρήσης, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr ""
+msgstr "Δε βρέθηκε η εφαρμογή"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr ""
+msgstr "Δε βρέθηκε η εφαρμογή προς αναζήτηση"
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr ""
+msgstr "Δε βρέθηκε η λίστα αυτή, ίσως δεν υπάρχει πια"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των εφαρμογών για αυτή τη λίστα, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή της εφαρμογής από αυτή τη "
+"λίστα, παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση της λίστας με τις εφαρμογές, "
+"παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση της αναζήτησης, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η ενημέρωση της λίστας, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could save your settings at this time, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η αποθήκευση των ρυθμίσεών σας, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
@@ -344,9 +370,9 @@ msgid ""
 msgstr ""
 
 #. The uApp Explorer donation app download link
-#: index.html:182
+#: index.html:211
 msgid "Donation Web App"
-msgstr ""
+msgstr "Εφαρμογή ιστού για δωρεές"
 
 #: lists/partials/me.html:60
 msgid "Edit"
@@ -377,6 +403,8 @@ msgstr "Αναζήτηση"
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
+"Αναζήτηση εφαρμογής που δεν έχει ληφθεί ακόμα από το επίσημο κατάστημα "
+"εφαρμογών."
 
 #. Comment below reviews
 #: apps/partials/app.html:367
@@ -385,12 +413,12 @@ msgstr "Για την έκδοση:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr "Η αναζητούμενη εφαρμογή βρέθηκε"
+msgstr "Η εφαρμογή προς αναζήτηση βρέθηκε"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr ""
+msgstr "Σκελετός:"
 
 #. No Cost
 #: apps/partials/app.html:50
@@ -405,7 +433,7 @@ msgstr "Παιχνίδια"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "Κατεβάστε ένα σαρωτή κωδικών QR για τη Ubuntu Touch συσκευή σας"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
@@ -427,6 +455,10 @@ msgid ""
 "1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts,\n"
 "and 1 star = -1 hearts."
+msgstr ""
+
+#: index.html:164
+msgid "Help translate!"
 msgstr ""
 
 #: main/services/utils.js:89
@@ -457,16 +489,20 @@ msgstr ""
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 
+#: main/partials/faq.html:102
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr ""
+
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
-#: main/partials/faq.html:106
+#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
-#: main/partials/faq.html:102
+#: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
@@ -475,7 +511,7 @@ msgstr ""
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr ""
+msgstr "Πληροφορίες"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
@@ -483,43 +519,43 @@ msgstr ""
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "Γλώσσα"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr ""
+msgstr "Τελευταία ενημέρωση"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr ""
+msgstr "Λιγότερο δημοφιλή (αυτό το μήνα)"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
-msgstr ""
+msgstr "Άδεια χρήσης:"
 
 #. List view
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr ""
+msgstr "Λίστα"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr ""
+msgstr "Όνομα λίστας:"
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr ""
+msgstr "Φόρτωση περισσότερων κριτικών..."
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr ""
+msgstr "Φόρτωση κριτικών..."
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr ""
+msgstr "Είσοδος"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
@@ -527,7 +563,7 @@ msgstr ""
 
 #: index.html:123
 msgid "Log Out"
-msgstr ""
+msgstr "Έξοδος"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
@@ -547,30 +583,30 @@ msgstr ""
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr ""
+msgstr "Περισσότερες εφαρμογές από {{app.author}}"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr ""
+msgstr "Πιο ακριβά (σε Δολλάρια)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr ""
+msgstr "Πιο δημοφιλή (αυτό το μήνα)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr ""
+msgstr "Πιο σχετικό"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr ""
+msgstr "Οι λίστες μου"
 
 #. The new apps rss feed link
-#: index.html:192
+#: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr ""
+msgstr "Νέες εφαρμογές"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -582,35 +618,35 @@ msgstr ""
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr ""
+msgstr "Νέα λίστα"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr ""
+msgstr "Νεότερο"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr ""
+msgstr "Επόμενη εφαρμογή:"
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr ""
+msgstr "Όχι"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr ""
+msgstr "Δε βρέθηκαν εφαρμογές"
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr ""
+msgstr "Δε βρέθηκαν εφαρμογές, παρακαλώ κάντε πάλι αναζήτηση."
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr ""
+msgstr "Δεν υπάρχουν λίστες, δημιουργήστε μια!"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr ""
+msgstr "Δεν υπάρχουν ακόμα κριτικές!"
 
 #: main/services/utils.js:80
 msgid "Oldest"
@@ -633,16 +669,16 @@ msgstr ""
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr ""
+msgstr "Προηγούμενη εφαρμογή:"
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr ""
+msgstr "Κώδικας QR"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr ""
+msgstr "Κώδικας QR για {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
@@ -651,38 +687,38 @@ msgstr ""
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
-#: index.html:178
+#: index.html:207
 msgid "Scope"
-msgstr ""
+msgstr "Επισκόπιο"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr ""
+msgstr "Επισκόπια"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr ""
+msgstr "Στιγμιότυπα οθόνης"
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Αποστολή μέσω Caxton"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Απεστάλη μέσω Caxton"
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr ""
+msgstr "Ρυθμίσεις"
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
@@ -766,7 +802,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-#: index.html:162
+#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
 
@@ -821,7 +857,7 @@ msgid "Type:"
 msgstr ""
 
 #. The updated apps rss feed link
-#: index.html:196
+#: index.html:225
 msgid "Updated Apps"
 msgstr ""
 
@@ -847,7 +883,7 @@ msgstr ""
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
-#: index.html:174
+#: index.html:203
 msgid "Web App"
 msgstr ""
 
@@ -905,7 +941,7 @@ msgstr ""
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "Είστε ήδη συνδεμένοι στο Caxton!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108

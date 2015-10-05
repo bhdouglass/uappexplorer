@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-03 16:51+0000\n"
-"PO-Revision-Date: 2015-09-30 06:38+0000\n"
+"POT-Creation-Date: 2015-10-05 04:51+0000\n"
+"PO-Revision-Date: 2015-10-05 14:18+0000\n"
 "Last-Translator: Reidotoxo <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-05 04:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
 "X-Generator: Launchpad (build 17783)\n"
 "Language: gl\n"
 
@@ -69,6 +69,9 @@ msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"*Esta webapp inxecta código personalizado no sitio web, e pode engadir "
+"características especiais ou maliciosas. Use esta aplicación só se confía no "
+"autor."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
@@ -115,6 +118,15 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"Cada solicitude de eliminación de contindo que infrinxa dereitos de autor ou "
+"marca\n"
+"debe ser levado a <a href=\"http://www.canonical.com/\">Canonical</a> ou ao "
+"autor\n"
+"da aplicación (o autor soe ter unha forma de contacto baixo a pestana "
+"\"Soporte\"\n"
+"na páxina da aplicación). uApp Explorer non está afiliado a Canonical e non\n"
+"aloxa ninguna aplicación. uAppExplorer so amosa información publicamente\n"
+"dispoñíbel na tenda oficial de Ubuntu Touch."
 
 #: apps/directives/type.js:26
 msgid "App"
@@ -204,7 +216,7 @@ msgstr "Limpar a busca"
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:113
+#: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr "Pechar"
@@ -358,9 +370,13 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"Doar a uApp Explorer é so unha forma de melloralo. Se decide\n"
+"doar, o diñeiro irá encamiñado a custos estruturais. Os custos inclúen\n"
+"nomes de dominio, aloxamento, etc. uApp Explorer será un servizo sempre\n"
+"gratuito e libre, independentemente do número de doazóns."
 
 #. The uApp Explorer donation app download link
-#: index.html:182
+#: index.html:211
 msgid "Donation Web App"
 msgstr "Web App de doazón"
 
@@ -445,6 +461,13 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
+"A puntuación de corazóns calcúlase dende a puntuación de estrela: 5\n"
+"estrelas = 1 corazón, 4 estrelas = 0.5 corazóns, 3 estrelas = o corazóns,\n"
+"2 estrelas = -0.5 corazóns e 1 estrela = -1 corazón."
+
+#: index.html:164
+msgid "Help translate!"
+msgstr "Axude na tradución!"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
@@ -474,6 +497,10 @@ msgstr "Acabo de publicar a miña aplicación, por que non podo vela?"
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Se quere contribuír código, visite o repositorio en GitHub"
 
+#: main/partials/faq.html:102
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr "Se quere axudar na tradución, visite o proxecto en Launchpad."
+
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
@@ -481,11 +508,11 @@ msgstr ""
 "Se quere reportar erros ou solicitar algunha novidade visite a páxina de "
 "problemas en GitHub."
 
-#: main/partials/faq.html:106
+#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr "Se quere contactar co autor, visite a súa web."
 
-#: main/partials/faq.html:102
+#: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
@@ -502,7 +529,7 @@ msgstr "É posíbel ter unha puntuación de corazóns negativa"
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "Lingua"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
@@ -586,7 +613,7 @@ msgid "My Lists"
 msgstr "As miñas listaxes"
 
 #. The new apps rss feed link
-#: index.html:192
+#: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
 msgstr "Aplicacións novas"
@@ -598,6 +625,10 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"As novas aplicacións tíranse da tenda oficial cada hora: pode ou ben\n"
+"agardar ata que as aplicacións son tiradas ou usar o formulario de "
+"solicitación\n"
+"para pedir que a aplicación sexa engadida antes dese tempo."
 
 #: lists/partials/me.html:42
 msgid "New List"
@@ -649,6 +680,8 @@ msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
 msgstr ""
+"A popularidade está baseada no número de críticas de 4 e 5 estrelas\n"
+"dadas a unha aplicación durante o mes actual."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
@@ -674,7 +707,7 @@ msgstr "Gardar"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
-#: index.html:178
+#: index.html:207
 msgid "Scope"
 msgstr "Ámbito"
 
@@ -769,6 +802,9 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
+"A puntuación de corazóns é similar á puntuación de estrelas, pero premia\n"
+"ás aplicacións por ter mellores críticas. Se ten máis puntuacións de 5 \n"
+"estrelas terá máis corazóns que outra con menos estrelas."
 
 #: main/partials/faq.html:30
 msgid ""
@@ -780,12 +816,18 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
+"A puntuación de estrelas é a media bayesiana das estrelas dadas polos\n"
+"usuarios a unha aplicación nas críticas. A media bayesiana permite a\n"
+"unha aplicación con máis críticas ficar mellor que outra con menos. A\n"
+"puntuación de estrelas vai de 0 a 5, onde 0 é que non hai críticas aínda\n"
+"Para máis información sobre a calculación desta media, comprobe\n"
+"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">este artigo</a>."
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
 msgstr "Esta aplicación esta nas seguintes listaxes:"
 
-#: index.html:162
+#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
 "Esta aplicación es un expositor no oficial de aplicaciones para Ubuntu Touch."
@@ -808,6 +850,16 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
+"Este sitio é un explorador non oficial de aplicacións para Ubutu Touch.  Os\n"
+"datos son extraídos publicamente dende unha \n"
+"<a "
+"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
+">\n"
+"Este sitio está mantido por <a href=\"http://bhdouglass.com/\">Brian "
+"Douglass</a>\n"
+"e non está apoiado nin afiliado con Ubuntu nin Canonical.\n"
+"Ubuntu e Canonical son marcas rexistradas de\n"
+"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
@@ -824,12 +876,17 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Para instalar unha aplicación, visite este sitio no seu dispositivo Ubuntu.\n"
+"Atope a aplicación desexada e prema \"Instalar\". Será entón redirixido\n"
+"á tenda oficial no seu dispositivo e poderá entón instalala."
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
+"Para informar dun problema ou pedir alguna novidade visite a páxina de "
+"problemas para este sitio en GitHub."
 
 #: main/partials/main.html:136
 msgid "Top Apps"
@@ -841,7 +898,7 @@ msgid "Type:"
 msgstr "Tipo:"
 
 #. The updated apps rss feed link
-#: index.html:196
+#: index.html:225
 msgid "Updated Apps"
 msgstr "Aplicacións actualizadas"
 
@@ -867,7 +924,7 @@ msgstr "Ver"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
-#: index.html:174
+#: index.html:203
 msgid "Web App"
 msgstr "Web App"
 

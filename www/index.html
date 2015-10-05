@@ -129,8 +129,12 @@
               </a>
               <ul class="dropdown-menu">
                 <li ng-class="{active: language == 'en'}">
-                  <a ng-click="setLanguage('en')" class="clickable">English</a>
+                  <a ng-click="setLanguage('en')" class="clickable">English (US)</a>
                 </li>
+                <li ng-class="{active: language == 'en_GB'}">
+                  <a ng-click="setLanguage('en_GB')" class="clickable">English (UK) (Partial)</a>
+                </li>
+
                 <li ng-class="{active: language == 'cs'}">
                   <a ng-click="setLanguage('cs')" class="clickable">Czech</a>
                 </li>
@@ -141,7 +145,7 @@
                   <a ng-click="setLanguage('gl')" class="clickable">Galician</a>
                 </li>
                 <li ng-class="{active: language == 'hu'}">
-                  <a ng-click="setLanguage('hu')" class="clickable">Hungarian (Partial)</a>
+                  <a ng-click="setLanguage('hu')" class="clickable">Hungarian</a>
                 </li>
                 <li ng-class="{active: language == 'it'}">
                   <a ng-click="setLanguage('it')" class="clickable">Italian</a>

@@ -256,12 +256,12 @@ msgstr ""
 msgid "Could not retrieve search at this time, please try again later."
 msgstr ""
 
-#: lists/controllers/listEditCtrl.js:67
-msgid "Could not update the list at this time, please try again later"
+#: lists/controllers/meCtrl.js:69
+msgid "Could not save your settings at this time, please try again later"
 msgstr ""
 
-#: lists/controllers/meCtrl.js:69
-msgid "Could save your settings at this time, please try again later"
+#: lists/controllers/listEditCtrl.js:67
+msgid "Could not update the list at this time, please try again later"
 msgstr ""
 
 #: lists/partials/listEdit.html:77

@@ -66,7 +66,7 @@ angular.module('appstore').controller('meCtrl', function($scope, $rootScope, $lo
         $scope.user = user;
       }, function(err) {
         console.error(err);
-        $rootScope.setError(gettextCatalog.getString('Could save your settings at this time, please try again later'));
+        $rootScope.setError(gettextCatalog.getString('Could not save your settings at this time, please try again later'));
       });
     }
   };

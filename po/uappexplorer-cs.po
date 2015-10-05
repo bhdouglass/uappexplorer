@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-03 16:51+0000\n"
+"POT-Creation-Date: 2015-10-05 04:51+0000\n"
 "PO-Revision-Date: 2015-10-04 17:35+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-05 04:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
 "X-Generator: Launchpad (build 17783)\n"
 "Language: cs\n"
 
@@ -219,7 +219,7 @@ msgstr "Vymazat hledání"
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:113
+#: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr "Zavřít"
@@ -369,7 +369,7 @@ msgstr ""
 "source bez ohledu na počet příspěvků."
 
 #. The uApp Explorer donation app download link
-#: index.html:182
+#: index.html:211
 msgid "Donation Web App"
 msgstr "Webová aplikace pro sponzory"
 
@@ -459,6 +459,10 @@ msgstr ""
 "2 hvězdičky = -0.5 bodu\n"
 "a 1 hvězdička = -1 bod."
 
+#: index.html:164
+msgid "Help translate!"
+msgstr ""
+
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
 msgstr "Nejvyšší vnitřní hodnocení"
@@ -489,6 +493,10 @@ msgstr ""
 "Pokud chcete přispět svými programátorskými znalostmi, navštivte repositář "
 "GitHub."
 
+#: main/partials/faq.html:102
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr ""
+
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
@@ -496,11 +504,11 @@ msgstr ""
 "Pokud chcete nahlásit chybu nebo požádat o novou funkci, navštivte sekci "
 "potíží v repositáři na GitHub."
 
-#: main/partials/faq.html:106
+#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr "Pokud chcete kontaktovat autora, navštivte jeho webovou stránku."
 
-#: main/partials/faq.html:102
+#: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
@@ -603,7 +611,7 @@ msgid "My Lists"
 msgstr "Mé seznamy"
 
 #. The new apps rss feed link
-#: index.html:192
+#: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
 msgstr "Nové aplikace"
@@ -699,7 +707,7 @@ msgstr "Uložit"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
-#: index.html:178
+#: index.html:207
 msgid "Scope"
 msgstr "Rozsah"
 
@@ -824,7 +832,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Tato aplikace se nachází na těchto seznamech:"
 
-#: index.html:162
+#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr "Toto je neoficiální katalog aplikací pro Ubuntu"
 
@@ -895,7 +903,7 @@ msgid "Type:"
 msgstr "Typ aplikace:"
 
 #. The updated apps rss feed link
-#: index.html:196
+#: index.html:225
 msgid "Updated Apps"
 msgstr "Aktualizované aplikace"
 
@@ -921,7 +929,7 @@ msgstr "Pohled"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
-#: index.html:174
+#: index.html:203
 msgid "Web App"
 msgstr "Webová aplikace"
 
