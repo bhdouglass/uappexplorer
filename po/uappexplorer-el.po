@@ -1,4 +1,4 @@
-# Czech translation for uappexplorer
+# Greek translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,107 +8,104 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-03 16:51+0000\n"
-"PO-Revision-Date: 2015-10-04 17:35+0000\n"
-"Last-Translator: zubozrout <zubozrout@gmail.com>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2015-10-04 05:11+0000\n"
+"Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
+"Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-10-05 04:32+0000\n"
 "X-Generator: Launchpad (build 17783)\n"
-"Language: cs\n"
+"Language: el\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "- Zvolte seznam -"
+msgstr "- Επιλογή λίστας -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Bez obav, verze zdarma existuje taky)"
+msgstr "(Μην ανησυχείτε, υπάρχει και δωρεάν έκδοση!)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} aplikace"
-msgstr[1] "{{counts.applications}} aplikací"
-msgstr[2] "{{counts.applications}} aplikací"
+msgstr[0] "{{counts.applications}} εφαρμογή"
+msgstr[1] "{{counts.applications}} εφαρμογές"
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} hra"
-msgstr[1] "{{counts.games}} her"
-msgstr[2] "{{counts.games}} her"
+msgstr[0] "{{counts.games}} παιχνίδι"
+msgstr[1] "{{counts.games}} παιχνίδια"
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} rozsah"
-msgstr[1] "{{counts.scopes}} rozsahů"
-msgstr[2] "{{counts.scopes}} rozsahů"
+msgstr[0] "{{counts.scopes}} scope"
+msgstr[1] "{{counts.scopes}} scopes"
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{{counts.webapps}} webová aplikace"
-msgstr[1] "{{counts.webapps}} webových aplikací"
-msgstr[2] "{{counts.webapps}} webových aplikací"
+msgstr[0] "{{counts.webapps}} εφαρμογή ιστού"
+msgstr[1] "{{counts.webapps}} εφαρμογές ιστού"
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} aplikace"
-msgstr[1] "{{list.packages.length}} aplikací"
-msgstr[2] "{{list.packages.length}} aplikací"
+msgstr[0] "{{list.packages.length}} εφαρμογή"
+msgstr[1] "{{list.packages.length}} εφαρμογές"
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr "*Instalační tlačítko vás přesměruje do oficiálního obchodu Ubuntu"
+msgstr ""
+"*Η εγκατάσταση όταν γίνεται σε συσκευή Ubuntu Touch σε κατευθύνει στο "
+"επίσημο κατάστημα εφαρμογών."
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"*Tato webová aplikace vkládá vlastní kód do zobrazovaných stránek nejspíše "
-"ve snaze o vylepšení funkcionality. Může být ale také nebezpečná. Tuto "
-"aplikaci používejte pouze, pokud důvěřujete autorovi."
+"*Η εφαρμογή ιστού αυτή κάνει ένεση κώδικα στην ιστοσελίδα που μπορεί να "
+"προσθέτει επιπλέον λειτουργίες ή να είναι κακόβουλος. Χρησιμοποιείστε την "
+"εφαρμογή αυτή μόνο αν εμπιστεύεστε το δημιουργό της."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "Přidat aplikace:"
+msgstr "Προσθήκη εφαρμογών:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Přidat do seznamu:"
+msgstr "Προσθήκη στη λίστα:"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Tato aplikace byla přidána do vašeho seznamu"
+msgstr "Η εφαρμογή αυτή προστέθηκε στη λίστα σας"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Vše"
+msgstr "Όλες"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr "Všechny aplikace"
+msgstr "Όλες οι εφαρμογές"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr "Všechny typy"
+msgstr "Όλοι οι τύποι"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Libovolné"
+msgstr "Οποιαδήποτε"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -121,99 +118,92 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
-"Veškeré požadavky na nápravu obsahu porušujícího copyrightu nebo obchodní "
-"známky byste měli\n"
-"adresovat společnosti <a href=\"http://www.canonical.com/\">Canonical</a> "
-"nebo autorovi\n"
-"aplikace (kontakt na něj je obvykle uveden v sekci \"Podpora\" na stránce "
-"aplikace).\n"
-"uApp Explorer není nikterak spojen se společností Canonical a žádné aplikace "
-"nehostuje.\n"
-"uApp Explorer zobrazuje pouze veřejně dostupná data z oficiálního obchodu "
-"Ubuntu."
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr "Aplikace"
+msgstr "Εφαρμογή"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Název aplikace (například: com.ubuntu.developer.ukazkove_jmeno)"
+msgstr "Όνομα εφαρμογής (π.χ.: com.ubuntu.developer.example)"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr "Aplikace"
+msgstr "Εφαρμογές"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Aplikace nejsou instalovány skrze tuto stránku, ale oficiální obchod Ubuntu."
+"Οι εφαρμογές δεν εγκαθίστανται μέσω αυτής της ιστοσελίδας, αλλά μέσω του "
+"επίσημου καταστήματος εφαρμογών."
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr "Aplikace:"
+msgstr "Εφαρμογές:"
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Architektura:"
+msgstr "Αρχιτεκτονική:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Skutečně chcete smazat \"{{selectedList.name}}\"?"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να διαγράψετε το \"{{selectedList.name}}\";"
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr "Procházet"
+msgstr "Πλοήγηση"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr "Procházet aplikace"
+msgstr "Πλοήγηση σε εφαρμογές"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr "Procházet hry"
+msgstr "Πλοήγηση σε παιχνίδια"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr "Procházet rozsahy"
+msgstr "Πλοήγηση σε scopes"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr "Procházet webové aplikace"
+msgstr "Πλοήγηση σε εφαρμογές ιστού"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr "Koupit webovou aplikaci"
+msgstr "Αγορά της εφαρμογής ιστού"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Koupit webovou aplikaci z obchodu Ubuntu"
+msgstr ""
+"Αγορά της εφαρμογής ιστού από το κατάστημα εφαρμογών του Ubuntu Touch"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "Od autora: {{list.user_name}}"
+msgstr "Από: {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr "Kategorie:"
+msgstr "Κατηγορία:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr "Kód služby Caxton"
+msgstr "Κωδικός Caxton"
 
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "Seznam změn"
+msgstr "Αρχείο καταγραφής αλλαγών"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr "Vymazat hledání"
+msgstr "Καθαρισμός αναζήτησης"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -222,133 +212,125 @@ msgstr "Vymazat hledání"
 #: main/partials/faq.html:113
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr "Zavřít"
+msgstr "Κλείσιμο"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr "Obsahující:"
+msgstr "Που περιέχουν:"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"V tento moment nebylo možné přidat aplikaci do seznamu, zkuste to prosím "
-"později."
+"Κατέστη αδύνατη η προσθήκη της εφαρμογής στη λίστα αυτή τη στιγμή, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"V tuto chvíli se nebylo možné připojit ke službě Caxton, zkuste to prosím "
-"později."
+"Κατέστη αδύνατη η σύνδεση στο Caxton αυτή τη στιγμή, παρακαλώ προσπαθήστε "
+"ξανά αργότερα"
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"V tento moment nebylo možné vytvořit nový seznam, zkuste to prosím později."
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
-msgstr "V tuto chvíli nebylo možné seznam vymazat, zkuste to prosím později"
+msgstr ""
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
-msgstr "Nebylo možné stáhnout data o aplikaci, klikněte pro opakování akce"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
-msgstr "Nebylo možné stáhnout seznam aplikací, klikněte pro opakování akce"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
-msgstr "Nebylo možné stáhnout seznam kategorií, klikněte pro opakování akce"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
-msgstr "Nebylo možné stáhnout seznam frameworků, klikněte pro opakování akce"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
-msgstr "Nebylo možné stáhnout seznam licencí, klikněte pro opakování akce."
+msgstr ""
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr "Nebylo možné najít aplikaci"
+msgstr ""
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr "Hledanou aplikaci nebylo možné nalézt"
+msgstr ""
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr "Tento seznam nebylo možné nalézt, možná už neexistuje"
+msgstr ""
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
 msgstr ""
-"Aplikace z tohoto seznamu nemohly být načteny, zkuste to prosím později"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
-"Aplikace z tohoto seznamu nemohla být smazána, zkuste to prosím později"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
 msgstr ""
-"V tuto chvíli nebylo možné stáhnout seznam aplikací, zkuste to prosím "
-"později."
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
 msgstr ""
-"Vyhledávání nebylo v tento moment možné zpracovat, zkuste to prosím později"
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
-"V tuto chvíli nebylo možné seznam aktualizovat, zkuste to prosím později"
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could save your settings at this time, please try again later"
 msgstr ""
-"V tento moment nebylo možné nastavení uložit, zkuste to prosím později"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr "Vytvořit"
+msgstr "Δημιουργία"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "Založit seznam"
+msgstr "Δημιουργία λίστας"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr "Smazat"
+msgstr "Διαγραφή"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr "Popis"
+msgstr "Περιγραφή"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr "Přispět"
+msgstr "Δωρεά"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Přispět skrze Bitcoin"
+msgstr "Κάντε δωρεά μέσω Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Přispět skrze Gratipay"
+msgstr "Κάντε δωρεά μέσω Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Přispět skrze Paypal"
+msgstr "Κάντε δωρεά μέσω Paypal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -360,91 +342,84 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
-"Darování finančního příspěvku je jen jeden za způsobů jak uApp Explorer "
-"vylepšit. Pokud\n"
-"si zvolíte tuto cestu, vaše peníze budou použity na výdaje spojené s "
-"infrastrukturou.\n"
-"Ty zahrnují doménová jména, hosting atd. uApp Explorer zůstane služba zdarma "
-"a open\n"
-"source bez ohledu na počet příspěvků."
 
 #. The uApp Explorer donation app download link
 #: index.html:182
 msgid "Donation Web App"
-msgstr "Webová aplikace pro sponzory"
+msgstr ""
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr "Upravit"
+msgstr "Επεξεργασία"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "Upravit seznam"
+msgstr "Επεξεργασία λίστας"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr "Nezbytné aplikace"
+msgstr "Απαραίτητες εφαρμογές"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr "Často kladené otázky (FAQ)"
+msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr "Filtry"
+msgstr "Φίλτρα"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr "Hledat"
+msgstr "Αναζήτηση"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr "Hledat aplikaci která nebyla nalezena v oficiálním obchodě Ubuntu"
+msgstr ""
 
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr "Pro verzi:"
+msgstr "Για την έκδοση:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr "Hledaná aplikace byla nalezena"
+msgstr "Η αναζητούμενη εφαρμογή βρέθηκε"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr "Framework"
+msgstr ""
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr "Zdarma"
+msgstr "Δωρεάν"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr "Hry"
+msgstr "Παιχνίδια"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "Získejte čtečku QR kódů pro vaše zařízení Ubuntu"
+msgstr ""
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr "Přejít nyní"
+msgstr "Πήγαινε εκεί τώρα"
 
 #. Grid view
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr "Mřížka"
+msgstr "Πλέγμα"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr "Vnitřní hodnocení"
+msgstr ""
 
 #: main/partials/faq.html:47
 msgid ""
@@ -453,160 +428,149 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
-"Vnitřní hodnocení jsou vypočítána z hvězdičkového hodnocení, kde 5 "
-"hvězdičkové hodnocení\n"
-"je 1 bod vnitřního hodnocení, 4 hvězdičky = 0.5 bodu, 3 hvězdičky = 0 bodů, "
-"2 hvězdičky = -0.5 bodu\n"
-"a 1 hvězdička = -1 bod."
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr "Nejvyšší vnitřní hodnocení"
+msgstr ""
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr "Nejvyšší počet hvězd"
+msgstr ""
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr "Jak mohu pomoci vylepšit tuto stránku?"
+msgstr ""
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr "Jak nainstaluji aplikace?"
+msgstr ""
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr "Jak je určována oblíbenost aplikací?"
+msgstr ""
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr "Zrovna jsem publikoval svou aplikaci. Proč ji zde nevidím?"
+msgstr ""
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
-"Pokud chcete přispět svými programátorskými znalostmi, navštivte repositář "
-"GitHub."
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
-"Pokud chcete nahlásit chybu nebo požádat o novou funkci, navštivte sekci "
-"potíží v repositáři na GitHub."
 
 #: main/partials/faq.html:106
 msgid "If you would like to contact the author, visit his website."
-msgstr "Pokud chcete kontaktovat autora, navštivte jeho webovou stránku."
+msgstr ""
 
 #: main/partials/faq.html:102
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
-"Pokud byste rádi přispěli finančně, existuje více způsobů, jak tak můžete "
-"učinit."
 
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr "Informace o aplikaci"
+msgstr ""
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr "Je možné mít záporné vnitřní hodnocení aplikace"
+msgstr ""
 
 #: index.html:128
 msgid "Language"
-msgstr "Jazyk"
+msgstr ""
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr "Poslední aktualizace"
+msgstr ""
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr "Nejméně oblíbené (tento měsíc)"
+msgstr ""
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
-msgstr "Licence:"
+msgstr ""
 
 #. List view
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr "Seznam"
+msgstr ""
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr "Název seznamu"
+msgstr ""
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr "Další hodnocení se načítají..."
+msgstr ""
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr "Načítání hodnocení..."
+msgstr ""
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr "Přihlásit se"
+msgstr ""
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr "Přihlásit se skrze účet Ubuntu"
+msgstr ""
 
 #: index.html:123
 msgid "Log Out"
-msgstr "Odhlásit se"
+msgstr ""
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr "Nejnižší vnitřní hodnocení"
+msgstr ""
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr "Nejnižší počet hvězd"
+msgstr ""
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr "Chybí vám nějaká aplikace?"
+msgstr ""
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr "Měsíční oblíbenost"
+msgstr ""
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr "Více aplikací od autora {{app.author}}"
+msgstr ""
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr "Nejdražší (Americké dolary)"
+msgstr ""
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr "Nejoblíbenější (tento měsíc)"
+msgstr ""
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr "Nejnepostradatelnější"
+msgstr ""
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr "Mé seznamy"
+msgstr ""
 
 #. The new apps rss feed link
 #: index.html:192
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr "Nové aplikace"
+msgstr ""
 
 #: main/partials/faq.html:67
 msgid ""
@@ -615,177 +579,169 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
-"Nové aplikace jsou stahovány z oficiálního obchodu Ubuntu každou hodinu. "
-"Pokud zde\n"
-"svou aplikaci nevidíte, můžete buď vyčkat na automatickou synchronizaci, "
-"nebo zažádat\n"
-"o její dřívější zveřejnění skrze formulář."
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr "Nový seznam"
+msgstr ""
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr "Nejnovější"
+msgstr ""
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr "Další aplikace:"
+msgstr ""
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr "Ne"
+msgstr ""
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr "Žádné aplikace nebyly nalezeny"
+msgstr ""
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr "Žádné aplikace nebyly nalezeny, zkuste opakovat vyhledávání"
+msgstr ""
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr "Žádné seznamy. Vytvořte nějaký."
+msgstr ""
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr "Tato aplikace ještě nebyla okomentována."
+msgstr ""
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr "Nejstarší"
+msgstr ""
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr "Nejstarší aktualizace"
+msgstr ""
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr "Přihlaste se prosím pro zaslání skrze Caxton"
+msgstr ""
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
 msgstr ""
-"Oblíbenost je založena na počtu 4 a 5 hvězdičkových hodnocení udělených "
-"aplikaci\n"
-"během aktuálního měsíce."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr "Předchozí aplikace"
+msgstr ""
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr "QR kód"
+msgstr ""
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr "QR kód pro {{qrCodeTitle}}"
+msgstr ""
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr "Odstranit tuto aplikaci z vašeho seznamu"
+msgstr ""
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr "Uložit"
+msgstr ""
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
 #: index.html:178
 msgid "Scope"
-msgstr "Rozsah"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr "Rozsahy"
+msgstr ""
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr "Snímky obrazovky"
+msgstr ""
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr "Odeslat skrze Caxton"
+msgstr ""
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr "Odesláno skrze Caxton"
+msgstr ""
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr "Nastavení"
+msgstr ""
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr "Sdílet na Facebooku"
+msgstr ""
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr "Sdílet na Google+"
+msgstr ""
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr "Sdílet na Reddit"
+msgstr ""
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr "Sdílet na Twitteru"
+msgstr ""
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr "Podobné aplikace"
+msgstr ""
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr "Aplikace Snappy"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr "Snappy aplikace"
+msgstr ""
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr "Řadit aplikace podle"
+msgstr ""
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr "Seřadit podle:"
+msgstr ""
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr "Podpora"
+msgstr ""
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr "Podpora:"
+msgstr ""
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr "Podmínky:"
+msgstr ""
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr "Děkujeme!"
+msgstr ""
 
 #: main/partials/faq.html:42
 msgid ""
@@ -794,10 +750,6 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
-"Vnitřní hodnocení je podobné hvězdičkovému hodnocení, bere však v potaz\n"
-"počet hodnocení. Aplikace s více 5 hvězdičkovými hodnoceními bude mít lepší "
-"postavení,\n"
-"než aplikace s menším množstvím stejných ohlasů."
 
 #: main/partials/faq.html:30
 msgid ""
@@ -809,28 +761,18 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
-"Celkové hvězdičkové hodnocení je Bayesův průměr všech hvězdičkových "
-"hodnocení, která\n"
-"uživatelé příslušné aplikaci udělují. Tento průměr umožňuje aplikacím s "
-"větším počtem\n"
-"pozitivních hodnocení vyniknout nad těmi s menším počtem hodnocení. "
-"Hvězdičkové hodnocení\n"
-"může nabývat hodnot 1 až 5, nebo 0, nebyla-li aplikace ještě hodnocena.\n"
-"Pro více informací o Bayesově průměru se můžete dozvědět\n"
-"v <a href=\"http://fulmicoton.com/posts/bayesian_rating/\">tomto článku</a> "
-"(anglicky)."
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr "Tato aplikace se nachází na těchto seznamech:"
+msgstr ""
 
 #: index.html:162
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Toto je neoficiální katalog aplikací pro Ubuntu"
+msgstr ""
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr "Tento seznam je prázdný!"
+msgstr ""
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -846,23 +788,14 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
-"Toto je neoficiální katalog aplikací Ubuntu. Všechna data\n"
-"pocházejí z veřejných zdrojů, <a "
-"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">API</a"
-">.\n"
-"Tuto stránku spravuje <a href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
-"a není v žádném případě podporována ani nikterak spojena s Ubuntu nebo "
-"společností Canonical.\n"
-"Ubuntu a Canonical jsou registrovanými známkami společnosti <a "
-"href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
-msgstr "Název A-Z"
+msgstr ""
 
 #: main/services/utils.js:74
 msgid "Title Z-A"
-msgstr "Název Z-A"
+msgstr ""
 
 #: main/partials/faq.html:20
 msgid ""
@@ -871,119 +804,108 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"Pro instalaci aplikace navštivte tuto stránku na vašem zařízení Ubuntu.\n"
-"Vyhledejte kýženou aplikaci a klikněte na tlačítko \"Instalovat\". Poté "
-"budete\n"
-"za účelem instalace přesměrováni do oficiálního obchodu Ubuntu."
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
-"Pokud si přejete nahlásit problém nebo požádat o novou funkci uApp "
-"Exploreru, navštivte sekci problémů v repositáři této stránky na serveru "
-"GitHub."
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr "Nejlepší aplikace"
+msgstr ""
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
 msgid "Type:"
-msgstr "Typ aplikace:"
+msgstr ""
 
 #. The updated apps rss feed link
 #: index.html:196
 msgid "Updated Apps"
-msgstr "Aktualizované aplikace"
+msgstr ""
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr "Aktualizováno:"
+msgstr ""
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr "Uživatelský seznam"
+msgstr ""
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr "Uživatelský hodnocení"
+msgstr ""
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr "Verze:"
+msgstr ""
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr "Pohled"
+msgstr ""
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:174
 msgid "Web App"
-msgstr "Webová aplikace"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr "Webové aplikace"
+msgstr ""
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr "Webová stránka:"
+msgstr ""
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr "Vítejte"
+msgstr ""
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr "Vítejte v uApp Exploreru!"
+msgstr ""
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
-"Co dělat v případě, že naleznu obsah porušující copyright nebo ochranou "
-"známku?"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
-msgstr "Co je to vnitřní hodnocení?"
+msgstr ""
 
 #: main/partials/faq.html:29
 msgid "What is the star rating?"
-msgstr "Co je to hodnocení počtem hvězd?"
+msgstr ""
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr "Co je tato stránka zač?"
+msgstr ""
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr "Kde mohu nahlásit potíže nebo požádat o novou funkci?"
+msgstr ""
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
-"Ať už si zvolíte do uApp Exploreru přispět nebo ne, jsem velice vděčný za "
-"vaši podporu. Děkuji!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr "Proč přispět?"
+msgstr ""
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr "Ano"
+msgstr ""
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr "Už jste připojen přes službu Caxton!"
+msgstr ""
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
@@ -991,4 +913,3 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
-"Váš účet není připojen ke službě Caxton. Klikněte pro přechod do nastavení"

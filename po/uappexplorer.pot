@@ -180,7 +180,7 @@ msgstr ""
 #: lists/partials/listEdit.html:67
 #: lists/partials/login.html:9
 #: main/partials/disclaimer.html:16
-#: main/partials/faq.html:113
+#: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
 msgstr ""
@@ -308,7 +308,7 @@ msgid ""
 msgstr ""
 
 #. The uApp Explorer donation app download link
-#: index.html:182
+#: index.html:211
 msgid "Donation Web App"
 msgstr ""
 
@@ -392,6 +392,10 @@ msgid ""
 "and 1 star = -1 hearts."
 msgstr ""
 
+#: index.html:164
+msgid "Help translate!"
+msgstr ""
+
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
 msgstr ""
@@ -420,15 +424,19 @@ msgstr ""
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 
+#: main/partials/faq.html:102
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr ""
+
 #: main/partials/faq.html:98
 msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
-#: main/partials/faq.html:106
+#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
-#: main/partials/faq.html:102
+#: main/partials/faq.html:106
 msgid "If you would like to contribute monetarily, there are multiple options for donating."
 msgstr ""
 
@@ -527,7 +535,7 @@ msgid "My Lists"
 msgstr ""
 
 #. The new apps rss feed link
-#: index.html:192
+#: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
 msgstr ""
@@ -614,7 +622,7 @@ msgstr ""
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
-#: index.html:178
+#: index.html:207
 msgid "Scope"
 msgstr ""
 
@@ -723,7 +731,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-#: index.html:162
+#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
 
@@ -772,7 +780,7 @@ msgid "Type:"
 msgstr ""
 
 #. The updated apps rss feed link
-#: index.html:196
+#: index.html:225
 msgid "Updated Apps"
 msgstr ""
 
@@ -798,7 +806,7 @@ msgstr ""
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
-#: index.html:174
+#: index.html:203
 msgid "Web App"
 msgstr ""
 
