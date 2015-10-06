@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-05 04:51+0000\n"
+"POT-Creation-Date: 2015-10-05 15:00+0000\n"
 "PO-Revision-Date: 2015-10-05 14:07+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
-"X-Generator: Launchpad (build 17783)\n"
+"X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
+"X-Generator: Launchpad (build 17802)\n"
 "Language: en_GB\n"
 
 #: apps/partials/app.html:152
@@ -279,13 +279,13 @@ msgstr "Could not retrieve app list at this time, please try again later."
 msgid "Could not retrieve search at this time, please try again later."
 msgstr "Could not retrieve search at this time, please try again later."
 
+#: lists/controllers/meCtrl.js:69
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr "Could not update the list at this time, please try again later"
-
-#: lists/controllers/meCtrl.js:69
-msgid "Could save your settings at this time, please try again later"
-msgstr "Could save your settings at this time, please try again later"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"

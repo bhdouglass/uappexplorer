@@ -1,4 +1,4 @@
-# German translation for uappexplorer
+# Chinese (Simplified) translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,99 +8,94 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-05 10:34+0000\n"
-"Last-Translator: Jasper Nalbach <jasper@bluetreehouse.de>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2015-10-06 06:15+0000\n"
+"Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
-"Language: de\n"
+"Language: zh_CN\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "- Liste auswählen -"
+msgstr "- 选择一个列表 -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Keine Angst, es gibt auch eine kostenlose version!)"
+msgstr "(别担心, 也有免费的版本!)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} Apps"
+msgstr[0] "{{counts.applications}} 应用"
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} Spiele"
+msgstr[0] "{{counts.games}} 游戏"
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} Scopes"
+msgstr[0] "{{counts.scopes}} scopes"
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{{counts.webapps}} Web Apps"
+msgstr[0] "{{counts.webapps}} web 应用"
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} Apps"
+msgstr[0] "{{list.packages.length}} 应用"
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr ""
-"*Beim Klick auf Installieren mit Ihrem Ubuntu Phone, werden Sie zum "
-"offiziellen Ubuntu Touch Store weitergeleitet."
+msgstr "*安装将引导你去 Ubuntu Touch 设备上的官方应用商店"
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
-msgstr ""
-"*Diese Webapp fügt zusätzlichen Code zur Website hinzu, wodurch zusätzliche "
-"Features bereitgestellt werden können, aber auch Schadcode eingefügt werden "
-"kann. Benutzen Sie diese App nur, falls Sie dem Autor vertrauen."
+msgstr "*这个web应用在网页中插入了自定义代码，它可以添加额外的功能或是恶意的。仅在信任作者的情况下使用这个应用。"
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "Apps hinzufügen:"
+msgstr "添加应用："
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Zur Liste hinzufügen"
+msgstr "添加到列表："
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Zur Liste hinzugefügt"
+msgstr "添加这个应用到你的列表："
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Alle"
+msgstr "全部"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr ""
+msgstr "全部应用"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr "Alle Typen"
+msgstr "全部类型"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Jede"
+msgstr "任意"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -113,88 +108,94 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"任何要求删除版权或商标侵权的内容应该是要\n"
+"<a href=\"http://www.canonical.com/\">Canonical</a> 或应用的\n"
+"作者 (作者通常在他们的应用页面的“支持”标签下\n"
+"列有联系方式)来处理。uApp Explorer 不隶属于 Canonical\n"
+"也并不承载任何应用。uApp Explorer 只展示关于官方\n"
+"Ubuntu Touch 应用商店可公开获得的信息。"
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr ""
+msgstr "应用"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr ""
+msgstr "应用名称 (例如: com.ubuntu.developer.example)"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr ""
+msgstr "应用"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
-msgstr ""
+msgstr "应用不通过此站安装，通过官方应用商店安装。"
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr ""
+msgstr "应用："
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Architektur:"
+msgstr "架构："
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Wollen Sie \"{{selectedList.name}}\" wirklich löschen?"
+msgstr "你确定要删除 \"{{selectedList.name}}\"?"
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr "Durchsuchen"
+msgstr "浏览"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr ""
+msgstr "浏览应用"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr ""
+msgstr "浏览游戏"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr ""
+msgstr "浏览Scope"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr ""
+msgstr "浏览Web应用"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr ""
+msgstr "购买Web应用"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr ""
+msgstr "从 Ubuntu Touch 应用商店购买web应用"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "Von: {{list.user_name}}"
+msgstr ""
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr "Kategorie:"
+msgstr "类别："
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr ""
+msgstr "Caxton 代码"
 
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "Änderungsprotokoll"
+msgstr "更新日志"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr "Suche zurücksetzen"
+msgstr "清空搜索"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -203,123 +204,121 @@ msgstr "Suche zurücksetzen"
 #: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr "Schließen"
+msgstr "关闭"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr ""
+msgstr "包含："
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
-msgstr ""
+msgstr "此时无法添加应用到列表中，请稍后重试"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
-msgstr ""
+msgstr "此时无法连接到Caxton，请稍后重试"
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
-msgstr ""
-"Liste konnte nicht erstellt werden, bitte versuchen Sie es später noch einmal"
+msgstr "此时无法创建新列表，请稍后重试"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
-msgstr ""
-"Liste konnte nicht gelöscht werden, bitte versuchen Sie es später noch einmal"
+msgstr "此时无法删除列表，请稍后重试"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
-msgstr ""
+msgstr "无法下载应用数据，点击重试"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
-msgstr ""
+msgstr "无法下载应用列表，点击重试"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
-msgstr ""
+msgstr "无法下载类别列表，点击重试"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
-msgstr ""
+msgstr "无法下载框架列表，点击重试"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
-msgstr ""
+msgstr "无法下载许可证列表，点击重试"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr ""
+msgstr "无法找到应用"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr ""
+msgstr "无法找到请求的应用"
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr ""
+msgstr "无法找到此列表，可能已不存在"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
-msgstr ""
+msgstr "无法载入此列表应用，请稍后重试"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
-msgstr ""
+msgstr "无法从此列表删除应用，请稍后重试"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
-msgstr ""
+msgstr "此时无法检索应用列表，请稍后重试。"
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
-msgstr ""
+msgstr "此时无法检索搜索，请稍后重试。"
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could not save your settings at this time, please try again later"
-msgstr ""
+msgstr "此时无法保存你的设置，请稍后重试"
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
-msgstr ""
+msgstr "此时无法更新列表，请稍后重试"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr "Erstellen"
+msgstr "创建"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "Liste erstellen"
+msgstr "创建列表"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr "Löschen"
+msgstr "删除"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "描述"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr "Spenden"
+msgstr "捐助"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Spenden mit Bitcoin"
+msgstr "通过比特币捐助"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Spenden mit Gratipay"
+msgstr "通过Gratipay捐助"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Spenden mit Paypal"
+msgstr "通过Paypal捐助"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -331,23 +330,27 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"捐助 uApp Explorer 是你帮助它变得更好的唯一方式。如果\n"
+"你选择捐助，你的钱将用于基础设施的费用。费用包括\n"
+"域名，托管等。不论捐款数目，uApp Explorer 将\n"
+"永久免费并且开源服务。"
 
 #. The uApp Explorer donation app download link
 #: index.html:211
 msgid "Donation Web App"
-msgstr ""
+msgstr "捐助Web应用"
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "编辑"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "Liste bearbeiten"
+msgstr "编辑列表"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr ""
+msgstr "必备应用"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
@@ -357,58 +360,58 @@ msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr "Filter"
+msgstr "筛选"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr "Suchen"
+msgstr "查找"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr ""
+msgstr "查找尚未从官方应用商店获取的应用。"
 
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr "Für Verion:"
+msgstr "版本："
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr ""
+msgstr "找到请求的应用"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr "Framework:"
+msgstr "框架"
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr "Kostenlos"
+msgstr "免费"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr "Spiele"
+msgstr "游戏"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "为你的 Ubuntu Touch 设备获取二维码扫描器"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr ""
+msgstr "立刻跳到"
 
 #. Grid view
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr "Raster"
+msgstr "栅格"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr ""
+msgstr "心评级"
 
 #: main/partials/faq.html:47
 msgid ""
@@ -416,123 +419,123 @@ msgid ""
 "1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts,\n"
 "and 1 star = -1 hearts."
-msgstr ""
+msgstr "心评级通过星评级计算而来，一个5星评论为1点心，4星 = 0.5心，3星 = 0心，2星 = -0.5心，1星 = -1心。"
 
 #: index.html:164
 msgid "Help translate!"
-msgstr "Helfe beim Übersetzen"
+msgstr "帮助翻译！"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr ""
+msgstr "最高心评分"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr ""
+msgstr "最高星评分"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr ""
+msgstr "如何改善此站？"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr ""
+msgstr "如何安装应用？"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr ""
+msgstr "受欢迎度是如何确定的?"
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr ""
+msgstr "我发布了我的应用，为什么看不到它？"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr ""
+msgstr "如果你想贡献代码访问 GitHub 仓库。"
 
 #: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr ""
+msgstr "如果你想帮助翻译，访问 Launchpad 项目。"
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
-msgstr ""
+msgstr "如果你想提交bugs或功能请求访问 GitHub issues 页面。"
 
 #: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
-msgstr ""
+msgstr "如果你想联系作者，访问他的网站。"
 
 #: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
-msgstr ""
+msgstr "如果您想金钱贡献，可以有多种选择的捐助。"
 
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr ""
+msgstr "信息"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr ""
+msgstr "可能有负心评级。"
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "语言"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr ""
+msgstr "最后更新"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr ""
+msgstr "最不受欢迎(本月)"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
-msgstr ""
+msgstr "许可证："
 
 #. List view
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr ""
+msgstr "列表"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr ""
+msgstr "列表名："
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr ""
+msgstr "载入更多评论"
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr ""
+msgstr "载入评论中..."
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr ""
+msgstr "登录"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr ""
+msgstr "通过Ubuntu登录"
 
 #: index.html:123
 msgid "Log Out"
-msgstr ""
+msgstr "注销"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr ""
+msgstr "最低心评级"
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr ""
+msgstr "最低星评级"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"

@@ -1,4 +1,4 @@
-# German translation for uappexplorer
+# Swedish translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,99 +8,99 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-05 10:34+0000\n"
-"Last-Translator: Jasper Nalbach <jasper@bluetreehouse.de>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2015-10-05 20:11+0000\n"
+"Last-Translator: Fredrik Andersson <fredrikfritte@gmail.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
-"Language: de\n"
+"Language: sv\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "- Liste auswählen -"
+msgstr ""
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Keine Angst, es gibt auch eine kostenlose version!)"
+msgstr ""
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} Apps"
+msgstr[0] ""
+msgstr[1] ""
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} Spiele"
+msgstr[0] ""
+msgstr[1] ""
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} Scopes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{{counts.webapps}} Web Apps"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} Apps"
+msgstr[0] ""
+msgstr[1] ""
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Beim Klick auf Installieren mit Ihrem Ubuntu Phone, werden Sie zum "
-"offiziellen Ubuntu Touch Store weitergeleitet."
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"*Diese Webapp fügt zusätzlichen Code zur Website hinzu, wodurch zusätzliche "
-"Features bereitgestellt werden können, aber auch Schadcode eingefügt werden "
-"kann. Benutzen Sie diese App nur, falls Sie dem Autor vertrauen."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "Apps hinzufügen:"
+msgstr ""
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Zur Liste hinzufügen"
+msgstr ""
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Zur Liste hinzugefügt"
+msgstr ""
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Alle"
+msgstr "Alla"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr ""
+msgstr "Alla Appar"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr "Alle Typen"
+msgstr "Alla typer"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Jede"
+msgstr "Vilken som helst"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr ""
+msgstr "App"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
@@ -125,7 +125,7 @@ msgstr ""
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr ""
+msgstr "Appar"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
@@ -133,38 +133,38 @@ msgstr ""
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr ""
+msgstr "Appar:"
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Architektur:"
+msgstr "Arkitektur:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Wollen Sie \"{{selectedList.name}}\" wirklich löschen?"
+msgstr ""
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr "Durchsuchen"
+msgstr "Bläddra"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr ""
+msgstr "Bläddra bland appar"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr ""
+msgstr "Bläddra bland spel"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr ""
+msgstr "Bläddra bland Scopes"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr ""
+msgstr "Bländra bland Webappar"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
@@ -177,11 +177,11 @@ msgstr ""
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "Von: {{list.user_name}}"
+msgstr ""
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr "Kategorie:"
+msgstr "Kategori:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
@@ -190,11 +190,11 @@ msgstr ""
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "Änderungsprotokoll"
+msgstr "Ändringslogg"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr "Suche zurücksetzen"
+msgstr "Töm sökfältet"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -203,12 +203,12 @@ msgstr "Suche zurücksetzen"
 #: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr "Schließen"
+msgstr "Stäng"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr ""
+msgstr "Innehåller:"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
@@ -222,12 +222,10 @@ msgstr ""
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Liste konnte nicht erstellt werden, bitte versuchen Sie es später noch einmal"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
-"Liste konnte nicht gelöscht werden, bitte versuchen Sie es später noch einmal"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
@@ -288,38 +286,38 @@ msgstr ""
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr "Erstellen"
+msgstr "Skapa"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "Liste erstellen"
+msgstr "Skapa lista"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr "Löschen"
+msgstr "Ta bort"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "Beskrivning"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr "Spenden"
+msgstr "Donera"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Spenden mit Bitcoin"
+msgstr "Donera via Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Spenden mit Gratipay"
+msgstr "Donera via Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Spenden mit Paypal"
+msgstr "Donera via Paypal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -339,11 +337,11 @@ msgstr ""
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "Ändra"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "Liste bearbeiten"
+msgstr ""
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
@@ -361,7 +359,7 @@ msgstr "Filter"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr "Suchen"
+msgstr "Sök"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
@@ -370,7 +368,7 @@ msgstr ""
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr "Für Verion:"
+msgstr ""
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
@@ -379,18 +377,18 @@ msgstr ""
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr "Framework:"
+msgstr ""
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr "Kostenlos"
+msgstr "Gratis"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr "Spiele"
+msgstr "Spel"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
@@ -404,7 +402,7 @@ msgstr ""
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr "Raster"
+msgstr ""
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
@@ -420,7 +418,7 @@ msgstr ""
 
 #: index.html:164
 msgid "Help translate!"
-msgstr "Helfe beim Übersetzen"
+msgstr ""
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
@@ -436,7 +434,7 @@ msgstr ""
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr ""
+msgstr "Hur installerar jag appar?"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
@@ -472,7 +470,7 @@ msgstr ""
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
@@ -480,11 +478,11 @@ msgstr ""
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr ""
+msgstr "Senaste uppdatering"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
@@ -493,13 +491,13 @@ msgstr ""
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
-msgstr ""
+msgstr "Licens:"
 
 #. List view
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
@@ -516,15 +514,15 @@ msgstr ""
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr ""
+msgstr "Logga in"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr ""
+msgstr "Logga in via Ubuntu"
 
 #: index.html:123
 msgid "Log Out"
-msgstr ""
+msgstr "Logga ut"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
@@ -567,7 +565,7 @@ msgstr ""
 #: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr ""
+msgstr "Nya Appar"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -579,19 +577,19 @@ msgstr ""
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr ""
+msgstr "Ny lista"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr ""
+msgstr "Senaste"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr ""
+msgstr "Nästa App:"
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
@@ -611,7 +609,7 @@ msgstr ""
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr ""
+msgstr "Äldsta"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
@@ -635,11 +633,11 @@ msgstr ""
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr ""
+msgstr "QR-kod"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr ""
+msgstr "QR Code för {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
@@ -648,70 +646,70 @@ msgstr ""
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
 #: index.html:207
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr ""
+msgstr "Scopes"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr ""
+msgstr "Skärmbilder"
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Sänd via Caxton"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Skickat via Caxton"
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Dela på Facebook"
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr ""
+msgstr "Dela på Google+"
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr ""
+msgstr "Dela på Reddit"
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr ""
+msgstr "Dela på Twitter"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr ""
+msgstr "Liknande Appar"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr ""
+msgstr "Snappy App"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy Appar"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
@@ -719,26 +717,26 @@ msgstr ""
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr ""
+msgstr "Sortera efter:"
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr ""
+msgstr "Support:"
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr ""
+msgstr "Villkor:"
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr ""
+msgstr "Tack!"
 
 #: main/partials/faq.html:42
 msgid ""
@@ -815,16 +813,16 @@ msgstr ""
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
 msgid "Type:"
-msgstr ""
+msgstr "Typ:"
 
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr ""
+msgstr "Uppdaterade Appar"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr ""
+msgstr "Uppdaterad:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
@@ -836,35 +834,35 @@ msgstr ""
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr ""
+msgstr "Version:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr ""
+msgstr "Visa"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr ""
+msgstr "Web App"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr ""
+msgstr "Web Appar"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr ""
+msgstr "Hemsida:"
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr ""
+msgstr "Välkommen"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr ""
+msgstr "Välkommen till uApp Explorer!"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
@@ -898,7 +896,7 @@ msgstr ""
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"

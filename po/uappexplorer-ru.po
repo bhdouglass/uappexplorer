@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-05 04:51+0000\n"
-"PO-Revision-Date: 2015-10-05 13:50+0000\n"
+"POT-Creation-Date: 2015-10-05 15:00+0000\n"
+"PO-Revision-Date: 2015-10-06 12:54+0000\n"
 "Last-Translator: Hamel <hameloid@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
-"X-Generator: Launchpad (build 17783)\n"
+"X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
+"X-Generator: Launchpad (build 17802)\n"
 "Language: ru\n"
 
 #: apps/partials/app.html:152
@@ -295,15 +295,17 @@ msgstr ""
 "В данный момент не удалось выполнить поиск, пожалуйста, повторите попытку "
 "позже."
 
+#: lists/controllers/meCtrl.js:69
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+"В данный момент не удалось сохранить настройки, пожалуйста, повторите "
+"попытку позже"
+
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
 "В данный момент не удалось обновить список, пожалуйста, повторите попытку "
 "позже"
-
-#: lists/controllers/meCtrl.js:69
-msgid "Could save your settings at this time, please try again later"
-msgstr ""
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
@@ -490,6 +492,8 @@ msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
+"Если вы хотите помочь деньгами,  у вас есть несколько вариантов для "
+"пожертвования."
 
 #. App info
 #: apps/partials/app.html:183
@@ -562,7 +566,7 @@ msgstr "Отсутствует приложение?"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr ""
+msgstr "Ежемесячная популярность"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
@@ -598,6 +602,10 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"Новые приложения извлекаются из официального магазина Ubuntu каждый час, вы "
+"можете либо￼\n"
+"подождать, пока новые приложения появятся или воспользоваться формой запроса "
+"для более быстрого поиска приложения."
 
 #: lists/partials/me.html:42
 msgid "New List"
@@ -625,7 +633,7 @@ msgstr "Приложение не найдено, попробуйте поис�
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr ""
+msgstr "Нет списков, создать один!"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
@@ -642,13 +650,15 @@ msgstr ""
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "Пожалуйста авторизуйтесь чтобы послать через Caxton"
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
 msgstr ""
+"Популярности основана на 4 и 5-звездных отзывах поставленных приложению\n"
+"в течение текущего месяца."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
@@ -692,12 +702,12 @@ msgstr "Скриншоты"
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Отправить через Caxton"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Отправлено через Caxton"
 
 #: lists/partials/me.html:13
 msgid "Settings"
@@ -783,7 +793,7 @@ msgstr ""
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr ""
+msgstr "Это приложение находится в этих списках:"
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
@@ -862,18 +872,18 @@ msgstr "Версия:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr ""
+msgstr "Вид"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr ""
+msgstr "Веб-приложение"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr ""
+msgstr "Веб-приложения"
 
 #: apps/partials/app.html:220
 msgid "Website:"
@@ -902,21 +912,22 @@ msgstr ""
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr ""
+msgstr "Что это за сайт?"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "Где я могу сообщить о проблеме или запросить новую функцию?"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
+"Помогаете вы деньгами или нет, я все равно ценю вашу поддержку. Спасибо!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr ""
+msgstr "Для чего помогать деньгами?"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
@@ -924,7 +935,7 @@ msgstr "Да"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "Вы уже соединены через Caxton!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108

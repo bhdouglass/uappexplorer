@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-05 04:51+0000\n"
-"PO-Revision-Date: 2015-10-05 14:18+0000\n"
+"POT-Creation-Date: 2015-10-05 15:00+0000\n"
+"PO-Revision-Date: 2015-10-06 07:02+0000\n"
 "Last-Translator: Reidotoxo <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
-"X-Generator: Launchpad (build 17783)\n"
+"X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
+"X-Generator: Launchpad (build 17802)\n"
 "Language: gl\n"
 
 #: apps/partials/app.html:152
@@ -313,17 +313,17 @@ msgstr ""
 "Non foi posíbel recuperar a búsqueda nestes momentos, por favor ténteo de "
 "novo máis tarde"
 
+#: lists/controllers/meCtrl.js:69
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+"Non se puideron gardar as súas configuracións neste momento. Por favor "
+"ténteo máis tarde."
+
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
 "Non foi posíbel actualizar a listaxe neste momento, por favor ténteo de novo "
 "máis tarde"
-
-#: lists/controllers/meCtrl.js:69
-msgid "Could save your settings at this time, please try again later"
-msgstr ""
-"Non foi posíbel gardar as súas configuracións neste momento, por favor "
-"ténteo de novo máis tarde"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"

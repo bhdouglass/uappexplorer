@@ -7,21 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-05 04:51+0000\n"
-"PO-Revision-Date: 2015-10-05 10:50+0000\n"
+"POT-Creation-Date: 2015-10-05 15:00+0000\n"
+"PO-Revision-Date: 2015-10-06 13:07+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-05 14:44+0000\n"
-"X-Generator: Launchpad (build 17783)\n"
+"X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
+"X-Generator: Launchpad (build 17802)\n"
 "Language: el\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "- Επιλογή λίστας -"
+msgstr "- Επιλογή καταλόγου -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
@@ -69,7 +69,7 @@ msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"*Η εφαρμογή ιστού αυτή κάνει ένεση κώδικα στην ιστοσελίδα που μπορεί να "
+"*Η εφαρμογή ιστού αυτή κάνει ένεση κώδικα στην ιστοσελίδα ο οποίος μπορεί να "
 "προσθέτει επιπλέον λειτουργίες ή να είναι κακόβουλος. Χρησιμοποιείστε την "
 "εφαρμογή αυτή μόνο αν εμπιστεύεστε το δημιουργό της."
 
@@ -79,18 +79,18 @@ msgstr "Προσθήκη εφαρμογών:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Προσθήκη στη λίστα:"
+msgstr "Προσθήκη στον κατάλογο:"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Η εφαρμογή αυτή προστέθηκε στη λίστα σας"
+msgstr "Η εφαρμογή αυτή προστέθηκε στον κατάλογό σας"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Όλες"
+msgstr "Όλα"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
@@ -105,7 +105,7 @@ msgstr "Όλοι οι τύποι"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Οποιαδήποτε"
+msgstr "Οποιοδήποτε"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -118,6 +118,17 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"Οι αιτήσεις για αφαίρεση περιεχομένου που καταπατάει πνευματικά δικαιώματα "
+"πρέπει να\n"
+"γίνονται στη <a href=\"http://www.canonical.com/\">Canonical</a> ή στο "
+"δημιουργό\n"
+"της εφαρμογής (οι δημιουργοί συνήθως παρέχουν τρόπους επικοινωνίας στην "
+"καρτέλα\n"
+"\"Υποστήριξη\" της σελίδας της εφαρμογής). Το uApp Explorer δε σχετίζεται με "
+"τη Canonical\n"
+"και δε φιλοξενεί εφαρμογές. Το uApp Explorer μόνο προβάλει ελεύθερα "
+"διαθέσιμο\n"
+"περιεχόμενο για το επίσημο κατάστημα εφαρμογών του Ubuntu Touch."
 
 #: apps/directives/type.js:26
 msgid "App"
@@ -222,7 +233,7 @@ msgstr "Που περιέχουν:"
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η προσθήκη της εφαρμογής στη λίστα, "
+"Δεν κατέστη δυνατή αυτή τη στιγμή η προσθήκη της εφαρμογής στον κατάλογο, "
 "παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appCtrl.js:136
@@ -235,44 +246,44 @@ msgstr ""
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέας λίστας, παρακαλώ "
+"Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέου καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή της λίστας, παρακαλώ "
+"Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή του καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη των δεδομένων της εφαρμογής, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η λήψη των δεδομένων της εφαρμογής, πατήστε εδώ για να "
+"προσπαθήσετε ξανά"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τις εφαρμογές, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η λήψη του καταλόγου με τις εφαρμογές, πατήστε εδώ για να "
+"προσπαθήσετε ξανά"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τις κατηγορίες, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η λήψη του καταλόγου με τις κατηγορίες, πατήστε εδώ για "
+"να προσπαθήσετε ξανά"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τους σκελετούς, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η λήψη του καταλόγου με τους σκελετούς, πατήστε εδώ για "
+"να προσπαθήσετε ξανά"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η λήψη της λίστας με τις άδειες χρήσης, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η λήψη του καταλόγου με τις άδειες χρήσης, πατήστε εδώ "
+"για να προσπαθήσετε ξανά"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
@@ -285,24 +296,24 @@ msgstr "Δε βρέθηκε η εφαρμογή προς αναζήτηση"
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr "Δε βρέθηκε η λίστα αυτή, ίσως δεν υπάρχει πια"
+msgstr "Δε βρέθηκε ο κατάλογος αυτός, ίσως δεν υπάρχει πια"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των εφαρμογών για αυτή τη λίστα, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η φόρτωση των εφαρμογών για αυτόν τον κατάλογο, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή της εφαρμογής από αυτή τη "
-"λίστα, παρακαλώ προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή η διαγραφή της εφαρμογής από αυτόν τον κατάλογο, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση της λίστας με τις εφαρμογές, "
+"Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση του καταλόγου με τις εφαρμογές, "
 "παρακαλώ προσπαθήστε ξανά αργότερα"
 
 #: lists/partials/listEdit.html:56
@@ -311,16 +322,16 @@ msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση της αναζήτησης, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
+#: lists/controllers/meCtrl.js:69
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η αποθήκευση των ρυθμίσεών σας, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
+
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η ενημέρωση της λίστας, παρακαλώ "
-"προσπαθήστε ξανά αργότερα"
-
-#: lists/controllers/meCtrl.js:69
-msgid "Could save your settings at this time, please try again later"
-msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η αποθήκευση των ρυθμίσεών σας, παρακαλώ "
+"Δεν κατέστη δυνατή αυτή τη στιγμή η ενημέρωση του καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
 #: lists/partials/listEdit.html:77
@@ -329,7 +340,7 @@ msgstr "Δημιουργία"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "Δημιουργία λίστας"
+msgstr "Δημιουργία καταλόγου"
 
 #: lists/partials/me.html:65
 msgid "Delete"
@@ -347,16 +358,16 @@ msgstr "Δωρεά"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Κάντε δωρεά μέσω Bitcoin"
+msgstr "Δωρεά μέσω Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Κάντε δωρεά μέσω Gratipay"
+msgstr "Δωρεά μέσω Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Κάντε δωρεά μέσω Paypal"
+msgstr "Δωρεά μέσω Paypal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -368,6 +379,14 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"Η δωρεά στο uApp Explorer είναι απλά ακόμα ένας τρόπος να βοηθήσετε για να "
+"γίνει ακόμα καλύτερο. Αν\n"
+"επιλέξετε να κάνετε δωρεά, τα χρήματά σας θα χρησιμοποιηθούν για την κάλυψη "
+"του κόστους υποδομών. Τέτοια\n"
+"κόστη περιλαμβάνουν ονόματα χώρου (domain names), φιλοξενία σελίδας, κτλ. Το "
+"uApp Explorer θα είναι για πάντα\n"
+"μια υπηρεσία ανοιχτού λογισμικού που παρέχεται ελεύθερα, ανεξάρτητα από τον "
+"αριθμό των δωρεών."
 
 #. The uApp Explorer donation app download link
 #: index.html:211
@@ -380,7 +399,7 @@ msgstr "Επεξεργασία"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "Επεξεργασία λίστας"
+msgstr "Επεξεργασία καταλόγου"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
@@ -390,7 +409,7 @@ msgstr "Απαραίτητες εφαρμογές"
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "Συχνές Ερωτήσεις"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
@@ -447,7 +466,7 @@ msgstr "Πλέγμα"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr ""
+msgstr "Βαθμολογία σε καρδιές"
 
 #: main/partials/faq.html:47
 msgid ""
@@ -456,57 +475,72 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
+"Οι βαθμολογίες σε καρδιές υπολογίζονται από τη βαθμολογία σε αστέρια όπου "
+"μια κριτική με 5 αστέρια\n"
+"είναι 1 πόντος καρδιάς, 4 αστέρια = 0.5 καρδιές, 3 αστέρια = 0 καρδιές, 2 "
+"αστέρια = -0.5 καρδιές,\n"
+"και 1 αστέρι = -1 καρδιές."
 
 #: index.html:164
 msgid "Help translate!"
-msgstr ""
+msgstr "Βοηθήστε στη μετάφραση!"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr ""
+msgstr "Υψηλότερη βαθμολογία σε καρδιές"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr ""
+msgstr "Υψηλότερη βαθμολογία σε αστέρια"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr ""
+msgstr "Πώς μπορώ να βοηθήσω στη βελτίωση αυτού του ιστότοπου;"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr ""
+msgstr "Πώς εγκαθιστώ εφαρμογές;"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr ""
+msgstr "Πώς υπολογίζεται η δημοτικότητα;"
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr ""
+msgstr "Μόλις δημοσίευσα την εφαρμογή μου, γιατί δεν μπορώ να τη δω;"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
+"Αν επιθυμείτε να συνεισφέρετε με κώδικα επισκεφτείτε το αποθετήριο στο "
+"GitHub."
 
 #: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
+"Αν επιθυμείτε να βοηθήσετε με τη μετάφραση, επισκεφτείτε την ιστοσελίδα στο "
+"Launchpad."
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
+"Αν επιθυμείτε να αναφέρετε σφάλματα ή να ζητήσετε νέες λειτουργίες "
+"επισκεφτείτε την ιστοσελίδα προβλημάτων στο GitHub."
 
 #: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
+"Αν επιθυμείτε να επικοινωνήσετε με το δημιουργό, επισκεφτείτε τον ιστότοπό "
+"του."
 
 #: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
+"Αν επιθυμείτε να συνεισφέρετε χρηματικά, υπάρχουν πολλές επιλογές για την "
+"πραγματοποίηση δωρεάς."
 
 #. App info
 #: apps/partials/app.html:183
@@ -515,7 +549,7 @@ msgstr "Πληροφορίες"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr ""
+msgstr "Είναι δυνατό να υπάρχει βαθμολογία σε καρδιές με αρνητικό πρόσημο."
 
 #: index.html:128
 msgid "Language"
@@ -527,7 +561,7 @@ msgstr "Τελευταία ενημέρωση"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr "Λιγότερο δημοφιλή (αυτό το μήνα)"
+msgstr "Λιγότερο δημοφιλή (αυτόν το μήνα)"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
@@ -538,48 +572,48 @@ msgstr "Άδεια χρήσης:"
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr "Λίστα"
+msgstr "Κατάλογος"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr "Όνομα λίστας:"
+msgstr "Όνομα καταλόγου:"
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr "Φόρτωση περισσότερων κριτικών..."
+msgstr "Γίνεται φόρτωση περισσότερων κριτικών..."
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr "Φόρτωση κριτικών..."
+msgstr "Γίνεται φόρτωση κριτικών..."
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr "Είσοδος"
+msgstr "Σύνδεση"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr ""
+msgstr "Σύνδεση μέσω Ubuntu"
 
 #: index.html:123
 msgid "Log Out"
-msgstr "Έξοδος"
+msgstr "Αποσύνδεση"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr ""
+msgstr "Χαμηλότερη βαθμολογία σε καρδιές"
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr ""
+msgstr "Χαμηλότερη βαθμολογία σε αστέρια"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr ""
+msgstr "Δε μπορείτε να βρείτε την εφαρμογή;"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr ""
+msgstr "Μηνιαία δημοτικότητα"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
@@ -587,20 +621,20 @@ msgstr "Περισσότερες εφαρμογές από {{app.author}}"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr "Πιο ακριβά (σε Δολλάρια)"
+msgstr "Πιο ακριβά (σε δολλάρια)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr "Πιο δημοφιλή (αυτό το μήνα)"
+msgstr "Πιο δημοφιλή (αυτόν το μήνα)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr "Πιο σχετικό"
+msgstr "Πιο σχετικά"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr "Οι λίστες μου"
+msgstr "Οι κατάλογοί μου"
 
 #. The new apps rss feed link
 #: index.html:221
@@ -615,14 +649,19 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"Η λήψη νέων εφαρμογών από το επίσημο κατάστημα γίνεται κάθε ώρα, μπορείτε "
+"είτε να\n"
+"περιμένετε μέχρι να ληφθούν οι νέες εφαρμογές ή να χρησιμοποιήσετε τη φόρμα "
+"υποβολής για\n"
+"να ζητήσετε να βρεθεί η εφαρμογή νωρίτερα."
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr "Νέα λίστα"
+msgstr "Νέος κατάλογος"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr "Νεότερο"
+msgstr "Νεότερα"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
@@ -642,7 +681,7 @@ msgstr "Δε βρέθηκαν εφαρμογές, παρακαλώ κάντε π
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr "Δεν υπάρχουν λίστες, δημιουργήστε μια!"
+msgstr "Δεν υπάρχουν κατάλογοι, δημιουργήστε έναν!"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
@@ -650,22 +689,25 @@ msgstr "Δεν υπάρχουν ακόμα κριτικές!"
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr ""
+msgstr "Παλαιότερα"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr ""
+msgstr "Παλαιότερη ενημέρωση"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "Παρακαλώ συνδεθείτε για να κάνετε αποστολή μέσω Caxton"
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
 msgstr ""
+"Η δημοτικότητα βασίζεται στον αριθμό των κριτικών με 4 ή 5 αστέρια που έχουν "
+"δοθεί σε μια\n"
+"εφαρμογή μέσα στον τρέχων μήνα."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
@@ -682,7 +724,7 @@ msgstr "Κώδικας QR για {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr ""
+msgstr "Διαγραφή της εφαρμογής αυτής από τον κατάλογό σας"
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
@@ -723,61 +765,61 @@ msgstr "Ρυθμίσεις"
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Διαμοιρασμός στο Facebook"
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr ""
+msgstr "Διαμοιρασμός στο Google+"
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr ""
+msgstr "Διαμοιρασμός στο Reddit"
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr ""
+msgstr "Διαμοιρασμός στο Twitter"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr ""
+msgstr "Παρόμοιες εφαρμογές"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr ""
+msgstr "Snappy εφαρμογή"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy εφαρμογές"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr ""
+msgstr "Ταξινόμηση εφαρμογών κατά:"
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr ""
+msgstr "Ταξινόμηση κατά:"
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr ""
+msgstr "Υποστήριξη"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr ""
+msgstr "Υποστήριξη:"
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr ""
+msgstr "Όροι:"
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr ""
+msgstr "Ευχαριστώ!"
 
 #: main/partials/faq.html:42
 msgid ""
@@ -786,6 +828,12 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
+"Η βαθμολογία σε καρδιές είναι όμοια με τη βαθμολογία σε αστέρια, αλλά "
+"ανταμείβει τις εφαρμογές\n"
+"που έχουν περισσότερες καλές κριτικές. Μια εφαρμογή με πολλές βαθμολογίες 5 "
+"αστέρων θα έχει\n"
+"υψηλότερη βαθμολογία σε καρδιές από μια εφαρμογή που έχει μόνο λίγες "
+"βαθμολογίες με 5 αστέρια."
 
 #: main/partials/faq.html:30
 msgid ""
@@ -800,15 +848,15 @@ msgstr ""
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr ""
+msgstr "Η εφαρμογή αυτή βρίσκεται στους ακόλουθους καταλόγους:"
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr ""
+msgstr "Αυτός είναι ένας ανεπίσημος προβολέας εφαρμογών Ubuntu Touch."
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr ""
+msgstr "Ο κατάλογος αυτός είναι άδειος!"
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -824,14 +872,25 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
+"O ιστότοπος αυτός είναι ένας ανεπίσημος περιηγητής εφαρμογών για το Ubuntu "
+"Touch. Όλα τα δεδομένα\n"
+"για τις εφαρμογές προέρχονται από ένα ελεύθερα προσβάσιμο\n"
+"<a "
+"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
+">.\n"
+"Ο ιστότοπος αυτός συντηρείται από τον <a "
+"href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
+"και δε σχετίζεται ούτε έχει την έγκριση του Ubuntu ή της Canonical.\n"
+"Τα Ubuntu και Canonical είναι σήματα κατατεθέντα της\n"
+"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
-msgstr ""
+msgstr "Τίτλος A-Z"
 
 #: main/services/utils.js:74
 msgid "Title Z-A"
-msgstr ""
+msgstr "Τίτλος Z-A"
 
 #: main/partials/faq.html:20
 msgid ""
@@ -840,104 +899,113 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Για να εγκαταστήσετε μια εφαρμογή, επισκεφτείτε αυτόν τον ιστότοπο από τη "
+"Ubuntu Touch συσκευή σας. Βρείτε την\n"
+"εφαρμογή που θέλετε να εγκαταστήσετε και πατήστε το κουμπί \"Εγκατάσταση\". "
+"Θα οδηγηθείτε έπειτα στο επίσημο\n"
+"κατάστημα εφαρμογών όπου θα μπορέσετε να εγκαταστήσετε την εφαρμογή."
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
+"Για να κάνετε αναφορά ενός προβλήματος ή να ζητήσετε μια νέα λειτουργία "
+"επισκεφτείτε την ιστοσελίδα προβλημάτων στο GitHub."
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr ""
+msgstr "Κορυφαίες εφαρμογές"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
 msgid "Type:"
-msgstr ""
+msgstr "Είδος:"
 
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr ""
+msgstr "Εφαρμογές με ενημερώσεις"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr ""
+msgstr "Ενημερώθηκε:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr ""
+msgstr "Κατάλογος χρηστών:"
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr ""
+msgstr "Κριτικές από χρήστες"
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr ""
+msgstr "Έκδοση:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr ""
+msgstr "Προβολή"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr ""
+msgstr "Εφαρμογή ιστού"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr ""
+msgstr "Εφαρμογές ιστού"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr ""
+msgstr "Ιστότοπος:"
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr ""
+msgstr "Καλώς ήρθατε"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr ""
+msgstr "Καλώς ήρθατε στο uApp Explorer!"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr ""
+msgstr "Τι πρέπει να κάνω αν βρω υλικό που καταπατάει πνευματικά δικαιώματα;"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
-msgstr ""
+msgstr "Τι είναι η βαθμολογία σε καρδιές;"
 
 #: main/partials/faq.html:29
 msgid "What is the star rating?"
-msgstr ""
+msgstr "Τι είναι η βαθμολογία σε αστέρια;"
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr ""
+msgstr "Τι είναι αυτός ο ιστότοπος;"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "Πού μπορώ να αναφέρω ένα πρόβλημα ή να ζητήσω μια νέα λειτουργία;"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
+"Ανεξάρτητα από το αν θα επιλέξετε να κάνετε δωρεά ή όχι, θα εκτιμήσω την "
+"όποια υποστήριξή σας. Ευχαριστώ!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr ""
+msgstr "Για ποιο λόγο να κάνω δωρεά;"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr ""
+msgstr "Ναι"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
@@ -949,3 +1017,5 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
+"Δεν έχετε κάνει σύνδεση του λογαριασμού σας με το Caxton, πατήστε εδώ για να "
+"πάτε στις ρυθμίσεις σας"
