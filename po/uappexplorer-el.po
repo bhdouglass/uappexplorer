@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-06 13:07+0000\n"
+"PO-Revision-Date: 2015-10-06 16:49+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
+"X-Launchpad-Export-Date: 2015-10-07 22:36+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
 "Language: el\n"
 
@@ -124,8 +124,8 @@ msgstr ""
 "δημιουργό\n"
 "της εφαρμογής (οι δημιουργοί συνήθως παρέχουν τρόπους επικοινωνίας στην "
 "καρτέλα\n"
-"\"Υποστήριξη\" της σελίδας της εφαρμογής). Το uApp Explorer δε σχετίζεται με "
-"τη Canonical\n"
+"\"Υποστήριξη\" της ιστοσελίδας της εφαρμογής). Το uApp Explorer δε "
+"σχετίζεται με τη Canonical\n"
 "και δε φιλοξενεί εφαρμογές. Το uApp Explorer μόνο προβάλει ελεύθερα "
 "διαθέσιμο\n"
 "περιεχόμενο για το επίσημο κατάστημα εφαρμογών του Ubuntu Touch."
@@ -379,14 +379,14 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
-"Η δωρεά στο uApp Explorer είναι απλά ακόμα ένας τρόπος να βοηθήσετε για να "
+"Η δωρεά στο uApp Explorer είναι απλά ακόμα ένας τρόπος για να βοηθήσετε να "
 "γίνει ακόμα καλύτερο. Αν\n"
 "επιλέξετε να κάνετε δωρεά, τα χρήματά σας θα χρησιμοποιηθούν για την κάλυψη "
 "του κόστους υποδομών. Τέτοια\n"
-"κόστη περιλαμβάνουν ονόματα χώρου (domain names), φιλοξενία σελίδας, κτλ. Το "
-"uApp Explorer θα είναι για πάντα\n"
-"μια υπηρεσία ανοιχτού λογισμικού που παρέχεται ελεύθερα, ανεξάρτητα από τον "
-"αριθμό των δωρεών."
+"κόστη περιλαμβάνουν ονόματα χώρου (domain names), φιλοξενία ιστοσελίδας, "
+"κτλ. Το uApp Explorer θα είναι για \n"
+"πάντα μια υπηρεσία ανοιχτού λογισμικού που παρέχεται ελεύθερα, ανεξάρτητα "
+"από τον αριθμό των δωρεών."
 
 #. The uApp Explorer donation app download link
 #: index.html:211
@@ -557,7 +557,7 @@ msgstr "Γλώσσα"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr "Τελευταία ενημέρωση"
+msgstr "Πρόσφατη ενημέρωση"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
@@ -784,15 +784,15 @@ msgstr "Διαμοιρασμός στο Twitter"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr "Παρόμοιες εφαρμογές"
+msgstr "Αντίστοιχες εφαρμογές"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr "Snappy εφαρμογή"
+msgstr "Εφαρμογή snappy"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr "Snappy εφαρμογές"
+msgstr "Eφαρμογές snappy"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
@@ -845,6 +845,17 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
+"Η βαθμολογία σε αστέρια είναι ένας Μπεϋζιανός μέσος όρος των βαθμολογιών σε "
+"αστέρια που οι χρήστες δίνουν\n"
+"σε μια εφαρμογή όταν υποβάλουν μια κριτική. Ο Μπεϋζιανός μέσος όρος "
+"επιτρέπει στις εφαρμογές με περισσότερες\n"
+"κριτικές να έχουν καλύτερη κατάταξη από εφαρμογές με λιγότερες κριτικές. Η "
+"βαθμολογία σε αστέρια μπορεί να είναι\n"
+"μεταξύ 1 και 5, όπου το 0 σημαίνει ότι δε υπάρχουν κριτικές ακόμα. Για "
+"περισσότερες πληροφορίες σχετικά με τον\n"
+"υπολογισμό του Μπεϋζιανού μέσου όρου, δείτε\n"
+"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">σε αυτό το "
+"άρθρο</a>."
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
@@ -852,7 +863,7 @@ msgstr "Η εφαρμογή αυτή βρίσκεται στους ακόλου�
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Αυτός είναι ένας ανεπίσημος προβολέας εφαρμογών Ubuntu Touch."
+msgstr "Αυτός είναι ένας ανεπίσημος προβολέας εφαρμογών για το Ubuntu Touch."
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
@@ -925,7 +936,7 @@ msgstr "Είδος:"
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr "Εφαρμογές με ενημερώσεις"
+msgstr "Ενημερωμένες εφαρμογές"
 
 #: apps/partials/app.html:202
 msgid "Updated:"

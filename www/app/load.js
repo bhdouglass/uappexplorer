@@ -36,6 +36,7 @@ LazyLoad.js([
   '/app/main/directives/pages.js',
   '/app/main/filters/dollars.js',
   '/app/main/filters/nl2br.js',
+  '/app/main/filters/maths.js',
   '/app/main/services/auth.js',
   '/app/main/services/og.js',
   '/app/main/services/utils.js',

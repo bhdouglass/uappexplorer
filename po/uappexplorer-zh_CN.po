@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-06 06:15+0000\n"
+"PO-Revision-Date: 2015-10-07 09:54+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-10-06 13:08+0000\n"
+"X-Launchpad-Export-Date: 2015-10-07 22:36+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
 "Language: zh_CN\n"
 
@@ -539,38 +539,38 @@ msgstr "最低星评级"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr ""
+msgstr "缺少应用？"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr ""
+msgstr "月度人气"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr ""
+msgstr "{{app.author}}的更多应用"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr ""
+msgstr "最贵的(美元)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr ""
+msgstr "最受欢迎(本月)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr ""
+msgstr "最相关"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr ""
+msgstr "我的列表"
 
 #. The new apps rss feed link
 #: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr ""
+msgstr "新应用"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -579,51 +579,53 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"新的应用会每小时从官方应用商店获取，你可以等待新应用获取，\n"
+"或者使用申请表来请求更早发现应用。"
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr ""
+msgstr "新列表"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr ""
+msgstr "最新"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr ""
+msgstr "下一个应用："
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr ""
+msgstr "没有"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr ""
+msgstr "没有找到应用"
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr ""
+msgstr "没有找到应用，请重新搜索。"
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr ""
+msgstr "没有列表，创建一个！"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr ""
+msgstr "还没有评论！"
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr ""
+msgstr "最旧"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr ""
+msgstr "最旧更新"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "请登录通过Caxton来发送"
 
 #: main/partials/faq.html:58
 msgid ""
@@ -633,115 +635,115 @@ msgstr ""
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr ""
+msgstr "上一个应用："
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr ""
+msgstr "二维码"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr ""
+msgstr "{{qrCodeTitle}}的二维码"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr ""
+msgstr "从你的列表里移除这个应用"
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
 #: index.html:207
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr ""
+msgstr "Scopes"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr ""
+msgstr "截图"
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr ""
+msgstr "通过Caxton发送"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "通过Caxton发送"
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr ""
+msgstr "在 Facebook 上分享"
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr ""
+msgstr "在 Google+ 上分享"
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr ""
+msgstr "在 Reddit 上分享"
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr ""
+msgstr "在 Twitter 上分享"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr ""
+msgstr "类似的应用"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr ""
+msgstr "Snappy 应用"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy 应用"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr ""
+msgstr "应用排序："
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr ""
+msgstr "排序方式："
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr ""
+msgstr "支持"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr ""
+msgstr "支持："
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr ""
+msgstr "条款:"
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr ""
+msgstr "谢谢你！"
 
 #: main/partials/faq.html:42
 msgid ""
@@ -750,6 +752,9 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
+"心评级类似于星评级，但心评级奖励拥有更多好评\n"
+"的应用。拥有更多5星评级的应用将比仅有数个5星\n"
+"评级的应用有更高的心评级。"
 
 #: main/partials/faq.html:30
 msgid ""
@@ -761,18 +766,24 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
+"星评级是当用户给应用留下评论的贝叶斯平均\n"
+"的星评级。贝叶斯平均允许有更多评论的应用\n"
+"比有更少评论的应用排名更好。星评级\n"
+"可以是 1 至 5，0 表示还没有任何评论。\n"
+"关于贝叶斯平均计算的详细信息，请查阅\n"
+"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\"> 这篇文章</a>。"
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr ""
+msgstr "该应用在这些列表："
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr ""
+msgstr "这是一个 Ubuntu Touch 应用的非官方应用查看器。"
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr ""
+msgstr "这个列表是空的！"
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -788,14 +799,23 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
+"此站点是一个 Ubuntu Touch 应用的非官方应用浏览器。所有应用\n"
+"数据都来自一个可公开访问的\n"
+"<a "
+"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
+">。\n"
+"此站点由<a href=\"http://bhdouglass.com/\">Brian Douglass</a>维护\n"
+"且并不被认可和隶属于 Ubuntu 和 Canonical。\n"
+"Ubuntu 和 Canonical 是 <a href=\"http://www.canonical.com/\">Canonical 公司</a>\n"
+"的注册商标。"
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
-msgstr ""
+msgstr "标题 A-Z"
 
 #: main/services/utils.js:74
 msgid "Title Z-A"
-msgstr ""
+msgstr "标题 Z-A"
 
 #: main/partials/faq.html:20
 msgid ""
@@ -804,112 +824,115 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"安装一个应用，要在你的 Ubuntu Touch 设备上访问\n"
+"这个站点。找到你想要安装的应用并且点击“安装”按钮。\n"
+"你将会被带到你设备上的官方应用商店来安装应用。"
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
-msgstr ""
+msgstr "报告问题或请求新功能，访问 GitHub 上该站点的问题页面"
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr ""
+msgstr "热门应用"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
 msgid "Type:"
-msgstr ""
+msgstr "类型："
 
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr ""
+msgstr "更新应用"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr ""
+msgstr "更新时间："
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr ""
+msgstr "用户列表："
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr ""
+msgstr "用户评论"
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr ""
+msgstr "版本："
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr ""
+msgstr "查看"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr ""
+msgstr "Web 应用"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr ""
+msgstr "Web 应用"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr ""
+msgstr "网站："
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr ""
+msgstr "欢迎"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr ""
+msgstr "欢迎来到 uApp Explorer！"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr ""
+msgstr "如果我找到版权或商标侵权内容，该怎么做?"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
-msgstr ""
+msgstr "什么是心评级？"
 
 #: main/partials/faq.html:29
 msgid "What is the star rating?"
-msgstr ""
+msgstr "什么是星评级？"
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr ""
+msgstr "这是什么网站？"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "我能在哪里报告问题或请求新功能？"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr ""
+msgstr "无论你选择捐助与否，我仍然很感谢你支持。谢谢！"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr ""
+msgstr "为什么要捐助？"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "你已经通过Caxton连接！"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr ""
+msgstr "你没有将帐号连接到Caxton，点击进入你的设置"

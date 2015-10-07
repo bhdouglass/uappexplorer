@@ -10,6 +10,68 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
   $scope.showSearch = false;
   $scope.search = undefined;
 
+  $rootScope.partialTranslation = 188 * 0.15; //Languages with more untranslated strings that this are partial translations
+  $rootScope.comingTranslation = 188 * 0.50; //Languages with more untranslated strings than this are "coming soon"
+  $rootScope.languages = [
+    {
+      'name': 'Basque',
+      'code': 'eu',
+      'untranslated': 32,
+    }, {
+      'name': 'Chinese (Simplified)',
+      'code': 'zh_CN',
+      'untranslated': 1,
+    }, {
+      'name': 'Czech',
+      'code': 'cs',
+      'untranslated': 0,
+    }, {
+      'name': 'Dutch',
+      'code': 'nl',
+      'untranslated': 160,
+    }, {
+      'name': 'English (UK)',
+      'code': 'en_GB',
+      'untranslated': 0, //Keep this as zero since it's similar enough to US english
+    }, {
+      'name': 'French',
+      'code': 'fr',
+      'untranslated': 88,
+    }, {
+      'name': 'Galician',
+      'code': 'gl',
+      'untranslated': 0,
+    }, {
+      'name': 'German',
+      'code': 'de',
+      'untranslated': 149,
+    }, {
+      'name': 'Greek',
+      'code': 'el',
+      'untranslated': 0,
+    }, {
+      'name': 'Hungarian',
+      'code': 'hu',
+      'untranslated': 0,
+    }, {
+      'name': 'Italian',
+      'code': 'it',
+      'untranslated': 11,
+    }, {
+      'name': 'Polish',
+      'code': 'pl',
+      'untranslated': 157,
+    }, {
+      'name': 'Russian',
+      'code': 'ru',
+      'untranslated': 28,
+    }, {
+      'name': 'Swedish',
+      'code': 'sv',
+      'untranslated': 109,
+    },
+  ];
+
   $rootScope.$watch('showSearch', function() {
     $scope.showSearch = $rootScope.showSearch;
   });
