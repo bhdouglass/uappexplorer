@@ -1,4 +1,4 @@
-# Polish translation for uappexplorer
+# Norwegian Bokmal translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,102 +8,104 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-03 09:16+0000\n"
-"Last-Translator: tydell <marcin.tydelski@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"PO-Revision-Date: 2015-10-10 20:56+0000\n"
+"Last-Translator: Eivind Mork  <eivind@morkcloud.com>\n"
+"Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-10-11 03:28+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
-"Language: pl\n"
+"Language: nb\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "Wybierz listę"
+msgstr "- Velg en liste -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "Nie martw się, dostępne są również darmowe wersje!"
+msgstr "(Ta det med ro, det finnes også en gratisversjon)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} aplikacji"
-msgstr[1] "{{counts.applications}} aplikacji"
+msgstr[0] "{{counts.applications}} app"
+msgstr[1] "{{counts.applications}} apper"
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} gier"
-msgstr[1] "{{counts.games}} gier"
+msgstr[0] "{{counts.games}} spill"
+msgstr[1] "{{counts.games}} spill"
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{{counts.scopes}} scope"
+msgstr[1] "{{counts.scopes}} scope"
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{counts.webapps}} aplikacji webowych"
-msgstr[1] "{counts.webapps}} aplikacji webowych"
+msgstr[0] "{{counts.webapps}} webapp"
+msgstr[1] "{{counts.webapps}} webapper"
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} aplikacji"
-msgstr[1] "{{list.packages.length}} aplikacji"
+msgstr[0] "{{list.packages.length}} app"
+msgstr[1] "{{list.packages.length}} apper"
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Install przeniesie Cię do oficjalnego sklepu aplikacji na urzadzeniu z "
-"Ubuntu Touch"
+"*Installer vil ta deg til den offisielle app-butikken på en Ubuntu Touch-"
+"enhet"
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"* Denne webappen injiserer skreddersydd kode på nettsiden og kan legge til "
+"ekstra funksjonalitet eller være ondsinnet.  Bruk kun denne appen dersom du "
+"stoler på utvikleren."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "Dodaj aplikacje:"
+msgstr "Legg til apper:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Dodaj do listy:"
+msgstr "Legg til listen:"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Dodano aplikację do Twojej listy"
+msgstr "La til denne appen til listen din"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Wszystko"
+msgstr "Alle"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr "Wszystkie aplikacje"
+msgstr "Alle apper"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr "Wszystkie typy"
+msgstr "Alle typer"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Dowolny"
+msgstr "Alle"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -116,29 +118,36 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"Enhver forespørsel om å fjerne innhold som krenker kopibeskyttelser eller "
+"varemerker må tas opp med\n"
+"<a href=\"http://www.canonical.com/\">Canonical</a> eller appens utvikler "
+"(en utvikler har vanligvis oppgitt\n"
+"en kontaktmetode under \"Support\"-fanen på deres app-side). uApp Explorer "
+"er ikke tilknyttet Canonical\n"
+"og er ikke vert for noen apper. uApp Explorer viser kun offentlig "
+"tilgjengelig informasjon om den offisielle\n"
+"Ubuntu Touch app-butikken."
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr "Aplikacja"
+msgstr "App"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Nazwa aplikacji"
+msgstr "App-navn"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr "Aplikacje"
+msgstr "Apper"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Aplikacje nie są zainstalowane poprzez tą stronę lecz przez oficjalny sklep "
-"aplikacji."
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr "Aplikacje:"
+msgstr ""
 
 #. CPU architecture
 #: apps/partials/app.html:206
@@ -148,20 +157,20 @@ msgstr ""
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Jesteś pewien że chcesz usunąć \"{{selectedList.name}}\"?"
+msgstr ""
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr "Przeglądaj"
+msgstr ""
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr "Przeglądaj aplikacje"
+msgstr ""
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr "Przeglądaj gry"
+msgstr ""
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
@@ -169,24 +178,24 @@ msgstr ""
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr "Przeglądaj aplikacje webowe"
+msgstr ""
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr "Kup aplikację webową"
+msgstr ""
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Kup aplikację webową ze sklepu Ubuntu Touch"
+msgstr ""
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "Przez: {{list.user_name}}"
+msgstr ""
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr "Kategoria:"
+msgstr ""
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
@@ -195,11 +204,11 @@ msgstr ""
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "Lista zmian"
+msgstr ""
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr "Wyczyść wyszukiwanie"
+msgstr ""
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -208,17 +217,16 @@ msgstr "Wyczyść wyszukiwanie"
 #: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr "Zamknij"
+msgstr ""
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr "Zawiera:"
+msgstr ""
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Nie można dodać aplikacji do listy w tej chwili, spróbuj ponownie później."
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
@@ -228,11 +236,10 @@ msgstr ""
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Nie można utworzyć nowej listy w tej chwili, spróbuj ponownie później."
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
-msgstr "Nie można usunąć listy w tej chwili, spróbuj ponownie później."
+msgstr ""
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"

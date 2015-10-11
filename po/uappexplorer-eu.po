@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-07 20:53+0000\n"
+"PO-Revision-Date: 2015-10-10 21:24+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-07 22:36+0000\n"
+"X-Launchpad-Export-Date: 2015-10-11 03:28+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
 "Language: eu\n"
 
@@ -61,14 +61,17 @@ msgstr[1] "{{list.packages.length}} aplikazio"
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"Instakuntzak aplikazio denda ofizialera eramango zaitu Ubuntu Touch gailu "
-"batean."
+"Instakuntzak aplikazio denda ofizialera eramango zaitu zure Ubuntu Touch "
+"gailuan."
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"Web Aplikazio honek kode pertsonalizatua txertatzen du webgunean,zeinek "
+"aparteko ezaugarriak gehitu ditzakeen edo maltzurra izan. Egileaz fidatzen "
+"baldin bazara soilik erabili."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
@@ -115,6 +118,17 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"Copyright edo markak eskubideak urratzen dituen edozein edukiren ezabatze "
+"eskaera\n"
+"<a href=\"http://www.canonical.com/\">Canonical</a>-ekin edo aplikazioen "
+"egileekin(egileek\n"
+"normalean harremanetarako moduren bat errazten dute beraien aplikazio "
+"orriaren \"sustengua\"\n"
+"eremuan) gauzatu beharko da. uApp Explorer-ek ez du inolako loturarik "
+"Canonical-ekin eta\n"
+"ez du aplikaziorik ostatatzen. uApp Explorer-ek publikoki eskuragarria den "
+"Ubuntu Touch\n"
+"Aplikazio denda ofizialari buruzko informazioa erakusten du soilik."
 
 #: apps/directives/type.js:26
 msgid "App"
@@ -122,7 +136,7 @@ msgstr "Aplikazioa"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Aplikazio Izena"
+msgstr "Aplikazio Izena(adib: com.ubuntu.developer.example)"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
@@ -143,11 +157,11 @@ msgstr "Aplikazioak"
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Egitura"
+msgstr "Arkitektura:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Ziur zaude ezabatu egin nahi duzula?"
+msgstr "Ziur zaude \"{{selectedList.name}}\" ezabatu egin nahi duzula?"
 
 #. Browse Apps
 #: main/partials/main.html:5
@@ -181,7 +195,7 @@ msgstr "Erosi web aplikazioa Ubuntu Touch aplikazio dendan."
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr ""
+msgstr "{{list.user_name}}-(e)k"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
@@ -212,7 +226,7 @@ msgstr "Itxi"
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr "Edukina:"
+msgstr "Edukia:"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
@@ -330,16 +344,16 @@ msgstr "Diruz lagundu"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Diruz lagundu Bitcoin bidez"
+msgstr "Bitcoin bidez"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Diruz lagundu Gratipay bidez"
+msgstr "Gratipay bidez"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Diruz lagundu Paypal bidez"
+msgstr "Paypal bidez"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -351,7 +365,7 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
-"uApp Explorer diruz babestuz, hobeagoa izaten laguntzeko modu bat da. Diru "
+"uApp Explorer diruz babestea, hobeagoa izaten laguntzeko modu bat da. Diru "
 "laguntza egitea erabakitzen baduzu, azpiegitura kostuei aurre egiten "
 "lagunduko duzu. Kostu hauek domeinu izenak, ostatatzea eta abar barnebiltzen "
 "dute. uApp Explorer beti izango da dohainekoa jasotzen diren diru laguntzen "
@@ -390,7 +404,7 @@ msgstr "Bilatu"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr ""
+msgstr "Aplikazio denda ofizialetik oraindik jaso ez den aplikazioa aurkitu."
 
 #. Comment below reviews
 #: apps/partials/app.html:367
@@ -399,12 +413,12 @@ msgstr "Bertsio honentzat:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr ""
+msgstr "Eskatutako aplikazioa aurkitua"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr ""
+msgstr "Esparrua:"
 
 #. No Cost
 #: apps/partials/app.html:50
@@ -423,7 +437,7 @@ msgstr "QR eskaneatzailea eskuratu zure Ubuntu Touch gailurako"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr ""
+msgstr "Hara joan orain"
 
 #. Grid view
 #: apps/partials/apps.html:47
@@ -433,7 +447,7 @@ msgstr "Sareta"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr ""
+msgstr "Bihotz Neurketa"
 
 #: main/partials/faq.html:47
 msgid ""
@@ -442,6 +456,10 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
+"Bihotz neurketak Izar neurketen araberan kalkulatzen dira, non 5 izarri \n"
+"bihotz bat dagokion, 4 izarri = 0.5 bihotz, 3 izarri = 0 bihotz, 2 izarri = -"
+"0.5 bihotz,\n"
+"eta izar 1 = -1 bihotz."
 
 #: index.html:164
 msgid "Help translate!"
@@ -449,11 +467,11 @@ msgstr "Lagundu itzultzen!"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr ""
+msgstr "Bihotz Neurketa altuena"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr ""
+msgstr "Izar Neurketa altuena"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
@@ -473,7 +491,7 @@ msgstr "Nere aplikazioa argitaratu berri dut, zergatik ez dut ikusten?"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr ""
+msgstr "Lagundu nahi baduzu bisita ezazu Github repo-a."
 
 #: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
@@ -483,6 +501,8 @@ msgstr "Itzultzen lagundu nahi baduzu, bisita ezazu Launchpad proiektua."
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
+"Akatsak edo ezaugarri berriak eskatu nahi badituzu, bisitatu Github-eko "
+"aleen orria."
 
 #: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
@@ -502,7 +522,7 @@ msgstr "Info"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr ""
+msgstr "Litekeena da bihotz neurketa negatiboa izatea."
 
 #: index.html:128
 msgid "Language"
@@ -510,11 +530,11 @@ msgstr "Hizkuntza"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr "Azken Eguneraketa"
+msgstr "Azken Eguneraketak"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr ""
+msgstr "Arrakasta gutxienekoak"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
@@ -554,19 +574,19 @@ msgstr "Saioa amaitu"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr ""
+msgstr "Bihotz Neurketa baxuena"
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr ""
+msgstr "Izar Neurketa baxuena"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr ""
+msgstr "Aplikazio bat falta?"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr ""
+msgstr "Hileroko arrakastak"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
@@ -574,20 +594,20 @@ msgstr "{{app.author}}-(r)en Aplikazio gehiago"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr "Garestiena(USD)"
+msgstr "Garestienak(USD)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr "Arrakastatsuena(hil honetan)"
+msgstr "Arrakastatsuenak(hil honetan)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr "Aipagarriena"
+msgstr "Aipagarrienak"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr "Nere Zerrenda"
+msgstr "Nere Zerrendak"
 
 #. The new apps rss feed link
 #: index.html:221
@@ -602,6 +622,9 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"Aplikazio berriak orduro jasotzen dira Aplikazio denda ofizialetik, \n"
+"aplikazio berriak iristen diren arte itxaron dezakezu edo eskaera \n"
+"formularioa erabili aplikazioa lehenago aurkitzeko."
 
 #: lists/partials/me.html:42
 msgid "New List"
@@ -609,7 +632,7 @@ msgstr "Zerrenda berria"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr "Berriena"
+msgstr "Berrienak"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
@@ -637,22 +660,22 @@ msgstr "Berrikuspenik ez du oraindik!"
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr "Zaharrena"
+msgstr "Zaharrenak"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr "Eguneratzerik zaharrena"
+msgstr "Eguneraketarik zaharrenak"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "Mesedez hasi saioa Caxton bidez"
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
-msgstr ""
+msgstr "Arrakasta, jasotako 4 eta 5 izar berrikuspen kopuruaren baitan dago."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
@@ -696,12 +719,12 @@ msgstr "Pantaila-argazkiak"
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr "Pantaila-argazkia"
+msgstr "Caxton bidez bidali"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Caxton bidez bidalia"
 
 #: lists/partials/me.html:13
 msgid "Settings"
@@ -733,19 +756,19 @@ msgstr "Antzeko aplikazioak"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr ""
+msgstr "S"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy Aplikazioak"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr ""
+msgstr "Sailkatu Aplikazioak:"
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr ""
+msgstr "Sailkatu:"
 
 #. App support links
 #: apps/partials/app.html:186
@@ -773,6 +796,12 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
+"Bihotz neurketa Izar neurketaren antzekoa da, baina berrikuspen on gehien "
+"dituzten\n"
+"aplikazioak saritzen dituzte. 5 izarreko berrikuspen gehien dituen "
+"aplikazioak bihotz\n"
+"neurketa altuagoa izango du 5 izarreko berrikuspen bakan batzuk besterik ez "
+"dituenaren aldean."
 
 #: main/partials/faq.html:30
 msgid ""
@@ -784,6 +813,17 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
+"Izar neurketa, erabiltzaileak berrikuspenetan emandako izarren batezbesteko\n"
+"Bayesiarra da. Batezbesteko Bayesiarrak, berrikuspen gehiago dituzten "
+"aplikazioei\n"
+"leku hobea ahalbidetzen die berrikuspen gutxi dituzten aplikazioei baino. "
+"Izar\n"
+"neurketa 1-etik 5-erainokoa izan daiteke, non 0-k oraindik berrikuspenik ez "
+"duela\n"
+"jaso esan nahi duen. Batezbesteko Bayesiarraren kalkuluari buruz gehiago "
+"jakin nahi\n"
+"baduzu, begiratu <a "
+"href=\"http://fulmicoton.com/posts/bayesian_rating/\">artikulu hau</a>."
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
@@ -791,7 +831,7 @@ msgstr "Aplikazio hau zerrenda hauetan aurkitzen da:"
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Honako hau Ubuntu Touch-en aplikazio arakatzaile ez ofiziala da."
+msgstr "Honako hau Ubuntu Touch Aplikazioen arakatzaile ez-ofiziala da."
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
@@ -816,7 +856,7 @@ msgstr ""
 "guztiek publikoki eskuragarria den \n"
 "<a "
 "href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
-">.\n"
+">\n"
 "batetan  dute jatorria. Gune hau <a href=\"http://bhdouglass.com/\">Brian "
 "Douglass</a>-ek mantentzen du \n"
 "eta ez du inolako babes eta lankidetzarik Ubuntu edo Canonical-ekin.\n"
@@ -839,10 +879,10 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"Aplikazioa instalatzeko, gune honetan sartu zure Ubuntu Touch gailutik. "
-"Instalatu nahi\n"
-"duzun aplikazioa aurkitu eta egin klik \"Instalatu\" botoiean. Aplikazio "
-"denda ofizialera \n"
+"Aplikazioak instalatzeko, gune honetan sartu behar duzu zure Ubuntu Touch "
+"gailua erabiliz. \n"
+"Instalatu nahi duzun aplikazioa aurkitu eta egin klik \"Instalatu\" "
+"botoiean. Aplikazio denda ofizialera \n"
 "berbideratua izango zara eta bertan aplikazioa instalatu ahal izango duzu."
 
 #: main/partials/faq.html:86
@@ -855,7 +895,7 @@ msgstr ""
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr "Aplikaziorik honenak"
+msgstr "Aplikaziorik onenak"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
@@ -869,15 +909,15 @@ msgstr "Eguneratutako aplikazioak"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr "Eguneratuta:"
+msgstr "Eguneratua:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr "Erabiltzailearen Zerrenda:"
+msgstr "Erabiltzaile Zerrenda"
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr "Erabiltzailearen berrikuspenak"
+msgstr "Erabiltzaileen berrikuspenak"
 
 #: apps/partials/app.html:200
 msgid "Version:"
@@ -948,11 +988,11 @@ msgstr "Zergatik diruz lagundu?"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr ""
+msgstr "Bai"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "Dagoeneko Caxton bidez konetaturik zaude!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
@@ -960,3 +1000,5 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
+"Zure kontua ez dago Caxton-era konektaturik, egin klik zure ezarpenetara "
+"joateko"

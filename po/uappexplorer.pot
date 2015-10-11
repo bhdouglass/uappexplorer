@@ -1,8 +1,18 @@
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-05 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Launchpad-Export-Date: 2015-10-11 03:28+0000\n"
+"X-Generator: Launchpad (build 17802)\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
@@ -43,11 +53,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: apps/partials/app.html:73
-msgid "*Install will take you to the official appstore on an Ubuntu Touch device"
+msgid ""
+"*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
 
 #: apps/partials/app.html:76
-msgid "*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author."
+msgid ""
+"*This webapp injects custom code into the website which can add extra "
+"features or be malicious. Only use this app if you trust the author."
 msgstr ""
 
 #: lists/partials/listEdit.html:37
@@ -87,8 +100,10 @@ msgstr ""
 #: main/partials/faq.html:75
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be\n"
-"taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the app's\n"
-"author (an author usually has a method of contact listed under the \"Support\"\n"
+"taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the "
+"app's\n"
+"author (an author usually has a method of contact listed under the "
+"\"Support\"\n"
 "tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
@@ -301,9 +316,12 @@ msgstr ""
 
 #: main/partials/donate.html:7
 msgid ""
-"Donating to uApp Explorer is just one way you can help make it better. If you\n"
-"choose to donate, you money will go towards infrastructure costs. Costs include\n"
-"domain names, hosting, etc. uApp Explorer will always be a free and open source\n"
+"Donating to uApp Explorer is just one way you can help make it better. If "
+"you\n"
+"choose to donate, you money will go towards infrastructure costs. Costs "
+"include\n"
+"domain names, hosting, etc. uApp Explorer will always be a free and open "
+"source\n"
 "service, regardless of the number of donations."
 msgstr ""
 
@@ -388,7 +406,8 @@ msgstr ""
 #: main/partials/faq.html:47
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is\n"
-"1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 hearts,\n"
+"1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
 
@@ -429,7 +448,8 @@ msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
 
 #: main/partials/faq.html:98
-msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
+msgid ""
+"If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 
 #: main/partials/faq.html:110
@@ -437,7 +457,9 @@ msgid "If you would like to contact the author, visit his website."
 msgstr ""
 
 #: main/partials/faq.html:106
-msgid "If you would like to contribute monetarily, there are multiple options for donating."
+msgid ""
+"If you would like to contribute monetarily, there are multiple options for "
+"donating."
 msgstr ""
 
 #. App info
@@ -543,7 +565,8 @@ msgstr ""
 #: main/partials/faq.html:67
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either\n"
-"wait until the new apps are fetched or use the request form to request that the\n"
+"wait until the new apps are fetched or use the request form to request that "
+"the\n"
 "app be found early."
 msgstr ""
 
@@ -712,7 +735,8 @@ msgstr ""
 
 #: main/partials/faq.html:42
 msgid ""
-"The heart rating is similar to the star rating, but it rewards apps for having\n"
+"The heart rating is similar to the star rating, but it rewards apps for "
+"having\n"
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
@@ -722,7 +746,8 @@ msgid ""
 "The star rating is the Bayesian average of the star ratings that user give\n"
 "to an app when they leave a review. The Bayesian average allows apps with\n"
 "more reviews to rank better than apps with less reviews. The star rating\n"
-"can be between 1 and 5, where a 0 means that there have not been any reviews\n"
+"can be between 1 and 5, where a 0 means that there have not been any "
+"reviews\n"
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
@@ -744,8 +769,11 @@ msgstr ""
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for\n"
 "the apps comes from a publicly accessible\n"
-"<a href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a>.\n"
-"This site is maintained by <a href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
+"<a "
+"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
+">.\n"
+"This site is maintained by <a href=\"http://bhdouglass.com/\">Brian "
+"Douglass</a>\n"
 "and is not endorsed by or affiliated with Ubuntu or Canonical.\n"
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
@@ -761,13 +789,16 @@ msgstr ""
 
 #: main/partials/faq.html:20
 msgid ""
-"To install an app, visit this site on your Ubuntu Touch device. Find the app\n"
+"To install an app, visit this site on your Ubuntu Touch device. Find the "
+"app\n"
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
 
 #: main/partials/faq.html:86
-msgid "To report a problem or request a new feature visit the issues page for this site on GitHub."
+msgid ""
+"To report a problem or request a new feature visit the issues page for this "
+"site on GitHub."
 msgstr ""
 
 #: main/partials/main.html:136
@@ -849,7 +880,9 @@ msgid "Where can I report a problem or request a new feature?"
 msgstr ""
 
 #: main/partials/donate.html:14
-msgid "Whether you choose to donate or not, I still appreciate you support. Thank you!"
+msgid ""
+"Whether you choose to donate or not, I still appreciate you support. Thank "
+"you!"
 msgstr ""
 
 #: main/partials/donate.html:6
@@ -866,5 +899,7 @@ msgstr ""
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
-msgid "You do not have your account connected to Caxton, click to go to your settings"
+msgid ""
+"You do not have your account connected to Caxton, click to go to your "
+"settings"
 msgstr ""

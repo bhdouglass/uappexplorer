@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-07 10:36+0000\n"
+"PO-Revision-Date: 2015-10-08 09:10+0000\n"
 "Last-Translator: Hamel <hameloid@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-07 22:36+0000\n"
+"X-Launchpad-Export-Date: 2015-10-11 03:28+0000\n"
 "X-Generator: Launchpad (build 17802)\n"
 "Language: ru\n"
 
@@ -117,6 +117,15 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"Любые запросы на удаление нарушений авторского права или торговой марки  "
+"должны быть\n"
+"согласованны с <a href=\"http://www.canonical.com/\">Canonical</a> или "
+"автором приложения \n"
+"(автор обычно указывает контактную информацию в разделе \"поддержка\"￼\n"
+"вкладка на странице приложения). uApp Explorer не связан с Canonical￼\n"
+"и не размещает любые приложения. uApp Explorer отображает только публично "
+"доступную\n"
+"информацию из официального магазина Ubuntu."
 
 #: apps/directives/type.js:26
 msgid "App"
@@ -544,7 +553,7 @@ msgstr "Название списка:"
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr ""
+msgstr "Загрузка остальных отзывов..."
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
@@ -656,7 +665,7 @@ msgstr "Самые старые"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr ""
+msgstr "Самое старое обновление"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
@@ -844,6 +853,10 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Чтобы установить приложение, посетите этот сайт с вашего устройства (на "
+"Ubuntu Touch). Найдите приложение￼\n"
+"которое вы хотите установить, и нажмите кнопку \"Установить\". После этого "
+"откроется официальный магазин Ubuntu где вы cможете установить приложение."
 
 #: main/partials/faq.html:86
 msgid ""
@@ -855,7 +868,7 @@ msgstr ""
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr ""
+msgstr "Топ приложения"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
@@ -941,7 +954,7 @@ msgstr ""
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr "Для чего нужно пожертование?"
+msgstr "Для чего нужны пожертования?"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
