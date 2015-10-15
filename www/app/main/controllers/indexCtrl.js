@@ -68,11 +68,15 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }, {
       'name': 'Russian',
       'code': 'ru',
-      'untranslated': 23,
+      'untranslated': 10,
     }, {
       'name': 'Swedish',
       'code': 'sv',
       'untranslated': 109,
+    }, {
+      'name': 'Uyghur',
+      'code': 'ug',
+      'untranslated': 139,
     },
   ];
 
