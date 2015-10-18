@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-05 10:34+0000\n"
-"Last-Translator: Jasper Nalbach <jasper@bluetreehouse.de>\n"
+"PO-Revision-Date: 2015-10-15 12:14+0000\n"
+"Last-Translator: Moritz Weber <moritz.weber@posteo.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-15 03:52+0000\n"
+"X-Launchpad-Export-Date: 2015-10-18 04:32+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 "Language: de\n"
 
@@ -25,7 +25,7 @@ msgstr "- Liste auswählen -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Keine Angst, es gibt auch eine kostenlose version!)"
+msgstr "(Keine Angst, es gibt auch eine kostenlose Version!)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
@@ -56,7 +56,7 @@ msgstr[0] "{{list.packages.length}} Apps"
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Beim Klick auf Installieren mit Ihrem Ubuntu Phone, werden Sie zum "
+"*Beim Klick auf Installieren mit Ihrem Ubuntu Phone werden Sie zum "
 "offiziellen Ubuntu Touch Store weitergeleitet."
 
 #: apps/partials/app.html:76
@@ -74,7 +74,7 @@ msgstr "Apps hinzufügen:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Zur Liste hinzufügen"
+msgstr "Zur Liste hinzufügen:"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
@@ -92,7 +92,7 @@ msgstr "Alle"
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr ""
+msgstr "Alle Apps"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
@@ -116,7 +116,7 @@ msgstr ""
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr ""
+msgstr "App"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
@@ -125,7 +125,7 @@ msgstr ""
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr ""
+msgstr "Apps"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
@@ -133,7 +133,7 @@ msgstr ""
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr ""
+msgstr "Apps:"
 
 #. CPU architecture
 #: apps/partials/app.html:206
@@ -152,23 +152,23 @@ msgstr "Durchsuchen"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr ""
+msgstr "Apps durchsuchen"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr ""
+msgstr "Spiele durchsuchen"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr ""
+msgstr "Scopes durchsuchen"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr ""
+msgstr "Web Apps durchsuchen"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr ""
+msgstr "Diese Web App kaufen"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
@@ -185,7 +185,7 @@ msgstr "Kategorie:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr ""
+msgstr "Caxton Code"
 
 #. App changelog
 #: apps/partials/app.html:180
@@ -251,7 +251,7 @@ msgstr ""
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr ""
+msgstr "Konnte die App nicht finden"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
@@ -370,11 +370,11 @@ msgstr ""
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr "Für Verion:"
+msgstr "Für Version:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr ""
+msgstr "Die angeforderte App wurde gefunden"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
@@ -420,7 +420,7 @@ msgstr ""
 
 #: index.html:164
 msgid "Help translate!"
-msgstr "Helfe beim Übersetzen"
+msgstr "Hilf beim Übersetzen!"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
@@ -432,11 +432,11 @@ msgstr ""
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr ""
+msgstr "Wie kann ich helfen, die Seite zu verbessern?"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr ""
+msgstr "Wie kann ich Apps installieren?"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
@@ -480,11 +480,11 @@ msgstr ""
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr ""
+msgstr "Letztes Update"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
@@ -894,15 +894,15 @@ msgstr ""
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr ""
+msgstr "Warum spenden?"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "Sie sind schon mit Caxton verbunden!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108

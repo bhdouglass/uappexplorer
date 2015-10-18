@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-10 20:56+0000\n"
+"PO-Revision-Date: 2015-10-16 18:06+0000\n"
 "Last-Translator: Eivind Mork  <eivind@morkcloud.com>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-15 03:52+0000\n"
+"X-Launchpad-Export-Date: 2015-10-18 04:32+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 "Language: nb\n"
 
@@ -144,71 +144,73 @@ msgstr "Apper"
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
+"Apper blir ikke isntallert via denne siden, men via en offisielle app-"
+"butikken."
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr ""
+msgstr "Apper"
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr ""
+msgstr "Arkitektur"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette \"{{selectedList.name}}\"?"
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr ""
+msgstr "Bla"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr ""
+msgstr "Bla i apper"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr ""
+msgstr "Bla i spill"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr ""
+msgstr "Bla i scopes"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr ""
+msgstr "Bla i webapper"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr ""
+msgstr "Kjøp webappen"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr ""
+msgstr "Kjøp webappen fra Ubuntu Touch app-butikken"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr ""
+msgstr "Av: {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr ""
+msgstr "Kategori"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr ""
+msgstr "Caxton-kode"
 
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr ""
+msgstr "Endringslogg"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr ""
+msgstr "Tøm søk"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -217,121 +219,122 @@ msgstr ""
 #: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr ""
+msgstr "Lukk"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr ""
+msgstr "Inneholder"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
-msgstr ""
+msgstr "Kunne ikke legge til appen til listen. Prøv igjen senere."
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
-msgstr ""
+msgstr "Kunne ikke koble til Caxton. Vennligst prøv igjen senere."
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
-msgstr ""
+msgstr "Kunne ikke lage en ny liste. Vennligst prøv igjen senere."
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
-msgstr ""
+msgstr "Kunne ikke slette listen. Vennligst prøv igjen senere."
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
-msgstr ""
+msgstr "Kunne ikke laste ned app-data. Trykk for å prøve igjen,"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
-msgstr ""
+msgstr "Kunne ikke laste ned app-listen. Trykk for å prøve igjen."
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
-msgstr ""
+msgstr "Kunne ikke laste ned kategori-listen. Trykk for å prøve igjen."
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
-msgstr ""
+msgstr "Kunne ikke laste ned rammeverks-listen. Trykk for å prøve igjen."
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
-msgstr ""
+msgstr "Kunne ikke laste ned lisens-listen. Trykk for å prøve igjen."
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr ""
+msgstr "Kunne ikke finne appen"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr ""
+msgstr "Kunne ikke finne den forespurte appen."
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr ""
+msgstr "Kunne ikke finne listen. Den finnes kanskje ikke lenger."
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
 msgstr ""
+"Kunne ikke laste appene for denne listen. Vennligst prøv igjen senere."
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
-msgstr ""
+msgstr "Kunne ikke fjerne appen fra listen. Vennligst prøv igjen senere."
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
-msgstr ""
+msgstr "Kunne ikke hente app-listen. Vennligst prøv igjen senere."
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
-msgstr ""
+msgstr "Kunne ikke motta søkeresultat. Vennligst prøv igjen senere."
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could not save your settings at this time, please try again later"
-msgstr ""
+msgstr "Kunne ikke lagre innstillingene dine. Vennligst prøv igjen senere."
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
-msgstr ""
+msgstr "Kunne ikke oppdatere listen. Vennligst prøv igjen senere."
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr ""
+msgstr "Lag"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr ""
+msgstr "Lag liste"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr ""
+msgstr "Donér"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr ""
+msgstr "Donér med Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr ""
+msgstr "Donér med Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Donér med PayPal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -343,74 +346,82 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"Donére til uApp Explorer er bare en av måtene du kan hjelpe til med å gjøre "
+"den bedre. Hvis du\n"
+"velger å donere vil pengene dine gå til infrastrukturkostnader. Kostnadene "
+"inkluderer domenenavn, \n"
+"hosting osv. uApp Explorer vill alltid være gratis og åpen kildekode-"
+"tjeneste, uavhengig av antall \n"
+"donasjoner."
 
 #. The uApp Explorer donation app download link
 #: index.html:211
 msgid "Donation Web App"
-msgstr ""
+msgstr "Donasjons-webapp"
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr ""
+msgstr "Endre"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr ""
+msgstr "Endre liste"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr ""
+msgstr "Essensielle apper"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr ""
+msgstr "Ofte stilte spørsmål"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr ""
+msgstr "Filtere"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr ""
+msgstr "Finn"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
+"Finn en app som ikke enda har blitt hentet fra den offisielle app-butikken."
 
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr ""
+msgstr "For versjon"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr ""
+msgstr "Fant appen"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr ""
+msgstr "Rammeverk"
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr ""
+msgstr "Gratis"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr ""
+msgstr "Spill"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "Finn en QR-skanner for din Ubuntu Touch-enhet"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr ""
+msgstr "Gå dit nå"
 
 #. Grid view
 #: apps/partials/apps.html:47

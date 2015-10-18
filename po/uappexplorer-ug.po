@@ -1,4 +1,4 @@
-# Basque translation for uappexplorer
+# Uyghur translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,104 +8,95 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-10 21:24+0000\n"
-"Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
-"Language-Team: Basque <eu@li.org>\n"
+"PO-Revision-Date: 2015-10-16 13:45+0000\n"
+"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2015-10-18 04:32+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
-"Language: eu\n"
+"Language: ug\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "Zerrenda bat aukeratu"
+msgstr "- تىزىملىك تاللا -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr "Ez larritu, bada dohaineko bertsio bat ere!"
+msgstr "(ئەنسىرىمەڭ .بۇ دېتالنىڭ يەنە ھەقسىز نۇسخىسىمۇ بار)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "aplikazio {{counts.applications}}"
-msgstr[1] "{{counts.applications}} aplikazio"
+msgstr[0] "{{ئەملى ساناالغنى}}ئەمەلىي پروگرامما"
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "joku {{counts.games}}"
-msgstr[1] "{{counts.games}} joku"
+msgstr[0] "ئۇيۇنلار"
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "eremu {{counts.scopes}}"
-msgstr[1] "{{counts.scopes}} eremu"
+msgstr[0] ""
+msgstr[1] ""
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "web aplikazio {{counts.scopes}}"
-msgstr[1] "{{counts.scopes}} web aplikazio"
+msgstr[0] "تور پىروگىراممىلىرى"
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "aplikazio {{list.packages.length}}"
-msgstr[1] "{{list.packages.length}} aplikazio"
+msgstr[0] "پىروگىراممىلار"
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"Instakuntzak aplikazio denda ofizialera eramango zaitu zure Ubuntu Touch "
-"gailuan."
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"Web Aplikazio honek kode pertsonalizatua txertatzen du webgunean,zeinek "
-"aparteko ezaugarriak gehitu ditzakeen edo maltzurra izan. Egileaz fidatzen "
-"baldin bazara soilik erabili."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "Aplikazioak gehitu"
+msgstr "پىروگىرامما قوش :"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
-msgstr "Zerrendara gehitu"
+msgstr "تىزىملىك قۇشۇش :"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "Aplikazioa zure zerrendara gehitua"
+msgstr "تىزىملىكىڭزگە پىروگىرامما قۇشۇڭ"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "Guztia"
+msgstr "ھەممە"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr "Aplikazio guztiak"
+msgstr "ھەممە پىروگىراممىلار"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
-msgstr "Mota guztiak"
+msgstr "ھەممە تېپلار"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Edozer"
+msgstr "خالىغان"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -118,101 +109,90 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
-"Copyright edo markak eskubideak urratzen dituen edozein edukiren ezabatze "
-"eskaera\n"
-"<a href=\"http://www.canonical.com/\">Canonical</a>-ekin edo aplikazioen "
-"egileekin(egileek\n"
-"normalean harremanetarako moduren bat errazten dute beraien aplikazio "
-"orriaren \"sustengua\"\n"
-"eremuan) gauzatu beharko da. uApp Explorer-ek ez du inolako loturarik "
-"Canonical-ekin eta\n"
-"ez du aplikaziorik ostatatzen. uApp Explorer-ek publikoki eskuragarria den "
-"Ubuntu Touch\n"
-"Aplikazio denda ofizialari buruzko informazioa erakusten du soilik."
 
 #: apps/directives/type.js:26
 msgid "App"
-msgstr "Aplikazioa"
+msgstr "ئەپ"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Aplikazio Izena(adib: com.ubuntu.developer.example)"
+msgstr "پىروگىرامما نامى (مەسلەن : com.ubuntu.developer.example)"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr "Aplikazioak"
+msgstr "پروگراممىلار"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Aplikazioak ez dira gune honen bidez instalatzen, aplikazio denda "
-"ofizialetik baizik."
+"پىروگىرامما ئورنىتىش بۇ تور بەتنىڭ تەستىقلىشدىن ئۆتمىگەن.بىراق ئىگە تەرەپ "
+"تور بىتدە ئېلان قىلىنغان."
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr "Aplikazioak"
+msgstr "پىروگىرامىلار"
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Arkitektura:"
+msgstr "Architecture:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "Ziur zaude \"{{selectedList.name}}\" ezabatu egin nahi duzula?"
+msgstr "بۇنى راستىنلا ئۈچۈرۋىتەمسىز \"{{selectedList.name}}\"?"
 
 #. Browse Apps
 #: main/partials/main.html:5
 msgid "Browse"
-msgstr "Arakatu"
+msgstr "كۆز يۈگۈرت"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr "Aplikazioak arakatu"
+msgstr "تور كۆرگۈ پىروگىراممىلىرى"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr "Jokuak arakatu"
+msgstr "تور كۆرگ ئۇيۇنلىرى"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr "Eremuak arakatu"
+msgstr "Browse Scopes"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr "Web aplikazioak arakatu"
+msgstr "تور كۆرگۈ بەت يۈزى پىروگىراممىلىرى"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr "Web aplikazioa erosi"
+msgstr "سېتىۋىلىش تەرىتىپى"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Erosi web aplikazioa Ubuntu Touch aplikazio dendan."
+msgstr "ئۇبۇنتۇ پىروگىرامما بازىرىدىن سېتىۋىلىنغان پىروگىراممىلار"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "{{list.user_name}}-(e)k"
+msgstr "مەسلەن : {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
-msgstr "Kategoria:"
+msgstr "كاتېگورىيە:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr "Caxton Kodea"
+msgstr "دەلىل كودى"
 
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "Aldaketen egunkaria"
+msgstr "خاتىرە يېڭىلا"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
-msgstr "Garbitu bilaketa"
+msgstr "ئىزدەشنى تازىلاش"
 
 #: apps/partials/request.html:35
 #: lists/partials/listEdit.html:67
@@ -221,139 +201,122 @@ msgstr "Garbitu bilaketa"
 #: main/partials/faq.html:117
 #: main/partials/qrcode.html:15
 msgid "Close"
-msgstr "Itxi"
+msgstr "ياپ"
 
 #. Apps containing: {search term}
 #: apps/partials/apps.html:9
 msgid "Containing:"
-msgstr "Edukia:"
+msgstr "تەركىبىدە :"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
-msgstr ""
-"Une honetan ezin izan da aplikazioa zerrendara gehitu, mesedez saiatu "
-"beranduago."
+msgstr "سىز پىروگىرامما تىزىملىكى قۇشالمايىسىز .بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
-msgstr ""
-"Une honetan ezin izan da Caxton-ekin konektatu, mesedez saiatu beranduago."
+msgstr "سىز ھازىر  دەلىل غا ئۇلىيالمايسىز .بىز ئازدىن كېيىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
-msgstr ""
-"Ezin izan da une honetan zerrenda berri bat sortu du, mesedez saiatu "
-"beranduago"
+msgstr "سىز ھازىر يېڭدىن تىزىملىك قۇسالمايسىز .بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
-msgstr "Ezin izan da une honetan zerrenda ezabatu, mesedez saiatu beranduago"
+msgstr "تىزىملىكىنى ئۈچۈرەلمەيسىز .بىر ئازدىن كېيىن قايتا سىناپ كۈرۈڭ"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
-msgstr ""
-"Ezin izan dira aplikazio datuak deskargatu, klikatu berriro saiatzeko"
+msgstr "پىروگىرامما چۈشۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
-msgstr ""
-"Ezin izan da aplikazio zerrenda deskargatu, klikatu berriro saiatzeko"
+msgstr "پىروگىرامما تىزىملىكى چۈشۈرۈلمىدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
-msgstr ""
-"Ezin izan da kategoria zerrenda deskargatu, klikatu berriro saiatzeko"
+msgstr "تۈر تىزىملىكى چۈشۈرۈلمىدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
-msgstr "Ezin izan da esparru zerrenda deskargatu, klikatu berriro saiatzeko"
+msgstr "رامكا تىزىملىكى چۈشۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
-msgstr ""
-"Ezin izan da lizentzia zerrenda deskargatu, klikatu berriro saiatzeko"
+msgstr "ئىجازەتنامە تىزىملىكى چۈشۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr "Ezin izan da aplikazioa aurkitu"
+msgstr "پىروگىرامما تېپىلمىدى"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr "Ezin izan da eskatutako aplikazio aurkitu"
+msgstr "مۇناسىۋەتلىك پىروگىرامما تېپىلمىدى"
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr "Ezin izan da zerrenda aurkitu, agian ez da gehiago existituko"
+msgstr "بۇنداق تېزىملىك تېپىلمىدى.بۇنداق تىزىملىك ساقلانمىغان"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
-msgstr ""
-"Ezin izan dira aplikazioak kargatu zerrenda honetatik, mesedez saiatu "
-"beranduago"
+msgstr "تىزىملىكتىكى پىروگىراممىلارنى يۈكلەنمىدى،قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
-msgstr ""
-"Ezin izan da aplikazioa ezabatu zerrenda honetatik, mesedez saiatu "
-"beranduago."
+msgstr "بۇ تىزىملىكتىكى دېتاللارنى ئۈچۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
-msgstr ""
-"Ezin izan da une honetan aplikazio zerrenda berreskuratu, mesedez saiatu "
-"beranduago."
+msgstr "تىزىملىكتىكى پىروگىرامملارنى ئىزدەپ تاپالمىدى.قايتدىن سىناپ كۈرۈڭ"
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
-msgstr ""
-"Ezin izan da une honetan bilaketa berreskuratu, mesedez saiatu berandugo."
+msgstr "ئىزدەش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could not save your settings at this time, please try again later"
 msgstr ""
-"Ezin izan dira une honetan zure ezarpenak gorde, mesedez saiatu beranduago"
+"تەڭشەكلىرىڭزنى ساقلاش مەغلۇپ بولدى بىرئازدىن كېيىن قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
-msgstr ""
-"Ezin izan da une honetan zerrenda eguneratu, mesedez saiatu beranduago"
+msgstr "تىزىملىكىن يېڭلاش مەغلۇپ بولدى بىر ئازدىن كېيىن قايتىدن سىناپ كۈرۈڭ"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr "Sortu"
+msgstr "ياسا"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "Zerrenda sortu"
+msgstr "تىزىملىك قۇر"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr "Ezabatu"
+msgstr "ئۆچۈر"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr "Deskribapena"
+msgstr "دېتال چۈشەندۈرۈشى"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr "Diruz lagundu"
+msgstr "ئىئانە"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr "Bitcoin bidez"
+msgstr "بېت بۇلى ئىئانە"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr "Gratipay bidez"
+msgstr "Gratipay ئىئانە"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr "Paypal bidez"
+msgstr "پۇل تۈلەش چىقىمداندىن ئىئانە"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -365,89 +328,84 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
-"uApp Explorer diruz babestea, hobeagoa izaten laguntzeko modu bat da. Diru "
-"laguntza egitea erabakitzen baduzu, azpiegitura kostuei aurre egiten "
-"lagunduko duzu. Kostu hauek domeinu izenak, ostatatzea eta abar barnebiltzen "
-"dute. uApp Explorer beti izango da dohainekoa jasotzen diren diru laguntzen "
-"kopurua kontutan izan gabe."
 
 #. The uApp Explorer donation app download link
 #: index.html:211
 msgid "Donation Web App"
-msgstr "Diruz laguntzeko Web Aplikazioa"
+msgstr "تور پىروگىراممغا ئىئانە"
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr "Editatu"
+msgstr "تەھرىرلە"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "Zerrenda editatu"
+msgstr "تىزىملىك تەھىرىرلە"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr "Ezinbesteko Aplikazioak"
+msgstr "قوللىنىشچان پىروگىراممىلار"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr "MEG"
+msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr "Iragazkiak"
+msgstr "سۈزگۈچ"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr "Bilatu"
+msgstr "ئىزدەش"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr "Aplikazio denda ofizialetik oraindik jaso ez den aplikazioa aurkitu."
+msgstr "بىر پىروگىرامما تېپىلدى بىراق ئىگە تەرەپتىن يۈكلەنمىگەن"
 
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr "Bertsio honentzat:"
+msgstr "نەشىرى :"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr "Eskatutako aplikazioa aurkitua"
+msgstr "ئىزدەلگەن پىروگىرامما تېپىلدى"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr "Esparrua:"
+msgstr "قۇرۇلما :"
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr "Dohainik"
+msgstr "ھەقسىز"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr "Jokoak"
+msgstr "ئويۇنلار"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "QR eskaneatzailea eskuratu zure Ubuntu Touch gailurako"
+msgstr ""
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr "Hara joan orain"
+msgstr "قەيەرگە بارىمەن"
 
 #. Grid view
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr "Sareta"
+msgstr "سېتكا"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr "Bihotz Neurketa"
+msgstr "ئالقىشلىنىش دەرىجىسى"
 
 #: main/partials/faq.html:47
 msgid ""
@@ -456,164 +414,158 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
-"Bihotz neurketak Izar neurketen araberan kalkulatzen dira, non 5 izarri \n"
-"bihotz bat dagokion, 4 izarri = 0.5 bihotz, 3 izarri = 0 bihotz, 2 izarri = -"
-"0.5 bihotz,\n"
-"eta izar 1 = -1 bihotz."
 
 #: index.html:164
 msgid "Help translate!"
-msgstr "Lagundu itzultzen!"
+msgstr "تەرجىىگە قاتنىشىش"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr "Bihotz Neurketa altuena"
+msgstr "ئەڭ كۆپ باھالانغىنى"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr "Izar Neurketa altuena"
+msgstr "ئەڭ يقىرى يۇلتۇز دەرىجىسى"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr "Nola lagun dezaket gune hau hobetzen?"
+msgstr "بۇ بەتكە قانداق ياردەملىشىمەن ؟"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr "Nola instala ditzaket aplikazioak?"
+msgstr "پىروگىراممىلارنى قانداق ئورنىتىمەن ؟"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr "Nola zehazten da ospea?"
+msgstr ""
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr "Nere aplikazioa argitaratu berri dut, zergatik ez dut ikusten?"
+msgstr ""
+"مەن يوللىغان پىروگىراممىلار نېمە ئۈچۈن تەستىقلانمايدۇ(ياكى كۈرۈنمەيدۇ)"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "Lagundu nahi baduzu bisita ezazu Github repo-a."
+msgstr ""
 
 #: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr "Itzultzen lagundu nahi baduzu, bisita ezazu Launchpad proiektua."
+msgstr ""
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
-"Akatsak edo ezaugarri berriak eskatu nahi badituzu, bisitatu Github-eko "
-"aleen orria."
 
 #: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
-"Egilearekin harremanetan jarri nahi baduzu, bisita ezazu bere webgunea."
 
 #: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
-msgstr "Diruz lagundu nahi baduzu, egiteko aukera ugari dituzu."
+msgstr ""
 
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr "Info"
+msgstr "ئۇچۇرى"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr "Litekeena da bihotz neurketa negatiboa izatea."
+msgstr ""
 
 #: index.html:128
 msgid "Language"
-msgstr "Hizkuntza"
+msgstr "تىل"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr "Azken Eguneraketak"
+msgstr "ئەڭ يېڭى يېڭلانغنى"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr "Arrakasta gutxienekoak"
+msgstr "ئەڭ ئالقىشلانغىنى (بۇ ئايلىق)"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
-msgstr "Lizentzia:"
+msgstr "ئىجازەتنامە:"
 
 #. List view
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr "Zerrenda"
+msgstr "تىزىم"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr "Zerrenda Izena:"
+msgstr "تىزىم نامى :"
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr "Berrikuspen gehiago kargatzen..."
+msgstr "تېخىمۇ كۆپ باھالارنى يۈكلە"
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr "Berrikuspenak kargatzen..."
+msgstr ""
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr "Saioa hasi"
+msgstr "تىزىملاپ كىر"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr "Saioa hasi Ubuntu bidez"
+msgstr "ئۇبۇنتۇ ھېساباتىدا كىر"
 
 #: index.html:123
 msgid "Log Out"
-msgstr "Saioa amaitu"
+msgstr "تىزىمدىن چىق"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr "Bihotz Neurketa baxuena"
+msgstr ""
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr "Izar Neurketa baxuena"
+msgstr ""
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr "Aplikazio bat falta?"
+msgstr ""
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr "Hileroko arrakastak"
+msgstr "ئايلىق دەرىجىسى"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr "{{app.author}}-(r)en Aplikazio gehiago"
+msgstr "تېخىمۇ كۆپ پىروگىراممىلار {{پىروگىرامما.ئىجاتكار}}"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr "Garestienak(USD)"
+msgstr "ئەڭ قىممىتى (دوللار)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr "Arrakastatsuenak(hil honetan)"
+msgstr "ئەڭ ئالقىشلانغىنى (بۇ ئايلىق)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr "Aipagarrienak"
+msgstr "مۇناسىۋەتلىك پىروگىراممىلار"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr "Nere Zerrendak"
+msgstr "مېىنىڭ تىزىملىكىم"
 
 #. The new apps rss feed link
 #: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr "Aplikazio Berriak"
+msgstr "يېڭى پىروگىراممىلار"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -622,172 +574,169 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
-"Aplikazio berriak orduro jasotzen dira Aplikazio denda ofizialetik, \n"
-"aplikazio berriak iristen diren arte itxaron dezakezu edo eskaera \n"
-"formularioa erabili aplikazioa lehenago aurkitzeko."
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr "Zerrenda berria"
+msgstr "تىزىملىك قۇرۇش"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr "Berrienak"
+msgstr "ئەڭ يېڭى"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr "Hurrengo Aplikazioa"
+msgstr "كېيىنكى پىروگىرامما"
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr "Ez"
+msgstr "ياق"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr "Ez da aplikaziorik aurkitu"
+msgstr "مۇناسىۋەتلىك پىروگىراممىلار تېپىلمىدى"
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr "Ez da aplikaziorik aurkitu, saiatu berriro bilatzen."
+msgstr "مۇناسىۋەتلىك پىروگىرامما تېپىلمىدى قايتىدىن ئىزدەپ كۈرۈڭ"
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr "Zerrendarik ez, bat sortu!"
+msgstr "تىزىملىك قۇرۇلمىغان يېڭدىن  قۇرۇڭ"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr "Berrikuspenik ez du oraindik!"
+msgstr "بۇ پىروگىراممىغا باھا يېزىلىغان"
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr "Zaharrenak"
+msgstr "ئەڭ كونا"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr "Eguneraketarik zaharrenak"
+msgstr "يېڭلانمىغانىلىرى"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr "Mesedez hasi saioa Caxton bidez"
+msgstr ""
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
-msgstr "Arrakasta, jasotako 4 eta 5 izar berrikuspen kopuruaren baitan dago."
+msgstr ""
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr "Aurreko Aplikazioa:"
+msgstr "بۇرۇنقى پىروگىراممىلار :"
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr "QR kodea"
+msgstr "QR كودى"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr "{{qrCodeTitle}}-(r)en QR kodea"
+msgstr "QR كودى ئۈچۈن  {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr "Ezabatu aplikazio hau zure zerrendatik"
+msgstr "تىزىملىكىڭزدىن بۇ پىروگىراممىنى ئۈچۈرەمسىز"
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr "Gorde"
+msgstr "ساقلا"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
 #: index.html:207
 msgid "Scope"
-msgstr "Eremua"
+msgstr "دائىرە"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr "Eremuak"
+msgstr "دائىرىلەر"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr "Pantaila-argazkiak"
+msgstr "ئېكران كۆرۈنۈشى"
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr "Caxton bidez bidali"
+msgstr ""
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr "Caxton bidez bidalia"
+msgstr ""
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr "Ezarpenak"
+msgstr "تەڭشەكلەر"
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr "Facebook-en partekatu"
+msgstr "فايسبوكتا ھەمبەھىرلە"
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr "Google-en partekatu"
+msgstr "گوگىل +  دا ھەمبەھىرلە"
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr "Reddit-en partekatu"
+msgstr "رېددىت تا ھەمبەھىرلە"
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr "Twitter-en partekatu"
+msgstr "تىۋىتېردا ھەمبەھىرلە"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr "Antzeko aplikazioak"
+msgstr "پىروگىرامما تۈرلىرى"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr "S"
+msgstr "Snappy پىروگىرامما"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr "Snappy Aplikazioak"
+msgstr "Snappy پىروگىراممىلار"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr "Sailkatu Aplikazioak:"
+msgstr "تۈردىكى پىروگىرامما:"
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr "Sailkatu:"
+msgstr "تەرىتىپى :"
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr "Sostengua"
+msgstr "قوللاش"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr "Sostengua:"
+msgstr "قوللاش:"
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr "Baldintzak:"
+msgstr "كېلىشىم :"
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr "Eskerrik asko!"
+msgstr "تەشەككۈر!"
 
 #: main/partials/faq.html:42
 msgid ""
@@ -796,12 +745,6 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
-"Bihotz neurketa Izar neurketaren antzekoa da, baina berrikuspen on gehien "
-"dituzten\n"
-"aplikazioak saritzen dituzte. 5 izarreko berrikuspen gehien dituen "
-"aplikazioak bihotz\n"
-"neurketa altuagoa izango du 5 izarreko berrikuspen bakan batzuk besterik ez "
-"dituenaren aldean."
 
 #: main/partials/faq.html:30
 msgid ""
@@ -813,29 +756,18 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
-"Izar neurketa, erabiltzaileak berrikuspenetan emandako izarren batezbesteko\n"
-"Bayesiarra da. Batezbesteko Bayesiarrak, berrikuspen gehiago dituzten "
-"aplikazioei\n"
-"leku hobea ahalbidetzen die berrikuspen gutxi dituzten aplikazioei baino. "
-"Izar\n"
-"neurketa 1-etik 5-erainokoa izan daiteke, non 0-k oraindik berrikuspenik ez "
-"duela\n"
-"jaso esan nahi duen. Batezbesteko Bayesiarraren kalkuluari buruz gehiago "
-"jakin nahi\n"
-"baduzu, begiratu <a "
-"href=\"http://fulmicoton.com/posts/bayesian_rating/\">artikulu hau</a>."
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr "Aplikazio hau zerrenda hauetan aurkitzen da:"
+msgstr "بۇ پىروگىرامما بۇ تىزىملىكتە :"
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Honako hau Ubuntu Touch Aplikazioen arakatzaile ez-ofiziala da."
+msgstr ""
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr "Zerrenda hau hutsik dago!"
+msgstr ""
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -851,26 +783,14 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
-"Gune hau Ubuntu Touch Aplikazioen arakatzaile ez-ofiziala da. Aplikazioen "
-"datu\n"
-"guztiek publikoki eskuragarria den \n"
-"<a "
-"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
-">\n"
-"batetan  dute jatorria. Gune hau <a href=\"http://bhdouglass.com/\">Brian "
-"Douglass</a>-ek mantentzen du \n"
-"eta ez du inolako babes eta lankidetzarik Ubuntu edo Canonical-ekin.\n"
-"Ubuntu eta Canonical\n"
-"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>-ek erregistraturiko "
-"markak dira."
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
-msgstr "Izenburua A-Z"
+msgstr "ماۋزۇ A-Z"
 
 #: main/services/utils.js:74
 msgid "Title Z-A"
-msgstr "Izenburua Z-A"
+msgstr "ماۋزۇ Z-A"
 
 #: main/partials/faq.html:20
 msgid ""
@@ -879,120 +799,108 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"Aplikazioak instalatzeko, gune honetan sartu behar duzu zure Ubuntu Touch "
-"gailua erabiliz. \n"
-"Instalatu nahi duzun aplikazioa aurkitu eta egin klik \"Instalatu\" "
-"botoiean. Aplikazio denda ofizialera \n"
-"berbideratua izango zara eta bertan aplikazioa instalatu ahal izango duzu."
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
-"Arazo baten berri emateko edo ezaugarri baten eskaera egiteko bisitatu "
-"GitHub-en gune honi dagokion aleen orria."
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr "Aplikaziorik onenak"
+msgstr "ئەڭ ئالقىشلانغان پىروگىراممىلار"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
 msgid "Type:"
-msgstr "Mota:"
+msgstr "تىپى:"
 
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr "Eguneratutako aplikazioak"
+msgstr "يېڭلانغان پىروگىراممىلار"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr "Eguneratua:"
+msgstr "يېڭىلانغان:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr "Erabiltzaile Zerrenda"
+msgstr "ئېشلەتكۈچلەر تىزىملىكى"
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr "Erabiltzaileen berrikuspenak"
+msgstr "باھالىنىش دەرىجىسى"
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr "Bertsioa:"
+msgstr "نەشرى:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr "Ikusi"
+msgstr "كۆرۈنۈش"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr "Web Aplikazioa"
+msgstr "تور پىروگىرامما"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr "Web Aplikazioak"
+msgstr "تور پىروگىراممىسى"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr "Webgunea:"
+msgstr "تور بېكىتى:"
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr "Ongi etorri"
+msgstr "خۇش كەپسىز"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr "Ongi etorri uApp Explorer-era!"
+msgstr "ئۇبۇنتۇ ئەپ بازىرىغا خۇش كەپسىز"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
-"Zer egin behar dut copyright edo marka urratzen duen eduki bat aurkitzen "
-"badut?"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
-msgstr "Zer da bihotz neurketa?"
+msgstr "باھالىنىش دەرىجىسى دېگەن نېمە ؟"
 
 #: main/partials/faq.html:29
 msgid "What is the star rating?"
-msgstr "Zer da izar neurketa?"
+msgstr "يۇلتۇز دەرىجىسى دېگەن نېمە ؟"
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr "Zer da gune hau?"
+msgstr "بۇ  قانداق تور بىكەت ؟"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
 msgstr ""
-"Non eman dezaket arazo baten berri edo ezaugarri berri baten eskaera egin?"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
-"Diru laguntza eman hala ez, aukeratzen duzuna aukeratzen duzula ere, zure "
-"laguntza eskertzen dut. Eskerrikasko!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr "Zergatik diruz lagundu?"
+msgstr "نېمە ئۈچۈن ئىئانە قىلىمىز؟"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr "Bai"
+msgstr "ھەئە"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr "Dagoeneko Caxton bidez konetaturik zaude!"
+msgstr ""
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
@@ -1000,5 +908,3 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
-"Zure kontua ez dago Caxton-era konektaturik, egin klik zure ezarpenetara "
-"joateko"

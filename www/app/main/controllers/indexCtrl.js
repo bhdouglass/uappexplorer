@@ -44,7 +44,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 149,
+      'untranslated': 130,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -60,11 +60,15 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }, {
       'name': 'Norwegian Bokmal',
       'code': 'nb',
-      'untranslated': 168,
+      'untranslated': 108,
     }, {
       'name': 'Polish',
       'code': 'pl',
       'untranslated': 157,
+    }, {
+      'name': 'Portuguese',
+      'code': 'pt',
+      'untranslated': 160,
     }, {
       'name': 'Russian',
       'code': 'ru',
@@ -76,7 +80,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 139,
+      'untranslated': 35,
     },
   ];
 
