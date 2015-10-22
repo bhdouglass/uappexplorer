@@ -8,24 +8,24 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-13 22:47+0000\n"
-"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
+"PO-Revision-Date: 2015-10-22 12:02+0000\n"
+"Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-18 04:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-22 12:56+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 "Language: pt\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr ""
+msgstr "- Escolha uma lista -"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
-msgstr ""
+msgstr "(Não se preocupe, há uma versão gratuita também!)"
 
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
@@ -60,13 +60,17 @@ msgstr[1] "{{list.packages.length}} apps"
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr "*Instalar vai abrir a appstore oficial num dispositivo Ubuntu Touch"
+msgstr ""
+"*Instalar o levará para a appstore oficial em um dispositivo Ubuntu Touch"
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"* Esta webapp injeta código personalizado para o site, que pode adicionar "
+"recursos extras ou ser mal-intencionado. Só use este app se você confiar no "
+"autor."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
@@ -78,7 +82,7 @@ msgstr "Adicionar à lista:"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr ""
+msgstr "App adicionado a sua lista"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
@@ -92,7 +96,7 @@ msgstr "Todas"
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr "Todas as apps"
+msgstr "Todos as apps"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
@@ -100,7 +104,7 @@ msgstr "Todos os tipos"
 
 #: apps/controllers/appsCtrl.js:41
 msgid "Any"
-msgstr "Todas"
+msgstr "Qualquer"
 
 #: main/partials/faq.html:75
 msgid ""
@@ -113,6 +117,13 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"Quaisquer solicitações para remover direitos autorais ou marca registrada do "
+"conteúdo infrator deve ser\n"
+"enviado a <a href=\"http://www.canonical.com/\"> </a> Canonical ou ao autor "
+"do app (um autor geralmente tem um método de contato listado sob na guia "
+"\"Support\" do seu aplicativo). uApp Explorer não é afiliado a Canonical\n"
+"e não hospeda nenhum dos apps. uApp Explorer apenas exibe publicamente "
+"informações disponívis  sobre a appstore oficial Ubuntu Touch"
 
 #: apps/directives/type.js:26
 msgid "App"
@@ -130,6 +141,8 @@ msgstr "Apps"
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
+"As apps não são instaladas através do uApp Explorer, mas sim através da "
+"Ubuntu Store."
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
@@ -143,7 +156,7 @@ msgstr "Arquitetura:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr ""
+msgstr "Tem certeza de que deseja excluir \"{{selectedList.name}}\"?"
 
 #. Browse Apps
 #: main/partials/main.html:5
@@ -172,12 +185,12 @@ msgstr "Comprar a web app"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr ""
+msgstr "Compre a webapp  através da Ubuntu Store"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr ""
+msgstr "Por: {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
@@ -185,7 +198,7 @@ msgstr "Categoria:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr ""
+msgstr "Código Caxton"
 
 #. App changelog
 #: apps/partials/app.html:180
@@ -213,111 +226,131 @@ msgstr "O que contém:"
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
+"Não foi possível adicionar o app neste momento, tente novamente mais tarde"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
+"Não foi possível ligar ao Caxton neste momento, tente novamente mais tarde."
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
+"Não foi possível criar uma nova lista neste momento, tente novamente mais "
+"tarde"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
+"Não foi possível apagar a lista neste momento, tente novamente mais tarde"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
 msgstr ""
+"Não foi possível transferir dados da app, clique para tentar novamente"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
 msgstr ""
+"Não foi possível transferir a lista de apps, clique para tentar novamente"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
 msgstr ""
+"Não foi possível baixar a lista de categorias, clique para tentar novamente"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
 msgstr ""
+"Não foi possível baixar a lista de framework, clique para tentar novamente"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
 msgstr ""
+"Não foi possível baixar a lista de licenças, clique para tentar novamente"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr ""
+msgstr "Não foi possível encontrar a app"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr ""
+msgstr "Não foi possível encontrar a app desejada"
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr ""
+msgstr "Não foi possível encontrar a lista, talvez ela não exista mais"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
 msgstr ""
+"Não foi possível carregar as apps para esta lista, tente novamente mais tarde"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
+"Não foi possível remover a app a partir desta lista, tente novamente mais "
+"tarde"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
 msgstr ""
+"Não foi possível recuperar lista de apps neste momento, tente novamente mais "
+"tarde."
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
 msgstr ""
+"Não foi possível recuperar a procura neste momento, tente novamente mais "
+"tarde."
 
 #: lists/controllers/meCtrl.js:69
 msgid "Could not save your settings at this time, please try again later"
 msgstr ""
+"Não foi possível gravar as definições neste momento, tente novamente mais "
+"tarde"
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
+"Não foi possível atualizar a lista neste momento, tente novamente mais tarde"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr ""
+msgstr "Criar"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr ""
+msgstr "Criar lista"
 
 #: lists/partials/me.html:65
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: index.html:114
 #: main/partials/donate.html:2
 msgid "Donate"
-msgstr ""
+msgstr "Doar"
 
 #: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
-msgstr ""
+msgstr "Doar via Bitcoin"
 
 #: main/partials/donate.html:37
 msgid "Donate via Gratipay"
-msgstr ""
+msgstr "Doar bia Gratipay"
 
 #: main/partials/donate.html:30
 #: main/partials/donate.html:34
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Doar via Paypal"
 
 #: main/partials/donate.html:7
 msgid ""
@@ -329,84 +362,88 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"Doar para uApp Explorer é apenas uma maneira de ajudar a torná-lo melhor. Se "
+"optar por doar dinheiro será para os custos da infraestrutura. Os custos "
+"incluem nomes de domínio, hospedagem, etc. uApp Explorer será sempre um "
+"serviço grátis e aberto, independentemente do número de doações."
 
 #. The uApp Explorer donation app download link
 #: index.html:211
 msgid "Donation Web App"
-msgstr ""
+msgstr "Doar para o web app"
 
 #: lists/partials/me.html:60
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr ""
+msgstr "Editar lista"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr ""
+msgstr "Apps essenciais"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
 #: main/partials/faq.html:2
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr ""
+msgstr "Filtros"
 
 #: apps/partials/request.html:36
 msgid "Find"
-msgstr ""
+msgstr "Encontar"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr ""
+msgstr "Encontre uma app que ainda não foi obtida a partir da Ubuntu Store."
 
 #. Comment below reviews
 #: apps/partials/app.html:367
 msgid "For version:"
-msgstr ""
+msgstr "Para versão:"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr ""
+msgstr "Encontrada a app desejada"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
 msgid "Framework:"
-msgstr ""
+msgstr "Framework:"
 
 #. No Cost
 #: apps/partials/app.html:50
 #: main/filters/dollars.js:19
 #: main/services/utils.js:107
 msgid "Free"
-msgstr ""
+msgstr "Grátis"
 
 #: main/partials/main.html:70
 msgid "Games"
-msgstr ""
+msgstr "Jogos"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "Obter um scanner QR para o seu dispositivo Ubuntu Touch"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
-msgstr ""
+msgstr "Vá agora"
 
 #. Grid view
 #: apps/partials/apps.html:47
 #: lists/partials/list.html:22
 msgid "Grid"
-msgstr ""
+msgstr "Grelha"
 
 #: apps/partials/appView.html:23
 msgid "Heart Rating"
-msgstr ""
+msgstr "Classificação de coração"
 
 #: main/partials/faq.html:47
 msgid ""
@@ -415,157 +452,165 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
+"Classificações de coração são calculadas a partir das classificações de "
+"estrela quando uma classificação de 5 estrelas é\n"
+"1 ponto de coração, 4 estrelas = 0.5 corações, 3 estrelas = 0 corações, 2 "
+"estrelas = -0,5,\n"
+"e 1 estrela = -1 coração."
 
 #: index.html:164
 msgid "Help translate!"
-msgstr ""
+msgstr "Ajuda a traduzir!"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
-msgstr ""
+msgstr "Classificação mais alta de coração"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr ""
+msgstr "Classificação mais alta de estrela"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
-msgstr ""
+msgstr "Como posso melhorar este site?"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr ""
+msgstr "Como instalar as apps?"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr ""
+msgstr "Como é determinada a popularidade?"
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr ""
+msgstr "Acabei de publicar a minha app, porque não a vejo?"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr ""
+msgstr "Se desejar contribuir para o código, visite o repositório GitHub."
 
 #: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr ""
+msgstr "Se desejar contribuir com traduções, visite o projeto Launchpad."
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
+"Se desejar submeter erros ou pedidos de funcionalidades visite a página do "
+"GitHub."
 
 #: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
-msgstr ""
+msgstr "Se desejar contactar o autor deste site, visite a sua página."
 
 #: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
+"Se desejar contribuir financeiramente, existem várias opções de doação."
 
 #. App info
 #: apps/partials/app.html:183
 msgid "Info"
-msgstr ""
+msgstr "Informação"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr ""
+msgstr "É possível ter uma classificação negativa de corações."
 
 #: index.html:128
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: main/services/utils.js:83
 msgid "Latest Update"
-msgstr ""
+msgstr "Última atualização"
 
 #: main/services/utils.js:104
 msgid "Least Popular (This Month)"
-msgstr ""
+msgstr "Menos populares (este mês)"
 
 #: apps/partials/app.html:204
 #: apps/partials/apps.html:62
 msgid "License:"
-msgstr ""
+msgstr "Licença"
 
 #. List view
 #: apps/partials/apps.html:51
 #: lists/partials/list.html:26
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 #: lists/partials/listEdit.html:9
 msgid "List Name:"
-msgstr ""
+msgstr "Nome da lista:"
 
 #: apps/partials/app.html:390
 msgid "Loading more reviews..."
-msgstr ""
+msgstr "A carregar mais comentários..."
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr ""
+msgstr "A carregar comentários..."
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr ""
+msgstr "Iniciar sessão"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
-msgstr ""
+msgstr "Iniciar via Ubuntu"
 
 #: index.html:123
 msgid "Log Out"
-msgstr ""
+msgstr "Terminar sessão"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr ""
+msgstr "Classificação mais baixa de coração"
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr ""
+msgstr "Classificação mais baixa de estrela"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr ""
+msgstr "Falta-lhe uma app?"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
-msgstr ""
+msgstr "Popularidade mensal"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr ""
+msgstr "Mais apps de {{app.author}}"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
-msgstr ""
+msgstr "Mais caras (USD)"
 
 #: main/services/utils.js:101
 msgid "Most Popular (This Month)"
-msgstr ""
+msgstr "Mais populares (este mês)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr ""
+msgstr "Mais relevantes"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr ""
+msgstr "As minhas listas"
 
 #. The new apps rss feed link
 #: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr ""
+msgstr "Novas apps"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -574,169 +619,175 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"Novas apps são importadas da Ubuntu Store a cada hora, pode esperar\n"
+"até que novas apps sejam importadas ou pedir para a app ser encontrada\n"
+"mais cedo."
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr ""
+msgstr "Nova lista"
 
 #: main/services/utils.js:77
 msgid "Newest"
-msgstr ""
+msgstr "Mais recentes"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr ""
+msgstr "Próxima app:"
 
 #: lists/partials/listDelete.html:8
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr ""
+msgstr "Sem apps encontradas"
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr ""
+msgstr "Sem apps encontradas, tente novamente."
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr ""
+msgstr "Sem listas, crie uma!"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr ""
+msgstr "Sem comentários ainda!"
 
 #: main/services/utils.js:80
 msgid "Oldest"
-msgstr ""
+msgstr "Mais antigas"
 
 #: main/services/utils.js:86
 msgid "Oldest Update"
-msgstr ""
+msgstr "Atualização mais antiga"
 
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "Inicie sessão para enviar via Caxton"
 
 #: main/partials/faq.html:58
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app\n"
 "during the current month."
 msgstr ""
+"A popularidade é baseada no número de classificações de 4 e 5 estrelas dadas "
+"a uma app\n"
+"durante o mês corrente."
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr ""
+msgstr "App anterior:"
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
 msgid "QR Code"
-msgstr ""
+msgstr "Código QR"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr ""
+msgstr "QR Code para {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr ""
+msgstr "Remove esta app da sua lista"
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
 msgid "Save"
-msgstr ""
+msgstr "Gravar"
 
 #. The uApp Explorer scope download link
 #: apps/directives/type.js:27
 #: index.html:207
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr ""
+msgstr "Scopes"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
-msgstr ""
+msgstr "Capturas de ecrã"
 
 #: apps/partials/app.html:121
 #: apps/partials/app.html:123
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Enviar via Caxton"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Enviado via Caxton"
 
 #: lists/partials/me.html:13
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #: apps/partials/app.html:105
 #: lists/partials/list.html:41
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Partilhar no Facebook"
 
 #: apps/partials/app.html:100
 #: lists/partials/list.html:36
 msgid "Share on Google+"
-msgstr ""
+msgstr "Partilhar no Google+"
 
 #: apps/partials/app.html:116
 #: lists/partials/list.html:51
 msgid "Share on Reddit"
-msgstr ""
+msgstr "Partilhar no Reddit"
 
 #: apps/partials/app.html:110
 #: lists/partials/list.html:46
 msgid "Share on Twitter"
-msgstr ""
+msgstr "Partilhar no Twitter"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr ""
+msgstr "Apps semelhantes"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr ""
+msgstr "Snappy app"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy apps"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr ""
+msgstr "Ordenar apps por:"
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
-msgstr ""
+msgstr "Ordenar por:"
 
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr ""
+msgstr "Suporte"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr ""
+msgstr "Suporte:"
 
 #. Terms and conditions
 #: apps/partials/app.html:224
 msgid "Terms:"
-msgstr ""
+msgstr "Termos:"
 
 #: main/partials/donate.html:52
 msgid "Thank you!"
-msgstr ""
+msgstr "Obrigado!"
 
 #: main/partials/faq.html:42
 msgid ""
@@ -745,6 +796,11 @@ msgid ""
 "more good reviews. An app with more 5 star ratings will have a higher heart\n"
 "rating than an app with only a few 5 star ratings."
 msgstr ""
+"A classificação de coração é igual à classificação por estrela, mas "
+"recompensa as apps por ter\n"
+"boas classificações. Uma app com uma classificação de mais de 5 estrelas vai "
+"ter um classificação\n"
+"maior de corações do que uma app apenas com uma classificação de 5 estrelas."
 
 #: main/partials/faq.html:30
 msgid ""
@@ -756,18 +812,27 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out\n"
 "<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
 msgstr ""
+"A classificação por estrelas é a média Bayesiana da classificação por "
+"estrelas que os utilizadores\n"
+"dão a uma app quando deixam um comentário. A média Bayesiana permite apps "
+"com\n"
+"mais comentários classificar-se melhor do que apps com menos comentários. A "
+"classificação por estrela\n"
+"pode ser entre 1 e 5, onde um 0 significa que não existem comentários\n"
+"ainda. Para mais informação sobre o cálculo da média Bayesiana, visite\n"
+"a href=\"http://fulmicoton.com/posts/bayesian_rating/\">este artigo</a>."
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr ""
+msgstr "Esta app está nestas listas:"
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr ""
+msgstr "Está é a versão não oficial da Ubuntu Store."
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr ""
+msgstr "Esta lista está vazia!"
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -783,14 +848,24 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
+"Este site é a versão não oficial da Ubuntu Store. Toda a informação é\n"
+"publicamente acessível através de uma\n"
+"<a "
+"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
+">.\n"
+"Este site é mantido por <a href=\"http://bhdouglass.com/\">Brian "
+"Douglass</a>\n"
+"e ele não está ligado à Canonical e ao Ubuntu.\n"
+"Ubuntu e Canonical são marcas registadas de\n"
+"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
-msgstr ""
+msgstr "Títulos A-Z"
 
 #: main/services/utils.js:74
 msgid "Title Z-A"
-msgstr ""
+msgstr "Títulos Z-A"
 
 #: main/partials/faq.html:20
 msgid ""
@@ -799,112 +874,120 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Para instalar uma app, visite este site no seu dispositivo Ubuntu. Encontre "
+"a app\n"
+"que deseja e clique no botão de \"Instalar\". É redirecionado para\n"
+"a Ubuntu Store no seu dispositivo onde pode instalar a app."
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
+"Para reportar um problema ou pedir novas funcionalidades visite o site no "
+"GitHub."
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr ""
+msgstr "Top apps"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
 msgid "Type:"
-msgstr ""
+msgstr "Tipo:"
 
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr ""
+msgstr "Apps atualizadas"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
-msgstr ""
+msgstr "Atualizado:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr ""
+msgstr "Lista do utilizador:"
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
-msgstr ""
+msgstr "Comentários dos utilizadores"
 
 #: apps/partials/app.html:200
 msgid "Version:"
-msgstr ""
+msgstr "Versão:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr ""
+msgstr "Ver"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr ""
+msgstr "Web app"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr ""
+msgstr "Web apps"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr ""
+msgstr "Site:"
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
 msgid "Welcome"
-msgstr ""
+msgstr "Bem-vindo"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr ""
+msgstr "Bem-vindo ao uApp Explorer!"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
+"O que faço se encontrar direitos de autor ou marcas registadas a infringir "
+"conteúdo?"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
-msgstr ""
+msgstr "O que é a classificação por coração?"
 
 #: main/partials/faq.html:29
 msgid "What is the star rating?"
-msgstr ""
+msgstr "O que é a classificação por estrela?"
 
 #: main/partials/faq.html:6
 msgid "What is this site?"
-msgstr ""
+msgstr "Que site é este?"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "Onde posso reportar um problema ou pedir uma nova funcionalidade?"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr ""
+msgstr "Se desejar doar ou não, agradeço a sua ajuda. Obrigado!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
-msgstr ""
+msgstr "Porque doar?"
 
 #: lists/partials/listDelete.html:13
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "Já está ligado via Caxton!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr ""
+msgstr "Não tem uma conta ligada ao Caxton, clique para ir às definições."

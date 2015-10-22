@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-16 13:45+0000\n"
+"PO-Revision-Date: 2015-10-21 13:15+0000\n"
 "Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-10-18 04:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-22 12:56+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 "Language: ug\n"
 
 #: apps/partials/app.html:152
 msgid "- Choose a list -"
-msgstr "- تىزىملىك تاللا -"
+msgstr "تىزىم تاللا"
 
 #: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
@@ -30,43 +30,46 @@ msgstr "(ئەنسىرىمەڭ .بۇ دېتالنىڭ يەنە ھەقسىز نۇ�
 #: main/partials/main.html:25
 msgid "{{counts.applications}} apps"
 msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{ئەملى ساناالغنى}}ئەمەلىي پروگرامما"
+msgstr[0] "{{counts.applications}} ئەپ"
 
 #: main/partials/main.html:73
 msgid "{{counts.games}} games"
 msgid_plural "{{counts.games}} games"
-msgstr[0] "ئۇيۇنلار"
+msgstr[0] "{{counts.games}} ئويۇن"
 
 #: main/partials/main.html:97
 msgid "{{counts.scopes}} scopes"
 msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{{counts.scopes}} ئەپچە"
 
 #: main/partials/main.html:49
 msgid "{{counts.webapps}} web apps"
 msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "تور پىروگىراممىلىرى"
+msgstr[0] "{{counts.webapps}} تور ئەپى"
 
 #: lists/partials/me.html:79
 msgid "{{list.packages.length}} apps"
 msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "پىروگىراممىلار"
+msgstr[0] "{{list.packages.length}} ئەپ"
 
 #: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
+"*ئورنىتىش سىزنى ئۇبۇنتۇ چەكمە ئۈسكۈنىسىدىكى ئىگە تەرەپ ئەپ دۇكىنىغا باشلايدۇ"
 
 #: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"*بۇ تور ئەپى تور بەتكە ئىختىيارىي كود قىستۇرغان، ئۇ تېخىمۇ كۆپ ئىقتىدار ياكى "
+"زەھەرخەندە كودلارنى قوشۇشى مۇمكىن. پەقەت يازغۇچىغا ئىشەنگەن ئەھۋلدا ئاندىن "
+"بۇ  ئەپنى ئىشلىتىڭ."
 
 #: lists/partials/listEdit.html:37
 msgid "Add Apps:"
-msgstr "پىروگىرامما قوش :"
+msgstr "ئەپ قوشۇش:"
 
 #: apps/partials/app.html:150
 msgid "Add to list:"
@@ -74,21 +77,21 @@ msgstr "تىزىملىك قۇشۇش :"
 
 #: apps/controllers/appCtrl.js:92
 msgid "Added this app to your list"
-msgstr "تىزىملىكىڭزگە پىروگىرامما قۇشۇڭ"
+msgstr "بۇ ئەپ تىزىمىڭىزغا قوشۇلدى"
 
 #: apps/controllers/appsCtrl.js:117
 #: apps/controllers/appsCtrl.js:23
 #: apps/controllers/appsCtrl.js:45
 #: apps/services/api.js:194
 msgid "All"
-msgstr "ھەممە"
+msgstr "بارلىق"
 
 #: apps/controllers/appsCtrl.js:108
 #: apps/controllers/appsCtrl.js:113
 #: apps/controllers/appsCtrl.js:14
 #: apps/services/api.js:177
 msgid "All Apps"
-msgstr "ھەممە پىروگىراممىلار"
+msgstr "بارلىق ئەپلەر"
 
 #: apps/controllers/appsCtrl.js:63
 msgid "All Types"
@@ -109,6 +112,17 @@ msgid ""
 "and does not host any apps. uApp Explorer only displays publicly available\n"
 "information about the official Ubuntu Touch appstore."
 msgstr ""
+"ھەر قانداق نەشر ھوقۇقى ياكى تاۋار ماركا ھوقۇقىغا دەخلى قىلغانلىق ھەققىدىكى "
+"مەزمۇننى\n"
+"ئۆچۈرۈشنى تەلەپ قىلىشتا <a href=\"http://www.canonical.com/\">Canonical</a> "
+"ياكى\n"
+"ئەپنىڭ يازغۇچىسى (يازغۇچى ئادەتتە ئۆزلىرىنىڭ ئەپ بېتىدىكى «قوللاش» بەتكۈچىدە "
+"ئالاقىلىش\n"
+"ئۇسۇلىنى قالدۇرىدۇ) بىر تەرەپ قىلىدۇ. uApp Explorer ئەپ Canonical غا تەۋە "
+"ئەمەس ھەمدە \n"
+"ھېچقانداق ئەپنى ئۆز ئىچىگە ئالمىغان. uApp Explorer پەقەت ئىگە تەرەپ ئۇبۇنتۇ "
+"چەكمە ئەپ\n"
+"دۇكىنىدىكى ئاشكارا ئېرىشكىلى بولىدىغان ئۇچۇرلارنى نامايەن قىلىدۇ."
 
 #: apps/directives/type.js:26
 msgid "App"
@@ -116,32 +130,32 @@ msgstr "ئەپ"
 
 #: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "پىروگىرامما نامى (مەسلەن : com.ubuntu.developer.example)"
+msgstr "ئەپ نامى"
 
 #: apps/controllers/appsCtrl.js:66
 #: main/partials/main.html:22
 msgid "Apps"
-msgstr "پروگراممىلار"
+msgstr "ئەپلەر"
 
 #: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"پىروگىرامما ئورنىتىش بۇ تور بەتنىڭ تەستىقلىشدىن ئۆتمىگەن.بىراق ئىگە تەرەپ "
-"تور بىتدە ئېلان قىلىنغان."
+"ئەپلەرنى ئورنىتىش بۇ تور بەتنىڭ تەستىقلىشدىن ئۆتمىگەن.بىراق ئىگە تەرەپ تور "
+"بىتدە ئېلان قىلىنغان"
 
 #: lists/partials/listEdit.html:23
 msgid "Apps:"
-msgstr "پىروگىرامىلار"
+msgstr "ئەپلەر :"
 
 #. CPU architecture
 #: apps/partials/app.html:206
 #: apps/partials/apps.html:69
 msgid "Architecture:"
-msgstr "Architecture:"
+msgstr "قۇرۇلمىسى:"
 
 #: lists/partials/listDelete.html:2
 msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr "بۇنى راستىنلا ئۈچۈرۋىتەمسىز \"{{selectedList.name}}\"?"
+msgstr "راستىنلا «{{selectedList.name}}» نى ئۈچۈرۋىتەمسىز؟"
 
 #. Browse Apps
 #: main/partials/main.html:5
@@ -150,32 +164,32 @@ msgstr "كۆز يۈگۈرت"
 
 #: main/partials/main.html:14
 msgid "Browse Apps"
-msgstr "تور كۆرگۈ پىروگىراممىلىرى"
+msgstr "ئەپلەرگە كۆز يۈگۈرت"
 
 #: main/partials/main.html:62
 msgid "Browse Games"
-msgstr "تور كۆرگ ئۇيۇنلىرى"
+msgstr "ئۇيۇنلارغا كۆز يۈگۈرت"
 
 #: main/partials/main.html:86
 msgid "Browse Scopes"
-msgstr "Browse Scopes"
+msgstr "ئەپچەلەرگە كۆزيۈگۈرت"
 
 #: main/partials/main.html:38
 msgid "Browse Web Apps"
-msgstr "تور كۆرگۈ بەت يۈزى پىروگىراممىلىرى"
+msgstr "تور ئەپلىرىگە كۆز يۈگۈرت"
 
 #: main/partials/donate.html:19
 msgid "Buy the Webapp"
-msgstr "سېتىۋىلىش تەرىتىپى"
+msgstr "تور ئەپ سېتىۋېلىش"
 
 #: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "ئۇبۇنتۇ پىروگىرامما بازىرىدىن سېتىۋىلىنغان پىروگىراممىلار"
+msgstr "ئۇبۇنتۇ ئەپ بازىرىدىن سېتىۋىلىنغان ئەپلەر"
 
 #. User list author
 #: lists/partials/list.html:13
 msgid "By: {{list.user_name}}"
-msgstr "مەسلەن : {{list.user_name}}"
+msgstr "يازغۇچى: {{list.user_name}}"
 
 #: apps/partials/apps.html:17
 msgid "Category:"
@@ -183,12 +197,12 @@ msgstr "كاتېگورىيە:"
 
 #: lists/partials/me.html:18
 msgid "Caxton Code"
-msgstr "دەلىل كودى"
+msgstr "Caxton كودى"
 
 #. App changelog
 #: apps/partials/app.html:180
 msgid "Changelog"
-msgstr "خاتىرە يېڭىلا"
+msgstr "يېڭلىنىش خاتىرىسى"
 
 #: lists/partials/listEdit.html:42
 msgid "Clear search"
@@ -210,7 +224,7 @@ msgstr "تەركىبىدە :"
 
 #: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
-msgstr "سىز پىروگىرامما تىزىملىكى قۇشالمايىسىز .بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
+msgstr "سىز ئەپ تىزىمى قۇشالمايسىز ،بىر ئازدىن كېيىن قايتا سىناپ كۈرۈڭ"
 
 #: apps/controllers/appCtrl.js:136
 #: lists/controllers/listCtrl.js:114
@@ -219,56 +233,56 @@ msgstr "سىز ھازىر  دەلىل غا ئۇلىيالمايسىز .بىز ئ
 
 #: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
-msgstr "سىز ھازىر يېڭدىن تىزىملىك قۇسالمايسىز .بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
+msgstr "سىز يېڭدىن تىزىم قۇشالمايسىز ،بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
-msgstr "تىزىملىكىنى ئۈچۈرەلمەيسىز .بىر ئازدىن كېيىن قايتا سىناپ كۈرۈڭ"
+msgstr "تىزىمنى ئۈچۈرەلمەيسىز.بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
-msgstr "پىروگىرامما چۈشۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
+msgstr "ئەپ چۈشۈرۈش مەغلۇب بولدى ،قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
-msgstr "پىروگىرامما تىزىملىكى چۈشۈرۈلمىدى قايتىدىن سىناپ كۈرۈڭ"
+msgstr "پىروگىرامما تىزىمى چۈشۈرۈلمدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:154
 msgid "Could not download category list, click to retry"
-msgstr "تۈر تىزىملىكى چۈشۈرۈلمىدى قايتىدىن سىناپ كۈرۈڭ"
+msgstr "تۈر تىزىمى چۈشۈرۈلمىدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:167
 msgid "Could not download framework list, click to retry"
-msgstr "رامكا تىزىملىكى چۈشۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
+msgstr "رامكا تىزىمى چۈشۈرۈش مەغلۇب بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appsCtrl.js:179
 msgid "Could not download license list, click to retry"
-msgstr "ئىجازەتنامە تىزىملىكى چۈشۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
+msgstr "ئىجازەتنامە تىزىمى چۈشۈرۈش مەغلۇب بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
-msgstr "پىروگىرامما تېپىلمىدى"
+msgstr "ئەپ تېپىلمىدى"
 
 #: apps/partials/request.html:9
 msgid "Could not find the requested app"
-msgstr "مۇناسىۋەتلىك پىروگىرامما تېپىلمىدى"
+msgstr "مۇناسىۋەتلىك ئەپ تېپىلمىدى"
 
 #: lists/controllers/listCtrl.js:42
 #: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
-msgstr "بۇنداق تېزىملىك تېپىلمىدى.بۇنداق تىزىملىك ساقلانمىغان"
+msgstr "بۇنداق تىزىم تېپلمىدى،بۇنداق تىزىم ساقلانمغان"
 
 #: lists/controllers/listCtrl.js:62
 msgid "Could not load the apps for this list, please try again later"
-msgstr "تىزىملىكتىكى پىروگىراممىلارنى يۈكلەنمىدى،قايتىدىن سىناپ كۈرۈڭ"
+msgstr "تىزىمدىكى ئەپلەر يۈكلەنمىدى،قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
-msgstr "بۇ تىزىملىكتىكى دېتاللارنى ئۈچۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
+msgstr "بۇ تىزىمدىكى ئەپلەرنى ئۈچۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/partials/listEdit.html:30
 msgid "Could not retrieve app list at this time, please try again later."
-msgstr "تىزىملىكتىكى پىروگىرامملارنى ئىزدەپ تاپالمىدى.قايتدىن سىناپ كۈرۈڭ"
+msgstr "تىزىمدىكى ئەپلەر تېپىلمىدى،قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/partials/listEdit.html:56
 msgid "Could not retrieve search at this time, please try again later."
@@ -281,15 +295,15 @@ msgstr ""
 
 #: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
-msgstr "تىزىملىكىن يېڭلاش مەغلۇپ بولدى بىر ئازدىن كېيىن قايتىدن سىناپ كۈرۈڭ"
+msgstr "تىزىمنى يېڭلاش مەغلۇپ بولدى.بىرئازدىن كېيىن قايتىدىن سىناپ كۈرۈڭ"
 
 #: lists/partials/listEdit.html:77
 msgid "Create"
-msgstr "ياسا"
+msgstr "قۇر"
 
 #: lists/partials/listEdit.html:3
 msgid "Create List"
-msgstr "تىزىملىك قۇر"
+msgstr "تىزىم قۇر"
 
 #: lists/partials/me.html:65
 msgid "Delete"
@@ -298,7 +312,7 @@ msgstr "ئۆچۈر"
 #. App description
 #: apps/partials/app.html:177
 msgid "Description"
-msgstr "دېتال چۈشەندۈرۈشى"
+msgstr "چۈشەندۈرۈلۈشى"
 
 #: index.html:114
 #: main/partials/donate.html:2
@@ -328,11 +342,21 @@ msgid ""
 "source\n"
 "service, regardless of the number of donations."
 msgstr ""
+"uApp Explorer ئۈچۈن ئىئانە قىلىش بولسا بۇ تور بىكەتنىڭ بۇنىڭدىن كېيىن تېخىمۇ "
+"ياخىشى خىزمەت قىلىشى ئۈچۈندۇر.ئەگەر سىز بۇ تور بىكەت ئۈچۈن ئىئانە قىلماقچى "
+"بولسىڭز سىزنىڭ ئىئانە قىلغان پۇلىڭز ئاساسلىق ئۈسكىنلەرنى ياخشىلاش ئۈچۈن "
+"ئىشلىتىدۇ.بۇلار تور نامى ،ۋاكالىتەن باشقۇرۇش ،مۇلازىمىتىر قاتارلىق "
+"ئۈسكىنلەرنىڭ چىقىمى ئۈچۈن ئىشلىتىلىدۇ.ئىئانە قىلىڭ ياكى قىلماڭ بۇ تور بىكەت "
+"مەڭگۈ ھەقسىز ،ئېچىۋىتىلىگەن ھالدا سىز ئۈچۈن خىزمەت قىلىدۇ.\n"
+"ئىئانە قىلىش قىلماسلىقىڭزدىن قەتئىنەزەر سىزنىڭ بىزنى قوللىغانلىقىڭزغا كۆپتىن "
+"-كۆپ رەھمەت!\n"
+"\n"
+"- Brian"
 
 #. The uApp Explorer donation app download link
 #: index.html:211
 msgid "Donation Web App"
-msgstr "تور پىروگىراممغا ئىئانە"
+msgstr "تور ئەپكە ئىئانە"
 
 #: lists/partials/me.html:60
 msgid "Edit"
@@ -340,11 +364,11 @@ msgstr "تەھرىرلە"
 
 #: lists/partials/listEdit.html:2
 msgid "Edit List"
-msgstr "تىزىملىك تەھىرىرلە"
+msgstr "تىزىم تەھىرىرلە"
 
 #: main/partials/main.html:112
 msgid "Essential Apps"
-msgstr "قوللىنىشچان پىروگىراممىلار"
+msgstr "قوللىشچان ئەپلەر"
 
 #. Keep this as an abbreviation if possible
 #: index.html:111
@@ -354,7 +378,7 @@ msgstr "FAQ"
 
 #: apps/partials/apps.html:39
 msgid "Filters"
-msgstr "سۈزگۈچ"
+msgstr "سۈزگۈچلەر"
 
 #: apps/partials/request.html:36
 msgid "Find"
@@ -362,7 +386,7 @@ msgstr "ئىزدەش"
 
 #: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr "بىر پىروگىرامما تېپىلدى بىراق ئىگە تەرەپتىن يۈكلەنمىگەن"
+msgstr "بىر ئەپ تېپىلدى بىراق ئىگە تەرەپتىن يۈكلەنمىگەن"
 
 #. Comment below reviews
 #: apps/partials/app.html:367
@@ -371,7 +395,7 @@ msgstr "نەشىرى :"
 
 #: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr "ئىزدەلگەن پىروگىرامما تېپىلدى"
+msgstr "ئىزدەلگەن ئەپ تېپىلدى"
 
 #. Ubuntu sdk framework
 #: apps/partials/apps.html:74
@@ -391,7 +415,7 @@ msgstr "ئويۇنلار"
 
 #: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "ئۇبۇنتۇ چەكمە ئۈسكۈنىڭىز ئۈچۈن ئىككىلىك كود سىكاننېرغا ئېرىشىڭ"
 
 #: apps/partials/request.html:14
 msgid "Go there now"
@@ -414,10 +438,13 @@ msgid ""
 "hearts,\n"
 "and 1 star = -1 hearts."
 msgstr ""
+"يۈرەك ئارقىلىق باھالاش يۇلتۇز باھالاشتىن كەلگەن، 5 يۇلتۇرزلۇق باھالاشتىن "
+"بىرنى 1 يۈرەك، 4يۇلتۇز 0.5 يۈرەك، 3 يۇلتۇز 0 يۈرەك، 2 يۇلتۇز -0.5 يۈرەك، 1 "
+"يۇلتۇز -1 يۈرەك."
 
 #: index.html:164
 msgid "Help translate!"
-msgstr "تەرجىىگە قاتنىشىش"
+msgstr "بۇ يەردىن تەرجىمىگە قاتنىشىڭ"
 
 #: main/services/utils.js:89
 msgid "Highest Heart Rating"
@@ -425,7 +452,7 @@ msgstr "ئەڭ كۆپ باھالانغىنى"
 
 #: main/services/utils.js:95
 msgid "Highest Star Rating"
-msgstr "ئەڭ يقىرى يۇلتۇز دەرىجىسى"
+msgstr "ئەڭ يۇقىرى يۇلتۇز دەرىجىسى"
 
 #: main/partials/faq.html:92
 msgid "How can I help improve this site?"
@@ -433,39 +460,46 @@ msgstr "بۇ بەتكە قانداق ياردەملىشىمەن ؟"
 
 #: main/partials/faq.html:18
 msgid "How do I install apps?"
-msgstr "پىروگىراممىلارنى قانداق ئورنىتىمەن ؟"
+msgstr "ئەپلەرنى قانداق ئورنىتىمەن؟"
 
 #: main/partials/faq.html:56
 msgid "How is the popularity determined?"
-msgstr ""
+msgstr "ياقتۇرۇشچانلىقى قانداق جەزملىنىدۇ؟"
 
 #: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
-msgstr ""
-"مەن يوللىغان پىروگىراممىلار نېمە ئۈچۈن تەستىقلانمايدۇ(ياكى كۈرۈنمەيدۇ)"
+msgstr "مەن يوللىغان ئەپلەر نېمە ئۈچۈن تەستىقلانمايدۇ(ياكى كۈرۈنمەيدۇ)"
 
 #: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
+"ئەگەر كودلارنى ئەلالاشتۇرۇشقا قاتناشماقچى بولسىڭز  GitHub  توربىكتىنى "
+"زىيارەت قىلىڭ"
 
 #: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
+"ئەگەر تەرجىمىگە قاتناشماقچى بولسىڭز Launchpad  توربېتىنى زىيارەت قىلىپ "
+"قاتنىشىڭ"
 
 #: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
+"ئەگەر خاتالىق ياكى ئىقتىدار ھەققىدە مەلۇمات يوللىماقچى بولسىڭز GitHub issues "
+" بۇ بەتكە كىرىڭ"
 
 #: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
-msgstr ""
+msgstr "ئەگەر ئاپتۇر بىلەن ئالاقىلىلاشاقچى بولسىڭز بۇ بەتنى زىيارەت قىلىڭ"
 
 #: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
+"ئەگەر پۇل ئىئانە قىلماقچى بولسڭز تۈۋەندىكى بىر قانچە خىل ئۇسۇل ئارقىلىق "
+"ئىئانە قىلسىڭز بۇلىدۇ."
 
 #. App info
 #: apps/partials/app.html:183
@@ -474,7 +508,7 @@ msgstr "ئۇچۇرى"
 
 #: main/partials/faq.html:52
 msgid "It is possible to have a negative heart rating."
-msgstr ""
+msgstr "راسچىللىق بىلەن باھالانىغان"
 
 #: index.html:128
 msgid "Language"
@@ -509,12 +543,12 @@ msgstr "تېخىمۇ كۆپ باھالارنى يۈكلە"
 
 #: apps/partials/app.html:298
 msgid "Loading reviews..."
-msgstr ""
+msgstr "باھاللار يۈكلىنىۋاتىدۇ..."
 
 #: index.html:117
 #: lists/partials/login.html:2
 msgid "Log In"
-msgstr "تىزىملاپ كىر"
+msgstr "تىزىمغا كىر"
 
 #: lists/partials/login.html:14
 msgid "Log in via Ubuntu"
@@ -526,15 +560,15 @@ msgstr "تىزىمدىن چىق"
 
 #: main/services/utils.js:92
 msgid "Lowest Heart Rating"
-msgstr ""
+msgstr "ئەڭ تۈۋەن يۈرەك دەرىجسى"
 
 #: main/services/utils.js:98
 msgid "Lowest Star Rating"
-msgstr ""
+msgstr "ئەڭ تۈۋەن يۇلتۇز دەرىجىسى"
 
 #: apps/partials/request.html:2
 msgid "Missing an app?"
-msgstr ""
+msgstr "كەمچىل"
 
 #: apps/partials/appView.html:28
 msgid "Monthly Popularity"
@@ -542,7 +576,7 @@ msgstr "ئايلىق دەرىجىسى"
 
 #: apps/partials/app.html:253
 msgid "More Apps by {{app.author}}"
-msgstr "تېخىمۇ كۆپ پىروگىراممىلار {{پىروگىرامما.ئىجاتكار}}"
+msgstr "تېخىمۇ كۆپ ئەپلەر{{app.author}}"
 
 #: main/services/utils.js:110
 msgid "Most Expensive (USD)"
@@ -554,18 +588,18 @@ msgstr "ئەڭ ئالقىشلانغىنى (بۇ ئايلىق)"
 
 #: main/services/utils.js:67
 msgid "Most Relevant"
-msgstr "مۇناسىۋەتلىك پىروگىراممىلار"
+msgstr "مۇناسىۋەتلىك ئەپلەر"
 
 #: index.html:120
 #: lists/partials/me.html:45
 msgid "My Lists"
-msgstr "مېىنىڭ تىزىملىكىم"
+msgstr "مېنىڭ تىزىمىم"
 
 #. The new apps rss feed link
 #: index.html:221
 #: main/partials/main.html:159
 msgid "New Apps"
-msgstr "يېڭى پىروگىراممىلار"
+msgstr "يېڭى يوللانغان ئەپلەر"
 
 #: main/partials/faq.html:67
 msgid ""
@@ -574,10 +608,12 @@ msgid ""
 "the\n"
 "app be found early."
 msgstr ""
+"يېڭى ئەپلەرگە ئىگە تەرەپ ئەپ دۇكىنىدىن ئېرىشكىلى بولىدۇ، سىز يېڭى ئەپنى "
+"كۈتۈڭ، ياكى ئىلتىماس جەدۋىلى تولدۇرۇش ئارقىلىق ئەپكە تېخىمۇ بالدۇر ئېرىشىڭ."
 
 #: lists/partials/me.html:42
 msgid "New List"
-msgstr "تىزىملىك قۇرۇش"
+msgstr "يېڭى تىزىم"
 
 #: main/services/utils.js:77
 msgid "Newest"
@@ -585,7 +621,7 @@ msgstr "ئەڭ يېڭى"
 
 #: apps/partials/app.html:16
 msgid "Next App:"
-msgstr "كېيىنكى پىروگىرامما"
+msgstr "كېينىكى ئەپ :"
 
 #: lists/partials/listDelete.html:8
 msgid "No"
@@ -593,19 +629,19 @@ msgstr "ياق"
 
 #: lists/partials/listEdit.html:52
 msgid "No apps found"
-msgstr "مۇناسىۋەتلىك پىروگىراممىلار تېپىلمىدى"
+msgstr "مۇناسىۋەتلىك ئەپلەر تېپىلمىدى"
 
 #: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
-msgstr "مۇناسىۋەتلىك پىروگىرامما تېپىلمىدى قايتىدىن ئىزدەپ كۈرۈڭ"
+msgstr "مۇناسىۋەتلىك ئەپلەر تېپىلمىدى قايتىدىن ئىزدەپ كۈرۈڭ"
 
 #: apps/partials/app.html:157
 msgid "No lists, create one!"
-msgstr "تىزىملىك قۇرۇلمىغان يېڭدىن  قۇرۇڭ"
+msgstr "تىزىم قۇرۇلمىغان، يېڭدىن قۇرۇڭ!"
 
 #: apps/partials/app.html:382
 msgid "No reviews yet!"
-msgstr "بۇ پىروگىراممىغا باھا يېزىلىغان"
+msgstr "بۇ ئەپكە باھا يېزىلمىغان"
 
 #: main/services/utils.js:80
 msgid "Oldest"
@@ -618,7 +654,7 @@ msgstr "يېڭلانمىغانىلىرى"
 #: apps/controllers/appCtrl.js:125
 #: lists/controllers/listCtrl.js:103
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "تىزىمغا كىرىپ Caxton ئارقىلىق يوللاڭ"
 
 #: main/partials/faq.html:58
 msgid ""
@@ -628,7 +664,7 @@ msgstr ""
 
 #: apps/partials/app.html:10
 msgid "Previous App:"
-msgstr "بۇرۇنقى پىروگىراممىلار :"
+msgstr "بۇرۇنقى ئەپلەر:"
 
 #: apps/partials/app.html:128
 #: lists/partials/list.html:63
@@ -637,11 +673,11 @@ msgstr "QR كودى"
 
 #: main/partials/qrcode.html:2
 msgid "QR Code for {{qrCodeTitle}}"
-msgstr "QR كودى ئۈچۈن  {{qrCodeTitle}}"
+msgstr "كودى ئۈچۈن {{qrCodeTitle}}"
 
 #: lists/partials/list.html:78
 msgid "Remove this app from your list"
-msgstr "تىزىملىكىڭزدىن بۇ پىروگىراممىنى ئۈچۈرەمسىز"
+msgstr "تىزىمىڭزدىن بۇ ئەپنى ئۈچۈرەمسىز؟"
 
 #: lists/partials/listEdit.html:72
 #: lists/partials/me.html:31
@@ -652,12 +688,12 @@ msgstr "ساقلا"
 #: apps/directives/type.js:27
 #: index.html:207
 msgid "Scope"
-msgstr "دائىرە"
+msgstr "ئەپچە"
 
 #: apps/controllers/appsCtrl.js:72
 #: main/partials/main.html:94
 msgid "Scopes"
-msgstr "دائىرىلەر"
+msgstr "ئەپچەلەر"
 
 #: apps/partials/app.html:235
 msgid "Screenshots"
@@ -668,12 +704,12 @@ msgstr "ئېكران كۆرۈنۈشى"
 #: lists/partials/list.html:56
 #: lists/partials/list.html:58
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Caxton دىن تەستىقلىنىپ يوللاش"
 
 #: apps/partials/app.html:124
 #: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Caxton دىن تەستىقلىنىپ يوللاش"
 
 #: lists/partials/me.html:13
 msgid "Settings"
@@ -701,19 +737,19 @@ msgstr "تىۋىتېردا ھەمبەھىرلە"
 
 #: apps/partials/app.html:274
 msgid "Similar Apps"
-msgstr "پىروگىرامما تۈرلىرى"
+msgstr "ئەپ تۈرلىرى"
 
 #: apps/directives/type.js:29
 msgid "Snappy App"
-msgstr "Snappy پىروگىرامما"
+msgstr "Snappy ئەپ"
 
 #: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
-msgstr "Snappy پىروگىراممىلار"
+msgstr "Snappy ئەپلەر"
 
 #: lists/partials/listEdit.html:16
 msgid "Sort Apps By:"
-msgstr "تۈردىكى پىروگىرامما:"
+msgstr "تۈردىكى ئەپلەر:"
 
 #: apps/partials/apps.html:27
 msgid "Sort By:"
@@ -722,12 +758,12 @@ msgstr "تەرىتىپى :"
 #. App support links
 #: apps/partials/app.html:186
 msgid "Support"
-msgstr "قوللاش"
+msgstr "ئىجاتكار بىلەن ئالاقىلىشىڭ"
 
 #: apps/partials/app.html:213
 #: apps/partials/app.html:216
 msgid "Support:"
-msgstr "قوللاش:"
+msgstr "ئىجاتكار بىلەن ئالاقىلىشىش ئۈچۈن :"
 
 #. Terms and conditions
 #: apps/partials/app.html:224
@@ -759,15 +795,17 @@ msgstr ""
 
 #: apps/partials/app.html:162
 msgid "This app is on these lists:"
-msgstr "بۇ پىروگىرامما بۇ تىزىملىكتە :"
+msgstr "بۇ تىزىمدىكى ئەپلەر :"
 
 #: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
+"بۇ بىر ئۇبۇنتۇ چەكمە ئۈسكىنىسى ئىگە تەرەپ بىلەن مۇناسىۋەتسىز بولغان ئەپلەر "
+"جەمگاھى ."
 
 #: lists/partials/list.html:73
 msgid "This list is empty!"
-msgstr ""
+msgstr "بۇ تىزىم قۇرۇق!"
 
 #: main/partials/disclaimer.html:5
 #: main/partials/faq.html:7
@@ -783,6 +821,18 @@ msgid ""
 "Ubuntu and Canonical are registered trademarks of\n"
 "<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
 msgstr ""
+"بۇ تورتۇرا ئۇبۇنتۇ چەكمە ئۈسكۈنىلىرىنىڭ ئەپلىرىگە كۆزيۈگۈرتىدىغان غەيرى ئىگە "
+"تەرەپ ئەپ توركۆرگۈسى. \n"
+"ھەممە ئەپلەرنىڭ سانلىق مەلۇماتى ئاشكارا زىيارەت قىلىدىغان\n"
+"<a "
+"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
+"> دىن كەلگەن.\n"
+"بۇ تورتۇرانى <a href=\"http://bhdouglass.com/\">Brian Douglass</a> ئاسرايدۇ "
+"\n"
+"ھەمدە Ubuntu ۋە Canonical غا تەۋە ئەمەس ھەمدە ئېتىراپ قىلمايدۇ. Ubuntu ۋە "
+"Canonical \n"
+"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a> نىڭ تىزىملاتقان "
+"تاۋار ماركىسى."
 
 #: main/services/utils.js:71
 msgid "Title A-Z"
@@ -799,16 +849,20 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be\n"
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"ئەپ ئورنىتىشتا، ئۇبۇنتۇ چەكمە ئۈسكۈنىڭىزدە بۇ تورتۇرانى زىيارەت قىلىڭ. "
+"ئورناتماقچى بولغان ئەپنى تېپىپ، «ئورنات» توپچىنى چېكىڭ. ئۈسكۈنىڭىزدىكى ئىگە "
+"تەرەپ ئەپ دۇكىنى ئارقىلىق ئەپنى ئورنىتىسىز."
 
 #: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
+"خاتالىق ياكى ئىقتىدار مەلۇم قىلماقچى بولسىڭز GitHub تور بىكىتدە مەلۇم قىلىڭ"
 
 #: main/partials/main.html:136
 msgid "Top Apps"
-msgstr "ئەڭ ئالقىشلانغان پىروگىراممىلار"
+msgstr "ئەڭ ئالقىشلانغان ئەپلەر"
 
 #. App type (scope/app/etc)
 #: apps/partials/apps.html:22
@@ -818,7 +872,7 @@ msgstr "تىپى:"
 #. The updated apps rss feed link
 #: index.html:225
 msgid "Updated Apps"
-msgstr "يېڭلانغان پىروگىراممىلار"
+msgstr "يېڭلانغان ئەپلەر"
 
 #: apps/partials/app.html:202
 msgid "Updated:"
@@ -826,7 +880,7 @@ msgstr "يېڭىلانغان:"
 
 #: lists/partials/list.html:11
 msgid "User List:"
-msgstr "ئېشلەتكۈچلەر تىزىملىكى"
+msgstr "ئىشلەتكۈچى تىزىمى"
 
 #: apps/partials/app.html:291
 msgid "User Reviews"
@@ -838,22 +892,22 @@ msgstr "نەشرى:"
 
 #: lists/partials/me.html:55
 msgid "View"
-msgstr "كۆرۈنۈش"
+msgstr "تەكشۈرۈش"
 
 #. The uApp Explorer app download link
 #: apps/directives/type.js:28
 #: index.html:203
 msgid "Web App"
-msgstr "تور پىروگىرامما"
+msgstr "تور ئەپ"
 
 #: apps/controllers/appsCtrl.js:69
 #: main/partials/main.html:46
 msgid "Web Apps"
-msgstr "تور پىروگىراممىسى"
+msgstr "تور ئەپلەر"
 
 #: apps/partials/app.html:220
 msgid "Website:"
-msgstr "تور بېكىتى:"
+msgstr "تور بېكەت:"
 
 #. Welcome {{username}}
 #: lists/partials/me.html:5
@@ -862,11 +916,13 @@ msgstr "خۇش كەپسىز"
 
 #: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
-msgstr "ئۇبۇنتۇ ئەپ بازىرىغا خۇش كەپسىز"
+msgstr "ئوبۇنتۇ چەكمە ئۈسكىنلىرى uApp Explorer ئەپ بازىرىغا خۇش كەپسىز"
 
 #: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
+"ئەگەر مەن نەشر ھوقۇقى ياكى تاۋار ماركا ھوقۇقىغا دەخلى يەتكۈزگەن مەزمۇننى "
+"تاپسام قانداق قىلىمەن؟"
 
 #: main/partials/faq.html:40
 msgid "What is the heart rating?"
@@ -882,13 +938,15 @@ msgstr "بۇ  قانداق تور بىكەت ؟"
 
 #: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "يېڭى ئىقتىدار ياكى خاتالىقلارنى نەگە دوكلات قىلىمەن؟"
 
 #: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
+"سىزنىڭ ئىئانە قىلىش ياكى قىلماسلىقىڭزدىن قەتئىنەزەر بىزنى قوللاپ "
+"قۇۋەتلىگىنىڭزگە كۆپتىن -كۆپ رەھمەت ئېيتىمىز!"
 
 #: main/partials/donate.html:6
 msgid "Why donate?"
@@ -900,11 +958,11 @@ msgstr "ھەئە"
 
 #: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "سىز ئاللىبۇرۇن Caxton غا باغلانغان!"
 
 #: apps/controllers/appCtrl.js:130
 #: lists/controllers/listCtrl.js:108
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr ""
+msgstr "سىز ھېساباتىڭىزنى Caxton غا باغلىمىغان، چەكسىڭىز تەڭشەككە يۆتكىلىدۇ"
