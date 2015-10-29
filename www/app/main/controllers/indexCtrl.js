@@ -80,7 +80,7 @@ angular.module('appstore').controller('indexCtrl', function ($scope, $rootScope,
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 3,
+      'untranslated': 0,
     },
   ];
 
