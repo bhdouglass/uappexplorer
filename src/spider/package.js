@@ -241,47 +241,59 @@ function mongoToElasticsearch(removals, callback) {
 function parsePackage(name, callback) {
   var url = config.spider.packages_api + name;
   logger.info('parsing ' + url);
-  request(url, function(err, resp, body) {
-    if (err) {
-      logger.error('error requesting url: ' + err);
-      callback(err);
-    }
-    else {
-      var data = JSON.parse(body);
-      db.Package.findOne({name: data.name}, function(err, pkg) {
-        if (err) {
-          logger.error('error finding package: ' + err);
-          callback(err);
+
+  if (!name || name == 'undefined') { //Sent a blank from the request app page
+    callback('No package specified to parse');
+  }
+  else {
+    request(url, function(err, resp, body) {
+      if (err) {
+        logger.error('error requesting url: ' + err);
+        callback(err);
+      }
+      else {
+        var data = JSON.parse(body);
+
+        if (data.result == 'error') {
+          callback('Package ' + name + ' does not exist in click store api');
         }
         else {
-          if (!pkg) {
-            pkg = new db.Package();
-          }
-
-          pkg.name = name;
-          //cloudinaryUpload(pkg, data);
-
-          pkg = map(pkg, data);
-          pkg.url = utils.fixUrl(data._links.self.href);
-          pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-');
-
-          if (takedowns.apps.indexOf(pkg.name) > -1) {
-            pkg.takedown = true;
-          }
-
-          pkg.save(function(err) {
+          db.Package.findOne({name: data.name}, function(err, pkg) {
             if (err) {
-              logger.error('error saving package: ' + err);
+              logger.error('error finding package: ' + err);
               callback(err);
             }
+            else {
+              if (!pkg) {
+                pkg = new db.Package();
+              }
 
-            logger.info('saved ' + name);
-            callback(null, pkg);
+              pkg.name = name;
+              //cloudinaryUpload(pkg, data);
+
+              pkg = map(pkg, data);
+              pkg.url = utils.fixUrl(data._links.self.href);
+              pkg.icon_filename = pkg.icon.replace('https://', '').replace('http://', '').replace(/\//g, '-');
+
+              if (takedowns.apps.indexOf(pkg.name) > -1) {
+                pkg.takedown = true;
+              }
+
+              pkg.save(function(err) {
+                if (err) {
+                  logger.error('error saving package: ' + err);
+                  callback(err);
+                }
+
+                logger.info('saved ' + name);
+                callback(null, pkg);
+              });
+            }
           });
         }
-      });
-    }
-  });
+      }
+    });
+  }
 }
 
 function fetchListPage(page, packageList, callback) {
