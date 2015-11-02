@@ -1,0 +1,81 @@
+var React = require('react');
+var AppCell = require('./appCell');
+
+module.exports = React.createClass({
+  displayName: 'AppList',
+  props: {
+    apps: React.PropTypes.array.isRequired,
+    popularity: React.PropTypes.boolean,
+    view: React.PropTypes.string.isRequired,
+  },
+
+  renderAppCell: function(app, index) {
+    var cell = [];
+    if (this.props.view == 'list') {
+      cell.push(
+        <div className="list-view col-sm-12">
+          <AppCell app={app} description={true} popularity={this.props.popularity} />
+        </div>
+      );
+
+      if (index % 3 == 2) {
+        cell.push(<div className="hidden-xs hidden-sm clearfix"></div>);
+      }
+
+      if (index % 2 == 1) {
+        cell.push(<div className="visible-xs visible-sm clearfix"></div>);
+      }
+
+      cell.push(
+        <span className="list">
+          <div className="separator"></div>
+        </span>
+      );
+    }
+    else {
+      cell.push(
+        <div className="col-md-4 col-sm-6 col-xs-6 grid-view">
+          <AppCell app={app} description={false} popularity={this.props.popularity} />
+        </div>
+      );
+
+      if (index % 3 == 2) {
+        cell.push(<div className="hidden-xs hidden-sm clearfix"></div>);
+
+        cell.push(
+          <span className="grid">
+            <div className="separator hidden-xs hidden-sm"></div>
+          </span>
+        );
+      }
+
+      if (index % 2 == 1) {
+        cell.push(<div className="visible-xs visible-sm clearfix"></div>);
+
+        cell.push(
+          <span className="grid">
+            <div className="separator visible-sm visible-xs"></div>
+          </span>
+        );
+      }
+    }
+
+    return cell;
+  },
+
+  render: function() {
+    var self = this;
+    var cls = 'row app-list grid-view';
+    if (this.props.view == 'list') {
+      cls = 'row app-list list-view';
+    }
+
+    return (
+      <div className={cls}>
+        {this.props.apps.map(function(app, index) {
+          return self.renderAppCell(app, index);
+        })}
+      </div>
+    );
+  }
+});

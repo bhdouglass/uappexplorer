@@ -13,8 +13,8 @@ var elasticsearch = require('elasticsearch');
 function miniPkg(pkg) {
   return {
     bayesian_average: pkg.bayesian_average,
-    cloudinary_url: pkg.cloudinary_url,
     icon_hash: pkg.icon_hash,
+    icon: config.server.host + '/api/icon/' + pkg.icon_hash + '/' + pkg.name + '.png',
     monthly_popularity: pkg.monthly_popularity,
     name: pkg.name,
     points: pkg.points,

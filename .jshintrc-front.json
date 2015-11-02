@@ -8,7 +8,7 @@
   "latedef": true,
   "newcap": true,
   "noarg": true,
-  "quotmark": "single",
+  "quotmark": false,
   "undef": true,
   "unused": true,
   "strict": false,
@@ -18,11 +18,6 @@
   "devel": true,
   "bitwise": false,
   "globals": {
-    "angular": false,
-    "_": false,
-    "$": false,
-    "LazyLoad": false,
-    "ga": false,
-    "moment": false
+    "React": true
   }
 }
