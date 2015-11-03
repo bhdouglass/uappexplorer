@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Nav = require('./nav');
 var Errors = require('./errors');
@@ -33,17 +34,17 @@ module.exports = React.createClass({
 
           <div className="row text-center footer">
             <div className="col-sm-4">
-              <a href="https://uappexplorer.com/app/uappexplorer.bhdouglass">
+              <Link to="/app/uappexplorer.bhdouglass">
                 <i className="fa fa-fw fa-mobile"></i> <span>Web App</span>
-              </a>
+              </Link>
 
-              <a href="https://uappexplorer.com/app/uappexplorer-scope.bhdouglass">
+              <Link to="/app/uappexplorer-scope.bhdouglass">
                 <i className="fa fa-fw fa-mobile"></i> <span>Scope</span>
-              </a>
+              </Link>
 
-              <a href="https://uappexplorer.com/app/uappexplorer-donate.bhdouglass" className="hidden-xs">
+              <Link to="/app/uappexplorer-donate.bhdouglass" className="hidden-xs">
                 <i className="fa fa-fw fa-mobile"></i> <span>Donation Web App</span>
-              </a>
+              </Link>
             </div>
 
             <div className="col-sm-4">

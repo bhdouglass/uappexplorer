@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 
 module.exports = React.createClass({
@@ -36,9 +37,9 @@ module.exports = React.createClass({
     var button = '';
     if (this.state.auth.loggedin) {
       button = (
-        <a href="/me" className="navbar-toggle clickable">
+        <Link to="/me" className="navbar-toggle clickable">
           <i className="fa fa-user fa-inverse"></i>
-        </a>
+        </Link>
       );
     }
     else {
@@ -55,17 +56,17 @@ module.exports = React.createClass({
   renderLoginList: function() {
     var list = '';
     if (this.state.auth.loggedin) {
-      //TODO remove span
-      list = (
-        <span>
+      list = [
+        (
           <li className="hidden-xs">
-            <a href="/me" className="clickable">My Lists</a>
+            <Link to="/me" className="clickable">My Lists</Link>
           </li>
+        ), (
           <li>
             <a onClick={this.logout} className="clickable">Log Out</a>
           </li>
-        </span>
-      );
+        )
+      ];
     }
     else {
       list = (
@@ -79,7 +80,7 @@ module.exports = React.createClass({
   },
 
   renderBackButton: function() {
-    var link = '/'; //TODO proper logic
+    var link = '/'; //TODO proper logic and see if react router history can handle this
     var cls = 'logo';
     if (this.state.loading) {
       cls = 'logo rotate';
@@ -102,11 +103,11 @@ module.exports = React.createClass({
 
     return (
       <span className="navbar-brand">
-        <a href={link} className="link clickable">
+        <Link to={link} className="link clickable">
           {icon}
           <img src="/img/logo.svg" className={cls} />
           {brand}
-        </a>
+        </Link>
       </span>
     );
   },

@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var utils = require('../../utils');
 var Types = require('./types');
 var Stars = require('./stars');
@@ -38,7 +39,7 @@ module.exports = React.createClass({
 
     return (
       <div className="list-group app-view">
-        <a className="list-group-item clickable" href={url} title={this.props.app.tagline}>
+        <Link className="list-group-item clickable" to={url} title={this.props.app.tagline}>
           <div className="row-action-primary">
             <div className="icon ubuntu-shape">
               <img src={this.props.app.icon} alt={this.props.app.name} />
@@ -62,7 +63,7 @@ module.exports = React.createClass({
 
             {this.renderDescription()}
           </div>
-        </a>
+        </Link>
       </div>
 
     );

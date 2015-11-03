@@ -35,4 +35,15 @@ module.exports = {
     });
     //TODO catch errors
   },
+
+  getApps: function(paging) {
+    //TODO caching
+
+    tree.set('loading', true);
+    api.getApps(paging).then(function(data) {
+      tree.select('apps').set(JSON.stringify(paging), data);
+      tree.set('loading', false);
+    });
+    //TODO catch errors
+  }
 };

@@ -18,4 +18,5 @@ module.exports = new Baobab({
   loading: false,
   top: [],
   'new': [],
+  apps: {},
 });

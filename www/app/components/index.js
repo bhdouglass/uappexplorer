@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
@@ -38,7 +39,7 @@ module.exports = React.createClass({
     return (
       <div className="col-md-3 col-sm-6">
         <div className="list-group">
-          <a className="list-group-item clickable" href={url} title={popup}>
+          <Link to={url} className="list-group-item clickable" title={popup}>
             <div className="row-action-primary">
               <div className="action-icon ubuntu-shape">
                 <i className={cls}></i>
@@ -49,7 +50,7 @@ module.exports = React.createClass({
               <h4 className="list-group-item-heading">{title}</h4>
               {this.renderCount(name, count)}
             </div>
-          </a>
+          </Link>
 
           <div className="list-group-separator visible-xs visible-sm"></div>
         </div>
@@ -64,7 +65,7 @@ module.exports = React.createClass({
         <div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1><a href="/apps?sort=-points">Top Apps</a></h1>
+              <h1><Link to="/apps?sort=-points">Top Apps</Link></h1>
             </div>
           </div>
 
@@ -83,7 +84,7 @@ module.exports = React.createClass({
         <div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1><a href="/apps">New Apps</a></h1>
+              <h1><Link to="/apps">New Apps</Link></h1>
             </div>
           </div>
 
@@ -100,7 +101,7 @@ module.exports = React.createClass({
       <div className="main">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h1><a href="/apps">Browse</a></h1>
+            <h1><Link to="/apps">Browse</Link></h1>
           </div>
         </div>
         <div className="row">
