@@ -1,17 +1,24 @@
 var React = require('react');
+var Router = require('react-router');
 var mixins = require('baobab-react/mixins');
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
 var Pagination = require('./pagination');
+var info = require('../info');
 
+var DEFAULT_ARCH = 'any';
+var DEFAULT_CATEGORY = 'all';
+var DEFAULT_FRAMEWORK = 'all';
+var DEFAULT_LICENSE = 'any';
 var DEFAULT_SORT = '-published_date';
-var DEFAULT_ARCH = 'all';
+var DEFAULT_TYPE = 'all';
 var LIMIT = 30;
 
 module.exports = React.createClass({
   displayName: 'Apps',
   mixins: [
-    mixins.branch
+    mixins.branch,
+    Router.History,
   ],
   cursors: {
     apps: ['apps'],
@@ -20,19 +27,16 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       key: null,
-      paging: {
-        page: 0,
-        limit: LIMIT,
-        search: null,
-        sort: DEFAULT_SORT,
-        query: {
-          categories: null,
-          architecture: null,
-          framework: null,
-          license: null,
-          type: null,
-        }
-      }
+      page: 0,
+      filters: false,
+      view: 'grid',
+      search: '',
+      architecture: DEFAULT_ARCH,
+      category: DEFAULT_CATEGORY,
+      framework: DEFAULT_FRAMEWORK,
+      license: DEFAULT_LICENSE,
+      sort: DEFAULT_SORT,
+      type: DEFAULT_TYPE,
     };
   },
 
@@ -41,11 +45,11 @@ module.exports = React.createClass({
 
     var page = params.page ? parseInt(params.page) : 0;
     var arch = null;
-    if (params.arch) {
-      arch = [params.arch];
+    if (params.architecture) {
+      arch = [params.architecture.toLowerCase()];
 
-      if (params.arch.toLowerCase() != DEFAULT_ARCH) {
-        arch.push(DEFAULT_ARCH);
+      if (params.architecture.toLowerCase() != 'all') {
+        arch.push('all');
       }
     }
 
@@ -82,11 +86,18 @@ module.exports = React.createClass({
 
     var sk = JSON.stringify(cleanPaging);
     if (state.key != sk) {
-      console.log('fetching apps', sk);
+      //TODO set filter open if needed
+      //TODO fix arch and license
       this.setState({
-        paging: paging,
         key: sk,
         page: page,
+        search: paging.search ? paging.search : '',
+        architecture: paging.query.architecture ? paging.query.architecture[0] : DEFAULT_ARCH,
+        category: paging.query.categories ? paging.query.categories : DEFAULT_CATEGORY,
+        framework: paging.query.framework ? paging.query.framework : DEFAULT_FRAMEWORK,
+        license: paging.query.license ? paging.query.license : DEFAULT_LICENSE,
+        sort: paging.sort ? paging.sort : DEFAULT_SORT,
+        type: paging.query.types ? paging.query.types : DEFAULT_TYPE,
       });
 
       actions.getApps(cleanPaging);
@@ -101,20 +112,249 @@ module.exports = React.createClass({
     this.getApps(nextProps, nextState);
   },
 
+  changeView: function(view) {
+    this.setState({view: view});
+  },
+
+  toggleFilters: function() {
+    this.setState({filters: !this.state.filters});
+  },
+
+  renderSearchInfo: function() {
+    var search = '';
+    if (this.state.search) {
+      search = (
+        <span>
+          <br/>
+          <span>Containing:</span> "{this.state.search}"
+        </span>
+      );
+    }
+
+    return search;
+  },
+
+  changeCategory: function(event) {
+    if (event.target.value == DEFAULT_CATEGORY) {
+      delete this.props.location.query.category;
+    }
+    else {
+      this.props.location.query.category = event.target.value;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
+  renderCategories: function() {
+    return (
+      <div className="form-group col-md-4">
+        <label htmlFor="category" className="control-label hidden-xs">Category:</label>
+        <select id="category" className="form-control" value={this.state.category} onChange={this.changeCategory}>
+          {info.categories.map(function(category) {
+            return <option value={category.internal_name} key={category.internal_name}>{category.name}</option>;
+          }, this)}
+        </select>
+      </div>
+    );
+  },
+
+  changeType: function(event) {
+    if (event.target.value == DEFAULT_TYPE) {
+      delete this.props.location.query.type;
+    }
+    else {
+      this.props.location.query.type = event.target.value;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
+  renderTypes: function() {
+    return (
+      <div className="form-group col-md-4">
+        <label htmlFor="type" className="control-label hidden-xs">Type:</label>
+        <select id="type" className="form-control" value={this.state.type} onChange={this.changeType}>
+          {info.types.map(function(type) {
+            return <option value={type.value} key={type.value}>{type.label}</option>;
+          }, this)}
+        </select>
+      </div>
+    );
+  },
+
+  changeSort: function(event) {
+    if (event.target.value == DEFAULT_SORT) {
+      delete this.props.location.query.sort;
+    }
+    else {
+      this.props.location.query.sort = event.target.value;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
+  renderSorts: function() {
+    return (
+      <div className="form-group col-md-4">
+        <label htmlFor="sort" className="control-label hidden-xs">Sort By:</label>
+        <select id="sort" className="form-control" value={this.state.sort} onChange={this.changeSort}>
+          {info.sorts.map(function(sort) {
+            return <option value={sort.value} key={sort.value}>{sort.label}</option>;
+          }, this)}
+        </select>
+      </div>
+    );
+  },
+
+  changeLicense: function(event) {
+    if (event.target.value == DEFAULT_LICENSE) {
+      delete this.props.location.query.license;
+    }
+    else {
+      this.props.location.query.license = event.target.value;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
+  changeArcitecture: function(event) {
+    if (event.target.value == DEFAULT_ARCH) {
+      delete this.props.location.query.architecture;
+    }
+    else {
+      this.props.location.query.architecture = event.target.value;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
+  renderFilters: function() {
+    var filters = '';
+    if (this.state.filters) {
+      return (
+        <div className="row">
+          <form>
+            <fieldset>
+              <div className="form-group col-md-4">
+                <label htmlFor="license" className="control-label">License:</label>
+                <select id="license" className="form-control" value="this.state.license" onChange={this.changeLicense}>
+                  {info.licenses.map(function(license) {
+                    return <option value={license.value} key={license.value}>{license.label}</option>;
+                  }, this)}
+                </select>
+              </div>
+
+              <div className="form-group col-md-4">
+                <label htmlFor="architecture" className="control-label">Architecture:</label>
+                <select id="architecture" className="form-control" value="this.state.architecture" onChange={this.changeArcitecture}>
+                  {info.architectures.map(function(architecture) {
+                    return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
+                  }, this)}
+                </select>
+              </div>
+
+
+            </fieldset>
+          </form>
+        </div>
+      );
+    }
+
+    //TODO fetch from api
+    //TODO on change
+    /*
+    <div className="form-group col-md-4">
+      <label htmlFor="framework" className="control-label">Framework:</label>
+      <select id="framework" className="form-control" value={this.state.framework}>
+        {info.frameworks.map(function(framework) {
+          return <option value={framework.value} key={framework.value}>{framework.label}</option>;
+        }, this)}
+      </select>
+    </div>
+    */
+
+    return filters;
+  },
+
   render: function() {
     var count = 0;
     var pages = 0;
     var apps = [];
+    var category = 'All'; //TODO load from state
+    var type = info.count_types.all;
+
     if (this.state.key && this.state.apps && this.state.apps[this.state.key]) {
       count = this.state.apps[this.state.key].count;
-      pages = Math.ceil(count / this.state.paging.limit);
+      pages = Math.ceil(count / LIMIT);
       apps = this.state.apps[this.state.key].apps;
+
+      if (this.state.type) {
+        type = info.count_types[this.state.type];
+      }
     }
 
-    //TODO filters/search
+    var filter_cls = 'fa fa-plus-circle';
+    if (this.state.filter) {
+      filter_cls = 'fa fa-minus-circle';
+    }
+
+    var grid_cls = 'btn clickable';
+    var list_cls = 'btn clickable';
+    if (this.state.view == 'grid') {
+      grid_cls = 'btn clickable bold btn-material-light-blue view-button';
+    }
+    else {
+      list_cls = 'btn clickable bold btn-material-light-blue view-button';
+    }
+
+    //TODO loading
     return (
-      <div>
-        <AppList apps={apps} view="grid" />
+      <div className="apps">
+        <div className="app-search">
+          <div className="row">
+            <div className="col-md-6">
+              <h1>{category}</h1>
+              <span>{count} {type}</span>
+              {this.renderSearchInfo()}
+            </div>
+            <div className="col-md-6">
+              <div className="row">
+                <form className="top-filters">
+                  <fieldset>
+                    {this.renderCategories()}
+                    {this.renderTypes()}
+                    {this.renderSorts()}
+                  </fieldset>
+                </form>
+              </div>
+
+              <div className="row">
+                <div className="btn-toolbar pull-right more-filters-btn">
+                  <div className="btn-group">
+                    <a className="btn btn-material-light-blue clickable" onClick={this.toggleFilters}>
+                      <i className={filter_cls}></i> Filters
+                    </a>
+                  </div>
+                </div>
+
+                <div className="btn-toolbar pull-right">
+                  <div className="btn-group">
+                    <a className={grid_cls} onClick={this.changeView.bind(this, 'grid')}>
+                      <span className="hidden-xs">Grid</span> <i className="fa fa-th-large"></i>
+                    </a>
+                    <a className={list_cls} onClick={this.changeView.bind(this, 'list')}>
+                      <span className="hidden-xs">List</span> <i className="fa fa-list"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {this.renderFilters()}
+            </div>
+          </div>
+        </div>
+
+        <AppList apps={apps} view={this.state.view} />
         <Pagination active={this.state.page} total={pages} base={'/apps'} query={this.props.location.query} />
       </div>
     );

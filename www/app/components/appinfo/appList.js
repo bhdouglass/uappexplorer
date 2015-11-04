@@ -64,7 +64,6 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var self = this;
     var cls = 'row app-list grid-view';
     if (this.props.view == 'list') {
       cls = 'row app-list list-view';
@@ -73,8 +72,8 @@ module.exports = React.createClass({
     return (
       <div className={cls}>
         {this.props.apps.map(function(app, index) {
-          return self.renderAppCell(app, index);
-        })}
+          return this.renderAppCell(app, index);
+        }, this)}
       </div>
     );
   }

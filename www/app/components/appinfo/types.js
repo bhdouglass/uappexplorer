@@ -34,13 +34,11 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var self = this;
-
     return (
       <span>
         {this.props.types.map(function(type) {
-          return self.renderType(type);
-        })}
+          return this.renderType(type);
+        }, this)}
       </span>
     );
   }
