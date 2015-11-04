@@ -22,6 +22,8 @@ module.exports = React.createClass({
   ],
   cursors: {
     apps: ['apps'],
+    loading: ['loading'],
+    frameworks: ['frameworks'],
   },
 
   getInitialState: function() {
@@ -44,12 +46,25 @@ module.exports = React.createClass({
     var params = props.location.query;
 
     var page = params.page ? parseInt(params.page) : 0;
-    var arch = null;
-    if (params.architecture) {
-      arch = [params.architecture.toLowerCase()];
+    if (page < 0) {
+      page = 0;
+    }
 
-      if (params.architecture.toLowerCase() != 'all') {
+    var arch = null;
+    if (params.arch) {
+      arch = [params.arch.toLowerCase()];
+
+      if (params.arch.toLowerCase() != 'all') {
         arch.push('all');
+      }
+    }
+
+    var license = null;
+    if (params.license) {
+      for (var i = 0; i < info.licenses.length; i++) {
+        if (info.licenses[i].value == params.license) {
+          license = info.licenses[i].label;
+        }
       }
     }
 
@@ -61,9 +76,9 @@ module.exports = React.createClass({
       mini: true,
       query: {
         categories: params.category ? params.category : null,
-        architecture: arch,
+        architecture: arch ? {'$in': arch} : null,
         framework: params.framework ? params.framework : null,
-        license: params.license ? params.license : null,
+        license: license,
         types: params.type ? params.type : null,
       }
     };
@@ -86,25 +101,30 @@ module.exports = React.createClass({
 
     var sk = JSON.stringify(cleanPaging);
     if (state.key != sk) {
-      //TODO set filter open if needed
-      //TODO fix arch and license
-      this.setState({
+      var s = {
         key: sk,
         page: page,
         search: paging.search ? paging.search : '',
-        architecture: paging.query.architecture ? paging.query.architecture[0] : DEFAULT_ARCH,
+        architecture: arch ? arch[0] : DEFAULT_ARCH,
         category: paging.query.categories ? paging.query.categories : DEFAULT_CATEGORY,
         framework: paging.query.framework ? paging.query.framework : DEFAULT_FRAMEWORK,
-        license: paging.query.license ? paging.query.license : DEFAULT_LICENSE,
+        license: params.license ? params.license : DEFAULT_LICENSE,
         sort: paging.sort ? paging.sort : DEFAULT_SORT,
         type: paging.query.types ? paging.query.types : DEFAULT_TYPE,
-      });
+      };
+
+      if (s.architecture != DEFAULT_ARCH || s.framework != DEFAULT_FRAMEWORK || s.license != DEFAULT_LICENSE) {
+        s.filters = true;
+      }
+
+      this.setState(s);
 
       actions.getApps(cleanPaging);
     }
   },
 
   componentWillMount: function() {
+    actions.getFrameworks();
     this.getApps(this.props, this.state);
   },
 
@@ -219,10 +239,22 @@ module.exports = React.createClass({
 
   changeArcitecture: function(event) {
     if (event.target.value == DEFAULT_ARCH) {
-      delete this.props.location.query.architecture;
+      delete this.props.location.query.arch;
     }
     else {
-      this.props.location.query.architecture = event.target.value;
+      this.props.location.query.arch = event.target.value;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
+  changeFramework: function(event) {
+    var value = event.target.value.toLowerCase();
+    if (value == DEFAULT_FRAMEWORK) {
+      delete this.props.location.query.framework;
+    }
+    else {
+      this.props.location.query.framework = value;
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
@@ -237,7 +269,7 @@ module.exports = React.createClass({
             <fieldset>
               <div className="form-group col-md-4">
                 <label htmlFor="license" className="control-label">License:</label>
-                <select id="license" className="form-control" value="this.state.license" onChange={this.changeLicense}>
+                <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
                   {info.licenses.map(function(license) {
                     return <option value={license.value} key={license.value}>{license.label}</option>;
                   }, this)}
@@ -246,32 +278,26 @@ module.exports = React.createClass({
 
               <div className="form-group col-md-4">
                 <label htmlFor="architecture" className="control-label">Architecture:</label>
-                <select id="architecture" className="form-control" value="this.state.architecture" onChange={this.changeArcitecture}>
+                <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
                   {info.architectures.map(function(architecture) {
                     return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
                   }, this)}
                 </select>
               </div>
 
-
+              <div className="form-group col-md-4">
+                <label htmlFor="framework" className="control-label">Framework:</label>
+                <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
+                  {this.state.frameworks.map(function(framework) {
+                    return <option value={framework} key={framework}>{framework}</option>;
+                  }, this)}
+                </select>
+              </div>
             </fieldset>
           </form>
         </div>
       );
     }
-
-    //TODO fetch from api
-    //TODO on change
-    /*
-    <div className="form-group col-md-4">
-      <label htmlFor="framework" className="control-label">Framework:</label>
-      <select id="framework" className="form-control" value={this.state.framework}>
-        {info.frameworks.map(function(framework) {
-          return <option value={framework.value} key={framework.value}>{framework.label}</option>;
-        }, this)}
-      </select>
-    </div>
-    */
 
     return filters;
   },
@@ -280,8 +306,14 @@ module.exports = React.createClass({
     var count = 0;
     var pages = 0;
     var apps = [];
-    var category = 'All'; //TODO load from state
+    var category = 'All';
     var type = info.count_types.all;
+
+    for (var i = 0; i < info.categories.length; i++) {
+      if (this.state.category == info.categories[i].internal_name) {
+        category = info.categories[i].name;
+      }
+    }
 
     if (this.state.key && this.state.apps && this.state.apps[this.state.key]) {
       count = this.state.apps[this.state.key].count;
@@ -294,7 +326,7 @@ module.exports = React.createClass({
     }
 
     var filter_cls = 'fa fa-plus-circle';
-    if (this.state.filter) {
+    if (this.state.filters) {
       filter_cls = 'fa fa-minus-circle';
     }
 
@@ -307,7 +339,28 @@ module.exports = React.createClass({
       list_cls = 'btn clickable bold btn-material-light-blue view-button';
     }
 
-    //TODO loading
+    var not_found = '';
+    if (count === 0) {
+      not_found = (
+        <div className="row">
+          <div className="col-md-12 text-center">
+            No apps found, try searching again.
+          </div>
+        </div>
+      );
+    }
+
+    var loading = '';
+    if (this.state.loading) {
+      loading = (
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <i className="fa fa-spinner fa-spin fa-4x"></i>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="apps">
         <div className="app-search">
@@ -354,6 +407,8 @@ module.exports = React.createClass({
           </div>
         </div>
 
+        {loading}
+        {not_found}
         <AppList apps={apps} view={this.state.view} />
         <Pagination active={this.state.page} total={pages} base={'/apps'} query={this.props.location.query} />
       </div>

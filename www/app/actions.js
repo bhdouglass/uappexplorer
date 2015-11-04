@@ -45,5 +45,15 @@ module.exports = {
       tree.set('loading', false);
     });
     //TODO catch errors
-  }
+  },
+
+  getFrameworks: function() {
+    if (tree.get('frameworks').length === 0) {
+      api.getFrameworks().then(function(data) {
+        data.unshift('All');
+        tree.set('frameworks', data);
+      });
+      //TODO catch errors
+    }
+  },
 };

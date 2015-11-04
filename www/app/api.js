@@ -12,4 +12,10 @@ module.exports = {
       return res.data.data;
     });
   },
+
+  getFrameworks: function() {
+    return axios.get('/api/frameworks').then(function(res) {
+      return res.data.data;
+    });
+  }
 };

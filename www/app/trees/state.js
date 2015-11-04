@@ -19,4 +19,5 @@ module.exports = new Baobab({
   top: [],
   'new': [],
   apps: {},
+  frameworks: [],
 });

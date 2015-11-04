@@ -27,7 +27,7 @@ module.exports = React.createClass({
 
   render: function() {
     var component = <div></div>;
-    if (this.props.total > 0) {
+    if (this.props.total > 1) {
       var buttons = [];
 
       var previous = 'clickable';

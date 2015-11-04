@@ -7,8 +7,9 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var title = (Math.round(this.props.stars * 100) / 100) + ' / 5';
-    var stars = Math.round(this.props.stars * 2) / 2; //round to nearest 1/2
+    var prop_stars = this.props.stars ? this.props.stars : 0;
+    var title = (Math.round(prop_stars * 100) / 100) + ' / 5';
+    var stars = Math.round(prop_stars * 2) / 2; //round to nearest 1/2
     var full = Math.floor(stars);
     var empty = 5 - Math.ceil(stars);
     var half = 5 - full - empty;
