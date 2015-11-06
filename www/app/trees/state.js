@@ -20,4 +20,5 @@ module.exports = new Baobab({
   'new': [],
   apps: {},
   frameworks: [],
+  reviews: {},
 });

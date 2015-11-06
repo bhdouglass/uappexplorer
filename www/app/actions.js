@@ -59,9 +59,20 @@ module.exports = {
 
   getApp: function(name) {
     tree.set('loading', true);
+    tree.set('app', {});
     api.getApp(name).then(function(data) {
       tree.set('loading', false);
       tree.set('app', data);
+    });
+    //TODO catch errors
+  },
+
+  getReviews: function(name, params) {
+    tree.set('reviews', {loaded: false});
+    api.getReviews(name, params).then(function(data) {
+      data.loaded = true;
+      tree.set('reviews', data);
+      //TODO append reviews on "load more reviews"
     });
     //TODO catch errors
   },

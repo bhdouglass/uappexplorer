@@ -17,6 +17,7 @@ module.exports = React.createClass({
   cursors: {
     app: ['app'],
     loading: ['loading'],
+    reviews: ['reviews'],
   },
 
   getInitialState: function() {
@@ -27,6 +28,7 @@ module.exports = React.createClass({
 
   componentWillMount: function() {
     actions.getApp(this.props.params.name);
+    actions.getReviews(this.props.params.name, {limit: 9});
   },
 
 //TODO swipe to navigate
@@ -368,68 +370,94 @@ module.exports = React.createClass({
         </div>
       );
     }
-    //TODO AppCell.popularity
 
     return aa;
   },
 
+  stats: function(rating) {
+    var width = 0;
+    if (this.state.reviews && this.state.reviews.stats && this.state.reviews.stats.total > 0) {
+      width = this.state.reviews.stats[rating] / this.state.reviews.stats.total * 100;
+    }
+
+    var style = {
+      width: width + '%'
+    };
+
+    if (this.state.reviews && this.state.reviews.stats && this.state.reviews.stats[rating] === 0) {
+      style.display = 'none';
+    }
+
+    return style;
+  },
+
   renderReviews: function() {
-    //TODO
-    /*
-    <div className="row">
-      <div className="col-md-12 text-center">
-        <h3>User Reviews</h3>
-      </div>
-    </div>
-
-    <div className="row">
-      <div className="col-md-12 text-center" ng-if="app.loading_reviews">
-        <i className="fa fa-spin fa-spinner fa-2x"></i>
-        <span translate>Loading reviews...</span>
-      </div>
-
-      <div className="col-md-12">
-        <div className="row star-chart text-center" ng-show="app.reviews.length > 0">
-          <div className="col-sm-2 col-sm-offset-3 left-panel">
-            <div className="text-primary text-large text-center">
-              <i className="fa fa-star"></i>
-              <span ng-bind="app.bayesian_average.toFixed(2)"></span>
+    console.log(this.state.reviews.loaded);
+    var reviews = '';
+    if (this.state.reviews && this.state.reviews.loaded && this.state.reviews.name == this.props.params.name) {
+      reviews = (
+        <div>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h3>User Reviews</h3>
             </div>
-
-            <span className="text-danger text-med-large heart-rating">
-              <i className="fa" ng-className="{'fa-heart-o': !app.points || app.points <= 0, 'fa-heart': app.points > 0}"></i>
-              <span ng-bind="app.points || 0"></span>
-            </span>
-
-            <br/>
-            <i className="fa fa-users"></i>
-            <span ng-bind="app.review_stats.total"></span>
           </div>
-          <div className="col-sm-3 right-panel">
-            <span className="pull-left">5 <i className="fa fa-star"></i></span>
-            <div className="progress">
-              <div className="progress-bar progress-bar-material-lightgreen" ng-style="stats(5)" ng-bind="app.review_stats[5]"></div>
-            </div>
-            <span className="pull-left">4 <i className="fa fa-star"></i></span>
-            <div className="progress">
-              <div className="progress-bar progress-bar-material-lime" ng-style="stats(4)" ng-bind="app.review_stats[4]"></div>
-            </div>
-            <span className="pull-left">3 <i className="fa fa-star-half-o"></i></span>
-            <div className="progress">
-              <div className="progress-bar progress-bar-material-lightyellow" ng-style="stats(3)" ng-bind="app.review_stats[3]"></div>
-            </div>
-            <span className="pull-left">2 <i className="fa fa-star-o"></i></span>
-            <div className="progress">
-              <div className="progress-bar progress-bar-material-orange" ng-style="stats(2)" ng-bind="app.review_stats[2]"></div>
-            </div>
-            <span className="pull-left">1 <i className="fa fa-star-o"></i></span>
-            <div className="progress">
-              <div className="progress-bar progress-bar-material-deeporange" ng-style="stats(1)" ng-bind="app.review_stats[1]"></div>
+
+          <div className="row">
+            <div className="col-md-12">
+              <div className="row star-chart text-center">
+                <div className="col-sm-2 col-sm-offset-3 left-panel">
+                  <div className="text-material-light-blue text-large text-center" title="Star Rating">
+                    <i className="fa fa-star"></i> {this.state.app.bayesian_average.toFixed(2)}
+                  </div>
+
+                  <Hearts hearts={this.state.app.points} />
+
+                  <br/>
+                  <span title="Total Reviews">
+                    <i className="fa fa-users"></i> {this.state.reviews.stats.total}
+                  </span>
+                </div>
+                <div className="col-sm-3 right-panel">
+                  <span className="pull-left">5 <i className="fa fa-star"></i></span>
+                  <div className="progress">
+                    <div className="progress-bar progress-bar-material-light-green" style={this.stats(5)}>{this.state.reviews.stats[5]}</div>
+                  </div>
+                  <span className="pull-left">4 <i className="fa fa-star"></i></span>
+                  <div className="progress">
+                    <div className="progress-bar progress-bar-material-lime" style={this.stats(4)}>{this.state.reviews.stats[4]}</div>
+                  </div>
+                  <span className="pull-left">3 <i className="fa fa-star-half-o"></i></span>
+                  <div className="progress">
+                    <div className="progress-bar progress-bar-material-yellow" style={this.stats(3)}>{this.state.reviews.stats[3]}</div>
+                  </div>
+                  <span className="pull-left">2 <i className="fa fa-star-o"></i></span>
+                  <div className="progress">
+                    <div className="progress-bar progress-bar-material-orange" style={this.stats(2)}>{this.state.reviews.stats[2]}</div>
+                  </div>
+                  <span className="pull-left">1 <i className="fa fa-star-o"></i></span>
+                  <div className="progress">
+                    <div className="progress-bar progress-bar-material-deep-orange" style={this.stats(1)}>{this.state.reviews.stats[1]}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      );
+    }
+    else if (this.state.reviews || !this.state.reviews.loaded) {
+      reviews = (
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <i className="fa fa-spin fa-spinner fa-2x"></i> Loading reviews...
+          </div>
+        </div>
+      );
+    }
 
+    //TODO
+    /*
       <div ng-repeat="review in app.reviews|orderBy:'-date_created'" className="review">
         <div className="col-md-4 col-sm-6" ng-className="{'col-md-offset-4': ($last && (app.reviews.length % 3) == 1), 'col-md-offset-2': (($index + 2) == app.reviews.length && (app.reviews.length % 3) == 2)}">
           <div className="list-group">
@@ -482,6 +510,8 @@ module.exports = React.createClass({
       </div>
     </div>
     */
+
+    return reviews;
   },
 
   renderMain: function() {

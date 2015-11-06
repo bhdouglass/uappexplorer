@@ -413,5 +413,6 @@ module.exports = React.createClass({
         <Pagination active={this.state.page} total={pages} base={'/apps'} query={this.props.location.query} />
       </div>
     );
+    //TODO AppList.popularity
   }
 });

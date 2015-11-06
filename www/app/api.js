@@ -23,5 +23,11 @@ module.exports = {
     return axios.get('/api/apps/' + name).then(function(res) {
       return res.data.data;
     });
-  }
+  },
+
+  getReviews: function(name, params) {
+    return axios.get('/api/apps/reviews/' + name, {params: params}).then(function(res) {
+      return res.data.data;
+    });
+  },
 };
