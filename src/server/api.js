@@ -352,6 +352,7 @@ function setup(app, success, error) {
         error(res, req.params.name + ' was not found', 404);
       }
       else {
+        pkg.icon = config.server.host + '/api/icon/' + pkg.icon_hash + '/' + pkg.name + '.png';
         pkg.reviews = undefined;
 
         //TODO cache this

@@ -56,4 +56,13 @@ module.exports = {
       //TODO catch errors
     }
   },
+
+  getApp: function(name) {
+    tree.set('loading', true);
+    api.getApp(name).then(function(data) {
+      tree.set('loading', false);
+      tree.set('app', data);
+    });
+    //TODO catch errors
+  },
 };

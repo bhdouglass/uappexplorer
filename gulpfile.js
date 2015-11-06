@@ -1,9 +1,8 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
-var uglify = require('gulp-uglify');
+//var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var sourcemaps = require('gulp-sourcemaps');
 var minifyCSS = require('gulp-minify-css');
 var template = require('gulp-template');
 var preprocess = require('gulp-preprocess');
@@ -21,8 +20,7 @@ var browserify = require('browserify');
 var reactify = require('reactify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var assign = require('lodash.assign');
+//var buffer = require('vinyl-buffer');
 
 var paths = {
   main_js: 'www/app/index.js',
@@ -49,7 +47,6 @@ gulp.task('clean', function() {
   del.sync(paths.dist);
 });
 
-//TODO lint jsx
 gulp.task('lint', function() {
   return merge(
     gulp.src(paths.lint)
@@ -115,23 +112,22 @@ gulp.task('build-img', function() {
     .pipe(gulp.dest('dist/www/img'));
 });
 
-var customOpts = {
+var b = watchify(browserify({
   entries: paths.main_js,
-  debug: true,
-};
-
-var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts));
+  //debug: true,
+  extensions: ['.jsx'],
+  cache: {},
+  packageCache: {},
+}));
 b.transform(reactify);
 
 function bundle() {
   return b.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
+    //.pipe(buffer())
+    //TODO have a production build without debug option & uglify
+    //.pipe(uglify())
     .pipe(gulp.dest('dist/www/js'));
 }
 

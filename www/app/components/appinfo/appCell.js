@@ -15,9 +15,9 @@ module.exports = React.createClass({
 
   renderPrice: function() {
     var price = utils.price(this.props.app.prices);
-    var cls = 'label label-primary';
-    if (isNaN(parseInt(price))) {
-      cls = 'label label-success';
+    var cls = 'label label-material-blue';
+    if (utils.isFree(this.props.app.prices)) {
+      cls = 'label label-material-green';
     }
 
     return (
@@ -58,7 +58,7 @@ module.exports = React.createClass({
             <p className="list-group-item-text">
               <Stars stars={this.props.app.bayesian_average} />
 
-              <Hearts hearts={this.props.app.points} popularity="this.props.app.points.monthly_popularity" pop={this.props.popularity} />
+              <Hearts hearts={this.props.app.points} popularity={this.props.app.monthly_popularity} pop={this.props.popularity} />
             </p>
 
             {this.renderDescription()}

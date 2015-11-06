@@ -17,5 +17,11 @@ module.exports = {
     return axios.get('/api/frameworks').then(function(res) {
       return res.data.data;
     });
+  },
+
+  getApp: function(name) {
+    return axios.get('/api/apps/' + name).then(function(res) {
+      return res.data.data;
+    });
   }
 };
