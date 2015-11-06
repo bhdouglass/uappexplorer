@@ -7,6 +7,7 @@ var Types = require('./appinfo/types');
 var Stars = require('./appinfo/stars');
 var Hearts = require('./appinfo/hearts');
 var AppCell = require('./appinfo/appCell');
+var Share = require('./share');
 
 module.exports = React.createClass({
   displayName: 'App',
@@ -41,47 +42,6 @@ module.exports = React.createClass({
     <i className="fa fa-2x fa-chevron-right"></i>
   </a>
 </div>
-*/
-
-//TODO separate component for this
-/*
-<p className="list-group-item-text external-links row">
-  <!-- The display block is to override the styles set by an adblocker. Some people actually want to be able to use an adblocker and still share to social media -->
-  <div className="col-sm-2 col-xs-4">
-    <a ng-href="https://plus.google.com/share?url={{url}}app/{{app.name}}" className="text-material-red" title="Share on Google" style="display:block !important;">
-      <i className="fa fa-gps fa-3x"></i>
-    </a>
-  </div>
-  <div className="col-sm-2 col-xs-4">
-    <a ng-href="http://www.facebook.com/sharer/sharer.php?u={{url}}app/{{app.name}}" className="text-material-blue" title="Share on Facebook" style="display:block !important;">
-      <i className="fa fa-fs fa-3x"></i>
-    </a>
-  </div>
-  <div className="col-sm-2 col-xs-4">
-    <a ng-href="https://twitter.com/intent/tweet?text={{app.title}}&url={{url}}app/{{app.name}}&via=uappexplorer" className="text-material-lightblue" title="Share on Twitter" style="display:block !important;">
-      <i className="fa fa-ts fa-3x"></i>
-    </a>
-  </div>
-  <div className="clear-fix visible-xs"></div>
-  <div className="col-sm-2 col-xs-4">
-    <a ng-href="https://www.reddit.com/submit?url={{url}}app/{{app.name}}" className="text-material-cyan" title="Share on Reddit" style="display:block !important;">
-      <i className="fa fa-rs fa-3x"></i>
-    </a>
-  </div>
-  <div className="col-sm-2 col-xs-4">
-    <a className="text-material-grey caxton-button clickable" title="Send via Caxton" ng-click="caxton()">
-      <i className="fa fa-square fa-3x"></i>
-      <img src="/img/caxton.svg" ng-show="!caxtonSent" title="Send via Caxton" />
-      <i className="fa fa-check fa-2x fa-inverse" ng-show="caxtonSent" title="Sent via Caxton"></i>
-    </a>
-  </div>
-  <div className="col-sm-2 col-xs-4">
-    <a className="text-material-lightgreen qr-button clickable" title="QR Code" onClick={this.qrCode}>
-      <i className="fa fa-square fa-3x"></i>
-      <i className="fa fa-qrcode fa-2x fa-inverse"></i>
-    </a>
-  </div>
-</p>
 */
 
   renderAuthorInfo: function() {
@@ -529,6 +489,7 @@ module.exports = React.createClass({
     if (!this.state.loading && this.state.app && this.state.app.name == this.props.params.name) {
       var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
       var share_cls = utils.strToColor(this.state.app.name, 'backgroundColor');
+      var url = window.location.protocol + '://' + window.location.host + '/app/' + this.state.app.name;
 
       component = (
         <div className="swipe-container">
@@ -585,7 +546,7 @@ module.exports = React.createClass({
                   </div>
 
                   <div className="row-content">
-                    TODO: share options
+                    <Share url={url} title={this.state.app.title} />
                   </div>
 
                 </div>
