@@ -68,10 +68,30 @@ module.exports = {
   },
 
   getReviews: function(name, params) {
-    tree.set('reviews', {loaded: false});
+    if (name != tree.select('reviews').get().name) {
+      tree.set('reviews', {loaded: false});
+    }
+
     api.getReviews(name, params).then(function(data) {
       data.loaded = true;
-      tree.set('reviews', data);
+      data.params = params;
+
+      if (data.name == tree.select('reviews').get().name) {
+        var reviews = tree.select('reviews').get();
+
+        tree.set('reviews', {
+          reviews: reviews.reviews.concat(data.reviews),
+          more: data.more,
+          params: params,
+          name: data.name,
+          loaded: true,
+          stats: data.stats,
+        });
+      }
+      else {
+        tree.set('reviews', data);
+      }
+
       //TODO append reviews on "load more reviews"
     });
     //TODO catch errors

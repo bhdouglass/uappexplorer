@@ -4,7 +4,7 @@ var currencies = {
   'EUR': '€',
 };
 
-function price(prices, currency) {
+function normalizeCurrency(prices, currency) {
   if (!currency || (prices && prices[currency] === undefined)) {
     currency = 'USD';
 
@@ -18,6 +18,12 @@ function price(prices, currency) {
     }
   }
 
+  return currency;
+}
+
+function price(prices, currency) {
+  currency = normalizeCurrency(prices, currency);
+
   var amount = 0;
   if (prices && prices[currency]) {
     amount = prices[currency];
@@ -28,6 +34,7 @@ function price(prices, currency) {
 
 module.exports = {
   price: function(prices, currency) {
+    currency = normalizeCurrency(prices, currency);
     var p = price(prices, currency);
     var output = 'Free';
     if (p > 0) {

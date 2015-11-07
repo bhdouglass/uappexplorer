@@ -1,4 +1,5 @@
 var React = require('react');
+var moment = require('moment');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var actions = require('../actions');
@@ -29,6 +30,14 @@ module.exports = React.createClass({
   componentWillMount: function() {
     actions.getApp(this.props.params.name);
     actions.getReviews(this.props.params.name, {limit: 9});
+  },
+
+  componentWillUpdate: function(nextProps) {
+    if (this.props.params.name != nextProps.params.name) {
+      console.log('update');
+      actions.getApp(nextProps.params.name);
+      actions.getReviews(nextProps.params.name, {limit: 9});
+    }
   },
 
 //TODO swipe to navigate
@@ -201,12 +210,11 @@ module.exports = React.createClass({
       tab = <div dangerouslySetInnerHTML={utils.nl2br(changelog)}></div>;
     }
     else if (this.state.tab == 'info') {
-      //TODO updated as nice date
       tab = (
         <div>
           Version: {this.state.app.version}
           <br/>
-          Updated: {this.state.app.last_updated}
+          Updated: {moment(this.state.app.last_updated).format('MMM D, YYYY')}
           <br/>
           License: {this.state.app.license}
           <br/>
@@ -391,10 +399,40 @@ module.exports = React.createClass({
     return style;
   },
 
+  loadMoreReviews: function() {
+    var params = {
+      limit: 9,
+      skip: this.state.reviews.params.skip ? this.state.reviews.params.skip + 9 : 9,
+    };
+
+    actions.getReviews(this.props.params.name, params);
+  },
+
   renderReviews: function() {
-    console.log(this.state.reviews.loaded);
     var reviews = '';
     if (this.state.reviews && this.state.reviews.loaded && this.state.reviews.name == this.props.params.name) {
+      var none = '';
+      if (this.state.reviews.reviews.length === 0) {
+        none = (
+          <div className="col-sm-4 col-md-offset-4 text-center">
+            <h4>No reviews yet!</h4>
+          </div>
+        );
+      }
+
+      var more = '';
+      if (this.state.reviews.more) {
+        more = (
+          <div className="row">
+            <div className="col-sm-12 text-center">
+              <a onClick={this.loadMoreReviews} className="btn btn-info">Load more reviews</a>
+            </div>
+          </div>
+        );
+      }
+
+      var bayesian_average = this.state.app.bayesian_average ? this.state.app.bayesian_average : 0;
+
       reviews = (
         <div>
           <div className="row">
@@ -408,7 +446,7 @@ module.exports = React.createClass({
               <div className="row star-chart text-center">
                 <div className="col-sm-2 col-sm-offset-3 left-panel">
                   <div className="text-material-light-blue text-large text-center" title="Star Rating">
-                    <i className="fa fa-star"></i> {this.state.app.bayesian_average.toFixed(2)}
+                    <i className="fa fa-star"></i> {bayesian_average.toFixed(2)}
                   </div>
 
                   <Hearts hearts={this.state.app.points} />
@@ -443,6 +481,76 @@ module.exports = React.createClass({
               </div>
             </div>
           </div>
+
+          <div className="row">
+            {this.state.reviews.reviews.map(function(review, index, arr) {
+              var cls = 'col-md-4 col-sm-6';
+              if (index == (arr.length - 1) && (arr.length % 3) == 1) {
+                cls += ' col-md-offset-4';
+              }
+              else if ((index + 2) == arr.length && (arr.length % 3) == 2) {
+                cls += ' col-md-offset-2';
+              }
+
+              var clearfix = '';
+              if ((index % 3) == 2) {
+                clearfix = <div className="hidden-xs hidden-sm clearfix"></div>;
+              }
+              else if ((index % 2) == 1) {
+                clearfix = <div className="visible-xs visible-sm clearfix"></div>;
+              }
+
+              var separator = '';
+              if ((index % 3) == 2) {
+                separator = <div className="separator hidden-xs hidden-sm"></div>;
+              }
+              else if ((index % 2) == 1) {
+                separator = <div className="separator visible-sm"></div>;
+              }
+
+              return (
+                <div className="review" key={review.reviewer_username + review.id}>
+                  <div className={cls}>
+                    <div className="list-group">
+                      <div className="list-group-item">
+                        <div className="row-action-primary">
+                          <div className="action-icon ubuntu-shape">
+                            <i className="fa fa-user" style={utils.strToColor(review.reviewer_username, 'backgroundColor')}></i>
+                          </div>
+                        </div>
+
+                        <div className="row-content">
+                          <div className="least-content">{moment(review.date_created).format('MMM D, YYYY')}</div>
+
+                          <div className="list-group-item-heading">
+                            <Stars stars={review.rating} />
+                          </div>
+
+                          <div className="list-group-item-text review-author">
+                            {review.reviewer_displayname}
+                          </div>
+                        </div>
+                          <div className="list-group-item-text review-text">
+                            {review.review_text}
+                            <br/>
+                            For version: {review.version}
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {clearfix}
+                  {separator}
+
+                  <div className="separator visible-xs"></div>
+                </div>
+              );
+            })}
+
+            {none}
+          </div>
+
+          {more}
         </div>
       );
     }
@@ -455,61 +563,6 @@ module.exports = React.createClass({
         </div>
       );
     }
-
-    //TODO
-    /*
-      <div ng-repeat="review in app.reviews|orderBy:'-date_created'" className="review">
-        <div className="col-md-4 col-sm-6" ng-className="{'col-md-offset-4': ($last && (app.reviews.length % 3) == 1), 'col-md-offset-2': (($index + 2) == app.reviews.length && (app.reviews.length % 3) == 2)}">
-          <div className="list-group">
-            <div className="list-group-item">
-              <div className="row-action-primary">
-                <div className="action-icon ubuntu-shape">
-                  <i className="fa fa-user" ng-style="strToColor(review.reviewer_username, 'background-color')"></i>
-                </div>
-              </div>
-
-              <div className="row-content">
-                <div className="least-content" ng-bind="review.date_created|date"></div>
-
-                <p className="list-group-item-heading">
-                  <stars ng-model="review.rating"></stars>
-                </p>
-
-                <p className="list-group-item-text review-author">
-                  <span ng-bind="review.reviewer_displayname"></span>
-                </p>
-              </div>
-                <p className="list-group-item-text review-text">
-                  <span ng-bind="review.review_text"></span>
-                  <br/>
-                  <span translate translate-comment="Comment below reviews">For version:</span> <span ng-bind="review.version"></span>
-                </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden-xs hidden-sm" ng-className="{clearfix: $index % 3 == 2}"></div>
-        <div className="visible-xs visible-sm" ng-className="{clearfix: $index % 2 == 1}"></div>
-
-        <div className="separator hidden-xs hidden-sm" ng-show="$index % 3 == 2"></div>
-        <div className="separator visible-sm" ng-show="$index % 2 == 1"></div>
-        <div className="separator visible-xs"></div>
-      </div>
-
-      <div className="col-sm-4 col-md-offset-4 text-center" ng-show="!app.loading_reviews && (!app.reviews || app.reviews.length == 0)">
-        <h4 translate>No reviews yet!</h4>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-sm-12 text-center" ng-show="app.more_reviews">
-        <a ng-click="loadMoreReview(app)" ng-if="!app.loading_more_reviews" className="btn btn-info">Load more reviews</a>
-        <span ng-if="app.loading_more_reviews">
-          <i className="fa fa-spin fa-spinner"></i>
-          <span translate>Loading more reviews...</span>
-        </span>
-      </div>
-    </div>
-    */
 
     return reviews;
   },
