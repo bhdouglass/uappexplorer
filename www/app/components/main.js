@@ -10,10 +10,6 @@ module.exports = React.createClass({
     mixins.root
   ],
 
-  showFAQ: function() {
-    //TODO
-  },
-
   render: function() {
     return (
       <div>
@@ -24,9 +20,7 @@ module.exports = React.createClass({
         <div className="container main">
           <div className="row">
             <div className="col-sm-12 text-center disclaimer">
-              <a onClick={this.showFAQ} className="clickable" translate>
-                This is an unofficial app viewer for Ubuntu Touch apps.
-              </a>
+              This is an unofficial app viewer for Ubuntu Touch apps.
             </div>
           </div>
 
