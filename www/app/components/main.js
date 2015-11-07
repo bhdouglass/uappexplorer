@@ -1,14 +1,62 @@
 var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
+var cookie = require('cookie-cutter');
 var Nav = require('./nav');
 var Errors = require('./errors');
+var Modal = require('react-bootstrap/lib/Modal');
 
 module.exports = React.createClass({
   displayName: 'Main',
   mixins: [
     mixins.root
   ],
+
+  getInitialState: function() {
+    return {
+      disclaimer: false,
+    };
+  },
+
+  componentWillMount: function() {
+    var show = cookie.get('disclaimer');
+    console.log(show);
+    if (!show) {
+      this.open();
+
+      var now = new Date();
+      cookie.set('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
+    }
+  },
+
+  open: function() {
+    this.setState({disclaimer: true});
+  },
+
+  close: function() {
+    this.setState({disclaimer: false});
+  },
+
+  renderDisclaimer: function() {
+    return (
+      <Modal show={this.state.disclaimer} onHide={this.close}>
+        <Modal.Header closeButton>
+          <Modal.Title>Welcome to uApp Explorer!</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+This site is an unofficial app browser for Ubuntu Touch apps. All data for the
+apps comes from a publicly accessible api. This site is maintained by Brian
+Douglass and is not endorsed by or affiliated with Ubuntu or Canonical. Ubuntu
+and Canonical are registered trademarks of Canonical Ltd.
+        </Modal.Body>
+
+        <Modal.Footer>
+          <button className="btn btn-info" onClick={this.close}>Close</button>
+        </Modal.Footer>
+      </Modal>
+    );
+  },
 
   render: function() {
     return (
@@ -55,6 +103,8 @@ module.exports = React.createClass({
             </div>
           </div>
         </div>
+
+        {this.renderDisclaimer()}
       </div>
     );
   }
