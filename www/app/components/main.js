@@ -12,6 +12,10 @@ module.exports = React.createClass({
     mixins.root
   ],
 
+  props: {
+    location: React.PropTypes.object.isRequired,
+  },
+
   getInitialState: function() {
     return {
       disclaimer: false,
@@ -20,7 +24,6 @@ module.exports = React.createClass({
 
   componentWillMount: function() {
     var show = cookie.get('disclaimer');
-    console.log(show);
     if (!show) {
       this.open();
 
@@ -61,7 +64,7 @@ and Canonical are registered trademarks of Canonical Ltd.
   render: function() {
     return (
       <div>
-        <Nav />
+        <Nav location={this.props.location} />
 
         <Errors />
 

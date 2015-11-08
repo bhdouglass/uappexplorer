@@ -11,10 +11,6 @@ module.exports = new Baobab({
   auth: {
     loggedin: false,
   },
-  search: {
-    show: false,
-    term: '',
-  },
   loading: false,
   top: [],
   'new': [],

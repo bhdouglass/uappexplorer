@@ -1,4 +1,7 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
+var Router = require('react-router');
+var debounce = require('debounce');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
@@ -6,12 +9,39 @@ var Modal = require('react-bootstrap/lib/Modal');
 module.exports = React.createClass({
   displayName: 'Nav',
   mixins: [
-    mixins.branch
+    mixins.branch,
+    Router.History,
   ],
   cursors: {
     auth: ['auth'],
-    search: ['search'],
     loading: ['loading'],
+  },
+
+  props: {
+    location: React.PropTypes.object.isRequired,
+  },
+
+  componentWillMount: function() {
+    var search = {
+      show: false,
+      term: '',
+    };
+
+    if (this.props.location && this.props.location.query && this.props.location.query.q) {
+      search.show = true;
+      search.term = this.props.location.query.q;
+    }
+
+    this.setState({search: search});
+  },
+
+  componentWillUpdate: function(nextProps) {
+    if (nextProps.location && nextProps.location.query && (this.state.search.term != nextProps.location.query.q)) {
+      this.setState({search: {
+        show: this.state.search.show,
+        term: nextProps.location.query.q,
+      }});
+    }
   },
 
   getInitialState: function() {
@@ -19,6 +49,10 @@ module.exports = React.createClass({
       login: false,
       faq: false,
       donate: false,
+      search: {
+        show: false,
+        term: '',
+      },
     };
   },
 
@@ -27,7 +61,41 @@ module.exports = React.createClass({
   },
 
   toggleSearch: function() {
-    //TODO
+    if (this.state.search.show) {
+      this.setState({search: {
+        show: false,
+        term: '',
+      }});
+    }
+    else {
+      var self = this;
+      setTimeout(function() {
+        var search = ReactDOM.findDOMNode(self.refs.search);
+        var searchxs = ReactDOM.findDOMNode(self.refs.searchxs);
+        if (search.offsetParent !== null) { //determine if search box is visible
+          search.focus();
+        }
+        else {
+          searchxs.focus();
+        }
+      }, 300);
+
+      this.setState({search: {
+        show: true,
+        term: this.state.search.term,
+      }});
+    }
+  },
+
+  search: function(event) {
+    if (event.target.value) {
+      this.props.location.query.q = event.target.value;
+    }
+    else {
+      delete this.props.location.query.q;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
   },
 
   open: function(modal) {
@@ -341,11 +409,11 @@ service, regardless of the number of donations.
 
   renderSearch: function() {
     var search = '';
-    if (this.state.search.show) { //TODO onChange
+    if (this.state.search.show) {
       search = (
         <div className="visible-xs">
           <div className="input-group search-box">
-            <input type="text" className="form-control" id="search" />
+            <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} defaultValue={this.state.search.term} ref="search" />
           </div>
         </div>
       );
@@ -356,11 +424,11 @@ service, regardless of the number of donations.
 
   renderSearchXS: function() {
     var search = '';
-    if (this.state.search.show) { //TODO onChange
+    if (this.state.search.show) {
       search = (
         <li>
           <div className="input-group hidden-xs search-box">
-            <input type="text" className="form-control" id="search" />
+            <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} defaultValue={this.state.search.term} ref="searchxs" />
           </div>
         </li>
       );

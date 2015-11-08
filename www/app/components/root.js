@@ -6,6 +6,6 @@ module.exports = React.createClass({
   displayName: 'Root',
 
   render: function() {
-    return <Main tree={tree}>{this.props.children}</Main>;
+    return <Main tree={tree} location={this.props.location}>{this.props.children}</Main>;
   }
 });
