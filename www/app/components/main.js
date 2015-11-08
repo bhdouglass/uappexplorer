@@ -5,6 +5,7 @@ var cookie = require('cookie-cutter');
 var Nav = require('./nav');
 var Errors = require('./errors');
 var Modal = require('react-bootstrap/lib/Modal');
+var FAQ = require('./modals/faq');
 
 module.exports = React.createClass({
   displayName: 'Main',
@@ -19,30 +20,35 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       disclaimer: false,
+      faq: false,
     };
   },
 
   componentWillMount: function() {
     var show = cookie.get('disclaimer');
     if (!show) {
-      this.open();
+      this.open('disclaimer');
 
       var now = new Date();
       cookie.set('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
     }
   },
 
-  open: function() {
-    this.setState({disclaimer: true});
+  open: function(modal) {
+    var state = {};
+    state[modal] = true;
+    this.setState(state);
   },
 
-  close: function() {
-    this.setState({disclaimer: false});
+  close: function(modal) {
+    var state = {};
+    state[modal] = false;
+    this.setState(state);
   },
 
   renderDisclaimer: function() {
     return (
-      <Modal show={this.state.disclaimer} onHide={this.close}>
+      <Modal show={this.state.disclaimer} onHide={this.close.bind(this, 'disclaimer')}>
         <Modal.Header closeButton>
           <Modal.Title>Welcome to uApp Explorer!</Modal.Title>
         </Modal.Header>
@@ -55,7 +61,7 @@ and Canonical are registered trademarks of Canonical Ltd.
         </Modal.Body>
 
         <Modal.Footer>
-          <button className="btn btn-info" onClick={this.close}>Close</button>
+          <button className="btn btn-info" onClick={this.close.bind(this, 'disclaimer')}>Close</button>
         </Modal.Footer>
       </Modal>
     );
@@ -71,7 +77,7 @@ and Canonical are registered trademarks of Canonical Ltd.
         <div className="container main">
           <div className="row">
             <div className="col-sm-12 text-center disclaimer">
-              This is an unofficial app viewer for Ubuntu Touch apps.
+              <a onClick={this.open.bind(this, 'faq')}>This is an unofficial app viewer for Ubuntu Touch apps.</a>
             </div>
           </div>
 
@@ -108,6 +114,7 @@ and Canonical are registered trademarks of Canonical Ltd.
         </div>
 
         {this.renderDisclaimer()}
+        <FAQ show={this.state.faq} onHide={this.close.bind(this, 'faq')} />
       </div>
     );
   }
