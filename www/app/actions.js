@@ -14,6 +14,18 @@ module.exports = {
     }
   },
 
+  getEssentials: function() {
+    if (!tree.get('essentials').loaded) {
+      api.getEssentials().then(function(data) {
+        tree.set('essentials', {
+          loaded: true,
+          apps: data,
+        });
+      });
+      //TODO catch errors
+    }
+  },
+
   getTopApps: function() {
     //TODO caching
 

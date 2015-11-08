@@ -34,6 +34,7 @@ var paths = {
     'www/bower/bootstrap/dist/css/bootstrap.min.css',
     'www/bower/bootstrap-material-design/dist/css/material.min.css',
     'www/bower/font-awesome/css/font-awesome.min.css',
+    'www/bower/slick-carousel/slick/slick.css',
   ],
   fonts: [
     'www/bower/font-awesome/fonts/*',

@@ -8,17 +8,83 @@
     color: #FFFFFF;
   }
 
-  .carousel-control {
-    z-index: 200;
-    background-image: none !important;
-  }
-
-  .carousel-indicators {
-    z-index: 200;
-  }
-
   .essentials .ubuntu-shape img {
     padding-bottom: 2px;
     border-radius: 6rem;
+  }
+
+  .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-top: -15px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    color: transparent;
+    background: transparent;
+    outline: none;
+  }
+
+  .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+    opacity: 1;
+  }
+
+  .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: .25;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-family: 'FontAwesome';
+    font-size: 30px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0 1px 2px;
+    opacity: .75;
+  }
+
+  .slick-prev {
+    left: -25px;
+  }
+
+  [dir='rtl'] .slick-prev {
+    right: -25px;
+    left: auto;
+  }
+
+  .slick-prev:before {
+    content: '\f053';
+  }
+
+  [dir='rtl'] .slick-prev:before {
+    content: '\f054';
+  }
+
+  .slick-next {
+    right: -25px;
+  }
+
+  [dir='rtl'] .slick-next {
+    right: auto;
+    left: -25px;
+  }
+
+  .slick-next:before {
+    content: '\f054';
+  }
+
+  [dir='rtl'] .slick-next:before {
+    content: '\f053';
   }
 }

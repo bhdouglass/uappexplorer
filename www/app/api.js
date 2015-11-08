@@ -1,9 +1,16 @@
 var axios = require('axios');
+var utils = require('./utils');
 
 module.exports = {
   getCounts: function() {
     return axios.get('/api/apps/counts').then(function(res) {
       return res.data.data;
+    });
+  },
+
+  getEssentials: function() {
+    return axios.get('/api/apps/essentials').then(function(res) {
+      return utils.shuffle(res.data.data);
     });
   },
 

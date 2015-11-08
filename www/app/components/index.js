@@ -1,6 +1,7 @@
 var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
+var Slider = require('react-slick');
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
 
@@ -13,6 +14,7 @@ module.exports = React.createClass({
     counts: ['counts'],
     top: ['top'],
     'new': ['new'],
+    essentials: ['essentials'],
   },
 
   componentWillMount: function() {
@@ -20,6 +22,7 @@ module.exports = React.createClass({
     actions.getCounts();
     actions.getTopApps();
     actions.getNewApps();
+    actions.getEssentials();
   },
 
   renderCount: function(name, count) {
@@ -56,6 +59,53 @@ module.exports = React.createClass({
         </div>
       </div>
     );
+  },
+
+  renderEssentialApps: function() {
+    var essentials = '';
+    if (this.state.essentials.loaded) {
+      var settings = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+      };
+
+      essentials = (
+        <div>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h1>
+                <Link to="/apps?sort=-bayesian_average">Essential Apps</Link>
+              </h1>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="essentials margin-auto">
+              <Slider {...settings}>
+                {this.state.essentials.apps.map(function(app) {
+                  var link = '/app/' + app.name;
+                  return (
+                    <div className="ubuntu-shape" key={link}>
+                      <img src={app.icon} className="rounded" />
+                      <div className="carousel-caption">
+                        <h3><Link to={link}>{app.title}</Link></h3>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return essentials;
   },
 
   renderTopApps: function() {
@@ -111,6 +161,7 @@ module.exports = React.createClass({
           {this.renderCell('Scopes', 'scopes', this.state.counts.scopes, '/apps?type=scope', 'Browse Scopes', 'fa fa-search background-material-deep-orange')}
         </div>
 
+        {this.renderEssentialApps()}
         {this.renderTopApps()}
         {this.renderNewApps()}
       </div>
