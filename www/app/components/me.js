@@ -4,6 +4,7 @@ var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var utils = require('../utils');
 var actions = require('../actions');
+var ListEdit = require('./modals/listEdit');
 
 module.exports = React.createClass({
   displayName: 'Me',
@@ -20,6 +21,8 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       caxton: '',
+      edit: false,
+      current_list: null,
     };
   },
 
@@ -49,6 +52,17 @@ module.exports = React.createClass({
   removeList: function(list) {
     console.log(list.name);
     //TODO
+  },
+
+  newList: function() {
+    this.setState({
+      edit: true,
+      current_list: null,
+    });
+  },
+
+  close: function() {
+    this.setState({edit: false});
   },
 
   renderMain: function() {
@@ -116,9 +130,9 @@ module.exports = React.createClass({
 
         <div className="row lists">
           <div className="col-sm-12">
-            <Link className="btn btn-material-light-blue btn-sm pull-right" to="/me/list/new">
+            <a className="btn btn-material-light-blue btn-sm pull-right" onClick={this.newList}>
               <i className="fa fa-plus"></i> <span className="hidden-xs">New List</span>
-            </Link>
+            </a>
 
             <h3>My Lists</h3>
           </div>
@@ -182,6 +196,8 @@ module.exports = React.createClass({
             </div>
           );
         }, this)}
+
+        <ListEdit show={this.state.edit} onHide={this.close} list={this.state.current_list} />
       </div>
     );
   },
