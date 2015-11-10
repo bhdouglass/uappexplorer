@@ -114,12 +114,16 @@ module.exports = {
         user: user,
         authorization: btoa(user.apikey + ':' + user.apisecret),
       });
+
+      return tree.get('auth');
     }).catch(function() {
       tree.set('auth', {
         loggedin: false,
         user: null,
         authorization: null,
       });
+
+      return tree.get('auth');
     });
   },
 
@@ -147,4 +151,13 @@ module.exports = {
     });
     //TODO catch errors
   },
+
+  saveSettings: function(settings) {
+    tree.set('savingSettings', true);
+
+    api.saveCaxton(settings.caxton).then(function() {
+      tree.set('savingSettings', false);
+      tree.set(['auth', 'has_caxton'], !!settings.caxton);
+    });
+  }
 };

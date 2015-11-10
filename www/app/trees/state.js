@@ -1,5 +1,6 @@
 var Baobab = require('baobab');
 
+//TODO organize this
 module.exports = new Baobab({
   counts: {
     applications: 0,
@@ -27,4 +28,5 @@ module.exports = new Baobab({
     loaded: false,
     lists: [],
   },
+  savingSettings: false,
 });

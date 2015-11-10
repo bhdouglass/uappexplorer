@@ -49,4 +49,10 @@ module.exports = {
       return res.data.data;
     });
   },
+
+  saveCaxton: function(caxton_token) {
+    return axios.post('/auth/caxton/' + caxton_token).then(function(res) {
+      return res.data.data;
+    });
+  },
 };

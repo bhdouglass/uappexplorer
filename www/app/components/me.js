@@ -14,6 +14,7 @@ module.exports = React.createClass({
   cursors: {
     auth: ['auth'],
     userLists: ['userLists'],
+    savingSettings: ['savingSettings'],
   },
 
   getInitialState: function() {
@@ -24,8 +25,8 @@ module.exports = React.createClass({
 
   componentWillMount: function() {
     var self = this;
-    actions.login().then(function() {
-      if (self.state.auth.loggedin) {
+    actions.login().then(function(auth) {
+      if (auth.loggedin) {
         actions.getUserLists();
       }
       else {
@@ -34,12 +35,15 @@ module.exports = React.createClass({
     });
   },
 
-  caxtonChange: function() {
-    //TODO
+  caxtonChange: function(event) {
+    this.setState({caxton: event.target.value});
   },
 
   saveSettings: function() {
-    //TODO
+    console.log('savesettings');
+    actions.saveSettings({
+      caxton: this.state.caxton,
+    });
   },
 
   removeList: function(list) {
@@ -56,18 +60,29 @@ module.exports = React.createClass({
       </span>
     );
 
-    if (this.state.auth.caxton) {
+    if (!this.state.auth.user.has_caxton) {
       show_save = true;
       caxton = <input type="text" className="form-control" id="caxton_code" value={this.state.caxton} onChange={this.caxtonChange} />;
     }
 
     var save = '';
     if (show_save) {
+      var disabled = '';
+      var cls = 'fa fa-check';
+      if (this.state.savingSettings) {
+        disabled = 'disabled';
+        cls = 'fa fa-spinner fa-spin';
+      }
+
+      if (this.state.caxton === '') {
+        disabled = 'disabled';
+      }
+
       save = (
         <div className="pull-right">
-          <button className="btn btn-success" onClick={this.saveSettings}>
-            <i className="fa fa-check"></i> Save
-          </button>
+          <a className="btn btn-success" onClick={this.saveSettings} disabled={disabled}>
+            <i className={cls}></i> Save
+          </a>
         </div>
       );
     }
