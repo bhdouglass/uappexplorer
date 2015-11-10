@@ -7,6 +7,7 @@ var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
 var FAQ = require('./modals/faq');
 var Donate = require('./modals/donate');
+var actions = require('../actions');
 
 module.exports = React.createClass({
   displayName: 'Nav',
@@ -59,7 +60,7 @@ module.exports = React.createClass({
   },
 
   logout: function() {
-    //TODO
+    actions.logout();
   },
 
   toggleSearch: function() {
@@ -159,11 +160,11 @@ module.exports = React.createClass({
     if (this.state.auth.loggedin) {
       list = [
         (
-          <li className="hidden-xs">
+          <li className="hidden-xs" key="lists">
             <Link to="/me" className="clickable">My Lists</Link>
           </li>
         ), (
-          <li>
+          <li key="logout">
             <a onClick={this.logout} className="clickable">Log Out</a>
           </li>
         )

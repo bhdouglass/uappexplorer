@@ -103,8 +103,47 @@ module.exports = {
       else {
         tree.set('reviews', data);
       }
+    });
+    //TODO catch errors
+  },
 
-      //TODO append reviews on "load more reviews"
+  login: function() {
+    return api.login().then(function(user) {
+      tree.set('auth', {
+        loggedin: true,
+        user: user,
+        authorization: btoa(user.apikey + ':' + user.apisecret),
+      });
+    }).catch(function() {
+      tree.set('auth', {
+        loggedin: false,
+        user: null,
+        authorization: null,
+      });
+    });
+  },
+
+  logout: function() {
+    tree.set('auth', {
+      loggedin: false,
+      user: null,
+      authorization: null,
+    });
+
+    window.location.href = '/auth/logout';
+  },
+
+  getUserLists: function() {
+    tree.set('userLists', {
+      loaded: false,
+      lists: [],
+    });
+
+    api.getUserLists(tree.get('auth').user._id).then(function(lists) {
+      tree.set('userLists', {
+        loaded: true,
+        lists: lists,
+      });
     });
     //TODO catch errors
   },

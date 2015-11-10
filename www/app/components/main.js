@@ -2,6 +2,7 @@ var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var cookie = require('cookie-cutter');
+var actions = require('../actions');
 var Nav = require('./nav');
 var Errors = require('./errors');
 var Modal = require('react-bootstrap/lib/Modal');
@@ -25,6 +26,8 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
+    actions.login();
+
     var show = cookie.get('disclaimer');
     if (!show) {
       this.open('disclaimer');

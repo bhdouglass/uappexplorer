@@ -37,4 +37,16 @@ module.exports = {
       return res.data.data;
     });
   },
+
+  login: function() {
+    return axios.get('/auth/me').then(function(res) {
+      return res.data.data;
+    });
+  },
+
+  getUserLists: function(user_id) {
+    return axios.get('/api/lists', {params: {user: user_id}}).then(function(res) {
+      return res.data.data;
+    });
+  },
 };

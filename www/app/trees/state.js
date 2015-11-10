@@ -10,6 +10,8 @@ module.exports = new Baobab({
   },
   auth: {
     loggedin: false,
+    user: null,
+    authorization: null,
   },
   loading: false,
   top: [],
@@ -20,5 +22,9 @@ module.exports = new Baobab({
   essentials: {
     loaded: false,
     apps: [],
+  },
+  userLists: {
+    loaded: false,
+    lists: [],
   },
 });
