@@ -1,13 +1,22 @@
 var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
+var mixins = require('baobab-react/mixins');
 var info = require('../../info');
+var actions = require('../../actions');
 
 module.exports = React.createClass({
   displayName: 'ListEdit',
+  mixins: [
+    mixins.branch,
+  ],
   props: {
     show: React.PropTypes.bool.isRequired,
     onHide: React.PropTypes.func.isRequired,
     list: React.PropTypes.object,
+  },
+  cursors: {
+    apps: ['apps'],
+    loading: ['loading'],
   },
 
   getInitialState: function() {
@@ -17,13 +26,24 @@ module.exports = React.createClass({
         name: '',
         sort: '-points',
         packages: [],
-      }
+      },
+      key: null,
     };
   },
 
   componentWillMount: function() {
     if (this.props.list && this.props.list._id) {
-      this.setState({'list': this.props.list});
+      var key = null;
+      if (this.props.list.packages.length > 0) {
+        var paging = {query: {name: {'$in': this.props.list.packages}}};
+        key = JSON.stringify(paging);
+        actions.getApps(paging);
+      }
+
+      this.setState({
+        list: this.props.list,
+        key: key
+      });
     }
   },
 
@@ -33,7 +53,17 @@ module.exports = React.createClass({
       (this.props.list !== null && newProps.list === null) ||
       (this.props.list && newProps.list && this.props.list._id != newProps.list._id)
     ) {
-      this.setState({'list': newProps.list});
+      var key = null;
+      if (newProps.list.packages.length > 0) {
+        var paging = {query: {name: {'$in': newProps.list.packages}}};
+        key = JSON.stringify(paging);
+        actions.getApps(paging);
+      }
+
+      this.setState({
+        list: newProps.list,
+        key: key,
+      });
     }
   },
 
@@ -49,6 +79,23 @@ module.exports = React.createClass({
   changeSort: function(event) {
     this.state.list.sort = event.target.value;
     this.setState({list: this.state.list});
+  },
+
+  removeApp: function(app) {
+    var index = this.state.list.packages.indexOf(app.name);
+    var packages = [];
+    for (var i = 0; i < this.state.list.packages.length; i++) {
+      if (i != index) {
+        packages.push(this.state.list.packages[i]);
+      }
+    }
+
+    this.setState({list: {
+      _id: this.state.list._id,
+      name: this.state.list.name,
+      sort: this.state.list.sort,
+      packages: packages,
+    }});
   },
 
   save: function() {
@@ -78,6 +125,18 @@ module.exports = React.createClass({
       disabled = 'disabled';
     }
 
+    var apps = [];
+    if (!this.state.loading && this.state.key && this.state.apps && this.state.apps[this.state.key]) {
+      apps = this.state.apps[this.state.key].apps;
+    }
+
+    //TODO app fetch error
+    /*
+    <div ng-show="appsError" className="text-center text-danger">
+      Could not retrieve app list at this time, please try again later.
+    </div>
+    */
+
     return (
       <Modal show={this.props.show} onHide={this.onHide.bind(this, false)} backdrop={'static'}>
         <Modal.Header closeButton>
@@ -104,6 +163,23 @@ module.exports = React.createClass({
               </div>
             </div>
 
+            <div className="form-group">
+              <label htmlFor="name" className="col-sm-3 control-label">Apps:</label>
+              <div className="col-sm-9">
+                {apps.map(function(app) {
+                  var component = '';
+                  if (this.state.list.packages.indexOf(app.name) != -1) {
+                    component = (
+                      <div key={app.name}>
+                        {app.title} <a onClick={this.removeApp.bind(this, app)} className="clickable"><i className="fa fa-remove"></i></a>
+                      </div>
+                    );
+                  }
+
+                  return component;
+                }, this)}
+              </div>
+            </div>
           </form>
         </Modal.Body>
 
@@ -124,20 +200,6 @@ module.exports = React.createClass({
     );
 
     /*
-    <div className="form-group">
-      <label htmlFor="name" className="col-sm-3 control-label">Apps:</label>
-      <div className="col-sm-9">
-        <div ng-repeat="app in apps">
-          <span ng-bind="app.title"></span>
-          <a ng-click="removeApp(app.name)" className="clickable"><i className="fa fa-remove"></i></a>
-        </div>
-
-        <div ng-show="appsError" className="text-center text-danger">
-          Could not retrieve app list at this time, please try again later.
-        </div>
-      </div>
-    </div>
-
     <div className="form-group">
       <label htmlFor="name" className="col-sm-3 control-label">Add Apps:</label>
       <div className="col-sm-9">

@@ -61,6 +61,13 @@ module.exports = React.createClass({
     });
   },
 
+  editList: function(list) {
+    this.setState({
+      edit: true,
+      current_list: list,
+    });
+  },
+
   close: function() {
     this.setState({edit: false});
   },
@@ -140,7 +147,6 @@ module.exports = React.createClass({
 
         {this.state.userLists.lists.map(function(list) {
           var link = '/list/' + list._id;
-          var edit_link = '/me/list/' + list._id;
 
           var cls = 'fa fa-list-ul';
           var name = list.name.toLowerCase();
@@ -160,9 +166,9 @@ module.exports = React.createClass({
                       <i className="fa fa-eye"></i> View
                     </Link>
 
-                    <Link className="btn btn-success btn-sm" to={edit_link}>
+                    <a className="btn btn-success btn-sm" onClick={this.editList.bind(this, list)}>
                       <i className="fa fa-edit"></i> <span className="hidden-xs">Edit</span>
-                    </Link>
+                    </a>
 
                     <button className="btn btn-danger btn-sm" onClick={this.removeList.bind(this, list)}>
                       <i className="fa fa-trash"></i> <span className="hidden-xs">Delete</span>
