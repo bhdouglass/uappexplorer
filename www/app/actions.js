@@ -52,9 +52,10 @@ module.exports = {
     //TODO caching
 
     tree.set('loading', true);
-    api.getApps(paging).then(function(data) {
+    return api.getApps(paging).then(function(data) {
       tree.select('apps').set(JSON.stringify(paging), data);
       tree.set('loading', false);
+      return data;
     });
     //TODO catch errors
   },

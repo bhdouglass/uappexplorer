@@ -11,13 +11,20 @@ module.exports = React.createClass({
     app: React.PropTypes.object.isRequired,
     popularity: React.PropTypes.boolean,
     description: React.PropTypes.boolean,
+    onClick: React.PropTypes.function,
+  },
+
+  handleClick: function(event) {
+    if (this.props.onClick) {
+      this.props.onClick(event);
+    }
   },
 
   renderPrice: function() {
     var price = utils.price(this.props.app.prices);
-    var cls = 'label label-material-blue';
+    var cls = 'label label-material-green';
     if (utils.isFree(this.props.app.prices)) {
-      cls = 'label label-material-green';
+      cls = 'label label-material-blue';
     }
 
     return (
@@ -39,7 +46,7 @@ module.exports = React.createClass({
 
     return (
       <div className="list-group app-view">
-        <Link className="list-group-item clickable" to={url} title={this.props.app.tagline}>
+        <Link className="list-group-item clickable" to={url} title={this.props.app.tagline} onClick={this.handleClick}>
           <div className="row-action-primary">
             <div className="icon ubuntu-shape">
               <img src={this.props.app.icon} alt={this.props.app.name} />

@@ -1,8 +1,10 @@
 var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
 var mixins = require('baobab-react/mixins');
+var debounce = require('debounce');
 var info = require('../../info');
 var actions = require('../../actions');
+var AppCell = require('../appinfo/appCell');
 
 module.exports = React.createClass({
   displayName: 'ListEdit',
@@ -15,8 +17,8 @@ module.exports = React.createClass({
     list: React.PropTypes.object,
   },
   cursors: {
-    apps: ['apps'],
     loading: ['loading'],
+    apps: ['apps'],
   },
 
   getInitialState: function() {
@@ -27,23 +29,23 @@ module.exports = React.createClass({
         sort: '-points',
         packages: [],
       },
-      key: null,
+      list_apps: [],
+      term: '',
+      search_key: null,
     };
   },
 
   componentWillMount: function() {
     if (this.props.list && this.props.list._id) {
-      var key = null;
       if (this.props.list.packages.length > 0) {
-        var paging = {query: {name: {'$in': this.props.list.packages}}};
-        key = JSON.stringify(paging);
-        actions.getApps(paging);
+        var paging = {query: {name: {'$in': this.props.list.packages}, mini: true}};
+        var self = this;
+        actions.getApps(paging).then(function(data) {
+          self.setState({list_apps: data.apps});
+        });
       }
 
-      this.setState({
-        list: this.props.list,
-        key: key
-      });
+      this.setState({list: this.props.list});
     }
   },
 
@@ -53,17 +55,15 @@ module.exports = React.createClass({
       (this.props.list !== null && newProps.list === null) ||
       (this.props.list && newProps.list && this.props.list._id != newProps.list._id)
     ) {
-      var key = null;
       if (newProps.list.packages.length > 0) {
-        var paging = {query: {name: {'$in': newProps.list.packages}}};
-        key = JSON.stringify(paging);
-        actions.getApps(paging);
+        var paging = {query: {name: {'$in': newProps.list.packages}}, mini: true};
+        var self = this;
+        actions.getApps(paging).then(function(data) {
+          self.setState({list_apps: data.apps});
+        });
       }
 
-      this.setState({
-        list: newProps.list,
-        key: key,
-      });
+      this.setState({list: newProps.list});
     }
   },
 
@@ -81,6 +81,35 @@ module.exports = React.createClass({
     this.setState({list: this.state.list});
   },
 
+  addApp: function(app, event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (this.state.list.packages.indexOf(app.name) == -1) {
+      var packages = [];
+      for (var i = 0; i < this.state.list.packages.length; i++) {
+        packages.push(this.state.list.packages[i]);
+      }
+      packages.push(app.name);
+
+      var list_apps = [];
+      for (var j = 0; j < this.state.list_apps.length; j++) {
+        list_apps.push(this.state.list_apps[j]);
+      }
+      list_apps.push(app);
+
+      this.setState({
+        list: {
+          _id: this.state.list._id,
+          name: this.state.list.name,
+          sort: this.state.list.sort,
+          packages: packages,
+        },
+        list_apps: list_apps,
+      });
+    }
+  },
+
   removeApp: function(app) {
     var index = this.state.list.packages.indexOf(app.name);
     var packages = [];
@@ -96,6 +125,24 @@ module.exports = React.createClass({
       sort: this.state.list.sort,
       packages: packages,
     }});
+  },
+
+  search: function(event) {
+    if (this.state.term != event.target.value) {
+      var paging = {
+        search: event.target.value,
+        sort: this.state.list.sort,
+        mini: true,
+        limit: 5,
+      };
+
+      actions.getApps(paging);
+
+      this.setState({
+        term: event.target.value,
+        search_key: JSON.stringify(paging),
+      });
+    }
   },
 
   save: function() {
@@ -125,15 +172,36 @@ module.exports = React.createClass({
       disabled = 'disabled';
     }
 
-    var apps = [];
-    if (!this.state.loading && this.state.key && this.state.apps && this.state.apps[this.state.key]) {
-      apps = this.state.apps[this.state.key].apps;
+    var list_apps = [];
+    if (!this.state.loading && this.state.list_apps) {
+      list_apps = this.state.list_apps;
+    }
+
+    var search_apps = [];
+    if (!this.state.loading && this.state.search_key && this.state.apps[this.state.search_key]) {
+      search_apps = this.state.apps[this.state.search_key].apps;
+    }
+
+    var not_found = '';
+    if (!this.state.loading && search_apps.length === 0 && this.state.term !== '') {
+      not_found = (
+        <div className="text-center">
+          No apps found, try searching again.
+        </div>
+      );
     }
 
     //TODO app fetch error
     /*
     <div ng-show="appsError" className="text-center text-danger">
       Could not retrieve app list at this time, please try again later.
+    </div>
+    */
+
+    //TODO search error
+    /*
+    <div ng-show="searchError" className="text-center text-danger">
+      Could not retrieve search at this time, please try again later.
     </div>
     */
 
@@ -144,7 +212,7 @@ module.exports = React.createClass({
         </Modal.Header>
 
         <Modal.Body>
-          <form className="form-horizontal" role="form">
+          <form className="form-horizontal list-edit" role="form">
             <div className="form-group">
               <label htmlFor="name" className="col-sm-3 control-label">List Name:</label>
               <div className="col-sm-9">
@@ -166,7 +234,7 @@ module.exports = React.createClass({
             <div className="form-group">
               <label htmlFor="name" className="col-sm-3 control-label">Apps:</label>
               <div className="col-sm-9">
-                {apps.map(function(app) {
+                {list_apps.map(function(app) {
                   var component = '';
                   if (this.state.list.packages.indexOf(app.name) != -1) {
                     component = (
@@ -178,6 +246,30 @@ module.exports = React.createClass({
 
                   return component;
                 }, this)}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="search" className="col-sm-3 control-label">Add Apps:</label>
+              <div className="col-sm-9">
+                <div className="input-group search-box">
+                  <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} />
+                  <span className="input-group-addon">
+                    <i className="fa fa-search"></i>
+                  </span>
+                </div>
+
+                {search_apps.map(function(app) {
+                  return (
+                    <div className="row" key={app.name}>
+                      <div className="col-md-12">
+                        <AppCell onClick={this.addApp.bind(this, app)} app={app} />
+                      </div>
+                    </div>
+                  );
+                }, this)}
+
+                {not_found}
               </div>
             </div>
           </form>
@@ -198,33 +290,5 @@ module.exports = React.createClass({
         </Modal.Footer>
       </Modal>
     );
-
-    /*
-    <div className="form-group">
-      <label htmlFor="name" className="col-sm-3 control-label">Add Apps:</label>
-      <div className="col-sm-9">
-        <div className="input-group search-box">
-          <input type="text" className="form-control" ng-model="search" id="search" />
-          <span className="input-group-addon">
-            <i className="fa fa-search" ng-click="search = ''" ng-className="{'fa-search': !search_hover, 'fa-times-circle-o': search_hover}" ng-mouseenter="search_hover = true" ng-mouseleave="search_hover = false" title="{{'Clear search'|translate}}"></i>
-          </span>
-        </div>
-
-        <div className="row" ng-repeat="app in searchApps">
-          <div className="col-md-12">
-            <app-view ng-model="app" ng-click="addApp(app)" link="false"></app-view>
-          </div>
-        </div>
-
-        <div ng-show="searchApps.length === 0 && !searchError" className="text-center">
-          No apps found
-        </div>
-
-        <div ng-show="searchError" className="text-center text-danger">
-          Could not retrieve search at this time, please try again later.
-        </div>
-      </div>
-    </div>
-    */
   }
 });
