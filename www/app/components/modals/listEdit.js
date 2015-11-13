@@ -55,7 +55,7 @@ module.exports = React.createClass({
       (this.props.list !== null && newProps.list === null) ||
       (this.props.list && newProps.list && this.props.list._id != newProps.list._id)
     ) {
-      if (newProps.list.packages.length > 0) {
+      if (newProps.list && newProps.list.packages.length > 0) {
         var paging = {query: {name: {'$in': newProps.list.packages}}, mini: true};
         var self = this;
         actions.getApps(paging).then(function(data) {
@@ -63,7 +63,15 @@ module.exports = React.createClass({
         });
       }
 
-      this.setState({list: newProps.list});
+      this.setState({
+        list: {
+          _id: newProps.list ? newProps.list._id : null,
+          name: newProps.list ? newProps.list.name : '',
+          sort: newProps.list ? newProps.list.sort : '-points',
+          packages: newProps.list ? newProps.list.packages : [],
+        },
+        list_apps: [],
+      });
     }
   },
 
@@ -93,10 +101,18 @@ module.exports = React.createClass({
       packages.push(app.name);
 
       var list_apps = [];
+      var found = false;
       for (var j = 0; j < this.state.list_apps.length; j++) {
         list_apps.push(this.state.list_apps[j]);
+
+        if (this.state.list_apps[j].name == app.name) {
+          found = true;
+        }
       }
-      list_apps.push(app);
+
+      if (!found) {
+        list_apps.push(app);
+      }
 
       this.setState({
         list: {
@@ -146,7 +162,43 @@ module.exports = React.createClass({
   },
 
   save: function() {
-    //TODO
+    var self = this;
+    if (this.state.list._id) { //Update
+      actions.updateUserList(this.state.list._id, {
+        name: this.state.list.name,
+        sort: this.state.list.sort,
+        packages: this.state.list.packages,
+      }).then(function() {
+        self.props.onHide(true);
+        self.setState({
+          list: {
+            _id: null,
+            name: '',
+            sort: '-points',
+            packages: [],
+          },
+          list_apps: [],
+        });
+      });
+    }
+    else { //Create
+      actions.createUserList({
+        name: this.state.list.name,
+        sort: this.state.list.sort,
+        packages: this.state.list.packages,
+      }).then(function() {
+        self.props.onHide(true);
+        self.setState({
+          list: {
+            _id: null,
+            name: '',
+            sort: '-points',
+            packages: [],
+          },
+          list_apps: [],
+        });
+      });
+    }
   },
 
   render: function() {
@@ -238,7 +290,7 @@ module.exports = React.createClass({
                   var component = '';
                   if (this.state.list.packages.indexOf(app.name) != -1) {
                     component = (
-                      <div key={app.name}>
+                      <div key={'list' + app.name}>
                         {app.title} <a onClick={this.removeApp.bind(this, app)} className="clickable"><i className="fa fa-remove"></i></a>
                       </div>
                     );
@@ -253,7 +305,7 @@ module.exports = React.createClass({
               <label htmlFor="search" className="col-sm-3 control-label">Add Apps:</label>
               <div className="col-sm-9">
                 <div className="input-group search-box">
-                  <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} />
+                  <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} defaultValue={this.state.term} />
                   <span className="input-group-addon">
                     <i className="fa fa-search"></i>
                   </span>

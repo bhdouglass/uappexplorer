@@ -8,7 +8,12 @@ function setup(app, success, error, isAuthenticated) {
       query.user = req.query.user;
     }
 
-    db.List.find(query, function(err, lists) {
+    var find = db.List.find(query);
+    if (req.query.sort) {
+      find.sort(req.query.sort);
+    }
+
+    find.exec(function(err, lists) {
       if (err) {
        error(res, err);
       }

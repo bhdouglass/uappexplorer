@@ -61,7 +61,7 @@ service, regardless of the number of donations.
         </Modal.Body>
 
         <Modal.Footer>
-          <button className="btn btn-info" onClick={this.props.onHide}>Thank you!</button>
+          <a className="btn btn-info" onClick={this.props.onHide}>Thank you!</a>
         </Modal.Footer>
       </Modal>
     );

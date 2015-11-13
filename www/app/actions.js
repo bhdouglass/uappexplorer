@@ -160,5 +160,20 @@ module.exports = {
       tree.set('savingSettings', false);
       tree.set(['auth', 'has_caxton'], !!settings.caxton);
     });
-  }
+  },
+
+  createUserList: function(list) {
+    return api.createUserList(list);
+    //TODO catch errors
+  },
+
+  updateUserList: function(id, list) {
+    return api.updateUserList(id, list);
+    //TODO catch errors
+  },
+
+  deleteUserList: function(id) {
+    return api.deleteUserList(id);
+    //TODO catch errors
+  },
 };

@@ -44,14 +44,32 @@ module.exports = {
     });
   },
 
-  getUserLists: function(user_id) {
-    return axios.get('/api/lists', {params: {user: user_id}}).then(function(res) {
+  saveCaxton: function(caxton_token) {
+    return axios.post('/auth/caxton/' + caxton_token).then(function(res) {
       return res.data.data;
     });
   },
 
-  saveCaxton: function(caxton_token) {
-    return axios.post('/auth/caxton/' + caxton_token).then(function(res) {
+  getUserLists: function(user_id) {
+    return axios.get('/api/lists', {params: {user: user_id, sort: 'name'}}).then(function(res) {
+      return res.data.data;
+    });
+  },
+
+  createUserList: function(list) {
+    return axios.post('/api/lists', list).then(function(res) {
+      return res.data.data;
+    });
+  },
+
+  updateUserList: function(id, list) {
+    return axios.put('/api/lists/' + id, list).then(function(res) {
+      return res.data.data;
+    });
+  },
+
+  deleteUserList: function(id) {
+    return axios.delete('/api/lists/' + id).then(function(res) {
       return res.data.data;
     });
   },

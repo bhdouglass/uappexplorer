@@ -5,6 +5,7 @@ var Link = require('react-router').Link;
 var utils = require('../utils');
 var actions = require('../actions');
 var ListEdit = require('./modals/listEdit');
+var ListDelete = require('./modals/listDelete');
 
 module.exports = React.createClass({
   displayName: 'Me',
@@ -22,6 +23,7 @@ module.exports = React.createClass({
     return {
       caxton: '',
       edit: false,
+      delet: false,
       current_list: null,
     };
   },
@@ -50,8 +52,10 @@ module.exports = React.createClass({
   },
 
   removeList: function(list) {
-    console.log(list.name);
-    //TODO
+    this.setState({
+      delet: true,
+      current_list: list,
+    });
   },
 
   newList: function() {
@@ -68,8 +72,15 @@ module.exports = React.createClass({
     });
   },
 
-  close: function() {
-    this.setState({edit: false});
+  close: function(refresh) {
+    this.setState({
+      edit: false,
+      delet: false,
+    });
+
+    if (refresh) {
+      actions.getUserLists();
+    }
   },
 
   renderMain: function() {
@@ -204,6 +215,7 @@ module.exports = React.createClass({
         }, this)}
 
         <ListEdit show={this.state.edit} onHide={this.close} list={this.state.current_list} />
+        <ListDelete show={this.state.delet} onHide={this.close} list={this.state.current_list} />
       </div>
     );
   },

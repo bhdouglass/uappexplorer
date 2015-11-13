@@ -141,7 +141,7 @@ information about the official Ubuntu Touch appstore.
         </Modal.Body>
 
         <Modal.Footer>
-          <button className="btn btn-info" onClick={this.props.onHide}>Close</button>
+          <a className="btn btn-info" onClick={this.props.onHide}>Close</a>
         </Modal.Footer>
       </Modal>
     );
