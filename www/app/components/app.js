@@ -34,7 +34,6 @@ module.exports = React.createClass({
 
   componentWillUpdate: function(nextProps) {
     if (this.props.params.name != nextProps.params.name) {
-      console.log('update');
       actions.getApp(nextProps.params.name);
       actions.getReviews(nextProps.params.name, {limit: 9});
     }

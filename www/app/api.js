@@ -56,6 +56,12 @@ module.exports = {
     });
   },
 
+  getUserList: function(id) {
+    return axios.get('/api/lists/' + id).then(function(res) {
+      return res.data.data;
+    });
+  },
+
   createUserList: function(list) {
     return axios.post('/api/lists', list).then(function(res) {
       return res.data.data;

@@ -24,7 +24,7 @@ module.exports = React.createClass({
     var price = utils.price(this.props.app.prices);
     var cls = 'label label-material-green';
     if (utils.isFree(this.props.app.prices)) {
-      cls = 'label label-material-blue';
+      cls = 'label label-material-deep-orange';
     }
 
     return (

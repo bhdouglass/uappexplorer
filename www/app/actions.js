@@ -138,6 +138,15 @@ module.exports = {
     window.location.href = '/auth/logout';
   },
 
+  saveSettings: function(settings) {
+    tree.set('savingSettings', true);
+
+    api.saveCaxton(settings.caxton).then(function() {
+      tree.set('savingSettings', false);
+      tree.set(['auth', 'has_caxton'], !!settings.caxton);
+    });
+  },
+
   getUserLists: function() {
     tree.set('userLists', {
       loaded: false,
@@ -153,13 +162,13 @@ module.exports = {
     //TODO catch errors
   },
 
-  saveSettings: function(settings) {
-    tree.set('savingSettings', true);
-
-    api.saveCaxton(settings.caxton).then(function() {
-      tree.set('savingSettings', false);
-      tree.set(['auth', 'has_caxton'], !!settings.caxton);
+  getUserList: function(id) {
+    tree.set('loading', true);
+    api.getUserList(id).then(function(list) {
+      tree.set('userList', list);
+      tree.set('loading', false);
     });
+    //TODO catch errors
   },
 
   createUserList: function(list) {

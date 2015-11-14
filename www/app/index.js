@@ -7,6 +7,7 @@ var Index = require('./components/index');
 var Apps = require('./components/apps');
 var App = require('./components/app');
 var Me = require('./components/me');
+var List = require('./components/list');
 
 var bh = createBrowserHistory({
   queryKey: false
@@ -19,6 +20,7 @@ ReactDOM.render((
       <ReactRouter.Route path="/apps" component={Apps} />
       <ReactRouter.Route path="/app/:name" component={App} />
       <ReactRouter.Route path="/me" component={Me} />
+      <ReactRouter.Route path="/list/:id" component={List} />
     </ReactRouter.Route>
   </ReactRouter.Router>
 ), document.getElementById('main'));

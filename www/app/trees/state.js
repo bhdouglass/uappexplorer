@@ -29,4 +29,5 @@ module.exports = new Baobab({
     lists: [],
   },
   savingSettings: false,
+  userList: {},
 });
