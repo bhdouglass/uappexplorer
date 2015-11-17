@@ -1,5 +1,6 @@
 var React = require('react');
-var tree = require('../trees/state');
+
+var tree = require('../state');
 var Main = require('./main');
 
 module.exports = React.createClass({

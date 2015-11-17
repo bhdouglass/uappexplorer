@@ -2,8 +2,9 @@ var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
 var mixins = require('baobab-react/mixins');
 var debounce = require('debounce');
-var info = require('../../info');
+
 var actions = require('../../actions');
+var info = require('../../info');
 var AppCell = require('../appinfo/appCell');
 
 module.exports = React.createClass({

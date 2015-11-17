@@ -1,4 +1,4 @@
-var tree = require('./trees/state');
+var tree = require('./state');
 var api = require('./api');
 
 module.exports = {

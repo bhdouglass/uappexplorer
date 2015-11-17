@@ -2,7 +2,7 @@ var React = require('react');
 var mixins = require('baobab-react/mixins');
 
 module.exports = React.createClass({
-  displayName: 'Nav',
+  displayName: 'Errors',
   mixins: [
     mixins.branch
   ],

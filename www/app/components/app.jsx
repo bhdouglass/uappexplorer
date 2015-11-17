@@ -2,13 +2,14 @@ var React = require('react');
 var moment = require('moment');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
+
 var actions = require('../actions');
 var utils = require('../utils');
 var Types = require('./appinfo/types');
 var Stars = require('./appinfo/stars');
 var Hearts = require('./appinfo/hearts');
 var AppCell = require('./appinfo/appCell');
-var Share = require('./share');
+var Share = require('./helpers/share');
 
 module.exports = React.createClass({
   displayName: 'App',

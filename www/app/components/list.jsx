@@ -1,8 +1,9 @@
 var React = require('react');
 var mixins = require('baobab-react/mixins');
+
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
-var Share = require('./share');
+var Share = require('./helpers/share');
 
 module.exports = React.createClass({
   displayName: 'List',

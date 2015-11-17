@@ -23,9 +23,9 @@ var source = require('vinyl-source-stream');
 //var buffer = require('vinyl-buffer');
 
 var paths = {
-  main_js: 'www/app/index.js',
-  front_js: ['www/app/**/*.js'],
-  lint: ['www/app/**/*.js'],
+  main_js: 'www/app/index.jsx',
+  front_js: ['www/app/**/*.js', 'www/app/**/*.jsx'],
+  lint: ['www/app/**/*.js', 'www/app/**/*.jsx'],
   back_js: ['gulpfile.js', 'src/**/*.js'],
   back_extra: ['package.json', 'npm-shrinkwrap.json', 'src/**/*.json', '.openshift/**/*'],
   imgs: 'www/img/*',

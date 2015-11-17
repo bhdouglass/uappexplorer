@@ -1,10 +1,11 @@
 var React = require('react');
 var Router = require('react-router');
 var mixins = require('baobab-react/mixins');
+
 var actions = require('../actions');
-var AppList = require('./appinfo/appList');
-var Pagination = require('./pagination');
 var info = require('../info');
+var AppList = require('./appinfo/appList');
+var Pagination = require('./helpers/pagination');
 
 var DEFAULT_ARCH = 'any';
 var DEFAULT_CATEGORY = 'all';

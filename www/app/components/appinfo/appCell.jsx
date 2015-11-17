@@ -1,5 +1,6 @@
 var React = require('react');
 var Link = require('react-router').Link;
+
 var utils = require('../../utils');
 var Types = require('./types');
 var Stars = require('./stars');

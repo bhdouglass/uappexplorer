@@ -2,6 +2,7 @@ window.React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var createBrowserHistory = require('history/lib/createBrowserHistory');
+
 var Root = require('./components/root');
 var Index = require('./components/index');
 var Apps = require('./components/apps');

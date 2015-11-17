@@ -2,6 +2,7 @@ var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Slider = require('react-slick');
+
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
 

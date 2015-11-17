@@ -5,9 +5,10 @@ var debounce = require('debounce');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
-var FAQ = require('./modals/faq');
-var Donate = require('./modals/donate');
-var actions = require('../actions');
+
+var actions = require('../../actions');
+var FAQ = require('../modals/faq');
+var Donate = require('../modals/donate');
 
 module.exports = React.createClass({
   displayName: 'Nav',

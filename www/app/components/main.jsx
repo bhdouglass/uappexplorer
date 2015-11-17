@@ -2,10 +2,11 @@ var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var cookie = require('cookie-cutter');
-var actions = require('../actions');
-var Nav = require('./nav');
-var Errors = require('./errors');
 var Modal = require('react-bootstrap/lib/Modal');
+
+var actions = require('../actions');
+var Nav = require('./helpers/nav');
+var Errors = require('./helpers/errors');
 var FAQ = require('./modals/faq');
 
 module.exports = React.createClass({

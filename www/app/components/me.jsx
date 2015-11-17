@@ -2,8 +2,9 @@ var React = require('react');
 var Router = require('react-router');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
-var utils = require('../utils');
+
 var actions = require('../actions');
+var utils = require('../utils');
 var ListEdit = require('./modals/listEdit');
 var ListDelete = require('./modals/listDelete');
 

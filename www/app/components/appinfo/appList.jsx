@@ -1,4 +1,5 @@
 var React = require('react');
+
 var AppCell = require('./appCell');
 
 module.exports = React.createClass({

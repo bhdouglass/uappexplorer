@@ -1,5 +1,6 @@
 var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
+
 var actions = require('../../actions');
 
 module.exports = React.createClass({
