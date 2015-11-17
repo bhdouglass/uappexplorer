@@ -7,6 +7,8 @@ module.exports = React.createClass({
     apps: React.PropTypes.array.isRequired,
     popularity: React.PropTypes.boolean,
     view: React.PropTypes.string.isRequired,
+    editable: React.PropTypes.boolean,
+    onRemoveClick: React.PropTypes.function,
   },
 
   renderAppCell: function(app, index) {
@@ -14,7 +16,7 @@ module.exports = React.createClass({
     if (this.props.view == 'list') {
       cell.push(
         <div className="list-view col-sm-12">
-          <AppCell app={app} description={true} popularity={this.props.popularity} />
+          <AppCell app={app} description={true} popularity={this.props.popularity} editable={this.props.editable} onRemoveClick={this.props.onRemoveClick} />
         </div>
       );
 
@@ -35,7 +37,7 @@ module.exports = React.createClass({
     else {
       cell.push(
         <div className="col-md-4 col-sm-6 col-xs-6 grid-view">
-          <AppCell app={app} description={false} popularity={this.props.popularity} />
+          <AppCell app={app} description={false} popularity={this.props.popularity} editable={this.props.editable} onRemoveClick={this.props.onRemoveClick} />
         </div>
       );
 

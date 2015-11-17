@@ -12,6 +12,17 @@ module.exports = React.createClass({
     popularity: React.PropTypes.boolean,
     description: React.PropTypes.boolean,
     onClick: React.PropTypes.function,
+    editable: React.PropTypes.boolean,
+    onRemoveClick: React.PropTypes.function,
+  },
+
+  handleRemoveClick: function(app, event) {
+    if (this.props.editable && this.props.onRemoveClick) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      this.props.onRemoveClick(app);
+    }
   },
 
   handleClick: function(event) {
@@ -44,6 +55,15 @@ module.exports = React.createClass({
   render: function() {
     var url = '/app/' + this.props.app.name;
 
+    var remove = '';
+    if (this.props.editable && this.props.onRemoveClick) {
+      remove = (
+        <span onClick={this.handleRemoveClick.bind(this, this.props.app)} className="clickable top-right" title="Remove this app from your list">
+          <i className="fa fa-close"></i>
+        </span>
+      );
+    }
+
     return (
       <div className="list-group app-view">
         <Link className="list-group-item clickable" to={url} title={this.props.app.tagline} onClick={this.handleClick}>
@@ -69,6 +89,7 @@ module.exports = React.createClass({
             </p>
 
             {this.renderDescription()}
+            {remove}
           </div>
         </Link>
       </div>

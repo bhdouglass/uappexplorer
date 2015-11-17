@@ -164,7 +164,7 @@ module.exports = {
 
   getUserList: function(id) {
     tree.set('loading', true);
-    api.getUserList(id).then(function(list) {
+    return api.getUserList(id).then(function(list) {
       tree.set('userList', list);
       tree.set('loading', false);
     });
@@ -185,4 +185,26 @@ module.exports = {
     return api.deleteUserList(id);
     //TODO catch errors
   },
+
+  removeUserListApp: function(list, name) {
+    var packages = [];
+    var full_packages = [];
+    for (var i = 0; i < list.packages.length; i++) {
+      if (list.packages[i] != name) {
+        packages.push(list.packages[i]);
+      }
+
+      if (list.full_packages[i].name != name) {
+        full_packages.push(list.full_packages[i]);
+        console.log();
+      }
+    }
+
+    var newList = JSON.parse(JSON.stringify(list));
+    newList.packages = packages;
+    newList.full_packages = full_packages;
+
+    tree.set('userList', newList);
+    this.updateUserList(list._id, newList);
+  }
 };

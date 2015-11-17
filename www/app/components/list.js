@@ -10,24 +10,41 @@ module.exports = React.createClass({
     mixins.branch,
   ],
   cursors: {
+    auth: ['auth'],
     userList: ['userList'],
     loading: ['loading'],
+  },
+
+  getInitialState: function() {
+    return {
+      view: 'grid',
+      editable: false,
+    };
+  },
+
+  checkEdit: function(state) {
+    var editable = state.auth.loggedin && (state.auth.user._id == state.userList.user);
+    if (editable !== state.editable) {
+      this.setState({editable: editable});
+    }
   },
 
   componentWillMount: function() {
     actions.getUserList(this.props.params.id);
   },
 
-  componentWillUpdate: function(nextProps) {
+  componentWillUpdate: function(nextProps, nextState) {
     if (this.props.params.id != nextProps.params.id) {
       actions.getUserList(nextProps.params.id);
     }
+
+    this.checkEdit(nextState);
   },
 
-  getInitialState: function() {
-    return {
-      view: 'grid',
-    };
+  onRemoveClick: function(app) {
+    if (this.state.editable) {
+      actions.removeUserListApp(this.state.userList, app.name);
+    }
   },
 
   changeView: function(view) {
@@ -52,9 +69,9 @@ module.exports = React.createClass({
     }
 
     var no_apps = '';
-    if (this.state.userList.packages) {
+    if (this.state.userList.packages.length === 0) {
       no_apps = (
-        <div class="row">
+        <div className="row">
           <h3 className="text-center">This list is empty!</h3>
         </div>
       );
@@ -92,11 +109,10 @@ module.exports = React.createClass({
           </div>
         </div>
 
-        <AppList apps={this.state.userList.full_packages} view={this.state.view} />
+        <AppList apps={this.state.userList.full_packages} view={this.state.view} editable={this.state.editable} onRemoveClick={this.onRemoveClick} />
         {no_apps}
       </div>
     );
-    //TODO <a ng-if="editable" ng-click="removeApp(app.name)" className="clickable top-right" title="{{'Remove this app from your list'|translate}}"><i className="fa fa-close"></i></a>
   },
 
   render: function() {
