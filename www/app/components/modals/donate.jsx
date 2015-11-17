@@ -1,8 +1,12 @@
 var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 module.exports = React.createClass({
   displayName: 'Donate',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     show: React.PropTypes.bool.isRequired,
     onHide: React.PropTypes.func.isRequired,

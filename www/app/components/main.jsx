@@ -3,6 +3,7 @@ var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var cookie = require('cookie-cutter');
 var Modal = require('react-bootstrap/lib/Modal');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../actions');
 var Nav = require('./helpers/nav');
@@ -12,7 +13,8 @@ var FAQ = require('./modals/faq');
 module.exports = React.createClass({
   displayName: 'Main',
   mixins: [
-    mixins.root
+    mixins.root,
+    PureRenderMixin,
   ],
 
   props: {

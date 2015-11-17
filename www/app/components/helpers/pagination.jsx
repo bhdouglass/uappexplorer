@@ -1,8 +1,12 @@
 var React = require('react');
 var Link = require('react-router').Link;
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 module.exports = React.createClass({
   displayName: 'Pagination',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     total: React.PropTypes.number.isRequired,
     active: React.PropTypes.number.isRequired,

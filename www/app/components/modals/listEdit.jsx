@@ -2,6 +2,7 @@ var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
 var mixins = require('baobab-react/mixins');
 var debounce = require('debounce');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../../actions');
 var info = require('../../info');
@@ -11,6 +12,7 @@ module.exports = React.createClass({
   displayName: 'ListEdit',
   mixins: [
     mixins.branch,
+    PureRenderMixin,
   ],
   props: {
     show: React.PropTypes.bool.isRequired,

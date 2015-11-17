@@ -1,4 +1,5 @@
 var React = require('react');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var types = {
   application: 'App',
@@ -9,6 +10,9 @@ var types = {
 
 module.exports = React.createClass({
   displayName: 'Types',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     types: React.PropTypes.array.isRequired,
   },

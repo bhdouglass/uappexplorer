@@ -1,5 +1,6 @@
 var React = require('react');
 var Link = require('react-router').Link;
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var utils = require('../../utils');
 var Types = require('./types');
@@ -8,6 +9,9 @@ var Hearts = require('./hearts');
 
 module.exports = React.createClass({
   displayName: 'AppCell',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     app: React.PropTypes.object.isRequired,
     popularity: React.PropTypes.boolean,

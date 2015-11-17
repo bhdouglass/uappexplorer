@@ -1,7 +1,11 @@
 var React = require('react');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 module.exports = React.createClass({
   displayName: 'Share',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     url: React.PropTypes.string.isRequired,
     title: React.PropTypes.string.isRequired,

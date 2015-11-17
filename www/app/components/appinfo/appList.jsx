@@ -1,9 +1,13 @@
 var React = require('react');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var AppCell = require('./appCell');
 
 module.exports = React.createClass({
   displayName: 'AppList',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     apps: React.PropTypes.array.isRequired,
     popularity: React.PropTypes.boolean,

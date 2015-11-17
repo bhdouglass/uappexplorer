@@ -1,7 +1,11 @@
 var React = require('react');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 module.exports = React.createClass({
   displayName: 'Hearts',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     hearts: React.PropTypes.number,
     popularity: React.PropTypes.number,

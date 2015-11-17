@@ -2,6 +2,7 @@ var React = require('react');
 var moment = require('moment');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../actions');
 var utils = require('../utils');
@@ -15,6 +16,7 @@ module.exports = React.createClass({
   displayName: 'App',
   mixins: [
     mixins.branch,
+    PureRenderMixin,
   ],
   cursors: {
     auth: ['auth'],

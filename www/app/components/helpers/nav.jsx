@@ -5,6 +5,7 @@ var debounce = require('debounce');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../../actions');
 var FAQ = require('../modals/faq');
@@ -15,6 +16,7 @@ module.exports = React.createClass({
   mixins: [
     mixins.branch,
     Router.History,
+    PureRenderMixin,
   ],
   cursors: {
     auth: ['auth'],

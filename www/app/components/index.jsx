@@ -2,6 +2,7 @@ var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Slider = require('react-slick');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
@@ -9,7 +10,8 @@ var AppList = require('./appinfo/appList');
 module.exports = React.createClass({
   displayName: 'Index',
   mixins: [
-    mixins.branch
+    mixins.branch,
+    PureRenderMixin,
   ],
   cursors: {
     counts: ['counts'],

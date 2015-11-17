@@ -1,10 +1,14 @@
 var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../../actions');
 
 module.exports = React.createClass({
   displayName: 'ListDelete',
+  mixins: [
+    PureRenderMixin
+  ],
   props: {
     show: React.PropTypes.bool.isRequired,
     onHide: React.PropTypes.func.isRequired,

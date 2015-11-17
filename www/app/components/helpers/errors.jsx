@@ -1,10 +1,12 @@
 var React = require('react');
 var mixins = require('baobab-react/mixins');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 module.exports = React.createClass({
   displayName: 'Errors',
   mixins: [
-    mixins.branch
+    mixins.branch,
+    PureRenderMixin,
   ],
   cursors: {
     errors: [],

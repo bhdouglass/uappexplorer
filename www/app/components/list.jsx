@@ -1,5 +1,6 @@
 var React = require('react');
 var mixins = require('baobab-react/mixins');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
@@ -9,6 +10,7 @@ module.exports = React.createClass({
   displayName: 'List',
   mixins: [
     mixins.branch,
+    PureRenderMixin,
   ],
   cursors: {
     auth: ['auth'],
