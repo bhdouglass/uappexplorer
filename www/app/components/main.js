@@ -26,7 +26,11 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
-    actions.login();
+    actions.login().then(function(auth) {
+      if (auth.loggedin) {
+        actions.getUserLists();
+      }
+    });
 
     var show = cookie.get('disclaimer');
     if (!show) {

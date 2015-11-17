@@ -16,9 +16,11 @@ module.exports = React.createClass({
     mixins.branch,
   ],
   cursors: {
+    auth: ['auth'],
     app: ['app'],
     loading: ['loading'],
     reviews: ['reviews'],
+    userLists: ['userLists'],
   },
 
   getInitialState: function() {
@@ -135,43 +137,94 @@ module.exports = React.createClass({
     return download;
   },
 
+  changeList: function(event) {
+    for (var i = 0; i < this.state.userLists.lists.length; i++) {
+      if (this.state.userLists.lists[i]._id == event.target.value) {
+        actions.addUserListApp(this.state.userLists.lists[i], this.state.app.name).then(function() {
+          actions.getUserLists(); //TODO find a better way to refresh the lists, probably don't need to do a network request
+        });
+
+        break;
+      }
+    }
+  },
+
   renderLists: function() {
-    //TODO
-    /*
-    <div ng-show="loggedin">
-      <div className="list-group-item">
-        <div className="row-action-primary">
-            <div className="action-icon ubuntu-shape">
-              <i className="fa fa-list-ul" ng-style="strToColor(app.title, 'background-color')"></i>
-            </div>
-        </div>
+    var component = '';
+    if (this.state.auth.loggedin && this.state.userLists.loaded) { //TODO checking the loaded flag makes this element flicker when being updated
+      var existing_ids = [];
+      var existing = [];
+      for (var i = 0; i < this.state.userLists.lists.length; i++) {
+        if (this.state.userLists.lists[i].packages.indexOf(this.state.app.name) > -1) {
+          existing_ids.push(this.state.userLists.lists[i]._id);
+          existing.push(this.state.userLists.lists[i]);
+        }
+      }
 
-        <div className="row-content">
-          <div className="list-group-item-text">
-            <div ng-if="lists.length > 0">
-              <span translate>Add to list:</span>
-              <select className="form-control" ng-options="l._id as l.name for l in lists" ng-model="list" ng-change="addToList(list)">
-                <option value="" translate>- Choose a list -</option>
-              </select>
-            </div>
-
-            <div ng-if="lists.length == 0 && appLists.length == 0">
-              <a href="/me" translate>No lists, create one!</a>
-            </div>
-
-            <br/>
-            <p ng-if="appLists.length > 0">
-              <span translate>This app is on these lists:</span>
-              <a className="label label-success list-label" ng-repeat="list in appLists" ng-href="/list/{{list._id}}" ng-bind="list.name"></a>
-            </p>
+      var lists = '';
+      if (this.state.userLists.lists.length === 0) {
+        lists = (
+          <div>
+            <Link to="/me">No lists, create one!</Link>
           </div>
-        </div>
+        );
+      }
+      else {
+        lists = (
+          <div>
+            Add to list:
+            <select className="form-control" onChange={this.changeList}>
+              <option value="">- Choose a list -</option>
+              {this.state.userLists.lists.map(function(list) {
+                if (existing_ids.indexOf(list._id) == -1) {
+                  return (
+                    <option value={list._id} key={list._id}>{list.name}</option>
+                  );
+                }
+              }, this)}
+            </select>
+          </div>
+        );
+      }
 
-      </div>
-      <div className="list-group-separator"></div>
-    </div>
-    </div>
-    */
+      var already_on = '';
+      if (existing.length > 0) {
+        already_on = (
+          <div>
+            This app is on these lists:
+            {existing.map(function(list) {
+              var url = '/list/' + list._id;
+              return <Link className="label label-success list-label" to={url} key={list._id}>{list.name}</Link>;
+            }, this)}
+          </div>
+        );
+      }
+
+      component = (
+        <div ng-show="loggedin">
+          <div className="list-group-item">
+            <div className="row-action-primary">
+                <div className="action-icon ubuntu-shape">
+                  <i className="fa fa-list-ul" style={utils.strToColor(this.state.app.title, 'backgroundColor')}></i>
+                </div>
+            </div>
+
+            <div className="row-content">
+              <div className="list-group-item-text">
+                {lists}
+
+                <br/>
+                {already_on}
+              </div>
+            </div>
+
+          </div>
+          <div className="list-group-separator"></div>
+        </div>
+      );
+    }
+
+    return component;
   },
 
   changeTab: function(tab) {

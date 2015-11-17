@@ -205,6 +205,13 @@ module.exports = {
     newList.full_packages = full_packages;
 
     tree.set('userList', newList);
-    this.updateUserList(list._id, newList);
+    return this.updateUserList(list._id, newList);
+  },
+
+  addUserListApp: function(list, name) {
+    var newList = JSON.parse(JSON.stringify(list));
+    newList.packages.push(name);
+
+    return this.updateUserList(list._id, newList);
   }
 };
