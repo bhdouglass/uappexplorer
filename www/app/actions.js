@@ -1,7 +1,8 @@
 var tree = require('./state');
 var api = require('./api');
 
-module.exports = {
+var actions = {};
+actions = {
   getCounts: function() {
     if (!tree.get('counts').loaded) {
       tree.set('loading', true);
@@ -9,8 +10,9 @@ module.exports = {
         data.loaded = true;
         tree.set('counts', data);
         tree.set('loading', false);
+      }).catch(function() {
+        tree.set('loading', false);
       });
-      //TODO catch errors
     }
   },
 
@@ -22,30 +24,31 @@ module.exports = {
           apps: data,
         });
       });
-      //TODO catch errors
     }
   },
 
   getTopApps: function() {
-    //TODO caching
-
-    tree.set('loading', true);
-    api.getApps({sort: '-points', limit: 12}).then(function(data) {
-      tree.set('top', data.apps);
-      tree.set('loading', false);
-    });
-    //TODO catch errors
+    if (tree.get('top').length === 0) {
+      tree.set('loading', true);
+      api.getApps({sort: '-points', limit: 12}).then(function(data) {
+        tree.set('top', data.apps);
+        tree.set('loading', false);
+      }).catch(function() {
+        tree.set('loading', false);
+      });
+    }
   },
 
   getNewApps: function() {
-    //TODO caching
-
-    tree.set('loading', true);
-    api.getApps({sort: '-published_date', limit: 6}).then(function(data) {
-      tree.set('new', data.apps);
-      tree.set('loading', false);
-    });
-    //TODO catch errors
+    if (tree.get('new').length === 0) {
+      tree.set('loading', true);
+      api.getApps({sort: '-published_date', limit: 6}).then(function(data) {
+        tree.set('new', data.apps);
+        tree.set('loading', false);
+      }).catch(function() {
+        tree.set('loading', false);
+      });
+    }
   },
 
   getApps: function(paging) {
@@ -53,11 +56,13 @@ module.exports = {
 
     tree.set('loading', true);
     return api.getApps(paging).then(function(data) {
-      tree.select('apps').set(JSON.stringify(paging), data);
+      tree.set(['apps', JSON.stringify(paging)], data);
       tree.set('loading', false);
       return data;
+    }).catch(function() {
+      tree.set('loading', false);
+      actions.createAlert('Could not download app list, click to retry', 'error', actions.getApps.bind(actions, paging));
     });
-    //TODO catch errors
   },
 
   getFrameworks: function() {
@@ -66,22 +71,31 @@ module.exports = {
         data.unshift('All');
         tree.set('frameworks', data);
       });
-      //TODO catch errors
     }
   },
 
   getApp: function(name) {
     tree.set('loading', true);
     tree.set('app', {});
+
     api.getApp(name).then(function(data) {
       tree.set('loading', false);
       tree.set('app', data);
+    }).catch(function(err) {
+      tree.set('loading', false);
+      if (err.status == 404) {
+        actions.createAlert('Could not find app', 'error', function() {
+          window.location.pathname = '/apps';
+        });
+      }
+      else {
+        actions.createAlert('Could not download app data, click to retry', 'error', actions.getApp.bind(actions, name));
+      }
     });
-    //TODO catch errors
   },
 
   getReviews: function(name, params) {
-    if (name != tree.select('reviews').get().name) {
+    if (name != tree.get('reviews').name) {
       tree.set('reviews', {loaded: false});
     }
 
@@ -89,8 +103,8 @@ module.exports = {
       data.loaded = true;
       data.params = params;
 
-      if (data.name == tree.select('reviews').get().name) {
-        var reviews = tree.select('reviews').get();
+      if (data.name == tree.get('reviews').name) {
+        var reviews = tree.get('reviews');
 
         tree.set('reviews', {
           reviews: reviews.reviews.concat(data.reviews),
@@ -105,7 +119,6 @@ module.exports = {
         tree.set('reviews', data);
       }
     });
-    //TODO catch errors
   },
 
   login: function() {
@@ -144,15 +157,17 @@ module.exports = {
     api.saveCaxton(settings.caxton).then(function() {
       tree.set('savingSettings', false);
       tree.set(['auth', 'has_caxton'], !!settings.caxton);
+    }).catch(function() {
+      actions.createAlert('Could not save your settings at this time, please try again later');
     });
-    //TODO catch errors
   },
 
   sendCaxton: function(url, message) {
     return api.sendCaxton(url, message).then(function() {
       return true;
     }).catch(function() {
-      return false; //TODO make this also an error message
+      actions.createAlert('Could not connect to Caxton at this time, please try again later', 'error');
+      return false;
     });
   },
 
@@ -167,8 +182,9 @@ module.exports = {
         loaded: true,
         lists: lists,
       });
+    }).catch(function() {
+      actions.createAlert('Could not load lists at this time, click to retry', 'error', actions.getUserLists.bind(actions));
     });
-    //TODO catch errors
   },
 
   getUserList: function(id) {
@@ -176,23 +192,28 @@ module.exports = {
     return api.getUserList(id).then(function(list) {
       tree.set('userList', list);
       tree.set('loading', false);
+    }).catch(function() {
+      tree.set('loading', false);
+      actions.createAlert('Could not find this list, it may not exist any more', 'error');
     });
-    //TODO catch errors
   },
 
   createUserList: function(list) {
-    return api.createUserList(list);
-    //TODO catch errors
+    return api.createUserList(list).catch(function() {
+      actions.createAlert('Could not create a new list at this time, please try again later', 'error');
+    });
   },
 
   updateUserList: function(id, list) {
-    return api.updateUserList(id, list);
-    //TODO catch errors
+    return api.updateUserList(id, list).catch(function() {
+      actions.createAlert('Could not update the list at this time, please try again later', 'error');
+    });
   },
 
   deleteUserList: function(id) {
-    return api.deleteUserList(id);
-    //TODO catch errors
+    return api.deleteUserList(id).catch(function() {
+      actions.createAlert('Could not delete the list at this time, please try again later', 'error');
+    });
   },
 
   removeUserListApp: function(list, name) {
@@ -213,14 +234,31 @@ module.exports = {
     newList.full_packages = full_packages;
 
     tree.set('userList', newList);
-    return this.updateUserList(list._id, newList);
+    return this.updateUserList(list._id, newList).catch(function() {
+      actions.createAlert('Could not remove the app from this list, please try again later', 'error');
+    });
   },
 
   addUserListApp: function(list, name) {
     var newList = JSON.parse(JSON.stringify(list));
     newList.packages.push(name);
 
-    return this.updateUserList(list._id, newList);
+    var newUserLists = [];
+    var userLists = tree.get('userLists');
+    for (var i = 0; i < userLists.lists.length; i++) {
+      if (newList._id == userLists.lists[i]._id) {
+        newUserLists.push(newList);
+      }
+      else {
+        newUserLists.push(userLists.lists[i]);
+      }
+    }
+
+    tree.set(['userLists', 'lists'], newUserLists);
+
+    return this.updateUserList(list._id, newList).catch(function() {
+      actions.createAlert('Could not add app to list at this time, please try again later', 'error');
+    });
   },
 
   createAlert: function(text, type, callback) {
@@ -243,3 +281,5 @@ module.exports = {
     tree.set(['modals', name], false);
   },
 };
+
+module.exports = actions;

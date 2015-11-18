@@ -143,9 +143,7 @@ module.exports = React.createClass({
   changeList: function(event) {
     for (var i = 0; i < this.state.userLists.lists.length; i++) {
       if (this.state.userLists.lists[i]._id == event.target.value) {
-        actions.addUserListApp(this.state.userLists.lists[i], this.state.app.name).then(function() {
-          actions.getUserLists(); //TODO find a better way to refresh the lists, probably don't need to do a network request
-        });
+        actions.addUserListApp(this.state.userLists.lists[i], this.state.app.name);
 
         break;
       }
@@ -154,7 +152,7 @@ module.exports = React.createClass({
 
   renderLists: function() {
     var component = '';
-    if (this.state.auth.loggedin && this.state.userLists.loaded) { //TODO checking the loaded flag makes this element flicker when being updated
+    if (this.state.auth.loggedin && this.state.userLists.loaded) {
       var existing_ids = [];
       var existing = [];
       for (var i = 0; i < this.state.userLists.lists.length; i++) {

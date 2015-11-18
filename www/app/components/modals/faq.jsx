@@ -2,6 +2,8 @@ var React = require('react');
 var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 
+var actions = require('../../actions');
+
 module.exports = React.createClass({
   displayName: 'FAQ',
   mixins: [
@@ -10,6 +12,11 @@ module.exports = React.createClass({
   props: {
     show: React.PropTypes.bool.isRequired,
     onHide: React.PropTypes.func.isRequired,
+  },
+
+  donate: function() {
+    this.props.onHide();
+    actions.openModal('donate');
   },
 
   render: function() {
@@ -134,7 +141,7 @@ information about the official Ubuntu Touch appstore.
               If you want to help translate, visit the Launchpad project.
             </a>
             <br/>
-            <a onClick={this.props.onHide} className="clickable">
+            <a onClick={this.donate} className="clickable">
               If you would like to contribute monetarily, there are multiple options for donating.
             </a>
             <br/>
@@ -149,6 +156,5 @@ information about the official Ubuntu Touch appstore.
         </Modal.Footer>
       </Modal>
     );
-    //TODO clicking donate button
   }
 });
