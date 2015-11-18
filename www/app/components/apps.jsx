@@ -364,6 +364,8 @@ module.exports = React.createClass({
       );
     }
 
+    var popularity = (this.state.sort == '-monthly_popularity' || this.state.sort == 'monthly_popularity');
+
     return (
       <div className="apps">
         <div className="app-search">
@@ -412,10 +414,9 @@ module.exports = React.createClass({
 
         {loading}
         {not_found}
-        <AppList apps={apps} view={this.state.view} />
+        <AppList apps={apps} view={this.state.view} popularity={popularity} />
         <Pagination active={this.state.page} total={pages} base={'/apps'} query={this.props.location.query} />
       </div>
     );
-    //TODO AppList.popularity
   }
 });
