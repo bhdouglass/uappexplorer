@@ -9,6 +9,11 @@ module.exports = new Baobab({
     login: false,
   },
 
+  location: {
+    previous: '/',
+    current: '/',
+  },
+
   counts: {
     applications: 0,
     webapps: 0,

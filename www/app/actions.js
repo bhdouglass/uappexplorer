@@ -280,6 +280,28 @@ actions = {
   closeModal: function(name) {
     tree.set(['modals', name], false);
   },
+
+  setLocation: function(location) {
+    var current = tree.get(['location', 'current']);
+
+    if (location.indexOf('/app/') === 0 && current.indexOf('/app/') === 0) {
+      //Don't log changes between apps, we always want to go back to the app list
+      tree.set(['location', 'current'], location);
+    }
+    else if (location.indexOf('/app/') === 0 && current.indexOf('/apps') == -1 && current.indexOf('/list') == -1) {
+      //Return to the app list if not already returning to the app list or a user list
+      tree.set('location', {
+        previous: '/apps',
+        current: location,
+      });
+    }
+    else {
+      tree.set('location', {
+        previous: current,
+        current: location,
+      });
+    }
+  }
 };
 
 module.exports = actions;

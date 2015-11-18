@@ -9,13 +9,18 @@ var Apps = require('./components/apps');
 var App = require('./components/app');
 var Me = require('./components/me');
 var List = require('./components/list');
+var actions = require('./actions');
 
-var bh = createBrowserHistory({
+var h = createBrowserHistory({
   queryKey: false
 });
 
+h.listen(function(location) {
+  actions.setLocation(location.pathname + location.search);
+});
+
 ReactDOM.render((
-  <ReactRouter.Router history={bh}>
+  <ReactRouter.Router history={h}>
     <ReactRouter.Route path="/" component={Root}>
       <ReactRouter.IndexRoute component={Index} />
       <ReactRouter.Route path="/apps" component={Apps} />

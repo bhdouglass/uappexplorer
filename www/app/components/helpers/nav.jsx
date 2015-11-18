@@ -22,6 +22,7 @@ module.exports = React.createClass({
     auth: ['auth'],
     loading: ['loading'],
     modals: ['modals'],
+    location: ['location'],
   },
 
   props: {
@@ -179,15 +180,14 @@ module.exports = React.createClass({
   },
 
   renderBackButton: function() {
-    var link = '/'; //TODO proper logic and see if react router history can handle this
     var cls = 'logo';
     if (this.state.loading) {
       cls = 'logo rotate';
     }
 
     var icon = '';
-    if (false) { //TODO
-      icon = <i className="fa fa-chevron-left"></i>;
+    if (window.location.pathname != '/') {
+      icon = <i className="fa fa-chevron-left back"></i>;
     }
 
     var brand = <span className="hidden-xs">uApp Explorer</span>;
@@ -202,7 +202,7 @@ module.exports = React.createClass({
 
     return (
       <span className="navbar-brand">
-        <Link to={link} className="link clickable">
+        <Link to={this.state.location.previous} className="link clickable">
           {icon}
           <img src="/img/logo.svg" className={cls} />
           {brand}
