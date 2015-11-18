@@ -81,7 +81,9 @@ and Canonical are registered trademarks of Canonical Ltd.
       <div>
         <Nav location={this.props.location} />
 
-        <Alerts />
+        <div className="container">
+          <Alerts />
+        </div>
 
         <div className="container main">
           <div className="row">

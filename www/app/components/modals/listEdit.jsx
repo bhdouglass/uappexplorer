@@ -7,6 +7,7 @@ var PureRenderMixin = require('react-addons-pure-render-mixin');
 var actions = require('../../actions');
 var info = require('../../info');
 var AppCell = require('../appinfo/appCell');
+var Alerts = require('../helpers/alerts');
 
 module.exports = React.createClass({
   displayName: 'ListEdit',
@@ -246,20 +247,6 @@ module.exports = React.createClass({
       );
     }
 
-    //TODO app fetch error
-    /*
-    <div ng-show="appsError" className="text-center text-danger">
-      Could not retrieve app list at this time, please try again later.
-    </div>
-    */
-
-    //TODO search error
-    /*
-    <div ng-show="searchError" className="text-center text-danger">
-      Could not retrieve search at this time, please try again later.
-    </div>
-    */
-
     return (
       <Modal show={this.props.show} onHide={this.onHide.bind(this, false)} backdrop={'static'}>
         <Modal.Header closeButton>
@@ -267,6 +254,8 @@ module.exports = React.createClass({
         </Modal.Header>
 
         <Modal.Body>
+          <Alerts />
+
           <form className="form-horizontal list-edit" role="form">
             <div className="form-group">
               <label htmlFor="name" className="col-sm-3 control-label">List Name:</label>

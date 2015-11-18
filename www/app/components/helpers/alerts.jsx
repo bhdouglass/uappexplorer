@@ -53,7 +53,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <div className="container">
+      <div>
         {component}
       </div>
     );
