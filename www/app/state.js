@@ -1,7 +1,14 @@
 var Baobab = require('baobab');
 
-//TODO organize this
 module.exports = new Baobab({
+  loading: false,
+  alert: null,
+  modals: {
+    faq: false,
+    donate: false,
+    login: false,
+  },
+
   counts: {
     applications: 0,
     webapps: 0,
@@ -9,31 +16,29 @@ module.exports = new Baobab({
     games: 0,
     loaded: false,
   },
+
   auth: {
     loggedin: false,
     user: null,
     authorization: null,
   },
-  loading: false,
+
   top: [],
   'new': [],
   apps: {},
   frameworks: [],
-  reviews: {},
   essentials: {
     loaded: false,
     apps: [],
   },
+
+  app: null,
+  reviews: {},
+
+  savingSettings: false,
+  userList: {},
   userLists: {
     loaded: false,
     lists: [],
   },
-  savingSettings: false,
-  userList: {},
-  alert: null,
-  modals: {
-    faq: false,
-    donate: false,
-    login: false,
-  }
 });
