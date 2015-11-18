@@ -1,14 +1,24 @@
 var React = require('react');
+var Router = require('react-router');
+var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+
+var actions = require('../../actions');
 
 module.exports = React.createClass({
   displayName: 'Share',
   mixins: [
-    PureRenderMixin
+    mixins.branch,
+    PureRenderMixin,
+    Router.History,
   ],
   props: {
     url: React.PropTypes.string.isRequired,
     title: React.PropTypes.string.isRequired,
+    caxtonUrl: React.PropTypes.string.isRequired,
+  },
+  cursors: {
+    auth: ['auth'],
   },
 
   getInitialState: function() {
@@ -22,7 +32,21 @@ module.exports = React.createClass({
   },
 
   caxton: function() {
-    //TODO
+    //TODO message if user not setup with caxton
+
+    if (this.state.auth.loggedin) {
+      var self = this;
+      actions.sendCaxton(this.props.caxtonUrl, this.props.title).then(function(sent) {
+        if (sent) {
+          self.setState({caxton_sent: true});
+        }
+      });
+    }
+    else {
+      actions.createAlert('Please login to send via Caxton', 'info', function() {
+        //TODO open login modal (put the modal opening in the state, reduce duplicate components)
+      });
+    }
   },
 
   render: function() {

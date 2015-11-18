@@ -628,6 +628,7 @@ module.exports = React.createClass({
       var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
       var share_cls = utils.strToColor(this.state.app.name, 'backgroundColor');
       var url = window.location.protocol + '://' + window.location.host + '/app/' + this.state.app.name;
+      var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
 
       component = (
         <div className="swipe-container">
@@ -684,7 +685,7 @@ module.exports = React.createClass({
                   </div>
 
                   <div className="row-content">
-                    <Share url={url} title={this.state.app.title} />
+                    <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} />
                   </div>
 
                 </div>

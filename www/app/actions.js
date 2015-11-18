@@ -145,6 +145,15 @@ module.exports = {
       tree.set('savingSettings', false);
       tree.set(['auth', 'has_caxton'], !!settings.caxton);
     });
+    //TODO catch errors
+  },
+
+  sendCaxton: function(url, message) {
+    return api.sendCaxton(url, message).then(function() {
+      return true;
+    }).catch(function() {
+      return false; //TODO make this also an error message
+    });
   },
 
   getUserLists: function() {
@@ -196,7 +205,6 @@ module.exports = {
 
       if (list.full_packages[i].name != name) {
         full_packages.push(list.full_packages[i]);
-        console.log();
       }
     }
 
@@ -213,5 +221,17 @@ module.exports = {
     newList.packages.push(name);
 
     return this.updateUserList(list._id, newList);
-  }
+  },
+
+  createAlert: function(text, type, callback) {
+    tree.set('alert', {
+      text: text,
+      type: type ? type : 'error',
+      callback: callback ? callback : null,
+    });
+  },
+
+  clearAlert: function() {
+    tree.set('alert', null);
+  },
 };

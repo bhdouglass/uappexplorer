@@ -7,7 +7,7 @@ var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../actions');
 var Nav = require('./helpers/nav');
-var Errors = require('./helpers/errors');
+var Alerts = require('./helpers/alerts');
 var FAQ = require('./modals/faq');
 
 module.exports = React.createClass({
@@ -82,7 +82,7 @@ and Canonical are registered trademarks of Canonical Ltd.
       <div>
         <Nav location={this.props.location} />
 
-        <Errors />
+        <Alerts />
 
         <div className="container main">
           <div className="row">

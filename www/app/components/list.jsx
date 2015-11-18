@@ -107,7 +107,7 @@ module.exports = React.createClass({
             </div>
 
             <div className="text-center">
-              <Share url={url} title={this.state.userList.name} />
+              <Share url={url} title={this.state.userList.name} caxtonUrl={url} />
             </div>
           </div>
         </div>
