@@ -31,4 +31,9 @@ module.exports = new Baobab({
   savingSettings: false,
   userList: {},
   alert: null,
+  modals: {
+    faq: false,
+    donate: false,
+    login: false,
+  }
 });

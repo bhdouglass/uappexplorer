@@ -4,6 +4,7 @@ var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var actions = require('../../actions');
+var QR = require('../modals/qr');
 
 module.exports = React.createClass({
   displayName: 'Share',
@@ -24,27 +25,37 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       caxton_sent: false,
+      qr: false,
     };
   },
 
-  qrCode: function() {
-    //TODO
+  open: function() {
+    this.setState({qr: true});
+  },
+
+  close: function() {
+    this.setState({qr: false});
   },
 
   caxton: function() {
-    //TODO message if user not setup with caxton
-
     if (this.state.auth.loggedin) {
-      var self = this;
-      actions.sendCaxton(this.props.caxtonUrl, this.props.title).then(function(sent) {
-        if (sent) {
-          self.setState({caxton_sent: true});
-        }
-      });
+      if (this.state.auth.has_caxton) {
+        var self = this;
+        actions.sendCaxton(this.props.caxtonUrl, this.props.title).then(function(sent) {
+          if (sent) {
+            self.setState({caxton_sent: true});
+          }
+        });
+      }
+      else {
+        actions.createAlert('You do not have your account connected to Caxton, click to go to your settings', 'info', function() {
+          this.history.pushState(null, '/me');
+        });
+      }
     }
     else {
       actions.createAlert('Please login to send via Caxton', 'info', function() {
-        //TODO open login modal (put the modal opening in the state, reduce duplicate components)
+        actions.openModal('login');
       });
     }
   },
@@ -92,11 +103,13 @@ module.exports = React.createClass({
           </a>
         </div>
         <div className="col-sm-2 col-xs-4">
-          <a className="text-material-light-green qr-button clickable" title="QR Code" onClick={this.qrCode}>
+          <a className="text-material-light-green qr-button clickable" title="QR Code" onClick={this.open}>
             <i className="fa fa-square fa-3x"></i>
             <i className="fa fa-qrcode fa-2x fa-inverse"></i>
           </a>
         </div>
+
+        <QR show={this.state.qr} onHide={this.close} value={this.props.url} title={this.props.title} />
       </div>
     );
   }

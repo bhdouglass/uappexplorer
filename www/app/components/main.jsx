@@ -8,7 +8,6 @@ var PureRenderMixin = require('react-addons-pure-render-mixin');
 var actions = require('../actions');
 var Nav = require('./helpers/nav');
 var Alerts = require('./helpers/alerts');
-var FAQ = require('./modals/faq');
 
 module.exports = React.createClass({
   displayName: 'Main',
@@ -24,7 +23,6 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       disclaimer: false,
-      faq: false,
     };
   },
 
@@ -45,20 +43,21 @@ module.exports = React.createClass({
   },
 
   open: function(modal) {
-    var state = {};
-    state[modal] = true;
-    this.setState(state);
+    if (modal == 'faq') {
+      actions.openModal('faq');
+    }
+    else {
+      this.setState({disclaimer: true});
+    }
   },
 
-  close: function(modal) {
-    var state = {};
-    state[modal] = false;
-    this.setState(state);
+  close: function() {
+    this.setState({disclaimer: false});
   },
 
   renderDisclaimer: function() {
     return (
-      <Modal show={this.state.disclaimer} onHide={this.close.bind(this, 'disclaimer')}>
+      <Modal show={this.state.disclaimer} onHide={this.close}>
         <Modal.Header closeButton>
           <Modal.Title>Welcome to uApp Explorer!</Modal.Title>
         </Modal.Header>
@@ -87,7 +86,7 @@ and Canonical are registered trademarks of Canonical Ltd.
         <div className="container main">
           <div className="row">
             <div className="col-sm-12 text-center disclaimer">
-              <a onClick={this.open.bind(this, 'faq')}>This is an unofficial app viewer for Ubuntu Touch apps.</a>
+              <a onClick={this.open.bind(this, 'faq')} className="clickable">This is an unofficial app viewer for Ubuntu Touch apps.</a>
             </div>
           </div>
 
@@ -124,7 +123,6 @@ and Canonical are registered trademarks of Canonical Ltd.
         </div>
 
         {this.renderDisclaimer()}
-        <FAQ show={this.state.faq} onHide={this.close.bind(this, 'faq')} />
       </div>
     );
   }

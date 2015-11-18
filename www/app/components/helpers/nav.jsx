@@ -21,6 +21,7 @@ module.exports = React.createClass({
   cursors: {
     auth: ['auth'],
     loading: ['loading'],
+    modals: ['modals'],
   },
 
   props: {
@@ -52,9 +53,6 @@ module.exports = React.createClass({
 
   getInitialState: function() {
     return {
-      login: false,
-      faq: false,
-      donate: false,
       search: {
         show: false,
         term: '',
@@ -105,20 +103,16 @@ module.exports = React.createClass({
   },
 
   open: function(modal) {
-    var state = {};
-    state[modal] = true;
-    this.setState(state);
+    actions.openModal(modal);
   },
 
   close: function(modal) {
-    var state = {};
-    state[modal] = false;
-    this.setState(state);
+    actions.closeModal(modal);
   },
 
   renderLoginModal: function() {
     return (
-      <Modal show={this.state.login} onHide={this.close.bind(this, 'login')}>
+      <Modal show={this.state.modals.login} onHide={this.close.bind(this, 'login')}>
         <Modal.Header closeButton>
           <Modal.Title>Log In</Modal.Title>
         </Modal.Header>
@@ -321,8 +315,8 @@ module.exports = React.createClass({
           </div>
         </div>
 
-        <FAQ show={this.state.faq} onHide={this.close.bind(this, 'faq')} />
-        <Donate show={this.state.donate} onHide={this.close.bind(this, 'donate')} />
+        <FAQ show={this.state.modals.faq} onHide={this.close.bind(this, 'faq')} />
+        <Donate show={this.state.modals.donate} onHide={this.close.bind(this, 'donate')} />
         {this.renderLoginModal()}
       </nav>
     );

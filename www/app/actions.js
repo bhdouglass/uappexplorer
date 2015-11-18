@@ -234,4 +234,12 @@ module.exports = {
   clearAlert: function() {
     tree.set('alert', null);
   },
+
+  openModal: function(name) {
+    tree.set(['modals', name], true);
+  },
+
+  closeModal: function(name) {
+    tree.set(['modals', name], false);
+  },
 };
