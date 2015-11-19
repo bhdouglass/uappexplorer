@@ -109,20 +109,20 @@ function map(pkg, data) {
     if (desc.indexOf('webapp') > -1 || desc.indexOf('web app') > -1) {
       pkg.type = 'webapp';
     }
-
-    var core = false;
-    _.forEach(data.framework, function(framework) {
-      if (framework.indexOf('ubuntu-core-') === 0) {
-        core = true;
-        return false;
-      }
-    });
-
-    if (core) {
-      pkg.type = 'snappy';
-    }
   }
-  else if (pkg.type == 'oem') {
+  else if (pkg.type == 'oem' || pkg.type == 'os') {
+    pkg.type = 'snappy';
+  }
+
+  var core = false;
+  _.forEach(data.framework, function(framework) {
+    if (framework.indexOf('ubuntu-core-') === 0) {
+      core = true;
+      return false;
+    }
+  });
+
+  if (core) {
     pkg.type = 'snappy';
   }
 
