@@ -1,4 +1,5 @@
 var React = require('react');
+var Router = require('react-router');
 var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var Link = require('react-router').Link;
@@ -8,15 +9,13 @@ var actions = require('../../actions');
 module.exports = React.createClass({
   displayName: 'AppRequest',
   mixins: [
-    PureRenderMixin
+    PureRenderMixin,
+    Router.History,
   ],
-  props: {
-    show: React.PropTypes.bool.isRequired,
-    onHide: React.PropTypes.func.isRequired,
-  },
 
   getInitialState: function() {
     return {
+      show: true,
       name: '',
       success: null,
       requested_app: null,
@@ -25,12 +24,13 @@ module.exports = React.createClass({
 
   close: function() {
     this.setState({
+      show: false,
       name: '',
       success: null,
       requested_app: null,
     });
 
-    this.props.onHide();
+    this.history.pushState(null, '/apps');
   },
 
   changeName: function(event) {
@@ -38,15 +38,16 @@ module.exports = React.createClass({
   },
 
   request: function() {
+    var self = this;
     actions.requestApp(this.state.name).then(function(app) {
       if (app) {
-        this.setState({
+        self.setState({
           requested_app: app,
           success: true,
         });
       }
       else {
-        this.setState({
+        self.setState({
           requested_app: null,
           success: false,
         });
@@ -75,7 +76,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <Modal show={this.props.show} onHide={this.props.close}>
+      <Modal show={this.state.show} onHide={this.close}>
         <Modal.Header closeButton>
           <Modal.Title>Missing an app?</Modal.Title>
         </Modal.Header>
@@ -93,7 +94,7 @@ module.exports = React.createClass({
               <br/>
               <br/>
               <div className="form-group">
-                <label className="control-label" for="name">App Name (example: com.ubuntu.developer.example)</label>
+                <label className="control-label" htmlFor="name">App Name (example: com.ubuntu.developer.example)</label>
                 <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.changeName} />
               </div>
             </div>
@@ -101,12 +102,12 @@ module.exports = React.createClass({
         </Modal.Body>
 
         <Modal.Footer>
-          <div>
-            <a className="btn btn-warning" onClick={this.props.close}>Close</a>
-          </div>
-          <div>
-            <a className="btn btn-warning" onClick={this.request}>Find</a>
-          </div>
+          <span>
+            <a className="btn btn-warning" onClick={this.close}>Close</a>
+          </span>
+          <span>
+            <a className="btn btn-material-blue" onClick={this.request}>Find</a>
+          </span>
         </Modal.Footer>
       </Modal>
     );

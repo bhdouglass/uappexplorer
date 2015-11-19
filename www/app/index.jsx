@@ -9,6 +9,7 @@ var Apps = require('./components/apps');
 var App = require('./components/app');
 var Me = require('./components/me');
 var List = require('./components/list');
+var AppRequest = require('./components/modals/appRequest');
 var actions = require('./actions');
 
 var h = createBrowserHistory({
@@ -24,6 +25,7 @@ ReactDOM.render((
     <ReactRouter.Route path="/" component={Root}>
       <ReactRouter.IndexRoute component={Index} />
       <ReactRouter.Route path="/apps" component={Apps} />
+      <ReactRouter.Route path="/apps/request" component={AppRequest} />
       <ReactRouter.Route path="/app/:name" component={App} />
       <ReactRouter.Route path="/me" component={Me} />
       <ReactRouter.Route path="/list/:id" component={List} />
