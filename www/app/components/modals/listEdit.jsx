@@ -40,6 +40,8 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
+    this.debounceSearch = debounce(this.search, 300);
+
     if (this.props.list && this.props.list._id) {
       if (this.props.list.packages.length > 0) {
         var paging = {query: {name: {'$in': this.props.list.packages}, mini: true}};
@@ -297,7 +299,7 @@ module.exports = React.createClass({
               <label htmlFor="search" className="col-sm-3 control-label">Add Apps:</label>
               <div className="col-sm-9">
                 <div className="input-group search-box">
-                  <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} defaultValue={this.state.term} />
+                  <input type="text" className="form-control" id="search" onChange={this.debounceSearch} defaultValue={this.state.term} />
                   <span className="input-group-addon">
                     <i className="fa fa-search"></i>
                   </span>

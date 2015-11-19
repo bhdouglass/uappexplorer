@@ -30,6 +30,8 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
+    this.debounceSearch = debounce(this.search, 300);
+
     var search = {
       show: false,
       term: '',
@@ -217,7 +219,7 @@ module.exports = React.createClass({
       search = (
         <div className="visible-xs">
           <div className="input-group search-box">
-            <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} defaultValue={this.state.search.term} ref="search" />
+            <input type="text" className="form-control" id="search" onChange={this.debounceSearch} defaultValue={this.state.search.term} ref="search" />
           </div>
         </div>
       );
@@ -232,7 +234,7 @@ module.exports = React.createClass({
       search = (
         <li>
           <div className="input-group hidden-xs search-box">
-            <input type="text" className="form-control" id="search" onChange={debounce(this.search, 300)} defaultValue={this.state.search.term} ref="searchxs" />
+            <input type="text" className="form-control" id="search" onChange={this.debounceSearch} defaultValue={this.state.search.term} ref="searchxs" />
           </div>
         </li>
       );
