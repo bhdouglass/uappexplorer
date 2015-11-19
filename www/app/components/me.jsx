@@ -79,6 +79,7 @@ module.exports = React.createClass({
     this.setState({
       edit: false,
       delet: false,
+      current_list: null,
     });
 
     if (refresh) {
