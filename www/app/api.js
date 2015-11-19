@@ -33,6 +33,10 @@ module.exports = {
     return axios.get('/api/apps/reviews/' + name, {params: params}).then(success);
   },
 
+  requestApp: function(name) {
+    return axios.get('/api/apps/find/' + name).then(success);
+  },
+
   login: function() {
     return axios.get('/auth/me').then(success);
   },

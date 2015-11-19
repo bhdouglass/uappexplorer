@@ -121,6 +121,14 @@ actions = {
     });
   },
 
+  requestApp: function(name) {
+    return api.requestApp(name).then(function(app) {
+      return app;
+    }).catch(function() {
+      return null;
+    });
+  },
+
   login: function() {
     return api.login().then(function(user) {
       tree.set('auth', {
