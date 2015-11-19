@@ -22,7 +22,12 @@ function type(types) {
     t = types[0];
   }
 
-  return typeMap[t];
+  var value = '';
+  if (typeMap[t]) {
+    value = typeMap[t];
+  }
+
+  return value;
 }
 
 function generateNewFeed(callback) {
