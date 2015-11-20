@@ -122,7 +122,9 @@ module.exports = React.createClass({
 
       this.setState(s);
 
-      actions.getApps(cleanPaging);
+      actions.getApps(cleanPaging).then(function() {
+        window.scrollTo(0, 0);
+      });
     }
   },
 

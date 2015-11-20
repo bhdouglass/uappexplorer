@@ -28,6 +28,7 @@ module.exports = new Baobab({
     authorization: null,
   },
 
+  last_page: null,
   top: [],
   'new': [],
   apps: {},

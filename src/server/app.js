@@ -77,7 +77,6 @@ function setup(app) {
       '<meta property="og:description" content="' + og.description + '" />' +
       '<meta property="og:site_name" content="uApp Explorer" />';
 
-    console.log(og_html);
     return html.replace('<!-- Open Graph Data -->', og_html);
   }
 

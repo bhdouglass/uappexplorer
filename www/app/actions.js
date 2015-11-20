@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 var tree = require('./state');
 var api = require('./api');
 
@@ -52,17 +54,32 @@ actions = {
   },
 
   getApps: function(paging) {
-    //TODO caching
+    var key = JSON.stringify(paging);
+    var cached = tree.get('apps')[key];
+    var now = moment();
 
-    tree.set('loading', true);
-    return api.getApps(paging).then(function(data) {
-      tree.set(['apps', JSON.stringify(paging)], data);
-      tree.set('loading', false);
-      return data;
-    }).catch(function() {
-      tree.set('loading', false);
-      actions.createAlert('Could not download app list, click to retry', 'error', actions.getApps.bind(actions, paging));
-    });
+    tree.set('last_page', paging);
+
+    var promise = null;
+    if (cached && now.diff(cached.fetched, 'minutes') <= 60) {
+      console.log('cache hit');
+      promise = Promise.resolve(cached);
+    }
+    else {
+      tree.set('loading', true);
+
+      promise = api.getApps(paging).then(function(data) {
+        data.fetched = moment();
+        tree.set(['apps', key], data);
+        tree.set('loading', false);
+        return data;
+      }).catch(function() {
+        tree.set('loading', false);
+        actions.createAlert('Could not download app list, click to retry', 'error', actions.getApps.bind(actions, paging));
+      });
+    }
+
+    return promise;
   },
 
   getFrameworks: function() {
