@@ -309,7 +309,14 @@ actions = {
         current: location,
       });
     }
-  }
+  },
+
+  setOG: function(og) {
+    var current = tree.get('og');
+    if (og.title != current.title || og.description != current.description || og.image != current.image) {
+      tree.set('og', og);
+    }
+  },
 };
 
 module.exports = actions;

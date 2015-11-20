@@ -15,7 +15,6 @@ module.exports = React.createClass({
     mixins.root,
     PureRenderMixin,
   ],
-
   props: {
     location: React.PropTypes.object.isRequired,
   },
@@ -77,6 +76,8 @@ and Canonical are registered trademarks of Canonical Ltd.
   },
 
   render: function() {
+
+
     return (
       <div>
         <Nav location={this.props.location} />

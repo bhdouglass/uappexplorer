@@ -6,6 +6,7 @@ var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var DocumentMeta = require('react-document-meta');
 
 var actions = require('../../actions');
 var FAQ = require('../modals/faq');
@@ -23,8 +24,8 @@ module.exports = React.createClass({
     loading: ['loading'],
     modals: ['modals'],
     location: ['location'],
+    'og': ['og'],
   },
-
   props: {
     location: React.PropTypes.object.isRequired,
   },
@@ -279,8 +280,45 @@ module.exports = React.createClass({
   },
 
   render: function() {
+    var title = this.state.og.title ? this.state.og.title : '';
+    if (title.indexOf('uApp Explorer') == -1) {
+      title = 'uApp Explorer - ' + title;
+    }
+
+    var meta = {
+      title: title,
+      description: this.state.og.description,
+      meta: {
+        itemProp: {
+          name: this.state.og.title,
+          description: this.state.og.description,
+          image: this.state.og.image,
+        },
+        name: {
+          'twitter:card': 'summary',
+          'twitter:site': '@uappexplorer',
+          'twitter:title': this.state.og.title,
+          'twitter:description': this.state.og.description,
+          'twitter:image:src': this.state.og.image,
+        },
+        property: {
+          'og:title': this.state.og.title,
+          'og:type': 'website',
+          'og:url': window.location.href,
+          'og:image': this.state.og.image,
+          'og:description': this.state.og.description,
+          'og:site_name': 'uApp Explorer',
+        }
+      },
+      auto: {
+        ograph: true
+      }
+    };
+
     return (
       <nav className="navbar navbar-material-blue" role="navigation">
+        <DocumentMeta {...meta} />
+
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#main-menu">

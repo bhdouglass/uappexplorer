@@ -32,6 +32,12 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
+    actions.setOG({
+      title: 'uApp Explorer',
+      description: 'Browse and discover apps for Ubuntu Touch',
+      image: 'https://uappexplorer.com/img/logo.png',
+    });
+
     var self = this;
     actions.login().then(function(auth) {
       if (auth.loggedin) {

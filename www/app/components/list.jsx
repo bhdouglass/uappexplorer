@@ -37,6 +37,14 @@ module.exports = React.createClass({
   },
 
   componentWillUpdate: function(nextProps, nextState) {
+    if (this.state.userList && this.state.userList.name) {
+      actions.setOG({
+        title: 'User List - ' + this.state.userList.name,
+        description: 'User list by ' + this.state.userList.user_name,
+        image: 'https://uappexplorer.com/img/logo.png',
+      });
+    }
+
     if (this.props.params.id != nextProps.params.id) {
       actions.getUserList(nextProps.params.id);
     }

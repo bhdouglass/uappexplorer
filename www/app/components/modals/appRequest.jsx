@@ -22,6 +22,14 @@ module.exports = React.createClass({
     };
   },
 
+  componentWillMount: function() {
+    actions.setOG({
+      title: 'uApp Explorer - Find App',
+      description: 'Find an app that has not yet been fetched from the official appstore',
+      image: 'https://uappexplorer.com/img/logo.png',
+    });
+  },
+
   close: function() {
     this.setState({
       show: false,

@@ -368,8 +368,10 @@ function setup(app, success, error) {
 
           var author_app_names = [pkg.name];
           _.forEach(pkgs, function(p) {
-            pkg.author_apps.push(miniPkg(p));
-            author_app_names.push(p.name);
+            if (author_app_names.indexOf(p.name) == -1) {
+              pkg.author_apps.push(miniPkg(p));
+              author_app_names.push(p.name);
+            }
           });
 
           if (pkg.keywords.length > 0) {

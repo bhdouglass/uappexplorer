@@ -38,6 +38,14 @@ module.exports = React.createClass({
   },
 
   componentWillUpdate: function(nextProps) {
+    if (this.state.app && this.state.app.name) {
+      actions.setOG({
+        title: this.state.app.name,
+        description: this.state.app.short_description,
+        image: this.state.app.image,
+      });
+    }
+
     if (this.props.params.name != nextProps.params.name) {
       actions.getApp(nextProps.params.name);
       actions.getReviews(nextProps.params.name, {limit: 9});
@@ -409,7 +417,7 @@ module.exports = React.createClass({
           </div>
 
           <div className="row grid-view">
-            {apps.map(function(app, index, arr) {
+            {apps.map(function(app, index, arr) { //TODO make this a component
               var cls = 'col-md-4 col-xs-6';
               if (index == (arr.length - 1) && arr.length == 3) {
                 cls = 'col-md-4 col-xs-6 hidden-xs hidden-sm';
