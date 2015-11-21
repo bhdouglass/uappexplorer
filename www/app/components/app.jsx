@@ -1,4 +1,5 @@
 var React = require('react');
+var Router = require('react-router');
 var moment = require('moment');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
@@ -16,6 +17,7 @@ module.exports = React.createClass({
   displayName: 'App',
   mixins: [
     mixins.branch,
+    Router.History,
     PureRenderMixin,
   ],
   cursors: {
@@ -24,6 +26,8 @@ module.exports = React.createClass({
     loading: ['loading'],
     reviews: ['reviews'],
     userLists: ['userLists'],
+    previousApp: ['previousApp'],
+    nextApp: ['nextApp'],
   },
 
   getInitialState: function() {
@@ -35,6 +39,8 @@ module.exports = React.createClass({
   componentWillMount: function() {
     actions.getApp(this.props.params.name);
     actions.getReviews(this.props.params.name, {limit: 9});
+    actions.previousApp(this.props.params.name);
+    actions.nextApp(this.props.params.name);
   },
 
   componentWillUpdate: function(nextProps) {
@@ -49,23 +55,10 @@ module.exports = React.createClass({
     if (this.props.params.name != nextProps.params.name) {
       actions.getApp(nextProps.params.name);
       actions.getReviews(nextProps.params.name, {limit: 9});
+      actions.previousApp(nextProps.params.name);
+      actions.nextApp(nextProps.params.name);
     }
   },
-
-//TODO swipe to navigate
-/*
-<div className="previous-app" ng-if="previous_app" ng-hide="slideOutLeft || slideOutRight">
-  <a ng-click="previous()" title="{{'Previous App:'|translate}} {{previous_app.title}}" className="text-material-grey clickable">
-    <i className="fa fa-2x fa-chevron-left"></i>
-  </a>
-</div>
-
-<div className="next-app" ng-if="next_app" ng-hide="slideOutLeft || slideOutRight">
-  <a ng-click="next()" title="{{'Next App:'|translate}} {{next_app.title}}" className="text-material-grey clickable">
-    <i className="fa fa-2x fa-chevron-right"></i>
-  </a>
-</div>
-*/
 
   renderAuthorInfo: function() {
     var author = '';
@@ -261,7 +254,7 @@ module.exports = React.createClass({
 
     var tab = '';
     if (this.state.tab == 'description') {
-      tab = <div dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>;
+      tab = <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>;
     }
     else if (this.state.tab == 'changelog') {
       var changelog = this.state.app.changelog;
@@ -628,6 +621,18 @@ module.exports = React.createClass({
     return reviews;
   },
 
+  swipe: function(direction) {
+    var app = null;
+    if (direction == 'previous') {
+      app = this.state.previousApp;
+    }
+    else {
+      app = this.state.nextApp;
+    }
+
+    this.history.pushState(null, '/app/' + app.name);
+  },
+
   renderMain: function() {
     var component = '';
     if (!this.state.loading && this.state.app && this.state.app.name == this.props.params.name) {
@@ -636,8 +641,33 @@ module.exports = React.createClass({
       var url = window.location.protocol + '://' + window.location.host + '/app/' + this.state.app.name;
       var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
 
+      var previous = '';
+      if (this.state.previousApp && this.state.previousApp.title) {
+        previous = (
+          <div className="previous-app">
+            <a onClick={this.swipe.bind(this, 'previous')} title={'Previous App: ' + this.state.previousApp.title} className="text-material-grey clickable">
+              <i className="fa fa-2x fa-chevron-left"></i>
+            </a>
+          </div>
+        );
+      }
+
+      var next = '';
+      if (this.state.nextApp && this.state.nextApp.title) {
+        next = (
+          <div className="next-app">
+            <a onClick={this.swipe.bind(this, 'next')} title={'Next App: ' + this.state.nextApp.title} className="text-material-grey clickable">
+              <i className="fa fa-2x fa-chevron-right"></i>
+            </a>
+          </div>
+        );
+      }
+
       component = (
         <div className="swipe-container">
+          {previous}
+          {next}
+
           <div className="row">
             <div className="col-md-6">
               <div className="list-group">

@@ -53,16 +53,17 @@ actions = {
     }
   },
 
-  getApps: function(paging) {
+  getApps: function(paging, no_set_last) {
     var key = JSON.stringify(paging);
     var cached = tree.get('apps')[key];
     var now = moment();
 
-    tree.set('last_page', paging);
+    if (!no_set_last) {
+      tree.set('lastPage', paging);
+    }
 
     var promise = null;
     if (cached && now.diff(cached.fetched, 'minutes') <= 60) {
-      console.log('cache hit');
       promise = Promise.resolve(cached);
     }
     else {
@@ -80,6 +81,98 @@ actions = {
     }
 
     return promise;
+  },
+
+  previousApp: function(name) {
+    var last_page = tree.get('lastPage');
+    var key = JSON.stringify(last_page);
+
+    tree.set('previousApp', null);
+    return actions.getApps(last_page, true).then(function() {
+      var apps = tree.get(['apps', key]);
+      var last = null;
+
+      //check for previous app on current page
+      for (var i = 0; i < apps.apps.length; i++) {
+        if (apps.apps[i].name == name) {
+          break;
+        }
+        else {
+          last = apps.apps[i];
+        }
+      }
+
+      var value = null;
+      if (last) { //previous app on current page
+        value = last;
+        tree.set('previousApp', last);
+      }
+      else {
+        if (last_page.skip > 0) {
+          //check for previous app on previous page
+          last_page = JSON.parse(JSON.stringify(last_page));
+          last_page.skip -= last_page.limit;
+          last_page.skip = (last_page.skip > 0) ? last_page.skip : 0;
+
+          var key2 = JSON.stringify(last_page);
+          value = actions.getApps(last_page, true).then(function() {
+            var apps2 = tree.get(['apps', key2]);
+
+            if (apps2.apps.length > 0) {
+              last = apps2.apps[(apps2.apps.length - 1)];
+            }
+
+            tree.set('previousApp', last);
+            return last;
+          });
+        }
+      }
+
+      return value;
+    });
+  },
+
+  nextApp: function(name) {
+    var last_page = tree.get('lastPage');
+    var key = JSON.stringify(last_page);
+
+    tree.set('nextApp', null);
+    return actions.getApps(last_page, true).then(function() {
+      var apps = tree.get(['apps', key]);
+      var next = null;
+
+      //check for next app on current page
+      for (var i = 0; i < apps.apps.length; i++) {
+        if (apps.apps[i].name == name && (i + 1) < apps.apps.length) {
+          next = apps.apps[(i + 1)];
+        }
+      }
+
+      var value = null;
+      if (next) { //next app on current page
+        value = next;
+        tree.set('nextApp', next);
+      }
+      else {
+        //check for next app on next page
+        last_page = JSON.parse(JSON.stringify(last_page));
+        last_page.skip = last_page.skip + last_page.limit;
+
+        var key2 = JSON.stringify(last_page);
+        value = actions.getApps(last_page, true).then(function() {
+          var apps2 = tree.get(['apps', key2]);
+
+          if (apps2.apps.length > 0) {
+            next = apps2.apps[0];
+          }
+
+          tree.set('nextApp', next);
+          return next;
+        });
+      }
+
+      return value;
+    });
   },
 
   getFrameworks: function() {

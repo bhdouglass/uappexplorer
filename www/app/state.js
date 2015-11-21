@@ -1,5 +1,8 @@
 var Baobab = require('baobab');
 
+var DEFAULT_SORT = '-published_date';
+var LIMIT = 30;
+
 module.exports = new Baobab({
   loading: false,
   alert: null,
@@ -28,7 +31,16 @@ module.exports = new Baobab({
     authorization: null,
   },
 
-  last_page: null,
+  previousApp: null,
+  nextApp: null,
+  lastPage: {
+    skip: 0,
+    limit: LIMIT,
+    sort: DEFAULT_SORT,
+    mini: true,
+    query: {},
+  },
+
   top: [],
   'new': [],
   apps: {},
