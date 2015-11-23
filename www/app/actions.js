@@ -71,8 +71,17 @@ actions = {
 
       promise = api.getApps(paging).then(function(data) {
         data.fetched = moment();
+
         tree.set(['apps', key], data);
         tree.set('loading', false);
+
+        tree.push('cache_keys', key);
+        var cache_keys = tree.get('cache_keys');
+        if (cache_keys.length > 10) {
+          tree.unset(['apps', cache_keys[0]]);
+          tree.splice('cache_keys', [0, 1]);
+        }
+
         return data;
       }).catch(function() {
         tree.set('loading', false);

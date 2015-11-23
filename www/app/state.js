@@ -44,6 +44,7 @@ module.exports = new Baobab({
   top: [],
   'new': [],
   apps: {},
+  cache_keys: [],
   frameworks: [],
   essentials: {
     loaded: false,
