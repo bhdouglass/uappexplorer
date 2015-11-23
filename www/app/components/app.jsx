@@ -4,6 +4,7 @@ var moment = require('moment');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var Swipeable = require('react-swipeable');
 
 var actions = require('../actions');
 var utils = require('../utils');
@@ -43,12 +44,12 @@ module.exports = React.createClass({
     actions.nextApp(this.props.params.name);
   },
 
-  componentWillUpdate: function(nextProps) {
-    if (this.state.app && this.state.app.name) {
+  componentWillUpdate: function(nextProps, nextState) {
+    if (nextState.app && nextState.app.name) {
       actions.setOG({
-        title: this.state.app.name,
-        description: this.state.app.short_description,
-        image: this.state.app.image,
+        title: nextState.app.name,
+        description: nextState.app.short_description,
+        image: nextState.app.image,
       });
     }
 
@@ -361,19 +362,21 @@ module.exports = React.createClass({
               <h3>Screenshots</h3>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12 screenshot-scroll">
-              {this.state.app.screenshots.map(function(screenshot) {
-                return (
-                  <div key={screenshot}>
-                    <a href={screenshot} className="swipebox" rel="nofollow">
-                      <img src={screenshot} alt="" className="screenshot" />
-                    </a>
-                  </div>
-                );
-              })}
+          <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
+            <div className="row">
+              <div className="col-md-12 screenshot-scroll">
+                {this.state.app.screenshots.map(function(screenshot) {
+                  return (
+                    <div key={screenshot}>
+                      <a href={screenshot} className="swipebox" rel="nofollow">
+                        <img src={screenshot} alt="" className="screenshot" />
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          </Swipeable>
         </div>
       );
     }
@@ -633,6 +636,11 @@ module.exports = React.createClass({
     this.history.pushState(null, '/app/' + app.name);
   },
 
+  cancelSwipe: function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  },
+
   renderMain: function() {
     var component = '';
     if (!this.state.loading && this.state.app && this.state.app.name == this.props.params.name) {
@@ -759,11 +767,13 @@ module.exports = React.createClass({
     }
 
     return (
-      <div className="app">
-        {loading}
+      <Swipeable onSwipedRight={this.swipe.bind(this, 'previous')} onSwipedLeft={this.swipe.bind(this, 'next')}>
+        <div className="app">
+          {loading}
 
-        {this.renderMain()}
-      </div>
+          {this.renderMain()}
+        </div>
+      </Swipeable>
     );
   }
 });

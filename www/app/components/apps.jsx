@@ -351,7 +351,7 @@ module.exports = React.createClass({
     }
 
     var not_found = '';
-    if (count === 0) {
+    if (count === 0 && !this.state.loading) {
       not_found = (
         <div className="row">
           <div className="col-md-12 text-center">
