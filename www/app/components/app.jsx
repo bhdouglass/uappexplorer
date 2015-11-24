@@ -34,6 +34,7 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       tab: 'description',
+      swipe: null,
     };
   },
 
@@ -633,7 +634,13 @@ module.exports = React.createClass({
       app = this.state.nextApp;
     }
 
-    this.history.pushState(null, '/app/' + app.name);
+    this.setState({swipe: direction});
+
+    var self = this;
+    setTimeout(function() {
+      self.history.pushState(null, '/app/' + app.name);
+      self.setState({swipe: null});
+    }, 350);
   },
 
   cancelSwipe: function(event) {
@@ -766,9 +773,17 @@ module.exports = React.createClass({
       );
     }
 
+    var cls = 'app';
+    if (this.state.swipe == 'previous') {
+      cls = 'app slideOutRight';
+    }
+    else if (this.state.swipe == 'next') {
+      cls = 'app slideOutLeft';
+    }
+
     return (
       <Swipeable onSwipedRight={this.swipe.bind(this, 'previous')} onSwipedLeft={this.swipe.bind(this, 'next')}>
-        <div className="app">
+        <div className={cls}>
           {loading}
 
           {this.renderMain()}
