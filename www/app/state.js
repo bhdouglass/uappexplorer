@@ -66,4 +66,6 @@ module.exports = new Baobab({
     description: 'Browse and discover apps for Ubuntu Touch',
     image: 'https://uappexplorer.com/img/logo.png',
   },
+
+  lng: null,
 });

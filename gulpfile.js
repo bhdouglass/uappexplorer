@@ -21,6 +21,8 @@ var reactify = require('reactify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 //var buffer = require('vinyl-buffer');
+var i18next = require('gulp-i18next-conv');
+var jsonminify = require('gulp-jsonminify');
 
 var paths = {
   main_js: 'www/app/index.jsx',
@@ -151,7 +153,16 @@ gulp.task('build-back', function() {
   );
 });
 
-//TODO translations
+//TODO translations (pot)
+
+gulp.task('build-translations', function() {
+  return gulp.src(paths.po)
+    .pipe(i18next(function() {
+      return 'uappexplorer';
+    }))
+    .pipe(jsonminify())
+    .pipe(gulp.dest('dist/www/translations'));
+});
 
 gulp.task('watch', function() {
   gulp.watch(paths.front_js, ['lint', 'build-js']);
@@ -159,7 +170,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.less, ['lint', 'build-less']);
 });
 
-gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-back']);
+gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-back', 'build-translations']);
 
 gulp.task('build-watch', ['build'], function() {
   gulp.watch(paths.front_js, ['lint']);

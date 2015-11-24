@@ -49,6 +49,10 @@ module.exports = {
     return axios.post('/auth/caxton/send', {url: url, message: message}).then(success);
   },
 
+  saveLanguage: function(lng) {
+    return axios.post('/auth/language/' + lng).then(success);
+  },
+
   getUserLists: function(user_id) {
     return axios.get('/api/lists', {params: {user: user_id, sort: 'name'}}).then(success);
   },

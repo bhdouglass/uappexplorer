@@ -269,4 +269,76 @@ module.exports = {
       value: 'other_open_source'
     }
   ],
+
+  languages: [
+    {
+      'name': 'Basque',
+      'code': 'eu',
+      'untranslated': 0,
+    }, {
+      'name': 'Chinese (Simplified)',
+      'code': 'zh_CN',
+      'untranslated': 2,
+    }, {
+      'name': 'Czech',
+      'code': 'cs',
+      'untranslated': 0,
+    }, {
+      'name': 'Dutch',
+      'code': 'nl',
+      'untranslated': 156,
+    }, {
+      'name': 'English (UK)',
+      'code': 'en_GB',
+      'untranslated': 0, //Keep this as zero since it's similar enough to US english
+    }, {
+      'name': 'French',
+      'code': 'fr',
+      'untranslated': 88,
+    }, {
+      'name': 'Galician',
+      'code': 'gl',
+      'untranslated': 0,
+    }, {
+      'name': 'German',
+      'code': 'de',
+      'untranslated': 130,
+    }, {
+      'name': 'Greek',
+      'code': 'el',
+      'untranslated': 0,
+    }, {
+      'name': 'Hungarian',
+      'code': 'hu',
+      'untranslated': 0,
+    }, {
+      'name': 'Italian',
+      'code': 'it',
+      'untranslated': 6,
+    }, {
+      'name': 'Norwegian Bokmal',
+      'code': 'nb',
+      'untranslated': 108,
+    }, {
+      'name': 'Polish',
+      'code': 'pl',
+      'untranslated': 157,
+    }, {
+      'name': 'Portuguese',
+      'code': 'pt',
+      'untranslated': 0,
+    }, {
+      'name': 'Russian',
+      'code': 'ru',
+      'untranslated': 10,
+    }, {
+      'name': 'Swedish',
+      'code': 'sv',
+      'untranslated': 109,
+    }, {
+      'name': 'Uyghur',
+      'code': 'ug',
+      'untranslated': 0,
+    },
+  ],
 };

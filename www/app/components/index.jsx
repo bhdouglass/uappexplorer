@@ -3,6 +3,7 @@ var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var Slider = require('react-slick');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
@@ -18,6 +19,7 @@ module.exports = React.createClass({
     top: ['top'],
     'new': ['new'],
     essentials: ['essentials'],
+    lng: ['lng'],
   },
 
   componentWillMount: function() {
@@ -82,7 +84,7 @@ module.exports = React.createClass({
           <div className="row">
             <div className="col-md-12 text-center">
               <h1>
-                <Link to="/apps?sort=-bayesian_average">Essential Apps</Link>
+                <Link to="/apps?sort=-bayesian_average">{i18n.t('Essential Apps')}</Link>
               </h1>
             </div>
           </div>

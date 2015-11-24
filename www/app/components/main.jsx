@@ -26,6 +26,7 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
+    actions.i18n(cookie.get('language'));
     actions.login().then(function(auth) {
       if (auth.loggedin) {
         actions.getUserLists();

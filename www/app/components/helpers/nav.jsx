@@ -9,6 +9,7 @@ var PureRenderMixin = require('react-addons-pure-render-mixin');
 var DocumentMeta = require('react-document-meta');
 
 var actions = require('../../actions');
+var info = require('../../info');
 var FAQ = require('../modals/faq');
 var Donate = require('../modals/donate');
 
@@ -24,7 +25,8 @@ module.exports = React.createClass({
     loading: ['loading'],
     modals: ['modals'],
     location: ['location'],
-    'og': ['og'],
+    og: ['og'],
+    lng: ['lng'],
   },
   props: {
     location: React.PropTypes.object.isRequired,
@@ -244,39 +246,60 @@ module.exports = React.createClass({
     return search;
   },
 
+  setLanguage: function(lng) {
+    actions.i18n(lng);
+  },
+
   renderLanguageList: function() {
-    //TODO
-    /*
-    <li>
-      <a className="dropdown-toggle" data-toggle="dropdown" role="button">
-        <span translate>Language</span> <span className="caret"></span>
-      </a>
-      <ul className="dropdown-menu">
-        <li ng-className="{active: language == 'en'}">
-          <a ng-click="setLanguage('en')" className="clickable">English (US)</a>
-        </li>
+    var partialTranslation = 188 * 0.15; //Languages with more untranslated strings that this are partial translations
+    var comingTranslation = 188 * 0.50; //Languages with more untranslated strings than this are "coming soon"
 
-        <li ng-repeat="lang in languages | maths:'untranslated':'lt':comingTranslation" ng-className="{'active': language == lang.code}">
-          <a ng-click="setLanguage(lang.code)" className="clickable">
-            <span ng-bind="lang.name"></span>
-            <span ng-if="lang.untranslated > partialTranslation">(Partial)</span>
-          </a>
-        </li>
+    return (
+      <li>
+        <a className="dropdown-toggle" data-toggle="dropdown" role="button">
+          Language <span className="caret"></span>
+        </a>
+        <ul className="dropdown-menu">
+          <li className={(this.state.lng == 'en_US') ? 'active' : ''}>
+            <a onClick={this.setLanguage.bind(this, 'en_US')} className="clickable">English (US)</a>
+          </li>
 
-        <li ng-repeat="lang in languages | maths:'untranslated':'gte':comingTranslation" ng-className="{'active': language == lang.code}">
-          <a ng-href="https://translations.launchpad.net/uappexplorer/trunk/+pots/uappexplorer/{{lang.code}}/+translate" className="clickable" target="_blank">
-            <span ng-bind="lang.name"></span> (Coming soon!)
-          </a>
-        </li>
+          {info.languages.map(function(lng) {
+            if (lng.untranslated < comingTranslation) {
+              var name = lng.name;
+              if (lng.untranslated > partialTranslation) {
+                name = lng.name + ' (Partial)';
+              }
 
-        <li>
-          <a href="https://translations.launchpad.net/uappexplorer" target="_blank" translate>Help translate!</a>
-        </li>
-      </ul>
-    </li>
-    */
+              return (
+                <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
+                  <a onClick={this.setLanguage.bind(this, lng.code)} className="clickable">
+                    {name}
+                  </a>
+                </li>
+              );
+            }
+          }, this)}
 
-    return '';
+          {info.languages.map(function(lng) {
+            if (lng.untranslated >= comingTranslation) {
+              var url = 'https://translations.launchpad.net/uappexplorer/trunk/+pots/uappexplorer/' + lng.code + '/+translate';
+              return (
+                <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
+                  <a href={url} className="clickable" target="_blank">
+                    {lng.name} (Coming soon!)
+                  </a>
+                </li>
+              );
+            }
+          }, this)}
+
+          <li>
+            <a href="https://translations.launchpad.net/uappexplorer" target="_blank">Help translate!</a>
+          </li>
+        </ul>
+      </li>
+    );
   },
 
   render: function() {

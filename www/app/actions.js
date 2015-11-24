@@ -1,4 +1,6 @@
 var moment = require('moment');
+var i18n = require('i18next-client');
+var cookie = require('cookie-cutter');
 
 var tree = require('./state');
 var api = require('./api');
@@ -256,6 +258,8 @@ actions = {
         authorization: btoa(user.apikey + ':' + user.apisecret),
       });
 
+      actions.i18n(user.selectedLanguage);
+
       return tree.get('auth');
     }).catch(function() {
       tree.set('auth', {
@@ -295,6 +299,12 @@ actions = {
     }).catch(function() {
       actions.createAlert('Could not connect to Caxton at this time, please try again later', 'error');
       return false;
+    });
+  },
+
+  saveLanguage: function(lng) {
+    api.saveLanguage(lng).catch(function(err) {
+      console.error(err);
     });
   },
 
@@ -434,6 +444,33 @@ actions = {
     var current = tree.get('og');
     if (og.title != current.title || og.description != current.description || og.image != current.image) {
       tree.set('og', og);
+    }
+  },
+
+  i18n: function(lng) {
+    lng = lng ? lng : 'en_US';
+    lng = (lng == 'en') ? 'en_US' : lng;
+
+    if (tree.get('lng') != lng) {
+      i18n.init({
+        //options: https://github.com/i18next/i18next/blob/master/i18next-latest.js#L315
+        lng: lng,
+        resGetPath: 'translations/__ns__-__lng__.json',
+        showKeyIfEmpty: true,
+        ns: {
+          namespaces: ['uappexplorer'],
+          defaultNs: 'uappexplorer'
+        },
+        fallbackLng: ['en_US'],
+      }, function() {
+        tree.set('lng', lng);
+
+        if (tree.get(['auth', 'loggedin'])) {
+          actions.saveLanguage(lng);
+        }
+
+        cookie.set('language', lng, {expires: 365});
+      });
     }
   },
 };
