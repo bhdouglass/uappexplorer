@@ -1,11 +1,17 @@
 var React = require('react');
+var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 module.exports = React.createClass({
   displayName: 'Hearts',
   mixins: [
-    PureRenderMixin
+    mixins.branch,
+    PureRenderMixin,
   ],
+  cursors: {
+    lng: ['lng'],
+  },
   props: {
     hearts: React.PropTypes.number,
     popularity: React.PropTypes.number,
@@ -19,7 +25,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <span className="text-danger heart-rating" title="Heart Rating">
+      <span className="text-danger heart-rating" title={i18n.t('Heart Rating')}>
         <i className={cls}></i> {this.props.hearts ? this.props.hearts : 0}
       </span>
     );
@@ -34,7 +40,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <span className={text_cls} title="Monthly Popularity}}">
+      <span className={text_cls} title={i18n.t('Monthly Popularity')}>
         <i className={cls}></i> {this.props.popularity ? this.props.popularity : 0}
       </span>
     );

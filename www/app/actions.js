@@ -87,7 +87,7 @@ actions = {
         return data;
       }).catch(function() {
         tree.set('loading', false);
-        actions.createAlert('Could not download app list, click to retry', 'error', actions.getApps.bind(actions, paging));
+        actions.createAlert(i18n.t('Could not download app list, click to retry'), 'error', actions.getApps.bind(actions, paging));
       });
     }
 
@@ -189,7 +189,6 @@ actions = {
   getFrameworks: function() {
     if (tree.get('frameworks').length === 0) {
       api.getFrameworks().then(function(data) {
-        data.unshift('All'); //TODO translate this
         tree.set('frameworks', data);
       });
     }
@@ -205,12 +204,12 @@ actions = {
     }).catch(function(err) {
       tree.set('loading', false);
       if (err.status == 404) {
-        actions.createAlert('Could not find app', 'error', function() {
+        actions.createAlert(i18n.t('Could not find app'), 'error', function() {
           window.location.pathname = '/apps';
         });
       }
       else {
-        actions.createAlert('Could not download app data, click to retry', 'error', actions.getApp.bind(actions, name));
+        actions.createAlert(i18n.t('Could not download app data, click to retry'), 'error', actions.getApp.bind(actions, name));
       }
     });
   },
@@ -289,7 +288,7 @@ actions = {
       tree.set('savingSettings', false);
       tree.set(['auth', 'has_caxton'], !!settings.caxton);
     }).catch(function() {
-      actions.createAlert('Could not save your settings at this time, please try again later');
+      actions.createAlert(i18n.t('Could not save your settings at this time, please try again later'));
     });
   },
 
@@ -297,7 +296,7 @@ actions = {
     return api.sendCaxton(url, message).then(function() {
       return true;
     }).catch(function() {
-      actions.createAlert('Could not connect to Caxton at this time, please try again later', 'error');
+      actions.createAlert(i18n.t('Could not connect to Caxton at this time, please try again later'), 'error');
       return false;
     });
   },
@@ -320,7 +319,7 @@ actions = {
         lists: lists,
       });
     }).catch(function() {
-      actions.createAlert('Could not load lists at this time, click to retry', 'error', actions.getUserLists.bind(actions));
+      actions.createAlert(i18n.t('Could not load lists at this time, click to retry'), 'error', actions.getUserLists.bind(actions));
     });
   },
 
@@ -331,25 +330,25 @@ actions = {
       tree.set('loading', false);
     }).catch(function() {
       tree.set('loading', false);
-      actions.createAlert('Could not find this list, it may not exist any more', 'error');
+      actions.createAlert(i18n.t('Could not find this list, it may not exist any more'), 'error');
     });
   },
 
   createUserList: function(list) {
     return api.createUserList(list).catch(function() {
-      actions.createAlert('Could not create a new list at this time, please try again later', 'error');
+      actions.createAlert(i18n.t('Could not create a new list at this time, please try again later'), 'error');
     });
   },
 
   updateUserList: function(id, list) {
     return api.updateUserList(id, list).catch(function() {
-      actions.createAlert('Could not update the list at this time, please try again later', 'error');
+      actions.createAlert(i18n.t('Could not update the list at this time, please try again later'), 'error');
     });
   },
 
   deleteUserList: function(id) {
     return api.deleteUserList(id).catch(function() {
-      actions.createAlert('Could not delete the list at this time, please try again later', 'error');
+      actions.createAlert(i18n.t('Could not delete the list at this time, please try again later'), 'error');
     });
   },
 
@@ -372,7 +371,7 @@ actions = {
 
     tree.set('userList', newList);
     return this.updateUserList(list._id, newList).catch(function() {
-      actions.createAlert('Could not remove the app from this list, please try again later', 'error');
+      actions.createAlert(i18n.t('Could not remove the app from this list, please try again later'), 'error');
     });
   },
 
@@ -394,7 +393,7 @@ actions = {
     tree.set(['userLists', 'lists'], newUserLists);
 
     return this.updateUserList(list._id, newList).catch(function() {
-      actions.createAlert('Could not add app to list at this time, please try again later', 'error');
+      actions.createAlert(i18n.t('Could not add app to list at this time, please try again later'), 'error');
     });
   },
 

@@ -7,6 +7,7 @@ var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var DocumentMeta = require('react-document-meta');
+var i18n = require('i18next-client');
 
 var actions = require('../../actions');
 var info = require('../../info');
@@ -120,17 +121,17 @@ module.exports = React.createClass({
     return (
       <Modal show={this.state.modals.login} onHide={this.close.bind(this, 'login')}>
         <Modal.Header closeButton>
-          <Modal.Title>Log In</Modal.Title>
+          <Modal.Title>{i18n.t('Log In')}</Modal.Title>
         </Modal.Header>
 
         <Modal.Footer>
           <button className="btn btn-info" onClick={this.close.bind(this, 'login')}>
-            <i className="fa fa-close"></i> Close
+            <i className="fa fa-close"></i> {i18n.t('Close')}
           </button>
 
           <form action="/auth/ubuntu" method="post" className="login-modal-footer">
             <button type="submit" className="btn btn-warning">
-              <i className="fa fa-linux"></i> Log in via Ubuntu
+              <i className="fa fa-linux"></i> {i18n.t('Log in via Ubuntu')}
             </button>
           </form>
         </Modal.Footer>
@@ -164,11 +165,11 @@ module.exports = React.createClass({
       list = [
         (
           <li className="hidden-xs" key="lists">
-            <Link to="/me" className="clickable">My Lists</Link>
+            <Link to="/me" className="clickable">{i18n.t('My Lists')}</Link>
           </li>
         ), (
           <li key="logout">
-            <a onClick={this.logout} className="clickable">Log Out</a>
+            <a onClick={this.logout} className="clickable">{i18n.t('Log Out')}</a>
           </li>
         )
       ];
@@ -176,7 +177,7 @@ module.exports = React.createClass({
     else {
       list = (
         <li className="hidden-xs">
-          <a onClick={this.open.bind(this, 'login')} className="clickable">Log In</a>
+          <a onClick={this.open.bind(this, 'login')} className="clickable">{i18n.t('Log In')}</a>
         </li>
       );
     }
@@ -257,7 +258,7 @@ module.exports = React.createClass({
     return (
       <li>
         <a className="dropdown-toggle" data-toggle="dropdown" role="button">
-          Language <span className="caret"></span>
+          {i18n.t('Language')} <span className="caret"></span>
         </a>
         <ul className="dropdown-menu">
           <li className={(this.state.lng == 'en_US') ? 'active' : ''}>
@@ -295,7 +296,7 @@ module.exports = React.createClass({
           }, this)}
 
           <li>
-            <a href="https://translations.launchpad.net/uappexplorer" target="_blank">Help translate!</a>
+            <a href="https://translations.launchpad.net/uappexplorer" target="_blank">{i18n.t('Help translate!')}</a>
           </li>
         </ul>
       </li>
@@ -366,10 +367,10 @@ module.exports = React.createClass({
                 <a onClick={this.toggleSearch} className="clickable"><i className="fa fa-search fa-inverse"></i></a>
               </li>
               <li>
-                <a onClick={this.open.bind(this, 'faq')} className="clickable">FAQ</a>
+                <a onClick={this.open.bind(this, 'faq')} className="clickable">{i18n.t('FAQ')}</a>
               </li>
               <li>
-                <a onClick={this.open.bind(this, 'donate')} className="clickable">Donate</a>
+                <a onClick={this.open.bind(this, 'donate')} className="clickable">{i18n.t('Donate')}</a>
               </li>
 
               {this.renderLoginList()}

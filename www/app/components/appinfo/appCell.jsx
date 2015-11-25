@@ -1,6 +1,8 @@
 var React = require('react');
 var Link = require('react-router').Link;
+var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var utils = require('../../utils');
 var Types = require('./types');
@@ -10,8 +12,12 @@ var Hearts = require('./hearts');
 module.exports = React.createClass({
   displayName: 'AppCell',
   mixins: [
-    PureRenderMixin
+    mixins.branch,
+    PureRenderMixin,
   ],
+  cursors: {
+    lng: ['lng'],
+  },
   props: {
     app: React.PropTypes.object.isRequired,
     popularity: React.PropTypes.boolean,
@@ -63,7 +69,7 @@ module.exports = React.createClass({
     var remove = '';
     if (this.props.editable && this.props.onRemoveClick) {
       remove = (
-        <span onClick={this.handleRemoveClick.bind(this, this.props.app)} className="clickable top-right" title="Remove this app from your list">
+        <span onClick={this.handleRemoveClick.bind(this, this.props.app)} className="clickable top-right" title={i18n.t('Remove this app from your list')}>
           <i className="fa fa-close"></i>
         </span>
       );

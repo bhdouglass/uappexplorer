@@ -1,3 +1,5 @@
+var i18n = require('i18next-client');
+
 var currencies = {
   'USD': '$',
   'GBP': '£',
@@ -36,7 +38,7 @@ module.exports = {
   price: function(prices, currency) {
     currency = normalizeCurrency(prices, currency);
     var p = price(prices, currency);
-    var output = 'Free';
+    var output = i18n.t('Free');
     if (p > 0) {
       var symbol = currency + ' ';
       if (currencies[currency]) {

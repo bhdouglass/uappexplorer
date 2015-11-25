@@ -1,23 +1,29 @@
 var React = require('react');
+var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
-
-var types = {
-  application: 'App',
-  scope: 'Scope',
-  webapp: 'Web App',
-  snappy: 'Snappy App',
-};
+var i18n = require('i18next-client');
 
 module.exports = React.createClass({
   displayName: 'Types',
   mixins: [
-    PureRenderMixin
+    mixins.branch,
+    PureRenderMixin,
   ],
+  cursors: {
+    lng: ['lng'],
+  },
   props: {
     types: React.PropTypes.array.isRequired,
   },
 
   renderType: function(type) {
+    var types = {
+      application: i18n.t('App'),
+      scope: i18n.t('Scope'),
+      webapp: i18n.t('Web App'),
+      snappy: i18n.t('Snappy App'),
+    };
+
     var cls = 'label ';
     var title = types[type];
 
