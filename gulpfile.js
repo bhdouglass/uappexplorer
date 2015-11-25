@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
-//var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 var template = require('gulp-template');
@@ -20,7 +20,7 @@ var browserify = require('browserify');
 var reactify = require('reactify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
-//var buffer = require('vinyl-buffer');
+var buffer = require('vinyl-buffer');
 var i18next = require('gulp-i18next-conv');
 var jsonminify = require('gulp-jsonminify');
 
@@ -45,6 +45,13 @@ var paths = {
   html: ['www/*.html'],
   po: 'po/**/*.po',
   dist: ['dist/**', '!dist/.git'],
+};
+
+var bargs = {
+  entries: paths.main_js,
+  extensions: ['.jsx'],
+  cache: {},
+  packageCache: {},
 };
 
 gulp.task('clean', function() {
@@ -116,28 +123,19 @@ gulp.task('build-img', function() {
     .pipe(gulp.dest('dist/www/img'));
 });
 
-var b = watchify(browserify({
-  entries: paths.main_js,
-  //debug: true,
-  extensions: ['.jsx'],
-  cache: {},
-  packageCache: {},
-}));
-b.transform(reactify);
+gulp.task('build-js', function() {
+  var b = browserify(bargs);
 
-function bundle() {
+  b.transform(reactify);
+  b.on('log', gutil.log);
+
   return b.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
-    //.pipe(buffer())
-    //TODO have a production build without debug option & uglify
-    //.pipe(uglify())
+    .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest('dist/www/js'));
-}
-
-gulp.task('build-js', bundle);
-b.on('update', bundle);
-b.on('log', gutil.log);
+});
 
 gulp.task('build-back', function() {
   return merge(
@@ -164,18 +162,27 @@ gulp.task('build-translations', function() {
     .pipe(gulp.dest('dist/www/translations'));
 });
 
-gulp.task('watch', function() {
-  gulp.watch(paths.front_js, ['lint', 'build-js']);
-  gulp.watch(paths.html, ['build-html']);
-  gulp.watch(paths.less, ['lint', 'build-less']);
-});
-
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-back', 'build-translations']);
 
-gulp.task('build-watch', ['build'], function() {
+gulp.task('build-watch', ['lint', 'clean', /*'build-js',*/ 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-back', 'build-translations'], function() {
   gulp.watch(paths.front_js, ['lint']);
   gulp.watch(paths.html, ['build-html']);
   gulp.watch(paths.less, ['lint', 'build-less']);
+
+  var b = watchify(browserify(bargs));
+
+  b.transform(reactify);
+  b.on('log', gutil.log);
+
+  function bundle() {
+    return b.bundle()
+      .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+      .pipe(source('app.js'))
+      .pipe(gulp.dest('dist/www/js'));
+  }
+
+  bundle();
+  b.on('update', bundle);
 });
 
 gulp.task('deploy-app', ['build'], function(callback) {
