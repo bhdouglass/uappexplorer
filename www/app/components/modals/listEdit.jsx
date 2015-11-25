@@ -270,7 +270,7 @@ module.exports = React.createClass({
               <label htmlFor="sort" className="col-sm-3 control-label">Sort Apps By:</label>
               <div className="col-sm-9">
                 <select id="sort" className="form-control" value={this.state.list.sort} onChange={this.changeSort}>
-                  {info.sorts.map(function(sort) {
+                  {info.sorts().map(function(sort) {
                     return <option value={sort.value} key={sort.value}>{sort.label}</option>;
                   }, this)}
                 </select>

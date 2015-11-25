@@ -2,6 +2,7 @@ var React = require('react');
 var Router = require('react-router');
 var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var actions = require('../actions');
 var info = require('../info');
@@ -27,6 +28,7 @@ module.exports = React.createClass({
     apps: ['apps'],
     loading: ['loading'],
     frameworks: ['frameworks'],
+    lng: ['lng'],
   },
 
   getInitialState: function() {
@@ -64,9 +66,10 @@ module.exports = React.createClass({
 
     var license = null;
     if (params.license) {
-      for (var i = 0; i < info.licenses.length; i++) {
-        if (info.licenses[i].value == params.license) {
-          license = info.licenses[i].label;
+      var licenses = info.licenses();
+      for (var i = 0; i < licenses.length; i++) {
+        if (licenses[i].value == params.license) {
+          license = licenses[i].label;
         }
       }
     }
@@ -157,7 +160,7 @@ module.exports = React.createClass({
       search = (
         <span>
           <br/>
-          <span>Containing:</span> "{this.state.search}"
+          {i18n.t('Containing:')} "{this.state.search}"
         </span>
       );
     }
@@ -179,9 +182,9 @@ module.exports = React.createClass({
   renderCategories: function() {
     return (
       <div className="form-group col-md-4">
-        <label htmlFor="category" className="control-label hidden-xs">Category:</label>
+        <label htmlFor="category" className="control-label hidden-xs">{i18n.t('Category:')}</label>
         <select id="category" className="form-control" value={this.state.category} onChange={this.changeCategory}>
-          {info.categories.map(function(category) {
+          {info.categories().map(function(category) {
             return <option value={category.internal_name} key={category.internal_name}>{category.name}</option>;
           }, this)}
         </select>
@@ -203,9 +206,9 @@ module.exports = React.createClass({
   renderTypes: function() {
     return (
       <div className="form-group col-md-4">
-        <label htmlFor="type" className="control-label hidden-xs">Type:</label>
+        <label htmlFor="type" className="control-label hidden-xs">{i18n.t('Type:')}</label>
         <select id="type" className="form-control" value={this.state.type} onChange={this.changeType}>
-          {info.types.map(function(type) {
+          {info.types().map(function(type) {
             return <option value={type.value} key={type.value}>{type.label}</option>;
           }, this)}
         </select>
@@ -227,9 +230,9 @@ module.exports = React.createClass({
   renderSorts: function() {
     return (
       <div className="form-group col-md-4">
-        <label htmlFor="sort" className="control-label hidden-xs">Sort By:</label>
+        <label htmlFor="sort" className="control-label hidden-xs">{i18n.t('Sort By:')}</label>
         <select id="sort" className="form-control" value={this.state.sort} onChange={this.changeSort}>
-          {info.sorts.map(function(sort) {
+          {info.sorts().map(function(sort) {
             return <option value={sort.value} key={sort.value}>{sort.label}</option>;
           }, this)}
         </select>
@@ -279,25 +282,25 @@ module.exports = React.createClass({
           <form>
             <fieldset>
               <div className="form-group col-md-4">
-                <label htmlFor="license" className="control-label">License:</label>
+                <label htmlFor="license" className="control-label">{i18n.t('License:')}</label>
                 <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
-                  {info.licenses.map(function(license) {
+                  {info.licenses().map(function(license) {
                     return <option value={license.value} key={license.value}>{license.label}</option>;
                   }, this)}
                 </select>
               </div>
 
               <div className="form-group col-md-4">
-                <label htmlFor="architecture" className="control-label">Architecture:</label>
+                <label htmlFor="architecture" className="control-label">{i18n.t('Architecture:')}</label>
                 <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
-                  {info.architectures.map(function(architecture) {
+                  {info.architectures().map(function(architecture) {
                     return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
                   }, this)}
                 </select>
               </div>
 
               <div className="form-group col-md-4">
-                <label htmlFor="framework" className="control-label">Framework:</label>
+                <label htmlFor="framework" className="control-label">{i18n.t('Framework:')}</label>
                 <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
                   {this.state.frameworks.map(function(framework) {
                     return <option value={framework} key={framework}>{framework}</option>;
@@ -317,12 +320,13 @@ module.exports = React.createClass({
     var count = 0;
     var pages = 0;
     var apps = [];
-    var category = 'All';
-    var type = info.count_types.all;
+    var category = i18n.t('All');
+    var type = info.count_types().all;
 
-    for (var i = 0; i < info.categories.length; i++) {
-      if (this.state.category == info.categories[i].internal_name) {
-        category = info.categories[i].name;
+    var categories = info.categories();
+    for (var i = 0; i < categories.length; i++) {
+      if (this.state.category == categories[i].internal_name) {
+        category = categories[i].name;
       }
     }
 
@@ -332,7 +336,7 @@ module.exports = React.createClass({
       apps = this.state.apps[this.state.key].apps;
 
       if (this.state.type) {
-        type = info.count_types[this.state.type];
+        type = info.count_types()[this.state.type];
       }
     }
 
@@ -398,7 +402,7 @@ module.exports = React.createClass({
                 <div className="btn-toolbar pull-right more-filters-btn">
                   <div className="btn-group">
                     <a className="btn btn-material-light-blue clickable" onClick={this.toggleFilters}>
-                      <i className={filter_cls}></i> Filters
+                      <i className={filter_cls}></i> {i18n.t('Filters')}
                     </a>
                   </div>
                 </div>
@@ -406,10 +410,10 @@ module.exports = React.createClass({
                 <div className="btn-toolbar pull-right">
                   <div className="btn-group">
                     <a className={grid_cls} onClick={this.changeView.bind(this, 'grid')}>
-                      <span className="hidden-xs">Grid</span> <i className="fa fa-th-large"></i>
+                      <span className="hidden-xs">{i18n.t('Grid')}</span> <i className="fa fa-th-large"></i>
                     </a>
                     <a className={list_cls} onClick={this.changeView.bind(this, 'list')}>
-                      <span className="hidden-xs">List</span> <i className="fa fa-list"></i>
+                      <span className="hidden-xs">{i18n.t('List')}</span> <i className="fa fa-list"></i>
                     </a>
                   </div>
                 </div>

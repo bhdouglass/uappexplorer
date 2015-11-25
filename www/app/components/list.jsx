@@ -1,6 +1,7 @@
 var React = require('react');
 var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
@@ -16,6 +17,7 @@ module.exports = React.createClass({
     auth: ['auth'],
     userList: ['userList'],
     loading: ['loading'],
+    lng: ['lng'],
   },
 
   getInitialState: function() {
@@ -76,14 +78,14 @@ module.exports = React.createClass({
 
     var user_name = '';
     if (this.state.userList.user_name) {
-      user_name = 'By: ' + this.state.userList.user_name;
+      user_name = i18n.t('By:') + ' ' + this.state.userList.user_name;
     }
 
     var no_apps = '';
     if (this.state.userList.packages.length === 0) {
       no_apps = (
         <div className="row">
-          <h3 className="text-center">This list is empty!</h3>
+          <h3 className="text-center">{i18n.t('This list is empty!')}</h3>
         </div>
       );
     }
@@ -93,7 +95,7 @@ module.exports = React.createClass({
         <div className="row list-header" ng-show="list">
           <div className="col-md-8">
             <h1 ng-show="list.name">
-              User List: {this.state.userList.name}
+              {i18n.t('User List:')} {this.state.userList.name}
             </h1>
             {user_name}
           </div>
@@ -104,10 +106,10 @@ module.exports = React.createClass({
                 <div className="btn-toolbar pull-right">
                   <div className="btn-group">
                     <a className={grid_cls} onClick={this.changeView.bind(this, 'grid')}>
-                      <span className="hidden-xs">Grid</span> <i className="fa fa-th-large"></i>
+                      <span className="hidden-xs">{i18n.t('Grid')}</span> <i className="fa fa-th-large"></i>
                     </a>
                     <a className={list_cls} onClick={this.changeView.bind(this, 'list')}>
-                      <span className="hidden-xs">List</span> <i className="fa fa-list"></i>
+                      <span className="hidden-xs">{i18n.t('List')}</span> <i className="fa fa-list"></i>
                     </a>
                   </div>
                 </div>

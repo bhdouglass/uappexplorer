@@ -3,6 +3,7 @@ var Router = require('react-router');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var actions = require('../actions');
 var utils = require('../utils');
@@ -20,6 +21,7 @@ module.exports = React.createClass({
     auth: ['auth'],
     userLists: ['userLists'],
     savingSettings: ['savingSettings'],
+    lng: ['lng'],
   },
 
   getInitialState: function() {
@@ -98,7 +100,7 @@ module.exports = React.createClass({
     var name = this.state.auth.user.name ? this.state.auth.user.name : this.state.auth.user.username;
     var caxton = (
       <span className="small-note">
-        You are already connected via Caxton!
+        {i18n.t('You are already connected via Caxton!')}
       </span>
     );
 
@@ -133,18 +135,19 @@ module.exports = React.createClass({
       <div>
         <div className="row">
           <div className="col-sm-12 text-center">
-            <h1>Welcome {name}</h1>
+            <h1>{i18n.t('Welcome')}</h1>
+            <h3>{name}</h3>
           </div>
         </div>
 
         <div className="row settings">
           <div className="col-sm-offset-2 col-sm-8">
-            <h3>Settings</h3>
+            <h3>{i18n.t('Settings')}</h3>
 
             <form className="form-horizontal" role="form">
               <div className="form-group">
                 <label htmlFor="caxton_code" className="col-sm-3 control-label">
-                  <a href="https://caxton.herokuapp.com/" target="_blank">Caxton Code</a>:
+                  <a href="https://caxton.herokuapp.com/" target="_blank">{i18n.t('Caxton Code')}</a>:
                 </label>
                 <div className="col-sm-9">
                   {caxton}
@@ -159,10 +162,10 @@ module.exports = React.createClass({
         <div className="row lists">
           <div className="col-sm-12">
             <a className="btn btn-material-light-blue btn-sm pull-right" onClick={this.newList}>
-              <i className="fa fa-plus"></i> <span className="hidden-xs">New List</span>
+              <i className="fa fa-plus"></i> <span className="hidden-xs">{i18n.t('New List')}</span>
             </a>
 
-            <h3>My Lists</h3>
+            <h3>{i18n.t('My Lists')}</h3>
           </div>
         </div>
 
@@ -184,15 +187,15 @@ module.exports = React.createClass({
                 <div className="col-xs-12">
                   <div className="pull-right">
                     <Link className="btn btn-info btn-sm hidden-xs" to={link}>
-                      <i className="fa fa-eye"></i> View
+                      <i className="fa fa-eye"></i> {i18n.t('View')}
                     </Link>
 
                     <a className="btn btn-success btn-sm" onClick={this.editList.bind(this, list)}>
-                      <i className="fa fa-edit"></i> <span className="hidden-xs">Edit</span>
+                      <i className="fa fa-edit"></i> <span className="hidden-xs">{i18n.t('Edit')}</span>
                     </a>
 
                     <button className="btn btn-danger btn-sm" onClick={this.removeList.bind(this, list)}>
-                      <i className="fa fa-trash"></i> <span className="hidden-xs">Delete</span>
+                      <i className="fa fa-trash"></i> <span className="hidden-xs">{i18n.t('Delete')}</span>
                     </button>
                   </div>
 
@@ -207,7 +210,7 @@ module.exports = React.createClass({
                       <div className="row-content">
                         <h4 className="list-group-item-heading">{list.name}</h4>
                         <p className="list-group-item-text">
-                          {list.packages.length} apps
+                          {list.packages.length} {i18n.t('apps', {count: list.packages.length})}
                         </p>
                       </div>
                     </Link>

@@ -189,7 +189,7 @@ actions = {
   getFrameworks: function() {
     if (tree.get('frameworks').length === 0) {
       api.getFrameworks().then(function(data) {
-        data.unshift('All');
+        data.unshift('All'); //TODO translate this
         tree.set('frameworks', data);
       });
     }
@@ -462,6 +462,8 @@ actions = {
           defaultNs: 'uappexplorer'
         },
         fallbackLng: ['en_US'],
+        nsseparator: '|',
+        keyseparator: '^',
       }, function() {
         tree.set('lng', lng);
 

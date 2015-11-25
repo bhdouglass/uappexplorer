@@ -4,8 +4,10 @@ var mixins = require('baobab-react/mixins');
 var cookie = require('cookie-cutter');
 var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var actions = require('../actions');
+var tree = require('../state');
 var Nav = require('./helpers/nav');
 var Alerts = require('./helpers/alerts');
 
@@ -22,6 +24,7 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       disclaimer: false,
+      lng: null,
     };
   },
 
@@ -40,6 +43,12 @@ module.exports = React.createClass({
       var now = new Date();
       cookie.set('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
     }
+
+    var self = this;
+    tree.select('lng').on('update', function() {
+      //Hacky, but avoids having _another_ wrapper component
+      self.setState({lng: tree.get('lng')});
+    });
   },
 
   open: function(modal) {
@@ -90,7 +99,7 @@ and Canonical are registered trademarks of Canonical Ltd.
         <div className="container main">
           <div className="row">
             <div className="col-sm-12 text-center disclaimer">
-              <a onClick={this.open.bind(this, 'faq')} className="clickable">This is an unofficial app viewer for Ubuntu Touch apps.</a>
+              <a onClick={this.open.bind(this, 'faq')} className="clickable">{i18n.t('This is an unofficial app viewer for Ubuntu Touch apps.')}</a>
             </div>
           </div>
 
@@ -99,15 +108,15 @@ and Canonical are registered trademarks of Canonical Ltd.
           <div className="row text-center footer">
             <div className="col-sm-4">
               <Link to="/app/uappexplorer.bhdouglass">
-                <i className="fa fa-fw fa-mobile"></i> <span>Web App</span>
+                <i className="fa fa-fw fa-mobile"></i> {i18n.t('Web App')}
               </Link>
 
               <Link to="/app/uappexplorer-scope.bhdouglass">
-                <i className="fa fa-fw fa-mobile"></i> <span>Scope</span>
+                <i className="fa fa-fw fa-mobile"></i> {i18n.t('Scope')}
               </Link>
 
               <Link to="/app/uappexplorer-donate.bhdouglass" className="hidden-xs">
-                <i className="fa fa-fw fa-mobile"></i> <span>Donation Web App</span>
+                <i className="fa fa-fw fa-mobile"></i> {i18n.t('Donation Web App')}
               </Link>
             </div>
 
@@ -117,10 +126,10 @@ and Canonical are registered trademarks of Canonical Ltd.
             </div>
             <div className="col-sm-4">
               <a href="http://feeds.feedburner.com/UbuntuTouchNewApps">
-                <i className="fa fa-fw fa-rss-square"></i> <span>New Apps</span>
+                <i className="fa fa-fw fa-rss-square"></i> {i18n.t('New Apps')}
               </a>
               <a href="http://feeds.feedburner.com/uAppExplorerUpdatedApps">
-                <i className="fa fa-fw fa-rss-square"></i> <span>Updated Apps</span>
+                <i className="fa fa-fw fa-rss-square"></i> {i18n.t('Updated Apps')}
               </a>
             </div>
           </div>

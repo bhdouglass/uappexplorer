@@ -5,6 +5,7 @@ var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var Swipeable = require('react-swipeable');
+var i18n = require('i18next-client');
 
 var actions = require('../actions');
 var utils = require('../utils');
@@ -29,6 +30,7 @@ module.exports = React.createClass({
     userLists: ['userLists'],
     previousApp: ['previousApp'],
     nextApp: ['nextApp'],
+    lng: ['lng'],
   },
 
   getInitialState: function() {
@@ -69,7 +71,7 @@ module.exports = React.createClass({
 
       author = (
         <div>
-          <Link to="/apps" query={query} title="Author" className="clickable">{this.state.app.author}</Link>
+          <Link to="/apps" query={query} title={i18n.t('Author')} className="clickable">{this.state.app.author}</Link>
         </div>
       );
     }
@@ -78,7 +80,7 @@ module.exports = React.createClass({
     if (this.state.app.company) {
       company = (
         <div>
-          <span title="Company">{this.state.app.company}</span>
+          <span title={i18n.t('Company')}>{this.state.app.company}</span>
         </div>
       );
     }
@@ -91,10 +93,10 @@ module.exports = React.createClass({
     );
   },
 
-  renderPrice: function() {
+  renderPrice: function() { //TODO make this its own component
     var p = '';
     if (utils.isFree(this.state.app.prices)) {
-      p = <span className="label label-material-blue">Free</span>;
+      p = <span className="label label-material-blue">{i18n.t('Free')}</span>;
     }
     else {
       p = [];
@@ -116,7 +118,7 @@ module.exports = React.createClass({
         cls = 'btn btn-sm btn-material-red';
         warning = (
           <div className="small-note text-material-red">
-            *This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.
+            {i18n.t('*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.')}
           </div>
         );
       }
@@ -124,9 +126,9 @@ module.exports = React.createClass({
       var link = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
       download = (
         <div className="list-group-item-text">
-          <a href={link} className={cls}>Install</a>
+          <a href={link} className={cls}>{i18n.t('Install')}</a>
           <div className="small-note">
-            *Install will take you to the official appstore on an Ubuntu Touch device
+            {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
           </div>
           {warning}
         </div>
@@ -135,7 +137,7 @@ module.exports = React.createClass({
     else {
       download = (
         <div className="list-group-item-text">
-          <a href={this.state.app.download} className="btn btn-sm btn-success">Download</a>
+          <a href={this.state.app.download} className="btn btn-sm btn-success">{i18n.t('Download')}</a>
         </div>
       );
     }
@@ -169,16 +171,16 @@ module.exports = React.createClass({
       if (this.state.userLists.lists.length === 0) {
         lists = (
           <div>
-            <Link to="/me">No lists, create one!</Link>
+            <Link to="/me">{i18n.t('No lists, create one!')}</Link>
           </div>
         );
       }
       else {
         lists = (
           <div>
-            Add to list:
+            {i18n.t('Add to list:')}
             <select className="form-control" onChange={this.changeList}>
-              <option value="">- Choose a list -</option>
+              <option value="">{i18n.t('- Choose a list -')}</option>
               {this.state.userLists.lists.map(function(list) {
                 if (existing_ids.indexOf(list._id) == -1) {
                   return (
@@ -195,7 +197,7 @@ module.exports = React.createClass({
       if (existing.length > 0) {
         already_on = (
           <div>
-            This app is on these lists:
+            {i18n.t('This app is on these lists:')}
             {existing.map(function(list) {
               var url = '/list/' + list._id;
               return <Link className="label label-success list-label" to={url} key={list._id}>{list.name}</Link>;
@@ -261,20 +263,20 @@ module.exports = React.createClass({
     else if (this.state.tab == 'changelog') {
       var changelog = this.state.app.changelog;
       if (!changelog) {
-        changelog = 'No recent changes';
+        changelog = i18n.t('No recent changes');
       }
       tab = <div dangerouslySetInnerHTML={utils.nl2br(changelog)}></div>;
     }
     else if (this.state.tab == 'info') {
       tab = (
         <div>
-          Version: {this.state.app.version}
+          {i18n.t('Version:')} {this.state.app.version}
           <br/>
-          Updated: {moment(this.state.app.last_updated).format('MMM D, YYYY')}
+          {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
           <br/>
-          License: {this.state.app.license}
+          {i18n.t('License:')} {this.state.app.license}
           <br/>
-          Architecture: {this.state.app.architecture.join(', ')}
+          {i18n.t('Architecture:')} {this.state.app.architecture.join(', ')}
         </div>
       );
     }
@@ -284,14 +286,14 @@ module.exports = React.createClass({
         if (this.state.app.support.indexOf('mailhide') > -1) {
           support = (
             <span>
-              Support: <a href={this.state.app.support} target="_blank" rel="nofollow">Email Support</a>
+              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
             </span>
           );
         }
         else {
           support = (
             <span>
-              Support: <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
+              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
             </span>
           );
         }
@@ -302,7 +304,7 @@ module.exports = React.createClass({
         website = (
           <span>
             <br/>
-            Website: <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
+            {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
           </span>
         );
       }
@@ -312,7 +314,7 @@ module.exports = React.createClass({
         terms = (
           <span>
             <br/>
-            Terms:
+            {i18n.t('Terms:')}
             <div>{this.state.app.terms}</div>
           </span>
         );
@@ -331,16 +333,16 @@ module.exports = React.createClass({
       <div className="col-md-6">
         <ul className="nav nav-pills">
           <li className={tabs.description}>
-            <a onClick={this.changeTab.bind(this, 'description')} className={inner_tabs.description}>Description</a>
+            <a onClick={this.changeTab.bind(this, 'description')} className={inner_tabs.description}>{i18n.t('Description')}</a>
           </li>
           <li className={tabs.changelog}>
-            <a onClick={this.changeTab.bind(this, 'changelog')} className={inner_tabs.changelog}>Changelog</a>
+            <a onClick={this.changeTab.bind(this, 'changelog')} className={inner_tabs.changelog}>{i18n.t('Changelog')}</a>
           </li>
           <li className={tabs.info}>
-            <a onClick={this.changeTab.bind(this, 'info')} className={inner_tabs.info}>Info</a>
+            <a onClick={this.changeTab.bind(this, 'info')} className={inner_tabs.info}>{i18n.t('Info')}</a>
           </li>
           <li className={tabs.support}>
-            <a onClick={this.changeTab.bind(this, 'support')} className={inner_tabs.support}>Support</a>
+            <a onClick={this.changeTab.bind(this, 'support')} className={inner_tabs.support}>{i18n.t('Support')}</a>
           </li>
         </ul>
 
@@ -360,7 +362,7 @@ module.exports = React.createClass({
         <div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <h3>Screenshots</h3>
+              <h3>{i18n.t('Screenshots')}</h3>
             </div>
           </div>
           <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
@@ -399,10 +401,10 @@ module.exports = React.createClass({
       var header = '';
       if (type == 'author') {
         var query = {q: 'author:' + this.state.app.author};
-        header = <Link to="/apps" query={query}>More Apps by {this.state.app.author}</Link>;
+        header = <Link to="/apps" query={query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>;
       }
       else {
-        header = 'Similar Apps';
+        header = i18n.t('Similar Apps');
       }
 
       aa = (
@@ -473,7 +475,7 @@ module.exports = React.createClass({
       if (this.state.reviews.reviews.length === 0) {
         none = (
           <div className="col-sm-4 col-md-offset-4 text-center">
-            <h4>No reviews yet!</h4>
+            <h4>{i18n.t('No reviews yet!')}</h4>
           </div>
         );
       }
@@ -483,7 +485,7 @@ module.exports = React.createClass({
         more = (
           <div className="row">
             <div className="col-sm-12 text-center">
-              <a onClick={this.loadMoreReviews} className="btn btn-info">Load more reviews</a>
+              <a onClick={this.loadMoreReviews} className="btn btn-info">{i18n.t('Load more reviews')}</a>
             </div>
           </div>
         );
@@ -495,7 +497,7 @@ module.exports = React.createClass({
         <div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <h3>User Reviews</h3>
+              <h3>{i18n.t('User Reviews')}</h3>
             </div>
           </div>
 
@@ -503,14 +505,14 @@ module.exports = React.createClass({
             <div className="col-md-12">
               <div className="row star-chart text-center">
                 <div className="col-sm-2 col-sm-offset-3 left-panel">
-                  <div className="text-material-light-blue text-large text-center" title="Star Rating">
+                  <div className="text-material-light-blue text-large text-center" title={i18n.t('Star Rating')}>
                     <i className="fa fa-star"></i> {bayesian_average.toFixed(2)}
                   </div>
 
                   <Hearts hearts={this.state.app.points} />
 
                   <br/>
-                  <span title="Total Reviews">
+                  <span title={i18n.t('Total Reviews')}>
                     <i className="fa fa-users"></i> {this.state.reviews.stats.total}
                   </span>
                 </div>
@@ -591,7 +593,7 @@ module.exports = React.createClass({
                           <div className="list-group-item-text review-text">
                             {review.review_text}
                             <br/>
-                            For version: {review.version}
+                            {i18n.t('For version:')} {review.version}
                           </div>
                       </div>
                     </div>
@@ -616,7 +618,7 @@ module.exports = React.createClass({
       reviews = (
         <div className="row">
           <div className="col-md-12 text-center">
-            <i className="fa fa-spin fa-spinner fa-2x"></i> Loading reviews...
+            <i className="fa fa-spin fa-spinner fa-2x"></i> {i18n.t('Loading reviews...')}
           </div>
         </div>
       );
@@ -660,7 +662,7 @@ module.exports = React.createClass({
       if (this.state.previousApp && this.state.previousApp.title) {
         previous = (
           <div className="previous-app">
-            <a onClick={this.swipe.bind(this, 'previous')} title={'Previous App: ' + this.state.previousApp.title} className="text-material-grey clickable">
+            <a onClick={this.swipe.bind(this, 'previous')} title={i18n.t('Previous App:') + ' ' + this.state.previousApp.title} className="text-material-grey clickable">
               <i className="fa fa-2x fa-chevron-left"></i>
             </a>
           </div>
@@ -671,7 +673,7 @@ module.exports = React.createClass({
       if (this.state.nextApp && this.state.nextApp.title) {
         next = (
           <div className="next-app">
-            <a onClick={this.swipe.bind(this, 'next')} title={'Next App: ' + this.state.nextApp.title} className="text-material-grey clickable">
+            <a onClick={this.swipe.bind(this, 'next')} title={i18n.t('Next App:') + ' ' + this.state.nextApp.title} className="text-material-grey clickable">
               <i className="fa fa-2x fa-chevron-right"></i>
             </a>
           </div>

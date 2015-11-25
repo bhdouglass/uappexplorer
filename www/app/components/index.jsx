@@ -120,7 +120,7 @@ module.exports = React.createClass({
         <div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1><Link to="/apps?sort=-points">Top Apps</Link></h1>
+              <h1><Link to="/apps?sort=-points">{i18n.t('Top Apps')}</Link></h1>
             </div>
           </div>
 
@@ -139,7 +139,7 @@ module.exports = React.createClass({
         <div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <h1><Link to="/apps">New Apps</Link></h1>
+              <h1><Link to="/apps">{i18n.t('New Apps')}</Link></h1>
             </div>
           </div>
 
@@ -156,14 +156,45 @@ module.exports = React.createClass({
       <div className="main">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h1><Link to="/apps">Browse</Link></h1>
+            <h1><Link to="/apps">{i18n.t('Browse')}</Link></h1>
           </div>
         </div>
         <div className="row">
-          {this.renderCell('Apps', 'apps', this.state.counts.applications, '/apps?type=application', 'Browse Apps', 'fa fa-mobile background-material-light-blue')}
-          {this.renderCell('Web Apps', 'web apps', this.state.counts.webapps, '/apps?type=webapp', 'Browse Web Apps', 'fa fa-bookmark background-material-cyan')}
-          {this.renderCell('Games', 'games', this.state.counts.games, '/apps?category=games', 'Browse Games', 'fa fa-gamepad background-material-light-green')}
-          {this.renderCell('Scopes', 'scopes', this.state.counts.scopes, '/apps?type=scope', 'Browse Scopes', 'fa fa-search background-material-deep-orange')}
+          {this.renderCell(
+            i18n.t('Apps'),
+            i18n.t('apps', {count: this.state.counts.applications}),
+            this.state.counts.applications,
+            '/apps?type=application',
+            i18n.t('Browse Apps'),
+            'fa fa-mobile background-material-light-blue'
+          )}
+
+          {this.renderCell(
+            i18n.t('Web Apps'),
+            i18n.t('web apps', {count: this.state.counts.webapps}),
+            this.state.counts.webapps,
+            '/apps?type=webapp',
+            i18n.t('Browse Web Apps'),
+            'fa fa-bookmark background-material-cyan'
+          )}
+
+          {this.renderCell(
+            i18n.t('Games'),
+            i18n.t('games', {count: this.state.counts.games}),
+            this.state.counts.games,
+            '/apps?category=games',
+            i18n.t('Browse Games'),
+            'fa fa-gamepad background-material-light-green'
+          )}
+
+          {this.renderCell(
+            i18n.t('Scopes'),
+            i18n.t('scopes', {count: this.state.counts.scopes}),
+            this.state.counts.scopes,
+            '/apps?type=scope',
+            i18n.t('Browse Scopes'),
+            'fa fa-search background-material-deep-orange'
+          )}
         </div>
 
         {this.renderEssentialApps()}
