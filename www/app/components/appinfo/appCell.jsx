@@ -4,10 +4,10 @@ var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');
 
-var utils = require('../../utils');
 var Types = require('./types');
 var Stars = require('./stars');
 var Hearts = require('./hearts');
+var Price = require('./price');
 
 module.exports = React.createClass({
   displayName: 'AppCell',
@@ -40,18 +40,6 @@ module.exports = React.createClass({
     if (this.props.onClick) {
       this.props.onClick(event);
     }
-  },
-
-  renderPrice: function() {
-    var price = utils.price(this.props.app.prices);
-    var cls = 'label label-material-green';
-    if (utils.isFree(this.props.app.prices)) {
-      cls = 'label label-material-deep-orange';
-    }
-
-    return (
-      <div className={cls}>{price}</div>
-    );
   },
 
   renderDescription: function() {
@@ -89,7 +77,7 @@ module.exports = React.createClass({
               <Types types={this.props.app.types} />
             </div>
             <div className="least-content-lower">
-              {this.renderPrice()}
+              <Price prices={this.props.app.prices} currency="USD" />
             </div>
 
             <h4 className="list-group-item-heading word-break">{this.props.app.title}</h4>

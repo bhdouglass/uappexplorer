@@ -12,6 +12,7 @@ var utils = require('../utils');
 var Types = require('./appinfo/types');
 var Stars = require('./appinfo/stars');
 var Hearts = require('./appinfo/hearts');
+var Price = require('./appinfo/price');
 var AppCell = require('./appinfo/appCell');
 var Share = require('./helpers/share');
 
@@ -91,22 +92,6 @@ module.exports = React.createClass({
         {company}
       </div>
     );
-  },
-
-  renderPrice: function() { //TODO make this its own component
-    var p = '';
-    if (utils.isFree(this.state.app.prices)) {
-      p = <span className="label label-material-blue">{i18n.t('Free')}</span>;
-    }
-    else {
-      p = [];
-      for (var currency in this.state.app.prices) {
-        var price = utils.price(this.state.app.prices, currency);
-        p.push(<span  className="label label-material-green price" key={currency}>{price}</span>);
-      }
-    }
-
-    return p;
   },
 
   renderDownload: function() {
@@ -706,7 +691,7 @@ module.exports = React.createClass({
 
                       {this.renderAuthorInfo()}
 
-                      {this.renderPrice()}
+                      <Price prices={this.state.app.prices} />
 
                       <span className="pull-right visible-xs">
                         <Types types={this.state.app.types} />
