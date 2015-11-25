@@ -22,6 +22,8 @@
     "bootstrap": "~3.3.5",
     "font-awesome": "fontawesome#~4.4.0",
     "slick-carousel": "~1.5.8",
-    "animate.css": "~3.4.0"
+    "animate.css": "~3.4.0",
+    "swipebox": "~1.4.1",
+    "jquery": "~2.1.4"
   }
 }

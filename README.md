@@ -83,7 +83,7 @@ With the following env vars:
 uApp Explorer is currently setup on 2 small [Openshift](https://www.openshift.com/) "gears"
 (one for the app and api, another for the spider). Deployment is done via
 [Codeship](https://codeship.com/). The mongo database is hosted on [Mongolab](https://mongolab.com/).
-uApp Explorer uses the [Ubuntu Click api]((https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex)
+uApp Explorer uses the [Ubuntu Click api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex)
 to get app data and for parsing app packages. [Papertrail](https://papertrailapp.com/)
 is used for logging and [Mailhide](http://www.google.com/recaptcha/mailhide/apikey)
 is used to protect email addresses.

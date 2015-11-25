@@ -2,9 +2,8 @@ window.React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var createBrowserHistory = require('history/lib/createBrowserHistory');
-window.$ = window.jQuery = require('jquery');
+//window.$ = window.jQuery = require('jquery');
 require('bootstrap');
-
 
 var Root = require('./components/root');
 var Index = require('./components/index');
@@ -21,7 +20,15 @@ var h = createBrowserHistory({
 
 h.listen(function(location) {
   actions.setLocation(location.pathname + location.search);
+
+  window.jQuery('#main-menu').collapse('hide');
+
+  if (window.jQuery.swipebox.isOpen) {
+    window.jQuery.swipebox.close();
+  }
 });
+
+window.jQuery('.swipebox').swipebox();
 
 ReactDOM.render((
   <ReactRouter.Router history={h}>

@@ -23,6 +23,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var i18next = require('gulp-i18next-conv');
 var jsonminify = require('gulp-jsonminify');
+var addsrc = require('gulp-add-src');
 
 var paths = {
   main_js: 'www/app/index.jsx',
@@ -30,14 +31,22 @@ var paths = {
   lint: ['www/app/**/*.js', 'www/app/**/*.jsx'],
   back_js: ['gulpfile.js', 'src/**/*.js'],
   back_extra: ['package.json', 'npm-shrinkwrap.json', 'src/**/*.json', '.openshift/**/*'],
-  imgs: 'www/img/*',
+  imgs: [
+    'www/img/*',
+    'www/bower/swipebox/src/img/*'
+  ],
   less: 'www/less/*.less',
+  lib_js: [ //TODO see if there is a better way to include this
+    'www/bower/jquery/dist/jquery.min.js',
+    'www/bower/swipebox/src/js/jquery.swipebox.min.js',
+  ],
   css: [
     'www/bower/bootstrap/dist/css/bootstrap.min.css',
     'www/bower/bootstrap-material-design/dist/css/material.min.css',
     'www/bower/font-awesome/css/font-awesome.min.css',
     'www/bower/slick-carousel/slick/slick.css',
     'www/bower/animate.css/animate.min.css',
+    'www/bower/swipebox/src/css/swipebox.min.css',
   ],
   fonts: [
     'www/bower/font-awesome/fonts/*',
@@ -134,6 +143,8 @@ gulp.task('build-js', function() {
     .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(uglify())
+    .pipe(addsrc(paths.lib_js))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('dist/www/js'));
 });
 
@@ -178,6 +189,9 @@ gulp.task('build-watch', ['lint', 'clean', /*'build-js',*/ 'build-img', 'build-l
     return b.bundle()
       .on('error', gutil.log.bind(gutil, 'Browserify Error'))
       .pipe(source('app.js'))
+      .pipe(buffer())
+      .pipe(addsrc(paths.lib_js))
+      .pipe(concat('app.js'))
       .pipe(gulp.dest('dist/www/js'));
   }
 

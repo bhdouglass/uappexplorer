@@ -67,6 +67,7 @@
     "del": "^1.1.1",
     "git-push": "^0.1.1",
     "gulp": "^3.8.11",
+    "gulp-add-src": "^0.2.0",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-concat": "^2.5.2",
     "gulp-htmlmin": "^1.1.1",
