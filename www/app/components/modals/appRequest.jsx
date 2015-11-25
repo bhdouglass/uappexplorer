@@ -1,17 +1,23 @@
 var React = require('react');
 var Router = require('react-router');
+var mixins = require('baobab-react/mixins');
 var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var Link = require('react-router').Link;
+var i18n = require('i18next-client');
 
 var actions = require('../../actions');
 
 module.exports = React.createClass({
   displayName: 'AppRequest',
   mixins: [
-    PureRenderMixin,
+    mixins.branch,
     Router.History,
+    PureRenderMixin,
   ],
+  cursors: {
+    lng: ['lng'],
+  },
 
   getInitialState: function() {
     return {
@@ -67,8 +73,8 @@ module.exports = React.createClass({
     var status = '';
     if (this.state.success === true) {
       status = (
-        <div className="alert alert-success text-center" ng-if="success === true">
-          <h4>Found the requested app</h4>
+        <div className="alert alert-success text-center">
+          <h4>{i18n.t('Found the requested app')}</h4>
           <Link to={'/app/' + this.state.requested_app.name} onClick={this.props.close}>
             Go there now <i className="fa fa-external-link"></i>
           </Link>
@@ -78,7 +84,7 @@ module.exports = React.createClass({
     else if (this.state.success === false) {
       status = (
         <div className="alert alert-warning text-center">
-          <h4>Could not find the requested app</h4>
+          <h4>{i18n.t('Could not find the requested app')}</h4>
         </div>
       );
     }
@@ -86,7 +92,7 @@ module.exports = React.createClass({
     return (
       <Modal show={this.state.show} onHide={this.close}>
         <Modal.Header closeButton>
-          <Modal.Title>Missing an app?</Modal.Title>
+          <Modal.Title>{i18n.t('Missing an app?')}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -98,11 +104,11 @@ module.exports = React.createClass({
 
           <div className="row">
             <div className="col-sm-12">
-              Find an app that has not yet been fetched from the official appstore.
+              {i18n.t('Find an app that has not yet been fetched from the official appstore.')}
               <br/>
               <br/>
               <div className="form-group">
-                <label className="control-label" htmlFor="name">App Name (example: com.ubuntu.developer.example)</label>
+                <label className="control-label" htmlFor="name">{i18n.t('App Name (example: com.ubuntu.developer.example)')}</label>
                 <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.changeName} />
               </div>
             </div>
@@ -111,10 +117,10 @@ module.exports = React.createClass({
 
         <Modal.Footer>
           <span>
-            <a className="btn btn-warning" onClick={this.close}>Close</a>
+            <a className="btn btn-warning" onClick={this.close}>{i18n.t('Close')}</a>
           </span>
           <span>
-            <a className="btn btn-material-blue" onClick={this.request}>Find</a>
+            <a className="btn btn-material-blue" onClick={this.request}>{i18n.t('Find')}</a>
           </span>
         </Modal.Footer>
       </Modal>

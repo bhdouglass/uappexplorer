@@ -3,6 +3,7 @@ var Modal = require('react-bootstrap/lib/Modal');
 var mixins = require('baobab-react/mixins');
 var debounce = require('debounce');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
+var i18n = require('i18next-client');
 
 var actions = require('../../actions');
 var info = require('../../info');
@@ -23,6 +24,7 @@ module.exports = React.createClass({
   cursors: {
     loading: ['loading'],
     apps: ['apps'],
+    lng: ['lng'],
   },
 
   getInitialState: function() {
@@ -208,19 +210,19 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var title = 'Create List';
+    var title = i18n.t('Create List');
     var save = (
       <span>
-        <i className="fa fa-plus"></i> Create
+        <i className="fa fa-plus"></i> {i18n.t('Create')}
       </span>
     );
 
     if (this.state.list && this.state.list._id) {
-      title = 'Edit List';
+      title = i18n.t('Edit List');
 
       save = (
         <span>
-          <i className="fa fa-check"></i> Save
+          <i className="fa fa-check"></i> {i18n.t('Save')}
         </span>
       );
     }
@@ -244,7 +246,7 @@ module.exports = React.createClass({
     if (!this.state.loading && search_apps.length === 0 && this.state.term !== '') {
       not_found = (
         <div className="text-center">
-          No apps found, try searching again.
+          {i18n.t('No apps found, try searching again.')}
         </div>
       );
     }
@@ -260,14 +262,14 @@ module.exports = React.createClass({
 
           <form className="form-horizontal list-edit" role="form">
             <div className="form-group">
-              <label htmlFor="name" className="col-sm-3 control-label">List Name:</label>
+              <label htmlFor="name" className="col-sm-3 control-label">{i18n.t('List Name:')}</label>
               <div className="col-sm-9">
                 <input type="text" className="form-control" id="name" value={this.state.list.name} onChange={this.changeName} />
               </div>
             </div>
 
             <div className="form-group">
-              <label htmlFor="sort" className="col-sm-3 control-label">Sort Apps By:</label>
+              <label htmlFor="sort" className="col-sm-3 control-label">{i18n.t('Sort Apps By:')}</label>
               <div className="col-sm-9">
                 <select id="sort" className="form-control" value={this.state.list.sort} onChange={this.changeSort}>
                   {info.sorts().map(function(sort) {
@@ -278,7 +280,7 @@ module.exports = React.createClass({
             </div>
 
             <div className="form-group">
-              <label htmlFor="name" className="col-sm-3 control-label">Apps:</label>
+              <label htmlFor="name" className="col-sm-3 control-label">{i18n.t('Apps:')}</label>
               <div className="col-sm-9">
                 {list_apps.map(function(app) {
                   var component = '';
@@ -296,7 +298,7 @@ module.exports = React.createClass({
             </div>
 
             <div className="form-group">
-              <label htmlFor="search" className="col-sm-3 control-label">Add Apps:</label>
+              <label htmlFor="search" className="col-sm-3 control-label">{i18n.t('Add Apps:')}</label>
               <div className="col-sm-9">
                 <div className="input-group search-box">
                   <input type="text" className="form-control" id="search" onChange={this.debounceSearch} defaultValue={this.state.term} />
@@ -324,7 +326,7 @@ module.exports = React.createClass({
         <Modal.Footer>
           <span>
             <a className="btn btn-info" onClick={this.onHide.bind(this, false)}>
-              <i className="fa fa-close"></i> Close
+              <i className="fa fa-close"></i> {i18n.t('Close')}
             </a>
           </span>
 
