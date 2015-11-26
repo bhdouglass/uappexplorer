@@ -4,53 +4,16 @@ var cookie = require('cookie-cutter');
 
 var tree = require('./state');
 var api = require('./api');
+var utils = require('./utils');
 
 var actions = {};
 actions = {
-  getCounts: function() {
-    if (!tree.get('counts').loaded) {
-      tree.set('loading', true);
-      api.getCounts().then(function(data) {
+  getInfo: function() {
+    if (!tree.get('info').loaded) {
+      api.getInfo().then(function(data) {
         data.loaded = true;
-        tree.set('counts', data);
-        tree.set('loading', false);
-      }).catch(function() {
-        tree.set('loading', false);
-      });
-    }
-  },
-
-  getEssentials: function() {
-    if (!tree.get('essentials').loaded) {
-      api.getEssentials().then(function(data) {
-        tree.set('essentials', {
-          loaded: true,
-          apps: data,
-        });
-      });
-    }
-  },
-
-  getTopApps: function() {
-    if (tree.get('top').length === 0) {
-      tree.set('loading', true);
-      api.getApps({sort: '-points', limit: 6}).then(function(data) {
-        tree.set('top', data.apps);
-        tree.set('loading', false);
-      }).catch(function() {
-        tree.set('loading', false);
-      });
-    }
-  },
-
-  getNewApps: function() {
-    if (tree.get('new').length === 0) {
-      tree.set('loading', true);
-      api.getApps({sort: '-published_date', limit: 3}).then(function(data) {
-        tree.set('new', data.apps);
-        tree.set('loading', false);
-      }).catch(function() {
-        tree.set('loading', false);
+        data.essentials.apps = utils.shuffle(data.essentials.apps);
+        tree.set('info', data);
       });
     }
   },

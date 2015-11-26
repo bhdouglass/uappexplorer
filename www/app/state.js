@@ -17,12 +17,30 @@ module.exports = new Baobab({
     current: '/',
   },
 
-  counts: {
-    applications: 0,
-    webapps: 0,
-    scopes: 0,
-    games: 0,
+  info: {
     loaded: false,
+
+    counts: {
+      applications: 0,
+      webapps: 0,
+      scopes: 0,
+      games: 0,
+    },
+
+    top: {
+      count: 0,
+      apps: [],
+    },
+
+    'new': {
+      count: 0,
+      apps: [],
+    },
+
+    essentials: {
+      count: 0,
+      apps: [],
+    }
   },
 
   auth: {
@@ -41,15 +59,9 @@ module.exports = new Baobab({
     query: {},
   },
 
-  top: [],
-  'new': [],
   apps: {},
   cache_keys: [],
   frameworks: [],
-  essentials: {
-    loaded: false,
-    apps: [],
-  },
 
   app: null,
   reviews: {},

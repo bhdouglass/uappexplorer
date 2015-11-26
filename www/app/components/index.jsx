@@ -16,19 +16,12 @@ module.exports = React.createClass({
     PureRenderMixin,
   ],
   cursors: {
-    counts: ['counts'],
-    top: ['top'],
-    'new': ['new'],
-    essentials: ['essentials'],
+    info: ['info'],
     lng: ['lng'],
   },
 
   componentWillMount: function() {
-    //TODO combine into one network request
-    actions.getCounts();
-    actions.getTopApps();
-    actions.getNewApps();
-    actions.getEssentials();
+    actions.getInfo();
   },
 
   renderCount: function(name, count) {
@@ -69,7 +62,7 @@ module.exports = React.createClass({
 
   renderEssentialApps: function() {
     var essentials = '';
-    if (this.state.essentials.loaded) {
+    if (this.state.info.loaded && this.state.info.essentials) {
       var settings = {
         dots: false,
         infinite: true,
@@ -93,7 +86,7 @@ module.exports = React.createClass({
           <div className="row">
             <div className="essentials margin-auto">
               <Slider {...settings}>
-                {this.state.essentials.apps.map(function(app) {
+                {this.state.info.essentials.apps.map(function(app) {
                   var link = '/app/' + app.name;
                   return (
                     <div className="ubuntu-shape" key={link}>
@@ -116,7 +109,7 @@ module.exports = React.createClass({
 
   renderTopApps: function() {
     var top = '';
-    if (this.state.top.length > 0) {
+    if (this.state.info.top.apps.length > 0) {
       top = (
         <div>
           <div className="row">
@@ -125,7 +118,7 @@ module.exports = React.createClass({
             </div>
           </div>
 
-          <AppList apps={this.state.top} view="grid" />
+          <AppList apps={this.state.info.top.apps} view="grid" />
         </div>
       );
     }
@@ -144,8 +137,8 @@ module.exports = React.createClass({
         <div className="row">
           {this.renderCell(
             i18n.t('Apps'),
-            i18n.t('apps', {count: this.state.counts.applications}),
-            this.state.counts.applications,
+            i18n.t('apps', {count: this.state.info.counts.applications}),
+            this.state.info.counts.applications,
             '/apps?type=application',
             i18n.t('Browse Apps'),
             'fa fa-mobile background-material-light-blue'
@@ -153,8 +146,8 @@ module.exports = React.createClass({
 
           {this.renderCell(
             i18n.t('Web Apps'),
-            i18n.t('web apps', {count: this.state.counts.webapps}),
-            this.state.counts.webapps,
+            i18n.t('web apps', {count: this.state.info.counts.webapps}),
+            this.state.info.counts.webapps,
             '/apps?type=webapp',
             i18n.t('Browse Web Apps'),
             'fa fa-bookmark background-material-cyan'
@@ -162,8 +155,8 @@ module.exports = React.createClass({
 
           {this.renderCell(
             i18n.t('Games'),
-            i18n.t('games', {count: this.state.counts.games}),
-            this.state.counts.games,
+            i18n.t('games', {count: this.state.info.counts.games}),
+            this.state.info.counts.games,
             '/apps?category=games',
             i18n.t('Browse Games'),
             'fa fa-gamepad background-material-light-green'
@@ -171,8 +164,8 @@ module.exports = React.createClass({
 
           {this.renderCell(
             i18n.t('Scopes'),
-            i18n.t('scopes', {count: this.state.counts.scopes}),
-            this.state.counts.scopes,
+            i18n.t('scopes', {count: this.state.info.counts.scopes}),
+            this.state.info.counts.scopes,
             '/apps?type=scope',
             i18n.t('Browse Scopes'),
             'fa fa-search background-material-deep-orange'
@@ -182,7 +175,7 @@ module.exports = React.createClass({
         {this.renderEssentialApps()}
         {this.renderTopApps()}
 
-        <AppRow apps={this.state['new']}>
+        <AppRow apps={this.state.info['new'].apps}>
           <Link to="/apps">{i18n.t('New Apps')}</Link>
         </AppRow>
       </div>

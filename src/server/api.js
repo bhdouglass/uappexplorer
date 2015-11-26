@@ -26,6 +26,68 @@ function miniPkg(pkg) {
   };
 }
 
+function counts(callback) {
+  var results = {
+    applications: 0,
+    webapps: 0,
+    scopes: 0,
+    games: 0,
+  };
+
+  function count(query, name) {
+    return function(callback) {
+      db.Package.count(query, function(err, count) {
+        if (err) {
+          callback(err);
+        }
+        else {
+          callback(null, name, count);
+        }
+      });
+    };
+  }
+
+  async.series([
+    count({types: {'$in': ['application']}}, 'applications'),
+    count({types: {'$in': ['webapp']}}, 'webapps'),
+    count({types: {'$in': ['scope']}}, 'scopes'),
+    count({categories: 'games'}, 'games'),
+  ], function(err, result) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      _.forEach(result, function(r) {
+        results[r[0]] = r[1];
+      });
+
+      callback(null, results);
+    }
+  });
+}
+
+function essentials(mini, callback) {
+  db.Package.find({name: {'$in': essential}}, function(err, pkgs) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      var new_pkgs = [];
+      _.forEach(pkgs, function(pkg) {
+        if (mini) {
+          new_pkgs.push(miniPkg(pkg));
+        }
+        else {
+          pkg.short_description = pkg.tagline;
+          new_pkgs.push(pkg);
+        }
+      });
+
+      callback(null, new_pkgs);
+    }
+  });
+}
+
 function setup(app, success, error) {
   app.get('/api/health', function(req, res) {
     success(res, {
@@ -79,7 +141,7 @@ function setup(app, success, error) {
     success(res, licenses);
   });
 
-  function appsFromMongo(findQuery, req, res) {
+  function appsFromMongo(findQuery, req, callback) {
     var regxp = null;
 
     findQuery.takedown = {'$ne': true};
@@ -93,7 +155,7 @@ function setup(app, success, error) {
 
     countQuery.exec(function(err, count) {
       if (err) {
-        error(res, err);
+        callback(err);
       }
       else {
         var query = db.Package.find(findQuery);
@@ -123,7 +185,7 @@ function setup(app, success, error) {
 
         query.exec(function(err, pkgs) {
           if (err) {
-            error(res, err);
+            callback(err);
           }
           else {
             if (req.query.mini == 'true') {
@@ -135,7 +197,7 @@ function setup(app, success, error) {
               pkgs = new_pkgs;
             }
 
-            success(res, {
+            callback(null, {
               count: count,
               apps: pkgs,
             });
@@ -145,7 +207,7 @@ function setup(app, success, error) {
     });
   }
 
-  function appsFromElasticsearch(findQuery, req, res) {
+  function appsFromElasticsearch(findQuery, req, callback) {
     var client = new elasticsearch.Client({host: config.elasticsearch.uri});
 
     var eQuery = {};
@@ -212,7 +274,7 @@ function setup(app, success, error) {
       body: body
     }, function (err, response) {
       if (err) {
-        error(res, err);
+        callback(err);
       }
       else {
         var pkgs = [];
@@ -232,7 +294,7 @@ function setup(app, success, error) {
           }
         });
 
-        success(res, {
+        callback(null, {
           count: response.hits.total,
           apps: pkgs,
         });
@@ -240,8 +302,7 @@ function setup(app, success, error) {
     });
   }
 
-  //TODO cache this to speed up requests
-  app.get('/api/apps', function(req, res) {
+  function apps(req, callback) {
     var findQuery = req.query.query ? JSON.parse(req.query.query) : {};
     if (!findQuery.types) {
       findQuery.types = {$in: [
@@ -255,79 +316,53 @@ function setup(app, success, error) {
       findQuery.license = {$in: licenses};
     }
 
+    console.log(findQuery);
+
     if (req.query.search) {
       if (req.query.search.indexOf('author:') === 0) {
-        appsFromMongo(findQuery, req, res);
+        appsFromMongo(findQuery, req, callback);
       }
       else {
-        appsFromElasticsearch(findQuery, req, res);
+        appsFromElasticsearch(findQuery, req, callback);
       }
     }
     else {
-      appsFromMongo(findQuery, req, res);
+      appsFromMongo(findQuery, req, callback);
     }
-  });
+  }
 
-  //TODO cache this
-  app.get('/api/apps/essentials', function(req, res) {
-    db.Package.find({name: {'$in': essential}}, function(err, pkgs) {
+  //TODO cache this to speed up requests
+  app.get('/api/apps', function(req, res) {
+    apps(req, function(err, result) {
       if (err) {
         error(res, err);
       }
       else {
-        var new_pkgs = [];
-        _.forEach(pkgs, function(pkg) {
-          if (req.query.mini == 'true') {
-            new_pkgs.push(miniPkg(pkg));
-          }
-          else {
-            pkg.short_description = pkg.tagline;
-            new_pkgs.push(pkg);
-          }
-        });
+        success(res, result);
+      }
+    });
+  });
 
-        success(res, new_pkgs);
+  //TODO cache this
+  app.get('/api/apps/essentials', function(req, res) {
+    essentials((req.query.mini == 'true'), function(err, pkgs) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        success(res, pkgs);
       }
     });
   });
 
   //TODO cache this
   app.get('/api/apps/counts', function(req, res) {
-    var counts = {
-      applications: 0,
-      webapps: 0,
-      scopes: 0,
-      games: 0,
-    };
-
-    function count(query, name) {
-      return function(callback) {
-        db.Package.count(query, function(err, count) {
-          if (err) {
-            callback(err);
-          }
-          else {
-            callback(null, name, count);
-          }
-        });
-      };
-    }
-
-    async.series([
-      count({types: {'$in': ['application']}}, 'applications'),
-      count({types: {'$in': ['webapp']}}, 'webapps'),
-      count({types: {'$in': ['scope']}}, 'scopes'),
-      count({categories: 'games'}, 'games'),
-    ], function(err, result) {
+    counts(function(err, results) {
       if (err) {
         error(res, err);
       }
       else {
-        _.forEach(result, function(r) {
-          counts[r[0]] = r[1];
-        });
-
-        success(res, counts);
+        success(res, results);
       }
     });
   });
@@ -456,6 +491,66 @@ function setup(app, success, error) {
           more: more,
           stats: rev.stats,
         });
+      }
+    });
+  });
+
+  app.get('/api/info', function(req, res) {
+    //TODO async call
+
+    async.series([
+      function(callback) {
+        counts(function(err, results) {
+          callback(err, 'counts', results);
+        });
+      },
+
+      function(callback) {
+        essentials(true, function(err, results) {
+          callback(err, 'essentials', results);
+        });
+      },
+
+      function(callback) {
+        apps({query: {
+          sort: '-points',
+          limit: 6,
+          search: null,
+          mini: 'true',
+        }}, function(err, results) {
+          callback(err, 'top', results);
+        });
+      },
+
+      function(callback) {
+        apps({query: {
+          sort: '-published_date',
+          limit: 3,
+          search: null,
+          mini: 'true',
+        }}, function(err, results) {
+          callback(err, 'new', results);
+        });
+      },
+    ], function(err, results) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        var response = {};
+        _.forEach(results, function(r) {
+          if (r[0] == 'essentials') {
+            response.essentials = {
+              count: r[1].length,
+              apps: r[1],
+            };
+          }
+          else {
+            response[r[0]] = r[1];
+          }
+        });
+
+        success(res, response);
       }
     });
   });
