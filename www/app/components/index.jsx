@@ -7,6 +7,7 @@ var i18n = require('i18next-client');
 
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
+var AppRow = require('./appinfo/appRow');
 
 module.exports = React.createClass({
   displayName: 'Index',
@@ -132,25 +133,6 @@ module.exports = React.createClass({
     return top;
   },
 
-  renderNewApps: function() {
-    var nw = '';
-    if (this.state['new'].length > 0) {
-      nw = (
-        <div>
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h1><Link to="/apps">{i18n.t('New Apps')}</Link></h1>
-            </div>
-          </div>
-
-          <AppList apps={this.state['new']} view="grid" />
-        </div>
-      );
-    }
-
-    return nw;
-  },
-
   render: function() {
     return (
       <div className="main">
@@ -199,7 +181,10 @@ module.exports = React.createClass({
 
         {this.renderEssentialApps()}
         {this.renderTopApps()}
-        {this.renderNewApps()}
+
+        <AppRow apps={this.state['new']}>
+          <Link to="/apps">{i18n.t('New Apps')}</Link>
+        </AppRow>
       </div>
     );
   }

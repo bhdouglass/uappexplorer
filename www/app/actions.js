@@ -34,7 +34,7 @@ actions = {
   getTopApps: function() {
     if (tree.get('top').length === 0) {
       tree.set('loading', true);
-      api.getApps({sort: '-points', limit: 12}).then(function(data) {
+      api.getApps({sort: '-points', limit: 6}).then(function(data) {
         tree.set('top', data.apps);
         tree.set('loading', false);
       }).catch(function() {
@@ -46,7 +46,7 @@ actions = {
   getNewApps: function() {
     if (tree.get('new').length === 0) {
       tree.set('loading', true);
-      api.getApps({sort: '-published_date', limit: 6}).then(function(data) {
+      api.getApps({sort: '-published_date', limit: 3}).then(function(data) {
         tree.set('new', data.apps);
         tree.set('loading', false);
       }).catch(function() {
@@ -428,6 +428,13 @@ actions = {
       //Return to the app list if not already returning to the app list or a user list
       tree.set('location', {
         previous: '/apps',
+        current: location,
+      });
+    }
+    else if (location.indexOf('/apps') === 0) {
+      //Return to the main page from the app list
+      tree.set('location', {
+        previous: '/',
         current: location,
       });
     }

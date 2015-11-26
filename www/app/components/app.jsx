@@ -13,7 +13,7 @@ var Types = require('./appinfo/types');
 var Stars = require('./appinfo/stars');
 var Hearts = require('./appinfo/hearts');
 var Price = require('./appinfo/price');
-var AppCell = require('./appinfo/appCell');
+var AppRow = require('./appinfo/appRow');
 var Share = require('./helpers/share');
 
 module.exports = React.createClass({
@@ -372,61 +372,6 @@ module.exports = React.createClass({
     return screenshots;
   },
 
-  renderApps: function(type) {
-    var apps = [];
-    if (type == 'author') {
-      apps = this.state.app.author_apps ? this.state.app.author_apps : [];
-    }
-    else {
-      apps = this.state.app.related_apps ? this.state.app.related_apps : [];
-    }
-
-    var aa = '';
-    if (apps.length > 0) {
-      var header = '';
-      if (type == 'author') {
-        var query = {q: 'author:' + this.state.app.author};
-        header = <Link to="/apps" query={query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>;
-      }
-      else {
-        header = i18n.t('Similar Apps');
-      }
-
-      aa = (
-        <div>
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h3>{header}</h3>
-            </div>
-          </div>
-
-          <div className="row grid-view">
-            {apps.map(function(app, index, arr) { //TODO make this a component
-              var cls = 'col-md-4 col-xs-6';
-              if (index == (arr.length - 1) && arr.length == 3) {
-                cls = 'col-md-4 col-xs-6 hidden-xs hidden-sm';
-              }
-              else if (index === 0 && arr.length == 2) {
-                cls = 'col-md-4 col-xs-6 col-md-offset-2';
-              }
-              else if (arr.length == 1) {
-                cls = 'col-md-4 col-xs-6 col-md-offset-4 col-xs-offset-3';
-              }
-
-              return (
-                <div className={cls} key={app.name}>
-                  <AppCell app={app} description={false} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      );
-    }
-
-    return aa;
-  },
-
   stats: function(rating) {
     var width = 0;
     if (this.state.reviews && this.state.reviews.stats && this.state.reviews.stats.total > 0) {
@@ -642,6 +587,7 @@ module.exports = React.createClass({
       var share_cls = utils.strToColor(this.state.app.name, 'backgroundColor');
       var url = window.location.protocol + '://' + window.location.host + '/app/' + this.state.app.name;
       var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
+      var author_query = {q: 'author:' + this.state.app.author};
 
       var previous = '';
       if (this.state.previousApp && this.state.previousApp.title) {
@@ -737,8 +683,14 @@ module.exports = React.createClass({
           </div>
 
           {this.renderScreenshots()}
-          {this.renderApps('author')}
-          {this.renderApps('similar')}
+
+          <AppRow apps={this.state.app.author_apps}>
+            <Link to="/apps" query={author_query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>
+          </AppRow>
+
+          <AppRow apps={this.state.app.related_apps}>
+            {i18n.t('Similar Apps')}
+          </AppRow>
 
           {this.renderReviews()}
         </div>
