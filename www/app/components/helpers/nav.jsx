@@ -28,6 +28,7 @@ module.exports = React.createClass({
     location: ['location'],
     og: ['og'],
     lng: ['lng'],
+    showSearch: ['showSearch'],
   },
   props: {
     location: React.PropTypes.object.isRequired,
@@ -36,34 +37,31 @@ module.exports = React.createClass({
   componentWillMount: function() {
     this.debounceSearch = debounce(this.search, 300);
 
-    var search = {
-      show: false,
-      term: '',
-    };
-
+    var search = '';
     if (this.props.location && this.props.location.query && this.props.location.query.q) {
-      search.show = true;
-      search.term = this.props.location.query.q;
+      search = this.props.location.query.q;
+      actions.showSearch(true);
     }
 
-    this.setState({search: search});
+    this.setState({
+      search: search,
+      unsearch: search,
+    });
   },
 
   componentWillUpdate: function(nextProps) {
-    if (nextProps.location && nextProps.location.query && (this.state.search.term != nextProps.location.query.q)) {
-      this.setState({search: {
-        show: this.state.search.show,
-        term: nextProps.location.query.q,
-      }});
+    if (nextProps.location && nextProps.location.query && (this.state.search != nextProps.location.query.q)) {
+      this.setState({
+        search: nextProps.location.query.q,
+        unsearch: nextProps.location.query.q,
+      });
     }
   },
 
   getInitialState: function() {
     return {
-      search: {
-        show: false,
-        term: '',
-      },
+      search: '',
+      unsearch: '',
     };
   },
 
@@ -72,13 +70,16 @@ module.exports = React.createClass({
   },
 
   toggleSearch: function() {
-    if (this.state.search.show) {
-      this.setState({search: {
-        show: false,
-        term: '',
-      }});
+    if (this.state.showSearch) {
+      actions.showSearch(false);
+      this.setState({
+        search: '',
+        unsearch: '',
+      });
     }
     else {
+      actions.showSearch(true);
+
       var self = this;
       setTimeout(function() {
         var search = ReactDOM.findDOMNode(self.refs.search);
@@ -91,11 +92,15 @@ module.exports = React.createClass({
         }
       }, 300);
 
-      this.setState({search: {
-        show: true,
-        term: this.state.search.term,
-      }});
+      /*this.setState({
+        search: this.state.search
+      });*/
     }
+  },
+
+  searchWrap: function(event) {
+    this.setState({unsearch: event.target.value});
+    this.debounceSearch(event);
   },
 
   search: function(event) {
@@ -197,7 +202,7 @@ module.exports = React.createClass({
     }
 
     var brand = <span className="hidden-xs">uApp Explorer</span>;
-    if (!this.state.search.show) {
+    if (!this.state.showSearch) {
       brand = (
         <span className="brand-text">
           <span className="visible-xs-inline">uApp Explorer</span>
@@ -219,11 +224,11 @@ module.exports = React.createClass({
 
   renderSearch: function() {
     var search = '';
-    if (this.state.search.show) {
+    if (this.state.showSearch) {
       search = (
         <div className="visible-xs">
           <div className="input-group search-box">
-            <input type="text" className="form-control" id="search" onChange={this.debounceSearch} defaultValue={this.state.search.term} ref="search" />
+            <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="search" />
           </div>
         </div>
       );
@@ -234,11 +239,11 @@ module.exports = React.createClass({
 
   renderSearchXS: function() {
     var search = '';
-    if (this.state.search.show) {
+    if (this.state.showSearch) {
       search = (
         <li>
           <div className="input-group hidden-xs search-box">
-            <input type="text" className="form-control" id="search" onChange={this.debounceSearch} defaultValue={this.state.search.term} ref="searchxs" />
+            <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="searchxs" />
           </div>
         </li>
       );

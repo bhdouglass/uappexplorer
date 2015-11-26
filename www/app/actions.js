@@ -381,8 +381,19 @@ actions = {
     tree.set(['modals', name], false);
   },
 
+  showSearch: function(showSearch) {
+    tree.set('showSearch', showSearch);
+  },
+
   setLocation: function(location) {
     var current = tree.get(['location', 'current']);
+
+    if (location.indexOf('/apps') === 0) {
+      actions.showSearch(true);
+    }
+    else {
+      actions.showSearch(false);
+    }
 
     if (location.indexOf('/app/') === 0 && current.indexOf('/app/') === 0) {
       //Don't log changes between apps, we always want to go back to the app list
