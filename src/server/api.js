@@ -316,8 +316,6 @@ function setup(app, success, error) {
       findQuery.license = {$in: licenses};
     }
 
-    console.log(findQuery);
-
     if (req.query.search) {
       if (req.query.search.indexOf('author:') === 0) {
         appsFromMongo(findQuery, req, callback);

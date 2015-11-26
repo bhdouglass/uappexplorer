@@ -401,6 +401,13 @@ actions = {
         current: location,
       });
     }
+    else if (location.indexOf('/me') === 0) {
+      //Return to the main page from the user page
+      tree.set('location', {
+        previous: '/',
+        current: location,
+      });
+    }
     else {
       tree.set('location', {
         previous: current,
