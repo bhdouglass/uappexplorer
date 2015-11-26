@@ -2,7 +2,6 @@ var React = require('react');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var cookie = require('cookie-cutter');
-var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');
 
@@ -10,9 +9,10 @@ var actions = require('../actions');
 var tree = require('../state');
 var Nav = require('./helpers/nav');
 var Alerts = require('./helpers/alerts');
+var Disclaimer = require('./modals/disclaimer');
 
 module.exports = React.createClass({
-  displayName: 'Main',
+  displayName: 'Wrapper',
   mixins: [
     mixins.root,
     PureRenderMixin,
@@ -64,27 +64,7 @@ module.exports = React.createClass({
     this.setState({disclaimer: false});
   },
 
-  renderDisclaimer: function() {
-    return (
-      <Modal show={this.state.disclaimer} onHide={this.close}>
-        <Modal.Header closeButton>
-          <Modal.Title>{i18n.t('Welcome to uApp Explorer!')}</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          {i18n.t('This site is an unofficial app browser for Ubuntu Touch apps. All data for the apps comes from a publicly accessible api. This site is maintained by Brian Douglass and is not endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd.')}
-        </Modal.Body>
-
-        <Modal.Footer>
-          <button className="btn btn-info" onClick={this.close.bind(this, 'disclaimer')}>{i18n.t('Close')}</button>
-        </Modal.Footer>
-      </Modal>
-    );
-  },
-
   render: function() {
-
-
     return (
       <div>
         <Nav location={this.props.location} />
@@ -132,7 +112,7 @@ module.exports = React.createClass({
           </div>
         </div>
 
-        {this.renderDisclaimer()}
+        <Disclaimer show={this.state.disclaimer} onHide={this.close} />
       </div>
     );
   }

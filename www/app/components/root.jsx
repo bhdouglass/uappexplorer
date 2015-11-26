@@ -2,7 +2,7 @@ var React = require('react');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var tree = require('../state');
-var Main = require('./main');
+var Wrapper = require('./wrapper');
 
 module.exports = React.createClass({
   displayName: 'Root',
@@ -11,6 +11,6 @@ module.exports = React.createClass({
   ],
 
   render: function() {
-    return <Main tree={tree} location={this.props.location}>{this.props.children}</Main>;
+    return <Wrapper tree={tree} location={this.props.location}>{this.props.children}</Wrapper>;
   }
 });
