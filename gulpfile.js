@@ -167,7 +167,7 @@ gulp.task('build-back', function() {
 });
 
 gulp.task('i18next', function() {
-  gulp.src(paths.pot)
+  return gulp.src(paths.pot)
     .pipe(i18nextparser({
       locales: ['en_US'],
       functions: ['i18n.t'],
@@ -191,7 +191,7 @@ gulp.task('pot', ['i18next'], function() {
     fs.readFileSync('./dist/locales/en_US/translation.json')
   );
 
-  for (key in translations) {
+  for (var key in translations) {
     if (plurals.indexOf(key) > -1) {
       pot += 'msgid "' + key + '"\nmsgid_plural "' + key + '"\nmsgstr[0] ""\nmsgstr[1] ""\n\n';
     }

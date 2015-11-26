@@ -302,7 +302,7 @@ module.exports = React.createClass({
               <div className="form-group col-md-4">
                 <label htmlFor="framework" className="control-label">{i18n.t('Framework:')}</label>
                 <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
-                  <option value="All">{i18n.t('All')}</option>
+                  <option value="All">{i18n.t('All Frameworks')}</option>
                   {this.state.frameworks.map(function(framework) {
                     return <option value={framework} key={framework}>{framework}</option>;
                   }, this)}

@@ -76,7 +76,7 @@ module.exports = React.createClass({
         <div className="alert alert-success text-center">
           <h4>{i18n.t('Found the requested app')}</h4>
           <Link to={'/app/' + this.state.requested_app.name} onClick={this.props.close}>
-            Go there now <i className="fa fa-external-link"></i>
+            {i18n.t('Go there now')} <i className="fa fa-external-link"></i>
           </Link>
         </div>
       );

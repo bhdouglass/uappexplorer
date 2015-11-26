@@ -35,10 +35,10 @@ module.exports = {
   architectures: function() {
     return [
       {
-        label: i18n.t('Any'),
+        label: i18n.t('Any Architecture'),
         value: 'any',
       }, {
-        label: i18n.t('All'),
+        label: i18n.t('All Architectures'),
         value: 'all',
       }, {
         label: 'armhf',
