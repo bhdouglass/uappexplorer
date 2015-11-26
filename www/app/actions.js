@@ -251,6 +251,7 @@ actions = {
       tree.set('savingSettings', false);
       tree.set(['auth', 'has_caxton'], !!settings.caxton);
     }).catch(function() {
+      tree.set('savingSettings', false);
       actions.createAlert(i18n.t('Could not save your settings at this time, please try again later'));
     });
   },

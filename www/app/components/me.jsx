@@ -96,39 +96,15 @@ module.exports = React.createClass({
   },
 
   renderMain: function() {
-    var show_save = false;
-    var name = this.state.auth.user.name ? this.state.auth.user.name : this.state.auth.user.username;
-    var caxton = (
-      <span className="small-note">
-        {i18n.t('You are already connected via Caxton!')}
-      </span>
-    );
-
-    if (!this.state.auth.user.has_caxton) {
-      show_save = true;
-      caxton = <input type="text" className="form-control" id="caxton_code" value={this.state.caxton} onChange={this.caxtonChange} />;
+    var disabled = '';
+    var cls = 'fa fa-check';
+    if (this.state.savingSettings) {
+      disabled = 'disabled';
+      cls = 'fa fa-spinner fa-spin';
     }
 
-    var save = '';
-    if (show_save) {
-      var disabled = '';
-      var cls = 'fa fa-check';
-      if (this.state.savingSettings) {
-        disabled = 'disabled';
-        cls = 'fa fa-spinner fa-spin';
-      }
-
-      if (this.state.caxton === '') {
-        disabled = 'disabled';
-      }
-
-      save = (
-        <div className="pull-right">
-          <a className="btn btn-success" onClick={this.saveSettings} disabled={disabled}>
-            <i className={cls}></i> Save
-          </a>
-        </div>
-      );
+    if (this.state.caxton === '') {
+      disabled = 'disabled';
     }
 
     return (
@@ -136,7 +112,7 @@ module.exports = React.createClass({
         <div className="row">
           <div className="col-sm-12 text-center">
             <h1>{i18n.t('Welcome')}</h1>
-            <h3>{name}</h3>
+            <h3>{this.state.auth.user.name ? this.state.auth.user.name : this.state.auth.user.username}</h3>
           </div>
         </div>
 
@@ -150,11 +126,18 @@ module.exports = React.createClass({
                   <a href="https://caxton.herokuapp.com/" target="_blank">{i18n.t('Caxton Code')}</a>:
                 </label>
                 <div className="col-sm-9">
-                  {caxton}
+                  <input type="text" className="form-control" id="caxton_code" value={this.state.caxton} onChange={this.caxtonChange} />
+                  <span className="small-note">
+                    {this.state.auth.user.has_caxton ? i18n.t('You are already connected via Caxton!') : ''}
+                  </span>
                 </div>
               </div>
 
-              {save}
+              <div className="pull-right">
+                <a className="btn btn-success" onClick={this.saveSettings} disabled={disabled}>
+                  <i className={cls}></i> Save
+                </a>
+              </div>
             </form>
           </div>
         </div>
