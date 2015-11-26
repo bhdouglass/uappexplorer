@@ -14,6 +14,7 @@ var rename = require('gulp-rename');
 var gutil = require('gulp-util');
 var react = require('gulp-react');
 var push = require('git-push');
+var jsonminify = require('gulp-jsonminify');
 var del = require('del');
 var merge = require('merge-stream');
 var browserify = require('browserify');
@@ -21,9 +22,10 @@ var reactify = require('reactify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var i18next = require('gulp-i18next-conv');
-var jsonminify = require('gulp-jsonminify');
 var addsrc = require('gulp-add-src');
+var i18nextconv = require('gulp-i18next-conv');
+var i18nextparser = require('i18next-parser');
+var fs = require('fs');
 
 var paths = {
   main_js: 'www/app/index.jsx',
@@ -54,6 +56,8 @@ var paths = {
   html: ['www/*.html'],
   po: 'po/**/*.po',
   dist: ['dist/**', '!dist/.git'],
+  pot: 'www/**/*',
+  pot_template: 'po/uappexplorer.pot.template',
 };
 
 var bargs = {
@@ -162,11 +166,52 @@ gulp.task('build-back', function() {
   );
 });
 
-//TODO translations (pot)
+gulp.task('i18next', function() {
+  gulp.src(paths.pot)
+    .pipe(i18nextparser({
+      locales: ['en_US'],
+      functions: ['i18n.t'],
+      output: 'dist/locales',
+      namespaceSeparator: '|',
+      keySeparator: '^',
+    }))
+    .pipe(gulp.dest('dist/locales'));
+});
+
+gulp.task('pot', ['i18next'], function() {
+  var plurals = [
+    'apps',
+    'web apps',
+    'games',
+    'scopes',
+  ];
+
+  var pot = '';
+  var translations = JSON.parse(
+    fs.readFileSync('./dist/locales/en_US/translation.json')
+  );
+
+  for (key in translations) {
+    if (plurals.indexOf(key) > -1) {
+      pot += 'msgid "' + key + '"\nmsgid_plural "' + key + '"\nmsgstr[0] ""\nmsgstr[1] ""\n\n';
+    }
+    else {
+      pot += 'msgid "' + key + '"\nmsgstr ""\n\n';
+    }
+  }
+
+  //TODO also generate uappexplorer.en_US.po
+  return gulp.src(paths.pot_template)
+    .pipe(template({
+      content: pot
+    }))
+    .pipe(rename('uappexplorer.pot'))
+    .pipe(gulp.dest('po'));
+});
 
 gulp.task('build-translations', function() {
   return gulp.src(paths.po)
-    .pipe(i18next(function() {
+    .pipe(i18nextconv(function() {
       return 'uappexplorer';
     }))
     .pipe(jsonminify())
