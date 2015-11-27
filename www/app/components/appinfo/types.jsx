@@ -16,38 +16,34 @@ module.exports = React.createClass({
     types: React.PropTypes.array.isRequired,
   },
 
-  renderType: function(type) {
-    var types = {
-      application: i18n.t('App'),
-      scope: i18n.t('Scope'),
-      webapp: i18n.t('Web App'),
-      snappy: i18n.t('Snappy App'),
-    };
-
-    var cls = 'label ';
-    var title = types[type];
-
-    if (type == 'application') {
-      cls += 'label-material-light-blue';
-    }
-    else if (type == 'scope') {
-      cls += 'label-material-orange';
-    }
-    else if (type == 'webapp') {
-      cls += 'label-material-cyan';
-    }
-    else if (type == 'snappy') {
-      cls += 'label-material-deep-purple';
-    }
-
-    return <span className={cls} key={type}>{title}</span>;
-  },
-
   render: function() {
     return (
       <span>
         {this.props.types.map(function(type) {
-          return this.renderType(type);
+          var types = {
+            application: i18n.t('App'),
+            scope: i18n.t('Scope'),
+            webapp: i18n.t('Web App'),
+            snappy: i18n.t('Snappy App'),
+          };
+
+          var cls = 'label ';
+          var title = types[type];
+
+          if (type == 'application') {
+            cls += 'label-material-light-blue';
+          }
+          else if (type == 'scope') {
+            cls += 'label-material-orange';
+          }
+          else if (type == 'webapp') {
+            cls += 'label-material-cyan';
+          }
+          else if (type == 'snappy') {
+            cls += 'label-material-deep-purple';
+          }
+
+          return <span className={cls} key={type}>{title}</span>;
         }, this)}
       </span>
     );

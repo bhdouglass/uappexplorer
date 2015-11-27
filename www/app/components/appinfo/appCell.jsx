@@ -8,6 +8,7 @@ var Types = require('./types');
 var Stars = require('./stars');
 var Hearts = require('./hearts');
 var Price = require('./price');
+var If = require('../helpers/if');
 
 module.exports = React.createClass({
   displayName: 'AppCell',
@@ -42,26 +43,8 @@ module.exports = React.createClass({
     }
   },
 
-  renderDescription: function() {
-    var desc = '';
-    if (this.props.description) {
-      desc = <p className="list-group-item-text">{this.props.app.tagline}</p>;
-    }
-
-    return desc;
-  },
-
   render: function() {
     var url = '/app/' + this.props.app.name;
-
-    var remove = '';
-    if (this.props.editable && this.props.onRemoveClick) {
-      remove = (
-        <span onClick={this.handleRemoveClick.bind(this, this.props.app)} className="clickable top-right" title={i18n.t('Remove this app from your list')}>
-          <i className="fa fa-close"></i>
-        </span>
-      );
-    }
 
     return (
       <div className="list-group app-view">
@@ -81,14 +64,21 @@ module.exports = React.createClass({
             </div>
 
             <h4 className="list-group-item-heading word-break">{this.props.app.title}</h4>
-            <p className="list-group-item-text">
+            <div className="list-group-item-text">
               <Stars stars={this.props.app.bayesian_average} />
 
               <Hearts hearts={this.props.app.points} popularity={this.props.app.monthly_popularity} pop={this.props.popularity} />
-            </p>
+            </div>
 
-            {this.renderDescription()}
-            {remove}
+            <If value={this.props.description}>
+              <div className="list-group-item-text">{this.props.app.tagline}</div>
+            </If>
+
+            <If value={this.props.editable && this.props.onRemoveClick}>
+              <span onClick={this.handleRemoveClick.bind(this, this.props.app)} className="clickable top-right" title={i18n.t('Remove this app from your list')}>
+                <i className="fa fa-close"></i>
+              </span>
+            </If>
           </div>
         </Link>
       </div>
