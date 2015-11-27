@@ -189,8 +189,22 @@ actions = {
       if (data.name == tree.get('reviews').name) {
         var reviews = tree.get('reviews');
 
+        var list = reviews.reviews.map(function(review) {
+          return review;
+        });
+
+        var ids = list.map(function(review) {
+          return review.id;
+        });
+
+        for (var i = 0; i < data.reviews.length; i++) {
+          if (ids.indexOf(data.reviews[i].id) == -1) {
+            list.push(data.reviews[i]);
+          }
+        }
+
         tree.set('reviews', {
-          reviews: reviews.reviews.concat(data.reviews),
+          reviews: list,
           more: data.more,
           params: params,
           name: data.name,
