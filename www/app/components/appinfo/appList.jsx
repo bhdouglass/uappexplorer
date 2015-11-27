@@ -10,9 +10,9 @@ module.exports = React.createClass({
   ],
   props: {
     apps: React.PropTypes.array.isRequired,
-    popularity: React.PropTypes.boolean,
+    popularity: React.PropTypes.bool,
     view: React.PropTypes.string.isRequired,
-    editable: React.PropTypes.boolean,
+    editable: React.PropTypes.bool,
     onRemoveClick: React.PropTypes.function,
   },
 

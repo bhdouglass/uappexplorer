@@ -20,10 +20,10 @@ module.exports = React.createClass({
   },
   props: {
     app: React.PropTypes.object.isRequired,
-    popularity: React.PropTypes.boolean,
-    description: React.PropTypes.boolean,
+    popularity: React.PropTypes.bool,
+    description: React.PropTypes.bool,
     onClick: React.PropTypes.function,
-    editable: React.PropTypes.boolean,
+    editable: React.PropTypes.bool,
     onRemoveClick: React.PropTypes.function,
   },
 

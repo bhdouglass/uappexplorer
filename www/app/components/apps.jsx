@@ -8,6 +8,7 @@ var actions = require('../actions');
 var info = require('../info');
 var AppList = require('./appinfo/appList');
 var Pagination = require('./helpers/pagination');
+var If = require('./helpers/if');
 
 var DEFAULT_ARCH = 'any';
 var DEFAULT_CATEGORY = 'all';
@@ -154,20 +155,6 @@ module.exports = React.createClass({
     this.setState({filters: !this.state.filters});
   },
 
-  renderSearchInfo: function() {
-    var search = '';
-    if (this.state.search) {
-      search = (
-        <span>
-          <br/>
-          {i18n.t('Containing:')} "{this.state.search}"
-        </span>
-      );
-    }
-
-    return search;
-  },
-
   changeCategory: function(event) {
     if (event.target.value == DEFAULT_CATEGORY) {
       delete this.props.location.query.category;
@@ -177,19 +164,6 @@ module.exports = React.createClass({
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
-  },
-
-  renderCategories: function() {
-    return (
-      <div className="form-group col-md-4">
-        <label htmlFor="category" className="control-label hidden-xs">{i18n.t('Category:')}</label>
-        <select id="category" className="form-control" value={this.state.category} onChange={this.changeCategory}>
-          {info.categories().map(function(category) {
-            return <option value={category.internal_name} key={category.internal_name}>{category.name}</option>;
-          }, this)}
-        </select>
-      </div>
-    );
   },
 
   changeType: function(event) {
@@ -203,19 +177,6 @@ module.exports = React.createClass({
     this.history.pushState(null, '/apps', this.props.location.query);
   },
 
-  renderTypes: function() {
-    return (
-      <div className="form-group col-md-4">
-        <label htmlFor="type" className="control-label hidden-xs">{i18n.t('Type:')}</label>
-        <select id="type" className="form-control" value={this.state.type} onChange={this.changeType}>
-          {info.types().map(function(type) {
-            return <option value={type.value} key={type.value}>{type.label}</option>;
-          }, this)}
-        </select>
-      </div>
-    );
-  },
-
   changeSort: function(event) {
     if (event.target.value == DEFAULT_SORT) {
       delete this.props.location.query.sort;
@@ -225,19 +186,6 @@ module.exports = React.createClass({
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
-  },
-
-  renderSorts: function() {
-    return (
-      <div className="form-group col-md-4">
-        <label htmlFor="sort" className="control-label hidden-xs">{i18n.t('Sort By:')}</label>
-        <select id="sort" className="form-control" value={this.state.sort} onChange={this.changeSort}>
-          {info.sorts().map(function(sort) {
-            return <option value={sort.value} key={sort.value}>{sort.label}</option>;
-          }, this)}
-        </select>
-      </div>
-    );
   },
 
   changeLicense: function(event) {
@@ -274,49 +222,6 @@ module.exports = React.createClass({
     this.history.pushState(null, '/apps', this.props.location.query);
   },
 
-  renderFilters: function() {
-    var filters = '';
-    if (this.state.filters) {
-      return (
-        <div className="row">
-          <form>
-            <fieldset>
-              <div className="form-group col-md-4">
-                <label htmlFor="license" className="control-label">{i18n.t('License:')}</label>
-                <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
-                  {info.licenses().map(function(license) {
-                    return <option value={license.value} key={license.value}>{license.label}</option>;
-                  }, this)}
-                </select>
-              </div>
-
-              <div className="form-group col-md-4">
-                <label htmlFor="architecture" className="control-label">{i18n.t('Architecture:')}</label>
-                <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
-                  {info.architectures().map(function(architecture) {
-                    return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
-                  }, this)}
-                </select>
-              </div>
-
-              <div className="form-group col-md-4">
-                <label htmlFor="framework" className="control-label">{i18n.t('Framework:')}</label>
-                <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
-                  <option value="All">{i18n.t('All Frameworks')}</option>
-                  {this.state.frameworks.map(function(framework) {
-                    return <option value={framework} key={framework}>{framework}</option>;
-                  }, this)}
-                </select>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      );
-    }
-
-    return filters;
-  },
-
   render: function() {
     var count = 0;
     var pages = 0;
@@ -341,44 +246,6 @@ module.exports = React.createClass({
       }
     }
 
-    var filter_cls = 'fa fa-plus-circle';
-    if (this.state.filters) {
-      filter_cls = 'fa fa-minus-circle';
-    }
-
-    var grid_cls = 'btn clickable';
-    var list_cls = 'btn clickable';
-    if (this.state.view == 'grid') {
-      grid_cls = 'btn clickable bold btn-material-light-blue view-button';
-    }
-    else {
-      list_cls = 'btn clickable bold btn-material-light-blue view-button';
-    }
-
-    var not_found = '';
-    if (count === 0 && !this.state.loading) {
-      not_found = (
-        <div className="row">
-          <div className="col-md-12 text-center">
-            No apps found, try searching again.
-          </div>
-        </div>
-      );
-    }
-
-    var loading = '';
-    if (this.state.loading) {
-      loading = (
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <i className="fa fa-spinner fa-spin fa-4x"></i>
-          </div>
-        </div>
-      );
-    }
-
-    var popularity = (this.state.sort == '-monthly_popularity' || this.state.sort == 'monthly_popularity');
-
     return (
       <div className="apps">
         <div className="app-search">
@@ -386,15 +253,41 @@ module.exports = React.createClass({
             <div className="col-md-6">
               <h1>{category}</h1>
               <span>{count} {type}</span>
-              {this.renderSearchInfo()}
+              <span>
+                <br/>
+                {this.state.search ? i18n.t('Containing:') + ' "' + this.state.search + '"' : ''}
+              </span>
             </div>
             <div className="col-md-6">
               <div className="row">
                 <form className="top-filters">
                   <fieldset>
-                    {this.renderCategories()}
-                    {this.renderTypes()}
-                    {this.renderSorts()}
+                    <div className="form-group col-md-4">
+                      <label htmlFor="category" className="control-label hidden-xs">{i18n.t('Category:')}</label>
+                      <select id="category" className="form-control" value={this.state.category} onChange={this.changeCategory}>
+                        {info.categories().map(function(category) {
+                          return <option value={category.internal_name} key={category.internal_name}>{category.name}</option>;
+                        }, this)}
+                      </select>
+                    </div>
+
+                    <div className="form-group col-md-4">
+                      <label htmlFor="type" className="control-label hidden-xs">{i18n.t('Type:')}</label>
+                      <select id="type" className="form-control" value={this.state.type} onChange={this.changeType}>
+                        {info.types().map(function(type) {
+                          return <option value={type.value} key={type.value}>{type.label}</option>;
+                        }, this)}
+                      </select>
+                    </div>
+
+                    <div className="form-group col-md-4">
+                      <label htmlFor="sort" className="control-label hidden-xs">{i18n.t('Sort By:')}</label>
+                      <select id="sort" className="form-control" value={this.state.sort} onChange={this.changeSort}>
+                        {info.sorts().map(function(sort) {
+                          return <option value={sort.value} key={sort.value}>{sort.label}</option>;
+                        }, this)}
+                      </select>
+                    </div>
                   </fieldset>
                 </form>
               </div>
@@ -403,31 +296,79 @@ module.exports = React.createClass({
                 <div className="btn-toolbar pull-right more-filters-btn">
                   <div className="btn-group">
                     <a className="btn btn-material-light-blue clickable" onClick={this.toggleFilters}>
-                      <i className={filter_cls}></i> {i18n.t('Filters')}
+                      <i className={this.state.filters ? 'fa fa-minus-circle' : 'fa fa-plus-circle'}></i> {i18n.t('Filters')}
                     </a>
                   </div>
                 </div>
 
                 <div className="btn-toolbar pull-right">
                   <div className="btn-group">
-                    <a className={grid_cls} onClick={this.changeView.bind(this, 'grid')}>
+                    <a className={(this.state.view == 'grid') ? 'btn clickable bold btn-material-light-blue view-button' : 'btn clickable'} onClick={this.changeView.bind(this, 'grid')}>
                       <span className="hidden-xs">{i18n.t('Grid')}</span> <i className="fa fa-th-large"></i>
                     </a>
-                    <a className={list_cls} onClick={this.changeView.bind(this, 'list')}>
+                    <a className={(this.state.view != 'grid') ? 'btn clickable bold btn-material-light-blue view-button' : 'btn clickable'} onClick={this.changeView.bind(this, 'list')}>
                       <span className="hidden-xs">{i18n.t('List')}</span> <i className="fa fa-list"></i>
                     </a>
                   </div>
                 </div>
               </div>
 
-              {this.renderFilters()}
+              <If value={this.state.filters}>
+                <div className="row">
+                  <form>
+                    <fieldset>
+                      <div className="form-group col-md-4">
+                        <label htmlFor="license" className="control-label">{i18n.t('License:')}</label>
+                        <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
+                          {info.licenses().map(function(license) {
+                            return <option value={license.value} key={license.value}>{license.label}</option>;
+                          }, this)}
+                        </select>
+                      </div>
+
+                      <div className="form-group col-md-4">
+                        <label htmlFor="architecture" className="control-label">{i18n.t('Architecture:')}</label>
+                        <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
+                          {info.architectures().map(function(architecture) {
+                            return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
+                          }, this)}
+                        </select>
+                      </div>
+
+                      <div className="form-group col-md-4">
+                        <label htmlFor="framework" className="control-label">{i18n.t('Framework:')}</label>
+                        <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
+                          <option value="All">{i18n.t('All Frameworks')}</option>
+                          {this.state.frameworks.map(function(framework) {
+                            return <option value={framework} key={framework}>{framework}</option>;
+                          }, this)}
+                        </select>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+              </If>
             </div>
           </div>
         </div>
 
-        {loading}
-        {not_found}
-        <AppList apps={apps} view={this.state.view} popularity={popularity} />
+        <If value={this.state.loading}>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <i className="fa fa-spinner fa-spin fa-4x"></i>
+            </div>
+          </div>
+        </If>
+
+        <If value={count === 0 && !this.state.loading}>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              No apps found, try searching again.
+            </div>
+          </div>
+        </If>
+
+        <AppList apps={apps} view={this.state.view} popularity={(this.state.sort == '-monthly_popularity' || this.state.sort == 'monthly_popularity')} />
         <Pagination active={this.state.page} total={pages} base={'/apps'} query={this.props.location.query} />
       </div>
     );

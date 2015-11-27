@@ -15,7 +15,7 @@ module.exports = React.createClass({
   props: {
     hearts: React.PropTypes.number,
     popularity: React.PropTypes.number,
-    pop: React.PropTypes.boolean,
+    pop: React.PropTypes.bool,
   },
 
   renderHearts: function() {

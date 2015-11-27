@@ -8,6 +8,7 @@ var i18n = require('i18next-client');
 var actions = require('../actions');
 var AppList = require('./appinfo/appList');
 var AppRow = require('./appinfo/appRow');
+var If = require('./helpers/if');
 
 module.exports = React.createClass({
   displayName: 'Index',
@@ -60,73 +61,17 @@ module.exports = React.createClass({
     );
   },
 
-  renderEssentialApps: function() {
-    var essentials = '';
-    if (this.state.info.loaded && this.state.info.essentials) {
-      var settings = {
-        dots: false,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-      };
-
-      essentials = (
-        <div>
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h1>
-                <Link to="/apps?sort=-bayesian_average">{i18n.t('Essential Apps')}</Link>
-              </h1>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="essentials margin-auto">
-              <Slider {...settings}>
-                {this.state.info.essentials.apps.map(function(app) {
-                  var link = '/app/' + app.name;
-                  return (
-                    <div className="ubuntu-shape" key={link}>
-                      <img src={app.icon} className="rounded" />
-                      <div className="carousel-caption">
-                        <h3><Link to={link}>{app.title}</Link></h3>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    return essentials;
-  },
-
-  renderTopApps: function() {
-    var top = '';
-    if (this.state.info.top.apps.length > 0) {
-      top = (
-        <div>
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h1><Link to="/apps?sort=-points">{i18n.t('Top Apps')}</Link></h1>
-            </div>
-          </div>
-
-          <AppList apps={this.state.info.top.apps} view="grid" />
-        </div>
-      );
-    }
-
-    return top;
-  },
-
   render: function() {
+    var settings = {
+      dots: false,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+    };
+
     return (
       <div className="main">
         <div className="row">
@@ -172,8 +117,46 @@ module.exports = React.createClass({
           )}
         </div>
 
-        {this.renderEssentialApps()}
-        {this.renderTopApps()}
+        <If value={this.state.info.loaded && this.state.info.essentials}>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h1>
+                <Link to="/apps?sort=-bayesian_average">{i18n.t('Essential Apps')}</Link>
+              </h1>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="essentials margin-auto">
+              <Slider {...settings}>
+                {this.state.info.essentials.apps.map(function(app) {
+                  var link = '/app/' + app.name;
+
+                  return (
+                    <div className="ubuntu-shape" key={link}>
+                      <img src={app.icon} className="rounded" />
+                      <div className="carousel-caption">
+                        <h3><Link to={link}>{app.title}</Link></h3>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
+          </div>
+        </If>
+
+        <If value={this.state.info.top.apps.length > 0}>
+          <div>
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <h1><Link to="/apps?sort=-points">{i18n.t('Top Apps')}</Link></h1>
+              </div>
+            </div>
+
+            <AppList apps={this.state.info.top.apps} view="grid" />
+          </div>
+        </If>
 
         <AppRow apps={this.state.info['new'].apps}>
           <Link to="/apps">{i18n.t('New Apps')}</Link>
