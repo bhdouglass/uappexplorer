@@ -4,7 +4,6 @@ var Router = require('react-router');
 var debounce = require('debounce');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
-var Modal = require('react-bootstrap/lib/Modal');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var DocumentMeta = require('react-document-meta');
 var i18n = require('i18next-client');
@@ -13,6 +12,8 @@ var actions = require('../../actions');
 var info = require('../../info');
 var FAQ = require('../modals/faq');
 var Donate = require('../modals/donate');
+var Login = require('../modals/login');
+var If = require('./if');
 
 module.exports = React.createClass({
   displayName: 'Nav',
@@ -91,10 +92,6 @@ module.exports = React.createClass({
           searchxs.focus();
         }
       }, 300);
-
-      /*this.setState({
-        search: this.state.search
-      });*/
     }
   },
 
@@ -122,193 +119,14 @@ module.exports = React.createClass({
     actions.closeModal(modal);
   },
 
-  renderLoginModal: function() {
-    return (
-      <Modal show={this.state.modals.login} onHide={this.close.bind(this, 'login')}>
-        <Modal.Header closeButton>
-          <Modal.Title>{i18n.t('Log In')}</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Footer>
-          <button className="btn btn-info" onClick={this.close.bind(this, 'login')}>
-            <i className="fa fa-close"></i> {i18n.t('Close')}
-          </button>
-
-          <form action="/auth/ubuntu" method="post" className="login-modal-footer">
-            <button type="submit" className="btn btn-warning">
-              <i className="fa fa-linux"></i> {i18n.t('Log in via Ubuntu')}
-            </button>
-          </form>
-        </Modal.Footer>
-      </Modal>
-    );
-  },
-
-  renderLoginButton: function() {
-    var button = '';
-    if (this.state.auth.loggedin) {
-      button = (
-        <Link to="/me" className="navbar-toggle clickable">
-          <i className="fa fa-user fa-inverse"></i>
-        </Link>
-      );
-    }
-    else {
-      button = (
-        <a className="navbar-toggle clickable" onClick={this.open.bind(this, 'login')}>
-          <i className="fa fa-user-plus fa-inverse"></i>
-        </a>
-      );
-    }
-
-    return button;
-  },
-
-  renderLoginList: function() {
-    var list = '';
-    if (this.state.auth.loggedin) {
-      list = [
-        (
-          <li className="hidden-xs" key="lists">
-            <Link to="/me" className="clickable">{i18n.t('My Lists')}</Link>
-          </li>
-        ), (
-          <li key="logout">
-            <a onClick={this.logout} className="clickable">{i18n.t('Log Out')}</a>
-          </li>
-        )
-      ];
-    }
-    else {
-      list = (
-        <li className="hidden-xs">
-          <a onClick={this.open.bind(this, 'login')} className="clickable">{i18n.t('Log In')}</a>
-        </li>
-      );
-    }
-
-    return list;
-  },
-
-  renderBackButton: function() {
-    var cls = 'logo';
-    if (this.state.loading) {
-      cls = 'logo rotate';
-    }
-
-    var icon = '';
-    if (window.location.pathname != '/') {
-      icon = <i className="fa fa-chevron-left back"></i>;
-    }
-
-    var brand = <span className="hidden-xs">uApp Explorer</span>;
-    if (!this.state.showSearch) {
-      brand = (
-        <span className="brand-text">
-          <span className="visible-xs-inline">uApp Explorer</span>
-          <span className="hidden-xs">uApp Explorer</span>
-        </span>
-      );
-    }
-
-    return (
-      <span className="navbar-brand">
-        <Link to={this.state.location.previous} className="link clickable">
-          {icon}
-          <img src="/img/logo.svg" className={cls} />
-          {brand}
-        </Link>
-      </span>
-    );
-  },
-
-  renderSearch: function() {
-    var search = '';
-    if (this.state.showSearch) {
-      search = (
-        <div className="visible-xs">
-          <div className="input-group search-box">
-            <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="search" />
-          </div>
-        </div>
-      );
-    }
-
-    return search;
-  },
-
-  renderSearchXS: function() {
-    var search = '';
-    if (this.state.showSearch) {
-      search = (
-        <li>
-          <div className="input-group hidden-xs search-box">
-            <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="searchxs" />
-          </div>
-        </li>
-      );
-    }
-
-    return search;
-  },
-
   setLanguage: function(lng) {
     actions.i18n(lng);
   },
 
-  renderLanguageList: function() {
+  render: function() {
     var partialTranslation = 188 * 0.15; //Languages with more untranslated strings that this are partial translations
     var comingTranslation = 188 * 0.50; //Languages with more untranslated strings than this are "coming soon"
 
-    return (
-      <li>
-        <a className="dropdown-toggle" data-toggle="dropdown" role="button">
-          {i18n.t('Language')} <span className="caret"></span>
-        </a>
-        <ul className="dropdown-menu">
-          <li className={(this.state.lng == 'en_US') ? 'active' : ''}>
-            <a onClick={this.setLanguage.bind(this, 'en_US')} className="clickable">English (US)</a>
-          </li>
-
-          {info.languages.map(function(lng) {
-            if (lng.untranslated < comingTranslation) {
-              var name = lng.name;
-              if (lng.untranslated > partialTranslation) {
-                name = lng.name + ' (Partial)';
-              }
-
-              return (
-                <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
-                  <a onClick={this.setLanguage.bind(this, lng.code)} className="clickable">
-                    {name}
-                  </a>
-                </li>
-              );
-            }
-          }, this)}
-
-          {info.languages.map(function(lng) {
-            if (lng.untranslated >= comingTranslation) {
-              var url = 'https://translations.launchpad.net/uappexplorer/trunk/+pots/uappexplorer/' + lng.code + '/+translate';
-              return (
-                <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
-                  <a href={url} className="clickable" target="_blank">
-                    {lng.name} (Coming soon!)
-                  </a>
-                </li>
-              );
-            }
-          }, this)}
-
-          <li>
-            <a href="https://translations.launchpad.net/uappexplorer" target="_blank">{i18n.t('Help translate!')}</a>
-          </li>
-        </ul>
-      </li>
-    );
-  },
-
-  render: function() {
     var title = this.state.og.title ? this.state.og.title : '';
     if (title.indexOf('uApp Explorer') == -1) {
       title = 'uApp Explorer - ' + title;
@@ -354,19 +172,59 @@ module.exports = React.createClass({
               <i className="fa fa-ellipsis-v fa-inverse"></i>
             </button>
 
-            {this.renderLoginButton()}
+            <If value={this.state.auth.loggedin}>
+              <Link to="/me" className="navbar-toggle clickable">
+                <i className="fa fa-user fa-inverse"></i>
+              </Link>
+            </If>
+
+            <If value={!this.state.auth.loggedin}>
+              <a className="navbar-toggle clickable" onClick={this.open.bind(this, 'login')}>
+                <i className="fa fa-user-plus fa-inverse"></i>
+              </a>
+            </If>
 
             <button type="button" className="navbar-toggle" onClick={this.toggleSearch}>
               <i className="fa fa-search fa-inverse"></i>
             </button>
 
-            {this.renderBackButton()}
-            {this.renderSearch()}
+            <span className="navbar-brand">
+              <Link to={this.state.location.previous} className="link clickable">
+                <If value={window.location.pathname != '/'} element="span">
+                  <i className="fa fa-chevron-left back"></i>
+                </If>
+
+                <img src="/img/logo.svg" className={this.state.loading ? 'logo rotate' : 'logo'} />
+
+                <If value={this.state.showSearch} element="span">
+                  <span className="hidden-xs">uApp Explorer</span>
+                </If>
+
+                <If value={!this.state.showSearch} element="span">
+                  <span className="brand-text">
+                  <span className="visible-xs-inline">uApp Explorer</span>
+                  <span className="hidden-xs">uApp Explorer</span>
+                </span>
+                </If>
+              </Link>
+            </span>
+
+            <If value={this.state.showSearch}>
+              <div className="visible-xs">
+                <div className="input-group search-box">
+                  <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="search" />
+                </div>
+              </div>
+            </If>
           </div>
 
           <div className="navbar-collapse collapse navbar-right" id="main-menu">
             <ul className="nav navbar-nav">
-              {this.renderSearchXS()}
+              <If value={this.state.showSearch} element="li">
+                <div className="input-group hidden-xs search-box">
+                  <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="searchxs" />
+                </div>
+              </If>
 
               <li className="hidden-xs">
                 <a onClick={this.toggleSearch} className="clickable"><i className="fa fa-search fa-inverse"></i></a>
@@ -378,15 +236,69 @@ module.exports = React.createClass({
                 <a onClick={this.open.bind(this, 'donate')} className="clickable">{i18n.t('Donate')}</a>
               </li>
 
-              {this.renderLoginList()}
-              {this.renderLanguageList()}
+              <If value={this.state.auth.loggedin} element="li">
+                <Link to="/me" className="clickable hidden-xs">{i18n.t('My Lists')}</Link>
+              </If>
+
+              <If value={this.state.auth.loggedin} element="li">
+                <a onClick={this.logout} className="clickable">{i18n.t('Log Out')}</a>
+              </If>
+
+              <If value={!this.state.auth.loggedin} element="li">
+                <a onClick={this.open.bind(this, 'login')} className="clickable hidden-xs">{i18n.t('Log In')}</a>
+              </If>
+
+              <li>
+                <a className="dropdown-toggle" data-toggle="dropdown" role="button">
+                  {i18n.t('Language')} <span className="caret"></span>
+                </a>
+                <ul className="dropdown-menu">
+                  <li className={(this.state.lng == 'en_US') ? 'active' : ''}>
+                    <a onClick={this.setLanguage.bind(this, 'en_US')} className="clickable">English (US)</a>
+                  </li>
+
+                  {info.languages.map(function(lng) {
+                    if (lng.untranslated < comingTranslation) {
+                      var name = lng.name;
+                      if (lng.untranslated > partialTranslation) {
+                        name = lng.name + ' (Partial)';
+                      }
+
+                      return (
+                        <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
+                          <a onClick={this.setLanguage.bind(this, lng.code)} className="clickable">
+                            {name}
+                          </a>
+                        </li>
+                      );
+                    }
+                  }, this)}
+
+                  {info.languages.map(function(lng) {
+                    if (lng.untranslated >= comingTranslation) {
+                      var url = 'https://translations.launchpad.net/uappexplorer/trunk/+pots/uappexplorer/' + lng.code + '/+translate';
+                      return (
+                        <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
+                          <a href={url} className="clickable" target="_blank">
+                            {lng.name} (Coming soon!)
+                          </a>
+                        </li>
+                      );
+                    }
+                  }, this)}
+
+                  <li>
+                    <a href="https://translations.launchpad.net/uappexplorer" target="_blank">{i18n.t('Help translate!')}</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
 
         <FAQ show={this.state.modals.faq} onHide={this.close.bind(this, 'faq')} />
         <Donate show={this.state.modals.donate} onHide={this.close.bind(this, 'donate')} />
-        {this.renderLoginModal()}
+        <Login show={this.state.modals.login} onHide={this.close.bind(this, 'login')} />
       </nav>
     );
   }

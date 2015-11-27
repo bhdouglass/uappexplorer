@@ -4,6 +4,7 @@ var PureRenderMixin = require('react-addons-pure-render-mixin');
 var Swipeable = require('react-swipeable');
 
 var actions = require('../../actions');
+var If = require('./if');
 
 module.exports = React.createClass({
   displayName: 'Alerts',
@@ -27,18 +28,16 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var component = '';
+    var cls = 'alert alert-dismissable clickable text-center alert-warning';
+    if (this.state.alert.type == 'success') {
+      cls = 'alert alert-dismissable clickable text-center alert-success';
+    }
+    else if (this.state.alert.type == 'info') {
+      cls = 'alert alert-dismissable clickable text-center alert-info';
+    }
 
-    if (this.state.alert && this.state.alert.text) {
-      var cls = 'alert alert-dismissable clickable text-center alert-warning';
-      if (this.state.alert.type == 'success') {
-        cls = 'alert alert-dismissable clickable text-center alert-success';
-      }
-      else if (this.state.alert.type == 'info') {
-        cls = 'alert alert-dismissable clickable text-center alert-info';
-      }
-
-      component = (
+    return (
+      <If value={this.state.alert && this.state.alert.text}>
         <div className="row">
           <div className="col-sm-12 centered">
             <Swipeable onSwipedRight={this.dismiss.bind(this, false)} onSwipedLeft={this.dismiss.bind(this, false)}>
@@ -51,13 +50,7 @@ module.exports = React.createClass({
             </Swipeable>
           </div>
         </div>
-      );
-    }
-
-    return (
-      <div>
-        {component}
-      </div>
+      </If>
     );
   }
 });

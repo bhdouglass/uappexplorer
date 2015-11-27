@@ -370,7 +370,7 @@ actions = {
   },
 
   clearAlert: function() {
-    tree.set('alert', null);
+    tree.set('alert', {});
   },
 
   openModal: function(name) {

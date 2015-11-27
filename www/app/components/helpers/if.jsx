@@ -8,14 +8,26 @@ module.exports = React.createClass({
   ],
   props: {
     value: React.PropTypes.bool.isRequired,
+    element: React.PropTypes.string,
   },
 
   render: function() {
-    var component = '';
+    var children = '';
     if (this.props.value) {
-      component = this.props.children;
+      children = this.props.children;
     }
 
-    return <div>{component}</div>;
+    var component = <div></div>;
+    if (this.props.element == 'li') {
+      component = <li>{children}</li>;
+    }
+    else if (this.props.element == 'span') {
+      component = <span>{children}</span>;
+    }
+    else {
+      component = <div>{children}</div>;
+    }
+
+    return component;
   }
 });

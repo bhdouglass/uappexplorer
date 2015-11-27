@@ -31,6 +31,12 @@ module.exports = React.createClass({
     };
   },
 
+  componentWillUpdate: function(nextProps) {
+    if (this.props.caxtonUrl != nextProps.caxtonUrl) {
+      this.setState({caxton_sent: false});
+    }
+  },
+
   open: function() {
     this.setState({qr: true});
   },

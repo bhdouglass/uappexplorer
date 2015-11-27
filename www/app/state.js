@@ -5,7 +5,7 @@ var LIMIT = 30;
 
 module.exports = new Baobab({
   loading: false,
-  alert: null,
+  alert: {},
   modals: {
     faq: false,
     donate: false,
