@@ -386,6 +386,8 @@ module.exports = React.createClass({
                                   <br/>
                                   {i18n.t('License:')} {this.state.app.license}
                                   <br/>
+                                  {i18n.t('File Size:')} {this.state.app.filesize}
+                                  <br/>
                                   {i18n.t('Architecture:')} {this.state.app.architecture.join(', ')}
                                 </div>
                               );

@@ -227,6 +227,9 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
+msgid "File Size:"
+msgstr ""
+
 msgid "Filters"
 msgstr ""
 
