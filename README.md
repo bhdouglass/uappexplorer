@@ -24,6 +24,7 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
     * Arch Linux: `pacman -S vagrant docker`
 * Install NPM dependencies:
     * Run: `npm install`
+    * Run: `cd www && npm install`
 * Install gulp and bower:
     * Run `npm install -g gulp bower`
 * Start vagrant:
@@ -56,7 +57,7 @@ After code is pushed to the Github repo [Codeship](https://codeship.com/) runs t
 nvm install 0.12.0
 nvm use 0.12.0
 
-#Install dependencied
+#Install dependencies
 npm install
 
 #Lint the code
@@ -96,7 +97,7 @@ See `src/config.js` for more info about configuring uApp Explorer.
 
 ## Libraries ##
 
-See `package.json` and `bower.json` for a list of third party dependencies. A big thank you to all those projects!
+See `package.json`, `www/package.json` and `www/bower.json` for a list of third party dependencies. A big thank you to all those projects!
 
 ## Logo ##
 
