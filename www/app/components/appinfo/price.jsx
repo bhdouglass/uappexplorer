@@ -23,11 +23,11 @@ module.exports = React.createClass({
     var component = '';
     var price = 0;
     if (utils.isFree(this.props.prices)) {
-      component = <span className="label label-material-deep-orange price">{i18n.t('Free')}</span>;
+      component = <span className="label label-material-deep-orange">{i18n.t('Free')}</span>;
     }
     else if (this.props.currency) {
       price = utils.price(this.props.prices, this.props.currency);
-      component = <span className="label label-material-green price">{price}</span>;
+      component = <span className="label label-material-green">{price}</span>;
     }
     else {
       component = [];
