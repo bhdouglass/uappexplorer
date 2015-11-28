@@ -569,7 +569,7 @@ msgstr ""
 msgid "Title Z-A"
 msgstr ""
 
-msgid "To install an app, visit this site on your Ubuntu Touch device. Find the app that you wish to install and click the "Install" button. You will then be taken to the official appstore on your device where you can install the app."
+msgid "To install an app, visit this site on your Ubuntu Touch device. Find the app that you wish to install and click the \"Install\" button. You will then be taken to the official appstore on your device where you can install the app."
 msgstr ""
 
 msgid "To report a problem or request a new feature visit the issues page for this site on GitHub."

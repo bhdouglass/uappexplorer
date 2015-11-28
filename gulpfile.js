@@ -17,7 +17,7 @@ var paths = {
   front_dist: 'www/dist/**/*',
   po: 'po/**/*.po',
   dist: ['dist/**', '!dist/.git'],
-  pot: 'www/**/*',
+  pot: 'www/app/**/*',
   pot_template: 'po/uappexplorer.pot.template',
 };
 
@@ -72,6 +72,7 @@ gulp.task('pot', ['i18next'], function() {
   );
 
   for (var key in translations) {
+    key = key.replace(/"/g, '\\"');
     if (plurals.indexOf(key) > -1) {
       pot += 'msgid "' + key + '"\nmsgid_plural "' + key + '"\nmsgstr[0] ""\nmsgstr[1] ""\n\n';
     }
