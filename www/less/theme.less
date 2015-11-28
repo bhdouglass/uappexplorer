@@ -2,6 +2,14 @@
   font-family: 'Ubuntu', sans-serif !important;
 }
 
+a {
+  color: #337ab7;
+
+  &:hover {
+    color: #23527c;
+  }
+}
+
 .icon {
   width: 64px;
   height: 64px;
@@ -110,7 +118,7 @@ img.logo {
 }
 
 .navbar {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .bold {
@@ -180,26 +188,6 @@ a.list-group-item:focus {
   content: '';
 }
 
-//Fake glyphicons using fontawesome
-.glyphicon {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-family: 'FontAwesome' !important;
-  font-size: inherit;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: auto;
-  transform: translate(0, 0);
-  -moz-osx-font-smoothing: grayscale;
-
-  &.glyphicon-chevron-left:before {
-    content: '\f053';
-  }
-
-  &.glyphicon-chevron-right:before {
-    content: '\f054';
-  }
-}
-
 .footer {
   a {
     display: inline-block;
@@ -260,10 +248,6 @@ a.list-group-item:focus {
   }
 }
 
-.view-button {
-  background-color: #4285f4 !important;
-}
-
 .navbar {
   .fa {
     font-size: 18px;
@@ -277,6 +261,19 @@ a.list-group-item:focus {
     padding-right: 10px;
   }
 
+  .navbar-brand {
+    a {
+      .brand-text {
+        display: inline-block;
+        margin-left: 3px;
+      }
+
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
+
   .search-box {
     @media (min-width: 768px) {
       width: 240px;
@@ -287,7 +284,19 @@ a.list-group-item:focus {
     input {
       font-size: 18px;
       color: #FFFFFF;
-      border-bottom: 1px solid #FFFFFF;
     }
   }
+}
+
+.login-modal-footer {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.back {
+  margin-right: 5px;
+}
+
+.qr-code {
+  margin: 10px;
 }

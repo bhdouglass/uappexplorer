@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "body-parser": "^1.12.3",
+    "bootstrap": "^3.3.5",
     "caxton": "^1.0.0",
     "click-parser": "^2.2.1",
     "cloudinary": "^1.1.2",
@@ -46,26 +47,15 @@
     "winston-papertrail": "^1.0.1"
   },
   "devDependencies": {
-    "bower": "^1.4.1",
     "del": "^1.1.1",
     "git-push": "^0.1.1",
     "gulp": "^3.8.11",
-    "gulp-angular-gettext": "^2.1.0",
-    "gulp-angular-templatecache": "^1.6.0",
-    "gulp-autoprefixer": "^2.2.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-htmlmin": "^1.1.1",
     "gulp-jshint": "^1.9.4",
-    "gulp-less": "^3.0.3",
-    "gulp-minify-css": "^1.0.0",
-    "gulp-ng-annotate": "^0.5.2",
-    "gulp-preprocess": "^1.2.0",
-    "gulp-recess": "^1.1.2",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.5.1",
-    "gulp-template": "^3.0.0",
-    "gulp-uglify": "^1.1.0",
+    "gulp-shell": "^0.5.1",
+    "gulp-template": "^3.1.0",
+    "i18next-parser": "^0.3.8",
     "jshint-stylish": "^1.0.1",
-    "merge-stream": "^0.1.7"
+    "merge-stream": "^1.0.0"
   }
 }

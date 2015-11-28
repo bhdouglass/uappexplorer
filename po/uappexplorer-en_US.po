@@ -1,0 +1,692 @@
+# English (United Kingdom) translation for uappexplorer
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the uappexplorer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uappexplorer\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-10-05 15:00+0000\n"
+"PO-Revision-Date: 2015-10-05 14:07+0000\n"
+"Last-Translator: Andi Chandler <Unknown>\n"
+"Language-Team: English (United Kingdom) <en_GB@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2015-10-29 04:24+0000\n"
+"X-Generator: Launchpad (build 17837)\n"
+"Language: en_US\n"
+
+
+msgid "(Don't worry, there is a free version too!)"
+msgstr ""
+
+msgid "*Install will take you to the official appstore on an Ubuntu Touch device"
+msgstr ""
+
+msgid "*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author."
+msgstr ""
+
+msgid "- Choose a list -"
+msgstr ""
+
+msgid "Add Apps:"
+msgstr ""
+
+msgid "Add to list:"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "All Apps"
+msgstr ""
+
+msgid "All Architectures"
+msgstr ""
+
+msgid "All Frameworks"
+msgstr ""
+
+msgid "All Types"
+msgstr ""
+
+msgid "Any Architecture"
+msgstr ""
+
+msgid "Any License"
+msgstr ""
+
+msgid "Any requests to remove copyright or trademark infringing content should be taken up with Canonical or the app's author (an author usually has a method of contact listed under the Support tab on their app's page). uApp Explorer is not affiliated with Canonical and does not host any apps. uApp Explorer only displays publicly available information about the official Ubuntu Touch appstore."
+msgstr ""
+
+msgid "App"
+msgstr ""
+
+msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr ""
+
+msgid "Apps"
+msgstr ""
+
+msgid "Apps are not installed via this site, but via the official appstore."
+msgstr ""
+
+msgid "Apps:"
+msgstr ""
+
+msgid "Architecture:"
+msgstr ""
+
+msgid "Are you sure you want to delete this list?"
+msgstr ""
+
+msgid "Article"
+msgstr ""
+
+msgid "Author"
+msgstr ""
+
+msgid "Books & Comics"
+msgstr ""
+
+msgid "Browse"
+msgstr ""
+
+msgid "Browse Apps"
+msgstr ""
+
+msgid "Browse Games"
+msgstr ""
+
+msgid "Browse Scopes"
+msgstr ""
+
+msgid "Browse Web Apps"
+msgstr ""
+
+msgid "Business"
+msgstr ""
+
+msgid "Buy the Webapp"
+msgstr ""
+
+msgid "Buy the webapp from the Ubuntu Touch app store"
+msgstr ""
+
+msgid "By:"
+msgstr ""
+
+msgid "Category:"
+msgstr ""
+
+msgid "Caxton Code"
+msgstr ""
+
+msgid "Changelog"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Communication"
+msgstr ""
+
+msgid "Company"
+msgstr ""
+
+msgid "Containing:"
+msgstr ""
+
+msgid "Could not add app to list at this time, please try again later"
+msgstr ""
+
+msgid "Could not connect to Caxton at this time, please try again later"
+msgstr ""
+
+msgid "Could not create a new list at this time, please try again later"
+msgstr ""
+
+msgid "Could not delete the list at this time, please try again later"
+msgstr ""
+
+msgid "Could not download app data, click to retry"
+msgstr ""
+
+msgid "Could not download app list, click to retry"
+msgstr ""
+
+msgid "Could not find app"
+msgstr ""
+
+msgid "Could not find the requested app"
+msgstr ""
+
+msgid "Could not find this list, it may not exist any more"
+msgstr ""
+
+msgid "Could not load lists at this time, click to retry"
+msgstr ""
+
+msgid "Could not remove the app from this list, please try again later"
+msgstr ""
+
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+
+msgid "Could not update the list at this time, please try again later"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Create List"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Developer Tools"
+msgstr ""
+
+msgid "Donate"
+msgstr ""
+
+msgid "Donate via Bitcoin"
+msgstr ""
+
+msgid "Donate via Gratipay"
+msgstr ""
+
+msgid "Donate via Paypal"
+msgstr ""
+
+msgid "Donating to uApp Explorer is just one way you can help make it better. If you choose to donate, you money will go towards infrastructure costs. Costs include domain names, hosting, etc. uApp Explorer will always be a free and open source service, regardless of the number of donations."
+msgstr ""
+
+msgid "Donation Web App"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit List"
+msgstr ""
+
+msgid "Education"
+msgstr ""
+
+msgid "Email Support"
+msgstr ""
+
+msgid "Entertainment"
+msgstr ""
+
+msgid "Essential Apps"
+msgstr ""
+
+msgid "FAQ"
+msgstr ""
+
+msgid "Filters"
+msgstr ""
+
+msgid "Finance"
+msgstr ""
+
+msgid "Find"
+msgstr ""
+
+msgid "Find an app that has not yet been fetched from the official appstore."
+msgstr ""
+
+msgid "Food & Drink"
+msgstr ""
+
+msgid "For version:"
+msgstr ""
+
+msgid "Found the requested app"
+msgstr ""
+
+msgid "Framework:"
+msgstr ""
+
+msgid "Free"
+msgstr ""
+
+msgid "Games"
+msgstr ""
+
+msgid "Get a QR scanner for your Ubuntu Touch device"
+msgstr ""
+
+msgid "Go there now"
+msgstr ""
+
+msgid "Graphics"
+msgstr ""
+
+msgid "Grid"
+msgstr ""
+
+msgid "Health & Fitness"
+msgstr ""
+
+msgid "Heart Rating"
+msgstr ""
+
+msgid "Heart ratings are calculated from the star rating where a 5 star review is 1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 hearts, and 1 star = -1 hearts."
+msgstr ""
+
+msgid "Help translate!"
+msgstr ""
+
+msgid "Highest Heart Rating"
+msgstr ""
+
+msgid "Highest Star Rating"
+msgstr ""
+
+msgid "How can I help improve this site?"
+msgstr ""
+
+msgid "How do I install apps?"
+msgstr ""
+
+msgid "How is the popularity determined?"
+msgstr ""
+
+msgid "I just published my app, why don't I see it?"
+msgstr ""
+
+msgid "If you want to contribute code visit the GitHub repo."
+msgstr ""
+
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr ""
+
+msgid "If you want to submit bugs or feature requests visit the GitHub issues page."
+msgstr ""
+
+msgid "If you would like to contact the author, visit his website."
+msgstr ""
+
+msgid "If you would like to contribute monetarily, there are multiple options for donating."
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "It is possible to have a negative heart rating."
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Latest Update"
+msgstr ""
+
+msgid "Least Popular (This Month)"
+msgstr ""
+
+msgid "License:"
+msgstr ""
+
+msgid "Lifestyle"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid "List Name:"
+msgstr ""
+
+msgid "Load more reviews"
+msgstr ""
+
+msgid "Loading reviews..."
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "Log Out"
+msgstr ""
+
+msgid "Log in via Ubuntu"
+msgstr ""
+
+msgid "Lowest Heart Rating"
+msgstr ""
+
+msgid "Lowest Star Rating"
+msgstr ""
+
+msgid "Media & Video"
+msgstr ""
+
+msgid "Medical"
+msgstr ""
+
+msgid "Missing an app?"
+msgstr ""
+
+msgid "Monthly Popularity"
+msgstr ""
+
+msgid "More Apps by:"
+msgstr ""
+
+msgid "Most Expensive (USD)"
+msgstr ""
+
+msgid "Most Popular (This Month)"
+msgstr ""
+
+msgid "Most Relevant"
+msgstr ""
+
+msgid "Music & Audio"
+msgstr ""
+
+msgid "My Lists"
+msgstr ""
+
+msgid "New Apps"
+msgstr ""
+
+msgid "New List"
+msgstr ""
+
+msgid "New apps are fetched from the official appstore every hour, you can either wait until the new apps are fetched or use the request form to request that the app be found early."
+msgstr ""
+
+msgid "Newest"
+msgstr ""
+
+msgid "News & Magazines"
+msgstr ""
+
+msgid "Next App:"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No apps found, try searching again."
+msgstr ""
+
+msgid "No lists, create one!"
+msgstr ""
+
+msgid "No recent changes"
+msgstr ""
+
+msgid "No reviews yet!"
+msgstr ""
+
+msgid "Oldest"
+msgstr ""
+
+msgid "Oldest Update"
+msgstr ""
+
+msgid "Open Source"
+msgstr ""
+
+msgid "Personalisation"
+msgstr ""
+
+msgid "Please login to send via Caxton"
+msgstr ""
+
+msgid "Popularity is based on the number of 4 and 5 star reviews given to and app during the current month."
+msgstr ""
+
+msgid "Previous App:"
+msgstr ""
+
+msgid "Productivity"
+msgstr ""
+
+msgid "Proprietary"
+msgstr ""
+
+msgid "QR Code"
+msgstr ""
+
+msgid "QR Code:"
+msgstr ""
+
+msgid "Reference"
+msgstr ""
+
+msgid "Remove this app from your list"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Science & Engineering"
+msgstr ""
+
+msgid "Scope"
+msgstr ""
+
+msgid "Scopes"
+msgstr ""
+
+msgid "Screenshots"
+msgstr ""
+
+msgid "Send via Caxton"
+msgstr ""
+
+msgid "Sent via Caxton"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Share on Facebook"
+msgstr ""
+
+msgid "Share on Google+"
+msgstr ""
+
+msgid "Share on Reddit"
+msgstr ""
+
+msgid "Share on Twitter"
+msgstr ""
+
+msgid "Shopping"
+msgstr ""
+
+msgid "Similar Apps"
+msgstr ""
+
+msgid "Snappy App"
+msgstr ""
+
+msgid "Snappy Apps"
+msgstr ""
+
+msgid "Social Networking"
+msgstr ""
+
+msgid "Sort Apps By:"
+msgstr ""
+
+msgid "Sort By:"
+msgstr ""
+
+msgid "Sports"
+msgstr ""
+
+msgid "Star Rating"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Support:"
+msgstr ""
+
+msgid "Terms:"
+msgstr ""
+
+msgid "Thank you!"
+msgstr ""
+
+msgid "The heart rating is similar to the star rating, but it rewards apps for having more good reviews. An app with more 5 star ratings will have a higher heart rating than an app with only a few 5 star ratings."
+msgstr ""
+
+msgid "The star rating is the Bayesian average of the star ratings that user give to an app when they leave a review. The Bayesian average allows apps with more reviews to rank better than apps with less reviews. The star rating can be between 1 and 5, where a 0 means that there have not been any reviews yet. For more information about the Bayesian average calculation, check out this article."
+msgstr ""
+
+msgid "This app is on these lists:"
+msgstr ""
+
+msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgstr ""
+
+msgid "This list is empty!"
+msgstr ""
+
+msgid "This site is an unofficial app browser for Ubuntu Touch apps. All data for the apps comes from a publicly accessible api. This site is maintained by Brian Douglass and is not endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr ""
+
+msgid "Title A-Z"
+msgstr ""
+
+msgid "Title Z-A"
+msgstr ""
+
+msgid "To install an app, visit this site on your Ubuntu Touch device. Find the app that you wish to install and click the "Install" button. You will then be taken to the official appstore on your device where you can install the app."
+msgstr ""
+
+msgid "To report a problem or request a new feature visit the issues page for this site on GitHub."
+msgstr ""
+
+msgid "Top Apps"
+msgstr ""
+
+msgid "Total Reviews"
+msgstr ""
+
+msgid "Travel & Local"
+msgstr ""
+
+msgid "Type:"
+msgstr ""
+
+msgid "Universal Accesss/Accessibility"
+msgstr ""
+
+msgid "Updated Apps"
+msgstr ""
+
+msgid "Updated:"
+msgstr ""
+
+msgid "User List:"
+msgstr ""
+
+msgid "User Reviews"
+msgstr ""
+
+msgid "Utilities"
+msgstr ""
+
+msgid "Version:"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Weather"
+msgstr ""
+
+msgid "Web App"
+msgstr ""
+
+msgid "Web Apps"
+msgstr ""
+
+msgid "Website:"
+msgstr ""
+
+msgid "Welcome"
+msgstr ""
+
+msgid "Welcome to uApp Explorer!"
+msgstr ""
+
+msgid "What do I do if I find copyright or trademark infringing content?"
+msgstr ""
+
+msgid "What is the heart rating?"
+msgstr ""
+
+msgid "What is the star rating?"
+msgstr ""
+
+msgid "What is this site?"
+msgstr ""
+
+msgid "Where can I report a problem or request a new feature?"
+msgstr ""
+
+msgid "Whether you choose to donate or not, I still appreciate you support. Thank you!"
+msgstr ""
+
+msgid "Why donate?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "You are already connected via Caxton!"
+msgstr ""
+
+msgid "You do not have your account connected to Caxton, click to go to your settings"
+msgstr ""
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "apps"
+msgstr[1] "app"
+
+msgid "apps & scopes"
+msgstr ""
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "games"
+msgstr[1] "game"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "scopes"
+msgstr[1] "scope"
+
+msgid "snappy apps"
+msgstr ""
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "web apps"
+msgstr[1] "web app"

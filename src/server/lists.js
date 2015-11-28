@@ -8,7 +8,12 @@ function setup(app, success, error, isAuthenticated) {
       query.user = req.query.user;
     }
 
-    db.List.find(query, function(err, lists) {
+    var find = db.List.find(query);
+    if (req.query.sort) {
+      find.sort(req.query.sort);
+    }
+
+    find.exec(function(err, lists) {
       if (err) {
        error(res, err);
       }
@@ -31,7 +36,24 @@ function setup(app, success, error, isAuthenticated) {
         error(res, 'List not found', 404);
       }
       else {
-        success(res, list);
+        list = JSON.parse(JSON.stringify(list));
+        list.full_packages = [];
+        if (list.packages.length > 0) {
+          var query = db.Package.find({name: {'$in': list.packages}});
+          query.sort(list.sort);
+          query.exec(function(err, pkgs) {
+            if (err) {
+              error(res, err);
+            }
+            else {
+              list.full_packages = pkgs;
+              success(res, list);
+            }
+          });
+        }
+        else {
+          success(res, list);
+        }
       }
     });
   });

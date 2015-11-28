@@ -61,20 +61,23 @@ function setup(app) {
       url: config.server.host + '/apps',
     }, og);
 
-    html = html.replace(/meta name="description" content="(?:[\S\s]*?)"/gi,         'meta name="description" content="' + og.description + '"');
-    html = html.replace(/meta itemprop="name" content="(?:[\S\s]*?)"/gi,            'meta itemprop="name" content="' + og.title + '"');
-    html = html.replace(/meta itemprop="description" content="(?:[\S\s]*?)"/gi,     'meta itemprop="description" content="' + og.description + '"');
-    html = html.replace(/meta itemprop="image" content="(?:[\S\s]*?)"/gi,           'meta itemprop="image" content="' + og.image + '"');
-    html = html.replace(/meta name="twitter:title" content="(?:[\S\s]*?)"/gi,       'meta name="twitter:title" content="' + og.title + '"');
-    html = html.replace(/meta name="twitter:description" content="(?:[\S\s]*?)"/gi, 'meta name="twitter:description" content="' + og.description + '"');
-    html = html.replace(/meta name="twitter:image:src" content="(?:[\S\s]*?)"/gi,   'meta name="twitter:image:src" content="' + og.image + '"');
-    html = html.replace(/meta property="og:title" content="(?:[\S\s]*?)"/gi,        'meta property="og:title" content="' + og.title + '"');
-    html = html.replace(/meta property="og:url" content="(?:[\S\s]*?)"/gi,          'meta property="og:url" content="' + og.url + '"');
-    html = html.replace(/meta property="og:image" content="(?:[\S\s]*?)"/gi,        'meta property="og:image" content="' + og.image + '"');
-    html = html.replace(/meta property="og:description" content="(?:[\S\s]*?)"/gi,  'meta property="og:description" content="' + og.description + '"');
-    html = html.replace(/meta property="og:site_name" content="(?:[\S\s]*?)"/gi,    'meta property="og:site_name" content="' + og.title + ' - uApp Explorer' + '"');
+    var og_html = '<meta name="description" content="' + og.description + '" />' +
+      '<meta itemprop="name" content="' + og.title + '" />' +
+      '<meta itemprop="description" content="' + og.description + '" />' +
+      '<meta itemprop="image" content="' + og.image + '" />' +
+      '<meta name="twitter:card" content="summary" />' +
+      '<meta name="twitter:site" content="@uappexplorer" />' +
+      '<meta name="twitter:title" content="' + og.title + '" />' +
+      '<meta name="twitter:description" content="' + og.description + '" />' +
+      '<meta name="twitter:image:src" content="' + og.image + '" />' +
+      '<meta property="og:title" content="' + og.title + '" />' +
+      '<meta property="og:type" content="website" />' +
+      '<meta property="og:url" content="' + og.url + '" />' +
+      '<meta property="og:image" content="' + og.image + '" />' +
+      '<meta property="og:description" content="' + og.description + '" />' +
+      '<meta property="og:site_name" content="uApp Explorer" />';
 
-    return html;
+    return html.replace('<!-- Open Graph Data -->', og_html);
   }
 
   app.get('/app/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)

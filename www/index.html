@@ -1,218 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="appstore" ng-controller="indexCtrl" itemscope itemtype="http://schema.org/MobileApplication">
+<html lang="en" itemscope itemtype="http://schema.org/MobileApplication">
   <head>
-    <title ng-bind="title">uApp Explorer</title>
+    <title>uApp Explorer</title>
     <base href="/" />
 
-    <meta name="description" content="App browser for Ubuntu Touch" ng-content="og.description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
 
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="uApp Explorer" ng-content="og.title" />
-    <meta itemprop="description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
-    <meta itemprop="image" content="https://uappexplorer.com/img/logo.png" ng-content="og.image" />
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@uappexplorer" />
-    <meta name="twitter:title" content="uApp Explorer" ng-content="og.title" />
-    <meta name="twitter:description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
-    <meta name="twitter:image:src" content="https://uappexplorer.com/img/logo.png" ng-content="og.image" />
-
-    <!-- Open Graph data -->
-    <meta property="og:title" content="uApp Explorer" ng-content="og.title" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://uappexplorer.com/apps" ng-content="og.url" />
-    <meta property="og:image" content="https://uappexplorer.com/img/logo.png" ng-content="og.image" />
-    <meta property="og:description" content="Browse and discover apps for Ubuntu Touch" ng-content="og.description" />
-    <meta property="og:site_name" content="uApp Explorer" ng-content="title" />
+    <!-- Open Graph Data -->
 
     <link rel="icon" type="image/png" href="/img/logo.png">
     <link rel="apple-touch-icon" href="/img/app-logo.png" />
     <link rel="apple-touch-icon-precomposed" href="/img/app-logo.png" />
 
-    <style>
-      .ng-cloak {
-        display: none !important;
-      }
-    </style>
-
-    <!-- @if ENV = 'production' !>
-    <link rel="stylesheet" href="/css/libs.css?v=<%= version %>" />
-    <link rel="stylesheet" href="/css/main.css?v=<%= version %>" />
-
-    <script src="/js/libs.js?v=<%= version %>"></script>
-    <script src="/js/app.js?v=<%= version %>"></script>
-    <script src="//www.google-analytics.com/analytics.js"></script>
-
-    <script>
-        ga('create', 'UA-16555025-3', 'auto')
-    </script>
-    <!-- @endif -->
-
-    <!-- @if ENV != 'production' -->
-    <script src="/bower_components/rgrove-lazyload/lazyload.js"></script>
-    <link rel="stylesheet/less" type="text/css" href="/less/master.less" />
-    <script>
-      less = {
-        env: 'development'
-      };
-
-      LazyLoad.js('app/load.js');
-    </script>
-    <!-- @endif -->
+    <link href="/css/lib.css?v=<%= version %>" rel="stylesheet">
+    <link href="/css/main.css?v=<%= version %>" rel="stylesheet">
   </head>
-  <body class="ng-cloak">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-            <i class="fa fa-ellipsis-v fa-inverse"></i>
-          </button>
+  <body>
+    <div id="main"></div>
 
-          <a class="navbar-toggle clickable" ng-if="!loggedin" ng-click="login()">
-            <i class="fa fa-user-plus fa-inverse"></i>
-          </a>
-
-          <a href="/me" class="navbar-toggle clickable" ng-if="loggedin">
-            <i class="fa fa-user fa-inverse"></i>
-          </a>
-
-          <button type="button" class="navbar-toggle" ng-click="toggleSearch()">
-            <i class="fa fa-search fa-inverse"></i>
-          </button>
-
-          <span class="navbar-brand">
-            <a ng-href="{{backLink()}}" class="link clickable">
-              <i class="fa fa-chevron-left ng-cloak" ng-show="showBack()"></i>
-              <img src="/img/logo.svg" class="logo" ng-class="{'rotate': loading}" />
-              <span ng-if="!showSearch" class="visible-xs-inline">uApp Explorer</span>
-              <span class="hidden-xs">uApp Explorer</span>
-            </a>
-          </span>
-
-          <div ng-if="showSearch" class="visible-xs">
-            <div class="input-group search-box">
-              <input type="text" class="form-control" ng-model="search" id="search" ng-change="setSearch(search)" />
-            </div>
-          </div>
-        </div>
-
-        <div class="navbar-collapse collapse navbar-right" id="main-menu">
-          <ul class="nav navbar-nav">
-            <li ng-if="showSearch">
-              <div class="input-group hidden-xs search-box">
-                <input type="text" class="form-control" ng-model="search" id="search" ng-change="setSearch(search)" />
-              </div>
-            </li>
-            <li class="hidden-xs">
-              <a ng-click="toggleSearch()" class="clickable"><i class="fa fa-search fa-inverse"></i></a>
-            </li>
-            <li>
-              <a ng-click="faq()" class="clickable" translate translate-comment="Keep this as an abbreviation if possible">FAQ</a>
-            </li>
-            <li>
-              <a ng-click="donate()" class="clickable" translate>Donate</a>
-            </li>
-            <li ng-if="!loggedin" class="hidden-xs">
-              <a ng-click="login()" class="clickable" translate>Log In</a>
-            </li>
-            <li ng-if="loggedin" class="hidden-xs">
-              <a href="/me" class="clickable" translate>My Lists</a>
-            </li>
-            <li ng-if="loggedin">
-              <a ng-click="logout()" class="clickable" translate>Log Out</a>
-            </li>
-
-            <li>
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button">
-                <span translate>Language</span> <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li ng-class="{active: language == 'en'}">
-                  <a ng-click="setLanguage('en')" class="clickable">English (US)</a>
-                </li>
-
-                <li ng-repeat="lang in languages | maths:'untranslated':'lt':comingTranslation" ng-class="{'active': language == lang.code}">
-                  <a ng-click="setLanguage(lang.code)" class="clickable">
-                    <span ng-bind="lang.name"></span>
-                    <span ng-if="lang.untranslated > partialTranslation">(Partial)</span>
-                  </a>
-                </li>
-
-                <li ng-repeat="lang in languages | maths:'untranslated':'gte':comingTranslation" ng-class="{'active': language == lang.code}">
-                  <a ng-href="https://translations.launchpad.net/uappexplorer/trunk/+pots/uappexplorer/{{lang.code}}/+translate" class="clickable" target="_blank">
-                    <span ng-bind="lang.name"></span> (Coming soon!)
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://translations.launchpad.net/uappexplorer" target="_blank" translate>Help translate!</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container" ng-cloak ng-show="error">
-      <div class="row">
-        <div class="col-sm-12 centered">
-          <div class="alert alert-dismissable clickable text-center" ng-click="dismissError()"
-            ng-class="{'alert-warning': !errorClass, 'alert-success': errorClass == 'success', 'alert-info': errorClass == 'info'}">
-
-            <button type="button" class="close" ng-click="dismissError()">
-              <i class="fa fa-times"></i>
-            </button>
-            <h4 ng-bind="error"></h4>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container main">
-      <div class="row" ng-hide="$state.current.name == 'me'">
-        <div class="col-sm-12 text-center disclaimer">
-          <a ng-click="faq()" class="clickable" translate>
-            This is an unofficial app viewer for Ubuntu Touch apps.
-          </a>
-        </div>
-      </div>
-
-      <div ui-view></div>
-
-      <div class="row text-center footer">
-        <div class="col-sm-4">
-          <a href="https://uappexplorer.com/app/uappexplorer.bhdouglass">
-            <i class="fa fa-mobile"></i>
-            <span translate translate-comment="The uApp Explorer app download link">Web App</span>
-          </a>
-          <a href="https://uappexplorer.com/app/uappexplorer-scope.bhdouglass">
-            <i class="fa fa-mobile"></i>
-            <span translate translate-comment="The uApp Explorer scope download link">Scope</span>
-          </a>
-          <a href="https://uappexplorer.com/app/uappexplorer-donate.bhdouglass" class="hidden-xs">
-            <i class="fa fa-mobile"></i>
-            <span translate translate-comment="The uApp Explorer donation app download link">Donation Web App</span>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="https://twitter.com/uappexplorer" style="display:inline-block !important;"><i class="fa fa-t"></i> Twitter</a>
-          <a href="https://plus.google.com/+Uappexplorer-ubuntu" style="display:inline-block !important;"><i class="fa fa-gp"></i> Google+</a>
-        </div>
-        <div class="col-sm-4">
-          <a href="http://feeds.feedburner.com/UbuntuTouchNewApps">
-            <i class="fa fa-rss-square"></i>
-            <span translate translate-comment="The new apps rss feed link">New Apps</span>
-          </a>
-          <a href="http://feeds.feedburner.com/uAppExplorerUpdatedApps">
-            <i class="fa fa-rss-square"></i>
-            <span translate translate-comment="The updated apps rss feed link">Updated Apps</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <script src="/js/app.js?v=<%= version %>"></script>
   </body>
 </html>
