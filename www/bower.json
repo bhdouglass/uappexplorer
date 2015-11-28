@@ -1,7 +1,7 @@
 {
   "name": "uappexplorer",
   "description": "Unofficial Ubuntu Touch Appstore",
-  "main": "src/index.js",
+  "main": "app/index.jsx",
   "authors": [
     "Brian Douglass"
   ],
@@ -10,12 +10,9 @@
   "moduleType": [],
   "private": true,
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
-    "www/bower/",
-    "test",
-    "tests"
+    "bower/"
   ],
   "dependencies": {
     "bootstrap-material-design": "~0.3.0",

@@ -32,7 +32,7 @@ var config = {
     //Full domain name of the server
     host: process.env.NODEJS_HOST || 'http://local.uappexplorer.com:8080',
     //The location of the frontend files
-    static: process.env.NODEJS_STATIC || '/../../dist/www',
+    static: process.env.NODEJS_STATIC || '/../../www/dist',
     //Secret for the session cookie
     session_secret: process.env.SESSION_SECRET || 'uappexplorer',
   },
