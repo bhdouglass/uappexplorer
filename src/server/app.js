@@ -82,9 +82,12 @@ function setup(app) {
 
   app.get('/app/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
     var useragent = req.headers['user-agent'];
-    var match = useragents.some(function(ua) {
-      return useragent.toLowerCase().indexOf(ua.toLowerCase()) !== -1;
-    });
+    var match = false;
+    if (useragent) {
+      match = useragents.some(function(ua) {
+        return useragent.toLowerCase().indexOf(ua.toLowerCase()) !== -1;
+      });
+    }
 
     if (match || !_.isUndefined(req.query._escaped_fragment_)) {
       res.header('Content-Type', 'text/html');
@@ -127,9 +130,12 @@ function setup(app) {
 
   app.get('/list/:id', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
     var useragent = req.headers['user-agent'];
-    var match = useragents.some(function(ua) {
-      return useragent.toLowerCase().indexOf(ua.toLowerCase()) !== -1;
-    });
+    var match = false;
+    if (useragent) {
+      match = useragents.some(function(ua) {
+        return useragent.toLowerCase().indexOf(ua.toLowerCase()) !== -1;
+      });
+    }
 
     if (match || !_.isUndefined(req.query._escaped_fragment_)) {
       res.header('Content-Type', 'text/html');
