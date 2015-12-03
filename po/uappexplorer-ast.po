@@ -1,4 +1,4 @@
-# Chinese (Simplified) translation for uappexplorer
+# Asturian translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,58 +8,62 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-28 21:51+0000\n"
-"PO-Revision-Date: 2015-10-07 09:54+0000\n"
-"Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"PO-Revision-Date: 2015-11-30 20:08+0000\n"
+"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
+"Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-12-03 04:52+0000\n"
 "X-Generator: Launchpad (build 17856)\n"
-"Language: zh_CN\n"
 
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(别担心, 也有免费的版本!)"
+msgstr "(Nun t'esmolezas, ¡hai tamién una versión de baldre!)"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr "*安装将引导你去 Ubuntu Touch 设备上的官方应用商店"
+msgstr ""
+"*Instalar llevaráte a la tienda d'aplicaciones oficial nun preséu con Ubuntu "
+"Touch"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
-msgstr "*这个web应用在网页中插入了自定义代码，它可以添加额外的功能或是恶意的。仅在信任作者的情况下使用这个应用。"
+msgstr ""
+"*Esta webapp inyecta códigu personalizáu nel sitiu web, lo que pué añadir "
+"otres carauterístiques o ser malino. Usa esta aplicación sólo si tienes "
+"enfotu nel autor."
 
 msgid "- Choose a list -"
-msgstr "- 选择一个列表 -"
+msgstr "-Escueye una llista-"
 
 msgid "Add Apps:"
-msgstr "添加应用："
+msgstr "Añadir aplicaciones:"
 
 msgid "Add to list:"
-msgstr "添加到列表："
+msgstr "Añadir a la llista:"
 
 msgid "All"
-msgstr "全部"
+msgstr "Too"
 
 msgid "All Apps"
-msgstr "全部应用"
+msgstr "Toles aplicaciones"
 
 msgid "All Architectures"
-msgstr ""
+msgstr "Toles arquitectures"
 
 msgid "All Frameworks"
 msgstr ""
 
 msgid "All Types"
-msgstr "全部类型"
+msgstr "Tolos tipos"
 
 msgid "Any Architecture"
-msgstr ""
+msgstr "Cualquier arquitectura"
 
 msgid "Any License"
-msgstr ""
+msgstr "Cualquier llicencia"
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -69,24 +73,32 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
+"Les solicitúes pa quitar el conteníu que frañe drechos d'autor o marques "
+"rexistraes tienen de tratase con Canonical o col autor de la app (de vezu "
+"l'autor tien un métodu de contactu recoyíu na llingüeta Encontu de la páxina "
+"de la app). uApp Explorer nun ta vinculáu con Canonical y nun agospia "
+"nenguna app. uApp Explorer sólo amuesa información pública sobro la tienda "
+"d'aplicaciones oficial d'Ubuntu."
 
 msgid "App"
-msgstr "应用"
+msgstr "Aplicación"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "应用名称 (例如: com.ubuntu.developer.example)"
+msgstr "Nome de l'aplicación (exemplu: com.ubuntu.developer.example)"
 
 msgid "Apps"
-msgstr "应用"
+msgstr "Aplicaciones"
 
 msgid "Apps are not installed via this site, but via the official appstore."
-msgstr "应用不通过此站安装，通过官方应用商店安装。"
+msgstr ""
+"Les aplicaciones nun s'instalen dende esti sitio, sinón per aciu de la "
+"tienda oficial."
 
 msgid "Apps:"
-msgstr "应用："
+msgstr "Aplicaciones:"
 
 msgid "Architecture:"
-msgstr "架构："
+msgstr "Arquitectura:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr ""
@@ -101,43 +113,43 @@ msgid "Books & Comics"
 msgstr ""
 
 msgid "Browse"
-msgstr "浏览"
+msgstr ""
 
 msgid "Browse Apps"
-msgstr "浏览应用"
+msgstr ""
 
 msgid "Browse Games"
-msgstr "浏览游戏"
+msgstr ""
 
 msgid "Browse Scopes"
-msgstr "浏览Scope"
+msgstr ""
 
 msgid "Browse Web Apps"
-msgstr "浏览Web应用"
+msgstr ""
 
 msgid "Business"
 msgstr ""
 
 msgid "Buy the Webapp"
-msgstr "购买Web应用"
+msgstr ""
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "从 Ubuntu Touch 应用商店购买web应用"
+msgstr ""
 
 msgid "By:"
 msgstr ""
 
 msgid "Category:"
-msgstr "类别："
+msgstr ""
 
 msgid "Caxton Code"
-msgstr "Caxton 代码"
+msgstr ""
 
 msgid "Changelog"
-msgstr "更新日志"
+msgstr ""
 
 msgid "Close"
-msgstr "关闭"
+msgstr ""
 
 msgid "Communication"
 msgstr ""
@@ -146,73 +158,73 @@ msgid "Company"
 msgstr ""
 
 msgid "Containing:"
-msgstr "包含："
+msgstr ""
 
 msgid "Could not add app to list at this time, please try again later"
-msgstr "此时无法添加应用到列表中，请稍后重试"
+msgstr ""
 
 msgid "Could not connect to Caxton at this time, please try again later"
-msgstr "此时无法连接到Caxton，请稍后重试"
+msgstr ""
 
 msgid "Could not create a new list at this time, please try again later"
-msgstr "此时无法创建新列表，请稍后重试"
+msgstr ""
 
 msgid "Could not delete the list at this time, please try again later"
-msgstr "此时无法删除列表，请稍后重试"
+msgstr ""
 
 msgid "Could not download app data, click to retry"
-msgstr "无法下载应用数据，点击重试"
+msgstr ""
 
 msgid "Could not download app list, click to retry"
-msgstr "无法下载应用列表，点击重试"
+msgstr ""
 
 msgid "Could not find app"
-msgstr "无法找到应用"
+msgstr ""
 
 msgid "Could not find the requested app"
-msgstr "无法找到请求的应用"
+msgstr ""
 
 msgid "Could not find this list, it may not exist any more"
-msgstr "无法找到此列表，可能已不存在"
+msgstr ""
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
-msgstr "无法从此列表删除应用，请稍后重试"
+msgstr ""
 
 msgid "Could not save your settings at this time, please try again later"
-msgstr "此时无法保存你的设置，请稍后重试"
+msgstr ""
 
 msgid "Could not update the list at this time, please try again later"
-msgstr "此时无法更新列表，请稍后重试"
+msgstr ""
 
 msgid "Create"
-msgstr "创建"
+msgstr ""
 
 msgid "Create List"
-msgstr "创建列表"
+msgstr ""
 
 msgid "Delete"
-msgstr "删除"
+msgstr ""
 
 msgid "Description"
-msgstr "描述"
+msgstr ""
 
 msgid "Developer Tools"
 msgstr ""
 
 msgid "Donate"
-msgstr "捐助"
+msgstr ""
 
 msgid "Donate via Bitcoin"
-msgstr "通过比特币捐助"
+msgstr ""
 
 msgid "Donate via Gratipay"
-msgstr "通过Gratipay捐助"
+msgstr ""
 
 msgid "Donate via Paypal"
-msgstr "通过Paypal捐助"
+msgstr ""
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -222,16 +234,16 @@ msgid ""
 msgstr ""
 
 msgid "Donation Web App"
-msgstr "捐助Web应用"
+msgstr ""
 
 msgid "Download"
 msgstr ""
 
 msgid "Edit"
-msgstr "编辑"
+msgstr ""
 
 msgid "Edit List"
-msgstr "编辑列表"
+msgstr ""
 
 msgid "Education"
 msgstr ""
@@ -243,61 +255,61 @@ msgid "Entertainment"
 msgstr ""
 
 msgid "Essential Apps"
-msgstr "必备应用"
+msgstr ""
 
 msgid "FAQ"
-msgstr "FAQ"
+msgstr ""
 
 msgid "File Size:"
 msgstr ""
 
 msgid "Filters"
-msgstr "筛选"
+msgstr ""
 
 msgid "Finance"
 msgstr ""
 
 msgid "Find"
-msgstr "查找"
+msgstr ""
 
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr "查找尚未从官方应用商店获取的应用。"
+msgstr ""
 
 msgid "Food & Drink"
 msgstr ""
 
 msgid "For version:"
-msgstr "版本："
+msgstr ""
 
 msgid "Found the requested app"
-msgstr "找到请求的应用"
+msgstr ""
 
 msgid "Framework:"
-msgstr "框架"
+msgstr ""
 
 msgid "Free"
-msgstr "免费"
+msgstr ""
 
 msgid "Games"
-msgstr "游戏"
+msgstr ""
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "为你的 Ubuntu Touch 设备获取二维码扫描器"
+msgstr ""
 
 msgid "Go there now"
-msgstr "立刻跳到"
+msgstr ""
 
 msgid "Graphics"
 msgstr ""
 
 msgid "Grid"
-msgstr "栅格"
+msgstr ""
 
 msgid "Health & Fitness"
 msgstr ""
 
 msgid "Heart Rating"
-msgstr "心评级"
+msgstr ""
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
@@ -306,94 +318,94 @@ msgid ""
 msgstr ""
 
 msgid "Help translate!"
-msgstr "帮助翻译！"
+msgstr ""
 
 msgid "Highest Heart Rating"
-msgstr "最高心评分"
+msgstr ""
 
 msgid "Highest Star Rating"
-msgstr "最高星评分"
+msgstr ""
 
 msgid "How can I help improve this site?"
-msgstr "如何改善此站？"
+msgstr ""
 
 msgid "How do I install apps?"
-msgstr "如何安装应用？"
+msgstr ""
 
 msgid "How is the popularity determined?"
-msgstr "受欢迎度是如何确定的?"
+msgstr ""
 
 msgid "I just published my app, why don't I see it?"
-msgstr "我发布了我的应用，为什么看不到它？"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "如果你想贡献代码访问 GitHub 仓库。"
+msgstr ""
 
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr "如果你想帮助翻译，访问 Launchpad 项目。"
+msgstr ""
 
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
-msgstr "如果你想提交bugs或功能请求访问 GitHub issues 页面。"
+msgstr ""
 
 msgid "If you would like to contact the author, visit his website."
-msgstr "如果你想联系作者，访问他的网站。"
+msgstr ""
 
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
-msgstr "如果您想金钱贡献，可以有多种选择的捐助。"
+msgstr ""
 
 msgid "Info"
-msgstr "信息"
+msgstr ""
 
 msgid "Install"
 msgstr ""
 
 msgid "It is possible to have a negative heart rating."
-msgstr "可能有负心评级。"
+msgstr ""
 
 msgid "Language"
-msgstr "语言"
+msgstr ""
 
 msgid "Latest Update"
-msgstr "最后更新"
+msgstr ""
 
 msgid "Least Popular (This Month)"
-msgstr "最不受欢迎(本月)"
+msgstr ""
 
 msgid "License:"
-msgstr "许可证："
+msgstr ""
 
 msgid "Lifestyle"
 msgstr ""
 
 msgid "List"
-msgstr "列表"
+msgstr ""
 
 msgid "List Name:"
-msgstr "列表名："
+msgstr ""
 
 msgid "Load more reviews"
 msgstr ""
 
 msgid "Loading reviews..."
-msgstr "载入评论中..."
+msgstr ""
 
 msgid "Log In"
-msgstr "登录"
+msgstr ""
 
 msgid "Log Out"
-msgstr "注销"
+msgstr ""
 
 msgid "Log in via Ubuntu"
-msgstr "通过Ubuntu登录"
+msgstr ""
 
 msgid "Lowest Heart Rating"
-msgstr "最低心评级"
+msgstr ""
 
 msgid "Lowest Star Rating"
-msgstr "最低星评级"
+msgstr ""
 
 msgid "Media & Video"
 msgstr ""
@@ -402,34 +414,34 @@ msgid "Medical"
 msgstr ""
 
 msgid "Missing an app?"
-msgstr "缺少应用？"
+msgstr ""
 
 msgid "Monthly Popularity"
-msgstr "月度人气"
+msgstr ""
 
 msgid "More Apps by:"
 msgstr ""
 
 msgid "Most Expensive (USD)"
-msgstr "最贵的(美元)"
+msgstr ""
 
 msgid "Most Popular (This Month)"
-msgstr "最受欢迎(本月)"
+msgstr ""
 
 msgid "Most Relevant"
-msgstr "最相关"
+msgstr ""
 
 msgid "Music & Audio"
 msgstr ""
 
 msgid "My Lists"
-msgstr "我的列表"
+msgstr ""
 
 msgid "New Apps"
-msgstr "新应用"
+msgstr ""
 
 msgid "New List"
-msgstr "新列表"
+msgstr ""
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -438,34 +450,34 @@ msgid ""
 msgstr ""
 
 msgid "Newest"
-msgstr "最新"
+msgstr ""
 
 msgid "News & Magazines"
 msgstr ""
 
 msgid "Next App:"
-msgstr "下一个应用："
+msgstr ""
 
 msgid "No"
-msgstr "没有"
+msgstr ""
 
 msgid "No apps found, try searching again."
-msgstr "没有找到应用，请重新搜索。"
+msgstr ""
 
 msgid "No lists, create one!"
-msgstr "没有列表，创建一个！"
+msgstr ""
 
 msgid "No recent changes"
 msgstr ""
 
 msgid "No reviews yet!"
-msgstr "还没有评论！"
+msgstr ""
 
 msgid "Oldest"
-msgstr "最旧"
+msgstr ""
 
 msgid "Oldest Update"
-msgstr "最旧更新"
+msgstr ""
 
 msgid "Open Source"
 msgstr ""
@@ -474,7 +486,7 @@ msgid "Personalisation"
 msgstr ""
 
 msgid "Please login to send via Caxton"
-msgstr "请登录通过Caxton来发送"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -482,7 +494,7 @@ msgid ""
 msgstr ""
 
 msgid "Previous App:"
-msgstr "上一个应用："
+msgstr ""
 
 msgid "Productivity"
 msgstr ""
@@ -491,7 +503,7 @@ msgid "Proprietary"
 msgstr ""
 
 msgid "QR Code"
-msgstr "二维码"
+msgstr ""
 
 msgid "QR Code:"
 msgstr ""
@@ -500,64 +512,64 @@ msgid "Reference"
 msgstr ""
 
 msgid "Remove this app from your list"
-msgstr "从你的列表里移除这个应用"
+msgstr ""
 
 msgid "Save"
-msgstr "保存"
+msgstr ""
 
 msgid "Science & Engineering"
 msgstr ""
 
 msgid "Scope"
-msgstr "Scope"
+msgstr ""
 
 msgid "Scopes"
-msgstr "Scopes"
+msgstr ""
 
 msgid "Screenshots"
-msgstr "截图"
+msgstr ""
 
 msgid "Send via Caxton"
-msgstr "通过Caxton发送"
+msgstr ""
 
 msgid "Sent via Caxton"
-msgstr "通过Caxton发送"
+msgstr ""
 
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 msgid "Share on Facebook"
-msgstr "在 Facebook 上分享"
+msgstr ""
 
 msgid "Share on Google+"
-msgstr "在 Google+ 上分享"
+msgstr ""
 
 msgid "Share on Reddit"
-msgstr "在 Reddit 上分享"
+msgstr ""
 
 msgid "Share on Twitter"
-msgstr "在 Twitter 上分享"
+msgstr ""
 
 msgid "Shopping"
 msgstr ""
 
 msgid "Similar Apps"
-msgstr "类似的应用"
+msgstr ""
 
 msgid "Snappy App"
-msgstr "Snappy 应用"
+msgstr ""
 
 msgid "Snappy Apps"
-msgstr "Snappy 应用"
+msgstr ""
 
 msgid "Social Networking"
 msgstr ""
 
 msgid "Sort Apps By:"
-msgstr "应用排序："
+msgstr ""
 
 msgid "Sort By:"
-msgstr "排序方式："
+msgstr ""
 
 msgid "Sports"
 msgstr ""
@@ -566,16 +578,16 @@ msgid "Star Rating"
 msgstr ""
 
 msgid "Support"
-msgstr "支持"
+msgstr ""
 
 msgid "Support:"
-msgstr "支持："
+msgstr ""
 
 msgid "Terms:"
-msgstr "条款:"
+msgstr ""
 
 msgid "Thank you!"
-msgstr "谢谢你！"
+msgstr ""
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
@@ -593,13 +605,13 @@ msgid ""
 msgstr ""
 
 msgid "This app is on these lists:"
-msgstr "该应用在这些列表："
+msgstr ""
 
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "这是一个 Ubuntu Touch 应用的非官方应用查看器。"
+msgstr ""
 
 msgid "This list is empty!"
-msgstr "这个列表是空的！"
+msgstr ""
 
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for "
@@ -609,10 +621,10 @@ msgid ""
 msgstr ""
 
 msgid "Title A-Z"
-msgstr "标题 A-Z"
+msgstr ""
 
 msgid "Title Z-A"
-msgstr "标题 Z-A"
+msgstr ""
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
@@ -623,10 +635,10 @@ msgstr ""
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
-msgstr "报告问题或请求新功能，访问 GitHub 上该站点的问题页面"
+msgstr ""
 
 msgid "Top Apps"
-msgstr "热门应用"
+msgstr ""
 
 msgid "Total Reviews"
 msgstr ""
@@ -635,83 +647,83 @@ msgid "Travel & Local"
 msgstr ""
 
 msgid "Type:"
-msgstr "类型："
+msgstr ""
 
 msgid "Universal Accesss/Accessibility"
 msgstr ""
 
 msgid "Updated Apps"
-msgstr "更新应用"
+msgstr ""
 
 msgid "Updated:"
-msgstr "更新时间："
+msgstr ""
 
 msgid "User List:"
-msgstr "用户列表："
+msgstr ""
 
 msgid "User Reviews"
-msgstr "用户评论"
+msgstr ""
 
 msgid "Utilities"
 msgstr ""
 
 msgid "Version:"
-msgstr "版本："
+msgstr ""
 
 msgid "View"
-msgstr "查看"
+msgstr ""
 
 msgid "Weather"
 msgstr ""
 
 msgid "Web App"
-msgstr "Web 应用"
+msgstr ""
 
 msgid "Web Apps"
-msgstr "Web 应用"
+msgstr ""
 
 msgid "Website:"
-msgstr "网站："
+msgstr ""
 
 msgid "Welcome"
-msgstr "欢迎"
+msgstr ""
 
 msgid "Welcome to uApp Explorer!"
-msgstr "欢迎来到 uApp Explorer！"
+msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr "如果我找到版权或商标侵权内容，该怎么做?"
+msgstr ""
 
 msgid "What is the heart rating?"
-msgstr "什么是心评级？"
+msgstr ""
 
 msgid "What is the star rating?"
-msgstr "什么是星评级？"
+msgstr ""
 
 msgid "What is this site?"
-msgstr "这是什么网站？"
+msgstr ""
 
 msgid "Where can I report a problem or request a new feature?"
-msgstr "我能在哪里报告问题或请求新功能？"
+msgstr ""
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr "无论你选择捐助与否，我仍然很感谢你支持。谢谢！"
+msgstr ""
 
 msgid "Why donate?"
-msgstr "为什么要捐助？"
+msgstr ""
 
 msgid "Yes"
-msgstr "是"
+msgstr ""
 
 msgid "You are already connected via Caxton!"
-msgstr "你已经通过Caxton连接！"
+msgstr ""
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr "你没有将帐号连接到Caxton，点击进入你的设置"
+msgstr ""
 
 msgid "apps"
 msgid_plural "apps"

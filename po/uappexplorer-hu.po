@@ -7,62 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-06 11:46+0000\n"
+"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"PO-Revision-Date: 2015-11-29 12:33+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-29 04:24+0000\n"
-"X-Generator: Launchpad (build 17837)\n"
+"X-Launchpad-Export-Date: 2015-12-03 04:52+0000\n"
+"X-Generator: Launchpad (build 17856)\n"
 "Language: hu\n"
 
-#: apps/partials/app.html:152
-msgid "- Choose a list -"
-msgstr "- Válasszon egy listát -"
-
-#: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(Ne aggódjon, van egy ingyenes verzió is)"
 
-#: main/partials/main.html:25
-msgid "{{counts.applications}} apps"
-msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} alkalmazás"
-msgstr[1] "{{counts.applications}} alkalmazás"
-
-#: main/partials/main.html:73
-msgid "{{counts.games}} games"
-msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} játék"
-msgstr[1] "{{counts.games}} játék"
-
-#: main/partials/main.html:97
-msgid "{{counts.scopes}} scopes"
-msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} lencse"
-msgstr[1] "{{counts.scopes}} lencse"
-
-#: main/partials/main.html:49
-msgid "{{counts.webapps}} web apps"
-msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{{counts.applications}} webalkalmazás"
-msgstr[1] "{{counts.applications}} webalkalmazás"
-
-#: lists/partials/me.html:79
-msgid "{{list.packages.length}} apps"
-msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} alkalmazás"
-msgstr[1] "{{list.packages.length}} alkalmazás"
-
-#: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr "*A telepítés a eszköz hivatalos áruházához fogja irányítani"
 
-#: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
@@ -71,876 +34,682 @@ msgstr ""
 "funkciókat adva neki, de akár rosszindulatú dolgokra is használható. Csak "
 "akkor használja az alkalmazást, ha megbízik a készítőjében."
 
-#: lists/partials/listEdit.html:37
+msgid "- Choose a list -"
+msgstr "- Válasszon egy listát -"
+
 msgid "Add Apps:"
 msgstr "Alkalmazások hozzáadása:"
 
-#: apps/partials/app.html:150
 msgid "Add to list:"
 msgstr "Hozzáadás listához:"
 
-#: apps/controllers/appCtrl.js:92
-msgid "Added this app to your list"
-msgstr "Az alkalmazás hozzáadva a listájához"
-
-#: apps/controllers/appsCtrl.js:117
-#: apps/controllers/appsCtrl.js:23
-#: apps/controllers/appsCtrl.js:45
-#: apps/services/api.js:194
 msgid "All"
 msgstr "Összes"
 
-#: apps/controllers/appsCtrl.js:108
-#: apps/controllers/appsCtrl.js:113
-#: apps/controllers/appsCtrl.js:14
-#: apps/services/api.js:177
 msgid "All Apps"
 msgstr "Minden alkalmazás"
 
-#: apps/controllers/appsCtrl.js:63
+msgid "All Architectures"
+msgstr "Minden architektúra"
+
+msgid "All Frameworks"
+msgstr "Minden keretrendszer"
+
 msgid "All Types"
 msgstr "Összes típus"
 
-#: apps/controllers/appsCtrl.js:41
-msgid "Any"
-msgstr "Bármilyen"
+msgid "Any Architecture"
+msgstr "Bármelyik architektúra"
 
-#: main/partials/faq.html:75
+msgid "Any License"
+msgstr "Bármelyik licenc"
+
 msgid ""
-"Any requests to remove copyright or trademark infringing content should be\n"
-"taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the "
-"app's\n"
-"author (an author usually has a method of contact listed under the "
-"\"Support\"\n"
-"tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
-"and does not host any apps. uApp Explorer only displays publicly available\n"
-"information about the official Ubuntu Touch appstore."
+"Any requests to remove copyright or trademark infringing content should be "
+"taken up with Canonical or the app's author (an author usually has a method "
+"of contact listed under the Support tab on their app's page). uApp Explorer "
+"is not affiliated with Canonical and does not host any apps. uApp Explorer "
+"only displays publicly available information about the official Ubuntu Touch "
+"appstore."
 msgstr ""
-"Bármilyen kéréssel az alkalmazás szerzői jog vagy védjegy sérelme miatti "
-"eltávolítással kapcsoltban forduljon a <a "
-"href=\"http://www.canonical.com/\">Canonicalhoz</a>, vagy az alkalmazás "
-"készítőjéhez (általában a „Támogatás” fül alatt megtalálja az "
-"elérhetőségét). Az uApp Explorer nem áll kapcsolatban a Canonical-lal és nem "
-"tárol semmilyen alkalmazást, csak a publikusan elérhető információkatt "
-"jeleníti meg a hivatalos Ubuntu Touch áruházból."
 
-#: apps/directives/type.js:26
 msgid "App"
 msgstr "Alkalmazás"
 
-#: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Alkalmazás neve (például: com.ubuntu.fejleszto.pelda)"
 
-#: apps/controllers/appsCtrl.js:66
-#: main/partials/main.html:22
 msgid "Apps"
 msgstr "Alkalmazások"
 
-#: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
 "Az alkalmazások nem az oldal, hanem a hivatalos áruház segítségével lesznek "
 "telepítve."
 
-#: lists/partials/listEdit.html:23
 msgid "Apps:"
 msgstr "Alkalmazások:"
 
-#. CPU architecture
-#: apps/partials/app.html:206
-#: apps/partials/apps.html:69
 msgid "Architecture:"
 msgstr "Architektúra:"
 
-#: lists/partials/listDelete.html:2
-msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr ""
-"Biztos benne, hogy törli a következő listát: „{{selectedList.name}}”?"
+msgid "Are you sure you want to delete this list?"
+msgstr "Biztos, hogy törölni szeretné ezt a listát?"
 
-#. Browse Apps
-#: main/partials/main.html:5
+msgid "Article"
+msgstr "Cikk"
+
+msgid "Author"
+msgstr "Szerző"
+
+msgid "Books & Comics"
+msgstr "Könyvek és képregények"
+
 msgid "Browse"
 msgstr "Böngészés"
 
-#: main/partials/main.html:14
 msgid "Browse Apps"
 msgstr "Alkalmazások böngészése"
 
-#: main/partials/main.html:62
 msgid "Browse Games"
 msgstr "Játékok böngészése"
 
-#: main/partials/main.html:86
 msgid "Browse Scopes"
 msgstr "Lencsék böngészése"
 
-#: main/partials/main.html:38
 msgid "Browse Web Apps"
 msgstr "Webalkalmazások böngészése"
 
-#: main/partials/donate.html:19
+msgid "Business"
+msgstr "Üzleti"
+
 msgid "Buy the Webapp"
 msgstr "Webalkalmazás megvásárlása"
 
-#: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
 msgstr "Webalkalmazás megvásárlása az Ubuntu Touch áruházból"
 
-#. User list author
-#: lists/partials/list.html:13
-msgid "By: {{list.user_name}}"
-msgstr "Készítő: {{list.user_name}}"
+msgid "By:"
+msgstr "Tőle:"
 
-#: apps/partials/apps.html:17
 msgid "Category:"
 msgstr "Kategória:"
 
-#: lists/partials/me.html:18
 msgid "Caxton Code"
 msgstr "Caxton kód"
 
-#. App changelog
-#: apps/partials/app.html:180
 msgid "Changelog"
 msgstr "Változásnapló"
 
-#: lists/partials/listEdit.html:42
-msgid "Clear search"
-msgstr "Keresés törlése"
-
-#: apps/partials/request.html:35
-#: lists/partials/listEdit.html:67
-#: lists/partials/login.html:9
-#: main/partials/disclaimer.html:16
-#: main/partials/faq.html:117
-#: main/partials/qrcode.html:15
 msgid "Close"
 msgstr "Bezárás"
 
-#. Apps containing: {search term}
-#: apps/partials/apps.html:9
+msgid "Communication"
+msgstr "Kommunikáció"
+
+msgid "Company"
+msgstr "Vállalat"
+
 msgid "Containing:"
 msgstr "Tartalmazza:"
 
-#: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr "Nem sikerült a listához adni az alkalmazást, próbálja újra később"
 
-#: apps/controllers/appCtrl.js:136
-#: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr "Nem sikerült kapcsolódni a Caxton-hoz, próbálja újra később"
 
-#: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr "Nem sikerült új listát létrehozni. próbálja újra később"
 
-#: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr "Nem sikerült a listát törölni. próbálja újra később"
 
-#: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
 msgstr ""
 "Nem sikerült az alkalmazásadatok letöltése, kattintson az újrapróbáláshoz"
 
-#: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
 msgstr ""
 "Nem sikerült az alkalmazáslista letöltése, kattintson az újrapróbáláshoz"
 
-#: apps/controllers/appsCtrl.js:154
-msgid "Could not download category list, click to retry"
-msgstr ""
-"Nem sikerült az alkalmazáskategóriák letöltése, kattintson az újrapróbáláshoz"
-
-#: apps/controllers/appsCtrl.js:167
-msgid "Could not download framework list, click to retry"
-msgstr ""
-"Nem sikerült az kerettrendszerek letöltése, kattintson az újrapróbáláshoz"
-
-#: apps/controllers/appsCtrl.js:179
-msgid "Could not download license list, click to retry"
-msgstr "Nem sikerült a licencek letöltése, kattintson az újrapróbáláshoz"
-
-#: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
 msgstr "Nem található alkalmazás"
 
-#: apps/partials/request.html:9
 msgid "Could not find the requested app"
 msgstr "Nem található a kért alkalmazás"
 
-#: lists/controllers/listCtrl.js:42
-#: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
 msgstr "Nem található ez a lista, lehet, hogy már nem létezik"
 
-#: lists/controllers/listCtrl.js:62
-msgid "Could not load the apps for this list, please try again later"
-msgstr "Nem sikerült a lista alkalmazásainak betöltése, próbálja újra később"
+msgid "Could not load lists at this time, click to retry"
+msgstr "Nem sikerült a listát betölteni, próbálja újra"
 
-#: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
 "Nem sikerült az alkalmazás eltávolítása a listáról, próbálja újra később"
 
-#: lists/partials/listEdit.html:30
-msgid "Could not retrieve app list at this time, please try again later."
-msgstr "Nem sikerült az alkalmazáslista lekérése, próbálja újra később"
-
-#: lists/partials/listEdit.html:56
-msgid "Could not retrieve search at this time, please try again later."
-msgstr "Nem sikerült a keresési eredmény lekérése, próbálja újra később"
-
-#: lists/controllers/meCtrl.js:69
 msgid "Could not save your settings at this time, please try again later"
 msgstr "Nem sikerült a beállításokat elmenteni, próbálja újra később"
 
-#: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr "Nem sikerült a lista frissítése, próbálja újra később"
 
-#: lists/partials/listEdit.html:77
 msgid "Create"
 msgstr "Létrehozás"
 
-#: lists/partials/listEdit.html:3
 msgid "Create List"
 msgstr "Lista létrehozása"
 
-#: lists/partials/me.html:65
 msgid "Delete"
 msgstr "Törlés"
 
-#. App description
-#: apps/partials/app.html:177
 msgid "Description"
 msgstr "Leírás"
 
-#: index.html:114
-#: main/partials/donate.html:2
+msgid "Developer Tools"
+msgstr "Fejlesztői eszközök"
+
 msgid "Donate"
 msgstr "Támogatás"
 
-#: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
 msgstr "Támogatás Bitcoin-nal"
 
-#: main/partials/donate.html:37
 msgid "Donate via Gratipay"
 msgstr "Támogatás Gratipay-jel"
 
-#: main/partials/donate.html:30
-#: main/partials/donate.html:34
 msgid "Donate via Paypal"
 msgstr "Támogatás Paypal-lal"
 
-#: main/partials/donate.html:7
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
-"you\n"
-"choose to donate, you money will go towards infrastructure costs. Costs "
-"include\n"
-"domain names, hosting, etc. uApp Explorer will always be a free and open "
-"source\n"
-"service, regardless of the number of donations."
+"you choose to donate, you money will go towards infrastructure costs. Costs "
+"include domain names, hosting, etc. uApp Explorer will always be a free and "
+"open source service, regardless of the number of donations."
 msgstr ""
-"Az uApp Exolorer pénzbeli támogatása csak egy módja az oldal jobbá "
-"tételének. Az adományozott összeg infrastrukturális fejlesztésekre, a "
-"domainnévre és a hosztingra lesz elköltve Az uApp Explorer mindig ingyenes "
-"és nyílt forráskódú marad, függetlenül az adományoktól."
 
-#. The uApp Explorer donation app download link
-#: index.html:211
 msgid "Donation Web App"
 msgstr "Támogatói webalkalmazás"
 
-#: lists/partials/me.html:60
+msgid "Download"
+msgstr "Letöltés"
+
 msgid "Edit"
 msgstr "Szerkesztés"
 
-#: lists/partials/listEdit.html:2
 msgid "Edit List"
 msgstr "Lista szerkesztése"
 
-#: main/partials/main.html:112
+msgid "Education"
+msgstr "Oktatás"
+
+msgid "Email Support"
+msgstr "E-mail támogatás"
+
+msgid "Entertainment"
+msgstr "Szórakozás"
+
 msgid "Essential Apps"
 msgstr "Kiemelt alkalmazások"
 
-#. Keep this as an abbreviation if possible
-#: index.html:111
-#: main/partials/faq.html:2
 msgid "FAQ"
 msgstr "GYIK"
 
-#: apps/partials/apps.html:39
+msgid "File Size:"
+msgstr "Fájlméret:"
+
 msgid "Filters"
 msgstr "Szűrők"
 
-#: apps/partials/request.html:36
+msgid "Finance"
+msgstr "Pénzügyek"
+
 msgid "Find"
 msgstr "Keresés"
 
-#: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
 "Olyan alkalmazás megkeresése ami még nem került áttöltésre a hivatalos "
 "áruházból."
 
-#. Comment below reviews
-#: apps/partials/app.html:367
+msgid "Food & Drink"
+msgstr "Étel és ital"
+
 msgid "For version:"
 msgstr "Verzió:"
 
-#: apps/partials/request.html:12
 msgid "Found the requested app"
 msgstr "Keresett alkalmazás megtalálva"
 
-#. Ubuntu sdk framework
-#: apps/partials/apps.html:74
 msgid "Framework:"
 msgstr "Keretrendszer:"
 
-#. No Cost
-#: apps/partials/app.html:50
-#: main/filters/dollars.js:19
-#: main/services/utils.js:107
 msgid "Free"
 msgstr "Ingyenes"
 
-#: main/partials/main.html:70
 msgid "Games"
 msgstr "Játékok"
 
-#: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
 msgstr "Telepítsen QR-kódolvasót az Ubutu Touch eszközére"
 
-#: apps/partials/request.html:14
 msgid "Go there now"
 msgstr "Menjünk oda"
 
-#. Grid view
-#: apps/partials/apps.html:47
-#: lists/partials/list.html:22
+msgid "Graphics"
+msgstr "Grafika"
+
 msgid "Grid"
 msgstr "Rácsnézet"
 
-#: apps/partials/appView.html:23
+msgid "Health & Fitness"
+msgstr "Egészség és fitnesz"
+
 msgid "Heart Rating"
 msgstr "Szív értékelés"
 
-#: main/partials/faq.html:47
 msgid ""
-"Heart ratings are calculated from the star rating where a 5 star review is\n"
-"1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
-"hearts,\n"
-"and 1 star = -1 hearts."
+"Heart ratings are calculated from the star rating where a 5 star review is 1 "
+"heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts, and 1 star = -1 hearts."
 msgstr ""
-"A szív értékelés a csillag értékelésből lesz kiszámítva. Az 5 csillag 1 szív "
-"értékelés, a 4 csillag félnek felel meg, a három csillag nullának, a kettő "
-"csillag mínusz félnek, az egy csillag pedig mínusz egy szív értékelésnek."
 
-#: index.html:164
 msgid "Help translate!"
 msgstr "Segítsen a fordításban!"
 
-#: main/services/utils.js:89
 msgid "Highest Heart Rating"
 msgstr "Legmagasabb szív értékelés"
 
-#: main/services/utils.js:95
 msgid "Highest Star Rating"
 msgstr "Legmagasabb csillag értékelés"
 
-#: main/partials/faq.html:92
 msgid "How can I help improve this site?"
 msgstr "Hogy tudok segíteni az oldal fejlesztésében?"
 
-#: main/partials/faq.html:18
 msgid "How do I install apps?"
 msgstr "Hogyan telepítsek egy alkalmazást?"
 
-#: main/partials/faq.html:56
 msgid "How is the popularity determined?"
 msgstr "Hogy történik a népszerűség meghatározása?"
 
-#: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
 msgstr "Nem rég publikáltam az alkalmazásomat, miért nem látom?"
 
-#: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Ha szeretne a kódban segíteni, látogasson el a GitHub oldalra."
 
-#: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
 "Ha szeretne a fordításban segíteni, látogasson el a Launchpad oldalra."
 
-#: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 "Ha szeretne hibát vagy hiányzó funkciót bejelenteni, látogasson el a GitHub "
 "hiba oldalra."
 
-#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 "Ha szeretné felvenni a kapcsolatot a készítővel, látogasson el az oldalára."
 
-#: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
 "Ha szeretne hozzájárulni anyagilag, van több lehetőség is a támogatásra."
 
-#. App info
-#: apps/partials/app.html:183
 msgid "Info"
 msgstr "Információ"
 
-#: main/partials/faq.html:52
+msgid "Install"
+msgstr "Telepítés"
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Lehetséges a negatív szív értékelés is."
 
-#: index.html:128
 msgid "Language"
 msgstr "Nyelv"
 
-#: main/services/utils.js:83
 msgid "Latest Update"
 msgstr "Legutóbb frissítve"
 
-#: main/services/utils.js:104
 msgid "Least Popular (This Month)"
 msgstr "Legkevésbé népszerű (e hónapban)"
 
-#: apps/partials/app.html:204
-#: apps/partials/apps.html:62
 msgid "License:"
 msgstr "Licenc:"
 
-#. List view
-#: apps/partials/apps.html:51
-#: lists/partials/list.html:26
+msgid "Lifestyle"
+msgstr "Életmód"
+
 msgid "List"
 msgstr "Listanézet"
 
-#: lists/partials/listEdit.html:9
 msgid "List Name:"
 msgstr "Lista neve:"
 
-#: apps/partials/app.html:390
-msgid "Loading more reviews..."
-msgstr "További értékelések betöltése…"
+msgid "Load more reviews"
+msgstr "További értékelések betöltése"
 
-#: apps/partials/app.html:298
 msgid "Loading reviews..."
 msgstr "Értékelések betöltése…"
 
-#: index.html:117
-#: lists/partials/login.html:2
 msgid "Log In"
 msgstr "Bejelentkezés"
 
-#: lists/partials/login.html:14
-msgid "Log in via Ubuntu"
-msgstr "Bejelentkezés Ubuntuval"
-
-#: index.html:123
 msgid "Log Out"
 msgstr "Kijelentkezés"
 
-#: main/services/utils.js:92
+msgid "Log in via Ubuntu"
+msgstr "Bejelentkezés Ubuntuval"
+
 msgid "Lowest Heart Rating"
 msgstr "Legalacsonyabb szív értékelés"
 
-#: main/services/utils.js:98
 msgid "Lowest Star Rating"
 msgstr "Legalacsonyabb csillag értékelés"
 
-#: apps/partials/request.html:2
+msgid "Media & Video"
+msgstr "Média és videó"
+
+msgid "Medical"
+msgstr "Orvostudomány"
+
 msgid "Missing an app?"
 msgstr "Hiányzik egy alkalmazás?"
 
-#: apps/partials/appView.html:28
 msgid "Monthly Popularity"
 msgstr "Havi népszerűség"
 
-#: apps/partials/app.html:253
-msgid "More Apps by {{app.author}}"
-msgstr "{{app.author}} további alkalmazásai"
+msgid "More Apps by:"
+msgstr "További alkalmazások tőle:"
 
-#: main/services/utils.js:110
 msgid "Most Expensive (USD)"
 msgstr "Legdrágább (USD)"
 
-#: main/services/utils.js:101
 msgid "Most Popular (This Month)"
 msgstr "Legnépszerűbb (e hónapban)"
 
-#: main/services/utils.js:67
 msgid "Most Relevant"
 msgstr "Legrelevánsabb"
 
-#: index.html:120
-#: lists/partials/me.html:45
+msgid "Music & Audio"
+msgstr "Zene és hangok"
+
 msgid "My Lists"
 msgstr "Saját listáim"
 
-#. The new apps rss feed link
-#: index.html:221
-#: main/partials/main.html:159
 msgid "New Apps"
 msgstr "Új alkalmazások"
 
-#: main/partials/faq.html:67
-msgid ""
-"New apps are fetched from the official appstore every hour, you can either\n"
-"wait until the new apps are fetched or use the request form to request that "
-"the\n"
-"app be found early."
-msgstr ""
-"Az új alkalmazások óránként kerülnek áttöltésre a hivatalos áruházból, vagy "
-"kivárja ezt az időt, vagy kérheti egy alkalmazás előbbi áttöltését is."
-
-#: lists/partials/me.html:42
 msgid "New List"
 msgstr "Új lista"
 
-#: main/services/utils.js:77
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
+msgstr ""
+
 msgid "Newest"
 msgstr "Legújabbak"
 
-#: apps/partials/app.html:16
+msgid "News & Magazines"
+msgstr "Újságok és magazinok"
+
 msgid "Next App:"
 msgstr "Következő alkalmazás:"
 
-#: lists/partials/listDelete.html:8
 msgid "No"
 msgstr "Nem"
 
-#: lists/partials/listEdit.html:52
-msgid "No apps found"
-msgstr "Nem található alkalmazás"
-
-#: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
 msgstr "Nem található alkalmazás, próbáljon másképp rákeresni"
 
-#: apps/partials/app.html:157
 msgid "No lists, create one!"
 msgstr "Nincsenek listák, hozzon létre egyet."
 
-#: apps/partials/app.html:382
+msgid "No recent changes"
+msgstr ""
+
 msgid "No reviews yet!"
 msgstr "Nincsenek értékelések."
 
-#: main/services/utils.js:80
 msgid "Oldest"
 msgstr "Legrégibb"
 
-#: main/services/utils.js:86
 msgid "Oldest Update"
 msgstr "Legrégebben frissítve"
 
-#: apps/controllers/appCtrl.js:125
-#: lists/controllers/listCtrl.js:103
+msgid "Open Source"
+msgstr "Nyílt forrású"
+
+msgid "Personalisation"
+msgstr "Testreszabás"
+
 msgid "Please login to send via Caxton"
 msgstr "Jelentkezzen be a Caxtonnal való küldéshez"
 
-#: main/partials/faq.html:58
 msgid ""
-"Popularity is based on the number of 4 and 5 star reviews given to and app\n"
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
-msgstr "A népszerűség a hónapban adott 4 és 5 csillagos értékeléseken alapul"
+msgstr ""
 
-#: apps/partials/app.html:10
 msgid "Previous App:"
 msgstr "Előző alkalmazás:"
 
-#: apps/partials/app.html:128
-#: lists/partials/list.html:63
+msgid "Productivity"
+msgstr "Hatékonyság"
+
+msgid "Proprietary"
+msgstr "Zárt"
+
 msgid "QR Code"
 msgstr "QR kód"
 
-#: main/partials/qrcode.html:2
-msgid "QR Code for {{qrCodeTitle}}"
-msgstr "QR-kód ehhez: {{qrCodeTitle}}"
+msgid "QR Code:"
+msgstr "QR-kód:"
 
-#: lists/partials/list.html:78
+msgid "Reference"
+msgstr "Információforrás"
+
 msgid "Remove this app from your list"
 msgstr "Alkalmazás eltávolítása a személyes listáról"
 
-#: lists/partials/listEdit.html:72
-#: lists/partials/me.html:31
 msgid "Save"
 msgstr "Mentés"
 
-#. The uApp Explorer scope download link
-#: apps/directives/type.js:27
-#: index.html:207
+msgid "Science & Engineering"
+msgstr "Tudomány és mérnöki"
+
 msgid "Scope"
 msgstr "Lencse"
 
-#: apps/controllers/appsCtrl.js:72
-#: main/partials/main.html:94
 msgid "Scopes"
 msgstr "Lencsék"
 
-#: apps/partials/app.html:235
 msgid "Screenshots"
 msgstr "Képernyőképek"
 
-#: apps/partials/app.html:121
-#: apps/partials/app.html:123
-#: lists/partials/list.html:56
-#: lists/partials/list.html:58
 msgid "Send via Caxton"
 msgstr "Elküldés Caxtonnal"
 
-#: apps/partials/app.html:124
-#: lists/partials/list.html:59
 msgid "Sent via Caxton"
 msgstr "Elküldve Caxtonnal"
 
-#: lists/partials/me.html:13
 msgid "Settings"
 msgstr "Beállítások"
 
-#: apps/partials/app.html:105
-#: lists/partials/list.html:41
 msgid "Share on Facebook"
 msgstr "Megosztás Facebook-on"
 
-#: apps/partials/app.html:100
-#: lists/partials/list.html:36
 msgid "Share on Google+"
 msgstr "Megosztás Google+-on"
 
-#: apps/partials/app.html:116
-#: lists/partials/list.html:51
 msgid "Share on Reddit"
 msgstr "Megosztás Reddit-en"
 
-#: apps/partials/app.html:110
-#: lists/partials/list.html:46
 msgid "Share on Twitter"
 msgstr "Megosztás Twitter-en"
 
-#: apps/partials/app.html:274
+msgid "Shopping"
+msgstr "Bevásárlás"
+
 msgid "Similar Apps"
 msgstr "Hasonló alkalmazások"
 
-#: apps/directives/type.js:29
 msgid "Snappy App"
 msgstr "Snappy alkalmazás"
 
-#: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
 msgstr "Snappy alkalmazások"
 
-#: lists/partials/listEdit.html:16
+msgid "Social Networking"
+msgstr "Közösségi háló"
+
 msgid "Sort Apps By:"
 msgstr "Alkalmazások rendezése:"
 
-#: apps/partials/apps.html:27
 msgid "Sort By:"
 msgstr "Rendezés:"
 
-#. App support links
-#: apps/partials/app.html:186
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Star Rating"
+msgstr ""
+
 msgid "Support"
 msgstr "Támogatás"
 
-#: apps/partials/app.html:213
-#: apps/partials/app.html:216
 msgid "Support:"
 msgstr "Támogatás:"
 
-#. Terms and conditions
-#: apps/partials/app.html:224
 msgid "Terms:"
 msgstr "Feltételek:"
 
-#: main/partials/donate.html:52
 msgid "Thank you!"
 msgstr "Köszönjük!"
 
-#: main/partials/faq.html:42
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
-"having\n"
-"more good reviews. An app with more 5 star ratings will have a higher heart\n"
-"rating than an app with only a few 5 star ratings."
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
 msgstr ""
-"A szív értékelés hasonló a csillag értékeléshez, a minél több jó értékelést "
-"kapott alkalmazást jutalmazzuk vele."
 
-#: main/partials/faq.html:30
 msgid ""
-"The star rating is the Bayesian average of the star ratings that user give\n"
-"to an app when they leave a review. The Bayesian average allows apps with\n"
-"more reviews to rank better than apps with less reviews. The star rating\n"
-"can be between 1 and 5, where a 0 means that there have not been any "
-"reviews\n"
-"yet. For more information about the Bayesian average calculation, check out\n"
-"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
 msgstr ""
-"A csillag értékelés a kapott csillagok alapján a Bayes-átlaggal kerül "
-"kiszámolásra. Ennek a számolásnak a segítségével a magasabb értékelés többet "
-"számít a végső elszámolásban, a gyengébb értékelés. A csillag értékelés 1-5-"
-"ig adható, a 0 azt jelenti, hogy még nincs értékelés az alkalmazásnál. "
-"További információért olvassa el <a "
-"href=\"http://fulmicoton.com/posts/bayesian_rating/\">ezt a cikket</a>."
 
-#: apps/partials/app.html:162
 msgid "This app is on these lists:"
 msgstr "Ez az alkalmazás ezeken a listákon van:"
 
-#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr "Nem hivatalos alkalmazásböngésző az Ubuntu Touch rendszerhez."
 
-#: lists/partials/list.html:73
 msgid "This list is empty!"
 msgstr "Ez a lista üres."
 
-#: main/partials/disclaimer.html:5
-#: main/partials/faq.html:7
 msgid ""
-"This site is an unofficial app browser for Ubuntu Touch apps. All data for\n"
-"the apps comes from a publicly accessible\n"
-"<a "
-"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
-">.\n"
-"This site is maintained by <a href=\"http://bhdouglass.com/\">Brian "
-"Douglass</a>\n"
-"and is not endorsed by or affiliated with Ubuntu or Canonical.\n"
-"Ubuntu and Canonical are registered trademarks of\n"
-"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
-"Az oldal egy nem hivatalos alkalmazásböngésző az Ubuntu Touch rendszerhez. "
-"Minden itt található adat az egyes alkalmazásokról publikusan elérhető a "
-"következő <a "
-"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">API-"
-"n</a> keresztül. Az oldal karbantartását <a "
-"href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
-"végzi, semmilyen kapcsolatban nem áll és nincs jóváhagyva sem az Ubuntu, sem "
-"a Canonical által.\n"
-"Az Ubuntu és a Canonical a <a href=\"http://www.canonical.com/\">Canonical "
-"Ltd.</a> védjegyei."
 
-#: main/services/utils.js:71
 msgid "Title A-Z"
 msgstr "Cím (A-Z)"
 
-#: main/services/utils.js:74
 msgid "Title Z-A"
 msgstr "Cím (Z-A)"
 
-#: main/partials/faq.html:20
 msgid ""
-"To install an app, visit this site on your Ubuntu Touch device. Find the "
-"app\n"
-"that you wish to install and click the \"Install\" button. You will then be\n"
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"Egy alkalmazás telepítéséhez látogassa meg ezt az oldalt a készülékéről. "
-"Keresse meg az alkalmazást, majd kattintson a Telepítés gombra. Ezután a "
-"hivatalos áruház meg fog jelenni és a kiválasztott alkalmazás telepítve lesz."
 
-#: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
 "Probléma vagy hiányzó funkció jelentéséhez látogasson el a GitHub oldalra."
 
-#: main/partials/main.html:136
 msgid "Top Apps"
 msgstr "Legnépszerűbb alkalmazások"
 
-#. App type (scope/app/etc)
-#: apps/partials/apps.html:22
+msgid "Total Reviews"
+msgstr "Összes értékelés"
+
+msgid "Travel & Local"
+msgstr "Utazás"
+
 msgid "Type:"
 msgstr "Típus:"
 
-#. The updated apps rss feed link
-#: index.html:225
+msgid "Universal Accesss/Accessibility"
+msgstr ""
+
 msgid "Updated Apps"
 msgstr "Frissített alkalmazások"
 
-#: apps/partials/app.html:202
 msgid "Updated:"
 msgstr "Frissítve:"
 
-#: lists/partials/list.html:11
 msgid "User List:"
 msgstr "Felhasználói lista:"
 
-#: apps/partials/app.html:291
 msgid "User Reviews"
 msgstr "Felhasználói értékelések"
 
-#: apps/partials/app.html:200
+msgid "Utilities"
+msgstr "Segédprogramok"
+
 msgid "Version:"
 msgstr "Verzió:"
 
-#: lists/partials/me.html:55
 msgid "View"
 msgstr "Nézet"
 
-#. The uApp Explorer app download link
-#: apps/directives/type.js:28
-#: index.html:203
+msgid "Weather"
+msgstr "Időjárás"
+
 msgid "Web App"
 msgstr "Webalkalmazás"
 
-#: apps/controllers/appsCtrl.js:69
-#: main/partials/main.html:46
 msgid "Web Apps"
 msgstr "Webalkalmazások"
 
-#: apps/partials/app.html:220
 msgid "Website:"
 msgstr "Weboldal:"
 
-#. Welcome {{username}}
-#: lists/partials/me.html:5
 msgid "Welcome"
 msgstr "Üdvözöljük"
 
-#: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
 msgstr "Üdvözli az uApp Explorer!"
 
-#: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Mit tegyek, ha jog-, vagy védjegysértő tartalmat találok?"
 
-#: main/partials/faq.html:40
 msgid "What is the heart rating?"
 msgstr "Mi az a szív értékelés?"
 
-#: main/partials/faq.html:29
 msgid "What is the star rating?"
 msgstr "Mi az a csillag értékelés?"
 
-#: main/partials/faq.html:6
 msgid "What is this site?"
 msgstr "Mi ez az oldal?"
 
-#: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
 msgstr "Hol jelenthetek egy hibát vagy hiányzó funkciót?"
 
-#: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
@@ -948,23 +717,44 @@ msgstr ""
 "Akár úgy dönt, hogy adományoz vagy nem, nagyra értékelem a támogatását. "
 "Köszönöm."
 
-#: main/partials/donate.html:6
 msgid "Why donate?"
 msgstr "Miért támogassam?"
 
-#: lists/partials/listDelete.html:13
 msgid "Yes"
 msgstr "Igen"
 
-#: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
 msgstr "Már kapcsolódott a Caxtonhoz."
 
-#: apps/controllers/appCtrl.js:130
-#: lists/controllers/listCtrl.js:108
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
 "A fiókja még nincs hozzákapcsolva a Caxtonhoz, ezen változtathat a "
 "beállítások alatt"
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "alkalmazás"
+msgstr[1] "alkalmazás"
+
+msgid "apps & scopes"
+msgstr "alkalmazások és lencsék"
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "játék"
+msgstr[1] "játék"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "lencse"
+msgstr[1] "lencse"
+
+msgid "snappy apps"
+msgstr "snappy alkalmazás"
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "webalkalmazás"
+msgstr[1] "webalkalmazás"

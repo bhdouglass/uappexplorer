@@ -1,0 +1,809 @@
+# Spanish translation for uappexplorer
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the uappexplorer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uappexplorer\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"PO-Revision-Date: 2015-12-02 23:11+0000\n"
+"Last-Translator: Sergio Salcedo <ssalcedob@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2015-12-03 04:52+0000\n"
+"X-Generator: Launchpad (build 17856)\n"
+
+msgid "(Don't worry, there is a free version too!)"
+msgstr "(No te preocupes, ¡hay una versión gratuita también!)"
+
+msgid ""
+"*Install will take you to the official appstore on an Ubuntu Touch device"
+msgstr ""
+"*Instalar te llevará a la tienda oficial en un dispositivo Ubuntu Touch"
+
+msgid ""
+"*This webapp injects custom code into the website which can add extra "
+"features or be malicious. Only use this app if you trust the author."
+msgstr ""
+"*Esta aplicación web incluye código al sitio web que puede añadir "
+"funcionalidades extra o ser maliciosa. Úsala solo si confías en el autor."
+
+msgid "- Choose a list -"
+msgstr "- Elige un listado -"
+
+msgid "Add Apps:"
+msgstr "Añadir apps:"
+
+msgid "Add to list:"
+msgstr "Añadir a lista:"
+
+msgid "All"
+msgstr "Todo"
+
+msgid "All Apps"
+msgstr "Todas las Aplicaciones"
+
+msgid "All Architectures"
+msgstr "Todas las arquitecturas"
+
+msgid "All Frameworks"
+msgstr "Todas las estructuras"
+
+msgid "All Types"
+msgstr "Todos los tipos"
+
+msgid "Any Architecture"
+msgstr "Cualquier arquitectura"
+
+msgid "Any License"
+msgstr "Cualquier licencia"
+
+msgid ""
+"Any requests to remove copyright or trademark infringing content should be "
+"taken up with Canonical or the app's author (an author usually has a method "
+"of contact listed under the Support tab on their app's page). uApp Explorer "
+"is not affiliated with Canonical and does not host any apps. uApp Explorer "
+"only displays publicly available information about the official Ubuntu Touch "
+"appstore."
+msgstr ""
+"Cualquier petición para remover contenido con derechos de autor o marcas "
+"registradas  deben ser enviadas a Canonical o al autor de la aplicación (un "
+"autor normalmente lista su contacto en la sección de soporte de su pagina de "
+"la aplicación). uApp Explorer no esta afiliado con Canonical y no hospeda "
+"ninguna aplicación. uApp Explorer solo muestra información disponible "
+"públicamente sobre la tienda de aplicaciones Ubuntu Touch"
+
+msgid "App"
+msgstr "Aplicación"
+
+msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr "Nombre de aplicación (ejemplo: com.ubuntu.developer.example)"
+
+msgid "Apps"
+msgstr "Aplicaciones"
+
+msgid "Apps are not installed via this site, but via the official appstore."
+msgstr ""
+"Las aplicaciones no serán instaladas a través de esta web, sino a través de "
+"la appstore oficial."
+
+msgid "Apps:"
+msgstr "Aplicaciones:"
+
+msgid "Architecture:"
+msgstr "Arquitectura:"
+
+msgid "Are you sure you want to delete this list?"
+msgstr "¿Está seguro que quieres borrar esta lista?"
+
+msgid "Article"
+msgstr "Artículo"
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "Books & Comics"
+msgstr "Libros y cómics"
+
+msgid "Browse"
+msgstr "Explorar"
+
+msgid "Browse Apps"
+msgstr "Explorar aplicaciones"
+
+msgid "Browse Games"
+msgstr "Explirar juegos"
+
+msgid "Browse Scopes"
+msgstr "Explorar scopes"
+
+msgid "Browse Web Apps"
+msgstr "Explorar aplicaciones web"
+
+msgid "Business"
+msgstr "Negocios"
+
+msgid "Buy the Webapp"
+msgstr "Compra la aplicación web"
+
+msgid "Buy the webapp from the Ubuntu Touch app store"
+msgstr "Compra la aplicación web desde la appstore de Ubuntu Touch"
+
+msgid "By:"
+msgstr "Por:"
+
+msgid "Category:"
+msgstr "Categoría:"
+
+msgid "Caxton Code"
+msgstr "Codigo Caxton"
+
+msgid "Changelog"
+msgstr "Registro de cambios"
+
+msgid "Close"
+msgstr "Cerrar"
+
+msgid "Communication"
+msgstr "Comunicación"
+
+msgid "Company"
+msgstr "Empresa"
+
+msgid "Containing:"
+msgstr "Que contiene:"
+
+msgid "Could not add app to list at this time, please try again later"
+msgstr ""
+"No se puede añadir en estos momentos la aplicación a la lista, por favor "
+"inténtelo de nuevo más tarde"
+
+msgid "Could not connect to Caxton at this time, please try again later"
+msgstr ""
+"No se puede conectar a Caxton en este momento, por favor intente mas tarde"
+
+msgid "Could not create a new list at this time, please try again later"
+msgstr ""
+"No podemos crear una nueva lista en estos momentos, por favor inténtelo de "
+"nuevo más tarde"
+
+msgid "Could not delete the list at this time, please try again later"
+msgstr ""
+"No podemos eliminar la lista en estos momentos, por favor inténtelo de nuevo "
+"más tarde"
+
+msgid "Could not download app data, click to retry"
+msgstr ""
+"No podemos descargar los datos de la aplicación, pulse de nuevo para "
+"reintentar"
+
+msgid "Could not download app list, click to retry"
+msgstr ""
+"No podemos descargar la lista de aplicaciones, pulse de nuevo para reintentar"
+
+msgid "Could not find app"
+msgstr "No se encuentra la aplicación"
+
+msgid "Could not find the requested app"
+msgstr "No se encuentra la aplicación solicitada"
+
+msgid "Could not find this list, it may not exist any more"
+msgstr "No se encuentra la lista, puede que ya no exista"
+
+msgid "Could not load lists at this time, click to retry"
+msgstr "No se puede cargar la lista, reintente dando click"
+
+msgid "Could not remove the app from this list, please try again later"
+msgstr ""
+"No se puede eliminar la aplicación de esta lista, por favor intente mas tarde"
+
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+"No se puede guardar la configuración en estos momentos, por favor inténtelo "
+"de nuevo más tarde"
+
+msgid "Could not update the list at this time, please try again later"
+msgstr "No se puede actualizar la lista, por favor intente mas tarde"
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "Create List"
+msgstr "Crear lista"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Developer Tools"
+msgstr "Herramientas para desarrolladores"
+
+msgid "Donate"
+msgstr "Haga una donación"
+
+msgid "Donate via Bitcoin"
+msgstr "Donación vía Bitcoin"
+
+msgid "Donate via Gratipay"
+msgstr "Donación vía Gratipay"
+
+msgid "Donate via Paypal"
+msgstr "Donación vía Paypal"
+
+msgid ""
+"Donating to uApp Explorer is just one way you can help make it better. If "
+"you choose to donate, you money will go towards infrastructure costs. Costs "
+"include domain names, hosting, etc. uApp Explorer will always be a free and "
+"open source service, regardless of the number of donations."
+msgstr ""
+"Realiza una donación para uApp Explorer solo tiene un objetivo y es que todo "
+"funciona mejor. Si escoge donar, su dinero será destinado a costear nuestra "
+"infraestructuras. Estos costes incluye el coste de los dominios, hosting, "
+"etc. uApp Explorer siempre será gratuito y open source, agradecemos todas "
+"las donaciones."
+
+msgid "Donation Web App"
+msgstr "Donación aplicación web"
+
+msgid "Download"
+msgstr "Descargar"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit List"
+msgstr "Editar lista"
+
+msgid "Education"
+msgstr "Educación"
+
+msgid "Email Support"
+msgstr "Email de soporte"
+
+msgid "Entertainment"
+msgstr "Entretenimiento"
+
+msgid "Essential Apps"
+msgstr "Aplicaciones básicas"
+
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
+
+msgid "File Size:"
+msgstr "Tamaño del archivo:"
+
+msgid "Filters"
+msgstr "Filtros"
+
+msgid "Finance"
+msgstr "Finanzas"
+
+msgid "Find"
+msgstr "Encontrar"
+
+msgid "Find an app that has not yet been fetched from the official appstore."
+msgstr ""
+"Encuentra una aplicación que aun no ha sido escogida de la tienda oficial"
+
+msgid "Food & Drink"
+msgstr "Comida y bebida"
+
+msgid "For version:"
+msgstr "Para versión:"
+
+msgid "Found the requested app"
+msgstr "Encuentra la aplicación solicitada"
+
+msgid "Framework:"
+msgstr "Estructura"
+
+msgid "Free"
+msgstr "Gratuita"
+
+msgid "Games"
+msgstr "Juegos"
+
+msgid "Get a QR scanner for your Ubuntu Touch device"
+msgstr ""
+"Consigue un escaner de codigos bidimensionales para tu dispositivo Ubuntu "
+"Touch"
+
+msgid "Go there now"
+msgstr "Ve allá"
+
+msgid "Graphics"
+msgstr "Gráficos"
+
+msgid "Grid"
+msgstr "Malla"
+
+msgid "Health & Fitness"
+msgstr "Salud y bienestar"
+
+msgid "Heart Rating"
+msgstr "Clasificación de corazón"
+
+msgid ""
+"Heart ratings are calculated from the star rating where a 5 star review is 1 "
+"heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts, and 1 star = -1 hearts."
+msgstr ""
+"La clasificación de corazón se calcula en base a la clasificación de "
+"estrellas, donde 5 estrellas es 1 corazón, 4 estrellas = 0.5 corazón, 3 "
+"estrellas = 0 corazón, 2 estrellas = -0.5 corazón y 1 estrella = -1 corazón"
+
+msgid "Help translate!"
+msgstr "¡Ayuda a traducir!"
+
+msgid "Highest Heart Rating"
+msgstr "La clasificación de corazón mas alta"
+
+msgid "Highest Star Rating"
+msgstr "La clasificación de estrella mas alta"
+
+msgid "How can I help improve this site?"
+msgstr "¿Cómo puedo ayudar a mejorar este sitio?"
+
+msgid "How do I install apps?"
+msgstr "¿Cómo instalo aplicaciones?"
+
+msgid "How is the popularity determined?"
+msgstr "¿Cómo se determina la popularidad?"
+
+msgid "I just published my app, why don't I see it?"
+msgstr "He publicado mi aplicación, ¿porqué no la veo?"
+
+msgid "If you want to contribute code visit the GitHub repo."
+msgstr "SI deseas contribuir al código visita el repositorio GitHub"
+
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr ""
+"Si deseas contribuir a la traducción, visita nuestra página en Launchpad"
+
+msgid ""
+"If you want to submit bugs or feature requests visit the GitHub issues page."
+msgstr ""
+"Si deseas informar de fallas o pedir nuevas funcionalidades visita la pagina "
+"GitHub para errores"
+
+msgid "If you would like to contact the author, visit his website."
+msgstr "Si deseas contactar al autor visita su portal de Internet"
+
+msgid ""
+"If you would like to contribute monetarily, there are multiple options for "
+"donating."
+msgstr ""
+"Si deseas contribuir con dinero, hay múltiples opciones para hacer "
+"donaciones."
+
+msgid "Info"
+msgstr "Información"
+
+msgid "Install"
+msgstr "Instalar"
+
+msgid "It is possible to have a negative heart rating."
+msgstr "Es posible tener una clasificacion negativa de corazón"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Latest Update"
+msgstr "Última actualización"
+
+msgid "Least Popular (This Month)"
+msgstr "El menos popular (este mes)"
+
+msgid "License:"
+msgstr "Licencia:"
+
+msgid "Lifestyle"
+msgstr "Estilo de vida"
+
+msgid "List"
+msgstr "Lista"
+
+msgid "List Name:"
+msgstr "Nombre de la Lista"
+
+msgid "Load more reviews"
+msgstr "Cargar más opiniones"
+
+msgid "Loading reviews..."
+msgstr "Cargando opiniones..."
+
+msgid "Log In"
+msgstr "Iniciar sesión"
+
+msgid "Log Out"
+msgstr "Cerrar sesión"
+
+msgid "Log in via Ubuntu"
+msgstr "Inicinar sesión con Ubuntu"
+
+msgid "Lowest Heart Rating"
+msgstr "La menor clasificación de corazón"
+
+msgid "Lowest Star Rating"
+msgstr "La menor clasificacion de estrella"
+
+msgid "Media & Video"
+msgstr "Multimedia"
+
+msgid "Medical"
+msgstr "Medicina"
+
+msgid "Missing an app?"
+msgstr "¿Falta una aplicación?"
+
+msgid "Monthly Popularity"
+msgstr "Popularidad mensual"
+
+msgid "More Apps by:"
+msgstr "Mas aplicaciones por:"
+
+msgid "Most Expensive (USD)"
+msgstr "La mas cara en USD"
+
+msgid "Most Popular (This Month)"
+msgstr "Mas populares (este mes)"
+
+msgid "Most Relevant"
+msgstr "Más relevantes"
+
+msgid "Music & Audio"
+msgstr "Música y audio"
+
+msgid "My Lists"
+msgstr "Mis Listas"
+
+msgid "New Apps"
+msgstr "Nuevas aplicaciones"
+
+msgid "New List"
+msgstr "Nueva lista"
+
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
+msgstr ""
+"Nuevas aplicaciones son liberadas de la tienda oficial cada hora, puedes ya "
+"sea esperar hasta que las nuevas aplicaciones se liberen o llenar la "
+"solicitud para encontrar la aplicación mas pronto."
+
+msgid "Newest"
+msgstr "Más recientes"
+
+msgid "News & Magazines"
+msgstr "Noticias y revistas"
+
+msgid "Next App:"
+msgstr "próxima aplicación:"
+
+msgid "No"
+msgstr "No"
+
+msgid "No apps found, try searching again."
+msgstr "No se encontraron aplicaciones, intenta busca de nuevo"
+
+msgid "No lists, create one!"
+msgstr "No hay listas, ¡crea una!"
+
+msgid "No recent changes"
+msgstr "No hay cambios recientes"
+
+msgid "No reviews yet!"
+msgstr "¡No hay evaluaciones recientes!"
+
+msgid "Oldest"
+msgstr "Lo más antiguo"
+
+msgid "Oldest Update"
+msgstr "La actualización mas antigua"
+
+msgid "Open Source"
+msgstr "Open Source"
+
+msgid "Personalisation"
+msgstr "Personalización"
+
+msgid "Please login to send via Caxton"
+msgstr "Por favor ingresa para enviar via Caxton"
+
+msgid ""
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
+"during the current month."
+msgstr ""
+"La popularidad esta basada en el número de evaluaciones de 4 o 5 estrellas "
+"en el mes actual."
+
+msgid "Previous App:"
+msgstr "Aplicación anterior:"
+
+msgid "Productivity"
+msgstr "Productividad"
+
+msgid "Proprietary"
+msgstr "Propietario"
+
+msgid "QR Code"
+msgstr "Código QR"
+
+msgid "QR Code:"
+msgstr "Código QR:"
+
+msgid "Reference"
+msgstr "Referencia"
+
+msgid "Remove this app from your list"
+msgstr "Eliminar ésta aplicación de tu lista"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Science & Engineering"
+msgstr "Ciencia e ingeniería"
+
+msgid "Scope"
+msgstr "Scope"
+
+msgid "Scopes"
+msgstr "Ámbitos"
+
+msgid "Screenshots"
+msgstr "Capturas de pantalla"
+
+msgid "Send via Caxton"
+msgstr "Envia vía Caxton"
+
+msgid "Sent via Caxton"
+msgstr "Enviado vía Caxton"
+
+msgid "Settings"
+msgstr "Configuración"
+
+msgid "Share on Facebook"
+msgstr "Compartir en Facebook"
+
+msgid "Share on Google+"
+msgstr "Comparte en Google+"
+
+msgid "Share on Reddit"
+msgstr "Compartir en Reddit"
+
+msgid "Share on Twitter"
+msgstr "Compartir en Twitter"
+
+msgid "Shopping"
+msgstr "Compras"
+
+msgid "Similar Apps"
+msgstr "Aplicaciones parecidas"
+
+msgid "Snappy App"
+msgstr "Aplicacion Snappy"
+
+msgid "Snappy Apps"
+msgstr "Aplicaciones Snappy"
+
+msgid "Social Networking"
+msgstr "Redes sociales"
+
+msgid "Sort Apps By:"
+msgstr "Sortea aplicaciones por:"
+
+msgid "Sort By:"
+msgstr "Ordenar por:"
+
+msgid "Sports"
+msgstr "Deportes"
+
+msgid "Star Rating"
+msgstr "Clasificacion de estrellas"
+
+msgid "Support"
+msgstr "Asistencia técnica"
+
+msgid "Support:"
+msgstr "Asistencia técnica:"
+
+msgid "Terms:"
+msgstr "Términos:"
+
+msgid "Thank you!"
+msgstr "¡Gracias!"
+
+msgid ""
+"The heart rating is similar to the star rating, but it rewards apps for "
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
+msgstr ""
+"La clasificación de corazón es similar a la de estrellas, pero premia mejor "
+"a las aplicaciones por tener mas evaluaciones positivas. Una aplicacion con "
+"mas evaluaciones 5 estrellas tiene una clasificación de corazón mas alta que "
+"una con pocas evaluaciones 5 estrellas."
+
+msgid ""
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
+msgstr ""
+"La evaluación 5 estrellas es el promedio ponderado de las evaluaciones que "
+"el usuario da a una aplicación cuando evalúa. El promedio ponderado permite "
+"que una aplicación con mas evaluaciones sea mejor clasificada que una con "
+"menos evaluaciones. La evaluación de estrellas puede ser entre 1y 5 "
+"estrellas, donde 0 significa que no hay evaluaciones aún. Para mas "
+"información acerca del cálculo de promedio ponderado revisa este artículo."
+
+msgid "This app is on these lists:"
+msgstr "Esta aplicación este en estas listas"
+
+msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgstr "Este es un visor no oficial de aplicaciones para Ubuntu Touch"
+
+msgid "This list is empty!"
+msgstr "¡La lista esta vacia!"
+
+msgid ""
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr ""
+"Este portal es un visor no oficial de aplicaciones para Ubuntu Touch. Toda "
+"la información acerca de las aplicaciones viene de una API publica. Este "
+"portal es mantenido por Brian Douglass y no esta apoyado o afiliado en forma "
+"alguna con Ubuntu o Canonical. Ubuntu y Canonical son marcas registradas de "
+"Canonical Ltd."
+
+msgid "Title A-Z"
+msgstr "Titulos A-Z"
+
+msgid "Title Z-A"
+msgstr "Titulos Z-A"
+
+msgid ""
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
+"taken to the official appstore on your device where you can install the app."
+msgstr ""
+"Para instalar una aplicación visita este portal  en tu dispositivo Ubuntu "
+"Touch. Encuentra la aplicación que deseas instalar y dale click al botón "
+"instalar. Esto te llevará al portal oficial donde puedes instalar la "
+"aplicación."
+
+msgid ""
+"To report a problem or request a new feature visit the issues page for this "
+"site on GitHub."
+msgstr ""
+"Para reportar un problema o solicitar una nueva funcionalidad visita la "
+"pagina de problemas de este portal en GitHub"
+
+msgid "Top Apps"
+msgstr "Mejores aplicaciones"
+
+msgid "Total Reviews"
+msgstr "Evaluaciones totales"
+
+msgid "Travel & Local"
+msgstr "Viajes y local"
+
+msgid "Type:"
+msgstr "Tipo:"
+
+msgid "Universal Accesss/Accessibility"
+msgstr "Acceso universal/Accesibilidad"
+
+msgid "Updated Apps"
+msgstr "Aplicaciones actualizadas"
+
+msgid "Updated:"
+msgstr "Actualizado:"
+
+msgid "User List:"
+msgstr "Lista de usuario:"
+
+msgid "User Reviews"
+msgstr "Evaluaciones de usuario"
+
+msgid "Utilities"
+msgstr "Utilerías"
+
+msgid "Version:"
+msgstr "Versión:"
+
+msgid "View"
+msgstr "Vista"
+
+msgid "Weather"
+msgstr "Estado del Tiempo"
+
+msgid "Web App"
+msgstr "Aplicación Web"
+
+msgid "Web Apps"
+msgstr "Aplicaciones web"
+
+msgid "Website:"
+msgstr "Sitio web:"
+
+msgid "Welcome"
+msgstr "Bienvenido/a"
+
+msgid "Welcome to uApp Explorer!"
+msgstr "Bienvenido(a) a la tienda uApp Explorer"
+
+msgid "What do I do if I find copyright or trademark infringing content?"
+msgstr ""
+"¿Qué hago si encuentro material que infringe derechos de autor o marcas "
+"registradas?"
+
+msgid "What is the heart rating?"
+msgstr "¿Cuál es la clasificacion de corazón?"
+
+msgid "What is the star rating?"
+msgstr "¿Cuál es la clasificacion de estrellas?"
+
+msgid "What is this site?"
+msgstr "¿Qué es este sitio?"
+
+msgid "Where can I report a problem or request a new feature?"
+msgstr ""
+"¿Dondé puedo reportar un problema o solicitar una funcionalidad nueva?"
+
+msgid ""
+"Whether you choose to donate or not, I still appreciate you support. Thank "
+"you!"
+msgstr "Ya sea que hagas una donación o no, aprecio tu apoyo. Gracias"
+
+msgid "Why donate?"
+msgstr "¿Porqué hacer una donación?"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "You are already connected via Caxton!"
+msgstr "Estas conectado via Caxton"
+
+msgid ""
+"You do not have your account connected to Caxton, click to go to your "
+"settings"
+msgstr ""
+"No tienes tu cuenta conectada a Caxton, dale click para ir a tu configuración"
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "aplicación"
+msgstr[1] "aplicaciones"
+
+msgid "apps & scopes"
+msgstr "Aplicaciones y ámbitos"
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "juego"
+msgstr[1] "juegos"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "scopes"
+msgstr[1] "ámbitos"
+
+msgid "snappy apps"
+msgstr "aplicaciones snappy"
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "aplicación web"
+msgstr[1] "aplicaciones web"

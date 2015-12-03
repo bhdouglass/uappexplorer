@@ -7,64 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-05 15:00+0000\n"
-"PO-Revision-Date: 2015-10-13 20:10+0000\n"
+"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"PO-Revision-Date: 2015-11-30 00:56+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-29 04:24+0000\n"
-"X-Generator: Launchpad (build 17837)\n"
+"X-Launchpad-Export-Date: 2015-12-03 04:52+0000\n"
+"X-Generator: Launchpad (build 17856)\n"
 "Language: el\n"
 
-#: apps/partials/app.html:152
-msgid "- Choose a list -"
-msgstr "- Επιλογή καταλόγου -"
-
-#: main/partials/donate.html:25
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(Μην ανησυχείτε, υπάρχει και δωρεάν έκδοση!)"
 
-#: main/partials/main.html:25
-msgid "{{counts.applications}} apps"
-msgid_plural "{{counts.applications}} apps"
-msgstr[0] "{{counts.applications}} εφαρμογή"
-msgstr[1] "{{counts.applications}} εφαρμογές"
-
-#: main/partials/main.html:73
-msgid "{{counts.games}} games"
-msgid_plural "{{counts.games}} games"
-msgstr[0] "{{counts.games}} παιχνίδι"
-msgstr[1] "{{counts.games}} παιχνίδια"
-
-#: main/partials/main.html:97
-msgid "{{counts.scopes}} scopes"
-msgid_plural "{{counts.scopes}} scopes"
-msgstr[0] "{{counts.scopes}} επισκόπιο"
-msgstr[1] "{{counts.scopes}} επισκόπια"
-
-#: main/partials/main.html:49
-msgid "{{counts.webapps}} web apps"
-msgid_plural "{{counts.webapps}} web apps"
-msgstr[0] "{{counts.webapps}} εφαρμογή ιστού"
-msgstr[1] "{{counts.webapps}} εφαρμογές ιστού"
-
-#: lists/partials/me.html:79
-msgid "{{list.packages.length}} apps"
-msgid_plural "{{list.packages.length}} apps"
-msgstr[0] "{{list.packages.length}} εφαρμογή"
-msgstr[1] "{{list.packages.length}} εφαρμογές"
-
-#: apps/partials/app.html:73
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
 "*Η εγκατάσταση όταν γίνεται σε συσκευή Ubuntu Touch σε κατευθύνει στο "
 "επίσημο κατάστημα εφαρμογών."
 
-#: apps/partials/app.html:76
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
@@ -73,468 +36,363 @@ msgstr ""
 "προσθέτει επιπλέον λειτουργίες ή να είναι κακόβουλος. Χρησιμοποιείστε την "
 "εφαρμογή αυτή μόνο αν εμπιστεύεστε το δημιουργό της."
 
-#: lists/partials/listEdit.html:37
+msgid "- Choose a list -"
+msgstr "- Επιλογή καταλόγου -"
+
 msgid "Add Apps:"
 msgstr "Προσθήκη εφαρμογών:"
 
-#: apps/partials/app.html:150
 msgid "Add to list:"
 msgstr "Προσθήκη στον κατάλογο:"
 
-#: apps/controllers/appCtrl.js:92
-msgid "Added this app to your list"
-msgstr "Η εφαρμογή αυτή προστέθηκε στον κατάλογό σας"
-
-#: apps/controllers/appsCtrl.js:117
-#: apps/controllers/appsCtrl.js:23
-#: apps/controllers/appsCtrl.js:45
-#: apps/services/api.js:194
 msgid "All"
 msgstr "Όλα"
 
-#: apps/controllers/appsCtrl.js:108
-#: apps/controllers/appsCtrl.js:113
-#: apps/controllers/appsCtrl.js:14
-#: apps/services/api.js:177
 msgid "All Apps"
 msgstr "Όλες οι εφαρμογές"
 
-#: apps/controllers/appsCtrl.js:63
+msgid "All Architectures"
+msgstr "Όλες οι αρχιτεκτονικές"
+
+msgid "All Frameworks"
+msgstr "Όλοι οι σκελετοί"
+
 msgid "All Types"
 msgstr "Όλοι οι τύποι"
 
-#: apps/controllers/appsCtrl.js:41
-msgid "Any"
-msgstr "Οποιοδήποτε"
+msgid "Any Architecture"
+msgstr "Οποιαδήποτε αρχιτεκτονική"
 
-#: main/partials/faq.html:75
+msgid "Any License"
+msgstr "Οποιαδήποτε άδεια χρήσης"
+
 msgid ""
-"Any requests to remove copyright or trademark infringing content should be\n"
-"taken up with <a href=\"http://www.canonical.com/\">Canonical</a> or the "
-"app's\n"
-"author (an author usually has a method of contact listed under the "
-"\"Support\"\n"
-"tab on their app's page). uApp Explorer is not affiliated with Canonical\n"
-"and does not host any apps. uApp Explorer only displays publicly available\n"
-"information about the official Ubuntu Touch appstore."
+"Any requests to remove copyright or trademark infringing content should be "
+"taken up with Canonical or the app's author (an author usually has a method "
+"of contact listed under the Support tab on their app's page). uApp Explorer "
+"is not affiliated with Canonical and does not host any apps. uApp Explorer "
+"only displays publicly available information about the official Ubuntu Touch "
+"appstore."
 msgstr ""
 "Οι αιτήσεις για αφαίρεση περιεχομένου που καταπατάει πνευματικά δικαιώματα "
-"πρέπει να\n"
-"γίνονται στη <a href=\"http://www.canonical.com/\">Canonical</a> ή στο "
-"δημιουργό\n"
-"της εφαρμογής (οι δημιουργοί συνήθως παρέχουν τρόπους επικοινωνίας στην "
-"καρτέλα\n"
-"\"Υποστήριξη\" της ιστοσελίδας της εφαρμογής). Το uApp Explorer δε "
-"σχετίζεται με τη Canonical\n"
-"και δε φιλοξενεί εφαρμογές. Το uApp Explorer μόνο προβάλει ελεύθερα "
-"διαθέσιμο\n"
-"περιεχόμενο για το επίσημο κατάστημα εφαρμογών του Ubuntu Touch."
+"θα πρέπει να γίνονται στη Canonical ή στο δημιουργό της εφαρμογής (οι "
+"δημιουργοί συνήθως παρέχουν τρόπους επικοινωνίας στην καρτέλα \"Υποστήριξη\" "
+"της ιστοσελίδας της εφαρμογής). Το uApp Explorer δε σχετίζεται με τη "
+"Canonical και δε φιλοξενεί εφαρμογές. Το uApp Explorer μόνο προβάλει "
+"ελεύθερα διαθέσιμο περιεχόμενο για το επίσημο κατάστημα εφαρμογών του Ubuntu "
+"Touch."
 
-#: apps/directives/type.js:26
 msgid "App"
 msgstr "Εφαρμογή"
 
-#: apps/partials/request.html:27
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Όνομα εφαρμογής (π.χ.: com.ubuntu.developer.example)"
 
-#: apps/controllers/appsCtrl.js:66
-#: main/partials/main.html:22
 msgid "Apps"
 msgstr "Εφαρμογές"
 
-#: main/partials/faq.html:25
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
 "Οι εφαρμογές δεν εγκαθίστανται μέσω αυτού του ιστότοπου, αλλά μέσω του "
 "επίσημου καταστήματος εφαρμογών."
 
-#: lists/partials/listEdit.html:23
 msgid "Apps:"
 msgstr "Εφαρμογές:"
 
-#. CPU architecture
-#: apps/partials/app.html:206
-#: apps/partials/apps.html:69
 msgid "Architecture:"
 msgstr "Αρχιτεκτονική:"
 
-#: lists/partials/listDelete.html:2
-msgid "Are you sure you want to delete \"{{selectedList.name}}\"?"
-msgstr ""
-"Είστε σίγουροι ότι θέλετε να διαγράψετε το \"{{selectedList.name}}\";"
+msgid "Are you sure you want to delete this list?"
+msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον κατάλογο;"
 
-#. Browse Apps
-#: main/partials/main.html:5
+msgid "Article"
+msgstr "Άρθρο"
+
+msgid "Author"
+msgstr "Δημιουργός"
+
+msgid "Books & Comics"
+msgstr "Βιβλία & κόμικ"
+
 msgid "Browse"
 msgstr "Πλοήγηση"
 
-#: main/partials/main.html:14
 msgid "Browse Apps"
 msgstr "Πλοήγηση σε εφαρμογές"
 
-#: main/partials/main.html:62
 msgid "Browse Games"
 msgstr "Πλοήγηση σε παιχνίδια"
 
-#: main/partials/main.html:86
 msgid "Browse Scopes"
 msgstr "Πλοήγηση σε επισκόπια"
 
-#: main/partials/main.html:38
 msgid "Browse Web Apps"
 msgstr "Πλοήγηση σε εφαρμογές ιστού"
 
-#: main/partials/donate.html:19
+msgid "Business"
+msgstr "Επαγγελματικά"
+
 msgid "Buy the Webapp"
 msgstr "Αγορά της εφαρμογής ιστού"
 
-#: main/partials/donate.html:21
 msgid "Buy the webapp from the Ubuntu Touch app store"
 msgstr ""
 "Αγορά της εφαρμογής ιστού από το κατάστημα εφαρμογών του Ubuntu Touch"
 
-#. User list author
-#: lists/partials/list.html:13
-msgid "By: {{list.user_name}}"
-msgstr "Από: {{list.user_name}}"
+msgid "By:"
+msgstr "Κατά:"
 
-#: apps/partials/apps.html:17
 msgid "Category:"
 msgstr "Κατηγορία:"
 
-#: lists/partials/me.html:18
 msgid "Caxton Code"
 msgstr "Κώδικας Caxton"
 
-#. App changelog
-#: apps/partials/app.html:180
 msgid "Changelog"
 msgstr "Αρχείο καταγραφής αλλαγών"
 
-#: lists/partials/listEdit.html:42
-msgid "Clear search"
-msgstr "Καθαρισμός αναζήτησης"
-
-#: apps/partials/request.html:35
-#: lists/partials/listEdit.html:67
-#: lists/partials/login.html:9
-#: main/partials/disclaimer.html:16
-#: main/partials/faq.html:117
-#: main/partials/qrcode.html:15
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#. Apps containing: {search term}
-#: apps/partials/apps.html:9
+msgid "Communication"
+msgstr "Επικοινωνία"
+
+msgid "Company"
+msgstr "Εταιρεία"
+
 msgid "Containing:"
 msgstr "Που περιέχουν:"
 
-#: apps/controllers/appCtrl.js:95
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η προσθήκη της εφαρμογής στον κατάλογο, "
 "παρακαλώ προσπαθήστε ξανά αργότερα"
 
-#: apps/controllers/appCtrl.js:136
-#: lists/controllers/listCtrl.js:114
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η σύνδεση στο Caxton, παρακαλώ προσπαθήστε "
 "ξανά αργότερα"
 
-#: lists/controllers/listEditCtrl.js:65
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέου καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
-#: lists/controllers/meCtrl.js:55
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή του καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
-#: apps/controllers/appCtrl.js:60
 msgid "Could not download app data, click to retry"
 msgstr ""
 "Δεν κατέστη δυνατή η λήψη των δεδομένων της εφαρμογής, πατήστε εδώ για να "
 "προσπαθήσετε ξανά"
 
-#: apps/controllers/appsCtrl.js:137
 msgid "Could not download app list, click to retry"
 msgstr ""
 "Δεν κατέστη δυνατή η λήψη του καταλόγου με τις εφαρμογές, πατήστε εδώ για να "
 "προσπαθήσετε ξανά"
 
-#: apps/controllers/appsCtrl.js:154
-msgid "Could not download category list, click to retry"
-msgstr ""
-"Δεν κατέστη δυνατή η λήψη του καταλόγου με τις κατηγορίες, πατήστε εδώ για "
-"να προσπαθήσετε ξανά"
-
-#: apps/controllers/appsCtrl.js:167
-msgid "Could not download framework list, click to retry"
-msgstr ""
-"Δεν κατέστη δυνατή η λήψη του καταλόγου με τους σκελετούς, πατήστε εδώ για "
-"να προσπαθήσετε ξανά"
-
-#: apps/controllers/appsCtrl.js:179
-msgid "Could not download license list, click to retry"
-msgstr ""
-"Δεν κατέστη δυνατή η λήψη του καταλόγου με τις άδειες χρήσης, πατήστε εδώ "
-"για να προσπαθήσετε ξανά"
-
-#: apps/controllers/appCtrl.js:55
 msgid "Could not find app"
 msgstr "Δε βρέθηκε η εφαρμογή"
 
-#: apps/partials/request.html:9
 msgid "Could not find the requested app"
 msgstr "Δε βρέθηκε η εφαρμογή προς αναζήτηση"
 
-#: lists/controllers/listCtrl.js:42
-#: lists/controllers/listCtrl.js:50
 msgid "Could not find this list, it may not exist any more"
 msgstr "Δε βρέθηκε ο κατάλογος αυτός, ίσως δεν υπάρχει πια"
 
-#: lists/controllers/listCtrl.js:62
-msgid "Could not load the apps for this list, please try again later"
+msgid "Could not load lists at this time, click to retry"
 msgstr ""
-"Δεν κατέστη δυνατή η φόρτωση των εφαρμογών για αυτόν τον κατάλογο, παρακαλώ "
-"προσπαθήστε ξανά αργότερα"
+"Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των καταλόγων, πατήστε εδώ για "
+"να προσπαθήσετε ξανά"
 
-#: lists/controllers/listCtrl.js:82
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή η διαγραφή της εφαρμογής από αυτόν τον κατάλογο, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
-#: lists/partials/listEdit.html:30
-msgid "Could not retrieve app list at this time, please try again later."
-msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση του καταλόγου με τις εφαρμογές, "
-"παρακαλώ προσπαθήστε ξανά αργότερα"
-
-#: lists/partials/listEdit.html:56
-msgid "Could not retrieve search at this time, please try again later."
-msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η ανάκτηση της αναζήτησης, παρακαλώ "
-"προσπαθήστε ξανά αργότερα"
-
-#: lists/controllers/meCtrl.js:69
 msgid "Could not save your settings at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η αποθήκευση των ρυθμίσεών σας, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
-#: lists/controllers/listEditCtrl.js:67
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η ενημέρωση του καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
-#: lists/partials/listEdit.html:77
 msgid "Create"
 msgstr "Δημιουργία"
 
-#: lists/partials/listEdit.html:3
 msgid "Create List"
 msgstr "Δημιουργία καταλόγου"
 
-#: lists/partials/me.html:65
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#. App description
-#: apps/partials/app.html:177
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: index.html:114
-#: main/partials/donate.html:2
+msgid "Developer Tools"
+msgstr "Εργαλεία ανάπτυξης"
+
 msgid "Donate"
 msgstr "Δωρεά"
 
-#: main/partials/donate.html:44
 msgid "Donate via Bitcoin"
 msgstr "Δωρεά μέσω Bitcoin"
 
-#: main/partials/donate.html:37
 msgid "Donate via Gratipay"
 msgstr "Δωρεά μέσω Gratipay"
 
-#: main/partials/donate.html:30
-#: main/partials/donate.html:34
 msgid "Donate via Paypal"
 msgstr "Δωρεά μέσω Paypal"
 
-#: main/partials/donate.html:7
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
-"you\n"
-"choose to donate, you money will go towards infrastructure costs. Costs "
-"include\n"
-"domain names, hosting, etc. uApp Explorer will always be a free and open "
-"source\n"
-"service, regardless of the number of donations."
+"you choose to donate, you money will go towards infrastructure costs. Costs "
+"include domain names, hosting, etc. uApp Explorer will always be a free and "
+"open source service, regardless of the number of donations."
 msgstr ""
 "Η δωρεά στο uApp Explorer είναι απλά ένας επιπλέον τρόπος για να βοηθήσετε "
-"να γίνει ακόμα καλύτερο. Αν\n"
-"επιλέξετε να κάνετε δωρεά, τα χρήματά σας θα χρησιμοποιηθούν για την κάλυψη "
-"του κόστους υποδομών. Τέτοια\n"
-"κόστη περιλαμβάνουν ονόματα χώρου (domain names), φιλοξενία ιστοσελίδας, "
-"κτλ. Το uApp Explorer θα είναι για \n"
-"πάντα μια υπηρεσία ανοιχτού λογισμικού που παρέχεται ελεύθερα, ανεξάρτητα "
-"από τον αριθμό των δωρεών."
+"να γίνει ακόμα καλύτερο. Αν επιλέξετε να κάνετε δωρεά, τα χρήματά σας θα "
+"χρησιμοποιηθούν για την κάλυψη του κόστους υποδομών. Τέτοια κόστη "
+"περιλαμβάνουν ονόματα χώρου (domain names), φιλοξενία ιστοσελίδας, κτλ. Το "
+"uApp Explorer θα είναι για πάντα μια υπηρεσία ανοιχτού λογισμικού που "
+"παρέχεται ελεύθερα, ανεξάρτητα από τον αριθμό των δωρεών."
 
-#. The uApp Explorer donation app download link
-#: index.html:211
 msgid "Donation Web App"
 msgstr "Εφαρμογή ιστού για δωρεές"
 
-#: lists/partials/me.html:60
+msgid "Download"
+msgstr "Λήψη"
+
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: lists/partials/listEdit.html:2
 msgid "Edit List"
 msgstr "Επεξεργασία καταλόγου"
 
-#: main/partials/main.html:112
+msgid "Education"
+msgstr "Εκπαίδευση"
+
+msgid "Email Support"
+msgstr "Υποστήριξη μέσω ηλεκτρονικού ταχυδρομείου"
+
+msgid "Entertainment"
+msgstr "Διασκέδαση"
+
 msgid "Essential Apps"
 msgstr "Απαραίτητες εφαρμογές"
 
-#. Keep this as an abbreviation if possible
-#: index.html:111
-#: main/partials/faq.html:2
 msgid "FAQ"
 msgstr "Συχνές Ερωτήσεις"
 
-#: apps/partials/apps.html:39
+msgid "File Size:"
+msgstr "Μέγεθος αρχείου:"
+
 msgid "Filters"
 msgstr "Φίλτρα"
 
-#: apps/partials/request.html:36
+msgid "Finance"
+msgstr "Οικονομία"
+
 msgid "Find"
 msgstr "Αναζήτηση"
 
-#: apps/partials/request.html:23
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
 "Αναζήτηση εφαρμογής που δεν έχει ληφθεί ακόμα από το επίσημο κατάστημα "
 "εφαρμογών."
 
-#. Comment below reviews
-#: apps/partials/app.html:367
+msgid "Food & Drink"
+msgstr "Φαγητό & ποτά"
+
 msgid "For version:"
 msgstr "Για την έκδοση:"
 
-#: apps/partials/request.html:12
 msgid "Found the requested app"
-msgstr "Η εφαρμογή προς αναζήτηση βρέθηκε"
+msgstr "Βρέθηκε η εφαρμογή προς αναζήτηση"
 
-#. Ubuntu sdk framework
-#: apps/partials/apps.html:74
 msgid "Framework:"
 msgstr "Σκελετός:"
 
-#. No Cost
-#: apps/partials/app.html:50
-#: main/filters/dollars.js:19
-#: main/services/utils.js:107
 msgid "Free"
 msgstr "Δωρεάν"
 
-#: main/partials/main.html:70
 msgid "Games"
 msgstr "Παιχνίδια"
 
-#: main/partials/qrcode.html:8
 msgid "Get a QR scanner for your Ubuntu Touch device"
 msgstr "Κατεβάστε ένα σαρωτή κωδικών QR για τη Ubuntu Touch συσκευή σας"
 
-#: apps/partials/request.html:14
 msgid "Go there now"
 msgstr "Πήγαινε εκεί τώρα"
 
-#. Grid view
-#: apps/partials/apps.html:47
-#: lists/partials/list.html:22
+msgid "Graphics"
+msgstr "Γραφικά"
+
 msgid "Grid"
 msgstr "Πλέγμα"
 
-#: apps/partials/appView.html:23
+msgid "Health & Fitness"
+msgstr "Υγεία & ευεξία"
+
 msgid "Heart Rating"
 msgstr "Βαθμολογία σε καρδιές"
 
-#: main/partials/faq.html:47
 msgid ""
-"Heart ratings are calculated from the star rating where a 5 star review is\n"
-"1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
-"hearts,\n"
-"and 1 star = -1 hearts."
+"Heart ratings are calculated from the star rating where a 5 star review is 1 "
+"heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts, and 1 star = -1 hearts."
 msgstr ""
 "Οι βαθμολογίες σε καρδιές υπολογίζονται από τη βαθμολογία σε αστέρια όπου "
-"μια κριτική με 5 αστέρια\n"
-"είναι 1 πόντος καρδιάς, 4 αστέρια = 0.5 καρδιές, 3 αστέρια = 0 καρδιές, 2 "
-"αστέρια = -0.5 καρδιές,\n"
-"και 1 αστέρι = -1 καρδιές."
+"μια κριτική με 5 αστέρια είναι 1 πόντος καρδιάς, 4 αστέρια = 0.5 καρδιές, 3 "
+"αστέρια = 0 καρδιές, 2 αστέρια = -0.5 καρδιές, και 1 αστέρι = -1 καρδιές."
 
-#: index.html:164
 msgid "Help translate!"
 msgstr "Βοηθήστε στη μετάφραση!"
 
-#: main/services/utils.js:89
 msgid "Highest Heart Rating"
 msgstr "Υψηλότερη βαθμολογία σε καρδιές"
 
-#: main/services/utils.js:95
 msgid "Highest Star Rating"
 msgstr "Υψηλότερη βαθμολογία σε αστέρια"
 
-#: main/partials/faq.html:92
 msgid "How can I help improve this site?"
 msgstr "Πώς μπορώ να βοηθήσω στη βελτίωση αυτού του ιστότοπου;"
 
-#: main/partials/faq.html:18
 msgid "How do I install apps?"
 msgstr "Πώς εγκαθιστώ εφαρμογές;"
 
-#: main/partials/faq.html:56
 msgid "How is the popularity determined?"
 msgstr "Πώς υπολογίζεται η δημοτικότητα;"
 
-#: main/partials/faq.html:65
 msgid "I just published my app, why don't I see it?"
 msgstr "Μόλις δημοσίευσα την εφαρμογή μου, γιατί δεν μπορώ να τη δω;"
 
-#: main/partials/faq.html:94
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
 "Αν επιθυμείτε να συνεισφέρετε με κώδικα επισκεφτείτε το αποθετήριο στο "
 "GitHub."
 
-#: main/partials/faq.html:102
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
 "Αν επιθυμείτε να βοηθήσετε με τη μετάφραση, επισκεφτείτε την ιστοσελίδα στο "
 "Launchpad."
 
-#: main/partials/faq.html:98
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
 "Αν επιθυμείτε να αναφέρετε σφάλματα ή να ζητήσετε νέες λειτουργίες "
 "επισκεφτείτε την ιστοσελίδα προβλημάτων στο GitHub."
 
-#: main/partials/faq.html:110
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
 "Αν επιθυμείτε να επικοινωνήσετε με το δημιουργό, επισκεφτείτε τον ιστότοπό "
 "του."
 
-#: main/partials/faq.html:106
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
@@ -542,381 +400,308 @@ msgstr ""
 "Αν επιθυμείτε να συνεισφέρετε χρηματικά, υπάρχουν πολλές επιλογές για την "
 "πραγματοποίηση δωρεάς."
 
-#. App info
-#: apps/partials/app.html:183
 msgid "Info"
 msgstr "Πληροφορίες"
 
-#: main/partials/faq.html:52
+msgid "Install"
+msgstr "Εγκατάσταση"
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Είναι δυνατό να υπάρχει βαθμολογία σε καρδιές με αρνητικό πρόσημο."
 
-#: index.html:128
 msgid "Language"
 msgstr "Γλώσσα"
 
-#: main/services/utils.js:83
 msgid "Latest Update"
 msgstr "Πρόσφατη ενημέρωση"
 
-#: main/services/utils.js:104
 msgid "Least Popular (This Month)"
 msgstr "Λιγότερο δημοφιλή (αυτόν το μήνα)"
 
-#: apps/partials/app.html:204
-#: apps/partials/apps.html:62
 msgid "License:"
 msgstr "Άδεια χρήσης:"
 
-#. List view
-#: apps/partials/apps.html:51
-#: lists/partials/list.html:26
+msgid "Lifestyle"
+msgstr "Στυλ ζωής"
+
 msgid "List"
 msgstr "Κατάλογος"
 
-#: lists/partials/listEdit.html:9
 msgid "List Name:"
 msgstr "Όνομα καταλόγου:"
 
-#: apps/partials/app.html:390
-msgid "Loading more reviews..."
-msgstr "Γίνεται φόρτωση περισσότερων κριτικών..."
+msgid "Load more reviews"
+msgstr "Φόρτωση περισσότερων κριτικών"
 
-#: apps/partials/app.html:298
 msgid "Loading reviews..."
 msgstr "Γίνεται φόρτωση κριτικών..."
 
-#: index.html:117
-#: lists/partials/login.html:2
 msgid "Log In"
 msgstr "Σύνδεση"
 
-#: lists/partials/login.html:14
-msgid "Log in via Ubuntu"
-msgstr "Σύνδεση μέσω Ubuntu"
-
-#: index.html:123
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: main/services/utils.js:92
+msgid "Log in via Ubuntu"
+msgstr "Σύνδεση μέσω Ubuntu"
+
 msgid "Lowest Heart Rating"
 msgstr "Χαμηλότερη βαθμολογία σε καρδιές"
 
-#: main/services/utils.js:98
 msgid "Lowest Star Rating"
 msgstr "Χαμηλότερη βαθμολογία σε αστέρια"
 
-#: apps/partials/request.html:2
+msgid "Media & Video"
+msgstr "Πολυμέσα & βίντεο"
+
+msgid "Medical"
+msgstr "Ιατρικά"
+
 msgid "Missing an app?"
 msgstr "Δε μπορείτε να βρείτε την εφαρμογή;"
 
-#: apps/partials/appView.html:28
 msgid "Monthly Popularity"
 msgstr "Μηνιαία δημοτικότητα"
 
-#: apps/partials/app.html:253
-msgid "More Apps by {{app.author}}"
-msgstr "Περισσότερες εφαρμογές από {{app.author}}"
+msgid "More Apps by:"
+msgstr "Περισσότερες εφαρμογές από:"
 
-#: main/services/utils.js:110
 msgid "Most Expensive (USD)"
 msgstr "Πιο ακριβά (σε δολλάρια)"
 
-#: main/services/utils.js:101
 msgid "Most Popular (This Month)"
 msgstr "Πιο δημοφιλή (αυτόν το μήνα)"
 
-#: main/services/utils.js:67
 msgid "Most Relevant"
 msgstr "Πιο σχετικά"
 
-#: index.html:120
-#: lists/partials/me.html:45
+msgid "Music & Audio"
+msgstr "Μουσική & ήχος"
+
 msgid "My Lists"
 msgstr "Οι κατάλογοί μου"
 
-#. The new apps rss feed link
-#: index.html:221
-#: main/partials/main.html:159
 msgid "New Apps"
 msgstr "Νέες εφαρμογές"
 
-#: main/partials/faq.html:67
-msgid ""
-"New apps are fetched from the official appstore every hour, you can either\n"
-"wait until the new apps are fetched or use the request form to request that "
-"the\n"
-"app be found early."
-msgstr ""
-"Η λήψη νέων εφαρμογών από το επίσημο κατάστημα γίνεται κάθε ώρα, μπορείτε "
-"είτε να\n"
-"περιμένετε μέχρι να ληφθούν οι νέες εφαρμογές ή να χρησιμοποιήσετε τη φόρμα "
-"υποβολής για\n"
-"να ζητήσετε να βρεθεί η εφαρμογή νωρίτερα."
-
-#: lists/partials/me.html:42
 msgid "New List"
 msgstr "Νέος κατάλογος"
 
-#: main/services/utils.js:77
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
+msgstr ""
+"Η λήψη νέων εφαρμογών από το επίσημο κατάστημα γίνεται κάθε ώρα, μπορείτε "
+"είτε να περιμένετε μέχρι να ληφθούν οι νέες εφαρμογές ή να χρησιμοποιήσετε "
+"τη φόρμα υποβολής για να ζητήσετε να βρεθεί η εφαρμογή νωρίτερα."
+
 msgid "Newest"
 msgstr "Νεότερα"
 
-#: apps/partials/app.html:16
+msgid "News & Magazines"
+msgstr "Νέα & περιοδικά"
+
 msgid "Next App:"
 msgstr "Επόμενη εφαρμογή:"
 
-#: lists/partials/listDelete.html:8
 msgid "No"
 msgstr "Όχι"
 
-#: lists/partials/listEdit.html:52
-msgid "No apps found"
-msgstr "Δε βρέθηκαν εφαρμογές"
-
-#: apps/partials/apps.html:112
 msgid "No apps found, try searching again."
 msgstr "Δε βρέθηκαν εφαρμογές, παρακαλώ κάντε πάλι αναζήτηση."
 
-#: apps/partials/app.html:157
 msgid "No lists, create one!"
 msgstr "Δεν υπάρχουν κατάλογοι, δημιουργήστε έναν!"
 
-#: apps/partials/app.html:382
+msgid "No recent changes"
+msgstr "Δεν υπάρχουν πρόσφατες αλλαγές"
+
 msgid "No reviews yet!"
 msgstr "Δεν υπάρχουν ακόμα κριτικές!"
 
-#: main/services/utils.js:80
 msgid "Oldest"
 msgstr "Παλαιότερα"
 
-#: main/services/utils.js:86
 msgid "Oldest Update"
 msgstr "Παλαιότερη ενημέρωση"
 
-#: apps/controllers/appCtrl.js:125
-#: lists/controllers/listCtrl.js:103
+msgid "Open Source"
+msgstr "Ανοικτού κώδικα"
+
+msgid "Personalisation"
+msgstr "Εξατομίκευση"
+
 msgid "Please login to send via Caxton"
 msgstr "Παρακαλώ συνδεθείτε για να κάνετε αποστολή μέσω Caxton"
 
-#: main/partials/faq.html:58
 msgid ""
-"Popularity is based on the number of 4 and 5 star reviews given to and app\n"
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
 msgstr ""
 "Η δημοτικότητα βασίζεται στον αριθμό των κριτικών με 4 ή 5 αστέρια που έχουν "
-"δοθεί σε μια\n"
-"εφαρμογή μέσα στον τρέχων μήνα."
+"δοθεί σε μια εφαρμογή μέσα στον τρέχων μήνα."
 
-#: apps/partials/app.html:10
 msgid "Previous App:"
 msgstr "Προηγούμενη εφαρμογή:"
 
-#: apps/partials/app.html:128
-#: lists/partials/list.html:63
+msgid "Productivity"
+msgstr "Παραγωγικότητα"
+
+msgid "Proprietary"
+msgstr "Κλειστού κώδικα"
+
 msgid "QR Code"
 msgstr "Κώδικας QR"
 
-#: main/partials/qrcode.html:2
-msgid "QR Code for {{qrCodeTitle}}"
-msgstr "Κώδικας QR για {{qrCodeTitle}}"
+msgid "QR Code:"
+msgstr "Κώδικας QR:"
 
-#: lists/partials/list.html:78
+msgid "Reference"
+msgstr "Παραπομπή"
+
 msgid "Remove this app from your list"
 msgstr "Διαγραφή της εφαρμογής αυτής από τον κατάλογό σας"
 
-#: lists/partials/listEdit.html:72
-#: lists/partials/me.html:31
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#. The uApp Explorer scope download link
-#: apps/directives/type.js:27
-#: index.html:207
+msgid "Science & Engineering"
+msgstr "Επιστήμη & μηχανική"
+
 msgid "Scope"
 msgstr "Επισκόπιο"
 
-#: apps/controllers/appsCtrl.js:72
-#: main/partials/main.html:94
 msgid "Scopes"
 msgstr "Επισκόπια"
 
-#: apps/partials/app.html:235
 msgid "Screenshots"
 msgstr "Στιγμιότυπα οθόνης"
 
-#: apps/partials/app.html:121
-#: apps/partials/app.html:123
-#: lists/partials/list.html:56
-#: lists/partials/list.html:58
 msgid "Send via Caxton"
 msgstr "Αποστολή μέσω Caxton"
 
-#: apps/partials/app.html:124
-#: lists/partials/list.html:59
 msgid "Sent via Caxton"
-msgstr "Απεστάλη μέσω Caxton"
+msgstr "Η αποστολή μέσω Caxton ολοκληρώθηκε"
 
-#: lists/partials/me.html:13
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: apps/partials/app.html:105
-#: lists/partials/list.html:41
 msgid "Share on Facebook"
 msgstr "Διαμοιρασμός στο Facebook"
 
-#: apps/partials/app.html:100
-#: lists/partials/list.html:36
 msgid "Share on Google+"
 msgstr "Διαμοιρασμός στο Google+"
 
-#: apps/partials/app.html:116
-#: lists/partials/list.html:51
 msgid "Share on Reddit"
 msgstr "Διαμοιρασμός στο Reddit"
 
-#: apps/partials/app.html:110
-#: lists/partials/list.html:46
 msgid "Share on Twitter"
 msgstr "Διαμοιρασμός στο Twitter"
 
-#: apps/partials/app.html:274
+msgid "Shopping"
+msgstr "Αγορές"
+
 msgid "Similar Apps"
 msgstr "Αντίστοιχες εφαρμογές"
 
-#: apps/directives/type.js:29
 msgid "Snappy App"
 msgstr "Εφαρμογή snappy"
 
-#: apps/controllers/appsCtrl.js:75
 msgid "Snappy Apps"
 msgstr "Eφαρμογές snappy"
 
-#: lists/partials/listEdit.html:16
+msgid "Social Networking"
+msgstr "Κοινωνική δικτύωση"
+
 msgid "Sort Apps By:"
 msgstr "Ταξινόμηση εφαρμογών κατά:"
 
-#: apps/partials/apps.html:27
 msgid "Sort By:"
 msgstr "Ταξινόμηση κατά:"
 
-#. App support links
-#: apps/partials/app.html:186
+msgid "Sports"
+msgstr "Αθλητικά"
+
+msgid "Star Rating"
+msgstr "Βαθμολογία σε αστέρια"
+
 msgid "Support"
 msgstr "Υποστήριξη"
 
-#: apps/partials/app.html:213
-#: apps/partials/app.html:216
 msgid "Support:"
 msgstr "Υποστήριξη:"
 
-#. Terms and conditions
-#: apps/partials/app.html:224
 msgid "Terms:"
 msgstr "Όροι:"
 
-#: main/partials/donate.html:52
 msgid "Thank you!"
 msgstr "Ευχαριστώ!"
 
-#: main/partials/faq.html:42
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
-"having\n"
-"more good reviews. An app with more 5 star ratings will have a higher heart\n"
-"rating than an app with only a few 5 star ratings."
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
 msgstr ""
 "Η βαθμολογία σε καρδιές είναι όμοια με τη βαθμολογία σε αστέρια, αλλά "
-"ανταμείβει τις εφαρμογές\n"
-"που έχουν περισσότερες καλές κριτικές. Μια εφαρμογή με πολλές βαθμολογίες 5 "
-"αστέρων θα έχει\n"
-"υψηλότερη βαθμολογία σε καρδιές από μια εφαρμογή που έχει μόνο λίγες "
-"βαθμολογίες με 5 αστέρια."
+"ανταμείβει τις εφαρμογές που έχουν περισσότερες καλές κριτικές. Μια εφαρμογή "
+"με πολλές βαθμολογίες 5 αστέρων θα έχει υψηλότερη βαθμολογία σε καρδιές από "
+"μια εφαρμογή που έχει μόνο λίγες βαθμολογίες με 5 αστέρια."
 
-#: main/partials/faq.html:30
 msgid ""
-"The star rating is the Bayesian average of the star ratings that user give\n"
-"to an app when they leave a review. The Bayesian average allows apps with\n"
-"more reviews to rank better than apps with less reviews. The star rating\n"
-"can be between 1 and 5, where a 0 means that there have not been any "
-"reviews\n"
-"yet. For more information about the Bayesian average calculation, check out\n"
-"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">this article</a>."
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
 msgstr ""
-"Η βαθμολογία σε αστέρια είναι ένας Μπεϋζιανός μέσος όρος των βαθμολογιών σε "
-"αστέρια που οι χρήστες δίνουν\n"
-"σε μια εφαρμογή όταν υποβάλουν μια κριτική. Ο Μπεϋζιανός μέσος όρος "
-"επιτρέπει στις εφαρμογές με περισσότερες\n"
-"κριτικές να έχουν καλύτερη κατάταξη από εφαρμογές με λιγότερες κριτικές. Η "
-"βαθμολογία σε αστέρια μπορεί να είναι\n"
-"μεταξύ 1 και 5, όπου το 0 σημαίνει ότι δεν υπάρχουν ακόμα κριτικές. Για "
-"περισσότερες πληροφορίες σχετικά με τον\n"
-"υπολογισμό του Μπεϋζιανού μέσου όρου, δείτε\n"
-"<a href=\"http://fulmicoton.com/posts/bayesian_rating/\">σε αυτό το "
-"άρθρο</a>."
+"Η βαθμολογία σε αστέρια είναι ο Μπεϋζιανός μέσος όρος των βαθμολογιών σε "
+"αστέρια που οι χρήστες δίνουν σε μια εφαρμογή όταν υποβάλουν μια κριτική. Ο "
+"Μπεϋζιανός μέσος όρος επιτρέπει στις εφαρμογές με περισσότερες κριτικές να "
+"έχουν καλύτερη κατάταξη από εφαρμογές με λιγότερες κριτικές. Η βαθμολογία σε "
+"αστέρια μπορεί να είναι μεταξύ 1 και 5, όπου το 0 σημαίνει ότι δεν υπάρχουν "
+"ακόμα κριτικές. Για περισσότερες πληροφορίες σχετικά με τον υπολογισμό του "
+"Μπεϋζιανού μέσου όρου, δείτε σε αυτό το άρθρο."
 
-#: apps/partials/app.html:162
 msgid "This app is on these lists:"
 msgstr "Η εφαρμογή αυτή βρίσκεται στους ακόλουθους καταλόγους:"
 
-#: index.html:191
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr "Αυτός είναι ένας ανεπίσημος προβολέας εφαρμογών για το Ubuntu Touch."
 
-#: lists/partials/list.html:73
 msgid "This list is empty!"
 msgstr "Ο κατάλογος αυτός είναι άδειος!"
 
-#: main/partials/disclaimer.html:5
-#: main/partials/faq.html:7
 msgid ""
-"This site is an unofficial app browser for Ubuntu Touch apps. All data for\n"
-"the apps comes from a publicly accessible\n"
-"<a "
-"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">api</a"
-">.\n"
-"This site is maintained by <a href=\"http://bhdouglass.com/\">Brian "
-"Douglass</a>\n"
-"and is not endorsed by or affiliated with Ubuntu or Canonical.\n"
-"Ubuntu and Canonical are registered trademarks of\n"
-"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
 "O ιστότοπος αυτός είναι ένας ανεπίσημος περιηγητής εφαρμογών για το Ubuntu "
-"Touch. Όλα τα δεδομένα\n"
-"για τις εφαρμογές προέρχονται από μια ελεύθερα προσβάσιμη\n"
-"<a "
-"href=\"https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex\">διεπαφ"
-"ή προγραμματισμού εφαρμογών</a>.\n"
-"Ο ιστότοπος αυτός συντηρείται από τον <a "
-"href=\"http://bhdouglass.com/\">Brian Douglass</a>\n"
-"και δε σχετίζεται ούτε έχει την έγκριση του Ubuntu ή της Canonical.\n"
-"Τα Ubuntu και Canonical είναι σήματα κατατεθέντα της\n"
-"<a href=\"http://www.canonical.com/\">Canonical Ltd.</a>"
+"Touch. Όλα τα δεδομένα για τις εφαρμογές προέρχονται από μια ελεύθερα "
+"προσβάσιμη διεπαφή προγραμματισμού εφαρμογών. Ο ιστότοπος αυτός συντηρείται "
+"από τον Brian Douglass και δε σχετίζεται ούτε έχει την έγκριση του Ubuntu ή "
+"της Canonical. Τα Ubuntu και Canonical είναι σήματα κατατεθέντα της "
+"Canonical Ltd."
 
-#: main/services/utils.js:71
 msgid "Title A-Z"
 msgstr "Τίτλος A-Z"
 
-#: main/services/utils.js:74
 msgid "Title Z-A"
 msgstr "Τίτλος Z-A"
 
-#: main/partials/faq.html:20
 msgid ""
-"To install an app, visit this site on your Ubuntu Touch device. Find the "
-"app\n"
-"that you wish to install and click the \"Install\" button. You will then be\n"
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
 "Για να εγκαταστήσετε μια εφαρμογή, επισκεφτείτε αυτόν τον ιστότοπο από τη "
-"Ubuntu Touch συσκευή σας. Βρείτε την\n"
-"εφαρμογή που θέλετε να εγκαταστήσετε και πατήστε το κουμπί \"Εγκατάσταση\". "
-"Θα οδηγηθείτε έπειτα στο επίσημο\n"
+"Ubuntu Touch συσκευή σας. Βρείτε την εφαρμογή που θέλετε να εγκαταστήσετε "
+"και πατήστε το κουμπί \"Εγκατάσταση\". Θα οδηγηθείτε έπειτα στο επίσημο "
 "κατάστημα εφαρμογών όπου θα μπορέσετε να εγκαταστήσετε την εφαρμογή."
 
-#: main/partials/faq.html:86
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
@@ -924,85 +709,75 @@ msgstr ""
 "Για να κάνετε αναφορά ενός προβλήματος ή να ζητήσετε μια νέα λειτουργία "
 "επισκεφτείτε την ιστοσελίδα προβλημάτων στο GitHub."
 
-#: main/partials/main.html:136
 msgid "Top Apps"
 msgstr "Κορυφαίες εφαρμογές"
 
-#. App type (scope/app/etc)
-#: apps/partials/apps.html:22
+msgid "Total Reviews"
+msgstr "Συνολικές κριτικές"
+
+msgid "Travel & Local"
+msgstr "Ταξίδια & τοπικά"
+
 msgid "Type:"
 msgstr "Είδος:"
 
-#. The updated apps rss feed link
-#: index.html:225
+msgid "Universal Accesss/Accessibility"
+msgstr "Γενική πρόσβαση/Προσβασιμότητα"
+
 msgid "Updated Apps"
 msgstr "Ενημερωμένες εφαρμογές"
 
-#: apps/partials/app.html:202
 msgid "Updated:"
 msgstr "Ενημερώθηκε:"
 
-#: lists/partials/list.html:11
 msgid "User List:"
 msgstr "Κατάλογος χρηστών:"
 
-#: apps/partials/app.html:291
 msgid "User Reviews"
 msgstr "Κριτικές από χρήστες"
 
-#: apps/partials/app.html:200
+msgid "Utilities"
+msgstr "Εργαλεία"
+
 msgid "Version:"
 msgstr "Έκδοση:"
 
-#: lists/partials/me.html:55
 msgid "View"
 msgstr "Προβολή"
 
-#. The uApp Explorer app download link
-#: apps/directives/type.js:28
-#: index.html:203
+msgid "Weather"
+msgstr "Καιρός"
+
 msgid "Web App"
 msgstr "Εφαρμογή ιστού"
 
-#: apps/controllers/appsCtrl.js:69
-#: main/partials/main.html:46
 msgid "Web Apps"
 msgstr "Εφαρμογές ιστού"
 
-#: apps/partials/app.html:220
 msgid "Website:"
 msgstr "Ιστότοπος:"
 
-#. Welcome {{username}}
-#: lists/partials/me.html:5
 msgid "Welcome"
 msgstr "Καλώς ήρθατε"
 
-#: main/partials/disclaimer.html:2
 msgid "Welcome to uApp Explorer!"
 msgstr "Καλώς ήρθατε στο uApp Explorer!"
 
-#: main/partials/faq.html:74
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Τι πρέπει να κάνω αν βρω υλικό που καταπατάει πνευματικά δικαιώματα;"
 
-#: main/partials/faq.html:40
 msgid "What is the heart rating?"
 msgstr "Τι είναι η βαθμολογία σε καρδιές;"
 
-#: main/partials/faq.html:29
 msgid "What is the star rating?"
 msgstr "Τι είναι η βαθμολογία σε αστέρια;"
 
-#: main/partials/faq.html:6
 msgid "What is this site?"
 msgstr "Τι είναι αυτός ο ιστότοπος;"
 
-#: main/partials/faq.html:84
 msgid "Where can I report a problem or request a new feature?"
 msgstr "Πού μπορώ να αναφέρω ένα πρόβλημα ή να ζητήσω μια νέα λειτουργία;"
 
-#: main/partials/donate.html:14
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
@@ -1010,23 +785,44 @@ msgstr ""
 "Ανεξάρτητα από το αν θα επιλέξετε να κάνετε δωρεά ή όχι, θα εκτιμήσω την "
 "όποια συμβολή σας. Ευχαριστώ!"
 
-#: main/partials/donate.html:6
 msgid "Why donate?"
 msgstr "Για ποιο λόγο να κάνω δωρεά;"
 
-#: lists/partials/listDelete.html:13
 msgid "Yes"
 msgstr "Ναι"
 
-#: lists/partials/me.html:22
 msgid "You are already connected via Caxton!"
 msgstr "Είστε ήδη συνδεμένοι στο Caxton!"
 
-#: apps/controllers/appCtrl.js:130
-#: lists/controllers/listCtrl.js:108
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
 "Δεν έχετε κάνει σύνδεση του λογαριασμού σας με το Caxton, πατήστε εδώ για να "
 "πάτε στις ρυθμίσεις σας"
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "εφαρμογή"
+msgstr[1] "εφαρμογές"
+
+msgid "apps & scopes"
+msgstr "εφαρμογές & επισκόπια"
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "παιχνίδι"
+msgstr[1] "παιχνίδια"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "επισκόπιο"
+msgstr[1] "επισκόπια"
+
+msgid "snappy apps"
+msgstr "εφαρμογές snappy"
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "εφαρμογή ιστού"
+msgstr[1] "εφαρμογές ιστού"

@@ -286,13 +286,21 @@ module.exports = {
 
   languages: [
     {
+      'name': 'Asturian',
+      'code': 'ast',
+      'untranslated': 203,
+    }, {
       'name': 'Basque',
       'code': 'eu',
       'untranslated': 0,
     }, {
+      'name': 'Brazilian Portuguese',
+      'code': 'pt_BR',
+      'untranslated': 209,
+    }, {
       'name': 'Chinese (Simplified)',
       'code': 'zh_CN',
-      'untranslated': 2,
+      'untranslated': 63,
     }, {
       'name': 'Czech',
       'code': 'cs',
@@ -300,7 +308,7 @@ module.exports = {
     }, {
       'name': 'Dutch',
       'code': 'nl',
-      'untranslated': 156,
+      'untranslated': 195,
     }, {
       'name': 'English (UK)',
       'code': 'en_GB',
@@ -308,15 +316,15 @@ module.exports = {
     }, {
       'name': 'French',
       'code': 'fr',
-      'untranslated': 88,
+      'untranslated': 0,
     }, {
       'name': 'Galician',
       'code': 'gl',
-      'untranslated': 0,
+      'untranslated': 63,
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 130,
+      'untranslated': 18,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -324,35 +332,39 @@ module.exports = {
     }, {
       'name': 'Hungarian',
       'code': 'hu',
-      'untranslated': 0,
+      'untranslated': 12,
     }, {
       'name': 'Italian',
       'code': 'it',
-      'untranslated': 6,
+      'untranslated': 2,
     }, {
       'name': 'Norwegian Bokmal',
       'code': 'nb',
-      'untranslated': 108,
+      'untranslated': 160,
     }, {
       'name': 'Polish',
       'code': 'pl',
-      'untranslated': 157,
+      'untranslated': 0,
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 0,
+      'untranslated': 42,
     }, {
       'name': 'Russian',
       'code': 'ru',
-      'untranslated': 10,
+      'untranslated': 37,
+    }, {
+      'name': 'Spanish',
+      'code': 'es',
+      'untranslated': 0,
     }, {
       'name': 'Swedish',
       'code': 'sv',
-      'untranslated': 109,
+      'untranslated': 146,
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 0,
+      'untranslated': 9,
     },
   ],
 };
