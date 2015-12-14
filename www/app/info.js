@@ -320,11 +320,11 @@ module.exports = {
     }, {
       'name': 'Galician',
       'code': 'gl',
-      'untranslated': 63,
+      'untranslated': 0,
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 18,
+      'untranslated': 17,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -348,7 +348,7 @@ module.exports = {
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 42,
+      'untranslated': 0,
     }, {
       'name': 'Russian',
       'code': 'ru',
