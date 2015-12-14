@@ -15,22 +15,22 @@
   "homepage": "https://uappexplorer.com/",
   "dependencies": {
     "axios": "^0.7.0",
-    "baobab-react": "^1.0.0",
     "baobab": "^2.1.0",
+    "baobab-react": "^1.0.0",
     "cookie-cutter": "^0.1.1",
     "debounce": "^1.0.0",
-    "history": "^1.12.0",
+    "history": "^1.13.1",
     "i18next-client": "^1.11.1",
     "jquery": "^2.1.4",
     "qrcode.react": "^0.5.1",
+    "react": "^0.14.2",
     "react-addons-pure-render-mixin": "^0.14.2",
     "react-bootstrap": "^0.27.3",
     "react-document-meta": "^2.0.0",
     "react-dom": "^0.14.1",
     "react-router": "^1.0.0-rc3",
     "react-slick": "^0.9.1",
-    "react-swipeable": "^3.0.2",
-    "react": "^0.14.2"
+    "react-swipeable": "^3.0.2"
   },
   "devDependencies": {
     "bower": "^1.4.1",
