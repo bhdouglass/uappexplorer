@@ -3,6 +3,7 @@ var logger = require('../logger');
 var feed = require('./feed');
 var icons = require('./icons');
 var api = require('./api');
+var wish = require('./wish');
 var app = require('./app');
 var auth = require('./auth');
 var lists = require('./lists');
@@ -23,6 +24,8 @@ app_express.use(compression({
     return compression.filter(req, res);
   }
 }));
+app_express.use(bodyParser.json());
+app_express.use(bodyParser.urlencoded({extended: false}));
 
 function success(res, data, message) {
   res.send({
@@ -54,25 +57,23 @@ function isAuthenticated(req, res, next) {
   }
 }
 
+if (config.use_app()) {
+  app.setup(app_express, success, error, isAuthenticated);
+  auth.setup(app_express, success, error, isAuthenticated);
+}
+
 if (config.use_api()) {
   api.setup(app_express, success, error, isAuthenticated);
+  lists.setup(app_express, success, error, isAuthenticated);
+  wish.setup(app_express, success, error, isAuthenticated);
 
-  if (config.use_api()) {
+  if (config.use_icons()) {
     icons.setup(app_express, success, error, isAuthenticated);
   }
 
   if (config.use_feed()) {
     feed.setup(app_express, success, error, isAuthenticated);
   }
-}
-
-if (config.use_app()) {
-  app_express.use(bodyParser.json());
-  app_express.use(bodyParser.urlencoded({extended: false}));
-
-  app.setup(app_express, success, error, isAuthenticated);
-  auth.setup(app_express, success, error, isAuthenticated);
-  lists.setup(app_express, success, error, isAuthenticated);
 }
 
 app_express.use(function(req, res) {

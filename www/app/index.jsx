@@ -11,6 +11,7 @@ var Apps = require('./components/apps');
 var App = require('./components/app');
 var Me = require('./components/me');
 var List = require('./components/list');
+var Wishlist = require('./components/wishlist');
 var AppRequest = require('./components/modals/appRequest');
 var actions = require('./actions');
 
@@ -39,6 +40,7 @@ ReactDOM.render((
       <ReactRouter.Route path="/app/:name" component={App} />
       <ReactRouter.Route path="/me" component={Me} />
       <ReactRouter.Route path="/list/:id" component={List} />
+      <ReactRouter.Route path="/wishlist" component={Wishlist} />
     </ReactRouter.Route>
   </ReactRouter.Router>
 ), document.getElementById('main'));

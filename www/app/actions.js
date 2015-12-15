@@ -477,6 +477,39 @@ actions = {
       });
     }
   },
+
+  getWishes: function() {
+    return api.getWishes().then(function(data) {
+      tree.set('wishes', data);
+    }).catch(function() {
+      actions.createAlert(i18n.t('Could not load wishes at this time, click to retry'), 'error', actions.getUserLists.bind(actions));
+    });
+  },
+
+  createWish: function(wish) {
+    return api.createWish(wish).catch(function(err) {
+      if (err.status == 420) {
+        actions.createAlert(i18n.t('A wish with the same name already exists'), 'error');
+      }
+      else if (err.status == 421) {
+        actions.createAlert(i18n.t('Amazon link is not a valid url'), 'error');
+      }
+      else if (err.status == 422) {
+        actions.createAlert(i18n.t('Google Play link is not a valid url'), 'error');
+      }
+      else if (err.status == 423) {
+        actions.createAlert(i18n.t('iTunes link is not a valid url'), 'error');
+      }
+      else if (err.status == 424) {
+        actions.createAlert(i18n.t('Other link is not a valid url'), 'error');
+      }
+      else {
+        actions.createAlert(i18n.t('Could not create a new wish at this time, please try again later'), 'error');
+      }
+
+      return null;
+    });
+  },
 };
 
 module.exports = actions;

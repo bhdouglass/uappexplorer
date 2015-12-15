@@ -64,4 +64,12 @@ module.exports = {
   deleteUserList: function(id) {
     return axios.delete('/api/lists/' + id).then(success);
   },
+
+  getWishes: function() {
+    return axios.get('/api/wish').then(success);
+  },
+
+  createWish: function(wish) {
+    return axios.post('/api/wish', wish).then(success);
+  },
 };
