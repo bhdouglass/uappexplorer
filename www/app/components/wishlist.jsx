@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');
@@ -43,7 +44,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="wishlist">
         <h1 className="text-center">{i18n.t('App Wishlist')}</h1>
 
         <div className="row">
@@ -66,6 +67,37 @@ module.exports = React.createClass({
               </div>
             </If>
           </div>
+        </div>
+
+        <div className="row">
+          {this.state.wishes.map(function(wish) {
+            var url = '/wishlist/' + wish.id;
+
+            return (
+              <div className="col-sm-6" key={wish.id}>
+                <div className="list-group">
+                  <Link to={url} className="list-group-item clickable">
+                    <div className="row-action-primary">
+                      <i className="fa fa-chevron-up"></i>
+                      <div className="votes">
+                        <span className="text-material-light-green">{wish.upvotes}</span>
+                        &nbsp;-&nbsp;
+                        <span className="text-material-red">{wish.downvotes}</span>
+                      </div>
+                      <i className="fa fa-chevron-down"></i>
+                    </div>
+
+
+                    <div className="row-content">
+                      <div>{i18n.t("I'm wishing for...")}</div>
+                      <h4 className="list-group-item-heading word-break">{wish.name}</h4>
+                    </div>
+
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );

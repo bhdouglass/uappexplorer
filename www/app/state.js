@@ -80,7 +80,7 @@ module.exports = new Baobab({
     lists: [],
   },
 
-  wishes: {},
+  wishes: [],
 
   og: {
     title: 'uApp Explorer',

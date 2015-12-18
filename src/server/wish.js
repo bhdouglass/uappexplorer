@@ -9,6 +9,7 @@ function jsonize(wish, user) {
     downvotes: wish.downvotes,
     existing: wish.existing,
     google_play_link: wish.google_play_link,
+    id: wish.id,
     itunes_link: wish.itunes_link,
     name: wish.name,
     other_link: wish.other_link,
@@ -65,10 +66,10 @@ function setup(app, success, error, isAuthenticated) {
         error(res, 'A wish with the same name already exists', 420);
       }
       else {
-        req.body.amazon_link = 'http://' + req.body.amazon_link.replace('http://', '').replace('https://');
-        req.body.google_play_link = 'http://' + req.body.google_play_link.replace('http://', '').replace('https://');
-        req.body.itunes_link = 'http://' + req.body.itunes_link.replace('http://', '').replace('https://');
-        req.body.other_link = 'http://' + req.body.other_link.replace('http://', '').replace('https://');
+        req.body.amazon_link = req.body.amazon_link ? 'http://' + req.body.amazon_link.replace('http://', '').replace('https://') : '';
+        req.body.google_play_link = req.body.google_play_link ? 'http://' + req.body.google_play_link.replace('http://', '').replace('https://') : '';
+        req.body.itunes_link = req.body.itunes_link ? 'http://' + req.body.itunes_link.replace('http://', '').replace('https://') : '';
+        req.body.other_link = req.body.other_link ? 'http://' + req.body.other_link.replace('http://', '').replace('https://') : '';
 
         if (req.body.amazon_link && !validUrl.isWebUri(req.body.amazon_link)) {
           error(res, 'Amazon link is not a valid url', 421);
