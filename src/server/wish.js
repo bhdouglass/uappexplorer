@@ -66,10 +66,11 @@ function setup(app, success, error, isAuthenticated) {
         error(res, 'A wish with the same name already exists', 420);
       }
       else {
-        req.body.amazon_link = req.body.amazon_link ? 'http://' + req.body.amazon_link.replace('http://', '').replace('https://') : '';
-        req.body.google_play_link = req.body.google_play_link ? 'http://' + req.body.google_play_link.replace('http://', '').replace('https://') : '';
-        req.body.itunes_link = req.body.itunes_link ? 'http://' + req.body.itunes_link.replace('http://', '').replace('https://') : '';
-        req.body.other_link = req.body.other_link ? 'http://' + req.body.other_link.replace('http://', '').replace('https://') : '';
+        //TODO add domain validation
+        req.body.amazon_link = req.body.amazon_link ? 'http://' + req.body.amazon_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
+        req.body.google_play_link = req.body.google_play_link ? 'http://' + req.body.google_play_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
+        req.body.itunes_link = req.body.itunes_link ? 'http://' + req.body.itunes_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
+        req.body.other_link = req.body.other_link ? 'http://' + req.body.other_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
 
         if (req.body.amazon_link && !validUrl.isWebUri(req.body.amazon_link)) {
           error(res, 'Amazon link is not a valid url', 421);
@@ -88,6 +89,7 @@ function setup(app, success, error, isAuthenticated) {
           wish.amazon_link = req.body.amazon_link;
           wish.developer = req.body.developer;
           wish.downvotes = 0;
+          wish.existing = req.body.existing;
           wish.google_play_link = req.body.google_play_link;
           wish.itunes_link = req.body.itunes_link;
           wish.name = req.body.name;

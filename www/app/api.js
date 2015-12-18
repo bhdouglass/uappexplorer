@@ -69,6 +69,10 @@ module.exports = {
     return axios.get('/api/wish').then(success);
   },
 
+  getWish: function(id) {
+    return axios.get('/api/wish/' + id).then(success);
+  },
+
   createWish: function(wish) {
     return axios.post('/api/wish', wish).then(success);
   },

@@ -486,6 +486,14 @@ actions = {
     });
   },
 
+  getWish: function(id) {
+    return api.getWish(id).then(function(data) {
+      tree.set('wish', data);
+    }).catch(function() {
+      actions.createAlert(i18n.t('Could not find wish'), 'error');
+    });
+  },
+
   createWish: function(wish) {
     return api.createWish(wish).catch(function(err) {
       if (err.status == 420) {
