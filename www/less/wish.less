@@ -1,8 +1,28 @@
 .wish {
-  .other-link {
-    overflow: hidden !important;
-    font-size: 10px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .votes {
+    a {
+      display: inline-block;
+      width: 100px;
+
+      @media (min-width: 992px) {
+        display: block;
+        margin-bottom: 15px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .upvotes {
+    color: #FFFFFF !important;
+  }
+
+  .title {
+    margin-top: 10px;
+  }
+
+  .price {
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

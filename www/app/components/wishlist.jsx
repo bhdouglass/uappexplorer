@@ -46,6 +46,7 @@ module.exports = React.createClass({
     return (
       <div className="wishlist">
         <h1 className="text-center">{i18n.t('App Wishlist')}</h1>
+        <h2 className="text-center">{i18n.t('What apps do you wish to see on Ubuntu Touch?')}</h2>
 
         <div className="row">
           <div className="col-xs-12">

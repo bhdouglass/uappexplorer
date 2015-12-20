@@ -518,6 +518,14 @@ actions = {
       return null;
     });
   },
+
+  voteWish: function(id, direction, price) {
+    api.voteWish(id, direction, price).then(function() {
+      actions.createAlert(i18n.t('Thank you for your vote!'), 'success');
+    }).catch(function() {
+      actions.createAlert(i18n.t('You vote could not be saved at this time, please try again later'), 'error');
+    });
+  },
 };
 
 module.exports = actions;

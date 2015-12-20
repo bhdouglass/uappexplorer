@@ -68,7 +68,7 @@ module.exports = React.createClass({
     return (
       <Modal show={this.props.show} onHide={this.close}>
         <Modal.Header closeButton>
-          <Modal.Title>{i18n.t('Missing an app?')}</Modal.Title>
+          <Modal.Title>{i18n.t('What app do you wish to see on Ubuntu Touch?')}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -166,7 +166,7 @@ module.exports = React.createClass({
             <a className="btn btn-warning" onClick={this.close}>{i18n.t('Close')}</a>
           </span>
           <span>
-            <a className="btn btn-material-blue" onClick={this.save}>{i18n.t('Save')}</a>
+            <a className="btn btn-material-blue" onClick={this.save}>{i18n.t('Submit')}</a>
           </span>
         </Modal.Footer>
       </Modal>
