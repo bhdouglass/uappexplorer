@@ -39,33 +39,51 @@ function jsonize(wish, user) {
 }
 
 function setup(app, success, error, isAuthenticated) {
-  //TODO sorting & filtering & paging
-  app.get(['/api/wish', '/api/wish/:id'], function(req, res) {
-    var query = {};
-    if (req.params.id) {
-      query._id = req.params.id;
-    }
+  app.get('/api/wish/:id', function(req, res) {
+    db.Wish.findOne({_id: req.params.id}).sort('-upvotes').exec(function(err, wish) {
+      if (err) {
+        error(res, err);
+      }
+      else if (!wish) {
+        error(res, 'Wish not found with given id', 404);
+      }
+      else {
+        success(res, jsonize(wish, req.user));
+      }
+    });
+  });
 
-    db.Wish.find(query).sort('-upvotes').exec(function(err, wishes) {
+  app.get('/api/wish', function(req, res) {
+    db.Wish.count({}).exec(function(err, count) {
       if (err) {
         error(res, err);
       }
       else {
-        var json = [];
-        _.forEach(wishes, function(wish) {
-          json.push(jsonize(wish, req.user));
-        });
-
-        if (req.params.id) {
-          if (json.length === 0) {
-            error(res, 'Wish not found with given id', 404);
-          }
-          else {
-            json = json[0];
-          }
+        var query = db.Wish.find({});
+        if (req.query.limit) {
+          query.limit(req.query.limit);
         }
 
-        success(res, json);
+        if (req.query.skip) {
+          query.skip(req.query.skip);
+        }
+
+        query.sort('-upvotes').exec(function(err, wishes) {
+          if (err) {
+            error(res, err);
+          }
+          else {
+            var json = [];
+            _.forEach(wishes, function(wish) {
+              json.push(jsonize(wish, req.user));
+            });
+
+            success(res, {
+              count: count,
+              wishes: json,
+            });
+          }
+        });
       }
     });
   });

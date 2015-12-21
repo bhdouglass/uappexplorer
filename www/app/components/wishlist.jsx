@@ -7,6 +7,9 @@ var i18n = require('i18next-client');
 var actions = require('../actions');
 var If = require('./helpers/if');
 var WishEdit = require('./modals/wishEdit');
+var Pagination = require('./helpers/pagination');
+
+var LIMIT = 10;
 
 module.exports = React.createClass({
   displayName: 'Wishlist',
@@ -23,11 +26,31 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       show: false,
+      page: 0,
     };
   },
 
+  getWishes: function(props, state, forceUpdate) {
+    var page = 0;
+    if (props.location.query && props.location.query.page) {
+      page = props.location.query.page;
+    }
+
+    if (page != state.page) {
+      this.setState({page: page});
+      actions.getWishes(LIMIT, page * LIMIT);
+    }
+    else if (forceUpdate) {
+      actions.getWishes(LIMIT, state.page * LIMIT);
+    }
+  },
+
   componentWillMount: function() {
-    actions.getWishes();
+    this.getWishes(this.props, this.state, true);
+  },
+
+  componentWillUpdate: function(nextProps, nextState) {
+    this.getWishes(nextProps, nextState);
   },
 
   openModal: function() {
@@ -38,11 +61,13 @@ module.exports = React.createClass({
     this.setState({show: false});
 
     if (refresh) {
-      actions.getWishes();
+      actions.getWishes(LIMIT, this.state.page * LIMIT);
     }
   },
 
   render: function() {
+    var pages = Math.ceil(this.state.wishes.count / LIMIT);
+
     return (
       <div className="wishlist">
         <h1 className="text-center">{i18n.t('App Wishlist')}</h1>
@@ -71,7 +96,7 @@ module.exports = React.createClass({
         </div>
 
         <div className="row">
-          {this.state.wishes.map(function(wish) {
+          {this.state.wishes.wishes.map(function(wish) {
             var url = '/wishlist/' + wish.id;
 
             return (
@@ -93,13 +118,14 @@ module.exports = React.createClass({
                       <div>{i18n.t("I'm wishing for...")}</div>
                       <h4 className="list-group-item-heading word-break">{wish.name}</h4>
                     </div>
-
                   </Link>
                 </div>
               </div>
             );
           })}
         </div>
+
+        <Pagination active={this.state.page} total={pages} base={'/wishlist'} />
       </div>
     );
   }

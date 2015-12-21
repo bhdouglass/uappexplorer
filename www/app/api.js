@@ -65,8 +65,8 @@ module.exports = {
     return axios.delete('/api/lists/' + id).then(success);
   },
 
-  getWishes: function() {
-    return axios.get('/api/wish').then(success);
+  getWishes: function(limit, skip) {
+    return axios.get('/api/wish', {params: {limit: limit, skip: skip}}).then(success);
   },
 
   getWish: function(id) {

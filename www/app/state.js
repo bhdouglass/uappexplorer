@@ -80,7 +80,10 @@ module.exports = new Baobab({
     lists: [],
   },
 
-  wishes: [],
+  wishes: {
+    count: 0,
+    wishes: [],
+  },
   wish: {},
 
   og: {

@@ -485,8 +485,8 @@ actions = {
     }
   },
 
-  getWishes: function() {
-    return api.getWishes().then(function(data) {
+  getWishes: function(limit, skip) {
+    return api.getWishes(limit, skip).then(function(data) {
       tree.set('wishes', data);
     }).catch(function() {
       actions.createAlert(i18n.t('Could not load wishes at this time, click to retry'), 'error', actions.getUserLists.bind(actions));
