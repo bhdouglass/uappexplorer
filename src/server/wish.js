@@ -6,7 +6,7 @@ function jsonize(wish, user) {
   var jwish = {
     amazon_link: wish.amazon_link,
     developer: wish.developer,
-    downvotes: 0,
+    downvotes: wish.downvotes,
     existing: wish.existing,
     google_play_link: wish.google_play_link,
     id: wish.id,
@@ -14,7 +14,7 @@ function jsonize(wish, user) {
     name: wish.name,
     other_link: wish.other_link,
     price: 0,
-    upvotes: 0,
+    upvotes: wish.upvotes,
     voted: false,
     wisher: wish.wisher,
   };
@@ -25,13 +25,6 @@ function jsonize(wish, user) {
       if (voter.price >= 0) {
         jwish.price += voter.price;
         count++;
-      }
-
-      if (voter.direction == 'up') {
-        jwish.upvotes++;
-      }
-      else {
-        jwish.downvotes++;
       }
     });
 
@@ -53,7 +46,7 @@ function setup(app, success, error, isAuthenticated) {
       query._id = req.params.id;
     }
 
-    db.Wish.find(query, function(err, wishes) {
+    db.Wish.find(query).sort('-upvotes').exec(function(err, wishes) {
       if (err) {
         error(res, err);
       }
@@ -108,11 +101,13 @@ function setup(app, success, error, isAuthenticated) {
           var wish = new db.Wish();
           wish.amazon_link = req.body.amazon_link;
           wish.developer = req.body.developer;
+          wish.downvotes = 0;
           wish.existing = req.body.existing;
           wish.google_play_link = req.body.google_play_link;
           wish.itunes_link = req.body.itunes_link;
           wish.name = req.body.name;
           wish.other_link = req.body.other_link;
+          wish.upvotes = 0;
           wish.votes = {};
           wish.wisher = req.user.username;
 
@@ -144,15 +139,40 @@ function setup(app, success, error, isAuthenticated) {
           price: req.body.price ? req.body.price : 0,
         };
 
+        var inc = {};
+        if (req.body.direction == 'up') {
+          inc['upvotes'] = 1;
+        }
+        else {
+          inc['downvotes'] = 1;
+        }
+
+        //User already voted, update to use their latest vote
+        if (wish.votes && wish.votes[req.user._id]) {
+          if (req.body.direction == 'up') {
+            inc['downvotes'] = -1;
+          }
+          else {
+            inc['upvotes'] = -1;
+          }
+        }
+
         db.Wish.update({_id: req.params.id}, {$set: set}, function(err) {
           if (err) {
             error(res, err);
           }
           else {
-            var json = jsonize(wish);
-            json.voted = req.body.direction;
+            db.Wish.update({_id: req.params.id}, {$inc: inc}, function(err) {
+              if (err) {
+                error(res, err);
+              }
+              else {
+                var json = jsonize(wish);
+                json.voted = req.body.direction;
 
-            success(res, json);
+                success(res, json);
+              }
+            });
           }
         });
       }

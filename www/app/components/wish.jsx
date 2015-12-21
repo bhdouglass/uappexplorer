@@ -57,6 +57,11 @@ module.exports = React.createClass({
     var share_title = i18n.t("I'm wishing for: ") + this.state.wish.name;
     var url = window.location.protocol + '://' + window.location.host + '/wishlist/' + this.state.wish.id;
 
+    var pretitle = i18n.t("I'm wishing for...");
+    if (this.state.wish.voted) {
+      pretitle = i18n.t('Thank you for your vote!');
+    }
+
     return (
       <div className="wish">
         <If value={loading}>
@@ -80,12 +85,16 @@ module.exports = React.createClass({
             </div>
 
             <div className="col-md-6">
-              {i18n.t("I'm wishing for...")}
+              {pretitle}
               <h1 className="title">{this.state.wish.name}</h1>
               {i18n.t('Submitted by')}: {this.state.wish.wisher}
 
               <If value={this.state.wish.developer}>
                 {i18n.t('Developer/Company')}: {this.state.wish.developer}
+              </If>
+
+              <If value={(this.state.wish.price > 0)}>
+                *{i18n.t('On average, voters would be willing to pay %d USD for this app.').replace('%d', this.state.wish.price)}
               </If>
 
               <If value={this.state.wish.existing}>

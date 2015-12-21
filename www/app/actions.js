@@ -434,6 +434,13 @@ actions = {
         current: location,
       });
     }
+    else if (location.indexOf('/wishlist/') === 0) {
+      //Return to the main wishlist from a wish page
+      tree.set('location', {
+        previous: '/wishlist',
+        current: location,
+      });
+    }
     else {
       tree.set('location', {
         previous: current,

@@ -10,7 +10,7 @@ var wishSchema = mongoose.Schema({
   name: String,
   other_link: String,
   upvotes: Number,
-  voters: {},
+  votes: {},
   wisher: String,
 });
 
