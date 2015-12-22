@@ -529,8 +529,13 @@ actions = {
   voteWish: function(id, direction, price) {
     api.voteWish(id, direction, price).then(function() {
       actions.createAlert(i18n.t('Thank you for your vote!'), 'success');
-    }).catch(function() {
-      actions.createAlert(i18n.t('You vote could not be saved at this time, please try again later'), 'error');
+    }).catch(function(err) {
+      if (err.status == 401) {
+        actions.createAlert(i18n.t('You must be logged in to vote'), 'info');
+      }
+      else {
+        actions.createAlert(i18n.t('You vote could not be saved at this time, please try again later'), 'error');
+      }
     });
   },
 };
