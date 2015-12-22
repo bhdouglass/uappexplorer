@@ -99,17 +99,32 @@ function setup(app, success, error, isAuthenticated) {
       else {
         //TODO add domain validation
         req.body.amazon_link = req.body.amazon_link ? 'http://' + req.body.amazon_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
-        req.body.google_play_link = req.body.google_play_link ? 'http://' + req.body.google_play_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
-        req.body.itunes_link = req.body.itunes_link ? 'http://' + req.body.itunes_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
+        req.body.google_play_link = req.body.google_play_link ? 'https://' + req.body.google_play_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
+        req.body.itunes_link = req.body.itunes_link ? 'https://' + req.body.itunes_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
         req.body.other_link = req.body.other_link ? 'http://' + req.body.other_link.replace(/http:\/\//i, '').replace(/https:\/\//i, '') : '';
 
-        if (req.body.amazon_link && !validUrl.isWebUri(req.body.amazon_link)) {
+        if (
+          req.body.amazon_link && (
+            !validUrl.isWebUri(req.body.amazon_link) ||
+            req.body.amazon_link.indexOf('http://www.amazon.com') != 0
+          )
+        ) {
           error(res, 'Amazon link is not a valid url', 421);
         }
-        else if (req.body.google_play_link && !validUrl.isWebUri(req.body.google_play_link)) {
+        else if (
+          req.body.google_play_link && (
+            !validUrl.isWebUri(req.body.google_play_link) ||
+            req.body.google_play_link.indexOf('https://play.google.com') != 0
+          )
+        ) {
           error(res, 'Google Play link is not a valid url', 422);
         }
-        else if (req.body.itunes_link && !validUrl.isWebUri(req.body.itunes_link)) {
+        else if (
+          req.body.itunes_link && (
+            !validUrl.isWebUri(req.body.itunes_link) ||
+            req.body.itunes_link.indexOf('https://itunes.apple.com') != 0
+          )
+        ) {
           error(res, 'iTunes link is not a valid url', 423);
         }
         else if (req.body.other_link && !validUrl.isWebUri(req.body.other_link)) {
