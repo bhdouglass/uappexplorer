@@ -23,9 +23,16 @@ module.exports = React.createClass({
     actions.getWish(this.props.params.id);
   },
 
-  componentWillUpdate: function(nextProps) {
+  componentWillUpdate: function(nextProps, nextState) {
     if (this.props.params.id != nextProps.params.id) {
       actions.getWish(nextProps.params.name);
+    }
+
+    if (nextState.wish && nextState.wish.name) {
+      actions.setOG({
+        title: 'App Wishlist - ' + nextState.wish.name,
+        description: 'App wishlist for Ubuntu Touch',
+      });
     }
   },
 

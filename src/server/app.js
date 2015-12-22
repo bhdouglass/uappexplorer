@@ -80,7 +80,7 @@ function setup(app) {
     return html.replace('<!-- Open Graph Data -->', og_html);
   }
 
-  app.get('/app/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
+  function isMatch(req) {
     var useragent = req.headers['user-agent'];
     var match = false;
     if (useragent) {
@@ -89,7 +89,11 @@ function setup(app) {
       });
     }
 
-    if (match || !_.isUndefined(req.query._escaped_fragment_)) {
+    return (match || !_.isUndefined(req.query._escaped_fragment_));
+  }
+
+  app.get('/app/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
+    if (isMatch(req)) {
       res.header('Content-Type', 'text/html');
       db.Package.findOne({name: req.params.name}, function(err, pkg) {
         if (err) {
@@ -129,15 +133,7 @@ function setup(app) {
   });
 
   app.get('/list/:id', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
-    var useragent = req.headers['user-agent'];
-    var match = false;
-    if (useragent) {
-      match = useragents.some(function(ua) {
-        return useragent.toLowerCase().indexOf(ua.toLowerCase()) !== -1;
-      });
-    }
-
-    if (match || !_.isUndefined(req.query._escaped_fragment_)) {
+    if (isMatch(req)) {
       res.header('Content-Type', 'text/html');
       db.List.findOne({_id: req.params.id}, function(err, list) {
         if (err) {
@@ -175,7 +171,72 @@ function setup(app) {
     }
   });
 
-  app.all(['/apps', '/apps/request', '/me', '/me/list/:id', '/wishlist', '/wishlist/:id'], function(req, res) { //For html5mode on frontend
+  app.get('/wishlist/:id', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
+    if (isMatch(req)) {
+      res.header('Content-Type', 'text/html');
+      db.Wish.findOne({_id: req.params.id}, function(err, wish) {
+        if (err) {
+          logger.error('server: ' + err);
+          res.status(500);
+          res.send();
+        }
+        else if (!wish) {
+          res.status(404);
+          fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res);
+        }
+        else {
+          fs.readFile(__dirname + config.server.static + '/index.html', {encoding: 'utf8'}, function(err, data) {
+            if (err) {
+              res.status(500);
+              res.send();
+            }
+            else {
+              res.status(200);
+
+              var og = {
+                title: 'App Wishlist - ' + wish.name,
+                url: config.server.host + '/wishlist/' + wish.id,
+                description: 'App wishlist for Ubuntu Touch',
+              };
+
+              res.send(openGraphData(data, og));
+            }
+          });
+        }
+      });
+    }
+    else {
+      res.sendFile('index.html', {root: __dirname + config.server.static});
+    }
+  });
+
+  app.get('/wishlist', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
+    if (isMatch(req)) {
+      res.header('Content-Type', 'text/html');
+      fs.readFile(__dirname + config.server.static + '/index.html', {encoding: 'utf8'}, function(err, data) {
+        if (err) {
+          res.status(500);
+          res.send();
+        }
+        else {
+          res.status(200);
+
+          var og = {
+            title: 'App Wishlist',
+            url: config.server.host + '/wishlist',
+            description: 'App wishlist for Ubuntu Touch',
+          };
+
+          res.send(openGraphData(data, og));
+        }
+      });
+    }
+    else {
+      res.sendFile('index.html', {root: __dirname + config.server.static});
+    }
+  });
+
+  app.all(['/apps', '/apps/request', '/me', '/me/list/:id'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
   });
 }

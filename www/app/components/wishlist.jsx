@@ -47,6 +47,11 @@ module.exports = React.createClass({
 
   componentWillMount: function() {
     this.getWishes(this.props, this.state, true);
+
+    actions.setOG({
+      title: 'App Wishlist',
+      description: 'App wishlist for Ubuntu Touch',
+    });
   },
 
   componentWillUpdate: function(nextProps, nextState) {
