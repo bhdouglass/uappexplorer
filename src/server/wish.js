@@ -40,7 +40,7 @@ function jsonize(wish, user) {
 
 function setup(app, success, error, isAuthenticated) {
   app.get('/api/wish/:id', function(req, res) {
-    db.Wish.findOne({_id: req.params.id}).sort('-upvotes').exec(function(err, wish) {
+    db.Wish.findOne({_id: req.params.id}).exec(function(err, wish) {
       if (err) {
         error(res, err);
       }
@@ -68,7 +68,7 @@ function setup(app, success, error, isAuthenticated) {
           query.skip(req.query.skip);
         }
 
-        query.sort('-upvotes').exec(function(err, wishes) {
+        query.sort('-upvotes name').exec(function(err, wishes) {
           if (err) {
             error(res, err);
           }
@@ -106,7 +106,7 @@ function setup(app, success, error, isAuthenticated) {
         if (
           req.body.amazon_link && (
             !validUrl.isWebUri(req.body.amazon_link) ||
-            req.body.amazon_link.indexOf('http://www.amazon.com') != 0
+            req.body.amazon_link.indexOf('http://www.amazon.com') !== 0
           )
         ) {
           error(res, 'Amazon link is not a valid url', 421);
@@ -114,7 +114,7 @@ function setup(app, success, error, isAuthenticated) {
         else if (
           req.body.google_play_link && (
             !validUrl.isWebUri(req.body.google_play_link) ||
-            req.body.google_play_link.indexOf('https://play.google.com') != 0
+            req.body.google_play_link.indexOf('https://play.google.com') !== 0
           )
         ) {
           error(res, 'Google Play link is not a valid url', 422);
@@ -122,7 +122,7 @@ function setup(app, success, error, isAuthenticated) {
         else if (
           req.body.itunes_link && (
             !validUrl.isWebUri(req.body.itunes_link) ||
-            req.body.itunes_link.indexOf('https://itunes.apple.com') != 0
+            req.body.itunes_link.indexOf('https://itunes.apple.com') !== 0
           )
         ) {
           error(res, 'iTunes link is not a valid url', 423);
@@ -174,19 +174,25 @@ function setup(app, success, error, isAuthenticated) {
 
         var inc = {};
         if (req.body.direction == 'up') {
-          inc['upvotes'] = 1;
+          inc.upvotes = 1;
         }
         else {
-          inc['downvotes'] = 1;
+          inc.downvotes = 1;
         }
 
-        //User already voted, update to use their latest vote
-        if (wish.votes && wish.votes[req.user._id]) {
-          if (req.body.direction == 'up') {
-            inc['downvotes'] = -1;
+        var do_inc = true;
+        if (wish.votes && wish.votes[req.user._id] && wish.votes[req.user._id].direction) {
+          //User already voted make sure it's not the same
+          if (wish.votes[req.user._id].direction == req.body.direction) {
+            do_inc = false;
           }
           else {
-            inc['upvotes'] = -1;
+            if (wish.votes[req.user._id].direction == 'up') {
+              inc.upvotes = -1;
+            }
+            else {
+              inc.downvotes = -1;
+            }
           }
         }
 
@@ -195,17 +201,24 @@ function setup(app, success, error, isAuthenticated) {
             error(res, err);
           }
           else {
-            db.Wish.update({_id: req.params.id}, {$inc: inc}, function(err) {
-              if (err) {
-                error(res, err);
-              }
-              else {
-                var json = jsonize(wish);
-                json.voted = req.body.direction;
+            var json = jsonize(wish);
+            json.voted = req.body.direction;
+            json.upvotes += inc.upvotes ? inc.upvotes : 0;
+            json.downvotes += inc.downvotes ? inc.downvotes : 0;
 
-                success(res, json);
-              }
-            });
+            if (do_inc) {
+              db.Wish.update({_id: req.params.id}, {$inc: inc}, function(err) {
+                if (err) {
+                  error(res, err);
+                }
+                else {
+                  success(res, json);
+                }
+              });
+            }
+            else {
+              success(res, json);
+            }
           }
         });
       }

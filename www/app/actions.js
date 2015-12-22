@@ -494,10 +494,13 @@ actions = {
   },
 
   getWish: function(id) {
+    tree.set('wish', null);
+
     return api.getWish(id).then(function(data) {
       tree.set('wish', data);
     }).catch(function() {
       actions.createAlert(i18n.t('Could not find wish'), 'error');
+      tree.set('wish', null);
     });
   },
 
@@ -527,8 +530,9 @@ actions = {
   },
 
   voteWish: function(id, direction, price) {
-    api.voteWish(id, direction, price).then(function() {
+    api.voteWish(id, direction, price).then(function(wish) {
       actions.createAlert(i18n.t('Thank you for your vote!'), 'success');
+      tree.set('wish', wish);
     }).catch(function(err) {
       if (err.status == 401) {
         actions.createAlert(i18n.t('You must be logged in to vote'), 'info');
