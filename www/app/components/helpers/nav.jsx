@@ -124,8 +124,8 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var partialTranslation = 188 * 0.15; //Languages with more untranslated strings that this are partial translations
-    var comingTranslation = 188 * 0.50; //Languages with more untranslated strings than this are "coming soon"
+    var partialTranslation = 60; //Languages with more untranslated strings that this are partial translations
+    var comingTranslation = 200; //Languages with more untranslated strings than this are "coming soon"
 
     var title = this.state.og.title ? this.state.og.title : '';
     if (title.indexOf('uApp Explorer') == -1) {

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"POT-Creation-Date: 2015-12-22 05:30+0000\n"
 "PO-Revision-Date: 2015-12-01 19:36+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-12-14 04:04+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: cs\n"
 
@@ -37,6 +37,9 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Zvolte seznam -"
 
+msgid "A wish with the same name already exists"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "Přidat aplikace:"
 
@@ -57,6 +60,12 @@ msgstr "Všechny frameworky"
 
 msgid "All Types"
 msgstr "Všechny typy"
+
+msgid "Amazon Link"
+msgstr ""
+
+msgid "Amazon link is not a valid url"
+msgstr ""
 
 msgid "Any Architecture"
 msgstr "Libovolná architektura"
@@ -81,8 +90,14 @@ msgstr ""
 msgid "App"
 msgstr "Aplikace"
 
+msgid "App Name"
+msgstr ""
+
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Název aplikace (například: com.ubuntu.developer.ukazkove_jmeno)"
+
+msgid "App Wishlist"
+msgstr ""
 
 msgid "Apps"
 msgstr "Aplikace"
@@ -136,6 +151,9 @@ msgstr "Koupit webovou aplikaci z obchodu Ubuntu"
 msgid "By:"
 msgstr "Od:"
 
+msgid "Cancel"
+msgstr ""
+
 msgid "Category:"
 msgstr "Kategorie:"
 
@@ -171,6 +189,9 @@ msgid "Could not create a new list at this time, please try again later"
 msgstr ""
 "V tento moment nebylo možné vytvořit nový seznam, zkuste to prosím později."
 
+msgid "Could not create a new wish at this time, please try again later"
+msgstr ""
+
 msgid "Could not delete the list at this time, please try again later"
 msgstr "V tuto chvíli nebylo možné seznam vymazat, zkuste to prosím později"
 
@@ -189,8 +210,14 @@ msgstr "Hledanou aplikaci nebylo možné nalézt"
 msgid "Could not find this list, it may not exist any more"
 msgstr "Tento seznam nebylo možné nalézt, možná už neexistuje"
 
+msgid "Could not find wish"
+msgstr ""
+
 msgid "Could not load lists at this time, click to retry"
 msgstr "Seznamy nebylo možné načíst, zkuste to znova"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -218,6 +245,9 @@ msgstr "Popis"
 
 msgid "Developer Tools"
 msgstr "Nástroje pro vývojáře"
+
+msgid "Developer/Company"
+msgstr ""
 
 msgid "Donate"
 msgstr "Přispět"
@@ -247,6 +277,9 @@ msgstr "Webová aplikace pro sponzory"
 
 msgid "Download"
 msgstr "Stáhnout"
+
+msgid "Downvote"
+msgstr ""
 
 msgid "Edit"
 msgstr "Upravit"
@@ -308,6 +341,12 @@ msgstr "Získejte čtečku QR kódů pro vaše zařízení Ubuntu"
 msgid "Go there now"
 msgstr "Přejít nyní"
 
+msgid "Google Play Link"
+msgstr ""
+
+msgid "Google Play link is not a valid url"
+msgstr ""
+
 msgid "Graphics"
 msgstr "Grafika"
 
@@ -329,6 +368,9 @@ msgstr ""
 "znamená 1 srdce, 4 hvězdy = 0.5 srdce, 3 hvězdy = 0 srdcí, 3 hvězdy = -0.5 "
 "srdce a 1 hvězda = -1 srdce."
 
+msgid "Help this wish get more votes!"
+msgstr ""
+
 msgid "Help translate!"
 msgstr "Pomozte s překlady!"
 
@@ -347,8 +389,20 @@ msgstr "Jak nainstaluji aplikace?"
 msgid "How is the popularity determined?"
 msgstr "Jak je určována oblíbenost aplikací?"
 
+msgid "How much would you be willing pay for this app?"
+msgstr ""
+
 msgid "I just published my app, why don't I see it?"
 msgstr "Zrovna jsem publikoval svou aplikaci. Proč ji zde nevidím?"
+
+msgid "I'm wishing for..."
+msgstr ""
+
+msgid "I'm wishing for: "
+msgstr ""
+
+msgid "Idea Summary"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -382,8 +436,14 @@ msgstr "Informace o aplikaci"
 msgid "Install"
 msgstr "Instalovat"
 
+msgid "Is this an existing app?"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Je možné mít záporné vnitřní hodnocení aplikace"
+
+msgid "Itunes Link"
+msgstr ""
 
 msgid "Language"
 msgstr "Jazyk"
@@ -421,11 +481,17 @@ msgstr "Odhlásit se"
 msgid "Log in via Ubuntu"
 msgstr "Přihlásit se skrze účet Ubuntu"
 
+msgid "Login to make a wish"
+msgstr ""
+
 msgid "Lowest Heart Rating"
 msgstr "Nejnižší vnitřní hodnocení"
 
 msgid "Lowest Star Rating"
 msgstr "Nejnižší počet hvězd"
+
+msgid "Make a wish"
+msgstr ""
 
 msgid "Media & Video"
 msgstr "Media a Video"
@@ -441,6 +507,9 @@ msgstr "Měsíční oblíbenost"
 
 msgid "More Apps by:"
 msgstr "Více aplikací od:"
+
+msgid "More Info"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Nejdražší (Americké dolary)"
@@ -502,14 +571,26 @@ msgstr "Nejstarší"
 msgid "Oldest Update"
 msgstr "Nejstarší aktualizace"
 
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr ""
+
 msgid "Open Source"
 msgstr "Otevřený zdrojový kód"
+
+msgid "Other Link"
+msgstr ""
+
+msgid "Other link is not a valid url"
+msgstr ""
 
 msgid "Personalisation"
 msgstr "Přizpůsobení"
 
 msgid "Please login to send via Caxton"
 msgstr "Přihlaste se prosím pro zaslání skrze Caxton"
+
+msgid "Please specify a name or idea for your wish"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -602,6 +683,12 @@ msgstr "Sport"
 msgid "Star Rating"
 msgstr "Hvězdičkové hodnocení"
 
+msgid "Submit"
+msgstr ""
+
+msgid "Submitted by"
+msgstr ""
+
 msgid "Support"
 msgstr "Podpora"
 
@@ -610,6 +697,9 @@ msgstr "Podpora:"
 
 msgid "Terms:"
 msgstr "Podmínky:"
+
+msgid "Thank you for your vote!"
+msgstr ""
 
 msgid "Thank you!"
 msgstr "Děkujeme!"
@@ -705,6 +795,9 @@ msgstr "Aktualizované aplikace"
 msgid "Updated:"
 msgstr "Aktualizováno:"
 
+msgid "Upvote"
+msgstr ""
+
 msgid "User List:"
 msgstr "Uživatelský seznam"
 
@@ -719,6 +812,9 @@ msgstr "Verze:"
 
 msgid "View"
 msgstr "Pohled"
+
+msgid "Vote"
+msgstr ""
 
 msgid "Weather"
 msgstr "Počasí"
@@ -737,6 +833,12 @@ msgstr "Vítejte"
 
 msgid "Welcome to uApp Explorer!"
 msgstr "Vítejte v uApp Exploreru!"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -765,6 +867,9 @@ msgstr ""
 msgid "Why donate?"
 msgstr "Proč přispět?"
 
+msgid "Wishlist"
+msgstr ""
+
 msgid "Yes"
 msgstr "Ano"
 
@@ -776,6 +881,12 @@ msgid ""
 "settings"
 msgstr ""
 "Váš účet není připojen ke službě Caxton. Klikněte pro přechod do nastavení"
+
+msgid "You must be logged in to vote"
+msgstr ""
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr ""
 
 msgid "apps"
 msgid_plural "apps"
@@ -791,6 +902,12 @@ msgid_plural "games"
 msgstr[0] "hra"
 msgstr[1] "hry/her"
 msgstr[2] "hry/her"
+
+msgid "iTunes Link"
+msgstr ""
+
+msgid "iTunes link is not a valid url"
+msgstr ""
 
 msgid "scopes"
 msgid_plural "scopes"

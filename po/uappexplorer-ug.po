@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"POT-Creation-Date: 2015-12-22 05:30+0000\n"
 "PO-Revision-Date: 2015-12-03 10:23+0000\n"
 "Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-12-14 04:04+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: ug\n"
 
@@ -38,6 +38,9 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "تىزىم تاللا"
 
+msgid "A wish with the same name already exists"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "ئەپ قوشۇش:"
 
@@ -59,6 +62,12 @@ msgstr "بارلىق رامكىلار"
 msgid "All Types"
 msgstr "ھەممە تېپلار"
 
+msgid "Amazon Link"
+msgstr ""
+
+msgid "Amazon link is not a valid url"
+msgstr ""
+
 msgid "Any Architecture"
 msgstr "خالىغان قۇرۇلما"
 
@@ -77,8 +86,14 @@ msgstr ""
 msgid "App"
 msgstr "ئەپ"
 
+msgid "App Name"
+msgstr ""
+
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "ئەپ نامى"
+
+msgid "App Wishlist"
+msgstr ""
 
 msgid "Apps"
 msgstr "ئەپلەر"
@@ -133,6 +148,9 @@ msgstr "ئۇبۇنتۇ ئەپ بازىرىدىن سېتىۋىلىنغان ئەپ
 msgid "By:"
 msgstr "يازغۇچى:"
 
+msgid "Cancel"
+msgstr ""
+
 msgid "Category:"
 msgstr "كاتېگورىيە:"
 
@@ -163,6 +181,9 @@ msgstr "سىز ھازىر  دەلىل غا ئۇلىيالمايسىز .بىز ئ
 msgid "Could not create a new list at this time, please try again later"
 msgstr "سىز يېڭدىن تىزىم قۇشالمايسىز ،بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
+msgid "Could not create a new wish at this time, please try again later"
+msgstr ""
+
 msgid "Could not delete the list at this time, please try again later"
 msgstr "تىزىمنى ئۈچۈرەلمەيسىز.بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
@@ -181,8 +202,14 @@ msgstr "مۇناسىۋەتلىك ئەپ تېپىلمىدى"
 msgid "Could not find this list, it may not exist any more"
 msgstr "بۇنداق تىزىم تېپلمىدى،بۇنداق تىزىم ساقلانمغان"
 
+msgid "Could not find wish"
+msgstr ""
+
 msgid "Could not load lists at this time, click to retry"
 msgstr "تىزىمنى تۇلۇق يۈكلەنمدى قايتىدىن سىناپ كۈرۈڭ"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr "بۇ تىزىمدىكى ئەپلەرنى ئۈچۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
@@ -209,6 +236,9 @@ msgstr "چۈشەندۈرۈلۈشى"
 msgid "Developer Tools"
 msgstr "ئىجادىيەت قوراللىرى"
 
+msgid "Developer/Company"
+msgstr ""
+
 msgid "Donate"
 msgstr "ئىئانە"
 
@@ -233,6 +263,9 @@ msgstr "تور ئەپكە ئىئانە"
 
 msgid "Download"
 msgstr "چۈشۈر"
+
+msgid "Downvote"
+msgstr ""
 
 msgid "Edit"
 msgstr "تەھرىرلە"
@@ -294,6 +327,12 @@ msgstr "ئۇبۇنتۇ چەكمە ئۈسكۈنىڭىز ئۈچۈن ئىككىلى
 msgid "Go there now"
 msgstr "قەيەرگە بارىمەن"
 
+msgid "Google Play Link"
+msgstr ""
+
+msgid "Google Play link is not a valid url"
+msgstr ""
+
 msgid "Graphics"
 msgstr "گرافىكلار"
 
@@ -310,6 +349,9 @@ msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
+msgstr ""
+
+msgid "Help this wish get more votes!"
 msgstr ""
 
 msgid "Help translate!"
@@ -330,8 +372,20 @@ msgstr "ئەپلەرنى قانداق ئورنىتىمەن؟"
 msgid "How is the popularity determined?"
 msgstr "ياقتۇرۇشچانلىقى قانداق جەزملىنىدۇ؟"
 
+msgid "How much would you be willing pay for this app?"
+msgstr ""
+
 msgid "I just published my app, why don't I see it?"
 msgstr "مەن يوللىغان ئەپلەر نېمە ئۈچۈن تەستىقلانمايدۇ(ياكى كۈرۈنمەيدۇ)"
+
+msgid "I'm wishing for..."
+msgstr ""
+
+msgid "I'm wishing for: "
+msgstr ""
+
+msgid "Idea Summary"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -365,8 +419,14 @@ msgstr "ئۇچۇرى"
 msgid "Install"
 msgstr "ئورنات"
 
+msgid "Is this an existing app?"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "راسچىللىق بىلەن باھالانىغان"
+
+msgid "Itunes Link"
+msgstr ""
 
 msgid "Language"
 msgstr "تىل"
@@ -404,11 +464,17 @@ msgstr "تىزىمدىن چىق"
 msgid "Log in via Ubuntu"
 msgstr "ئۇبۇنتۇ ھېساباتىدا كىر"
 
+msgid "Login to make a wish"
+msgstr ""
+
 msgid "Lowest Heart Rating"
 msgstr "ئەڭ تۈۋەن يۈرەك دەرىجسى"
 
 msgid "Lowest Star Rating"
 msgstr "ئەڭ تۈۋەن يۇلتۇز دەرىجىسى"
+
+msgid "Make a wish"
+msgstr ""
 
 msgid "Media & Video"
 msgstr "ۋاستە ۋە سىن"
@@ -424,6 +490,9 @@ msgstr "ئايلىق دەرىجىسى"
 
 msgid "More Apps by:"
 msgstr "تېخىمۇ كۆپ ئەپلەر:"
+
+msgid "More Info"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "ئەڭ قىممىتى (دوللار)"
@@ -482,14 +551,26 @@ msgstr "ئەڭ كونا"
 msgid "Oldest Update"
 msgstr "يېڭلانمىغانىلىرى"
 
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr ""
+
 msgid "Open Source"
 msgstr "ئوچۇق مەنبە"
+
+msgid "Other Link"
+msgstr ""
+
+msgid "Other link is not a valid url"
+msgstr ""
 
 msgid "Personalisation"
 msgstr "خاسلاشتۇرۇش"
 
 msgid "Please login to send via Caxton"
 msgstr "تىزىمغا كىرىپ Caxton ئارقىلىق يوللاڭ"
+
+msgid "Please specify a name or idea for your wish"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -580,6 +661,12 @@ msgstr "تەنتەربىيە"
 msgid "Star Rating"
 msgstr "يۇلتۇرزدەرىجىسى"
 
+msgid "Submit"
+msgstr ""
+
+msgid "Submitted by"
+msgstr ""
+
 msgid "Support"
 msgstr "ئىجاتكار بىلەن ئالاقىلىشىڭ"
 
@@ -588,6 +675,9 @@ msgstr "ئىجاتكار بىلەن ئالاقىلىشىش ئۈچۈن :"
 
 msgid "Terms:"
 msgstr "كېلىشىم :"
+
+msgid "Thank you for your vote!"
+msgstr ""
 
 msgid "Thank you!"
 msgstr "تەشەككۈر!"
@@ -664,6 +754,9 @@ msgstr "يېڭلانغان ئەپلەر"
 msgid "Updated:"
 msgstr "يېڭىلانغان:"
 
+msgid "Upvote"
+msgstr ""
+
 msgid "User List:"
 msgstr "ئىشلەتكۈچى تىزىمى"
 
@@ -678,6 +771,9 @@ msgstr "نەشرى:"
 
 msgid "View"
 msgstr "تەكشۈرۈش"
+
+msgid "Vote"
+msgstr ""
 
 msgid "Weather"
 msgstr "ھاۋارايى"
@@ -696,6 +792,12 @@ msgstr "خۇش كەپسىز"
 
 msgid "Welcome to uApp Explorer!"
 msgstr "ئوبۇنتۇ چەكمە ئۈسكىنلىرى uApp Explorer ئەپ بازىرىغا خۇش كەپسىز"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -724,6 +826,9 @@ msgstr ""
 msgid "Why donate?"
 msgstr "نېمە ئۈچۈن ئىئانە قىلىمىز؟"
 
+msgid "Wishlist"
+msgstr ""
+
 msgid "Yes"
 msgstr "ھەئە"
 
@@ -735,6 +840,12 @@ msgid ""
 "settings"
 msgstr "سىز ھېساباتىڭىزنى Caxton غا باغلىمىغان، چەكسىڭىز تەڭشەككە يۆتكىلىدۇ"
 
+msgid "You must be logged in to vote"
+msgstr ""
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "ئەپلەر"
@@ -745,6 +856,12 @@ msgstr "ئەپلەر ۋە ئەپچىلەر"
 msgid "games"
 msgid_plural "games"
 msgstr[0] "ئويۇنلار"
+
+msgid "iTunes Link"
+msgstr ""
+
+msgid "iTunes link is not a valid url"
+msgstr ""
 
 msgid "scopes"
 msgid_plural "scopes"

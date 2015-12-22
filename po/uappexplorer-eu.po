@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"POT-Creation-Date: 2015-12-22 05:30+0000\n"
 "PO-Revision-Date: 2015-11-28 23:08+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-14 04:04+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: eu\n"
 
@@ -39,6 +39,9 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "Zerrenda bat aukeratu"
 
+msgid "A wish with the same name already exists"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "Aplikazioak gehitu"
 
@@ -59,6 +62,12 @@ msgstr "Framework guztiak"
 
 msgid "All Types"
 msgstr "Mota guztiak"
+
+msgid "Amazon Link"
+msgstr ""
+
+msgid "Amazon link is not a valid url"
+msgstr ""
 
 msgid "Any Architecture"
 msgstr "Edozein Arkitektura"
@@ -85,8 +94,14 @@ msgstr ""
 msgid "App"
 msgstr "Aplikazioa"
 
+msgid "App Name"
+msgstr ""
+
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Aplikazio Izena(adib: com.ubuntu.developer.example)"
+
+msgid "App Wishlist"
+msgstr ""
 
 msgid "Apps"
 msgstr "Aplikazioak"
@@ -141,6 +156,9 @@ msgstr "Erosi web aplikazioa Ubuntu Touch aplikazio dendan."
 msgid "By:"
 msgstr "Nork:"
 
+msgid "Cancel"
+msgstr ""
+
 msgid "Category:"
 msgstr "Kategoria:"
 
@@ -176,6 +194,9 @@ msgstr ""
 "Ezin izan da une honetan zerrenda berri bat sortu du, mesedez saiatu "
 "beranduago"
 
+msgid "Could not create a new wish at this time, please try again later"
+msgstr ""
+
 msgid "Could not delete the list at this time, please try again later"
 msgstr "Ezin izan da une honetan zerrenda ezabatu, mesedez saiatu beranduago"
 
@@ -196,9 +217,15 @@ msgstr "Ezin izan da eskatutako aplikazio aurkitu"
 msgid "Could not find this list, it may not exist any more"
 msgstr "Ezin izan da zerrenda aurkitu, agian ez da gehiago existituko"
 
+msgid "Could not find wish"
+msgstr ""
+
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
 "Ezinezkoa izan da zerrenda une honetan kargatzea, klikatu berriro saiatzeko"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -227,6 +254,9 @@ msgstr "Deskribapena"
 
 msgid "Developer Tools"
 msgstr "Garatzaileentzako tresnak"
+
+msgid "Developer/Company"
+msgstr ""
 
 msgid "Donate"
 msgstr "Diruz lagundu"
@@ -257,6 +287,9 @@ msgstr "Diruz laguntzeko Web Aplikazioa"
 
 msgid "Download"
 msgstr "Deskargatu"
+
+msgid "Downvote"
+msgstr ""
 
 msgid "Edit"
 msgstr "Editatu"
@@ -318,6 +351,12 @@ msgstr "QR eskaneatzailea eskuratu zure Ubuntu Touch gailurako"
 msgid "Go there now"
 msgstr "Hara joan orain"
 
+msgid "Google Play Link"
+msgstr ""
+
+msgid "Google Play link is not a valid url"
+msgstr ""
+
 msgid "Graphics"
 msgstr "Grafikoak"
 
@@ -339,6 +378,9 @@ msgstr ""
 "bihotz bat dagokion, 4 izarri = 0.5 bihotz, 3 izarri = 0 bihotz, 2 izarri = -"
 "0.5 bihotz, eta izar 1 = -1 bihotz."
 
+msgid "Help this wish get more votes!"
+msgstr ""
+
 msgid "Help translate!"
 msgstr "Lagundu itzultzen!"
 
@@ -357,8 +399,20 @@ msgstr "Nola instala ditzaket aplikazioak?"
 msgid "How is the popularity determined?"
 msgstr "Nola zehazten da ospea?"
 
+msgid "How much would you be willing pay for this app?"
+msgstr ""
+
 msgid "I just published my app, why don't I see it?"
 msgstr "Nere aplikazioa argitaratu berri dut, zergatik ez dut ikusten?"
+
+msgid "I'm wishing for..."
+msgstr ""
+
+msgid "I'm wishing for: "
+msgstr ""
+
+msgid "Idea Summary"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Lagundu nahi baduzu bisita ezazu Github repo-a."
@@ -387,8 +441,14 @@ msgstr "Info"
 msgid "Install"
 msgstr "Instalatu"
 
+msgid "Is this an existing app?"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Litekeena da bihotz neurketa negatiboa izatea."
+
+msgid "Itunes Link"
+msgstr ""
 
 msgid "Language"
 msgstr "Hizkuntza"
@@ -426,11 +486,17 @@ msgstr "Saioa amaitu"
 msgid "Log in via Ubuntu"
 msgstr "Saioa hasi Ubuntu bidez"
 
+msgid "Login to make a wish"
+msgstr ""
+
 msgid "Lowest Heart Rating"
 msgstr "Bihotz Neurketa baxuena"
 
 msgid "Lowest Star Rating"
 msgstr "Izar Neurketa baxuena"
+
+msgid "Make a wish"
+msgstr ""
 
 msgid "Media & Video"
 msgstr "Multimedia eta bideoa"
@@ -446,6 +512,9 @@ msgstr "Hileroko arrakastak"
 
 msgid "More Apps by:"
 msgstr "Aplikazio gehiago:"
+
+msgid "More Info"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Garestienak(USD)"
@@ -507,14 +576,26 @@ msgstr "Zaharrenak"
 msgid "Oldest Update"
 msgstr "Eguneraketarik zaharrenak"
 
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr ""
+
 msgid "Open Source"
 msgstr "Kode Irekia"
+
+msgid "Other Link"
+msgstr ""
+
+msgid "Other link is not a valid url"
+msgstr ""
 
 msgid "Personalisation"
 msgstr "Pertsonalizazioa"
 
 msgid "Please login to send via Caxton"
 msgstr "Mesedez hasi saioa Caxton bidez"
+
+msgid "Please specify a name or idea for your wish"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -607,6 +688,12 @@ msgstr "Kirolak"
 msgid "Star Rating"
 msgstr "Izar Neurketa"
 
+msgid "Submit"
+msgstr ""
+
+msgid "Submitted by"
+msgstr ""
+
 msgid "Support"
 msgstr "Sostengua"
 
@@ -615,6 +702,9 @@ msgstr "Sostengua:"
 
 msgid "Terms:"
 msgstr "Baldintzak:"
+
+msgid "Thank you for your vote!"
+msgstr ""
 
 msgid "Thank you!"
 msgstr "Eskerrik asko!"
@@ -710,6 +800,9 @@ msgstr "Eguneratutako aplikazioak"
 msgid "Updated:"
 msgstr "Eguneratua:"
 
+msgid "Upvote"
+msgstr ""
+
 msgid "User List:"
 msgstr "Erabiltzaile Zerrenda"
 
@@ -724,6 +817,9 @@ msgstr "Bertsioa:"
 
 msgid "View"
 msgstr "Ikusi"
+
+msgid "Vote"
+msgstr ""
 
 msgid "Weather"
 msgstr "Eguraldia"
@@ -742,6 +838,12 @@ msgstr "Ongi etorri"
 
 msgid "Welcome to uApp Explorer!"
 msgstr "Ongi etorri uApp Explorer-era!"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -771,6 +873,9 @@ msgstr ""
 msgid "Why donate?"
 msgstr "Zergatik diruz lagundu?"
 
+msgid "Wishlist"
+msgstr ""
+
 msgid "Yes"
 msgstr "Bai"
 
@@ -784,6 +889,12 @@ msgstr ""
 "Zure kontua ez dago Caxton-era konektaturik, egin klik zure ezarpenetara "
 "joateko"
 
+msgid "You must be logged in to vote"
+msgstr ""
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplikazio"
@@ -796,6 +907,12 @@ msgid "games"
 msgid_plural "games"
 msgstr[0] "joko"
 msgstr[1] "jokoak"
+
+msgid "iTunes Link"
+msgstr ""
+
+msgid "iTunes link is not a valid url"
+msgstr ""
 
 msgid "scopes"
 msgid_plural "scopes"

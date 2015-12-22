@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-28 21:51+0000\n"
+"POT-Creation-Date: 2015-12-22 05:30+0000\n"
 "PO-Revision-Date: 2015-12-03 14:40+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-14 04:04+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: el\n"
 
@@ -39,6 +39,9 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Επιλογή καταλόγου -"
 
+msgid "A wish with the same name already exists"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "Προσθήκη εφαρμογών:"
 
@@ -59,6 +62,12 @@ msgstr "Όλοι οι σκελετοί"
 
 msgid "All Types"
 msgstr "Όλοι οι τύποι"
+
+msgid "Amazon Link"
+msgstr ""
+
+msgid "Amazon link is not a valid url"
+msgstr ""
 
 msgid "Any Architecture"
 msgstr "Οποιαδήποτε αρχιτεκτονική"
@@ -85,8 +94,14 @@ msgstr ""
 msgid "App"
 msgstr "Εφαρμογή"
 
+msgid "App Name"
+msgstr ""
+
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Όνομα εφαρμογής (π.χ.: com.ubuntu.developer.example)"
+
+msgid "App Wishlist"
+msgstr ""
 
 msgid "Apps"
 msgstr "Εφαρμογές"
@@ -142,6 +157,9 @@ msgstr ""
 msgid "By:"
 msgstr "Κατά:"
 
+msgid "Cancel"
+msgstr ""
+
 msgid "Category:"
 msgstr "Κατηγορία:"
 
@@ -178,6 +196,9 @@ msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέου καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
+msgid "Could not create a new wish at this time, please try again later"
+msgstr ""
+
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή του καταλόγου, παρακαλώ "
@@ -202,10 +223,16 @@ msgstr "Δε βρέθηκε η εφαρμογή προς αναζήτηση"
 msgid "Could not find this list, it may not exist any more"
 msgstr "Δε βρέθηκε ο κατάλογος αυτός, ίσως δεν υπάρχει πια"
 
+msgid "Could not find wish"
+msgstr ""
+
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των καταλόγων, πατήστε εδώ για "
 "να προσπαθήσετε ξανά"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -237,6 +264,9 @@ msgstr "Περιγραφή"
 msgid "Developer Tools"
 msgstr "Εργαλεία ανάπτυξης"
 
+msgid "Developer/Company"
+msgstr ""
+
 msgid "Donate"
 msgstr "Δωρεά"
 
@@ -267,6 +297,9 @@ msgstr "Εφαρμογή ιστού για δωρεές"
 
 msgid "Download"
 msgstr "Λήψη"
+
+msgid "Downvote"
+msgstr ""
 
 msgid "Edit"
 msgstr "Επεξεργασία"
@@ -330,6 +363,12 @@ msgstr "Κατεβάστε ένα σαρωτή κωδικών QR για τη Ubu
 msgid "Go there now"
 msgstr "Πήγαινε εκεί τώρα"
 
+msgid "Google Play Link"
+msgstr ""
+
+msgid "Google Play link is not a valid url"
+msgstr ""
+
 msgid "Graphics"
 msgstr "Γραφικά"
 
@@ -351,6 +390,9 @@ msgstr ""
 "μια κριτική με 5 αστέρια είναι 1 πόντος καρδιάς, 4 αστέρια = 0.5 καρδιές, 3 "
 "αστέρια = 0 καρδιές, 2 αστέρια = -0.5 καρδιές, και 1 αστέρι = -1 καρδιές."
 
+msgid "Help this wish get more votes!"
+msgstr ""
+
 msgid "Help translate!"
 msgstr "Βοηθήστε στη μετάφραση!"
 
@@ -369,8 +411,20 @@ msgstr "Πώς εγκαθιστώ εφαρμογές;"
 msgid "How is the popularity determined?"
 msgstr "Πώς υπολογίζεται η δημοτικότητα;"
 
+msgid "How much would you be willing pay for this app?"
+msgstr ""
+
 msgid "I just published my app, why don't I see it?"
 msgstr "Μόλις δημοσίευσα την εφαρμογή μου, γιατί δεν μπορώ να τη δω;"
+
+msgid "I'm wishing for..."
+msgstr ""
+
+msgid "I'm wishing for: "
+msgstr ""
+
+msgid "Idea Summary"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -406,8 +460,14 @@ msgstr "Πληροφορίες"
 msgid "Install"
 msgstr "Εγκατάσταση"
 
+msgid "Is this an existing app?"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Είναι δυνατό να υπάρχει βαθμολογία σε καρδιές με αρνητικό πρόσημο."
+
+msgid "Itunes Link"
+msgstr ""
 
 msgid "Language"
 msgstr "Γλώσσα"
@@ -445,11 +505,17 @@ msgstr "Αποσύνδεση"
 msgid "Log in via Ubuntu"
 msgstr "Σύνδεση μέσω Ubuntu"
 
+msgid "Login to make a wish"
+msgstr ""
+
 msgid "Lowest Heart Rating"
 msgstr "Χαμηλότερη βαθμολογία σε καρδιές"
 
 msgid "Lowest Star Rating"
 msgstr "Χαμηλότερη βαθμολογία σε αστέρια"
+
+msgid "Make a wish"
+msgstr ""
 
 msgid "Media & Video"
 msgstr "Πολυμέσα & βίντεο"
@@ -465,6 +531,9 @@ msgstr "Μηνιαία δημοτικότητα"
 
 msgid "More Apps by:"
 msgstr "Περισσότερες εφαρμογές από:"
+
+msgid "More Info"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Πιο ακριβά (σε δολλάρια)"
@@ -526,14 +595,26 @@ msgstr "Παλαιότερα"
 msgid "Oldest Update"
 msgstr "Παλαιότερη ενημέρωση"
 
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr ""
+
 msgid "Open Source"
 msgstr "Ανοικτού κώδικα"
+
+msgid "Other Link"
+msgstr ""
+
+msgid "Other link is not a valid url"
+msgstr ""
 
 msgid "Personalisation"
 msgstr "Εξατομίκευση"
 
 msgid "Please login to send via Caxton"
 msgstr "Παρακαλώ συνδεθείτε για να κάνετε αποστολή μέσω Caxton"
+
+msgid "Please specify a name or idea for your wish"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -626,6 +707,12 @@ msgstr "Αθλητικά"
 msgid "Star Rating"
 msgstr "Βαθμολογία σε αστέρια"
 
+msgid "Submit"
+msgstr ""
+
+msgid "Submitted by"
+msgstr ""
+
 msgid "Support"
 msgstr "Υποστήριξη"
 
@@ -634,6 +721,9 @@ msgstr "Υποστήριξη:"
 
 msgid "Terms:"
 msgstr "Όροι:"
+
+msgid "Thank you for your vote!"
+msgstr ""
 
 msgid "Thank you!"
 msgstr "Ευχαριστώ!"
@@ -730,6 +820,9 @@ msgstr "Ενημερωμένες εφαρμογές"
 msgid "Updated:"
 msgstr "Ενημερώθηκε:"
 
+msgid "Upvote"
+msgstr ""
+
 msgid "User List:"
 msgstr "Κατάλογος χρηστών:"
 
@@ -744,6 +837,9 @@ msgstr "Έκδοση:"
 
 msgid "View"
 msgstr "Προβολή"
+
+msgid "Vote"
+msgstr ""
 
 msgid "Weather"
 msgstr "Καιρός"
@@ -762,6 +858,12 @@ msgstr "Καλώς ήρθατε"
 
 msgid "Welcome to uApp Explorer!"
 msgstr "Καλώς ήρθατε στο uApp Explorer!"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Τι πρέπει να κάνω αν βρω υλικό που καταπατάει πνευματικά δικαιώματα;"
@@ -788,6 +890,9 @@ msgstr ""
 msgid "Why donate?"
 msgstr "Για ποιο λόγο να κάνω δωρεά;"
 
+msgid "Wishlist"
+msgstr ""
+
 msgid "Yes"
 msgstr "Ναι"
 
@@ -801,6 +906,12 @@ msgstr ""
 "Δεν έχετε κάνει σύνδεση του λογαριασμού σας με το Caxton, πατήστε εδώ για να "
 "πάτε στις ρυθμίσεις σας"
 
+msgid "You must be logged in to vote"
+msgstr ""
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "εφαρμογές"
@@ -813,6 +924,12 @@ msgid "games"
 msgid_plural "games"
 msgstr[0] "παιχνίδια"
 msgstr[1] "παιχνίδια"
+
+msgid "iTunes Link"
+msgstr ""
+
+msgid "iTunes link is not a valid url"
+msgstr ""
 
 msgid "scopes"
 msgid_plural "scopes"
