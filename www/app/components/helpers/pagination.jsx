@@ -15,7 +15,11 @@ module.exports = React.createClass({
   },
 
   renderButton: function(title, page, cls) {
-    var query = JSON.parse(JSON.stringify(this.props.query)); //deep copy
+    var query = {};
+    if (this.props.query) {
+      query = JSON.parse(JSON.stringify(this.props.query));
+    }
+
     query.page = page;
 
     if (query.page <= 0) {

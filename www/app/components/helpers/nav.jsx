@@ -235,6 +235,9 @@ module.exports = React.createClass({
               <li>
                 <a onClick={this.open.bind(this, 'donate')} className="clickable">{i18n.t('Donate')}</a>
               </li>
+              <li>
+                <Link to="/wishlist">{i18n.t('Wishlist')}</Link>
+              </li>
 
               <If value={this.state.auth.loggedin} element="li">
                 <Link to="/me" className="clickable hidden-xs">{i18n.t('My Lists')}</Link>

@@ -88,8 +88,9 @@ module.exports = React.createClass({
   },
 
   changeName: function(event) {
-    this.state.list.name = event.target.value;
-    this.setState({list: this.state.list});
+    var list = JSON.parse(JSON.stringify(this.state.list));
+    list.name = event.target.value;
+    this.setState({list: list});
   },
 
   changeSort: function(event) {

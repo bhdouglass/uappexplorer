@@ -17,7 +17,7 @@ module.exports = React.createClass({
   props: {
     url: React.PropTypes.string.isRequired,
     title: React.PropTypes.string.isRequired,
-    caxtonUrl: React.PropTypes.string.isRequired,
+    caxtonUrl: React.PropTypes.string,
   },
   cursors: {
     auth: ['auth'],
@@ -48,8 +48,10 @@ module.exports = React.createClass({
   caxton: function() {
     if (this.state.auth.loggedin) {
       if (this.state.auth.has_caxton) {
+        var url = this.props.caxtonUrl ? this.props.caxtonUrl : this.props.url;
+
         var self = this;
-        actions.sendCaxton(this.props.caxtonUrl, this.props.title).then(function(sent) {
+        actions.sendCaxton(url, this.props.title).then(function(sent) {
           if (sent) {
             self.setState({caxton_sent: true});
           }
