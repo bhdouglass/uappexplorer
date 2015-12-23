@@ -23,13 +23,15 @@ function jsonize(wish, user) {
     var count = 0;
     _.forEach(wish.votes, function(voter) {
       if (voter.price >= 0) {
-        jwish.price += voter.price;
+        jwish.price += parseInt(voter.price);
         count++;
       }
     });
 
     jwish.price /= count;
   }
+
+  jwish.price = jwish.price.toFixed(2);
 
   if (user && user._id && wish.votes && wish.votes[user._id]) {
     jwish.voted = wish.votes[user._id].direction;
