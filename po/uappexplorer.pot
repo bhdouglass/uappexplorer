@@ -533,6 +533,9 @@ msgstr ""
 msgid "Previous App:"
 msgstr ""
 
+msgid "Price must be between 0 and 20 USD"
+msgstr ""
+
 msgid "Productivity"
 msgstr ""
 

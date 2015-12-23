@@ -101,10 +101,9 @@ module.exports = React.createClass({
         </div>
 
         <div className="row">
-          {this.state.wishes.wishes.map(function(wish) {
+          {this.state.wishes.wishes.map(function(wish, index) {
             var url = '/wishlist/' + wish.id;
-
-            return (
+            var w = [(
               <div className="col-sm-6" key={wish.id}>
                 <div className="list-group">
                   <Link to={url} className="list-group-item clickable">
@@ -118,7 +117,6 @@ module.exports = React.createClass({
                       <i className="fa fa-chevron-down"></i>
                     </div>
 
-
                     <div className="row-content">
                       <div>{i18n.t("I'm wishing for...")}</div>
                       <h4 className="list-group-item-heading word-break">{wish.name}</h4>
@@ -126,7 +124,13 @@ module.exports = React.createClass({
                   </Link>
                 </div>
               </div>
-            );
+            )];
+
+            if (index % 2 == 1) {
+              w.push(<div className="clearfix" key={wish.id + 'clearfix'}></div>);
+            }
+
+            return w;
           })}
         </div>
 

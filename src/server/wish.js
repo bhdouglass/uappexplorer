@@ -248,7 +248,7 @@ function normalizeVotes(callback) {
         var downvotes = 0;
 
         if (wish.votes) {
-          _.forEach(wish.votes, function(vote, key) {
+          _.forEach(wish.votes, function(vote) {
             if (vote.direction == 'up') {
               upvotes++;
             }
