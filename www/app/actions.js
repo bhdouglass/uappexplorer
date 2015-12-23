@@ -537,6 +537,9 @@ actions = {
       if (err.status == 401) {
         actions.createAlert(i18n.t('You must be logged in to vote'), 'info');
       }
+      else if (err.status == 425) {
+        actions.createAlert(i18n.t('Price must be between 0 and 20 USD'), 'error');
+      }
       else {
         actions.createAlert(i18n.t('You vote could not be saved at this time, please try again later'), 'error');
       }

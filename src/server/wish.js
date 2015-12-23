@@ -23,7 +23,7 @@ function jsonize(wish, user) {
     var count = 0;
     _.forEach(wish.votes, function(voter) {
       if (voter.price >= 0) {
-        jwish.price += parseInt(voter.price);
+        jwish.price += parseFloat(voter.price);
         count++;
       }
     });
@@ -160,71 +160,79 @@ function setup(app, success, error, isAuthenticated) {
   });
 
   app.put('/api/wish/:id', isAuthenticated, function(req, res) {
-    db.Wish.findOne({_id: req.params.id}, function(err, wish) {
-      if (err) {
-        error(res, err);
-      }
-      else if (!wish) {
-        error(res, 'Wish not found with given id', 404);
-      }
-      else {
-        var set = {};
-        set['votes.' + req.user._id] = {
-          direction: req.body.direction,
-          price: req.body.price ? req.body.price : 0,
-        };
-
-        var inc = {};
-        if (req.body.direction == 'up') {
-          inc.upvotes = 1;
+    var price = req.body.price ? parseFloat(req.body.price) : 0;
+    if (price < 0 || price > 20) {
+      error(res, 'Price must be between 0 and 20 USD', 425);
+    }
+    else {
+      db.Wish.findOne({_id: req.params.id}, function(err, wish) {
+        if (err) {
+          error(res, err);
+        }
+        else if (!wish) {
+          error(res, 'Wish not found with given id', 404);
         }
         else {
-          inc.downvotes = 1;
-        }
+          var set = {};
+          set['votes.' + req.user._id] = {
+            direction: req.body.direction,
+            price: price,
+          };
 
-        var do_inc = true;
-        if (wish.votes && wish.votes[req.user._id] && wish.votes[req.user._id].direction) {
-          //User already voted make sure it's not the same
-          if (wish.votes[req.user._id].direction == req.body.direction) {
-            do_inc = false;
+          var inc = {};
+          if (req.body.direction == 'up') {
+            inc.upvotes = 1;
           }
           else {
-            if (wish.votes[req.user._id].direction == 'up') {
-              inc.upvotes = -1;
+            inc.downvotes = 1;
+          }
+
+          var do_inc = true;
+          if (wish.votes && wish.votes[req.user._id] && wish.votes[req.user._id].direction) {
+            //User already voted make sure it's not the same
+            if (wish.votes[req.user._id].direction == req.body.direction) {
+              do_inc = false;
             }
             else {
-              inc.downvotes = -1;
+              if (wish.votes[req.user._id].direction == 'up') {
+                inc.upvotes = -1;
+              }
+              else {
+                inc.downvotes = -1;
+              }
             }
           }
+
+          db.Wish.update({_id: req.params.id}, {$set: set}, function(err) {
+            if (err) {
+              error(res, err);
+            }
+            else {
+              var json = jsonize(wish);
+              json.voted = req.body.direction;
+              if (do_inc) {
+                json.upvotes += inc.upvotes ? inc.upvotes : 0;
+                json.downvotes += inc.downvotes ? inc.downvotes : 0;
+              }
+
+              if (do_inc) {
+                db.Wish.update({_id: req.params.id}, {$inc: inc}, function(err) {
+                  if (err) {
+                    error(res, err);
+                  }
+                  else {
+                    success(res, json);
+                  }
+                });
+              }
+              else {
+                success(res, json);
+              }
+            }
+          });
         }
-
-        db.Wish.update({_id: req.params.id}, {$set: set}, function(err) {
-          if (err) {
-            error(res, err);
-          }
-          else {
-            var json = jsonize(wish);
-            json.voted = req.body.direction;
-            json.upvotes += inc.upvotes ? inc.upvotes : 0;
-            json.downvotes += inc.downvotes ? inc.downvotes : 0;
-
-            if (do_inc) {
-              db.Wish.update({_id: req.params.id}, {$inc: inc}, function(err) {
-                if (err) {
-                  error(res, err);
-                }
-                else {
-                  success(res, json);
-                }
-              });
-            }
-            else {
-              success(res, json);
-            }
-          }
-        });
-      }
-    });
+      });
+    }
   });
 }
 
