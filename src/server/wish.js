@@ -1,6 +1,7 @@
 var db = require('../db/db');
 var _ = require('lodash');
 var validUrl = require('valid-url');
+var async = require('async');
 
 function jsonize(wish, user) {
   var jwish = {
@@ -236,4 +237,52 @@ function setup(app, success, error, isAuthenticated) {
   });
 }
 
+function normalizeVotes(callback) {
+  db.Wish.find({}, function(err, wishes) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      async.eachSeries(wishes, function(wish, cb) {
+        var upvotes = 0;
+        var downvotes = 0;
+
+        if (wish.votes) {
+          _.forEach(wish.votes, function(vote, key) {
+            if (vote.direction == 'up') {
+              upvotes++;
+            }
+            else {
+              downvotes++;
+            }
+
+            if (vote.price) {
+              vote.price = parseFloat(vote.price);
+              if (vote.price < 0) {
+                vote.price = 0;
+              }
+              else if (vote.price > 20) {
+                vote.price = 20;
+              }
+            }
+          });
+        }
+
+        wish.upvotes = upvotes;
+        wish.downvotes = downvotes;
+        wish.markModified('votes');
+
+        wish.save(function(err) {
+          console.log(err, 'saved: ' + wish.name);
+          cb(err);
+        });
+
+      }, function(err) {
+        callback(err);
+      });
+    }
+  });
+}
+
 exports.setup = setup;
+exports.normalizeVotes = normalizeVotes;
