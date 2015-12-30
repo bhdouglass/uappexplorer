@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-22 05:30+0000\n"
-"PO-Revision-Date: 2015-12-10 14:32+0000\n"
+"POT-Creation-Date: 2015-12-23 11:42+0000\n"
+"PO-Revision-Date: 2015-12-30 11:54+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
+"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: hu\n"
 
@@ -38,7 +38,7 @@ msgid "- Choose a list -"
 msgstr "- Válasszon egy listát -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Már létezik ilyen névvel kívánság"
 
 msgid "Add Apps:"
 msgstr "Alkalmazások hozzáadása:"
@@ -62,10 +62,10 @@ msgid "All Types"
 msgstr "Összes típus"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Amazon hivatkozás"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "Érvénytelen Amazon hivatkozás"
 
 msgid "Any Architecture"
 msgstr "Bármelyik architektúra"
@@ -81,18 +81,25 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
+"Minden kérés, amely szerzői jogra vagy védjegyre hivatkozva egy alkalmazás "
+"eltávolítását kéri, közvetlenül a  Canonical vagy az alkalmazás szerzője "
+"(általában van egy kapcsolattartási cím megadva az alkalmazásnál a Támogatás "
+"fül alatt) felé kell benyújtani. Az uApp Explorer nem áll kapcsolatban a "
+"Canonicalnal és nem tárol egyetlen alkalmazást sem. Az uApp Explorer csak "
+"megjeleníti a nyilvánosan hozzáférhető információkat a hivatalos Ubuntu "
+"Touch áruházból."
 
 msgid "App"
 msgstr "Alkalmazás"
 
 msgid "App Name"
-msgstr ""
+msgstr "Alkalmazás neve"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Alkalmazás neve (például: com.ubuntu.fejleszto.pelda)"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "Alkalmazás kívánságlista"
 
 msgid "Apps"
 msgstr "Alkalmazások"
@@ -148,7 +155,7 @@ msgid "By:"
 msgstr "Tőle:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 msgid "Category:"
 msgstr "Kategória:"
@@ -181,7 +188,7 @@ msgid "Could not create a new list at this time, please try again later"
 msgstr "Nem sikerült új listát létrehozni. próbálja újra később"
 
 msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
+msgstr "Nem sikerült a kívánság létrehozása, próbálja újra később"
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr "Nem sikerült a listát törölni. próbálja újra később"
@@ -204,13 +211,13 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "Nem található ez a lista, lehet, hogy már nem létezik"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "Nem található kívánság"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr "Nem sikerült a listát betölteni, próbálja újra"
 
 msgid "Could not load wishes at this time, click to retry"
-msgstr ""
+msgstr "Nem sikerült a kívánságokat időben betölteni, próbálja újra"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -238,7 +245,7 @@ msgid "Developer Tools"
 msgstr "Fejlesztői eszközök"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "Fejesztelő/Vállalat"
 
 msgid "Donate"
 msgstr "Támogatás"
@@ -258,6 +265,11 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
+"Az uApp Explorer támogatása az egyik módja, hogy segítse az oldalt jobbá "
+"tenni.  Az adományozott pénz az infrastruktúra fenntartását fedezi, amiben "
+"benne van a domain név, a szerverbérlés és egyéb költségek. Az uApp Explorer "
+"mindig is ingyenes és nyílt forráskódú szolgáltatás marad, független az "
+"adományok összegétől."
 
 msgid "Donation Web App"
 msgstr "Támogatói webalkalmazás"
@@ -266,7 +278,7 @@ msgid "Download"
 msgstr "Letöltés"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Leszavazás"
 
 msgid "Edit"
 msgstr "Szerkesztés"
@@ -331,10 +343,10 @@ msgid "Go there now"
 msgstr "Menjünk oda"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Google Play hivatkozás"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "Érvénytelen Google Play hivatkozás"
 
 msgid "Graphics"
 msgstr "Grafika"
@@ -346,25 +358,29 @@ msgid "Health & Fitness"
 msgstr "Egészség és fitnesz"
 
 msgid "Heart Rating"
-msgstr "Szív értékelés"
+msgstr "Szíves értékelés"
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr ""
+"A szíves értékelés a csillagos értékelésből kerül kiszámításra, ahol az 5 "
+"csillagos értékelés 1 szívnek, a 4 csillagos fél szívnek, a 3 csillagos 0 "
+"szívnek, a 2 csillagos mínusz fél szívnek és az 1 csillagos pedig mínusz 1 "
+"szívnek felel meg."
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "Segítsen több szavazatot szerezni ennek a kívánságnak!"
 
 msgid "Help translate!"
 msgstr "Segítsen a fordításban!"
 
 msgid "Highest Heart Rating"
-msgstr "Legmagasabb szív értékelés"
+msgstr "Legmagasabb szíves értékelés"
 
 msgid "Highest Star Rating"
-msgstr "Legmagasabb csillag értékelés"
+msgstr "Legmagasabb csillagos értékelés"
 
 msgid "How can I help improve this site?"
 msgstr "Hogy tudok segíteni az oldal fejlesztésében?"
@@ -376,19 +392,19 @@ msgid "How is the popularity determined?"
 msgstr "Hogy történik a népszerűség meghatározása?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "Mennyit lenne hajlandó fizetni ezért az alkalmazásért?"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "Nem rég publikáltam az alkalmazásomat, miért nem látom?"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "Az én kívánságom a következő:"
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "Az én kívánságom a következő: "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "Ötletösszegzés"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Ha szeretne a kódban segíteni, látogasson el a GitHub oldalra."
@@ -420,13 +436,13 @@ msgid "Install"
 msgstr "Telepítés"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "Ez már egy létező alkalmazás?"
 
 msgid "It is possible to have a negative heart rating."
-msgstr "Lehetséges a negatív szív értékelés is."
+msgstr "Lehetséges a negatív szíves értékelés is."
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "Itunes hivatkozás"
 
 msgid "Language"
 msgstr "Nyelv"
@@ -465,16 +481,16 @@ msgid "Log in via Ubuntu"
 msgstr "Bejelentkezés Ubuntuval"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Jelentkezzen be a kívánságok eléréséhez"
 
 msgid "Lowest Heart Rating"
-msgstr "Legalacsonyabb szív értékelés"
+msgstr "Legalacsonyabb szíves értékelés"
 
 msgid "Lowest Star Rating"
-msgstr "Legalacsonyabb csillag értékelés"
+msgstr "Legalacsonyabb csillagos értékelés"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Kívánság benyújtsa"
 
 msgid "Media & Video"
 msgstr "Média és videó"
@@ -492,7 +508,7 @@ msgid "More Apps by:"
 msgstr "További alkalmazások tőle:"
 
 msgid "More Info"
-msgstr ""
+msgstr "További információ"
 
 msgid "Most Expensive (USD)"
 msgstr "Legdrágább (USD)"
@@ -520,6 +536,9 @@ msgid ""
 "wait until the new apps are fetched or use the request form to request that "
 "the app be found early."
 msgstr ""
+"Az alkalmazások a hivatalos áruházból kerülnek áttöltésre minden órában. "
+"Megvárhatja míg átkerül egy alkalmazás, de akár kérheti is egy alkalmazás "
+"azonnali áttöltését."
 
 msgid "Newest"
 msgstr "Legújabbak"
@@ -540,7 +559,7 @@ msgid "No lists, create one!"
 msgstr "Nincsenek listák, hozzon létre egyet."
 
 msgid "No recent changes"
-msgstr ""
+msgstr "Nincs változás"
 
 msgid "No reviews yet!"
 msgstr "Nincsenek értékelések."
@@ -552,16 +571,16 @@ msgid "Oldest Update"
 msgstr "Legrégebben frissítve"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
+msgstr "A szavazók átlagosan %d USD-t lennének hajlandóak fizetni ezért."
 
 msgid "Open Source"
 msgstr "Nyílt forrású"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Egyéb hivatkozás"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "Érvénytelen egyéb hivatkozás"
 
 msgid "Personalisation"
 msgstr "Testreszabás"
@@ -570,15 +589,20 @@ msgid "Please login to send via Caxton"
 msgstr "Jelentkezzen be a Caxtonnal való küldéshez"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Adjon meg egy nevet a kívánságának"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
 msgstr ""
+"A népszerűség az adott hónapban kapott 4 és 5 csillagos értékelések "
+"függvénye."
 
 msgid "Previous App:"
 msgstr "Előző alkalmazás:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr "Az összegnek 0 és 20 USD között kell lennie"
 
 msgid "Productivity"
 msgstr "Hatékonyság"
@@ -659,13 +683,13 @@ msgid "Sports"
 msgstr "Sport"
 
 msgid "Star Rating"
-msgstr ""
+msgstr "Csillagos értékelés"
 
 msgid "Submit"
-msgstr ""
+msgstr "Elküldés"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Beküldte:"
 
 msgid "Support"
 msgstr "Támogatás"
@@ -677,7 +701,7 @@ msgid "Terms:"
 msgstr "Feltételek:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Köszönjük a szavazatát!"
 
 msgid "Thank you!"
 msgstr "Köszönjük!"
@@ -687,6 +711,10 @@ msgid ""
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
+"A szíves értékelés nagyon hasonló, mint a csillagos értékelés, csak itt a "
+"több jó értékelést kapott alkalmazást jutalmazzuk. Egy alkalmazás számos 5 "
+"csillagos értékeléssel több szívet kap, mint egy alkalmazás csak pár 5 "
+"csillagos értékeléssel."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -696,6 +724,12 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
+"A csillagos értékelés a kapott érékelésekből, a Bayes döntéselmélet "
+"segítségével kiszámolt átlagon alapszik. Ennek köszönhetően a több "
+"értékelést kapott alkalmazások előrébb lesznek sorolva, mint azok, amik "
+"kevesebbet kaptak. A csillagos értékelés 1 és 5 között lehet, illetve 0 még "
+"lehetséges, ha egy alkalmazást még nem értékeltek. További információkért "
+"olvassa el az alábbi cikket."
 
 msgid "This app is on these lists:"
 msgstr "Ez az alkalmazás ezeken a listákon van:"
@@ -712,6 +746,10 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
+"Ez az oldal egy nem hivatalos alkalmazásböngésző az Ubuntu Touch "
+"rendszerhez. Minden adat nyilvános elérhető API-kon keresztül érkezik. Az "
+"oldalt Brian Douglass tartja karban és semmi köze a Canonicalhoz vagy az "
+"Ubuntuhoz. A Canonical és az Ubuntu bejegyzett védjegyek."
 
 msgid "Title A-Z"
 msgstr "Cím (A-Z)"
@@ -724,6 +762,10 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Alkalmazás telepítéshez először látogasson el erre az oldalra az eszközén. "
+"Majd keresse meg az alkalmazást és nyomjon a „Telepítés” gombra. Ezután a "
+"hivatalos alkalmazás áruházhoz lesz irányítva, ahonnét telepítheti az "
+"alkalmazást."
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
@@ -744,7 +786,7 @@ msgid "Type:"
 msgstr "Típus:"
 
 msgid "Universal Accesss/Accessibility"
-msgstr ""
+msgstr "Kisegítő lehetőségek"
 
 msgid "Updated Apps"
 msgstr "Frissített alkalmazások"
@@ -753,7 +795,7 @@ msgid "Updated:"
 msgstr "Frissítve:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Felszavazás"
 
 msgid "User List:"
 msgstr "Felhasználói lista:"
@@ -771,7 +813,7 @@ msgid "View"
 msgstr "Nézet"
 
 msgid "Vote"
-msgstr ""
+msgstr "Szavazás"
 
 msgid "Weather"
 msgstr "Időjárás"
@@ -792,19 +834,19 @@ msgid "Welcome to uApp Explorer!"
 msgstr "Üdvözli az uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Melyik alkalmazást látná szívesen az Ubuntu Touch-hoz?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Melyik alkalmazásokat látná szívesen az Ubuntu Touch-hoz?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Mit tegyek, ha jog-, vagy védjegysértő tartalmat találok?"
 
 msgid "What is the heart rating?"
-msgstr "Mi az a szív értékelés?"
+msgstr "Mi az a szíves értékelés?"
 
 msgid "What is the star rating?"
-msgstr "Mi az a csillag értékelés?"
+msgstr "Mi az a csillagos értékelés?"
 
 msgid "What is this site?"
 msgstr "Mi ez az oldal?"
@@ -816,14 +858,14 @@ msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
-"Akár úgy dönt, hogy adományoz vagy nem, nagyra értékelem a támogatását. "
+"Akár úgy dönt, hogy adományoz, akár nem, nagyra értékelem a támogatását. "
 "Köszönöm."
 
 msgid "Why donate?"
 msgstr "Miért támogassam?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Kívánságlista"
 
 msgid "Yes"
 msgstr "Igen"
@@ -839,10 +881,10 @@ msgstr ""
 "beállítások alatt"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "Be kell jelentkezni a szavazáshoz"
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
+msgstr "A szavazatát nem sikerült időben elmenteni, próbálja újra később"
 
 msgid "apps"
 msgid_plural "apps"
@@ -858,10 +900,10 @@ msgstr[0] "játék"
 msgstr[1] "játék"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "Itunes hivatkozás"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "Érvénytelen Itunes hivatkozás"
 
 msgid "scopes"
 msgid_plural "scopes"

@@ -45,7 +45,7 @@ module.exports = React.createClass({
 
         <Modal.Body>
           <div className="input-group price">
-            <input type="number" min="0" onChange={this.priceChange} className="form-control" />
+            <input type="number" min="0" max="20" onChange={this.priceChange} className="form-control" />
               <div className="input-group-addon">USD</div>
           </div>
         </Modal.Body>

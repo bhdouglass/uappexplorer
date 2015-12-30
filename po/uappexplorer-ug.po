@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-22 05:30+0000\n"
-"PO-Revision-Date: 2015-12-03 10:23+0000\n"
-"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
+"POT-Creation-Date: 2015-12-23 11:42+0000\n"
+"PO-Revision-Date: 2015-12-23 15:24+0000\n"
+"Last-Translator: Sahran <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
+"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: ug\n"
 
@@ -39,7 +39,7 @@ msgid "- Choose a list -"
 msgstr "تىزىم تاللا"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "ئوخشاش ئاتلىق ئارزۇ مەۋجۇت"
 
 msgid "Add Apps:"
 msgstr "ئەپ قوشۇش:"
@@ -63,10 +63,10 @@ msgid "All Types"
 msgstr "ھەممە تېپلار"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "ئامازون ئۇلانمىسى"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "ئامازون ئۇلانمىسى ئىناۋەتلىك url ئەمەس"
 
 msgid "Any Architecture"
 msgstr "خالىغان قۇرۇلما"
@@ -87,13 +87,13 @@ msgid "App"
 msgstr "ئەپ"
 
 msgid "App Name"
-msgstr ""
+msgstr "ئەپ ئىسمى"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "ئەپ نامى"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "ئەپ ئارزۇ تىزىمى"
 
 msgid "Apps"
 msgstr "ئەپلەر"
@@ -149,7 +149,7 @@ msgid "By:"
 msgstr "يازغۇچى:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "ۋاز كەچ"
 
 msgid "Category:"
 msgstr "كاتېگورىيە:"
@@ -182,7 +182,7 @@ msgid "Could not create a new list at this time, please try again later"
 msgstr "سىز يېڭدىن تىزىم قۇشالمايسىز ،بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
 msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
+msgstr "بۇ ۋاقىتتا يېڭى ئارزۇ قۇرغىلى بولمايدۇ، سەل تۇرۇپ قايتا سىناڭ"
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr "تىزىمنى ئۈچۈرەلمەيسىز.بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
@@ -203,13 +203,13 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "بۇنداق تىزىم تېپلمىدى،بۇنداق تىزىم ساقلانمغان"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "ئارزۇ تېپىلمىدى"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr "تىزىمنى تۇلۇق يۈكلەنمدى قايتىدىن سىناپ كۈرۈڭ"
 
 msgid "Could not load wishes at this time, click to retry"
-msgstr ""
+msgstr "بۇ ۋاقىتتا ئارزۇنى يۈكلىيەلمىدى، چېكىپ قايتا سىناڭ"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr "بۇ تىزىمدىكى ئەپلەرنى ئۈچۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
@@ -237,7 +237,7 @@ msgid "Developer Tools"
 msgstr "ئىجادىيەت قوراللىرى"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "ئىجادكار/شىركەت"
 
 msgid "Donate"
 msgstr "ئىئانە"
@@ -579,6 +579,9 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "بۇرۇنقى ئەپلەر:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr ""
 
 msgid "Productivity"
 msgstr "ئىشلەپچىقىرىش ئۈنۈمى"

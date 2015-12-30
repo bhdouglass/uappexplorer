@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-22 05:30+0000\n"
-"PO-Revision-Date: 2015-12-06 21:21+0000\n"
-"Last-Translator: Rúben Silva <rubensilva945@gmail.com>\n"
+"POT-Creation-Date: 2015-12-23 11:42+0000\n"
+"PO-Revision-Date: 2015-12-23 11:52+0000\n"
+"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
+"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: pt\n"
 
@@ -25,7 +25,7 @@ msgstr "(Não se preocupe, há uma versão gratuita também!)"
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Instalar o levará para a appstore oficial em um dispositivo Ubuntu Touch"
+"*Instalar o levará para a Ubuntu Store em um dispositivo Ubuntu Touch"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
@@ -39,7 +39,7 @@ msgid "- Choose a list -"
 msgstr "- Escolha uma lista -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Esse nome já existe"
 
 msgid "Add Apps:"
 msgstr "Adicionar apps:"
@@ -57,16 +57,16 @@ msgid "All Architectures"
 msgstr "Todas Arquiteturas"
 
 msgid "All Frameworks"
-msgstr "Todos os Frameworks"
+msgstr "Todos os frameworks"
 
 msgid "All Types"
 msgstr "Todos os tipos"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Amazon Link"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "O link da Amazon não é um url válido"
 
 msgid "Any Architecture"
 msgstr "Qualquer arquitetura"
@@ -93,13 +93,13 @@ msgid "App"
 msgstr "App"
 
 msgid "App Name"
-msgstr ""
+msgstr "Nome da app"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nome da app (examplo: com.ubuntu.developer.example)"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "Lista de desejos de apps"
 
 msgid "Apps"
 msgstr "Apps"
@@ -155,7 +155,7 @@ msgid "By:"
 msgstr "Por:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 msgid "Category:"
 msgstr "Categoria:"
@@ -193,6 +193,8 @@ msgstr ""
 
 msgid "Could not create a new wish at this time, please try again later"
 msgstr ""
+"Não foi possível criar um novo desejo de momento, por favor, tente novamente "
+"mais tarde"
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
@@ -216,14 +218,14 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "Não foi possível encontrar a lista, talvez ela não exista mais"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "Não foi possível encontrar o desejo"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
 "Não foi possível carregar listas neste momento, clique em tentar novamente"
 
 msgid "Could not load wishes at this time, click to retry"
-msgstr ""
+msgstr "Não foi possível carregar desejos de momento, pressione novamente"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -255,7 +257,7 @@ msgid "Developer Tools"
 msgstr "Ferramentas de programador"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "Programador/Corporação"
 
 msgid "Donate"
 msgstr "Doar"
@@ -288,7 +290,7 @@ msgid "Download"
 msgstr "Baixar"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Voto negativo"
 
 msgid "Edit"
 msgstr "Editar"
@@ -351,10 +353,10 @@ msgid "Go there now"
 msgstr "Vá agora"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Google Play Link"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "Google Play não é um link de url válido"
 
 msgid "Graphics"
 msgstr "Gráficos"
@@ -379,7 +381,7 @@ msgstr ""
 "1 estrela = -1 coração."
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "Ajude este desejo a ter mais votos!"
 
 msgid "Help translate!"
 msgstr "Ajuda a traduzir!"
@@ -400,19 +402,19 @@ msgid "How is the popularity determined?"
 msgstr "Como é determinada a popularidade?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "Quanto estaria disposto a pagar por esta app?"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "Acabei de publicar a minha app, porque não a vejo?"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "Estou a desejar por..."
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "Estou a desejar por: "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "Resumo da ideia"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Se desejar contribuir para o código, visite o repositório GitHub."
@@ -442,13 +444,13 @@ msgid "Install"
 msgstr "Instalar"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "É esta uma app que já existe?"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "É possível ter uma classificação negativa de corações."
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "Itunes Link"
 
 msgid "Language"
 msgstr "Idioma"
@@ -487,7 +489,7 @@ msgid "Log in via Ubuntu"
 msgstr "Iniciar via Ubuntu"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Iniciar sessão para fazer um desejo"
 
 msgid "Lowest Heart Rating"
 msgstr "Classificação mais baixa de coração"
@@ -496,7 +498,7 @@ msgid "Lowest Star Rating"
 msgstr "Classificação mais baixa de estrela"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Fazer um desejo"
 
 msgid "Media & Video"
 msgstr "Média e Vídeo"
@@ -514,7 +516,7 @@ msgid "More Apps by:"
 msgstr "Mais apps por:"
 
 msgid "More Info"
-msgstr ""
+msgstr "Mais info"
 
 msgid "Most Expensive (USD)"
 msgstr "Mais caras (USD)"
@@ -578,16 +580,16 @@ msgid "Oldest Update"
 msgstr "Atualização mais antiga"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
+msgstr "Em média, os votantes estão dispostos a pagar %d USD por esta app."
 
 msgid "Open Source"
 msgstr "Código aberto"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Outro link"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "Outro link não é um url válido"
 
 msgid "Personalisation"
 msgstr "Personalização"
@@ -596,7 +598,7 @@ msgid "Please login to send via Caxton"
 msgstr "Inicie sessão para enviar via Caxton"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Por favor, especifique um nome ou idea para o seu pedido"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -607,6 +609,9 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "App anterior:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr "Os preços devem ser entre 0 e 20 USD"
 
 msgid "Productivity"
 msgstr "Produtividade"
@@ -690,10 +695,10 @@ msgid "Star Rating"
 msgstr "Classificação por estrelas"
 
 msgid "Submit"
-msgstr ""
+msgstr "Submeter"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Submetido por:"
 
 msgid "Support"
 msgstr "Suporte"
@@ -705,7 +710,7 @@ msgid "Terms:"
 msgstr "Termos:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Obrigado pelo seu voto!"
 
 msgid "Thank you!"
 msgstr "Obrigado!"
@@ -802,7 +807,7 @@ msgid "Updated:"
 msgstr "Atualizado:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Voto positivo"
 
 msgid "User List:"
 msgstr "Lista do utilizador:"
@@ -820,7 +825,7 @@ msgid "View"
 msgstr "Ver"
 
 msgid "Vote"
-msgstr ""
+msgstr "Votar"
 
 msgid "Weather"
 msgstr "Meteorologia"
@@ -841,10 +846,10 @@ msgid "Welcome to uApp Explorer!"
 msgstr "Bem-vindo ao uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Que app deseja ver no Ubuntu Touch?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Que apps deseja ver no Ubuntu Touch?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -872,7 +877,7 @@ msgid "Why donate?"
 msgstr "Porque doar?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Lista de desejos"
 
 msgid "Yes"
 msgstr "Sim"
@@ -886,10 +891,10 @@ msgid ""
 msgstr "Não tem uma conta ligada ao Caxton, clique para ir às definições."
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "Precisa de iniciar sessão para votar"
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
+msgstr "Voto sem sucesso, por favor, tente novamente mais tarde"
 
 msgid "apps"
 msgid_plural "apps"
@@ -905,10 +910,10 @@ msgstr[0] "jogo"
 msgstr[1] "jogos"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "iTunes Link"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "iTunes não é um link de url válido"
 
 msgid "scopes"
 msgid_plural "scopes"

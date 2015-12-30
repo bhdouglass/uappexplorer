@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-22 05:30+0000\n"
-"PO-Revision-Date: 2015-10-20 21:36+0000\n"
-"Last-Translator: KodduX <Unknown>\n"
+"POT-Creation-Date: 2015-12-23 11:42+0000\n"
+"PO-Revision-Date: 2015-12-22 20:14+0000\n"
+"Last-Translator: Jan Claeys <ubuntu@janc.be>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
+"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: nl\n"
 
@@ -54,22 +54,22 @@ msgid "All Architectures"
 msgstr ""
 
 msgid "All Frameworks"
-msgstr ""
+msgstr "Alle frameworks"
 
 msgid "All Types"
-msgstr "Alle Typen"
+msgstr "Alle types"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Link naar Amazon"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "Link naar Amazon is geen geldige URL"
 
 msgid "Any Architecture"
-msgstr ""
+msgstr "Elke architectuur"
 
 msgid "Any License"
-msgstr ""
+msgstr "Elke licentie"
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -84,20 +84,20 @@ msgid "App"
 msgstr "App"
 
 msgid "App Name"
-msgstr ""
+msgstr "App-naam"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Applicatie naam (voorbeeld: com.ubuntu.developer.example)"
+msgstr "App-naam (voorbeeld: com.ubuntu.developer.example)"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "Wenslijst voor apps"
 
 msgid "Apps"
 msgstr "Apps"
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Apps worden niet geïnstalleerd via de website, maar via de officiële "
+"Apps worden niet via de website geïnstalleerd, maar via de officiële "
 "appstore."
 
 msgid "Apps:"
@@ -107,52 +107,52 @@ msgid "Architecture:"
 msgstr "Architectuur:"
 
 msgid "Are you sure you want to delete this list?"
-msgstr ""
+msgstr "Ben je zeker dat je deze lijst wil verwijderen?"
 
 msgid "Article"
-msgstr ""
+msgstr "Artikel"
 
 msgid "Author"
-msgstr ""
+msgstr "Auteur"
 
 msgid "Books & Comics"
-msgstr ""
+msgstr "Boeken & Strips"
 
 msgid "Browse"
-msgstr "Browse"
+msgstr "Bladeren"
 
 msgid "Browse Apps"
-msgstr "Browse Apps"
+msgstr "Door apps bladeren"
 
 msgid "Browse Games"
-msgstr "Browse Games"
+msgstr "Door spelletjes bladeren"
 
 msgid "Browse Scopes"
-msgstr "Browse Scopes"
+msgstr "Door scopes bladeren"
 
 msgid "Browse Web Apps"
-msgstr "Browse Web Apps"
+msgstr "Door webapps bladeren"
 
 msgid "Business"
-msgstr ""
+msgstr "Zakelijk"
 
 msgid "Buy the Webapp"
-msgstr "Koop de Webapp"
+msgstr "Webapp kopen"
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Koop de Webaoo in de Ubuntu Touch app store"
+msgstr "Webapp kopen in the Ubuntu Touch appstore"
 
 msgid "By:"
-msgstr ""
+msgstr "Door:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 msgid "Category:"
 msgstr "Categorie:"
 
 msgid "Caxton Code"
-msgstr ""
+msgstr "Caxton-code"
 
 msgid "Changelog"
 msgstr "Overzicht van wijzigingen"
@@ -161,27 +161,31 @@ msgid "Close"
 msgstr "Sluiten"
 
 msgid "Communication"
-msgstr ""
+msgstr "Communicatie"
 
 msgid "Company"
-msgstr ""
+msgstr "Bedrijf"
 
 msgid "Containing:"
 msgstr "bevatten"
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Kan de app niet toevoegen aan je lijst. Probeer het later nog een keer."
+"Kan de app momenteel niet toevoegen aan je lijst. Probeer het later nog een "
+"keer."
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Kan geen verbinding maken met de Caxton. Probeer het later nog een keer."
+"Kan momenteel geen verbinding maken met Caxton. Probeer het later nog een "
+"keer."
 
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
+"Kan momenteel geen nieuwe lijst aanmaken. Probeer het later nog een keer."
 
 msgid "Could not create a new wish at this time, please try again later"
 msgstr ""
+"Kan momenteel geen wenslijst-item toevoegen. Probeer het later nog een keer."
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
@@ -568,6 +572,9 @@ msgid ""
 msgstr ""
 
 msgid "Previous App:"
+msgstr ""
+
+msgid "Price must be between 0 and 20 USD"
 msgstr ""
 
 msgid "Productivity"

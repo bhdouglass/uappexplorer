@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-22 05:30+0000\n"
-"PO-Revision-Date: 2015-12-02 23:11+0000\n"
-"Last-Translator: Sergio Salcedo <ssalcedob@gmail.com>\n"
+"POT-Creation-Date: 2015-12-23 11:42+0000\n"
+"PO-Revision-Date: 2015-12-22 11:09+0000\n"
+"Last-Translator: Javier Antonio Nisa Avila <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:32+0000\n"
+"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -61,10 +61,10 @@ msgid "All Types"
 msgstr "Todos los tipos"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Enlace a Amazon"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "El enlace a Amazon no es válido"
 
 msgid "Any Architecture"
 msgstr "Cualquier arquitectura"
@@ -91,13 +91,13 @@ msgid "App"
 msgstr "Aplicación"
 
 msgid "App Name"
-msgstr ""
+msgstr "Nombre de la Aplicación"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nombre de aplicación (ejemplo: com.ubuntu.developer.example)"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "Lista de aplicaciones deseadas"
 
 msgid "Apps"
 msgstr "Aplicaciones"
@@ -153,7 +153,7 @@ msgid "By:"
 msgstr "Por:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 msgid "Category:"
 msgstr "Categoría:"
@@ -217,7 +217,7 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "No se encuentra la lista, puede que ya no exista"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "No se encuentra lista de deseos"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr "No se puede cargar la lista, reintente dando click"
@@ -253,7 +253,7 @@ msgid "Developer Tools"
 msgstr "Herramientas para desarrolladores"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "Desarrollador/Empresa"
 
 msgid "Donate"
 msgstr "Haga una donación"
@@ -352,10 +352,10 @@ msgid "Go there now"
 msgstr "Ve allá"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Enlace a Google Play"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "El enlace a Google Play no es válido"
 
 msgid "Graphics"
 msgstr "Gráficos"
@@ -450,7 +450,7 @@ msgid "It is possible to have a negative heart rating."
 msgstr "Es posible tener una clasificacion negativa de corazón"
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "Enlace a Itunes"
 
 msgid "Language"
 msgstr "Idioma"
@@ -516,7 +516,7 @@ msgid "More Apps by:"
 msgstr "Mas aplicaciones por:"
 
 msgid "More Info"
-msgstr ""
+msgstr "Más Información"
 
 msgid "Most Expensive (USD)"
 msgstr "La mas cara en USD"
@@ -585,7 +585,7 @@ msgid "Open Source"
 msgstr "Open Source"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Otros enlaces"
 
 msgid "Other link is not a valid url"
 msgstr ""
@@ -608,6 +608,9 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "Aplicación anterior:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr ""
 
 msgid "Productivity"
 msgstr "Productividad"
@@ -691,10 +694,10 @@ msgid "Star Rating"
 msgstr "Clasificacion de estrellas"
 
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Enviado por"
 
 msgid "Support"
 msgstr "Asistencia técnica"
@@ -820,7 +823,7 @@ msgid "View"
 msgstr "Vista"
 
 msgid "Vote"
-msgstr ""
+msgstr "Votar"
 
 msgid "Weather"
 msgstr "Estado del Tiempo"
@@ -841,10 +844,10 @@ msgid "Welcome to uApp Explorer!"
 msgstr "Bienvenido(a) a la tienda uApp Explorer"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "¿Que aplicación deseas ver en Ubuntu Touch?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "¿Que aplicaciones deseas ver en Ubuntu Touch?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
