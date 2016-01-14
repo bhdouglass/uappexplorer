@@ -500,6 +500,9 @@ msgstr ""
 msgid "No reviews yet!"
 msgstr ""
 
+msgid "No wishes found, try searching again."
+msgstr ""
+
 msgid "Oldest"
 msgstr ""
 
@@ -567,6 +570,9 @@ msgid "Scopes"
 msgstr ""
 
 msgid "Screenshots"
+msgstr ""
+
+msgid "Search for a wish:"
 msgstr ""
 
 msgid "Send via Caxton"
