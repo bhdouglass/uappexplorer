@@ -178,7 +178,7 @@ module.exports = React.createClass({
           </div>
         </If>
 
-        <Pagination active={this.state.page} total={pages} base={'/wishlist'} />
+        <Pagination active={this.state.page} total={pages} base={'/wishlist'} query={this.props.location.query} />
       </div>
     );
   }
