@@ -15,6 +15,13 @@
 
     <link href="/css/lib.css?v=<%= version %>" rel="stylesheet">
     <link href="/css/main.css?v=<%= version %>" rel="stylesheet">
+
+    <script src="//www.google-analytics.com/analytics.js"></script>
+    <script>
+      if (window.location.hostname != 'local.uappexplorer.com') {
+        ga('create', 'UA-16555025-3', 'auto');
+      }
+    </script>
   </head>
   <body>
     <div id="main"></div>
