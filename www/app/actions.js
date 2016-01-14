@@ -434,8 +434,15 @@ actions = {
         current: location,
       });
     }
-    else if (location.indexOf('/wishlist/') === 0) {
-      //Return to the main wishlist from a wish page
+    else if (location.indexOf('/wishlist') === 0 && location.indexOf('/wishlist/') == -1) {
+      //Return to the app list from the wishlist
+      tree.set('location', {
+        previous: '/apps',
+        current: location,
+      });
+    }
+    else if (location.indexOf('/wishlist/') === 0 && current.indexOf('/wishlist') == -1) {
+      //Return to the main wishlist from a wish page if not already returning to the wishlist
       tree.set('location', {
         previous: '/wishlist',
         current: location,
@@ -485,8 +492,8 @@ actions = {
     }
   },
 
-  getWishes: function(limit, skip) {
-    return api.getWishes(limit, skip).then(function(data) {
+  getWishes: function(limit, skip, search) {
+    return api.getWishes(limit, skip, search).then(function(data) {
       tree.set('wishes', data);
     }).catch(function() {
       actions.createAlert(i18n.t('Could not load wishes at this time, click to retry'), 'error', actions.getUserLists.bind(actions));

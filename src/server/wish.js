@@ -57,12 +57,17 @@ function setup(app, success, error, isAuthenticated) {
   });
 
   app.get('/api/wish', function(req, res) {
-    db.Wish.count({}).exec(function(err, count) {
+    var findQuery = {};
+    if (req.query.search) {
+      findQuery.name = new RegExp(req.query.search, 'i');
+    }
+
+    db.Wish.count(findQuery).exec(function(err, count) {
       if (err) {
         error(res, err);
       }
       else {
-        var query = db.Wish.find({});
+        var query = db.Wish.find(findQuery);
         if (req.query.limit) {
           query.limit(req.query.limit);
         }

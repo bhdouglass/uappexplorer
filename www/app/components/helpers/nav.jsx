@@ -39,7 +39,7 @@ module.exports = React.createClass({
     this.debounceSearch = debounce(this.search, 300);
 
     var search = '';
-    if (this.props.location && this.props.location.query && this.props.location.query.q) {
+    if (this.props.location.pathname != '/wishlist' && this.props.location && this.props.location.query && this.props.location.query.q) {
       search = this.props.location.query.q;
       actions.showSearch(true);
     }
@@ -51,7 +51,7 @@ module.exports = React.createClass({
   },
 
   componentWillUpdate: function(nextProps) {
-    if (nextProps.location && nextProps.location.query && (this.state.search != nextProps.location.query.q)) {
+    if (nextProps.location.pathname != '/wishlist' && nextProps.location && nextProps.location.query && (this.state.search != nextProps.location.query.q)) {
       this.setState({
         search: nextProps.location.query.q,
         unsearch: nextProps.location.query.q,

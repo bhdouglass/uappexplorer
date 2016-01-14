@@ -1,8 +1,10 @@
 var React = require('react');
+var Router = require('react-router');
 var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');
+var debounce = require('debounce');
 
 var actions = require('../actions');
 var If = require('./helpers/if');
@@ -15,6 +17,7 @@ module.exports = React.createClass({
   displayName: 'Wishlist',
   mixins: [
     mixins.branch,
+    Router.History,
     PureRenderMixin,
   ],
   cursors: {
@@ -23,29 +26,9 @@ module.exports = React.createClass({
     lng: ['lng'],
   },
 
-  getInitialState: function() {
-    return {
-      show: false,
-      page: 0,
-    };
-  },
-
-  getWishes: function(props, state, forceUpdate) {
-    var page = 0;
-    if (props.location.query && props.location.query.page) {
-      page = props.location.query.page;
-    }
-
-    if (page != state.page) {
-      this.setState({page: page});
-      actions.getWishes(LIMIT, page * LIMIT);
-    }
-    else if (forceUpdate) {
-      actions.getWishes(LIMIT, state.page * LIMIT);
-    }
-  },
-
   componentWillMount: function() {
+    this.debounceSearch = debounce(this.search, 300);
+
     this.getWishes(this.props, this.state, true);
 
     actions.setOG({
@@ -56,6 +39,51 @@ module.exports = React.createClass({
 
   componentWillUpdate: function(nextProps, nextState) {
     this.getWishes(nextProps, nextState);
+  },
+
+  getInitialState: function() {
+    return {
+      show: false,
+      page: 0,
+      search: '',
+      unsearch: '',
+    };
+  },
+
+  searchWrap: function(event) {
+    this.setState({unsearch: event.target.value});
+    this.debounceSearch(event);
+  },
+
+  search: function(event) {
+    if (event.target.value) {
+      this.props.location.query.q = event.target.value;
+    }
+    else {
+      delete this.props.location.query.q;
+    }
+
+    this.history.pushState(null, '/wishlist', this.props.location.query);
+  },
+
+  getWishes: function(props, state, forceUpdate) {
+    var page = 0;
+    if (props.location.query && props.location.query.page) {
+      page = props.location.query.page;
+    }
+
+    var search = '';
+    if (props.location && props.location.query) {
+      search = props.location.query.q;
+    }
+
+    if (page != state.page || search != state.search) {
+      this.setState({page: page, search: search, unsearch: search});
+      actions.getWishes(LIMIT, page * LIMIT, search);
+    }
+    else if (forceUpdate) {
+      actions.getWishes(LIMIT, state.page * LIMIT, search);
+    }
   },
 
   openModal: function() {
@@ -76,12 +104,20 @@ module.exports = React.createClass({
     return (
       <div className="wishlist">
         <h1 className="text-center">{i18n.t('App Wishlist')}</h1>
-        <h2 className="text-center">{i18n.t('What apps do you wish to see on Ubuntu Touch?')}</h2>
+        <h3 className="text-center">{i18n.t('What apps do you wish to see on Ubuntu Touch?')}</h3>
 
         <div className="row">
-          <div className="col-xs-12">
+          <div className="col-sm-5">
+            <div className="input-group search-box text-center">
+              <span className="input-group-addon">{i18n.t('Search for a wish:')}</span>
+              <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="search" />
+              <span className="input-group-addon"><i className="fa fa-search"></i></span>
+            </div>
+          </div>
+
+          <div className="col-sm-7">
             <If value={this.state.auth.loggedin}>
-            <div className="text-center">
+            <div className="pull-right">
               <a onClick={this.openModal} className="clickable btn btn-success">
                 {i18n.t('Make a wish')}
               </a>
@@ -91,7 +127,7 @@ module.exports = React.createClass({
             </If>
 
             <If value={!this.state.auth.loggedin}>
-              <div className="text-center">
+              <div className="pull-right">
                 <a onClick={actions.openModal.bind(this, 'login')} className="clickable btn btn-success">
                   {i18n.t('Login to make a wish')}
                 </a>
@@ -133,6 +169,14 @@ module.exports = React.createClass({
             return w;
           })}
         </div>
+
+        <If value={this.state.wishes.wishes.length === 0}>
+          <div className="row">
+            <div className="col-xs-12 text-center">
+              {i18n.t('No wishes found, try searching again.')}
+            </div>
+          </div>
+        </If>
 
         <Pagination active={this.state.page} total={pages} base={'/wishlist'} />
       </div>
