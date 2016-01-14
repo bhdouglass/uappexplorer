@@ -66,7 +66,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <Modal show={this.props.show} onHide={this.close}>
+      <Modal show={this.props.show} onHide={this.close} backdrop={'static'}>
         <Modal.Header closeButton>
           <Modal.Title>{i18n.t('What app do you wish to see on Ubuntu Touch?')}</Modal.Title>
         </Modal.Header>
