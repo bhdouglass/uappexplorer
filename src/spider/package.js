@@ -110,7 +110,7 @@ function map(pkg, data) {
       pkg.type = 'webapp';
     }
   }
-  else if (pkg.type == 'oem' || pkg.type == 'os') {
+  else if (['oem', 'os', 'kernel', 'gadget'].indexOf(pkg.type) >= 0) {
     pkg.type = 'snappy';
   }
 
