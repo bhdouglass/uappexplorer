@@ -348,7 +348,7 @@ actions = {
     newList.full_packages = full_packages;
 
     tree.set('userList', newList);
-    return this.updateUserList(list._id, newList).catch(function() {
+    return api.removeUserListApp(list._id, name).catch(function() {
       actions.createAlert(i18n.t('Could not remove the app from this list, please try again later'), 'error');
     });
   },
@@ -370,7 +370,7 @@ actions = {
 
     tree.set(['userLists', 'lists'], newUserLists);
 
-    return this.updateUserList(list._id, newList).catch(function() {
+    return api.addUserListApp(list._id, name).catch(function() {
       actions.createAlert(i18n.t('Could not add app to list at this time, please try again later'), 'error');
     });
   },

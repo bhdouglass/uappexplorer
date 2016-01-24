@@ -61,6 +61,14 @@ module.exports = {
     return axios.put('/api/lists/' + id, list).then(success);
   },
 
+  addUserListApp: function(id, app) {
+    return axios.put('/api/lists/' + id, {append_package: app}).then(success);
+  },
+
+  removeUserListApp: function(id, app) {
+    return axios.put('/api/lists/' + id, {remove_package: app}).then(success);
+  },
+
   deleteUserList: function(id) {
     return axios.delete('/api/lists/' + id).then(success);
   },
