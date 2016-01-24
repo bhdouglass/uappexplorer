@@ -420,6 +420,13 @@ actions = {
         current: location,
       });
     }
+    else if (location.indexOf('/list/') === 0) {
+      //Return to the apps page from a list
+      tree.set('location', {
+        previous: '/apps',
+        current: location,
+      });
+    }
     else if (location.indexOf('/apps') === 0) {
       //Return to the main page from the app list
       tree.set('location', {
