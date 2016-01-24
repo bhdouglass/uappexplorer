@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-23 11:42+0000\n"
-"PO-Revision-Date: 2015-12-04 10:52+0000\n"
-"Last-Translator: Ilonka <Unknown>\n"
+"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"PO-Revision-Date: 2016-01-14 21:12+0000\n"
+"Last-Translator: Torsten Franz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-24 20:56+0000\n"
+"X-Generator: Launchpad (build 17902)\n"
 "Language: de\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -150,7 +150,7 @@ msgid "By:"
 msgstr "Von:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 msgid "Category:"
 msgstr "Kategorie:"
@@ -188,6 +188,8 @@ msgstr ""
 
 msgid "Could not create a new wish at this time, please try again later"
 msgstr ""
+"Kann den neuen Wunsch gerade nicht erstellen, bitte versuchen Sie es später "
+"erneut"
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
@@ -435,7 +437,7 @@ msgid "Install"
 msgstr "Installieren"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "Ist dies eine existierende Anwendung?"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Es ist möglich ein negatives Herz-Rating zu haben."
@@ -560,6 +562,9 @@ msgstr "Keine aktuellen Änderungen"
 msgid "No reviews yet!"
 msgstr "Bisher keine Bewertungen!"
 
+msgid "No wishes found, try searching again."
+msgstr ""
+
 msgid "Oldest"
 msgstr "Älteste"
 
@@ -633,6 +638,9 @@ msgstr "Scopes"
 msgid "Screenshots"
 msgstr "Screenshots"
 
+msgid "Search for a wish:"
+msgstr ""
+
 msgid "Send via Caxton"
 msgstr "Senden über Caxton"
 
@@ -685,7 +693,7 @@ msgid "Submit"
 msgstr ""
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Eingereicht von"
 
 msgid "Support"
 msgstr "Support"

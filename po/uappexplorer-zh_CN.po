@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-23 11:42+0000\n"
-"PO-Revision-Date: 2015-12-22 19:04+0000\n"
+"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"PO-Revision-Date: 2015-12-31 02:59+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-12-30 12:40+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-24 20:56+0000\n"
+"X-Generator: Launchpad (build 17902)\n"
 "Language: zh_CN\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -372,13 +372,13 @@ msgid "I just published my app, why don't I see it?"
 msgstr "我发布了我的应用，为什么看不到它？"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "我希望..."
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "我希望： "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "创意摘要"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "如果你想贡献代码访问 GitHub 仓库。"
@@ -402,16 +402,16 @@ msgid "Info"
 msgstr "信息"
 
 msgid "Install"
-msgstr ""
+msgstr "安装"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "这是一个现有的App吗？"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "可能有负心评级。"
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "Itunes 连接"
 
 msgid "Language"
 msgstr "语言"
@@ -426,7 +426,7 @@ msgid "License:"
 msgstr "许可证："
 
 msgid "Lifestyle"
-msgstr ""
+msgstr "生活方式"
 
 msgid "List"
 msgstr "列表"
@@ -435,7 +435,7 @@ msgid "List Name:"
 msgstr "列表名："
 
 msgid "Load more reviews"
-msgstr ""
+msgstr "载入更多评论"
 
 msgid "Loading reviews..."
 msgstr "载入评论中..."
@@ -450,7 +450,7 @@ msgid "Log in via Ubuntu"
 msgstr "通过Ubuntu登录"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "登录来许一个愿"
 
 msgid "Lowest Heart Rating"
 msgstr "最低心评级"
@@ -459,7 +459,7 @@ msgid "Lowest Star Rating"
 msgstr "最低星评级"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "许愿"
 
 msgid "Media & Video"
 msgstr ""
@@ -529,6 +529,9 @@ msgstr ""
 
 msgid "No reviews yet!"
 msgstr "还没有评论！"
+
+msgid "No wishes found, try searching again."
+msgstr ""
 
 msgid "Oldest"
 msgstr "最旧"
@@ -600,6 +603,9 @@ msgstr "Scopes"
 
 msgid "Screenshots"
 msgstr "截图"
+
+msgid "Search for a wish:"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "通过Caxton发送"
