@@ -1,0 +1,945 @@
+# Catalan translation for uappexplorer
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the uappexplorer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uappexplorer\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"PO-Revision-Date: 2016-02-03 11:18+0000\n"
+"Last-Translator: muzzol <muzzol@gmail.com>\n"
+"Language-Team: Catalan <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-02-05 19:40+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
+
+msgid "(Don't worry, there is a free version too!)"
+msgstr "(No us preocupeu, també hi ha una versió lliure!)"
+
+msgid ""
+"*Install will take you to the official appstore on an Ubuntu Touch device"
+msgstr ""
+"*La instal·lació us portarà a la botiga d'aplicacions oficials a un "
+"dispositiu Ubuntu Touch"
+
+msgid ""
+"*This webapp injects custom code into the website which can add extra "
+"features or be malicious. Only use this app if you trust the author."
+msgstr ""
+"*Aquesta aplicació web injecta codi personalitzat dins la plana web que pot "
+"afegir funcionalitats extres o ser maliciós. Useu només aquesta aplicació si "
+"confieu en l'autor."
+
+msgid "- Choose a list -"
+msgstr "- Trieu una llista -"
+
+msgid "A wish with the same name already exists"
+msgstr "Ja existeix un desig amb el mateix nom"
+
+msgid "Add Apps:"
+msgstr "Afegeix Aplicaccions:"
+
+msgid "Add to list:"
+msgstr "Afegeix a la llista:"
+
+msgid "All"
+msgstr "Tot"
+
+msgid "All Apps"
+msgstr "Totes les aplicacions"
+
+msgid "All Architectures"
+msgstr "Totes les arquitectures"
+
+msgid "All Frameworks"
+msgstr "Tots els frameworks"
+
+msgid "All Types"
+msgstr "Tots els tipus"
+
+msgid "Amazon Link"
+msgstr "Enllaç d'Amazon"
+
+msgid "Amazon link is not a valid url"
+msgstr "L'enllaç d'Amazon no és una URL vàlida"
+
+msgid "Any Architecture"
+msgstr "Qualsevol arquitectura"
+
+msgid "Any License"
+msgstr "Qualsevol llicència"
+
+msgid ""
+"Any requests to remove copyright or trademark infringing content should be "
+"taken up with Canonical or the app's author (an author usually has a method "
+"of contact listed under the Support tab on their app's page). uApp Explorer "
+"is not affiliated with Canonical and does not host any apps. uApp Explorer "
+"only displays publicly available information about the official Ubuntu Touch "
+"appstore."
+msgstr ""
+"Qualsevol petició d'eliminació del copyright o de contingut que infringeixi "
+"un marca registrada s'hauria de decidir amb Canonical o l'aurtor de "
+"l'aplicació (els autors tenen normalment un mètode de contacte llistat "
+"davall la pestanya de suport a la pàgina de la seva aplicació). L'uApp "
+"Explorer no està afiliat amb Canonical i no allotja cap aplicació. L'uApp "
+"Explorer només mostra informació disponible públicament sobre la botiga "
+"d'aplicacions oficial d'Ubuntu Touch."
+
+msgid "App"
+msgstr "Aplicació"
+
+msgid "App Name"
+msgstr "Nom de l'Aplicació"
+
+msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr "Nom de l'Aplicació (exemple: com.ubuntu.desenvolupador.exemple)"
+
+msgid "App Wishlist"
+msgstr "Llista de desitjos d'aplicacions"
+
+msgid "Apps"
+msgstr "Aplicacions"
+
+msgid "Apps are not installed via this site, but via the official appstore."
+msgstr ""
+"Les aplicacions no s'instal·len mitjançant aquesta lloc, sinó a través de la "
+"botiga oficial."
+
+msgid "Apps:"
+msgstr "Aplicacions:"
+
+msgid "Architecture:"
+msgstr "Arquitectura:"
+
+msgid "Are you sure you want to delete this list?"
+msgstr "Esteu segurs que voleu eliminar aquesta llista?"
+
+msgid "Article"
+msgstr "Article"
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "Books & Comics"
+msgstr "Llibres i còmics"
+
+msgid "Browse"
+msgstr "Navega"
+
+msgid "Browse Apps"
+msgstr "Navega per les aplicacions"
+
+msgid "Browse Games"
+msgstr "Navega pels jocs"
+
+msgid "Browse Scopes"
+msgstr "Navega pels scopes"
+
+msgid "Browse Web Apps"
+msgstr "Navega per les aplicacions web"
+
+msgid "Business"
+msgstr "Negocis"
+
+msgid "Buy the Webapp"
+msgstr "Compra l'aplicació web"
+
+msgid "Buy the webapp from the Ubuntu Touch app store"
+msgstr "Compra l'aplicació web des de la botiga d'Ubuntu Touch"
+
+msgid "By:"
+msgstr "Per:"
+
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgid "Category:"
+msgstr "Categoria:"
+
+msgid "Caxton Code"
+msgstr "Codi Caxton"
+
+msgid "Changelog"
+msgstr "Registre de canvis"
+
+msgid "Close"
+msgstr "Tanca"
+
+msgid "Communication"
+msgstr "Comunicació"
+
+msgid "Company"
+msgstr "Empresa"
+
+msgid "Containing:"
+msgstr "Que continguin:"
+
+msgid "Could not add app to list at this time, please try again later"
+msgstr ""
+"No s'ha pogut afegir l'aplicació a la llista en aquest moment, si us plau "
+"intenteu-ho més tard"
+
+msgid "Could not connect to Caxton at this time, please try again later"
+msgstr ""
+"No s'ha pogut connectar amb Caxton en aquest moment, si us plau intenteu-ho "
+"més tard"
+
+msgid "Could not create a new list at this time, please try again later"
+msgstr ""
+"No s'ha pogut crear una llista nova en aquest moment, si us plau intenteu-ho "
+"més tard"
+
+msgid "Could not create a new wish at this time, please try again later"
+msgstr ""
+"No s'ha pogut crear un nou desig en aquest moment, si us plau intenteu-ho "
+"més tard"
+
+msgid "Could not delete the list at this time, please try again later"
+msgstr ""
+"No s'ha pogut eliminar la llista en aquest moment, si us plau intenteu-ho "
+"més tard"
+
+msgid "Could not download app data, click to retry"
+msgstr ""
+"No s'han pogut baixar les dades de l'aplicació, cliqueu per tornar a provar"
+
+msgid "Could not download app list, click to retry"
+msgstr ""
+"No s'han pogut baixar la llista de les aplicacion, cliqueu per tornar a "
+"provar"
+
+msgid "Could not find app"
+msgstr "No s'ha trobat l'aplicació"
+
+msgid "Could not find the requested app"
+msgstr "No s'ha pogut trobar l'aplicació demanada"
+
+msgid "Could not find this list, it may not exist any more"
+msgstr "No s'ha pogut trobar aquesta llista, pot ser que ja no existeixi"
+
+msgid "Could not find wish"
+msgstr "No s'ha pogut trobar el desig"
+
+msgid "Could not load lists at this time, click to retry"
+msgstr ""
+"No s'han pogut carregar les llistes en aquest moment, cliqueu per tornar a "
+"provar"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr ""
+"No s'han pogut carregar els desitjos en aquest moment, cliqueu per tornar a "
+"provar"
+
+msgid "Could not remove the app from this list, please try again later"
+msgstr ""
+"No s'ha pogut eliminar l'aplicació de la llista, si us plau intenteu-ho més "
+"tard"
+
+msgid "Could not save your settings at this time, please try again later"
+msgstr ""
+"No s'han pogut desar les vostre preferències en aquest moment, si us plau "
+"intenteu-ho més tard"
+
+msgid "Could not update the list at this time, please try again later"
+msgstr ""
+"No s'ha pogut actualitzar la llista en aquest moment, si us plau intenteu-ho "
+"més tard"
+
+msgid "Create"
+msgstr "Crea"
+
+msgid "Create List"
+msgstr "Crea la llista"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Description"
+msgstr "Descripció"
+
+msgid "Developer Tools"
+msgstr "Eines per a desenvolupadors"
+
+msgid "Developer/Company"
+msgstr "Desenvolupador/Empresa"
+
+msgid "Donate"
+msgstr "Feu un donatiu"
+
+msgid "Donate via Bitcoin"
+msgstr "Doneu via Bitcoin"
+
+msgid "Donate via Gratipay"
+msgstr "Doneu via Gratipay"
+
+msgid "Donate via Paypal"
+msgstr "Doneu via Paypal"
+
+msgid ""
+"Donating to uApp Explorer is just one way you can help make it better. If "
+"you choose to donate, you money will go towards infrastructure costs. Costs "
+"include domain names, hosting, etc. uApp Explorer will always be a free and "
+"open source service, regardless of the number of donations."
+msgstr ""
+"Donar a l'uApp Explorer és només una manera en que podeu ajudar a fer-ho "
+"millor. Si trieu donar la vostra aportació anirà a despeses "
+"d'infraestructures. Les despeses inclouen noms de domini, allotjament, etc. "
+"L'uApp Explorer serà sempre  un servei lliure i de codi obert, "
+"independentment del nombre de donacions."
+
+msgid "Donation Web App"
+msgstr "Aplicació web de doncacions"
+
+msgid "Download"
+msgstr "Baixa"
+
+msgid "Downvote"
+msgstr "Vot negatiu"
+
+msgid "Edit"
+msgstr "Edita"
+
+msgid "Edit List"
+msgstr "Edita la llista"
+
+msgid "Education"
+msgstr "Educació"
+
+msgid "Email Support"
+msgstr "Correu de suport"
+
+msgid "Entertainment"
+msgstr "Entreteniment"
+
+msgid "Essential Apps"
+msgstr "Aplicacions essencials"
+
+msgid "FAQ"
+msgstr "FAQ (Preguntes freqüents)"
+
+msgid "File Size:"
+msgstr "Mida del fitxer:"
+
+msgid "Filters"
+msgstr "Filtres"
+
+msgid "Finance"
+msgstr "Finances"
+
+msgid "Find"
+msgstr "Cerca"
+
+msgid "Find an app that has not yet been fetched from the official appstore."
+msgstr ""
+"Cerca una aplicació que encara no s'hagi recuperat des de la botiga oficial."
+
+msgid "Food & Drink"
+msgstr "Menjar i beguda"
+
+msgid "For version:"
+msgstr "Per la versió:"
+
+msgid "Found the requested app"
+msgstr "S'ha trobat l'aplicació demanada"
+
+msgid "Framework:"
+msgstr "Framework:"
+
+msgid "Free"
+msgstr "Lliure"
+
+msgid "Games"
+msgstr "Jocs"
+
+msgid "Get a QR scanner for your Ubuntu Touch device"
+msgstr "Aconseguiu un scanner QR pel vostre dispositiu Ubuntu Touch"
+
+msgid "Go there now"
+msgstr "Ves-hi ara"
+
+msgid "Google Play Link"
+msgstr "Enllaç de Google Play"
+
+msgid "Google Play link is not a valid url"
+msgstr "L'enllaç de Google Play no és una URL vàlida"
+
+msgid "Graphics"
+msgstr "Gràfics"
+
+msgid "Grid"
+msgstr "Graella"
+
+msgid "Health & Fitness"
+msgstr "Salut i benestar"
+
+msgid "Heart Rating"
+msgstr "Valoració de cors"
+
+msgid ""
+"Heart ratings are calculated from the star rating where a 5 star review is 1 "
+"heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts, and 1 star = -1 hearts."
+msgstr ""
+"La valoració de cors es calcula des de la valoració d'estrelles on una "
+"ressenya de 5 estrelles equival a 1 punt de cors, 4 estrelles = 0.5 cors, 3 "
+"estrelles = 0 cors, 2 estrelles = -0.5 cors, i 1 estrella = -1 cor."
+
+msgid "Help this wish get more votes!"
+msgstr "Ajudeu aquest desig a obtenir més vots!"
+
+msgid "Help translate!"
+msgstr "Ajudeu a traduïr!"
+
+msgid "Highest Heart Rating"
+msgstr "Màxima valoració de Cors"
+
+msgid "Highest Star Rating"
+msgstr "Màxima valoració de Estrelles"
+
+msgid "How can I help improve this site?"
+msgstr "Com puc ajudar a millorar aquest lloc?"
+
+msgid "How do I install apps?"
+msgstr "Com instal·lo aplicacions?"
+
+msgid "How is the popularity determined?"
+msgstr "Com es determina la popularitat?"
+
+msgid "How much would you be willing pay for this app?"
+msgstr "Quan estarieu disposats a pagar per aquesta aplicació?"
+
+msgid "I just published my app, why don't I see it?"
+msgstr "Acabo de plublicar la meva aplicació, perquè no la puc veure?"
+
+msgid "I'm wishing for..."
+msgstr "Desitjo que..."
+
+msgid "I'm wishing for: "
+msgstr "Desitjo que: "
+
+msgid "Idea Summary"
+msgstr "Resum de la idea"
+
+msgid "If you want to contribute code visit the GitHub repo."
+msgstr "Si voleu contribuïr al codi visiteu el repositori de GitHub."
+
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr "Si voleu ajudar amb la traducció visiteu el projecte de Launchpad."
+
+msgid ""
+"If you want to submit bugs or feature requests visit the GitHub issues page."
+msgstr ""
+"Si voleu enviar errors o peticions de millora visiteu la pàgina "
+"d'incidències de GitHub."
+
+msgid "If you would like to contact the author, visit his website."
+msgstr "Si voleu contactar amb l'autro, visiteu la seva plana web."
+
+msgid ""
+"If you would like to contribute monetarily, there are multiple options for "
+"donating."
+msgstr ""
+"Si voleu contribuir econòmicament, hi ha múltiples opcions per donar."
+
+msgid "Info"
+msgstr "Informació"
+
+msgid "Install"
+msgstr "Instal·la"
+
+msgid "Is this an existing app?"
+msgstr "És una aplicació existent?"
+
+msgid "It is possible to have a negative heart rating."
+msgstr "Es pot tenir una valoració de cors negativa."
+
+msgid "Itunes Link"
+msgstr "Enllaç d'Itunes"
+
+msgid "Language"
+msgstr "Llengua"
+
+msgid "Latest Update"
+msgstr "Darrera actualització"
+
+msgid "Least Popular (This Month)"
+msgstr "El menys popular (aquest mes)"
+
+msgid "License:"
+msgstr "Llicència:"
+
+msgid "Lifestyle"
+msgstr "Estil de vida"
+
+msgid "List"
+msgstr "Llista"
+
+msgid "List Name:"
+msgstr "Nom de la llista:"
+
+msgid "Load more reviews"
+msgstr "Carrega més opinions"
+
+msgid "Loading reviews..."
+msgstr "S'estan carregant les opinions..."
+
+msgid "Log In"
+msgstr "Entra"
+
+msgid "Log Out"
+msgstr "Surt"
+
+msgid "Log in via Ubuntu"
+msgstr "Accediu via Ubuntu"
+
+msgid "Login to make a wish"
+msgstr "Inicieu la sessió per fer un desig"
+
+msgid "Lowest Heart Rating"
+msgstr "Valoració mínima de Cors"
+
+msgid "Lowest Star Rating"
+msgstr "Valoració mínima de Estrelles"
+
+msgid "Make a wish"
+msgstr "Demaneu un desig"
+
+msgid "Media & Video"
+msgstr "Multimèdia i vídeo"
+
+msgid "Medical"
+msgstr "Medicina"
+
+msgid "Missing an app?"
+msgstr "Trobeu a faltar una aplicació?"
+
+msgid "Monthly Popularity"
+msgstr "Popularitat mensual"
+
+msgid "More Apps by:"
+msgstr "Més aplicacions de:"
+
+msgid "More Info"
+msgstr "Més informació"
+
+msgid "Most Expensive (USD)"
+msgstr "El més car (USD)"
+
+msgid "Most Popular (This Month)"
+msgstr "El més popular (aquest mes)"
+
+msgid "Most Relevant"
+msgstr "El més pertinent"
+
+msgid "Music & Audio"
+msgstr "Música i àudio"
+
+msgid "My Lists"
+msgstr "Les meves llistes"
+
+msgid "New Apps"
+msgstr "Noves aplicacions"
+
+msgid "New List"
+msgstr "Llista nova"
+
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
+msgstr ""
+"Les noves aplicacions s'obtenen de la botiga oficial cada hora, podeu "
+"esperar fins que s'obtenen les noves aplicacions o usar el formulari de "
+"peticions per demanar que es trobin abans."
+
+msgid "Newest"
+msgstr "Els més recents"
+
+msgid "News & Magazines"
+msgstr "Notícies i revistes"
+
+msgid "Next App:"
+msgstr "Aplicació següent:"
+
+msgid "No"
+msgstr "No"
+
+msgid "No apps found, try searching again."
+msgstr "No s'han trobat aplicacions, intenteu cercar de nou."
+
+msgid "No lists, create one!"
+msgstr "No hi ha llistes, creeu-na una!"
+
+msgid "No recent changes"
+msgstr "No hi ha canvis recents"
+
+msgid "No reviews yet!"
+msgstr "Encara no hi ha opinions!"
+
+msgid "No wishes found, try searching again."
+msgstr "No s'han trobat desitjos, intenteu cercar de nou."
+
+msgid "Oldest"
+msgstr "Més antic"
+
+msgid "Oldest Update"
+msgstr "Actualització més antiga"
+
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr ""
+"De mitja els votants estarien disposats a pagar %d USD per aquesta aplicació."
+
+msgid "Open Source"
+msgstr "Codi obert"
+
+msgid "Other Link"
+msgstr "Un altre enllaç"
+
+msgid "Other link is not a valid url"
+msgstr "L'altre enllaç no és una URL vàlida"
+
+msgid "Personalisation"
+msgstr "Personalització"
+
+msgid "Please login to send via Caxton"
+msgstr "Si us plau, inicieu sessió per enviar via Caxton"
+
+msgid "Please specify a name or idea for your wish"
+msgstr "Si us plau, especifiqueu un nom o idea pel vostre desig"
+
+msgid ""
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
+"during the current month."
+msgstr ""
+"La popularitat es basa en el nombre d'opinions amb 4 i 5 estrelles que s'han "
+"otorgat a una aplicació durant el mes actual."
+
+msgid "Previous App:"
+msgstr "Aplicació anterior:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr "El preu ha d'esser entre 0 i 20 USD"
+
+msgid "Productivity"
+msgstr "Productivitat"
+
+msgid "Proprietary"
+msgstr "Propietari"
+
+msgid "QR Code"
+msgstr "Codi QR"
+
+msgid "QR Code:"
+msgstr "Codi QR:"
+
+msgid "Reference"
+msgstr "Referència"
+
+msgid "Remove this app from your list"
+msgstr "Elimineu aquesta aplicació de la vostra llista"
+
+msgid "Save"
+msgstr "Desa"
+
+msgid "Science & Engineering"
+msgstr "Ciència i enginyeria"
+
+msgid "Scope"
+msgstr "Àmbit"
+
+msgid "Scopes"
+msgstr "Àmbits"
+
+msgid "Screenshots"
+msgstr "Captures de pantalla"
+
+msgid "Search for a wish:"
+msgstr "Cerqueu un desig:"
+
+msgid "Send via Caxton"
+msgstr "Envia via Caxton"
+
+msgid "Sent via Caxton"
+msgstr "S'ha enviat via Caxton"
+
+msgid "Settings"
+msgstr "Configuració"
+
+msgid "Share on Facebook"
+msgstr "Comparteix a Facebook"
+
+msgid "Share on Google+"
+msgstr "Comparteix a Google+"
+
+msgid "Share on Reddit"
+msgstr "Comparteix a Reddit"
+
+msgid "Share on Twitter"
+msgstr "Comparteix a Twitter"
+
+msgid "Shopping"
+msgstr "Compres"
+
+msgid "Similar Apps"
+msgstr "Aplicacions semblants"
+
+msgid "Snappy App"
+msgstr "Aplicació Snappy"
+
+msgid "Snappy Apps"
+msgstr "Aplicacions Snappy"
+
+msgid "Social Networking"
+msgstr "Xarxes socials"
+
+msgid "Sort Apps By:"
+msgstr "Ordena les aplicacions per:"
+
+msgid "Sort By:"
+msgstr "Ordena per:"
+
+msgid "Sports"
+msgstr "Esports"
+
+msgid "Star Rating"
+msgstr "Valoració d'estrelles"
+
+msgid "Submit"
+msgstr "Envia"
+
+msgid "Submitted by"
+msgstr "Tramès per"
+
+msgid "Support"
+msgstr "Suport"
+
+msgid "Support:"
+msgstr "Suport:"
+
+msgid "Terms:"
+msgstr "Termes:"
+
+msgid "Thank you for your vote!"
+msgstr "Gràcies pel vostre vot!"
+
+msgid "Thank you!"
+msgstr "Gràcies!"
+
+msgid ""
+"The heart rating is similar to the star rating, but it rewards apps for "
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
+msgstr ""
+"La valoració de cors és semblant a la valoració d'estrelles però premia les "
+"aplicacions per tenir més crítiques positives."
+
+msgid ""
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
+msgstr ""
+"La valoració d'estrelles és la mitja bayesiana de les valoracions que un "
+"usuari dóna a una aplicació quan deixa una ressenya. La mitja bayesiana "
+"permet que les aplicacions amb més ressenyes tinguin millor valoració que "
+"les aplicacions amb menys ressenyes. La valoració d'estrelles va d'1 a 5, on "
+"0 significa que encara no hi ha cap ressenya."
+
+msgid "This app is on these lists:"
+msgstr "Aquesta aplicació es troba dins aquestes llistes:"
+
+msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgstr ""
+"Això és un visualitzador d'aplicacions no oficial per a Ubuntu Touch."
+
+msgid "This list is empty!"
+msgstr "Aquesta llista és buida!"
+
+msgid ""
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr ""
+"Aquest lloc és un navegador d'aplicacions per a aplicacions d'Ubuntu Touch. "
+"Totes les dades venen d'una APA accessible públicament. Aquest lloc és "
+"mantingut per Brian Doublass i no està aprovat per ni afiliat amb Ubuntu o "
+"Canonical. Ubuntu i Canonical són marques registrades de Canonical Ltd."
+
+msgid "Title A-Z"
+msgstr "Títol A-Z"
+
+msgid "Title Z-A"
+msgstr "Títol Z-A"
+
+msgid ""
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
+"taken to the official appstore on your device where you can install the app."
+msgstr ""
+"Per a instal·lar una aplicació visiteu aquest lloc amb el vostre dispositiu "
+"d'Ubuntu Touch. Cerqueu l'aplicació que voleu instal·lar i cliqueu al botó "
+"\"Instal·la\". Llavors anireu a la botiga oficial del vostre dispositiu on "
+"podreu instal·lar l'aplicació."
+
+msgid ""
+"To report a problem or request a new feature visit the issues page for this "
+"site on GitHub."
+msgstr ""
+"Per informar d'un problema o demanar una nova funció visiteu la pàgina "
+"d'incidències d'aquest lloc a GitHub."
+
+msgid "Top Apps"
+msgstr "Les millors aplicacions"
+
+msgid "Total Reviews"
+msgstr "Ressenyes totals"
+
+msgid "Travel & Local"
+msgstr "Viatges i regional"
+
+msgid "Type:"
+msgstr "Tipus:"
+
+msgid "Universal Accesss/Accessibility"
+msgstr "Accés universal/Accessibilitat"
+
+msgid "Updated Apps"
+msgstr "Aplicacions actualitzades"
+
+msgid "Updated:"
+msgstr "Actualitzat:"
+
+msgid "Upvote"
+msgstr "Vota positiu"
+
+msgid "User List:"
+msgstr "Llista d'usuaris:"
+
+msgid "User Reviews"
+msgstr "Ressenyes d'usuaris"
+
+msgid "Utilities"
+msgstr "Eines"
+
+msgid "Version:"
+msgstr "Versió:"
+
+msgid "View"
+msgstr "Visualització"
+
+msgid "Vote"
+msgstr "Vota"
+
+msgid "Weather"
+msgstr "El temps"
+
+msgid "Web App"
+msgstr "Aplicacio web"
+
+msgid "Web Apps"
+msgstr "Aplicacions web"
+
+msgid "Website:"
+msgstr "Lloc web:"
+
+msgid "Welcome"
+msgstr "Benvingut"
+
+msgid "Welcome to uApp Explorer!"
+msgstr "Benvingut a l'uApp Explorer!"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr "Que us agradaria veure a l'Ubuntu Touch?"
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr "Quines aplicacions voldrieu veure a l'Ubuntu Touch?"
+
+msgid "What do I do if I find copyright or trademark infringing content?"
+msgstr ""
+"Que he de fer si trobo infraccions de contingut amb copyright o marques "
+"registrades?"
+
+msgid "What is the heart rating?"
+msgstr "Que és la valoració de cors?"
+
+msgid "What is the star rating?"
+msgstr "Que és la valoració d'estrelles?"
+
+msgid "What is this site?"
+msgstr "Que és aquest lloc?"
+
+msgid "Where can I report a problem or request a new feature?"
+msgstr "On puc informar d'un problema o demanar una nova funcionalitat?"
+
+msgid ""
+"Whether you choose to donate or not, I still appreciate you support. Thank "
+"you!"
+msgstr ""
+"Tan si trieu donar com no, aprecio igualment el vostre suport. Gràcies!"
+
+msgid "Why donate?"
+msgstr "Perquè donar?"
+
+msgid "Wishlist"
+msgstr "Llista de desitjos"
+
+msgid "Yes"
+msgstr "Si"
+
+msgid "You are already connected via Caxton!"
+msgstr "Ja esteu connectats via Caxton!"
+
+msgid ""
+"You do not have your account connected to Caxton, click to go to your "
+"settings"
+msgstr ""
+"El vostre compte no està connectat a Caxton, cliqueu per anar a la "
+"configuració."
+
+msgid "You must be logged in to vote"
+msgstr "Heu d'haver iniciat una sessió per poder votar"
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr ""
+"No s'ha pogut desar el vostre vot en aquest moment, si us plau intenteu-ho "
+"més tard."
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "aplicació"
+msgstr[1] "aplicacions"
+
+msgid "apps & scopes"
+msgstr "aplicacions i àmbits"
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "joc"
+msgstr[1] "jocs"
+
+msgid "iTunes Link"
+msgstr "Enllaç d'iTunes"
+
+msgid "iTunes link is not a valid url"
+msgstr "L'enllaç d'iTunes no és una URL vàlida"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "àmbit"
+msgstr[1] "àmbits"
+
+msgid "snappy apps"
+msgstr "aplicacions snappy"
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "aplicació web"
+msgstr[1] "aplicacions web"

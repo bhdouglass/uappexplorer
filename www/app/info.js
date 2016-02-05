@@ -292,10 +292,14 @@ module.exports = {
     }, {
       'name': 'Basque',
       'code': 'eu',
-      'untranslated': 2,
+      'untranslated': 0,
     }, {
       'name': 'Brazilian Portuguese',
       'code': 'pt_BR',
+      'untranslated': 0,
+    }, {
+      'name': 'Catalan',
+      'code': 'ca',
       'untranslated': 0,
     }, {
       'name': 'Chinese (Simplified)',
