@@ -66,7 +66,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var url = window.location.protocol + '://' + window.location.host + '/list/' + this.state.userList._id;
+    var url = window.location.protocol + '//' + window.location.host + '/list/' + this.state.userList._id;
     var loaded = (
       !this.state.loading &&
       this.state.userList &&

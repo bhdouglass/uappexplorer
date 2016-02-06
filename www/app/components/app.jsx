@@ -128,7 +128,7 @@ module.exports = React.createClass({
             if (!this.state.loading && this.state.app && this.state.app.name == this.props.params.name) {
               var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
               var share_cls = utils.strToColor(this.state.app.name, 'backgroundColor');
-              var url = window.location.protocol + '://' + window.location.host + '/app/' + this.state.app.name;
+              var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
               var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
               var author_query = {q: 'author:' + this.state.app.author};
 

@@ -62,7 +62,7 @@ module.exports = React.createClass({
     }
 
     var share_title = i18n.t("I'm wishing for: ") + this.state.wish.name;
-    var url = window.location.protocol + '://' + window.location.host + '/wishlist/' + this.state.wish.id;
+    var url = window.location.protocol + '//' + window.location.host + '/wishlist/' + this.state.wish.id;
 
     var pretitle = i18n.t("I'm wishing for...");
     if (this.state.wish.voted) {
