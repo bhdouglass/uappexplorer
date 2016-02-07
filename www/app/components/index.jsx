@@ -117,6 +117,19 @@ module.exports = React.createClass({
           )}
         </div>
 
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <h1>
+              <Link to="/wishlist">{i18n.t('App Wishlist')}</Link>
+            </h1>
+            <h3>
+              <Link to="/wishlist">{i18n.t('What apps do you wish to see on Ubuntu Touch?')}</Link>
+            </h3>
+
+            <div className="separator"></div>
+          </div>
+        </div>
+
         <If value={this.state.info.loaded && this.state.info.essentials}>
           <div className="row">
             <div className="col-md-12 text-center">
