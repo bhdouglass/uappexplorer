@@ -83,10 +83,14 @@ module.exports = React.createClass({
 
     if (page != state.page || search != state.search) {
       this.setState({page: page, search: search, unsearch: search});
-      actions.getWishes(LIMIT, page * LIMIT, search);
+      actions.getWishes(LIMIT, page * LIMIT, search).then(function() {
+        window.scrollTo(0, 0);
+      });
     }
     else if (forceUpdate) {
-      actions.getWishes(LIMIT, state.page * LIMIT, search);
+      actions.getWishes(LIMIT, state.page * LIMIT, search).then(function() {
+        window.scrollTo(0, 0);
+      });
     }
   },
 

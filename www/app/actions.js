@@ -512,6 +512,8 @@ actions = {
 
     return api.getWish(id).then(function(data) {
       tree.set('wish', data);
+
+      return data;
     }).catch(function() {
       actions.createAlert(i18n.t('Could not find wish'), 'error');
       tree.set('wish', null);
