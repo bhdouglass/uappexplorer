@@ -114,7 +114,6 @@ function map(pkg, data) {
     pkg.type = 'snappy';
   }
 
-  var core = false;
   _.forEach(data.framework, function(framework) {
     if (framework.indexOf('ubuntu-core-') === 0) {
       pkg.type = 'snappy';
