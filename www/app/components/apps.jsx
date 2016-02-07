@@ -163,6 +163,10 @@ module.exports = React.createClass({
       this.props.location.query.category = event.target.value;
     }
 
+    if (event.target.value != this.state.category && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
     this.history.pushState(null, '/apps', this.props.location.query);
   },
 
@@ -172,6 +176,10 @@ module.exports = React.createClass({
     }
     else {
       this.props.location.query.type = event.target.value;
+    }
+
+    if (event.target.value != this.state.type && this.state.page) {
+      delete this.props.location.query.page;
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
@@ -185,6 +193,10 @@ module.exports = React.createClass({
       this.props.location.query.sort = event.target.value;
     }
 
+    if (event.target.value != this.state.sort && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
     this.history.pushState(null, '/apps', this.props.location.query);
   },
 
@@ -194,6 +206,10 @@ module.exports = React.createClass({
     }
     else {
       this.props.location.query.license = event.target.value;
+    }
+
+    if (event.target.value != this.state.license && this.state.page) {
+      delete this.props.location.query.page;
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
@@ -207,6 +223,10 @@ module.exports = React.createClass({
       this.props.location.query.arch = event.target.value;
     }
 
+    if (event.target.value != this.state.arch && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
     this.history.pushState(null, '/apps', this.props.location.query);
   },
 
@@ -217,6 +237,10 @@ module.exports = React.createClass({
     }
     else {
       this.props.location.query.framework = value;
+    }
+
+    if (value != this.state.framework && this.state.page) {
+      delete this.props.location.query.page;
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
