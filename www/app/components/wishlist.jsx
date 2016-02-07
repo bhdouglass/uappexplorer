@@ -63,6 +63,10 @@ module.exports = React.createClass({
       delete this.props.location.query.q;
     }
 
+    if (event.target.value != this.state.search && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
     this.history.pushState(null, '/wishlist', this.props.location.query);
   },
 
