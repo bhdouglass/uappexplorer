@@ -115,7 +115,12 @@ function fallbackType(pkg, callback) {
 function parseClickPackage(pkg, callback) {
   logger.debug('Going to parse ' + pkg.name);
 
-  if (!oauth || !token) {
+  if (pkg.type == 'snappy') {
+    //Skip parsing snappy packages as the new ones are a squashfs file rather than an archive
+    pkg.types = [pkg.type];
+    callback();
+  }
+  else if (!oauth || !token) {
     fetchOAuth(function(err) {
       if (err) {
         callback(err);

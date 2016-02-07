@@ -110,23 +110,20 @@ function map(pkg, data) {
       pkg.type = 'webapp';
     }
   }
-  else if (['oem', 'os', 'kernel', 'gadget'].indexOf(pkg.type) >= 0) {
+  else if (['oem', 'os', 'kernel', 'gadget', 'framework'].indexOf(pkg.type) >= 0) {
     pkg.type = 'snappy';
   }
 
   var core = false;
   _.forEach(data.framework, function(framework) {
     if (framework.indexOf('ubuntu-core-') === 0) {
-      core = true;
+      pkg.type = 'snappy';
+
       return false;
     }
   });
 
-  if (core) {
-    pkg.type = 'snappy';
-  }
-
-  if (pkg.types.length === 0) {
+  if (pkg.types.length === 0 || pkg.type == 'snappy') {
     pkg.types = [pkg.type];
   }
 
