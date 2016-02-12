@@ -122,6 +122,16 @@ function map(pkg, data) {
     }
   });
 
+  if (data.release && data.release.length) {
+    _.forEach(data.release, function(release) {
+      if (release == 'rolling-core') {
+        pkg.type = 'snappy';
+
+        return false;
+      }
+    });
+  }
+
   if (pkg.types.length === 0 || pkg.type == 'snappy') {
     pkg.types = [pkg.type];
   }
