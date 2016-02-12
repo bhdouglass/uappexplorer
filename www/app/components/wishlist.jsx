@@ -73,7 +73,7 @@ module.exports = React.createClass({
   getWishes: function(props, state, forceUpdate) {
     var page = 0;
     if (props.location.query && props.location.query.page) {
-      page = props.location.query.page;
+      page = parseInt(props.location.query.page);
     }
 
     var search = '';
