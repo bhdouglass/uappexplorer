@@ -48,7 +48,7 @@ module.exports = React.createClass({
     if (cookieEnabled) {
       var show = cookie.get('disclaimer');
       if (!show) {
-        this.open('disclaimer');
+        this.open();
 
         var now = new Date();
         cookie.set('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
@@ -71,13 +71,8 @@ module.exports = React.createClass({
     }
   },
 
-  open: function(modal) {
-    if (modal == 'faq') {
-      actions.openModal('faq');
-    }
-    else {
-      this.setState({disclaimer: true});
-    }
+  open: function() {
+    this.setState({disclaimer: true});
   },
 
   close: function() {
@@ -96,7 +91,7 @@ module.exports = React.createClass({
         <div className="container main">
           <div className="row">
             <div className="col-sm-12 text-center disclaimer">
-              <a onClick={this.open.bind(this, 'faq')} className="clickable">
+              <Link to="/faq">
                 <If value={this.state.textDisclaimer}>
                   {i18n.t('This site is an unofficial app browser for Ubuntu Touch apps. All data for the apps comes from a publicly accessible api. This site is maintained by Brian Douglass and is not endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd.')}
                 </If>
@@ -104,7 +99,7 @@ module.exports = React.createClass({
                 <If value={!this.state.textDisclaimer}>
                   {i18n.t('This is an unofficial app viewer for Ubuntu Touch apps.')}
                 </If>
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -10,7 +10,6 @@ var i18n = require('i18next-client');
 
 var actions = require('../../actions');
 var info = require('../../info');
-var FAQ = require('../modals/faq');
 var Donate = require('../modals/donate');
 var Login = require('../modals/login');
 var If = require('./if');
@@ -230,7 +229,7 @@ module.exports = React.createClass({
                 <a onClick={this.toggleSearch} className="clickable"><i className="fa fa-search fa-inverse"></i></a>
               </li>
               <li>
-                <a onClick={this.open.bind(this, 'faq')} className="clickable">{i18n.t('FAQ')}</a>
+                <Link to="/faq">{i18n.t('FAQ')}</Link>
               </li>
               <li>
                 <a onClick={this.open.bind(this, 'donate')} className="clickable">{i18n.t('Donate')}</a>
@@ -299,7 +298,6 @@ module.exports = React.createClass({
           </div>
         </div>
 
-        <FAQ show={this.state.modals.faq} onHide={this.close.bind(this, 'faq')} />
         <Donate show={this.state.modals.donate} onHide={this.close.bind(this, 'donate')} />
         <Login show={this.state.modals.login} onHide={this.close.bind(this, 'login')} />
       </nav>
