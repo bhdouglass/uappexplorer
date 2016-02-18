@@ -11,7 +11,6 @@ var i18n = require('i18next-client');
 var actions = require('../../actions');
 var info = require('../../info');
 var Donate = require('../modals/donate');
-var Login = require('../modals/login');
 var If = require('./if');
 
 module.exports = React.createClass({
@@ -178,9 +177,9 @@ module.exports = React.createClass({
             </If>
 
             <If value={!this.state.auth.loggedin}>
-              <a className="navbar-toggle clickable" onClick={this.open.bind(this, 'login')}>
+              <Link to="/login" className="navbar-toggle">
                 <i className="fa fa-user-plus fa-inverse"></i>
-              </a>
+              </Link>
             </If>
 
             <button type="button" className="navbar-toggle" onClick={this.toggleSearch}>
@@ -247,7 +246,7 @@ module.exports = React.createClass({
               </If>
 
               <If value={!this.state.auth.loggedin} element="li">
-                <a onClick={this.open.bind(this, 'login')} className="clickable hidden-xs">{i18n.t('Log In')}</a>
+                <Link to="/login" className="hidden-xs">{i18n.t('Log In')}</Link>
               </If>
 
               <li>
@@ -299,7 +298,6 @@ module.exports = React.createClass({
         </div>
 
         <Donate show={this.state.modals.donate} onHide={this.close.bind(this, 'donate')} />
-        <Login show={this.state.modals.login} onHide={this.close.bind(this, 'login')} />
       </nav>
     );
   }
