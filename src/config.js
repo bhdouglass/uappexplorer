@@ -28,13 +28,15 @@ var config = {
     //The ip address to bind the server to
     ip: process.env.OPENSHIFT_NODEJS_IP || process.env.NODEJS_IP || '0.0.0.0',
     //The port to bind the server to
-    port: process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || 8080,
+    port: process.env.OPENSHIFT_NODEJS_PORT || process.env.NODEJS_PORT || process.env.PORT || 8080,
     //Full domain name of the server
     host: process.env.NODEJS_HOST || 'http://local.uappexplorer.com:8080',
     //The location of the frontend files
     static: process.env.NODEJS_STATIC || '/../../www/dist',
     //Secret for the session cookie
     session_secret: process.env.SESSION_SECRET || 'uappexplorer',
+    //Limit the number of processes
+    process_limit: process.env.PROCESS_LIMIT || 0,
   },
   mongo: {
     //The uri (with username/password) for accessing a mongo database

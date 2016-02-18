@@ -12,7 +12,7 @@ var stylish = require('jshint-stylish');
 
 var paths = {
   back_js: ['gulpfile.js', 'src/**/*.js'],
-  back_extra: ['package.json', 'npm-shrinkwrap.json', 'src/**/*.json', '.openshift/**/*'],
+  back_extra: ['package.json', 'npm-shrinkwrap.json', 'src/**/*.json', '.openshift/**/*', 'Procfile'],
   front: 'www',
   front_dist: 'www/dist/**/*',
   po: 'po/**/*.po',
