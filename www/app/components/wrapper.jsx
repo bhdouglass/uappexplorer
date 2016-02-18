@@ -9,7 +9,6 @@ var actions = require('../actions');
 var tree = require('../state');
 var Nav = require('./helpers/nav');
 var Alerts = require('./helpers/alerts');
-var Disclaimer = require('./modals/disclaimer');
 var If = require('./helpers/if');
 
 module.exports = React.createClass({
@@ -24,7 +23,6 @@ module.exports = React.createClass({
 
   getInitialState: function() {
     return {
-      disclaimer: false,
       lng: null,
       textDisclaimer: false,
     };
@@ -38,25 +36,7 @@ module.exports = React.createClass({
       }
     });
 
-    //Inspired by http://stackoverflow.com/a/4603313
-    var cookieEnabled = (navigator.cookieEnabled) ? true : false;
-    if (navigator.cookieEnabled === undefined && !cookieEnabled) {
-      cookie.set('test', 'test');
-      cookieEnabled = (cookie.get('test') == 'test');
-    }
-
-    if (cookieEnabled) {
-      var show = cookie.get('disclaimer');
-      if (!show) {
-        this.open();
-
-        var now = new Date();
-        cookie.set('disclaimer', Math.floor(now.getTime() / 1000), {expires: 365});
-      }
-    }
-    else { //Cookies are disabled, don't continuously pop up the disclaimer
-      this.setState({textDisclaimer: this.props.location.pathname});
-    }
+    this.setState({textDisclaimer: this.props.location.pathname});
 
     var self = this;
     tree.select('lng').on('update', function() {
@@ -69,14 +49,6 @@ module.exports = React.createClass({
     if (nextState.textDisclaimer !== false && nextState.textDisclaimer != nextProps.location.pathname) {
       this.setState({textDisclaimer: false});
     }
-  },
-
-  open: function() {
-    this.setState({disclaimer: true});
-  },
-
-  close: function() {
-    this.setState({disclaimer: false});
   },
 
   render: function() {
@@ -94,10 +66,6 @@ module.exports = React.createClass({
               <Link to="/faq">
                 <If value={this.state.textDisclaimer}>
                   {i18n.t('This site is an unofficial app browser for Ubuntu Touch apps. All data for the apps comes from a publicly accessible api. This site is maintained by Brian Douglass and is not endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd.')}
-                </If>
-
-                <If value={!this.state.textDisclaimer}>
-                  {i18n.t('This is an unofficial app viewer for Ubuntu Touch apps.')}
                 </If>
               </Link>
             </div>
@@ -134,8 +102,6 @@ module.exports = React.createClass({
             </div>
           </div>
         </div>
-
-        <Disclaimer show={this.state.disclaimer} onHide={this.close} />
       </div>
     );
   }
