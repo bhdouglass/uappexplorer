@@ -297,12 +297,20 @@ a.list-group-item:focus {
   margin-right: 5px;
 }
 
-.qr-code {
-  margin: 10px;
+.qr-code-wrapper {
+  margin-top: 10px;
+
+  .qr-code {
+    margin: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   .row {
     margin-right: 0px !important;
+  }
+
+  .app .qr-code-wrapper {
+    margin-left: -50px;
   }
 }

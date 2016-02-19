@@ -5,7 +5,7 @@ var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');
 
 var actions = require('../../actions');
-var QR = require('../modals/qr');
+var QR = require('./qr');
 
 module.exports = React.createClass({
   displayName: 'Share',
@@ -37,11 +37,11 @@ module.exports = React.createClass({
     }
   },
 
-  open: function() {
-    this.setState({qr: true});
+  toggle: function() {
+    this.setState({qr: !this.state.qr});
   },
 
-  close: function() {
+  hide: function() {
     this.setState({qr: false});
   },
 
@@ -113,13 +113,15 @@ module.exports = React.createClass({
           </a>
         </div>
         <div className="col-sm-2 col-xs-4">
-          <a className="text-material-light-green qr-button clickable" title={i18n.t('QR Code')} onClick={this.open}>
+          <a className="text-material-light-green qr-button clickable" title={i18n.t('QR Code')} onClick={this.toggle}>
             <i className="fa fa-square fa-3x"></i>
             <i className="fa fa-qrcode fa-2x fa-inverse"></i>
           </a>
         </div>
 
-        <QR show={this.state.qr} onHide={this.close} value={this.props.url} title={this.props.title} />
+        <div className="clear-fix">
+          <QR show={this.state.qr} onHide={this.hide} value={this.props.url} />
+        </div>
       </div>
     );
   }

@@ -1,10 +1,11 @@
 var React = require('react');
-var Modal = require('react-bootstrap/lib/Modal');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var QRCode = require('qrcode.react');
 var i18n = require('i18next-client');
+
+var If = require('./if');
 
 module.exports = React.createClass({
   displayName: 'QR',
@@ -19,17 +20,12 @@ module.exports = React.createClass({
     show: React.PropTypes.bool.isRequired,
     onHide: React.PropTypes.func.isRequired,
     value: React.PropTypes.string.isRequired,
-    title: React.PropTypes.string.isRequired,
   },
 
   render: function() {
     return (
-      <Modal show={this.props.show} onHide={this.props.onHide}>
-        <Modal.Header closeButton>
-          <Modal.Title>{i18n.t('QR Code:')} {this.props.title}</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
+      <div className="qr-code-wrapper">
+        <If value={this.props.show}>
           <div className="text-center">
             <div className="qr-code">
               <QRCode value={this.props.value} size={256} />
@@ -40,12 +36,12 @@ module.exports = React.createClass({
               </Link>
             </div>
           </div>
-        </Modal.Body>
 
-        <Modal.Footer>
-          <a className="btn btn-info" onClick={this.props.onHide}>{i18n.t('Close')}</a>
-        </Modal.Footer>
-      </Modal>
+          <div className="pull-right">
+            <a className="btn btn-info" onClick={this.props.onHide}>{i18n.t('Close')}</a>
+          </div>
+        </If>
+      </div>
     );
   }
 });
