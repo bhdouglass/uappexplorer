@@ -1,6 +1,6 @@
 var db = require('../db/db');
 var config = require('../config');
-var rss = require('rss');
+var RSS = require('rss');
 var _ = require('lodash');
 
 var typeMap = {
@@ -31,7 +31,7 @@ function type(types) {
 }
 
 function generateNewFeed(callback) {
-  var feed = new rss({
+  var feed = new RSS({
     title:       'uApp Explorer New Apps',
     description: 'New apps in uApp Explorer',
     feed_url:    config.server.host + '/api/rss/new-apps.xml',
@@ -67,7 +67,7 @@ function generateNewFeed(callback) {
 }
 
 function generateNewFeed2(callback) {
-  var feed = new rss({
+  var feed = new RSS({
     title:       'uApp Explorer New Apps',
     description: 'New apps in uApp Explorer',
     feed_url:    config.server.host + '/api/rss/new-apps2.xml',
@@ -103,7 +103,7 @@ function generateNewFeed2(callback) {
 }
 
 function generateUpdatesFeed(callback) {
-  var feed = new rss({
+  var feed = new RSS({
     title:       'uApp Explorer Updated Apps',
     description: 'Updated apps in uApp Explorer',
     feed_url:    config.server.host + '/api/rss/updated-apps.xml',

@@ -101,6 +101,9 @@ module.exports = React.createClass({
   search: function(event) {
     if (event.target.value) {
       this.props.location.query.q = event.target.value;
+      if (!this.props.location.query.sort) {
+        this.props.location.query.sort = 'relevance';
+      }
     }
     else {
       delete this.props.location.query.q;
