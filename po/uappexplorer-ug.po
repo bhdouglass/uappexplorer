@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2015-12-23 15:24+0000\n"
-"Last-Translator: Sahran <Unknown>\n"
+"PO-Revision-Date: 2016-02-10 09:05+0000\n"
+"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-05 19:40+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-22 01:44+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: ug\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -328,7 +328,7 @@ msgid "Go there now"
 msgstr "قەيەرگە بارىمەن"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "گوگىل ئۇلىنىشى"
 
 msgid "Google Play link is not a valid url"
 msgstr ""
@@ -373,19 +373,19 @@ msgid "How is the popularity determined?"
 msgstr "ياقتۇرۇشچانلىقى قانداق جەزملىنىدۇ؟"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "بۇ ئەپ ئۈچۈن قانچىلىك ئىقسادى ياردەم بىرەلەيسىز؟"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "مەن يوللىغان ئەپلەر نېمە ئۈچۈن تەستىقلانمايدۇ(ياكى كۈرۈنمەيدۇ)"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "ئارزۇريۇم ..."
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "ئارزۇيۇم : "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "ئۇمۇمىي ئىدىيە"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -420,13 +420,13 @@ msgid "Install"
 msgstr "ئورنات"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "بۇ ھازىر بار ئەپمۇ؟"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "راسچىللىق بىلەن باھالانىغان"
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "iTunes ئۇلىنىشى"
 
 msgid "Language"
 msgstr "تىل"
@@ -465,7 +465,7 @@ msgid "Log in via Ubuntu"
 msgstr "ئۇبۇنتۇ ھېساباتىدا كىر"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "تىزىملىتىپ ئارزۇيىڭزنى يوللاڭ"
 
 msgid "Lowest Heart Rating"
 msgstr "ئەڭ تۈۋەن يۈرەك دەرىجسى"
@@ -492,7 +492,7 @@ msgid "More Apps by:"
 msgstr "تېخىمۇ كۆپ ئەپلەر:"
 
 msgid "More Info"
-msgstr ""
+msgstr "تېخىمۇ كۆپ ئۇچۇرلار"
 
 msgid "Most Expensive (USD)"
 msgstr "ئەڭ قىممىتى (دوللار)"
@@ -546,7 +546,7 @@ msgid "No reviews yet!"
 msgstr "بۇ ئەپكە باھا يېزىلمىغان"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "ئارزۇيىڭزدىكى ئۇچۇر تېپىلمىدى قايتىدىن سىناپ كۈرۈڭ"
 
 msgid "Oldest"
 msgstr "ئەڭ كونا"
@@ -561,7 +561,7 @@ msgid "Open Source"
 msgstr "ئوچۇق مەنبە"
 
 msgid "Other Link"
-msgstr ""
+msgstr "باشقا ئۇلىنىشلار"
 
 msgid "Other link is not a valid url"
 msgstr ""
@@ -620,7 +620,7 @@ msgid "Screenshots"
 msgstr "ئېكران كۆرۈنۈشى"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "ئارزۇيىڭزدىكى تۈرنى ئىزدەڭ:"
 
 msgid "Send via Caxton"
 msgstr "Caxton دىن تەستىقلىنىپ يوللاش"
@@ -671,10 +671,10 @@ msgid "Star Rating"
 msgstr "يۇلتۇرزدەرىجىسى"
 
 msgid "Submit"
-msgstr ""
+msgstr "يوللاش"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "يوللىغۇچى"
 
 msgid "Support"
 msgstr "ئىجاتكار بىلەن ئالاقىلىشىڭ"
@@ -686,7 +686,7 @@ msgid "Terms:"
 msgstr "كېلىشىم :"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "بېلەت تاشلىغىنىڭزغا كۆپ رەھمەت!"
 
 msgid "Thank you!"
 msgstr "تەشەككۈر!"
@@ -764,7 +764,7 @@ msgid "Updated:"
 msgstr "يېڭىلانغان:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "قوللىماق"
 
 msgid "User List:"
 msgstr "ئىشلەتكۈچى تىزىمى"
@@ -782,7 +782,7 @@ msgid "View"
 msgstr "تەكشۈرۈش"
 
 msgid "Vote"
-msgstr ""
+msgstr "بېلەت تاشلاش"
 
 msgid "Weather"
 msgstr "ھاۋارايى"
@@ -803,10 +803,10 @@ msgid "Welcome to uApp Explorer!"
 msgstr "ئوبۇنتۇ چەكمە ئۈسكىنلىرى uApp Explorer ئەپ بازىرىغا خۇش كەپسىز"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "ئۇبۇنتۇ چەكمە ئۈسكىنىلىرىدە قانداق ئەپنىڭ بۇلۇشنى ئارزۇ قىلىسىز؟"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "ئۇبۇنتۇ چەكمە ئۈسكىنىلىرىدە قانداق ئەپلەرنىڭ بۇلۇشىنى ئارزۇ قىلىسىز؟"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -836,7 +836,7 @@ msgid "Why donate?"
 msgstr "نېمە ئۈچۈن ئىئانە قىلىمىز؟"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "تەلەپ"
 
 msgid "Yes"
 msgstr "ھەئە"
@@ -850,10 +850,10 @@ msgid ""
 msgstr "سىز ھېساباتىڭىزنى Caxton غا باغلىمىغان، چەكسىڭىز تەڭشەككە يۆتكىلىدۇ"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "تىزىملىتىپ كىرگەندىن كېيىن بېلەت تاشلاشقا قاتنىشالايسىز"
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
+msgstr "بۇ قېتىمقى بىلەت تاشلاش ساقلانمىدى سەل تۇرۇپ سىناپ كۈرۈڭ"
 
 msgid "apps"
 msgid_plural "apps"
@@ -867,7 +867,7 @@ msgid_plural "games"
 msgstr[0] "ئويۇنلار"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "iTunes ئۇلىنىشى"
 
 msgid "iTunes link is not a valid url"
 msgstr ""

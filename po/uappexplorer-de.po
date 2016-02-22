@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2016-01-14 21:12+0000\n"
-"Last-Translator: Torsten Franz <Unknown>\n"
+"PO-Revision-Date: 2016-02-10 20:04+0000\n"
+"Last-Translator: tobson <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-05 19:40+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-22 01:44+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: de\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -40,7 +40,7 @@ msgid "- Choose a list -"
 msgstr "- Liste auswählen -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Ein Wunsch mit den selben Namen existiert bereits"
 
 msgid "Add Apps:"
 msgstr "Apps hinzufügen:"
@@ -64,10 +64,10 @@ msgid "All Types"
 msgstr "Alle Typen"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Amazon-Verweis"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "Der Amazon-Verweis ist keine gültige Url"
 
 msgid "Any Architecture"
 msgstr "Jede Architektur"
@@ -88,13 +88,13 @@ msgid "App"
 msgstr "App"
 
 msgid "App Name"
-msgstr ""
+msgstr "Anwendungsname"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Anwendungsname (Beispiel: com.ubuntu.developer.example)"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "Anwendungs-Wunschliste"
 
 msgid "Apps"
 msgstr "Apps"
@@ -138,7 +138,7 @@ msgid "Browse Web Apps"
 msgstr "Web Apps durchsuchen"
 
 msgid "Business"
-msgstr ""
+msgstr "Geschäftliches"
 
 msgid "Buy the Webapp"
 msgstr "Diese Web App kaufen"
@@ -211,7 +211,7 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "Konnte diese Liste nicht finden, vielleicht existiert sie nicht mehr"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "Kann den Wunsch nicht finden"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr "Liste konnte nicht geladen werden, klicken zum Wiederholen"
@@ -249,7 +249,7 @@ msgid "Developer Tools"
 msgstr "Entwicklertools"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "Entwickler/Unternehmen"
 
 msgid "Donate"
 msgstr "Spenden"
@@ -282,7 +282,7 @@ msgid "Download"
 msgstr "Herunterladen"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Negativ bewerten"
 
 msgid "Edit"
 msgstr "Bearbeiten"
@@ -345,10 +345,10 @@ msgid "Go there now"
 msgstr "Zu App wechseln"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Google Play Verweis"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "Der Google Play Verweis ist keine gültige Url"
 
 msgid "Graphics"
 msgstr "Bildbearbeitung"
@@ -393,19 +393,19 @@ msgid "How is the popularity determined?"
 msgstr "Wie wird die Beliebtheit bestimmt?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "Wie viel würden Sie für diese Anwendung bezahlen?"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "Ich habe gerade meine App veröffentlicht, warum sehe ich sie nicht?"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "Ich bin für den Wunsch …"
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "Ich bin für den Wunsch: "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "Vorschlag Zusammenfassung"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Wenn sie am Code mitwirken wollen, besuchen Sie das GitHub repo."
@@ -443,7 +443,7 @@ msgid "It is possible to have a negative heart rating."
 msgstr "Es ist möglich ein negatives Herz-Rating zu haben."
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "Itunes Verweis"
 
 msgid "Language"
 msgstr "Sprache"
@@ -482,7 +482,7 @@ msgid "Log in via Ubuntu"
 msgstr "Einloggen über Ubuntu"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Anmelden um einen Wunsch vorzuschlagen"
 
 msgid "Lowest Heart Rating"
 msgstr "niedrigstes Herz-Rating"
@@ -491,7 +491,7 @@ msgid "Lowest Star Rating"
 msgstr "Niedrigstes Stern Rating"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Wünschen Sie sich was"
 
 msgid "Media & Video"
 msgstr "Media & Video"
@@ -509,7 +509,7 @@ msgid "More Apps by:"
 msgstr "Weitere Apps von:"
 
 msgid "More Info"
-msgstr ""
+msgstr "Weitere Informationen"
 
 msgid "Most Expensive (USD)"
 msgstr "Teuerste (USD)"
@@ -518,7 +518,7 @@ msgid "Most Popular (This Month)"
 msgstr "Beliebteste (diesen Monat)"
 
 msgid "Most Relevant"
-msgstr ""
+msgstr "Höchste Relevanz"
 
 msgid "Music & Audio"
 msgstr "Musik & Audio"
@@ -548,7 +548,7 @@ msgid "Next App:"
 msgstr "Nächste App:"
 
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 msgid "No apps found, try searching again."
 msgstr "Keine Apps gefunden, versuche es erneut."
@@ -563,7 +563,7 @@ msgid "No reviews yet!"
 msgstr "Bisher keine Bewertungen!"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "Keine Wünsche gefunden, versuchen Sie es erneut."
 
 msgid "Oldest"
 msgstr "Älteste"
@@ -573,15 +573,16 @@ msgstr "Ältestes Update"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
 msgstr ""
+"Durchschnittlich sind Abstimmende bereit %d USD für diese App zu zahlen."
 
 msgid "Open Source"
 msgstr "Open Source"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Anderer Verweis"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "Anderer Verweis ist keine gültige Url"
 
 msgid "Personalisation"
 msgstr "Personalisierung"
@@ -590,7 +591,7 @@ msgid "Please login to send via Caxton"
 msgstr "Bitte einloggen um über Caxton zu senden"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Bitte geben Sie einen Namen oder eine Idee für Ihren Wunsch an."
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -603,13 +604,13 @@ msgid "Previous App:"
 msgstr "Vorherige App:"
 
 msgid "Price must be between 0 and 20 USD"
-msgstr ""
+msgstr "Der Preis muss zwischen 0 und 20 USD sein"
 
 msgid "Productivity"
 msgstr "Produktivität"
 
 msgid "Proprietary"
-msgstr ""
+msgstr "Proprietär"
 
 msgid "QR Code"
 msgstr "QR Code"
@@ -639,7 +640,7 @@ msgid "Screenshots"
 msgstr "Screenshots"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Suche nach einem Wunsch:"
 
 msgid "Send via Caxton"
 msgstr "Senden über Caxton"
@@ -690,7 +691,7 @@ msgid "Star Rating"
 msgstr "Stern Rating"
 
 msgid "Submit"
-msgstr ""
+msgstr "Absenden"
 
 msgid "Submitted by"
 msgstr "Eingereicht von"
@@ -705,7 +706,7 @@ msgid "Terms:"
 msgstr "Bedingungen:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Danke für Ihre Stimme!"
 
 msgid "Thank you!"
 msgstr "Danke!"
@@ -715,6 +716,9 @@ msgid ""
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
+"Das Herz Rating ähnelt dem Stern Rating, aber es honoriert Apps mit mehr "
+"guten Bewertungen. Eine App mit vielen 5 Sterne Bewertungen wird ein höheres "
+"Herz Rating haben, als eine App mit nur wenigen 5 Sterne Bewertungen."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -724,6 +728,13 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
+"Das Stern Rating stellt den Bayesschen Wert der Sterne Bewertungen dar, die "
+"die Anwender vergeben, wenn sie die App bewerten. Der Bayesschen Wert "
+"erlaubt es, dass Apps mit mehr Bewertungen höher bewertet werden, als Apps "
+"mit wenigen Bewertungen. Das Sterne Rating kann zwischen 1 und 5 liegen, "
+"wobei 0 bedeutet, dass es bisher noch keine Bewertung gibt. Für mehr "
+"Informationen bezüglich der Berechnung des Bayesian Wertes lese diesen "
+"Artikel."
 
 msgid "This app is on these lists:"
 msgstr "Diese App ist auf folgenden Listen:"
@@ -740,6 +751,11 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
+"Diese Seite ist ein inoffizieller App Navigator für Ubuntu Touch Apps. Alle "
+"Daten der Apps werden durch eine öffentlich zugängliche API bereitgestellt. "
+"Diese Seite wird unterhalten von Brian Douglass und wird nicht unterstützt "
+"und ist nicht zugehörig zu Ubuntu oder Canonical. Ubuntu und Canonical sind "
+"eingetragene Marken der Canonical Ltd."
 
 msgid "Title A-Z"
 msgstr "Title A-Z"
@@ -777,7 +793,7 @@ msgid "Type:"
 msgstr "Typ:"
 
 msgid "Universal Accesss/Accessibility"
-msgstr ""
+msgstr "Allgemeine Zugänglichkeit/ Erreichbarkeit"
 
 msgid "Updated Apps"
 msgstr "Aktualisierte Apps"
@@ -786,7 +802,7 @@ msgid "Updated:"
 msgstr "Aktualisiert:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Positiv bewerten"
 
 msgid "User List:"
 msgstr "Anwender Liste:"
@@ -804,7 +820,7 @@ msgid "View"
 msgstr "Anzeigen"
 
 msgid "Vote"
-msgstr ""
+msgstr "Abstimmen"
 
 msgid "Weather"
 msgstr "Wetter"
@@ -825,10 +841,10 @@ msgid "Welcome to uApp Explorer!"
 msgstr "Willkommen bei uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Welche Anwendung möchten Sie auf den Ubuntu Touch sehen?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Welche Anwendungen möchten Sie auf den Ubuntu Touch sehen?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -854,7 +870,7 @@ msgid "Why donate?"
 msgstr "Warum spenden?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Wunschliste"
 
 msgid "Yes"
 msgstr "Ja"
@@ -866,12 +882,16 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
+"Sie haben kein Konto mit Caxton verbunden. Klicken Sie, um zu Ihren "
+"Einstellungen zu gelangen."
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "Um abzustimmen müssen sie eingeloggt sein"
 
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
+"Ihre Abstimmung kann im Moment nicht gespeichert werden. Bitte versuchen Sie "
+"es später noch einmal."
 
 msgid "apps"
 msgid_plural "apps"
@@ -887,10 +907,10 @@ msgstr[0] "Spiele"
 msgstr[1] "Spiele"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "iTunes Verweis"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "iTunes Verweis ist keine gültige url"
 
 msgid "scopes"
 msgid_plural "scopes"
@@ -902,5 +922,5 @@ msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Webanwendung"
+msgstr[1] "Webanwendungen"

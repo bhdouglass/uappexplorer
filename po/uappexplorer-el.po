@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2016-01-24 20:22+0000\n"
-"Last-Translator: Aggelos Arnaoutis <angelosarn@hotmail.com>\n"
+"PO-Revision-Date: 2016-02-10 23:27+0000\n"
+"Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-05 19:40+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-22 01:44+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: el\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -40,7 +40,7 @@ msgid "- Choose a list -"
 msgstr "- Επιλογή καταλόγου -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Η επιθυμία με το όνομα αυτό υπάρχει ήδη"
 
 msgid "Add Apps:"
 msgstr "Προσθήκη εφαρμογών:"
@@ -64,7 +64,7 @@ msgid "All Types"
 msgstr "Όλοι οι τύποι"
 
 msgid "Amazon Link"
-msgstr "Σύνδεσμος στο Amazon"
+msgstr "Σύνδεσμος στο amazon"
 
 msgid "Amazon link is not a valid url"
 msgstr "Σύνδεσμος amazon δεν είναι έγκυρη διεύθυνση"
@@ -198,6 +198,8 @@ msgstr ""
 
 msgid "Could not create a new wish at this time, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέας επιθυμίας, παρακαλώ "
+"προσπαθήστε ξανά αργότερα"
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
@@ -224,7 +226,7 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "Δε βρέθηκε ο κατάλογος αυτός, ίσως δεν υπάρχει πια"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "Δεν βρέθηκε η επιθυμία"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
@@ -233,6 +235,8 @@ msgstr ""
 
 msgid "Could not load wishes at this time, click to retry"
 msgstr ""
+"Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των επιθυμιών, πατήστε εδώ για "
+"να προσπαθήσετε ξανά"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -299,7 +303,7 @@ msgid "Download"
 msgstr "Λήψη"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Αρνητική ψήφος"
 
 msgid "Edit"
 msgstr "Επεξεργασία"
@@ -364,7 +368,7 @@ msgid "Go there now"
 msgstr "Πήγαινε εκεί τώρα"
 
 msgid "Google Play Link"
-msgstr "Σύνδεσμος στο Google Play"
+msgstr "Σύνδεσμος στο google play"
 
 msgid "Google Play link is not a valid url"
 msgstr "Σύνδεσμος google play δεν είναι έγκυρη διεύθυνση"
@@ -391,7 +395,7 @@ msgstr ""
 "αστέρια = 0 καρδιές, 2 αστέρια = -0.5 καρδιές, και 1 αστέρι = -1 καρδιές."
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "Βοηθήστε να πάρει η επιθυμία αυτή περισσότερες ψήφους!"
 
 msgid "Help translate!"
 msgstr "Βοηθήστε στη μετάφραση!"
@@ -418,10 +422,10 @@ msgid "I just published my app, why don't I see it?"
 msgstr "Μόλις δημοσίευσα την εφαρμογή μου, γιατί δεν μπορώ να τη δω;"
 
 msgid "I'm wishing for..."
-msgstr "Θέλω..."
+msgstr "Επιθυμώ..."
 
 msgid "I'm wishing for: "
-msgstr "Θέλω: "
+msgstr "Επιθυμώ: "
 
 msgid "Idea Summary"
 msgstr "Σύνοψη ιδέας"
@@ -467,7 +471,7 @@ msgid "It is possible to have a negative heart rating."
 msgstr "Είναι δυνατό να υπάρχει βαθμολογία σε καρδιές με αρνητικό πρόσημο."
 
 msgid "Itunes Link"
-msgstr "Σύνδεσμος στο Itunes"
+msgstr "Σύνδεσμος στο iTunes"
 
 msgid "Language"
 msgstr "Γλώσσα"
@@ -506,7 +510,7 @@ msgid "Log in via Ubuntu"
 msgstr "Σύνδεση μέσω Ubuntu"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Συνδεθείτε για να εκδηλώσετε μια επιθυμία"
 
 msgid "Lowest Heart Rating"
 msgstr "Χαμηλότερη βαθμολογία σε καρδιές"
@@ -515,7 +519,7 @@ msgid "Lowest Star Rating"
 msgstr "Χαμηλότερη βαθμολογία σε αστέρια"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Εκδηλώστε μια επιθυμία"
 
 msgid "Media & Video"
 msgstr "Πολυμέσα & βίντεο"
@@ -536,7 +540,7 @@ msgid "More Info"
 msgstr "Περισσότερες πληροφορίες"
 
 msgid "Most Expensive (USD)"
-msgstr "Πιο ακριβά (σε δολλάρια)"
+msgstr "Πιο ακριβά (σε δολάρια ΗΠΑ)"
 
 msgid "Most Popular (This Month)"
 msgstr "Πιο δημοφιλή (αυτόν το μήνα)"
@@ -590,7 +594,7 @@ msgid "No reviews yet!"
 msgstr "Δεν υπάρχουν ακόμα κριτικές!"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "Δεν βρέθηκαν επιθυμίες, παρακαλώ κάντε πάλι αναζήτηση."
 
 msgid "Oldest"
 msgstr "Παλαιότερα"
@@ -619,7 +623,7 @@ msgid "Please login to send via Caxton"
 msgstr "Παρακαλώ συνδεθείτε για να κάνετε αποστολή μέσω Caxton"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Παρακαλώ ορίστε ένα όνομα ή μια ιδεά για την επιθυμία σας"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -668,7 +672,7 @@ msgid "Screenshots"
 msgstr "Στιγμιότυπα οθόνης"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Αναζήτηση επιθυμίας:"
 
 msgid "Send via Caxton"
 msgstr "Αποστολή μέσω Caxton"
@@ -832,7 +836,7 @@ msgid "Updated:"
 msgstr "Ενημερώθηκε:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Θετική ψήφος"
 
 msgid "User List:"
 msgstr "Κατάλογος χρηστών:"
@@ -871,10 +875,10 @@ msgid "Welcome to uApp Explorer!"
 msgstr "Καλώς ήρθατε στο uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Τι εφαρμογή θα θέλατε να δείτε στο Ubuntu Touch;"
+msgstr "Τι εφαρμογή θα επιθυμούσατε να δείτε στο Ubuntu Touch;"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Τι εφαρμογές θα θέλατε να δείτε στο Ubuntu Touch;"
+msgstr "Τι εφαρμογές θα επιθυμούσατε να δείτε στο Ubuntu Touch;"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Τι πρέπει να κάνω αν βρω υλικό που καταπατάει πνευματικά δικαιώματα;"
@@ -922,6 +926,8 @@ msgstr "Συνδεθείτε για να μπορέσετε να ψηφίσετ�
 
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
+"Δεν κατέστη δυνατή η αποθήκευση της ψήφου σας, παρακαλώ προσπαθήστε ξανά "
+"αργότερα"
 
 msgid "apps"
 msgid_plural "apps"
@@ -937,10 +943,10 @@ msgstr[0] "παιχνίδια"
 msgstr[1] "παιχνίδια"
 
 msgid "iTunes Link"
-msgstr "Σύνδεσμος στο Itunes"
+msgstr "Σύνδεσμος στο iTunes"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "Σύνδεσμος iTunes δεν είναι έγκυρη διεύθυνση"
 
 msgid "scopes"
 msgid_plural "scopes"

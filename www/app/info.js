@@ -328,11 +328,11 @@ module.exports = {
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 55,
+      'untranslated': 9,
     }, {
       'name': 'Greek',
       'code': 'el',
-      'untranslated': 14,
+      'untranslated': 0,
     }, {
       'name': 'Hungarian',
       'code': 'hu',
@@ -344,7 +344,7 @@ module.exports = {
     }, {
       'name': 'Norwegian Bokmal',
       'code': 'nb',
-      'untranslated': 202,
+      'untranslated': 115,
     }, {
       'name': 'Polish',
       'code': 'pl',
@@ -362,6 +362,10 @@ module.exports = {
       'code': 'ru',
       'untranslated': 79,
     }, {
+      'name': 'Serbian',
+      'code': 'sr',
+      'untranslated': 0,
+    }, {
       'name': 'Spanish',
       'code': 'es',
       'untranslated': 25,
@@ -372,7 +376,7 @@ module.exports = {
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 41,
+      'untranslated': 18,
     },
   ],
 };

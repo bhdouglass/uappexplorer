@@ -1,0 +1,919 @@
+# Serbian translation for uappexplorer
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the uappexplorer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uappexplorer\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"PO-Revision-Date: 2016-02-18 22:00+0000\n"
+"Last-Translator: Bojan Bogdanović <Unknown>\n"
+"Language-Team: Serbian <sr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-02-22 01:44+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
+
+msgid "(Don't worry, there is a free version too!)"
+msgstr "(Не брините, ово је такође бесплатна верзија!)"
+
+msgid ""
+"*Install will take you to the official appstore on an Ubuntu Touch device"
+msgstr ""
+"*Инсталирај ће Вас одвести у званичну продавницу на Убунту Тач уређају"
+
+msgid ""
+"*This webapp injects custom code into the website which can add extra "
+"features or be malicious. Only use this app if you trust the author."
+msgstr ""
+"*Овај вебпрограм убацује код у интернет страницу и може додати екстра "
+"функције или бити малициозан. Користите овај програм само ако верујете "
+"аутору."
+
+msgid "- Choose a list -"
+msgstr "- Одаберите листу -"
+
+msgid "A wish with the same name already exists"
+msgstr "Жеља са истим именом већ постоји"
+
+msgid "Add Apps:"
+msgstr "Додајте програм:"
+
+msgid "Add to list:"
+msgstr "Додајте на листу:"
+
+msgid "All"
+msgstr "Сви"
+
+msgid "All Apps"
+msgstr "Сви програми"
+
+msgid "All Architectures"
+msgstr "Све архитектуре"
+
+msgid "All Frameworks"
+msgstr "Сви оквири"
+
+msgid "All Types"
+msgstr "Сви типови"
+
+msgid "Amazon Link"
+msgstr "Линк ка Амазон-у"
+
+msgid "Amazon link is not a valid url"
+msgstr "Амазон линк ниије исправан"
+
+msgid "Any Architecture"
+msgstr "Било која архитектура"
+
+msgid "Any License"
+msgstr "Било која лиценца"
+
+msgid ""
+"Any requests to remove copyright or trademark infringing content should be "
+"taken up with Canonical or the app's author (an author usually has a method "
+"of contact listed under the Support tab on their app's page). uApp Explorer "
+"is not affiliated with Canonical and does not host any apps. uApp Explorer "
+"only displays publicly available information about the official Ubuntu Touch "
+"appstore."
+msgstr ""
+"Сваки захтев за уклањањем садржаја који повређује ауторско право или робна "
+"марка мора бити решаван са компанијом Каноникал или са аутором програма "
+"(аутор обично има начин за контакт приказан на листу за подршку на страници "
+"његовог програма). uApp Explorer није повезан са компанијом Каноникал и не "
+"држи ни један програм. uApp Explorer само приказује јавно доступне "
+"информације о званичној Убунту Тач продавници."
+
+msgid "App"
+msgstr "Програми"
+
+msgid "App Name"
+msgstr "Име програма"
+
+msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr "Име програма (пример:  com.ubuntu.developer.example)"
+
+msgid "App Wishlist"
+msgstr "Листа жеља програма"
+
+msgid "Apps"
+msgstr "Програми"
+
+msgid "Apps are not installed via this site, but via the official appstore."
+msgstr ""
+"Програми нису инсталирани преко овог сајта, већ преко званичне продавнице."
+
+msgid "Apps:"
+msgstr "Програми:"
+
+msgid "Architecture:"
+msgstr "Архитектура:"
+
+msgid "Are you sure you want to delete this list?"
+msgstr "Да ли сте сигурни да желите да обришете ову листу?"
+
+msgid "Article"
+msgstr "Чланак"
+
+msgid "Author"
+msgstr "Аутор"
+
+msgid "Books & Comics"
+msgstr "Књиге & Стрипови"
+
+msgid "Browse"
+msgstr "Претражи"
+
+msgid "Browse Apps"
+msgstr "Претражи програме"
+
+msgid "Browse Games"
+msgstr "Претражи игрице"
+
+msgid "Browse Scopes"
+msgstr "Претражи опсеге"
+
+msgid "Browse Web Apps"
+msgstr "Претражи веб програме"
+
+msgid "Business"
+msgstr "Посао"
+
+msgid "Buy the Webapp"
+msgstr "Купи вебпрограм"
+
+msgid "Buy the webapp from the Ubuntu Touch app store"
+msgstr "Купи вебпрограм из Убунту Тач продавнице"
+
+msgid "By:"
+msgstr "Од:"
+
+msgid "Cancel"
+msgstr "Откажи"
+
+msgid "Category:"
+msgstr "Категорија:"
+
+msgid "Caxton Code"
+msgstr "Какстон код"
+
+msgid "Changelog"
+msgstr "Дневник измена"
+
+msgid "Close"
+msgstr "Затвори"
+
+msgid "Communication"
+msgstr "Комуникације"
+
+msgid "Company"
+msgstr "Компанија"
+
+msgid "Containing:"
+msgstr "Садржи:"
+
+msgid "Could not add app to list at this time, please try again later"
+msgstr "Не могу сада додати програм у листу, молимо пробајте касније"
+
+msgid "Could not connect to Caxton at this time, please try again later"
+msgstr "Не могу се сада повезати на Какстон, молимо покушајте касније"
+
+msgid "Could not create a new list at this time, please try again later"
+msgstr "Не могу сада направити нову листу, молимо покушајте касније"
+
+msgid "Could not create a new wish at this time, please try again later"
+msgstr "Не могу сада креирати нову жељу, молимо покушајте касније"
+
+msgid "Could not delete the list at this time, please try again later"
+msgstr "Не могу сада обрисати листу, молимо покушајте касније"
+
+msgid "Could not download app data, click to retry"
+msgstr "Не могу преузети податке програма, кликните да покушате поново"
+
+msgid "Could not download app list, click to retry"
+msgstr "Не могу преузети листу програма, кликните да покушате поново"
+
+msgid "Could not find app"
+msgstr "Не могу наћи програм"
+
+msgid "Could not find the requested app"
+msgstr "Не могу наћи захтевани програм"
+
+msgid "Could not find this list, it may not exist any more"
+msgstr "Не могу наћи ову листу, могуће је да више не постоји"
+
+msgid "Could not find wish"
+msgstr "Не могу наћи жељу"
+
+msgid "Could not load lists at this time, click to retry"
+msgstr "Не могу сада учитати листу, кликните да покушате поново"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr "Не могу сада учитати жеље, кликните да покушате поново"
+
+msgid "Could not remove the app from this list, please try again later"
+msgstr "Не могу уклонити програм из листе, молимо покушајте касније"
+
+msgid "Could not save your settings at this time, please try again later"
+msgstr "Не могу сада сачувати Ваша подешавања, молимо покушајте касније"
+
+msgid "Could not update the list at this time, please try again later"
+msgstr "Не могу сада ажурирати листу, молимо покушајте касније"
+
+msgid "Create"
+msgstr "Креирај"
+
+msgid "Create List"
+msgstr "Креирај листу"
+
+msgid "Delete"
+msgstr "Обриши"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Developer Tools"
+msgstr "Програмерски алати"
+
+msgid "Developer/Company"
+msgstr "Програмер/Компанија"
+
+msgid "Donate"
+msgstr "Приложите"
+
+msgid "Donate via Bitcoin"
+msgstr "Приложите преко Биткоин-а"
+
+msgid "Donate via Gratipay"
+msgstr "Приложите преко Гратипеј-а"
+
+msgid "Donate via Paypal"
+msgstr "Приложите преко Пејпал-а"
+
+msgid ""
+"Donating to uApp Explorer is just one way you can help make it better. If "
+"you choose to donate, you money will go towards infrastructure costs. Costs "
+"include domain names, hosting, etc. uApp Explorer will always be a free and "
+"open source service, regardless of the number of donations."
+msgstr ""
+"Прилог uApp Explorer-у је само један од начина да помогнете да буде бољи. "
+"Ако одаберете да приложите, Ваш новац иде на трошкове инфраструктуре. "
+"Трошкови укључују доменска имена, хсотинг, итд. uApp Explorer ће увек бити "
+"бесплатан сервис и отвореног кода, без обзира на број прилога."
+
+msgid "Donation Web App"
+msgstr "Веб програм прилога"
+
+msgid "Download"
+msgstr "Преузимање"
+
+msgid "Downvote"
+msgstr "Негативан глас"
+
+msgid "Edit"
+msgstr "Уреди"
+
+msgid "Edit List"
+msgstr "Уреди листу"
+
+msgid "Education"
+msgstr "Образовање"
+
+msgid "Email Support"
+msgstr "Подршка е-поштом"
+
+msgid "Entertainment"
+msgstr "Забава"
+
+msgid "Essential Apps"
+msgstr "Главни програми"
+
+msgid "FAQ"
+msgstr "ЧПП"
+
+msgid "File Size:"
+msgstr "Величина датотеке:"
+
+msgid "Filters"
+msgstr "Филтери"
+
+msgid "Finance"
+msgstr "Финансије"
+
+msgid "Find"
+msgstr "Тражи"
+
+msgid "Find an app that has not yet been fetched from the official appstore."
+msgstr "Пронађи програм који још увек није преузет из званичне продавнице."
+
+msgid "Food & Drink"
+msgstr "Храна & Пиће"
+
+msgid "For version:"
+msgstr "За верзију:"
+
+msgid "Found the requested app"
+msgstr "Пронађен је захтевани програм"
+
+msgid "Framework:"
+msgstr "Оквир:"
+
+msgid "Free"
+msgstr "Бесплатан"
+
+msgid "Games"
+msgstr "Игрице"
+
+msgid "Get a QR scanner for your Ubuntu Touch device"
+msgstr "Преузми QR скенер за Ваш Убунту Тач уређај"
+
+msgid "Go there now"
+msgstr "Идид сада тамо"
+
+msgid "Google Play Link"
+msgstr "Гугл Плеј линк"
+
+msgid "Google Play link is not a valid url"
+msgstr "Гугл Плеј линк није исправан"
+
+msgid "Graphics"
+msgstr "Графика"
+
+msgid "Grid"
+msgstr "Мрежа"
+
+msgid "Health & Fitness"
+msgstr "Здравље & Фитнес"
+
+msgid "Heart Rating"
+msgstr "Оцена срцем"
+
+msgid ""
+"Heart ratings are calculated from the star rating where a 5 star review is 1 "
+"heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts, and 1 star = -1 hearts."
+msgstr ""
+"Оцена срцем је израчуната из оцене звездицом где је рецензија са 5 звездица "
+"1 поен срцем, 4 звездице = 0,5 срца, 3 звездице = 0 срца, 2 звездице = -0,5 "
+"срца, и 1 звездица = -1 срце."
+
+msgid "Help this wish get more votes!"
+msgstr "Помозите да ова жеља добије више гласова!"
+
+msgid "Help translate!"
+msgstr "Помозите превођење!"
+
+msgid "Highest Heart Rating"
+msgstr "Највиша оцена срцем"
+
+msgid "Highest Star Rating"
+msgstr "Највиша оцена звездицом"
+
+msgid "How can I help improve this site?"
+msgstr "Како могу помоћи да се унапреди интернет страница?"
+
+msgid "How do I install apps?"
+msgstr "Како да инсталирам програм?"
+
+msgid "How is the popularity determined?"
+msgstr "Како је утврђена популарност?"
+
+msgid "How much would you be willing pay for this app?"
+msgstr "Колико би сте желели да платите овајпрограм?"
+
+msgid "I just published my app, why don't I see it?"
+msgstr "Управо сам објавио програм, зашто га не видим?"
+
+msgid "I'm wishing for..."
+msgstr "Желим..."
+
+msgid "I'm wishing for: "
+msgstr "Желим: "
+
+msgid "Idea Summary"
+msgstr "Резиме идеје"
+
+msgid "If you want to contribute code visit the GitHub repo."
+msgstr "Ако желите да допринесете кодом, посетите ГитХаб репозиторијум."
+
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr "Ако желите да помогнете у превођењу, посетите Ланчпед пројекат."
+
+msgid ""
+"If you want to submit bugs or feature requests visit the GitHub issues page."
+msgstr ""
+"Ако желите да пријавите грешку или захтевате нову функцију посетите ГитХаб "
+"страницу са питањима."
+
+msgid "If you would like to contact the author, visit his website."
+msgstr "Ако желите да контактирате аутора, посетите интернет страницу."
+
+msgid ""
+"If you would like to contribute monetarily, there are multiple options for "
+"donating."
+msgstr "Ако желите да допринесете новчано, постоји више опција за прилоге."
+
+msgid "Info"
+msgstr "Инфо"
+
+msgid "Install"
+msgstr "Инсталирај"
+
+msgid "Is this an existing app?"
+msgstr "Да ли је ово постојећи програм?"
+
+msgid "It is possible to have a negative heart rating."
+msgstr "Могуће је имати негативну оцену срцем."
+
+msgid "Itunes Link"
+msgstr "ајТјунс линк"
+
+msgid "Language"
+msgstr "Језик"
+
+msgid "Latest Update"
+msgstr "Последње ажурирање"
+
+msgid "Least Popular (This Month)"
+msgstr "Најмање популарно (овог месеца)"
+
+msgid "License:"
+msgstr "Лиценца:"
+
+msgid "Lifestyle"
+msgstr "Стил живота"
+
+msgid "List"
+msgstr "Листа"
+
+msgid "List Name:"
+msgstr "Име листе:"
+
+msgid "Load more reviews"
+msgstr "Учитај више рецензија"
+
+msgid "Loading reviews..."
+msgstr "Учитавање рецензија..."
+
+msgid "Log In"
+msgstr "Пријави се"
+
+msgid "Log Out"
+msgstr "Одјави се"
+
+msgid "Log in via Ubuntu"
+msgstr "Пријави се преко Убунту-а"
+
+msgid "Login to make a wish"
+msgstr "Пријавите се да поставите жељу"
+
+msgid "Lowest Heart Rating"
+msgstr "Најнижа оцена срцем"
+
+msgid "Lowest Star Rating"
+msgstr "Најнижа оцена звездицом"
+
+msgid "Make a wish"
+msgstr "Унеси жељу"
+
+msgid "Media & Video"
+msgstr "Медији & Видео"
+
+msgid "Medical"
+msgstr "Медицина"
+
+msgid "Missing an app?"
+msgstr "Недостаје програм?"
+
+msgid "Monthly Popularity"
+msgstr "Месечна популарност"
+
+msgid "More Apps by:"
+msgstr "Више програма од:"
+
+msgid "More Info"
+msgstr "Више информација"
+
+msgid "Most Expensive (USD)"
+msgstr "Скупљи (УСД)"
+
+msgid "Most Popular (This Month)"
+msgstr "Најпопуларнији (овог месеца)"
+
+msgid "Most Relevant"
+msgstr "Најрелевантнији"
+
+msgid "Music & Audio"
+msgstr "Музика & Видео"
+
+msgid "My Lists"
+msgstr "Моје листе"
+
+msgid "New Apps"
+msgstr "Нови програми"
+
+msgid "New List"
+msgstr "Нова листа"
+
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
+msgstr ""
+"Нови програми се преузимају из званичне продавнице сваког сата, можете "
+"чекати док се преузму нови програми или користити фпрулар за захтев да "
+"захтевате да се програм пронађе раније."
+
+msgid "Newest"
+msgstr "Најновији"
+
+msgid "News & Magazines"
+msgstr "Новости & Магазини"
+
+msgid "Next App:"
+msgstr "Следећи програм:"
+
+msgid "No"
+msgstr "Не"
+
+msgid "No apps found, try searching again."
+msgstr "Нису пронађени програми, покушајте претрагу поново."
+
+msgid "No lists, create one!"
+msgstr "Нема листи, креирајте једну!"
+
+msgid "No recent changes"
+msgstr "Нема недавних измена"
+
+msgid "No reviews yet!"
+msgstr "Нема још увек рецензија!"
+
+msgid "No wishes found, try searching again."
+msgstr "Нема пронађених жеља, покушајте претрагу поново."
+
+msgid "Oldest"
+msgstr "Најстарији"
+
+msgid "Oldest Update"
+msgstr "Старија ажурирања"
+
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr "У просеку, гласачи би желели да плате %d УСД за овај програм."
+
+msgid "Open Source"
+msgstr "Отвореног кода"
+
+msgid "Other Link"
+msgstr "Други линк"
+
+msgid "Other link is not a valid url"
+msgstr "Други линк није исправан"
+
+msgid "Personalisation"
+msgstr "Персонализација"
+
+msgid "Please login to send via Caxton"
+msgstr "Молимо да се пријавите да пошаљете преко Какстон-а"
+
+msgid "Please specify a name or idea for your wish"
+msgstr "Молимо наведите име Ваше идеје или жеље"
+
+msgid ""
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
+"during the current month."
+msgstr ""
+"Популарност је базирана на основу броја рецензија од 4 или 5 звездица датих "
+"програму у току текућег месеца."
+
+msgid "Previous App:"
+msgstr "Претходни програм:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr "Цена мора бити између 0 и 20 УСД"
+
+msgid "Productivity"
+msgstr "Продуктивност"
+
+msgid "Proprietary"
+msgstr "Власнички"
+
+msgid "QR Code"
+msgstr "QR Код"
+
+msgid "QR Code:"
+msgstr "QR Код:"
+
+msgid "Reference"
+msgstr "Референце"
+
+msgid "Remove this app from your list"
+msgstr "Уклните овај програм из Ваше листе"
+
+msgid "Save"
+msgstr "Сачувај"
+
+msgid "Science & Engineering"
+msgstr "Наука & Инжењерство"
+
+msgid "Scope"
+msgstr "Опсег"
+
+msgid "Scopes"
+msgstr "Опсези"
+
+msgid "Screenshots"
+msgstr "Снимци екрана"
+
+msgid "Search for a wish:"
+msgstr "Претражите жељу:"
+
+msgid "Send via Caxton"
+msgstr "Пошаљите преко Какстон-а"
+
+msgid "Sent via Caxton"
+msgstr "Послато преко Какстон-а"
+
+msgid "Settings"
+msgstr "Подешавања"
+
+msgid "Share on Facebook"
+msgstr "Дели на Фејсбук-у"
+
+msgid "Share on Google+"
+msgstr "Дели на Гугл+"
+
+msgid "Share on Reddit"
+msgstr "Дели на Редит-у"
+
+msgid "Share on Twitter"
+msgstr "Дели на Твитер-у"
+
+msgid "Shopping"
+msgstr "Куповина"
+
+msgid "Similar Apps"
+msgstr "Слични програми"
+
+msgid "Snappy App"
+msgstr "Снепи програм"
+
+msgid "Snappy Apps"
+msgstr "Снепи програми"
+
+msgid "Social Networking"
+msgstr "Друштвено умрежавање"
+
+msgid "Sort Apps By:"
+msgstr "Поређај програме по:"
+
+msgid "Sort By:"
+msgstr "Поређај по:"
+
+msgid "Sports"
+msgstr "Спортови"
+
+msgid "Star Rating"
+msgstr "Оцена звездицом"
+
+msgid "Submit"
+msgstr "Пошаљи"
+
+msgid "Submitted by"
+msgstr "Послато од"
+
+msgid "Support"
+msgstr "Подршка"
+
+msgid "Support:"
+msgstr "Подршка:"
+
+msgid "Terms:"
+msgstr "Услови:"
+
+msgid "Thank you for your vote!"
+msgstr "Хвала Вам на Вашем гласу!"
+
+msgid "Thank you!"
+msgstr "Хвала Вам!"
+
+msgid ""
+"The heart rating is similar to the star rating, but it rewards apps for "
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
+msgstr ""
+"Оцена срцем је слична оцени звездицом, само што награђује за више добрих "
+"рецензија. Програм са више оцена од 5 звездица имаће већу оцену срцима од "
+"програма са само неколико оцена од 5 звездица."
+
+msgid ""
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
+msgstr ""
+"Оцена звездицом је Бајезианов просек оцена звездицом које корисник даје "
+"приликом рецензије. Бајезианов просек дозвољава програмима са више рецензија "
+"да се боље рангирају од програма са мање рецензија. Ицена звездом може бити "
+"од 1 до 5, где 0 означава да није било још увек рецензија. За више "
+"информација о израчунавању Бајезиановог просека, прочитајте следећи чланак."
+
+msgid "This app is on these lists:"
+msgstr "Овај програм је на листама:"
+
+msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgstr "Ово је незваничан прегледач за Убунту Тач програме."
+
+msgid "This list is empty!"
+msgstr "Ова листа је празна!"
+
+msgid ""
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr ""
+"Ова интернет страница је незванични претраживач Убунту Тач програма. Сви "
+"подаци о програмима долазе са јавно приступних апи-ја. Овау интернет "
+"страницу одржава Брајан Даглас и он није одобрен нити је повезан са Убунту-"
+"ом или Каноникал-ом. Убунту и Каноникал су регистроване робне мараке "
+"Каноникал Лтд."
+
+msgid "Title A-Z"
+msgstr "Име A-Z"
+
+msgid "Title Z-A"
+msgstr "Име Z-A"
+
+msgid ""
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
+"taken to the official appstore on your device where you can install the app."
+msgstr ""
+"Да инсталирате програм, посетите ову интернет страницу на Вашем Убунту Тач "
+"уређају. Нађите програм који желите да инсталирате и кликните на "
+"\"Инсталирај\" дугме. Бићете пребачени у званичну продавницу на Вашем "
+"уређају одакле можете инсталирати програм."
+
+msgid ""
+"To report a problem or request a new feature visit the issues page for this "
+"site on GitHub."
+msgstr ""
+"Да би сте пријавили проблем или захтевали нову функцију посетите страницу са "
+"питањима на ГитХаб-у."
+
+msgid "Top Apps"
+msgstr "Најпопуларнији програми"
+
+msgid "Total Reviews"
+msgstr "Укупно рецензија"
+
+msgid "Travel & Local"
+msgstr "Путовања & Локално"
+
+msgid "Type:"
+msgstr "Тип:"
+
+msgid "Universal Accesss/Accessibility"
+msgstr "Универзални приступ/Приступачност"
+
+msgid "Updated Apps"
+msgstr "Ажурирани програми"
+
+msgid "Updated:"
+msgstr "Ажурирано:"
+
+msgid "Upvote"
+msgstr "Позитиван глас"
+
+msgid "User List:"
+msgstr "Корисничка листа:"
+
+msgid "User Reviews"
+msgstr "Корисничке рецензије"
+
+msgid "Utilities"
+msgstr "Алати"
+
+msgid "Version:"
+msgstr "Верзија:"
+
+msgid "View"
+msgstr "Приказ"
+
+msgid "Vote"
+msgstr "Гласајте"
+
+msgid "Weather"
+msgstr "Време"
+
+msgid "Web App"
+msgstr "Веб програм"
+
+msgid "Web Apps"
+msgstr "Веб програми"
+
+msgid "Website:"
+msgstr "Интернет страница:"
+
+msgid "Welcome"
+msgstr "Добродошли"
+
+msgid "Welcome to uApp Explorer!"
+msgstr "Добродошли у uApp Explorer!"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr "Који програм би сте желели да видите на Убунту Тач-у?"
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr "Који програме би сте желели да видите на Убунту Тач-у?"
+
+msgid "What do I do if I find copyright or trademark infringing content?"
+msgstr ""
+"Шта да урадим ако пронађем нарушавање ауторских права или робне марке?"
+
+msgid "What is the heart rating?"
+msgstr "Шта је оцена срцима?"
+
+msgid "What is the star rating?"
+msgstr "Шта је оцена звездицама?"
+
+msgid "What is this site?"
+msgstr "Шта је ова интернет страница?"
+
+msgid "Where can I report a problem or request a new feature?"
+msgstr "Где могу пријавити проблем или захтевати нову функцију?"
+
+msgid ""
+"Whether you choose to donate or not, I still appreciate you support. Thank "
+"you!"
+msgstr ""
+"Без обзира да ли сте се одлучили за прилог или не, ја још увек ценим Вашу "
+"подршку. Хвала Вам!"
+
+msgid "Why donate?"
+msgstr "Зашто приложити?"
+
+msgid "Wishlist"
+msgstr "Листа жеља"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "You are already connected via Caxton!"
+msgstr "Већ сте повезани преко Какстон-а!"
+
+msgid ""
+"You do not have your account connected to Caxton, click to go to your "
+"settings"
+msgstr ""
+"Немате још увек повезан Ваш налог на Какстон, кликните да одете у Ваше "
+"подешавање"
+
+msgid "You must be logged in to vote"
+msgstr "Морате бити пријављени да би гласали"
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr "Ваш глас сада не може бити сачуван, молимо да покушате касније"
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "програм"
+msgstr[1] "програма"
+msgstr[2] "програма"
+
+msgid "apps & scopes"
+msgstr "програми & опсези"
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "игрица"
+msgstr[1] "игрице"
+msgstr[2] "игрица"
+
+msgid "iTunes Link"
+msgstr "ајТјунс линк"
+
+msgid "iTunes link is not a valid url"
+msgstr "ајТјунс линк није исправан"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "опсег"
+msgstr[1] "опсега"
+msgstr[2] "опсега"
+
+msgid "snappy apps"
+msgstr "снепи програми"
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "веб програм"
+msgstr[1] "веб програма"
+msgstr[2] "веб програма"
