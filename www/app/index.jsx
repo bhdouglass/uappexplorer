@@ -15,7 +15,7 @@ var Wishlist = require('./components/wishlist');
 var Wish = require('./components/wish');
 var FAQ = require('./components/faq');
 var Login = require('./components/login');
-var AppRequest = require('./components/modals/appRequest');
+var AppRequest = require('./components/appRequest');
 var actions = require('./actions');
 
 var h = createBrowserHistory({
