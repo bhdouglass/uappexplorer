@@ -101,6 +101,8 @@ module.exports = React.createClass({
         <div className="pull-right">
           <a className="btn btn-material-blue" onClick={this.request}>{i18n.t('Find')}</a>
         </div>
+
+        <div className="clearfix"></div>
       </div>
     );
   }
