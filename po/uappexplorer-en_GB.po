@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2016-02-18 06:15+0000\n"
+"PO-Revision-Date: 2016-02-24 10:58+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-22 01:44+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-05 14:08+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 "Language: en_GB\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -455,7 +455,7 @@ msgid "List Name:"
 msgstr "List Name:"
 
 msgid "Load more reviews"
-msgstr ""
+msgstr "Load more reviews"
 
 msgid "Loading reviews..."
 msgstr "Loading reviews..."
@@ -485,7 +485,7 @@ msgid "Media & Video"
 msgstr "Media & Video"
 
 msgid "Medical"
-msgstr ""
+msgstr "Medical"
 
 msgid "Missing an app?"
 msgstr "Missing an app?"
@@ -500,207 +500,215 @@ msgid "More Info"
 msgstr "More Info"
 
 msgid "Most Expensive (USD)"
-msgstr ""
+msgstr "Most Expensive (USD)"
 
 msgid "Most Popular (This Month)"
-msgstr ""
+msgstr "Most Popular (This Month)"
 
 msgid "Most Relevant"
-msgstr ""
+msgstr "Most Relevant"
 
 msgid "Music & Audio"
-msgstr ""
+msgstr "Music & Audio"
 
 msgid "My Lists"
-msgstr ""
+msgstr "My Lists"
 
 msgid "New Apps"
-msgstr ""
+msgstr "New Apps"
 
 msgid "New List"
-msgstr ""
+msgstr "New List"
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
 "wait until the new apps are fetched or use the request form to request that "
 "the app be found early."
 msgstr ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
 
 msgid "Newest"
-msgstr ""
+msgstr "Newest"
 
 msgid "News & Magazines"
-msgstr ""
+msgstr "News & Magazines"
 
 msgid "Next App:"
-msgstr ""
+msgstr "Next App:"
 
 msgid "No"
-msgstr ""
+msgstr "No"
 
 msgid "No apps found, try searching again."
-msgstr ""
+msgstr "No apps found, try searching again."
 
 msgid "No lists, create one!"
-msgstr ""
+msgstr "No lists, create one!"
 
 msgid "No recent changes"
-msgstr ""
+msgstr "No recent changes"
 
 msgid "No reviews yet!"
-msgstr ""
+msgstr "No reviews yet!"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "No wishes found, try searching again."
 
 msgid "Oldest"
-msgstr ""
+msgstr "Oldest"
 
 msgid "Oldest Update"
-msgstr ""
+msgstr "Oldest Update"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
+msgstr "On average, voters would be willing to pay %d USD for this app."
 
 msgid "Open Source"
-msgstr ""
+msgstr "Open Source"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Other Link"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "Other link is not a valid URL"
 
 msgid "Personalisation"
-msgstr ""
+msgstr "Personalisation"
 
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "Please login to send via Caxton"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Please specify a name or idea for your wish"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
 msgstr ""
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
+"during the current month."
 
 msgid "Previous App:"
-msgstr ""
+msgstr "Previous App:"
 
 msgid "Price must be between 0 and 20 USD"
-msgstr ""
+msgstr "Price must be between 0 and 20 USD"
 
 msgid "Productivity"
-msgstr ""
+msgstr "Productivity"
 
 msgid "Proprietary"
-msgstr ""
+msgstr "Proprietary"
 
 msgid "QR Code"
-msgstr ""
+msgstr "QR Code"
 
 msgid "QR Code:"
-msgstr ""
+msgstr "QR Code:"
 
 msgid "Reference"
-msgstr ""
+msgstr "Reference"
 
 msgid "Remove this app from your list"
-msgstr ""
+msgstr "Remove this app from your list"
 
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 msgid "Science & Engineering"
-msgstr ""
+msgstr "Science & Engineering"
 
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 msgid "Scopes"
-msgstr ""
+msgstr "Scopes"
 
 msgid "Screenshots"
-msgstr ""
+msgstr "Screenshots"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Search for a wish:"
 
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Send via Caxton"
 
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Sent via Caxton"
 
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Share on Facebook"
 
 msgid "Share on Google+"
-msgstr ""
+msgstr "Share on Google+"
 
 msgid "Share on Reddit"
-msgstr ""
+msgstr "Share on Reddit"
 
 msgid "Share on Twitter"
-msgstr ""
+msgstr "Share on Twitter"
 
 msgid "Shopping"
-msgstr ""
+msgstr "Shopping"
 
 msgid "Similar Apps"
-msgstr ""
+msgstr "Similar Apps"
 
 msgid "Snappy App"
-msgstr ""
+msgstr "Snappy App"
 
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy Apps"
 
 msgid "Social Networking"
-msgstr ""
+msgstr "Social Networking"
 
 msgid "Sort Apps By:"
-msgstr ""
+msgstr "Sort Apps By:"
 
 msgid "Sort By:"
-msgstr ""
+msgstr "Sort By:"
 
 msgid "Sports"
-msgstr ""
+msgstr "Sports"
 
 msgid "Star Rating"
-msgstr ""
+msgstr "Star Rating"
 
 msgid "Submit"
-msgstr ""
+msgstr "Submit"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Submitted by"
 
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 msgid "Support:"
-msgstr ""
+msgstr "Support:"
 
 msgid "Terms:"
-msgstr ""
+msgstr "Terms:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Thank you for your vote!"
 
 msgid "Thank you!"
-msgstr ""
+msgstr "Thank you!"
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
+"The heart rating is similar to the star rating, but it rewards apps for "
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -710,15 +718,21 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
 
 msgid "This app is on these lists:"
-msgstr ""
+msgstr "This app is on these lists:"
 
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr ""
+msgstr "This is an unofficial app viewer for Ubuntu Touch apps."
 
 msgid "This list is empty!"
-msgstr ""
+msgstr "This list is empty!"
 
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for "
@@ -726,161 +740,174 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 
 msgid "Title A-Z"
-msgstr ""
+msgstr "Title A-Z"
 
 msgid "Title Z-A"
-msgstr ""
+msgstr "Title Z-A"
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
+"taken to the official appstore on your device where you can install the app."
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
+"To report a problem or request a new feature visit the issues page for this "
+"site on GitHub."
 
 msgid "Top Apps"
-msgstr ""
+msgstr "Top Apps"
 
 msgid "Total Reviews"
-msgstr ""
+msgstr "Total Reviews"
 
 msgid "Travel & Local"
-msgstr ""
+msgstr "Travel & Local"
 
 msgid "Type:"
-msgstr ""
+msgstr "Type:"
 
 msgid "Universal Accesss/Accessibility"
-msgstr ""
+msgstr "Universal Access/Accessibility"
 
 msgid "Updated Apps"
-msgstr ""
+msgstr "Updated Apps"
 
 msgid "Updated:"
-msgstr ""
+msgstr "Updated:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Upvote"
 
 msgid "User List:"
-msgstr ""
+msgstr "User List:"
 
 msgid "User Reviews"
-msgstr ""
+msgstr "User Reviews"
 
 msgid "Utilities"
-msgstr ""
+msgstr "Utilities"
 
 msgid "Version:"
-msgstr ""
+msgstr "Version:"
 
 msgid "View"
-msgstr ""
+msgstr "View"
 
 msgid "Vote"
-msgstr ""
+msgstr "Vote"
 
 msgid "Weather"
-msgstr ""
+msgstr "Weather"
 
 msgid "Web App"
-msgstr ""
+msgstr "Web App"
 
 msgid "Web Apps"
-msgstr ""
+msgstr "Web Apps"
 
 msgid "Website:"
-msgstr ""
+msgstr "Website:"
 
 msgid "Welcome"
-msgstr ""
+msgstr "Welcome"
 
 msgid "Welcome to uApp Explorer!"
-msgstr ""
+msgstr "Welcome to uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "What app do you wish to see on Ubuntu Touch?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "What apps do you wish to see on Ubuntu Touch?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr ""
+msgstr "What do I do if I find copyright or trademark infringing content?"
 
 msgid "What is the heart rating?"
-msgstr ""
+msgstr "What is the heart rating?"
 
 msgid "What is the star rating?"
-msgstr ""
+msgstr "What is the star rating?"
 
 msgid "What is this site?"
-msgstr ""
+msgstr "What is this site?"
 
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "Where can I report a problem or request a new feature?"
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
+"Whether you choose to donate or not, I still appreciate you support. Thank "
+"you!"
 
 msgid "Why donate?"
-msgstr ""
+msgstr "Why donate?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Wishlist"
 
 msgid "Yes"
-msgstr ""
+msgstr "Yes"
 
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "You are already connected via Caxton!"
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
+"You do not have your account connected to Caxton, click to go to your "
+"settings"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "You must be logged in to vote"
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
+msgstr "You vote could not be saved at this time, please try again later"
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "apps"
+msgstr[1] "apps"
 
 msgid "apps & scopes"
-msgstr ""
+msgstr "apps & scopes"
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "games"
+msgstr[1] "games"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "iTunes Link"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "iTunes link is not a valid URL"
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "scopes"
+msgstr[1] "scopes"
 
 msgid "snappy apps"
-msgstr ""
+msgstr "snappy apps"
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "web apps"
+msgstr[1] "web apps"

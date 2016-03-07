@@ -316,7 +316,7 @@ module.exports = {
     }, {
       'name': 'English (UK)',
       'code': 'en_GB',
-      'untranslated': 0, //Keep this as zero since it's similar enough to US english
+      'untranslated': 0,
     }, {
       'name': 'French',
       'code': 'fr',
@@ -328,7 +328,7 @@ module.exports = {
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 9,
+      'untranslated': 6,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -368,7 +368,7 @@ module.exports = {
     }, {
       'name': 'Spanish',
       'code': 'es',
-      'untranslated': 25,
+      'untranslated': 13,
     }, {
       'name': 'Swedish',
       'code': 'sv',
