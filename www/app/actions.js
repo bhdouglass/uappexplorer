@@ -338,7 +338,7 @@ actions = {
         packages.push(list.packages[i]);
       }
 
-      if (list.full_packages[i].name != name) {
+      if (list.full_packages[i] && list.full_packages[i].name != name) {
         full_packages.push(list.full_packages[i]);
       }
     }
