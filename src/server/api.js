@@ -160,11 +160,11 @@ function setup(app, success, error) {
       else {
         var query = db.Package.find(findQuery);
         if (req.query.limit) {
-          query.limit(req.query.limit);
+          query.limit(parseInt(req.query.limit));
         }
 
         if (req.query.skip) {
-          query.skip(req.query.skip);
+          query.skip(parseInt(req.query.skip));
         }
 
         if (req.query.search) {

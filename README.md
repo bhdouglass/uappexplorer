@@ -49,7 +49,7 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 
 ## Deploying ##
 
-uApp Explorer is setup to deploy to [Openshift](https://www.openshift.com/) via [Codeship](https://codeship.com/).
+uApp Explorer is setup to deploy to [Heroku](https://www.heroku.com/) via [Codeship](https://codeship.com/).
 After code is pushed to the Github repo [Codeship](https://codeship.com/) runs the following to deploy:
 
 ~~~
@@ -74,17 +74,17 @@ echo yes | gulp deploy-spider
 
 With the following env vars:
 
-* UAPPEXPLORER_APP_GIT - Git uri for the [Openshift](https://www.openshift.com/) deploy repo (app/api)
-* UAPPEXPLORER_SPIDER_GIT - Git uri for the [Openshift](https://www.openshift.com/) deploy repo (spider)
+* UAPPEXPLORER_APP_GIT - Git uri for the deploy repo (app/api)
+* UAPPEXPLORER_SPIDER_GIT - Git uri for the deploy repo (spider)
 * EMAIL- Git email, so git doesn't complain
 * NAME - Git full name
 
 ## Infastructure ##
 
-uApp Explorer is currently setup on 2 small [Openshift](https://www.openshift.com/) "gears"
-(one for the app and api, another for the spider). Deployment is done via
-[Codeship](https://codeship.com/). The mongo database is hosted on [Mongolab](https://mongolab.com/).
-uApp Explorer uses the [Ubuntu Click api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex)
+uApp Explorer is currently setup on hobby [Heroku](https://www.heroku.com/) dyno.
+Deployment is done via [Codeship](https://codeship.com/). The mongo database is
+hosted on [Mongolab](https://mongolab.com/). uApp Explorer uses the
+[Ubuntu Click api](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex)
 to get app data and for parsing app packages. [Papertrail](https://papertrailapp.com/)
 is used for logging and [Mailhide](http://www.google.com/recaptcha/mailhide/apikey)
 is used to protect email addresses.

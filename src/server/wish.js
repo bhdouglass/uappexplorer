@@ -69,11 +69,11 @@ function setup(app, success, error, isAuthenticated) {
       else {
         var query = db.Wish.find(findQuery);
         if (req.query.limit) {
-          query.limit(req.query.limit);
+          query.limit(parseInt(req.query.limit));
         }
 
         if (req.query.skip) {
-          query.skip(req.query.skip);
+          query.skip(parseInt(req.query.skip));
         }
 
         query.sort('-upvotes name').exec(function(err, wishes) {
