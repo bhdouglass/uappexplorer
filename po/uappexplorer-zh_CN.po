@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2015-12-31 02:59+0000\n"
+"PO-Revision-Date: 2016-03-18 04:20+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-03-05 14:08+0000\n"
-"X-Generator: Launchpad (build 17936)\n"
+"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
+"X-Generator: Launchpad (build 17990)\n"
 "Language: zh_CN\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -78,6 +78,8 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
+"所有移除版权或商标侵权内容的请求应该向 Canonical 或应用的作者(作者通常在他们应用页面的支持标签下有他们的联系方式)提出。uApp "
+"Explorer 不属于 Canonical 也不主持任何应用。uApp Explorer 仅展示在官方 Ubuntu Touch 应用商店公开的信息。"
 
 msgid "App"
 msgstr "应用"
@@ -140,7 +142,7 @@ msgid "Buy the webapp from the Ubuntu Touch app store"
 msgstr "从 Ubuntu Touch 应用商店购买web应用"
 
 msgid "By:"
-msgstr ""
+msgstr "作者："
 
 msgid "Cancel"
 msgstr "取消"
@@ -250,6 +252,9 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
+"捐助 uApp Explorer "
+"是你能帮助使它变得更好的一种方式。如果你选择捐助，你的捐助资金会用于基础设施的花费。花费包括域名、主机等等。不论捐助数量的多少，uApp "
+"Explorer 一直会是一个免费且开源的服务。"
 
 msgid "Donation Web App"
 msgstr "捐助Web应用"
@@ -258,7 +263,7 @@ msgid "Download"
 msgstr "下载"
 
 msgid "Downvote"
-msgstr ""
+msgstr "反对"
 
 msgid "Edit"
 msgstr "编辑"
@@ -270,7 +275,7 @@ msgid "Education"
 msgstr "教育"
 
 msgid "Email Support"
-msgstr ""
+msgstr "邮件支持"
 
 msgid "Entertainment"
 msgstr "娱乐"
@@ -321,10 +326,10 @@ msgid "Go there now"
 msgstr "立刻跳到"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Google Play 链接"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "Google Play 链接不是一个有效的 url"
 
 msgid "Graphics"
 msgstr "图像"
@@ -342,10 +347,10 @@ msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
-msgstr ""
+msgstr "心评级由星评级计算而来，一个5星为1点心，4星 = 0.5心，3星 = 0心，2星 = -0.5心，1星 = -1心。"
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "帮助这个愿望获得更多投票！"
 
 msgid "Help translate!"
 msgstr "帮助翻译！"
@@ -366,7 +371,7 @@ msgid "How is the popularity determined?"
 msgstr "受欢迎度是如何确定的?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "你愿意为这个应用支付多少钱？"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "我发布了我的应用，为什么看不到它？"
@@ -462,10 +467,10 @@ msgid "Make a wish"
 msgstr "许愿"
 
 msgid "Media & Video"
-msgstr ""
+msgstr "媒体与影片"
 
 msgid "Medical"
-msgstr ""
+msgstr "医疗"
 
 msgid "Missing an app?"
 msgstr "缺少应用？"
@@ -474,10 +479,10 @@ msgid "Monthly Popularity"
 msgstr "月度人气"
 
 msgid "More Apps by:"
-msgstr ""
+msgstr "更多应用："
 
 msgid "More Info"
-msgstr ""
+msgstr "更多信息"
 
 msgid "Most Expensive (USD)"
 msgstr "最贵的(美元)"
@@ -489,7 +494,7 @@ msgid "Most Relevant"
 msgstr "最相关"
 
 msgid "Music & Audio"
-msgstr ""
+msgstr "音乐与音频"
 
 msgid "My Lists"
 msgstr "我的列表"
@@ -504,13 +509,13 @@ msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
 "wait until the new apps are fetched or use the request form to request that "
 "the app be found early."
-msgstr ""
+msgstr "新应用每小时从官方应用商店获取，你可以等待新应用被获取或者使用请求表来请求应用被更早的发现。"
 
 msgid "Newest"
 msgstr "最新"
 
 msgid "News & Magazines"
-msgstr ""
+msgstr "新闻与杂志"
 
 msgid "Next App:"
 msgstr "下一个应用："
@@ -525,13 +530,13 @@ msgid "No lists, create one!"
 msgstr "没有列表，创建一个！"
 
 msgid "No recent changes"
-msgstr ""
+msgstr "近期无变化"
 
 msgid "No reviews yet!"
 msgstr "还没有评论！"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "没有找到愿望，尝试重新搜索。"
 
 msgid "Oldest"
 msgstr "最旧"
@@ -540,51 +545,51 @@ msgid "Oldest Update"
 msgstr "最旧更新"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
+msgstr "平均，投票者将为这个应用支付 %d 美元。"
 
 msgid "Open Source"
-msgstr ""
+msgstr "开源"
 
 msgid "Other Link"
-msgstr ""
+msgstr "其他链接"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "其他链接不是一个有效的url"
 
 msgid "Personalisation"
-msgstr ""
+msgstr "个性化"
 
 msgid "Please login to send via Caxton"
 msgstr "请登录通过Caxton来发送"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "请为你的愿望指定一个名称或想法"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
-msgstr ""
+msgstr "受欢迎度是基于本月应用得到的4星和5星的评论数量。"
 
 msgid "Previous App:"
 msgstr "上一个应用："
 
 msgid "Price must be between 0 and 20 USD"
-msgstr ""
+msgstr "价格必须在0到20美元之间"
 
 msgid "Productivity"
-msgstr ""
+msgstr "生产率"
 
 msgid "Proprietary"
-msgstr ""
+msgstr "专有软件"
 
 msgid "QR Code"
 msgstr "二维码"
 
 msgid "QR Code:"
-msgstr ""
+msgstr "二维码："
 
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 msgid "Remove this app from your list"
 msgstr "从你的列表里移除这个应用"
@@ -593,7 +598,7 @@ msgid "Save"
 msgstr "保存"
 
 msgid "Science & Engineering"
-msgstr ""
+msgstr "科学与工程"
 
 msgid "Scope"
 msgstr "Scope"
@@ -605,7 +610,7 @@ msgid "Screenshots"
 msgstr "截图"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "搜索愿望："
 
 msgid "Send via Caxton"
 msgstr "通过Caxton发送"
@@ -629,7 +634,7 @@ msgid "Share on Twitter"
 msgstr "在 Twitter 上分享"
 
 msgid "Shopping"
-msgstr ""
+msgstr "购物"
 
 msgid "Similar Apps"
 msgstr "类似的应用"
@@ -641,7 +646,7 @@ msgid "Snappy Apps"
 msgstr "Snappy 应用"
 
 msgid "Social Networking"
-msgstr ""
+msgstr "社交网络"
 
 msgid "Sort Apps By:"
 msgstr "应用排序："
@@ -650,16 +655,16 @@ msgid "Sort By:"
 msgstr "排序方式："
 
 msgid "Sports"
-msgstr ""
+msgstr "体育"
 
 msgid "Star Rating"
-msgstr ""
+msgstr "星排名"
 
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "提交者"
 
 msgid "Support"
 msgstr "支持"
@@ -671,7 +676,7 @@ msgid "Terms:"
 msgstr "条款:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "感谢您的投票！"
 
 msgid "Thank you!"
 msgstr "谢谢你！"
@@ -680,7 +685,7 @@ msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
-msgstr ""
+msgstr "心评级和星评级相似，但它会奖励拥有更多好评的应用。一个拥有更多5星评级的应用会比仅拥有少数5星评级的应用获得更高的心评级。"
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -690,6 +695,8 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
+"心评级是星评级的贝叶斯平均，星评级来自用户给应用留下的评论。贝叶斯平均允许有跟多评论的应用排名比有较少评论的应用好。星评级在1到5之间，0表示还没有被评论"
+"。获取更多关于贝叶斯平均计算的信息，查阅这篇文章。"
 
 msgid "This app is on these lists:"
 msgstr "该应用在这些列表："
@@ -706,6 +713,9 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
+"这个站点是一个 Ubuntu Touch 应用的非官方应用浏览器。所有的应用数据来自公开访问的 api。这个站点由Brian "
+"Douglass维护，并不隶属也不被 Ubuntu 或 Canonical 认可。Ubuntu 和 Canonical 是 Canonical "
+"公司的注册商标。"
 
 msgid "Title A-Z"
 msgstr "标题 A-Z"
@@ -718,6 +728,8 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"在你的 Ubuntu Touch "
+"设备上访问这个网站来安装一个应用。找到你希望安装的应用并点击\"安装\"按钮。你将会来到你设备上的官方应用商店在这里安装应用。"
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
@@ -728,16 +740,16 @@ msgid "Top Apps"
 msgstr "热门应用"
 
 msgid "Total Reviews"
-msgstr ""
+msgstr "总评论"
 
 msgid "Travel & Local"
-msgstr ""
+msgstr "旅游与本地"
 
 msgid "Type:"
 msgstr "类型："
 
 msgid "Universal Accesss/Accessibility"
-msgstr ""
+msgstr "无障碍可用性"
 
 msgid "Updated Apps"
 msgstr "更新应用"
@@ -746,7 +758,7 @@ msgid "Updated:"
 msgstr "更新时间："
 
 msgid "Upvote"
-msgstr ""
+msgstr "赞同"
 
 msgid "User List:"
 msgstr "用户列表："
@@ -755,7 +767,7 @@ msgid "User Reviews"
 msgstr "用户评论"
 
 msgid "Utilities"
-msgstr ""
+msgstr "工具"
 
 msgid "Version:"
 msgstr "版本："
@@ -764,10 +776,10 @@ msgid "View"
 msgstr "查看"
 
 msgid "Vote"
-msgstr ""
+msgstr "投票"
 
 msgid "Weather"
-msgstr ""
+msgstr "天气"
 
 msgid "Web App"
 msgstr "Web 应用"
@@ -785,10 +797,10 @@ msgid "Welcome to uApp Explorer!"
 msgstr "欢迎来到 uApp Explorer！"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "你希望在Ubuntu Touch上见到什么应用？"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "你希望在Ubuntu Touch上见到什么应用？"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "如果我找到版权或商标侵权内容，该怎么做?"
@@ -814,7 +826,7 @@ msgid "Why donate?"
 msgstr "为什么要捐助？"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "愿望清单"
 
 msgid "Yes"
 msgstr "是"
@@ -828,39 +840,35 @@ msgid ""
 msgstr "你没有将帐号连接到Caxton，点击进入你的设置"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "登录后才能投票"
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
+msgstr "你的投票此刻无法保存，请稍后重试"
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "应用"
 
 msgid "apps & scopes"
-msgstr ""
+msgstr "应用与scope"
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "游戏"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "iTunes 链接"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "iTunes 链接不是一个有效的 url"
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "scopes"
 
 msgid "snappy apps"
-msgstr ""
+msgstr "snappy 应用"
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "web 应用"

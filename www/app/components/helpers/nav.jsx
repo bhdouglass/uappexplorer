@@ -36,31 +36,27 @@ module.exports = React.createClass({
   componentWillMount: function() {
     this.debounceSearch = debounce(this.search, 300);
 
-    var search = '';
     if (this.props.location.pathname != '/wishlist' && this.props.location && this.props.location.query && this.props.location.query.q) {
-      search = this.props.location.query.q;
+      this.setState({search: this.props.location.query.q});
       actions.showSearch(true);
     }
-
-    this.setState({
-      search: search,
-      unsearch: search,
-    });
   },
 
-  componentWillUpdate: function(nextProps) {
-    if (nextProps.location.pathname != '/wishlist' && nextProps.location && nextProps.location.query && (this.state.search != nextProps.location.query.q)) {
-      this.setState({
-        search: nextProps.location.query.q,
-        unsearch: nextProps.location.query.q,
-      });
+  componentWillUpdate: function(nextProps, nextState) {
+    if (
+      nextProps.location.pathname != '/wishlist' &&
+      nextProps.location &&
+      nextProps.location.query &&
+      (nextState.search != nextProps.location.query.q) &&
+      (this.props.location.query.q != nextProps.location.query.q) //Check that it actually changed
+    ) {
+      this.setState({search: nextProps.location.query.q});
     }
   },
 
   getInitialState: function() {
     return {
       search: '',
-      unsearch: '',
     };
   },
 
@@ -71,10 +67,7 @@ module.exports = React.createClass({
   toggleSearch: function() {
     if (this.state.showSearch) {
       actions.showSearch(false);
-      this.setState({
-        search: '',
-        unsearch: '',
-      });
+      this.setState({search: ''});
     }
     else {
       actions.showSearch(true);
@@ -94,13 +87,13 @@ module.exports = React.createClass({
   },
 
   searchWrap: function(event) {
-    this.setState({unsearch: event.target.value});
-    this.debounceSearch(event);
+    this.setState({search: event.target.value});
+    this.debounceSearch(event.target.value);
   },
 
-  search: function(event) {
-    if (event.target.value) {
-      this.props.location.query.q = event.target.value;
+  search: function(search) {
+    if (search) {
+      this.props.location.query.q = search;
       if (!this.props.location.query.sort) {
         this.props.location.query.sort = 'relevance';
       }
@@ -213,7 +206,7 @@ module.exports = React.createClass({
             <If value={this.state.showSearch}>
               <div className="visible-xs">
                 <div className="input-group search-box">
-                  <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="search" />
+                  <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.search} ref="search" />
                 </div>
               </div>
             </If>
@@ -223,7 +216,7 @@ module.exports = React.createClass({
             <ul className="nav navbar-nav">
               <If value={this.state.showSearch} element="li">
                 <div className="input-group hidden-xs search-box">
-                  <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.unsearch} ref="searchxs" />
+                  <input type="text" className="form-control" id="search" onChange={this.searchWrap} value={this.state.search} ref="searchxs" />
                 </div>
               </If>
 

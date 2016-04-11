@@ -1,66 +1,61 @@
-# Asturian translation for uappexplorer
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Burmese translation for uappexplorer
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the uappexplorer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2015-11-30 20:08+0000\n"
-"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
-"Language-Team: Asturian <ast@li.org>\n"
+"PO-Revision-Date: 2016-03-10 11:42+0000\n"
+"Last-Translator: AungKhantBo <aungkhantbo@yahoo.com>\n"
+"Language-Team: Burmese <my@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
 "X-Generator: Launchpad (build 17990)\n"
 
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Nun t'esmolezas, ¡hai tamién una versión de baldre!)"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Instalar llevaráte a la tienda d'aplicaciones oficial nun preséu con Ubuntu "
-"Touch"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"*Esta webapp inyecta códigu personalizáu nel sitiu web, lo que pué añadir "
-"otres carauterístiques o ser malino. Usa esta aplicación sólo si tienes "
-"enfotu nel autor."
 
 msgid "- Choose a list -"
-msgstr "-Escueye una llista-"
+msgstr ""
 
 msgid "A wish with the same name already exists"
 msgstr ""
 
 msgid "Add Apps:"
-msgstr "Añadir aplicaciones:"
+msgstr ""
 
 msgid "Add to list:"
-msgstr "Añadir a la llista:"
+msgstr ""
 
 msgid "All"
-msgstr "Too"
+msgstr "အားလုံး"
 
 msgid "All Apps"
-msgstr "Toles aplicaciones"
+msgstr ""
 
 msgid "All Architectures"
-msgstr "Toles arquitectures"
+msgstr ""
 
 msgid "All Frameworks"
 msgstr ""
 
 msgid "All Types"
-msgstr "Tolos tipos"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr ""
@@ -69,10 +64,10 @@ msgid "Amazon link is not a valid url"
 msgstr ""
 
 msgid "Any Architecture"
-msgstr "Cualquier arquitectura"
+msgstr ""
 
 msgid "Any License"
-msgstr "Cualquier llicencia"
+msgstr ""
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -82,53 +77,45 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
-"Les solicitúes pa quitar el conteníu que frañe drechos d'autor o marques "
-"rexistraes tienen de tratase con Canonical o col autor de la app (de vezu "
-"l'autor tien un métodu de contactu recoyíu na llingüeta Encontu de la páxina "
-"de la app). uApp Explorer nun ta vinculáu con Canonical y nun agospia "
-"nenguna app. uApp Explorer sólo amuesa información pública sobro la tienda "
-"d'aplicaciones oficial d'Ubuntu."
 
 msgid "App"
-msgstr "Aplicación"
+msgstr "App"
 
 msgid "App Name"
-msgstr ""
+msgstr "Appအမည်"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Nome de l'aplicación (exemplu: com.ubuntu.developer.example)"
+msgstr "Appအမည်(ဥပမာ:com.ubuntu.developer.example)"
 
 msgid "App Wishlist"
 msgstr ""
 
 msgid "Apps"
-msgstr "Aplicaciones"
+msgstr "Apps"
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Les aplicaciones nun s'instalen dende esti sitio, sinón per aciu de la "
-"tienda oficial."
 
 msgid "Apps:"
-msgstr "Aplicaciones:"
+msgstr ""
 
 msgid "Architecture:"
-msgstr "Arquitectura:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
-msgstr ""
+msgstr "ဤစာရင်းကိုဖျက်လိုသည်မှာသေချာပါသလား"
 
 msgid "Article"
-msgstr ""
+msgstr "ဆောင်းပါး"
 
 msgid "Author"
-msgstr ""
+msgstr "စာရေးဆရာ"
 
 msgid "Books & Comics"
-msgstr ""
+msgstr "စာအုပ်များနှင့်ရုပ်ပြများ"
 
 msgid "Browse"
-msgstr ""
+msgstr "ရှာဖွေလေ့လာ"
 
 msgid "Browse Apps"
 msgstr ""
@@ -143,7 +130,7 @@ msgid "Browse Web Apps"
 msgstr ""
 
 msgid "Business"
-msgstr ""
+msgstr "စီးပွားရေး"
 
 msgid "Buy the Webapp"
 msgstr ""
@@ -155,7 +142,7 @@ msgid "By:"
 msgstr ""
 
 msgid "Cancel"
-msgstr ""
+msgstr "ပယ်ဖျက်မည်"
 
 msgid "Category:"
 msgstr ""
@@ -185,25 +172,26 @@ msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
 
 msgid "Could not create a new list at this time, please try again later"
-msgstr ""
+msgstr "ယခုအချိန်တွင်စာရင်းအသစ်ကိုမပြုလုပ်နိုင်ပါ။နောက်မှပြန်ကြိုးစားပါ"
 
 msgid "Could not create a new wish at this time, please try again later"
 msgstr ""
 
 msgid "Could not delete the list at this time, please try again later"
-msgstr ""
+msgstr "ယခုအချိန်တွင် စာရင်းကိုမဖျက်နိုင်ပါ။နောက်မှပြန်ကြိုးစားပါ"
 
 msgid "Could not download app data, click to retry"
 msgstr ""
+"appအချက်အလက်များကိုdownloadမပြုလုပ်နိုင်ပါ။ထပ်မံ၍ကြိုးစားကြည့်ရန် နှိပ်ပါ"
 
 msgid "Could not download app list, click to retry"
-msgstr ""
+msgstr "appစာရင်းကိုdownloadမပြုလုပ်နိုင်ပါ။ထပ်မံ၍ကြိုးစားကြည့်ရန် နှိပ်ပါ"
 
 msgid "Could not find app"
-msgstr ""
+msgstr "appရှာမတွေ့ပါ"
 
 msgid "Could not find the requested app"
-msgstr ""
+msgstr "တောင်းဆိုထားသောappရှာမတွေ့ပါ"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr ""
@@ -233,7 +221,7 @@ msgid "Create List"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "ဖျက်ရန်"
 
 msgid "Description"
 msgstr ""
@@ -245,10 +233,10 @@ msgid "Developer/Company"
 msgstr ""
 
 msgid "Donate"
-msgstr ""
+msgstr "လှူဒါန်းရန်"
 
 msgid "Donate via Bitcoin"
-msgstr ""
+msgstr "Bitcoinမှတဆင့်လှူဒါန်းရန်"
 
 msgid "Donate via Gratipay"
 msgstr ""

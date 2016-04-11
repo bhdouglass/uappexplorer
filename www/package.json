@@ -17,6 +17,7 @@
     "axios": "^0.7.0",
     "baobab": "^2.1.0",
     "baobab-react": "^1.0.0",
+    "bootstrap": "^3.3.6",
     "cookie-cutter": "^0.1.1",
     "debounce": "^1.0.0",
     "history": "^1.13.1",

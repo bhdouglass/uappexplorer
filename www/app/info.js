@@ -298,13 +298,17 @@ module.exports = {
       'code': 'pt_BR',
       'untranslated': 0,
     }, {
+      'name': 'Burmese',
+      'code': 'my',
+      'untranslated': 243,
+    }, {
       'name': 'Catalan',
       'code': 'ca',
       'untranslated': 0,
     }, {
       'name': 'Chinese (Simplified)',
       'code': 'zh_CN',
-      'untranslated': 64,
+      'untranslated': 0,
     }, {
       'name': 'Czech',
       'code': 'cs',
@@ -312,7 +316,7 @@ module.exports = {
     }, {
       'name': 'Dutch',
       'code': 'nl',
-      'untranslated': 218,
+      'untranslated': 0,
     }, {
       'name': 'English (UK)',
       'code': 'en_GB',
@@ -328,7 +332,7 @@ module.exports = {
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 6,
+      'untranslated': 0,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -348,7 +352,7 @@ module.exports = {
     }, {
       'name': 'Polish',
       'code': 'pl',
-      'untranslated': 39,
+      'untranslated': 35,
     }, {
       'name': 'Portuguese',
       'code': 'pt',
@@ -373,6 +377,10 @@ module.exports = {
       'name': 'Swedish',
       'code': 'sv',
       'untranslated': 188,
+    }, {
+      'name': 'Turkish',
+      'code': 'tr',
+      'untranslated': 207,
     }, {
       'name': 'Uyghur',
       'code': 'ug',

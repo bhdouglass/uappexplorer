@@ -136,9 +136,9 @@ module.exports = React.createClass({
 
             <If value={!this.state.auth.loggedin}>
               <div className="pull-right">
-                <a onClick={actions.openModal.bind(this, 'login')} className="clickable btn btn-success">
+                <Link to="/login" className="clickable btn btn-success">
                   {i18n.t('Login to make a wish')}
-                </a>
+                </Link>
               </div>
             </If>
           </div>

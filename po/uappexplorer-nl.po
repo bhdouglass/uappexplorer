@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2015-12-22 20:14+0000\n"
-"Last-Translator: Jan Claeys <ubuntu@janc.be>\n"
+"PO-Revision-Date: 2016-03-29 11:56+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-05 14:08+0000\n"
-"X-Generator: Launchpad (build 17936)\n"
+"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
+"X-Generator: Launchpad (build 17990)\n"
 "Language: nl\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -25,18 +25,22 @@ msgstr "(Wees gerust, er is ook een gratis versie!)"
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Install brengt je naar de officiële appwinkel op een Ubuntu Touch apparaat"
+"*Installeren brengt u naar de officiële app-winkel op een Ubuntu Touch-"
+"apparaat"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
+"*Deze webapp voegt extra code toe aan een website, wat kan zorgen voor extra "
+"mogelijkheden, maar het kan ook gevaarlijk zijn. Gebruik deze app alleen als "
+"u de auteur vertrouwt."
 
 msgid "- Choose a list -"
 msgstr "- Kies een lijst -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Er bestaat al een wens met dezelfde naam"
 
 msgid "Add Apps:"
 msgstr "Apps toevoegen:"
@@ -51,13 +55,13 @@ msgid "All Apps"
 msgstr "Alle apps"
 
 msgid "All Architectures"
-msgstr ""
+msgstr "Alle processorarchitecturen"
 
 msgid "All Frameworks"
 msgstr "Alle frameworks"
 
 msgid "All Types"
-msgstr "Alle types"
+msgstr "Alle soorten"
 
 msgid "Amazon Link"
 msgstr "Link naar Amazon"
@@ -79,6 +83,12 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
+"Verzoeken om inhoud te verwijderen die inbreuk maakt op copyright en/of "
+"handelsmerken, moeten worden ingediend bij Canonical of de app-ontwikkelaar. "
+"Een auteur heeft meestal een contactmogelijkheid, te vinden op het tabblad "
+"Ondersteuning op de app-pagina. uApp Explorer is niet betrokken bij "
+"Canonical en host geen apps. uApp Explorer geeft alleen openbare informatie "
+"weer over de officiële Ubuntu Touch app-winkel."
 
 msgid "App"
 msgstr "App"
@@ -107,7 +117,7 @@ msgid "Architecture:"
 msgstr "Architectuur:"
 
 msgid "Are you sure you want to delete this list?"
-msgstr "Ben je zeker dat je deze lijst wil verwijderen?"
+msgstr "Weet u zeker dat u deze lijst wilt verwijderen?"
 
 msgid "Article"
 msgstr "Artikel"
@@ -189,69 +199,77 @@ msgstr ""
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
+"De lijst kan momenteel niet worden verwijderd; probeer het later opnieuw"
 
 msgid "Could not download app data, click to retry"
 msgstr ""
+"De appgegevens konden niet worden gedownload; klik om opnieuw te proberen"
 
 msgid "Could not download app list, click to retry"
-msgstr ""
+msgstr "De applijst kan niet worden gedownload; klik om opnieuw te proberen"
 
 msgid "Could not find app"
-msgstr ""
+msgstr "De app kan niet worden gevonden"
 
 msgid "Could not find the requested app"
-msgstr ""
+msgstr "De opgevraagde app kan niet worden gevonden"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr ""
+"Deze lijst kan niet worden gevonden; misschien bestaat de lijst niet meer"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "De wens kan niet worden gevonden"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
+"De lijsten kunnen momenteel niet worden geladen; klik om opnieuw te proberen"
 
 msgid "Could not load wishes at this time, click to retry"
 msgstr ""
+"De wensen kunnen momenteel niet worden geladen; klik om opnieuw te proberen"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
+"De app kon niet worden verwijderd van deze lijst; probeer het later opnieuw"
 
 msgid "Could not save your settings at this time, please try again later"
 msgstr ""
+"Uw instellingen kunnen niet worden opgeslagen; probeer het later opnieuw"
 
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
+"De lijst kan momenteel niet worden bijgewerkt; probeer het later opnieuw"
 
 msgid "Create"
-msgstr ""
+msgstr "Creëren"
 
 msgid "Create List"
-msgstr ""
+msgstr "Lijst creëren"
 
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 msgid "Description"
-msgstr ""
+msgstr "Omschrijving"
 
 msgid "Developer Tools"
-msgstr ""
+msgstr "Hulpmiddelen voor ontwikkelaars"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "Ontwikkelaar/Bedrijf"
 
 msgid "Donate"
-msgstr ""
+msgstr "Doneren"
 
 msgid "Donate via Bitcoin"
-msgstr ""
+msgstr "Doneren met Bitcoin"
 
 msgid "Donate via Gratipay"
-msgstr ""
+msgstr "Doneren met Gratipay"
 
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Doneren met PayPal"
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -259,437 +277,464 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
+"Doneren aan uApp Explorer is slechts één manier om te helpen met het "
+"verbeteren ervan. Als u ervoor kiest om te doneren, zal uw geld geïnvesteerd "
+"worden in de kosten voor de betaling van de infrastructuur. Dit omvat "
+"domeinnamen, hosting, etc. uApp Explorer zal altijd een gratis en open bron-"
+"dienst blijven, ongeacht het aantal donaties."
 
 msgid "Donation Web App"
-msgstr ""
+msgstr "Donatie-webapp"
 
 msgid "Download"
-msgstr ""
+msgstr "Downloaden"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Omlaag stemmen"
 
 msgid "Edit"
-msgstr ""
+msgstr "Bewerken"
 
 msgid "Edit List"
-msgstr ""
+msgstr "Lijst bewerken"
 
 msgid "Education"
-msgstr ""
+msgstr "Educatie"
 
 msgid "Email Support"
-msgstr ""
+msgstr "E-mail-ondersteuning"
 
 msgid "Entertainment"
-msgstr ""
+msgstr "Amusement"
 
 msgid "Essential Apps"
-msgstr ""
+msgstr "Essentiële apps"
 
 msgid "FAQ"
-msgstr ""
+msgstr "Veelgestelde vragen (FAQ)"
 
 msgid "File Size:"
-msgstr ""
+msgstr "Bestandsgrootte:"
 
 msgid "Filters"
-msgstr ""
+msgstr "Filters"
 
 msgid "Finance"
-msgstr ""
+msgstr "Financiën"
 
 msgid "Find"
-msgstr ""
+msgstr "Zoeken"
 
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
+"Zoek naar een app die nog niet is geïndexeerd uit de officiële appwinkel."
 
 msgid "Food & Drink"
-msgstr ""
+msgstr "Eten & Drinken"
 
 msgid "For version:"
-msgstr ""
+msgstr "Voor versie:"
 
 msgid "Found the requested app"
-msgstr ""
+msgstr "De opgevraagde app is gevonden"
 
 msgid "Framework:"
-msgstr ""
+msgstr "Framework:"
 
 msgid "Free"
-msgstr ""
+msgstr "Gratis"
 
 msgid "Games"
-msgstr ""
+msgstr "Spellen"
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "Installeer een QR-code-scanner op uw Ubuntu Touch-apparaat"
 
 msgid "Go there now"
-msgstr ""
+msgstr "Ga naar de scannerpagina"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Google Play-link"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "De Google Play-link is geen geldige URL"
 
 msgid "Graphics"
-msgstr ""
+msgstr "Grafisch"
 
 msgid "Grid"
-msgstr ""
+msgstr "Raster"
 
 msgid "Health & Fitness"
-msgstr ""
+msgstr "Gezondheid & Fitness"
 
 msgid "Heart Rating"
-msgstr ""
+msgstr "Hartwaardering"
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr ""
+"Hartwaarderingen worden berekend uit de sterwaarderingen. Een 5 sterren-"
+"waardering is gelijk aan 1 hart-punt, 4 sterren is 0,5 harten, 3 sterren is "
+"0 harten, 2 sterren is -0,5 harten en 1 ster is -1 harten."
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "Help deze wens bij het verkrijgen van meer stemmen!"
 
 msgid "Help translate!"
-msgstr ""
+msgstr "Help met vertalen!"
 
 msgid "Highest Heart Rating"
-msgstr ""
+msgstr "Hoogste hart-waardering"
 
 msgid "Highest Star Rating"
-msgstr ""
+msgstr "Hoogste ster-waardering"
 
 msgid "How can I help improve this site?"
-msgstr ""
+msgstr "Hoe kan ik helpen met het verbeteren van deze website?"
 
 msgid "How do I install apps?"
-msgstr ""
+msgstr "Hoe installeer ik apps?"
 
 msgid "How is the popularity determined?"
-msgstr ""
+msgstr "Hoe wordt de populariteit berekend?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "Hoeveel zou u willen betalen voor deze app?"
 
 msgid "I just published my app, why don't I see it?"
 msgstr ""
+"Waarom zie ik mijn app niet, terwijl ik deze zojuist heb gepubliceerd?"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "Mijn wens is..."
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "Mijn wens is: "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "Idee-samenvatting"
 
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr ""
+msgstr "Als u code wilt bijdragen, bezoek dan de GitHub-broncodepagina."
 
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
+"Als u wilt helpen bij het vertalen, bezoek dan de Launchpad-projectpagina."
 
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
+"Als u bugs wilt rapporteren of ideeën wilt aandragen, bezoek dan de GitHub "
+"Issues-pagina."
 
 msgid "If you would like to contact the author, visit his website."
-msgstr ""
+msgstr "Als u contact wilt opnemen met de auteur, bezoek dan zijn website."
 
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
+"Als u finanicieel wilt bijdragen, kunt u op meerdere manieren doneren."
 
 msgid "Info"
-msgstr ""
+msgstr "Informatie"
 
 msgid "Install"
-msgstr ""
+msgstr "Installeren"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "Bestaat deze app al?"
 
 msgid "It is possible to have a negative heart rating."
-msgstr ""
+msgstr "Het is mogelijk om een negatieve hart-waardering te hebben."
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "iTunes-link"
 
 msgid "Language"
-msgstr ""
+msgstr "Taal"
 
 msgid "Latest Update"
-msgstr ""
+msgstr "Recentste update"
 
 msgid "Least Popular (This Month)"
-msgstr ""
+msgstr "Minst populair (deze maand)"
 
 msgid "License:"
-msgstr ""
+msgstr "Licentie:"
 
 msgid "Lifestyle"
-msgstr ""
+msgstr "Levensstijl"
 
 msgid "List"
-msgstr ""
+msgstr "Lijst"
 
 msgid "List Name:"
-msgstr ""
+msgstr "Lijstnaam;"
 
 msgid "Load more reviews"
-msgstr ""
+msgstr "Laad meer reviews"
 
 msgid "Loading reviews..."
-msgstr ""
+msgstr "Bezig met laden van reviews..."
 
 msgid "Log In"
-msgstr ""
+msgstr "Inloggen"
 
 msgid "Log Out"
-msgstr ""
+msgstr "Uitloggen"
 
 msgid "Log in via Ubuntu"
-msgstr ""
+msgstr "Inloggen met uw Ubuntu-account"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Log in als u een wens wilt indienen"
 
 msgid "Lowest Heart Rating"
-msgstr ""
+msgstr "Laagste hart-waardering"
 
 msgid "Lowest Star Rating"
-msgstr ""
+msgstr "Laagste ster-waardering"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Dien een wens in"
 
 msgid "Media & Video"
-msgstr ""
+msgstr "Media & Video"
 
 msgid "Medical"
-msgstr ""
+msgstr "Medisch"
 
 msgid "Missing an app?"
-msgstr ""
+msgstr "Mist u een app?"
 
 msgid "Monthly Popularity"
-msgstr ""
+msgstr "Maandelijkse populariteit"
 
 msgid "More Apps by:"
-msgstr ""
+msgstr "Meer apps van:"
 
 msgid "More Info"
-msgstr ""
+msgstr "Meer informatie"
 
 msgid "Most Expensive (USD)"
-msgstr ""
+msgstr "Duurste (USD)"
 
 msgid "Most Popular (This Month)"
-msgstr ""
+msgstr "Populairste (deze maand)"
 
 msgid "Most Relevant"
-msgstr ""
+msgstr "Relevantste"
 
 msgid "Music & Audio"
-msgstr ""
+msgstr "Muziek & Audio"
 
 msgid "My Lists"
-msgstr ""
+msgstr "Mijn lijsen"
 
 msgid "New Apps"
-msgstr ""
+msgstr "Nieuwe apps"
 
 msgid "New List"
-msgstr ""
+msgstr "Nieuwe lijst"
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
 "wait until the new apps are fetched or use the request form to request that "
 "the app be found early."
 msgstr ""
+"Nieuwe apps worden elk uur geïndexeerd vanuit de appwinkel. U kunt wachten "
+"totdat de nieuwe apps zijn geïndexeerd of het aanvraagformulier gebruiken om "
+"de app eerder te laten indexeren."
 
 msgid "Newest"
-msgstr ""
+msgstr "Nieuwste"
 
 msgid "News & Magazines"
-msgstr ""
+msgstr "Nieuws & Magazines"
 
 msgid "Next App:"
-msgstr ""
+msgstr "Volgende app:"
 
 msgid "No"
-msgstr ""
+msgstr "Nee"
 
 msgid "No apps found, try searching again."
 msgstr ""
+"Er konden geen apps worden gevonden; probeer het opnieuw met een andere "
+"zoekopdracht."
 
 msgid "No lists, create one!"
-msgstr ""
+msgstr "Er zijn geen lijsten, creëer er één."
 
 msgid "No recent changes"
-msgstr ""
+msgstr "Geen recente wijzigingen"
 
 msgid "No reviews yet!"
-msgstr ""
+msgstr "Er zijn nog geen reviews!"
 
 msgid "No wishes found, try searching again."
 msgstr ""
+"Er konden geen wensen worden gevonden; probeer het opnieuw met een andere "
+"zoekopdracht."
 
 msgid "Oldest"
-msgstr ""
+msgstr "Oudste"
 
 msgid "Oldest Update"
-msgstr ""
+msgstr "Oudste update"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
+msgstr "Stemmers zijn bereid om gemiddeld %d USD te betalen voor deze app."
 
 msgid "Open Source"
-msgstr ""
+msgstr "Open bron"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Overige link"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "De overige link is geen geldige URL"
 
 msgid "Personalisation"
-msgstr ""
+msgstr "Personalisatie"
 
 msgid "Please login to send via Caxton"
-msgstr ""
+msgstr "Log in via Caxton om te kunnen versturen"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Geef een naam of idee op voor uw wens"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
 msgstr ""
+"De populariteit is gebaseerd op het aantal gegeven 4- en 5-sterren-reviews "
+"gedurende de huidige maand."
 
 msgid "Previous App:"
-msgstr ""
+msgstr "Vorige app:"
 
 msgid "Price must be between 0 and 20 USD"
-msgstr ""
+msgstr "De prijs moet liggen tussen 0 en 20 USD"
 
 msgid "Productivity"
-msgstr ""
+msgstr "Productiviteit"
 
 msgid "Proprietary"
-msgstr ""
+msgstr "Niet-vrij"
 
 msgid "QR Code"
-msgstr ""
+msgstr "QR-code"
 
 msgid "QR Code:"
-msgstr ""
+msgstr "QR-code:"
 
 msgid "Reference"
-msgstr ""
+msgstr "Verwijzing"
 
 msgid "Remove this app from your list"
-msgstr ""
+msgstr "Verwijder deze app uit uw lijst"
 
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
 
 msgid "Science & Engineering"
-msgstr ""
+msgstr "Wetenschap & Techniek"
 
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 msgid "Scopes"
-msgstr ""
+msgstr "Scopes"
 
 msgid "Screenshots"
-msgstr ""
+msgstr "Schermafbeeldingen"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Zoek een wens:"
 
 msgid "Send via Caxton"
-msgstr ""
+msgstr "Versturen via Caxton"
 
 msgid "Sent via Caxton"
-msgstr ""
+msgstr "Verstuurd via Caxton"
 
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Delen op Facebook"
 
 msgid "Share on Google+"
-msgstr ""
+msgstr "Delen op Google+"
 
 msgid "Share on Reddit"
-msgstr ""
+msgstr "Delen op Reddit"
 
 msgid "Share on Twitter"
-msgstr ""
+msgstr "Delen op Twitter"
 
 msgid "Shopping"
-msgstr ""
+msgstr "Winkelen"
 
 msgid "Similar Apps"
-msgstr ""
+msgstr "Vergelijkbare apps"
 
 msgid "Snappy App"
-msgstr ""
+msgstr "Snappy-app"
 
 msgid "Snappy Apps"
-msgstr ""
+msgstr "Snappy-apps"
 
 msgid "Social Networking"
-msgstr ""
+msgstr "Sociale netwerken"
 
 msgid "Sort Apps By:"
-msgstr ""
+msgstr "Apps sorteren op:"
 
 msgid "Sort By:"
-msgstr ""
+msgstr "Sorteren op:"
 
 msgid "Sports"
-msgstr ""
+msgstr "Sport"
 
 msgid "Star Rating"
-msgstr ""
+msgstr "Sterwaardering"
 
 msgid "Submit"
-msgstr ""
+msgstr "Versturen"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Ingediend door"
 
 msgid "Support"
-msgstr ""
+msgstr "Ondersteunong"
 
 msgid "Support:"
-msgstr ""
+msgstr "Ondersteuning:"
 
 msgid "Terms:"
-msgstr ""
+msgstr "Voorwaarden:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Bedankt voor het stemmen!"
 
 msgid "Thank you!"
-msgstr ""
+msgstr "Dank u wel!"
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
+"De hartwaardering is vergelijkbaar met de sterwaardering. Echter, de "
+"hartwaardering beloont apps voor het hebben van meer goede recensies. Een "
+"app met meer 5-sterrenwaarderingen heeft een hogere hartwaardering dan een "
+"app met slechts enkele 5-sterrenwaarderingen."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -699,15 +744,23 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
+"De sterwaardering is het Bayesiaans gemiddelde van de sterwaarderingen die "
+"de gebruiker geeft aan een app wanneer ze een recensie achter laten. Het "
+"Bayesiaans gemiddelde stelt apps met meer recensies in staat om hoger in "
+"rang te staan dan apps met minder recensies. De sterwaardering kan liggen "
+"tussen 1 en 5. Een 0 betekent dat er nog geen recensies zijn. Als u meer "
+"wilt weten over de berekening van het Bayesiaans gemiddelde, kunt u dit "
+"artikel lezen."
 
 msgid "This app is on these lists:"
-msgstr ""
+msgstr "Deze app staat op deze lijsten:"
 
 msgid "This is an unofficial app viewer for Ubuntu Touch apps."
 msgstr ""
+"Dit is een niet-officiële app voor het weergeven van Ubuntu Touch-apps."
 
 msgid "This list is empty!"
-msgstr ""
+msgstr "Deze lijst is leeg!"
 
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for "
@@ -715,161 +768,177 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
+"Deze website is een onofficiële app-catalogus voor Ubuntu Touch-apps. Alle "
+"app-gegevens worden opgehaald middels een openbare API. Deze website wordt "
+"onderhouden door Brian Douglass. De website is niet aangesloten bij en wordt "
+"niet aangemoedigd door Ubuntu of Canonical. Ubuntu en Canonical zijn "
+"geregistreerde handelsmerken van Canonical Ltd."
 
 msgid "Title A-Z"
-msgstr ""
+msgstr "Titel A-Z"
 
 msgid "Title Z-A"
-msgstr ""
+msgstr "Titel Z-A"
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Als u een app wilt installeren, moet u deze website bezoeken op uw Ubuntu "
+"Touch-apparaat. Navigeer naar de te installeren app en druk op de "
+"\"Installeren\"-knop. U wordt dan naar de officiële app-winkel op uw "
+"apparaat geleid van waaruit u de app kunt installeren."
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
+"Om een probleem te rapporteren of een idee aan te dragen, moet u naar de "
+"Issues-pagina, van deze website, op GitHub gaan."
 
 msgid "Top Apps"
-msgstr ""
+msgstr "Top-apps"
 
 msgid "Total Reviews"
-msgstr ""
+msgstr "Totaal aantal reviews"
 
 msgid "Travel & Local"
-msgstr ""
+msgstr "Reizen & Lokaal"
 
 msgid "Type:"
-msgstr ""
+msgstr "Soort:"
 
 msgid "Universal Accesss/Accessibility"
-msgstr ""
+msgstr "Universele toegang/Toegankelijkheid"
 
 msgid "Updated Apps"
-msgstr ""
+msgstr "Bijgewerkte apps"
 
 msgid "Updated:"
-msgstr ""
+msgstr "Bijgewerkt op:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Omhoog stemmen"
 
 msgid "User List:"
-msgstr ""
+msgstr "Gebruikerslijst:"
 
 msgid "User Reviews"
-msgstr ""
+msgstr "Gebruikerslijst"
 
 msgid "Utilities"
-msgstr ""
+msgstr "Hulpprogramma's"
 
 msgid "Version:"
-msgstr ""
+msgstr "Versie:"
 
 msgid "View"
-msgstr ""
+msgstr "Weergeven"
 
 msgid "Vote"
-msgstr ""
+msgstr "Stemmen"
 
 msgid "Weather"
-msgstr ""
+msgstr "Weer"
 
 msgid "Web App"
-msgstr ""
+msgstr "Web-app"
 
 msgid "Web Apps"
-msgstr ""
+msgstr "Web-apps"
 
 msgid "Website:"
-msgstr ""
+msgstr "Website:"
 
 msgid "Welcome"
-msgstr ""
+msgstr "Welkom"
 
 msgid "Welcome to uApp Explorer!"
-msgstr ""
+msgstr "Welkom bij uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Welke app zou u graag willen zien op Ubuntu Touch?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Welke apps zou u graag willen zien op Ubuntu Touch?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
+"Wat moet ik doen als ik inhoud vind die inbruek maakt op copyright en/of "
+"handelsmerken?"
 
 msgid "What is the heart rating?"
-msgstr ""
+msgstr "Wat is de hartwaardering?"
 
 msgid "What is the star rating?"
-msgstr ""
+msgstr "Wat is de sterwaardering?"
 
 msgid "What is this site?"
-msgstr ""
+msgstr "Wat is de website?"
 
 msgid "Where can I report a problem or request a new feature?"
-msgstr ""
+msgstr "Waar kan ik een probleem rapporteren of een idee aandragen?"
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr ""
+msgstr "Of u nu doneert of niet, ik waardeer uw ondersteuning. Bedankt!"
 
 msgid "Why donate?"
-msgstr ""
+msgstr "Waarom doneren?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Wensenlijst"
 
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 msgid "You are already connected via Caxton!"
-msgstr ""
+msgstr "U bent al verbonden via Caxton!"
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
+"U heeft uw account niet verbonden met Caxton; klik om naar uw instellingen "
+"te gaan"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "U moet ingelogd zijn om te kunnen stemmen"
 
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
+"Uw stem kan momenteel niet worden opgeslagen; probeer het later opnieuw"
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "apps"
+msgstr[1] "apps"
 
 msgid "apps & scopes"
-msgstr ""
+msgstr "apps&scopes"
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "spellen"
+msgstr[1] "spellen"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "iTunes-link"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "De iTunes-link is geen geldige URL"
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "scopes"
+msgstr[1] "scopes"
 
 msgid "snappy apps"
-msgstr ""
+msgstr "snappy-apps"
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "web-apps"
+msgstr[1] "web-apps"
