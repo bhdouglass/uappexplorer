@@ -48,7 +48,7 @@ if (process.argv[2]) {
     wish.normalizeVotes(callback);
   }
   else {
-    spider.parsePackage(process.argv[2], function(err, pkg) {
+    spider.parsePackage(process.argv[2], null, function(err, pkg) {
       elasticsearchPackage.upsert(pkg, callback);
     });
   }

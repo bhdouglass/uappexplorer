@@ -39,6 +39,7 @@ var packageSchema = mongoose.Schema({
   translations: {},
   type: String,
   types: {type: [String], index: true},
+  ubuntu_id: String,
   url: String,
   version: String,
   videos: [String],

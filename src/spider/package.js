@@ -42,11 +42,12 @@ var propertyMap = {
   support:        'support_url',
   terms:          'terms_of_service',
   title:          'title',
+  translations:   'translations',
   type:           'content',
+  ubuntu_id:      'package_id',
   version:        'version',
   videos:         'video_urls',
   website:        'website',
-  translations:   'translations',
 };
 
 /*function cloudinaryUpload(pkg, data) {
@@ -244,9 +245,22 @@ function mongoToElasticsearch(removals, callback) {
   });
 }
 
-function parsePackage(name, callback) {
+function callParsePackage(name, callback) {
+  if (_.isArray(name)) {
+    parsePackage(name[0], name[1], callback);
+  }
+  else {
+    parsePackage(name, null, callback);
+  }
+}
+
+function parsePackage(name, ubuntu_id, callback) { //TODO update all calling functions && test removals
   var url = config.spider.packages_api + name;
-  logger.info('parsing ' + url);
+  if (ubuntu_id) {
+    url = config.spider.packages_api + ubuntu_id;
+  }
+
+  logger.debug('parsing ' + url);
 
   if (!name || name == 'undefined') { //Sent a blank from the request app page
     callback('No package specified to parse');
@@ -291,7 +305,7 @@ function parsePackage(name, callback) {
                   callback(err);
                 }
 
-                logger.info('saved ' + name);
+                logger.debug('saved ' + name);
                 callback(null, pkg);
               });
             }
@@ -334,50 +348,132 @@ function fetchList(callback) {
 function parsePackageUpdates(callback) {
   logger.info('parsing package updates');
   fetchList(function(list) {
-    var newList = [];
-    async.each(list, function(data, callback) {
-      db.Package.findOne({name: data.name}, function(err, pkg) {
-        if (err) {
-          logger.error('error finding ' + data.name + ': ' + err);
-          callback(err);
-        }
-        else if (!pkg || pkg.version != data.version) {
-          newList.push(data.name);
-          callback(null);
-        }
-        else {
-          callback(null);
-        }
-      });
-    }, function(err) {
+    var nameList = [];
+    var updateList = [];
+    var nameMap = {};
+
+    _.forEach(list, function(data) {
+      nameList.push(data.name);
+      nameMap[data.name] = data;
+    });
+
+    db.Package.find({}, function(err, packages) {
       if (err) {
         logger.error(err);
       }
+      else {
+        //Remove any missing apps
+        removePackages(packages, nameList);
 
-      logger.info('parsing ' + newList.length + '/' + list.length + ' updates');
-      async.eachSeries(newList, parsePackage, function(err) {
+        var existingNames = [];
+        //Update any packages with different versions
+        _.forEach(packages, function(pkg) {
+          existingNames.push(pkg.name);
+
+          if (nameMap[pkg.name]) {
+            if (pkg.version != nameMap[pkg.name].version) {
+              if (nameMap[pkg.name].package_id) {
+                updateList.push([pkg.name, nameMap[pkg.name].package_id]);
+              }
+              else {
+                updateList.push(pkg.name);
+              }
+
+              logger.info('new version: ' + pkg.name + ' ' + pkg.version + ' > ' + nameMap[pkg.name].version);
+            }
+          }
+        });
+
+        //Pull in any new packages
+        _.forEach(nameList, function(name) {
+          if (existingNames.indexOf(name) == -1) {
+            if (nameMap[name].package_id) {
+              updateList.push([name, nameMap[name].package_id]);
+            }
+            else {
+              updateList.push(name);
+            }
+
+            logger.info('new app: ' + name);
+          }
+        });
+
+        logger.info('parsing ' + updateList.length + '/' + list.length + ' updates');
+        async.each(updateList, callParsePackage, function(err) {
+          if (err) {
+            logger.error('Error parsing updates: ' + err);
+          }
+
+          async.eachSeries(updateList, packageParser.parseClickPackageByName, function(err) {
+            if (err) {
+              logger.error(err);
+            }
+
+            mongoToElasticsearch(null, callback);
+          });
+        });
+      }
+    });
+  });
+}
+
+function removePackages(packages, list) {
+  var removals = [];
+  _.forEach(packages, function(pkg) {
+    if (list.indexOf(pkg.name) == -1) {
+      logger.info('deleting ' + pkg.name);
+
+      removals.push(pkg);
+      pkg.remove(function(err) {
         if (err) {
           logger.error(err);
         }
-
-        async.eachSeries(newList, packageParser.parseClickPackageByName, function(err) {
-          if (err) {
-            logger.error(err);
-          }
-
-          mongoToElasticsearch(null, callback);
-        });
       });
-    });
+
+      //Also remove from elasticsearch
+      elasticsearchPackage.remove(pkg, function(err) {
+        if (err) {
+          logger.error(err);
+        }
+        else {
+          logger.debug('deleted elasticsearch for ' + pkg.name);
+        }
+      });
+
+      //Also remove review
+      db.Review.findOne({name: pkg.name}, function(err, rev) {
+        if (err) {
+          logger.error(err);
+        }
+        else if (rev) {
+          rev.remove(function(err) {
+            if (err) {
+              logger.error(err);
+            }
+            else {
+              logger.debug('deleted reviews for ' + pkg.name);
+            }
+          });
+        }
+      });
+    }
   });
 }
 
 function parsePackages(callback) {
   logger.info('parsing all packages');
   fetchList(function(list) {
-    var newList = [];
+    var removeCheckList = [];
+    var updateList = [];
     _.forEach(list, function(data) {
-      newList.push(data.name);
+      removeCheckList.push(data.name);
+
+      if (data.package_id) {
+        updateList.push([data.name, data.package_id]);
+      }
+      else {
+        updateList.push(data.name);
+      }
     });
 
     //Remove mising packages
@@ -386,48 +482,9 @@ function parsePackages(callback) {
         logger.error(err);
       }
       else {
-        var removals = [];
-        _.forEach(packages, function(pkg) {
-          if (newList.indexOf(pkg.name) == -1) {
-            logger.info('deleting ' + pkg.name);
+        removePackages(packages, removeCheckList);
 
-            removals.push(pkg);
-            pkg.remove(function(err) {
-              if (err) {
-                logger.error(err);
-              }
-            });
-
-            //Also remove from elasticsearch
-            elasticsearchPackage.remove(pkg, function(err) {
-              if (err) {
-                logger.error(err);
-              }
-              else {
-                logger.debug('deleted elasticsearch for ' + pkg.name);
-              }
-            });
-
-            //Also remove review
-            db.Review.findOne({name: pkg.name}, function(err, rev) {
-              if (err) {
-                logger.error(err);
-              }
-              else if (rev) {
-                rev.remove(function(err) {
-                  if (err) {
-                    logger.error(err);
-                  }
-                  else {
-                    logger.debug('deleted reviews for ' + pkg.name);
-                  }
-                });
-              }
-            });
-          }
-        });
-
-        async.eachSeries(newList, parsePackage, function(err) {
+        async.eachSeries(updateList, callParsePackage, function(err) {
           if (err) {
             logger.error(err);
           }
