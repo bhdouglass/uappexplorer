@@ -363,7 +363,7 @@ function parsePackageUpdates(callback) {
       }
       else {
         //Remove any missing apps
-        removePackages(packages, nameList);
+        var removals = removePackages(packages, nameList);
 
         var existingNames = [];
         //Update any packages with different versions
@@ -409,7 +409,7 @@ function parsePackageUpdates(callback) {
               logger.error(err);
             }
 
-            mongoToElasticsearch(null, callback);
+            mongoToElasticsearch(removals, callback);
           });
         });
       }
@@ -458,6 +458,8 @@ function removePackages(packages, list) {
       });
     }
   });
+
+  return removals;
 }
 
 function parsePackages(callback) {
@@ -482,7 +484,7 @@ function parsePackages(callback) {
         logger.error(err);
       }
       else {
-        removePackages(packages, removeCheckList);
+        var removals = removePackages(packages, removeCheckList);
 
         async.eachSeries(updateList, callParsePackage, function(err) {
           if (err) {

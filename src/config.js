@@ -53,6 +53,10 @@ var config = {
     reviews_api: 'https://reviews.ubuntu.com/click/api/1.0/reviews/',
     departments_api: 'https://search.apps.ubuntu.com/api/v1/departments',
     packages_api: 'https://search.apps.ubuntu.com/api/v1/package/',
+    //How many packages to pull in a page
+    page_size: 500,
+    //Which architectures to pull from the store
+    architectures: ['i386', 'amd64', 'armhf', 'arm64'],
   },
   //Credentials for logging to Papertrail - https://papertrailapp.com
   papertrail: {
