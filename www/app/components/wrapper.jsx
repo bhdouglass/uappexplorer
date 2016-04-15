@@ -65,7 +65,7 @@ module.exports = React.createClass({
             <div className="col-sm-12 text-center disclaimer">
               <Link to="/faq">
                 <If value={this.state.textDisclaimer}>
-                  {i18n.t('This site is an unofficial app browser for Ubuntu Touch apps. All data for the apps comes from a publicly accessible api. This site is maintained by Brian Douglass and is not endorsed by or affiliated with Ubuntu or Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd.')}
+                  {i18n.t('This is an unofficial app viewer for Ubuntu Touch and Snappy apps.')}
                 </If>
               </Link>
             </div>

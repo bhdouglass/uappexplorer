@@ -14,7 +14,7 @@ module.exports = {
   types: function() {
     return [
       {
-        label: i18n.t('All Types'),
+        label: i18n.t('Phone Apps & Scopes'),
         value: 'all',
       }, {
         label: i18n.t('Apps'),

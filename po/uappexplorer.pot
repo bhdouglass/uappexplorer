@@ -44,9 +44,6 @@ msgstr ""
 msgid "All Frameworks"
 msgstr ""
 
-msgid "All Types"
-msgstr ""
-
 msgid "Amazon Link"
 msgstr ""
 
@@ -524,6 +521,9 @@ msgstr ""
 msgid "Personalisation"
 msgstr ""
 
+msgid "Phone Apps & Scopes"
+msgstr ""
+
 msgid "Please login to send via Caxton"
 msgstr ""
 
@@ -546,9 +546,6 @@ msgid "Proprietary"
 msgstr ""
 
 msgid "QR Code"
-msgstr ""
-
-msgid "QR Code:"
 msgstr ""
 
 msgid "Reference"
@@ -653,7 +650,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
 
 msgid "This list is empty!"
@@ -729,9 +726,6 @@ msgid "Website:"
 msgstr ""
 
 msgid "Welcome"
-msgstr ""
-
-msgid "Welcome to uApp Explorer!"
 msgstr ""
 
 msgid "What app do you wish to see on Ubuntu Touch?"
