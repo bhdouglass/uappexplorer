@@ -245,15 +245,6 @@ function mongoToElasticsearch(removals, callback) {
   });
 }
 
-function callParsePackage(name, callback) {
-  if (_.isArray(name)) {
-    parsePackage(name[0], name[1], callback);
-  }
-  else {
-    parsePackage(name, null, callback);
-  }
-}
-
 function parsePackage(name, ubuntu_id, callback) { //TODO update all calling functions && test removals
   var url = config.spider.packages_api + name;
   if (ubuntu_id) {
@@ -316,6 +307,15 @@ function parsePackage(name, ubuntu_id, callback) { //TODO update all calling fun
   }
 }
 
+function callParsePackage(name, callback) {
+  if (_.isArray(name)) {
+    parsePackage(name[0], name[1], callback);
+  }
+  else {
+    parsePackage(name, null, callback);
+  }
+}
+
 function fetchListPage(page, packageList, callback) {
   request(config.spider.search_api + '?size=200&page=' + page, function(err, resp, body) {
     if (err) {
@@ -343,6 +343,51 @@ function fetchListPage(page, packageList, callback) {
 
 function fetchList(callback) {
   fetchListPage(1, [], callback);
+}
+
+function removePackages(packages, list) {
+  var removals = [];
+  _.forEach(packages, function(pkg) {
+    if (list.indexOf(pkg.name) == -1) {
+      logger.info('deleting ' + pkg.name);
+
+      removals.push(pkg);
+      pkg.remove(function(err) {
+        if (err) {
+          logger.error(err);
+        }
+      });
+
+      //Also remove from elasticsearch
+      elasticsearchPackage.remove(pkg, function(err) {
+        if (err) {
+          logger.error(err);
+        }
+        else {
+          logger.debug('deleted elasticsearch for ' + pkg.name);
+        }
+      });
+
+      //Also remove review
+      db.Review.findOne({name: pkg.name}, function(err, rev) {
+        if (err) {
+          logger.error(err);
+        }
+        else if (rev) {
+          rev.remove(function(err) {
+            if (err) {
+              logger.error(err);
+            }
+            else {
+              logger.debug('deleted reviews for ' + pkg.name);
+            }
+          });
+        }
+      });
+    }
+  });
+
+  return removals;
 }
 
 function parsePackageUpdates(callback) {
@@ -415,51 +460,6 @@ function parsePackageUpdates(callback) {
       }
     });
   });
-}
-
-function removePackages(packages, list) {
-  var removals = [];
-  _.forEach(packages, function(pkg) {
-    if (list.indexOf(pkg.name) == -1) {
-      logger.info('deleting ' + pkg.name);
-
-      removals.push(pkg);
-      pkg.remove(function(err) {
-        if (err) {
-          logger.error(err);
-        }
-      });
-
-      //Also remove from elasticsearch
-      elasticsearchPackage.remove(pkg, function(err) {
-        if (err) {
-          logger.error(err);
-        }
-        else {
-          logger.debug('deleted elasticsearch for ' + pkg.name);
-        }
-      });
-
-      //Also remove review
-      db.Review.findOne({name: pkg.name}, function(err, rev) {
-        if (err) {
-          logger.error(err);
-        }
-        else if (rev) {
-          rev.remove(function(err) {
-            if (err) {
-              logger.error(err);
-            }
-            else {
-              logger.debug('deleted reviews for ' + pkg.name);
-            }
-          });
-        }
-      });
-    }
-  });
-
-  return removals;
 }
 
 function parsePackages(callback) {
