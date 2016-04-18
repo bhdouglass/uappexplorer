@@ -115,10 +115,12 @@ function fallbackType(pkg, callback) {
 function parseClickPackage(pkg, callback) {
   logger.debug('Going to parse ' + pkg.name);
 
-  if (pkg.type == 'snappy') {
+  var snappy_types = ['snappy', 'snappy_oem', 'snappy_os', 'snappy_kernel', 'snappy_gadget', 'snappy_framework', 'snappy_application'];
+
+  if (snappy_types.indexOf(pkg.type) >= 0) {
     //Skip parsing snappy packages as the new ones are a squashfs file rather than an archive
     pkg.types = [pkg.type];
-    callback();
+    pkg.save(callback);
   }
   else if (!oauth || !token) {
     fetchOAuth(function(err) {
@@ -132,7 +134,7 @@ function parseClickPackage(pkg, callback) {
             fallbackType(pkg, callback);
           }
           else {
-            callback();
+            callback(null, pkg);
           }
         });
       }
@@ -145,7 +147,7 @@ function parseClickPackage(pkg, callback) {
         fallbackType(pkg, callback);
       }
       else {
-        callback();
+        callback(null, pkg);
       }
     });
   }

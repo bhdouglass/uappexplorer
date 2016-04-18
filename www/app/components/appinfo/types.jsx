@@ -25,6 +25,13 @@ module.exports = React.createClass({
             scope: i18n.t('Scope'),
             webapp: i18n.t('Web App'),
             snappy: i18n.t('Snappy App'),
+            snappy_oem: i18n.t('Snappy OEM'),
+            snappy_os: i18n.t('Snappy OS'),
+            snappy_kernel: i18n.t('Snappy Kernel'),
+            snappy_gadget: i18n.t('Snappy Gadget'),
+            snappy_framework: i18n.t('Snappy Framework'),
+            snappy_application: i18n.t('Snappy App'),
+            unknown: i18n.t('Unknown'),
           };
 
           var cls = 'label ';
@@ -39,8 +46,11 @@ module.exports = React.createClass({
           else if (type == 'webapp') {
             cls += 'label-material-cyan';
           }
-          else if (type == 'snappy') {
+          else if (['snappy', 'snappy_oem', 'snappy_os', 'snappy_kernel', 'snappy_gadget', 'snappy_framework', 'snappy_application'].indexOf(type) >= 0) {
             cls += 'label-material-deep-purple';
+          }
+          else {
+            cls += 'label-material-grey';
           }
 
           return <span className={cls} key={type}>{title}</span>;

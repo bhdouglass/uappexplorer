@@ -33,7 +33,7 @@ function setupSchedule() {
   spider_rule_updates.minute = 0;
 
   schedule.scheduleJob(spider_rule_updates, function() {
-    package.parsePackageUpdates();
+    package.parsePackages(true);
   });
 
   var department_rule = new schedule.RecurrenceRule();
@@ -85,9 +85,8 @@ function server() {
   app.listen(config.server.port, config.server.ip);
 }
 
-exports.parsePackage = package.parsePackage;
+exports.parsePackageByName = package.parsePackageByName;
 exports.parsePackages = package.parsePackages;
-exports.parsePackageUpdates = package.parsePackageUpdates;
 exports.mongoToElasticsearch = package.mongoToElasticsearch;
 exports.parseDepartments = department.parseDepartments;
 exports.parseReviews = review.parseReviews;

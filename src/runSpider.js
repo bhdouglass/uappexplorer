@@ -16,7 +16,7 @@ function callback(err, value) {
 
 if (process.argv[2]) {
   if (process.argv[2] == 'update' || process.argv[2] == 'updates') {
-    spider.parsePackageUpdates(callback);
+    spider.parsePackages(true, callback);
   }
   else if (process.argv[2] == 'dep' || process.argv[2] == 'department' || process.argv[2] == 'departments') {
     spider.parseDepartments(callback);
@@ -48,11 +48,9 @@ if (process.argv[2]) {
     wish.normalizeVotes(callback);
   }
   else {
-    spider.parsePackage(process.argv[2], null, function(err, pkg) {
-      elasticsearchPackage.upsert(pkg, callback);
-    });
+    spider.parsePackageByName(process.argv[2], callback);
   }
 }
 else {
-  spider.parsePackages(callback);
+  spider.parsePackages(false, callback);
 }

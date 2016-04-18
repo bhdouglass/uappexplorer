@@ -366,7 +366,7 @@ function setup(app, success, error) {
   });
 
   app.get('/api/apps/find/:name', function(req, res) {
-    spider.parsePackage(req.params.name, null, function(err, pkg) {
+    spider.parsePackageByName(req.params.name, function(err, pkg) {
       if (err) {
         error(res, err, 404);
       }
