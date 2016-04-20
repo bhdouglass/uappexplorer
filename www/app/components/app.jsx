@@ -38,7 +38,6 @@ module.exports = React.createClass({
 
   getInitialState: function() {
     return {
-      tab: 'description',
       swipe: null,
     };
   },
@@ -62,12 +61,6 @@ module.exports = React.createClass({
       actions.getApp(nextProps.params.name);
       actions.previousApp(nextProps.params.name);
       actions.nextApp(nextProps.params.name);
-    }
-  },
-
-  changeTab: function(tab) {
-    if (tab != this.state.tab) {
-      this.setState({tab: tab});
     }
   },
 
@@ -121,23 +114,6 @@ module.exports = React.createClass({
               var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
               var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
               var author_query = {q: 'author:' + this.state.app.author};
-
-              var tabs = {
-                'description': 'clickable',
-                'changelog': 'clickable',
-                'info': 'clickable',
-                'support': 'clickable',
-              };
-
-              var inner_tabs = {
-                'description': '',
-                'changelog': '',
-                'info': '',
-                'support': '',
-              };
-
-              tabs[this.state.tab] = 'clickable active';
-              inner_tabs[this.state.tab] = 'background-material-light-blue';
 
               component = (
                 <div className="swipe-container">
@@ -215,7 +191,27 @@ module.exports = React.createClass({
                           <div className="row-content">
                             <If value={this.state.app.types.indexOf('snappy') > -1}>
                               <div className="list-group-item-text">
-                                <a href={this.state.app.download} className="btn btn-sm btn-success">{i18n.t('Download')}</a>
+                                <If value={Object.keys(this.state.app.downloads).length > 0} element="span">
+                                  <div className="download-dropdown">
+                                    <div className="dropdown">
+                                      <button className="btn btn-sm btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                                       {i18n.t('Download')} &nbsp;
+                                       <span className="caret"></span>
+                                      </button>
+                                      <ul className="dropdown-menu">
+                                        {Object.keys(this.state.app.downloads).sort().map(function(arch, index) {
+                                          return (
+                                            <li key={index}>
+                                              <a href={this.state.app.downloads[arch]}>{arch}</a>
+                                            </li>
+                                          );
+                                        }, this)}
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </If>
+
+                                <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
                               </div>
                             </If>
 
@@ -297,18 +293,17 @@ module.exports = React.createClass({
                             </If>
 
                             <If value={this.state.app.website}>
-                              <br/>
                               {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
                             </If>
 
                             <If value={this.state.app.terms}>
-                              <br/>
                               {i18n.t('Terms:')}
                               <div>{this.state.app.terms}</div>
                             </If>
                           </div>
 
                           <div>
+                            <br/>
                             {i18n.t('Version:')} {this.state.app.version}
                             <br/>
                             {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
@@ -317,13 +312,11 @@ module.exports = React.createClass({
                             <br/>
                             {i18n.t('File Size:')} {this.state.app.filesize}
                             <br/>
-                            {i18n.t('Architecture:')} {this.state.app.architecture.join(', ')}
+                            {i18n.t('Architectures:')} {this.state.app.architecture.join(', ')}
                           </div>
                       </div>
                     </div>
                   </div>
-
-
 
                   <AppRow apps={this.state.app.author_apps}>
                     <Link to="/apps" query={author_query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>

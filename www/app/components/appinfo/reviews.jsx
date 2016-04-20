@@ -87,7 +87,7 @@ module.exports = React.createClass({
           </div>
         </If>
 
-        <If value={this.state.reviews && this.state.reviews.loaded && this.state.reviews.name == this.props.name}>
+        <If value={this.state.reviews && this.state.reviews.loaded && this.state.reviews.name == this.props.name && this.total('total') !== 0}>
           <div>
             <div className="row">
               <div className="col-md-12 text-center">

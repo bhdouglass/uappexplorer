@@ -73,6 +73,9 @@ module.exports = {
       }, {
         label: 'x86_64',
         value: 'x86_64',
+      }, {
+        label: 'arm64',
+        value: 'arm64',
       }
     ];
   },
