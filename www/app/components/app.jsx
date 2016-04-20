@@ -96,6 +96,17 @@ module.exports = React.createClass({
       cls = 'app slideOutLeft';
     }
 
+    var is_snappy = false;
+    if (this.state.app && this.state.app.types) {
+      is_snappy = this.state.app.types.reduce(function(previous, current) {
+        if (['snappy', 'snappy_oem', 'snappy_os', 'snappy_kernel', 'snappy_gadget', 'snappy_framework', 'snappy_application'].indexOf(current) >= 0) {
+          previous = true;
+        }
+
+        return previous;
+      }, false);
+    }
+
     return (
       <Swipeable onSwipedRight={this.swipe.bind(this, 'previous')} onSwipedLeft={this.swipe.bind(this, 'next')}>
         <div className={cls}>
@@ -189,7 +200,7 @@ module.exports = React.createClass({
                           </div>
 
                           <div className="row-content">
-                            <If value={this.state.app.types.indexOf('snappy') > -1}>
+                            <If value={is_snappy}>
                               <div className="list-group-item-text">
                                 <If value={Object.keys(this.state.app.downloads).length > 0} element="span">
                                   <div className="download-dropdown">
@@ -215,7 +226,7 @@ module.exports = React.createClass({
                               </div>
                             </If>
 
-                            <If value={this.state.app.types.indexOf('snappy') == -1}>
+                            <If value={!is_snappy}>
                               <div className="list-group-item-text">
                                 <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
 
