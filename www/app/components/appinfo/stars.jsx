@@ -38,7 +38,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <span className="text-material-light-blue" title={title}>
+      <span className="text-material-light-blue stars" title={title}>
         {full_icons}
         {half_icons}
         {empty_icons}

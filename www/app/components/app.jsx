@@ -118,7 +118,6 @@ module.exports = React.createClass({
             var component = '';
             if (!this.state.loading && this.state.app && this.state.app.name == this.props.params.name) {
               var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
-              var share_cls = utils.strToColor(this.state.app.name, 'backgroundColor');
               var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
               var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
               var author_query = {q: 'author:' + this.state.app.author};
@@ -173,7 +172,7 @@ module.exports = React.createClass({
                   }).bind(this)()}
 
                   <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-6">
                       <div className="list-group">
                         <div className="list-group-item">
                           <div className="row-action-primary">
@@ -183,7 +182,7 @@ module.exports = React.createClass({
                           </div>
 
                           <div className="row-content app-info">
-                            <h4 className="list-group-item-heading">{this.state.app.title}</h4>
+                            <h1 className="list-group-item-heading">{this.state.app.title}</h1>
                             <div className="list-group-item-text">
                               <Stars stars={this.state.app.bayesian_average} />
                               <Hearts hearts={this.state.app.points} />
@@ -201,12 +200,15 @@ module.exports = React.createClass({
                             </div>
                           </div>
                         </div>
-                        <div className="list-group-separator"></div>
+                      </div>
+                    </div>
 
-                        <div className="list-group-item">
+                    <div className="col-md-6">
+                      <div className="list-group">
+                        <div className="list-group-item sharing">
                           <div className="row-action-primary">
                               <div className="action-icon ubuntu-shape">
-                                <i className="fa fa-download" style={download_style}></i>
+                                <i className="fa fa-sa" style={download_style}></i>
                               </div>
                           </div>
 
@@ -221,6 +223,8 @@ module.exports = React.createClass({
                               <div className="list-group-item-text">
                                 <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
 
+                                <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
+
                                 <div className="small-note">
                                   {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
                                 </div>
@@ -233,22 +237,8 @@ module.exports = React.createClass({
                               </div>
                             </If>
                           </div>
-
                         </div>
-                        <div className="list-group-separator"></div>
 
-                        <div className="list-group-item">
-                          <div className="row-action-primary">
-                              <div className="action-icon ubuntu-shape">
-                                <i className="fa fa-sa" style={share_cls}></i>
-                              </div>
-                          </div>
-
-                          <div className="row-content">
-                            <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} />
-                          </div>
-
-                        </div>
                         <div className="list-group-separator"></div>
 
                         <AddToList />
@@ -256,108 +246,84 @@ module.exports = React.createClass({
                     </div>
                   </div>
 
-                  <div className="row">
-                    <div className="col-md-6">
-                      <ul className="nav nav-pills">
-                        <li className={tabs.description}>
-                          <a onClick={this.changeTab.bind(this, 'description')} className={inner_tabs.description}>{i18n.t('Description')}</a>
-                        </li>
-                        <li className={tabs.changelog}>
-                          <a onClick={this.changeTab.bind(this, 'changelog')} className={inner_tabs.changelog}>{i18n.t('Changelog')}</a>
-                        </li>
-                        <li className={tabs.info}>
-                          <a onClick={this.changeTab.bind(this, 'info')} className={inner_tabs.info}>{i18n.t('Info')}</a>
-                        </li>
-                        <li className={tabs.support}>
-                          <a onClick={this.changeTab.bind(this, 'support')} className={inner_tabs.support}>{i18n.t('Support')}</a>
-                        </li>
-                      </ul>
-
-                      <div className="tab-content">
-                        <div className="well app-tab">
-                          {(function() {
-                            var tab = '';
-                            if (this.state.tab == 'description') {
-                              tab = <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>;
-                            }
-                            else if (this.state.tab == 'changelog') {
-                              var changelog = this.state.app.changelog;
-                              if (!changelog) {
-                                changelog = i18n.t('No recent changes');
-                              }
-
-                              tab = <div dangerouslySetInnerHTML={utils.nl2br(changelog)}></div>;
-                            }
-                            else if (this.state.tab == 'info') {
-                              tab = (
-                                <div>
-                                  {i18n.t('Version:')} {this.state.app.version}
-                                  <br/>
-                                  {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
-                                  <br/>
-                                  {i18n.t('License:')} {this.state.app.license}
-                                  <br/>
-                                  {i18n.t('File Size:')} {this.state.app.filesize}
-                                  <br/>
-                                  {i18n.t('Architecture:')} {this.state.app.architecture.join(', ')}
-                                </div>
-                              );
-                            }
-                            else if (this.state.tab == 'support') {
-                              tab = (
-                                <div>
-                                  <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
-                                    {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
-                                  </If>
-
-                                  <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') == -1}>
-                                    {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
-                                  </If>
-
-                                  <If value={this.state.app.website}>
-                                    <br/>
-                                    {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
-                                  </If>
-
-                                  <If value={this.state.app.terms}>
-                                    <br/>
-                                    {i18n.t('Terms:')}
-                                    <div>{this.state.app.terms}</div>
-                                  </If>
-                                </div>
-                              );
-                            }
-
-                            return tab;
-                          }).bind(this)()}
+                  <If value={this.state.app.screenshots.length > 0 && this.state.app.screenshots[0] !== ''}>
+                    <div className="screenshots">
+                      <div className="row">
+                        <div className="col-md-12 text-center">
+                          <h3>{i18n.t('Screenshots')}</h3>
                         </div>
+                      </div>
+
+                      <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
+                        <div className="row">
+                          <div className="col-md-12 screenshot-scroll">
+                            {this.state.app.screenshots.map(function(screenshot) {
+                              return (
+                                <div key={screenshot}>
+                                  <a href={screenshot} className="swipebox" rel="nofollow">
+                                    <img src={screenshot} alt="" className="screenshot" />
+                                  </a>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </Swipeable>
+                    </div>
+                  </If>
+
+                  <div className="well app-tab">
+                    <div className="row">
+                      <div className="col-md-6">
+                          <h3>{i18n.t('Description')}</h3>
+                          <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>
+
+                          <If value={this.state.app.changelog}>
+                            <h4>{i18n.t('Changelog')}</h4>
+                            <div dangerouslySetInnerHTML={utils.nl2br(this.state.app.changelog)} className="changelog"></div>
+                          </If>
+                      </div>
+
+                      <div className="col-md-6">
+                          <h3>{i18n.t('Info')}</h3>
+
+                          <div>
+                            <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
+                              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
+                            </If>
+
+                            <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') == -1}>
+                              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
+                            </If>
+
+                            <If value={this.state.app.website}>
+                              <br/>
+                              {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
+                            </If>
+
+                            <If value={this.state.app.terms}>
+                              <br/>
+                              {i18n.t('Terms:')}
+                              <div>{this.state.app.terms}</div>
+                            </If>
+                          </div>
+
+                          <div>
+                            {i18n.t('Version:')} {this.state.app.version}
+                            <br/>
+                            {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
+                            <br/>
+                            {i18n.t('License:')} {this.state.app.license}
+                            <br/>
+                            {i18n.t('File Size:')} {this.state.app.filesize}
+                            <br/>
+                            {i18n.t('Architecture:')} {this.state.app.architecture.join(', ')}
+                          </div>
                       </div>
                     </div>
                   </div>
 
-                  <If value={this.state.app.screenshots.length > 0 && this.state.app.screenshots[0] !== ''}>
-                    <div className="row">
-                      <div className="col-md-12 text-center">
-                        <h3>{i18n.t('Screenshots')}</h3>
-                      </div>
-                    </div>
 
-                    <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
-                      <div className="row">
-                        <div className="col-md-12 screenshot-scroll">
-                          {this.state.app.screenshots.map(function(screenshot) {
-                            return (
-                              <div key={screenshot}>
-                                <a href={screenshot} className="swipebox" rel="nofollow">
-                                  <img src={screenshot} alt="" className="screenshot" />
-                                </a>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </Swipeable>
-                  </If>
 
                   <AppRow apps={this.state.app.author_apps}>
                     <Link to="/apps" query={author_query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>

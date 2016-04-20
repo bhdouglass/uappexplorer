@@ -22,7 +22,26 @@
   }
 
   .app-info {
-    width: ~'calc(100% - 132px)' !important;
+    display: block !important;
+    width: 100% !important;
+
+    .stars {
+      font-size: 24px;
+    }
+
+    .hearts {
+      font-size: 20px;
+    }
+
+    .list-group-item-heading {
+      font-size: 24px;
+    }
+
+    .list-group-item-text {
+      position: absolute;
+      bottom: 15px;
+      left: 215px;
+    }
   }
 
   .screenshot {
@@ -57,6 +76,14 @@
 
   .app-tab {
     min-height: 225px;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    h4 {
+      margin-top: 20px;
+    }
   }
 
   .external-links a {
@@ -144,5 +171,28 @@
 
   .description {
     overflow-x: auto;
+  }
+
+  .share-dropdown {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .sharing {
+    overflow: visible;
+  }
+
+  .screenshots{
+    margin-bottom: 20px;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .changelog {
+      margin-bottom: 20px;
+    }
   }
 }

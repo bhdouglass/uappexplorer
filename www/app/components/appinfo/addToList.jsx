@@ -100,7 +100,6 @@ module.exports = React.createClass({
             </div>
 
           </div>
-          <div className="list-group-separator"></div>
         </div>
       );
     }

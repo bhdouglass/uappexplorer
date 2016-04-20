@@ -22,7 +22,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <span>
+      <span className="hearts">
         <If value={this.props.pop} element="span">
           <span className={(this.props.popularity > 0) ? 'heart-rating text-danger' : 'heart-rating'} title={i18n.t('Monthly Popularity')}>
             <i className={(this.props.popularity > 0) ? 'fa fa-fire' : 'fa fa-fire-extinguisher'}></i> {this.props.popularity ? this.props.popularity : 0}
