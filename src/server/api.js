@@ -312,6 +312,18 @@ function setup(app, success, error) {
       ]};
     }
 
+    if (findQuery.types == 'snappy') {
+      findQuery.types = {$in: [
+        'snappy',
+        'snappy_oem',
+        'snappy_os',
+        'snappy_kernel',
+        'snappy_gadget',
+        'snappy_framework',
+        'snappy_application',
+      ]};
+    }
+
     if (findQuery.license == 'Open Source') {
       findQuery.license = {$in: licenses};
     }

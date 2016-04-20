@@ -3,11 +3,17 @@ var i18n = require('i18next-client');
 module.exports = {
   count_types: function() {
     return {
+      all: i18n.t('phone apps & scopes'),
       application: i18n.t('apps'),
       scope: i18n.t('scopes'),
       webapp: i18n.t('web apps'),
       snappy: i18n.t('snappy apps'),
-      all: i18n.t('apps & scopes'),
+      snappy_oem: i18n.t('snappy oems'),
+      snappy_os: i18n.t('snappy os'),
+      snappy_kernel: i18n.t('snappy kernels'),
+      snappy_gadget: i18n.t('snappy gadgets'),
+      snappy_framework: i18n.t('snappy frameworks'),
+      snappy_application: i18n.t('snappy apps'),
     };
   },
 
@@ -26,9 +32,27 @@ module.exports = {
         label: i18n.t('Scopes'),
         value: 'scope',
       }, {
-        label: i18n.t('Snappy Apps'),
+        label: i18n.t('All Snappy Apps'),
         value: 'snappy',
-      }
+      }, {
+        label: i18n.t('Snappy Applications'),
+        value: 'snappy_application',
+      }, {
+        label: i18n.t('Snappy Frameworks'),
+        value: 'snappy_framework',
+      }, {
+        label: i18n.t('Snappy OEMs'),
+        value: 'snappy_oem',
+      }, {
+        label: i18n.t('Snappy OS'),
+        value: 'snappy_os',
+      }, {
+        label: i18n.t('Snappy Kernels'),
+        value: 'snappy_kernel',
+      }, {
+        label: i18n.t('Snappy Gadgets'),
+        value: 'snappy_gadget',
+      },
     ];
   },
 
