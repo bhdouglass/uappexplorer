@@ -24,7 +24,6 @@ var propertyMap = {
   department: 'categories',
   company_name: 'company',
   changelog: 'changelog',
-  company_name: 'company',
   description: function(pkg, description) {
     var split = description.replace('\r', '').split('\n');
     if (split.length == 2 && split[0] == split[1]) { //Remove duplicated second line
@@ -146,7 +145,7 @@ function ubuntuToUAppExplorer(data) {
   for (var dataProperty in propertyMap) {
     if (data[dataProperty]) {
       if (typeof(propertyMap[dataProperty]) == 'function') {
-        propertyMap[dataProperty](pkg, data[dataProperty])
+        propertyMap[dataProperty](pkg, data[dataProperty]);
       }
       else {
         pkg[propertyMap[dataProperty]] = data[dataProperty];
@@ -374,20 +373,20 @@ function parseUbuntuPackage(data, callback) {
     else {
       var pkg_data = {};
 
-      for (var arch in results) {
-        results[arch] = ubuntuToUAppExplorer(results[arch]);
+      for (var arch2 in results) {
+        results[arch2] = ubuntuToUAppExplorer(results[arch2]);
 
-        if (!pkg_data.revision || results[arch].revision > pkg_data.revision) {
-          for (var key in results[arch]) {
-            pkg_data[key] = results[arch][key];
+        if (!pkg_data.revision || results[arch2].revision > pkg_data.revision) {
+          for (var key in results[arch2]) {
+            pkg_data[key] = results[arch2][key];
           }
         }
       }
 
       pkg_data.architecture = data.architecture;
       pkg_data.downloads = {};
-      for (var arch in results) {
-        pkg_data.downloads[arch] = results[arch].download;
+      for (var arch3 in results) {
+        pkg_data.downloads[arch3] = results[arch3].download;
       }
 
       db.Package.findOne({name: pkg_data.name}, function(err, pkg) {

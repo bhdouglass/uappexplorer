@@ -1,5 +1,4 @@
 var spider = require('./spider/spider');
-var elasticsearchPackage = require('./db/elasticsearchPackage');
 var wish = require('./server/wish');
 
 function callback(err, value) {
