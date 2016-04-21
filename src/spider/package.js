@@ -11,6 +11,7 @@ var async = require('async');
 var crypto = require('crypto');
 var Mailhide = require('mailhide');
 var elasticsearch = require('elasticsearch');
+var sanitizeHtml = require('sanitize-html');
 
 var mailhider = null;
 if (config.mailhide.privateKey && config.mailhide.publicKey) {
@@ -23,8 +24,18 @@ var propertyMap = {
   developer_name: 'author',
   department: 'categories',
   company_name: 'company',
-  changelog: 'changelog',
+  changelog: function(pkg, changelog) {
+    pkg.changelog = sanitizeHtml(changelog, {
+      allowedTags: [],
+      allowedAttributes: [],
+    });
+  },
   description: function(pkg, description) {
+    description = sanitizeHtml(description, {
+      allowedTags: [],
+      allowedAttributes: [],
+    });
+
     var split = description.replace('\r', '').split('\n');
     if (split.length == 2 && split[0] == split[1]) { //Remove duplicated second line
       pkg.description = split[0].replace('\n', '');
@@ -263,7 +274,9 @@ function doFetchList(url, arch, results, callback) {
       var data = JSON.parse(body);
       logger.debug('got package list page: ' + url + ' (' + arch + ')');
 
-      results = results.concat(data._embedded['clickindex:package']);
+      if (data && data._embedded && data._embedded['clickindex:package']) {
+        results = results.concat(data._embedded['clickindex:package']);
+      }
 
       if (data._links.next && data._links.next.href) {
         doFetchList(data._links.next.href, arch, results, callback);

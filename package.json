@@ -41,6 +41,7 @@
     "passport-ubuntu": "^0.1.1",
     "request": "^2.69.0",
     "rss": "^1.2.1",
+    "sanitize-html": "^1.11.4",
     "sitemap": "^1.5.0",
     "valid-url": "^1.0.9",
     "winston": "^2.2.0",
