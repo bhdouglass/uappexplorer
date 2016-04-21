@@ -26,6 +26,9 @@ msgstr ""
 msgid "A wish with the same name already exists"
 msgstr ""
 
+msgid "Account Integration"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr ""
 
@@ -44,7 +47,7 @@ msgstr ""
 msgid "All Frameworks"
 msgstr ""
 
-msgid "All Snappy Apps"
+msgid "All Snappy Packages"
 msgstr ""
 
 msgid "Amazon Link"
@@ -210,6 +213,9 @@ msgid "Delete"
 msgstr ""
 
 msgid "Description"
+msgstr ""
+
+msgid "Desktop File:"
 msgstr ""
 
 msgid "Developer Tools"
@@ -398,6 +404,9 @@ msgstr ""
 msgid "Least Popular (This Month)"
 msgstr ""
 
+msgid "Less Info"
+msgstr ""
+
 msgid "License:"
 msgstr ""
 
@@ -515,10 +524,16 @@ msgstr ""
 msgid "Open Source"
 msgstr ""
 
+msgid "Opens Urls"
+msgstr ""
+
 msgid "Other Link"
 msgstr ""
 
 msgid "Other link is not a valid url"
+msgstr ""
+
+msgid "Permissions"
 msgstr ""
 
 msgid "Personalisation"
@@ -548,6 +563,9 @@ msgstr ""
 msgid "Proprietary"
 msgstr ""
 
+msgid "Push Notifications"
+msgstr ""
+
 msgid "QR Code"
 msgstr ""
 
@@ -564,6 +582,9 @@ msgid "Science & Engineering"
 msgstr ""
 
 msgid "Scope"
+msgstr ""
+
+msgid "Scope INI File:"
 msgstr ""
 
 msgid "Scopes"
@@ -726,6 +747,9 @@ msgid "Updated:"
 msgstr ""
 
 msgid "Upvote"
+msgstr ""
+
+msgid "Urls that open in this app:"
 msgstr ""
 
 msgid "User List:"

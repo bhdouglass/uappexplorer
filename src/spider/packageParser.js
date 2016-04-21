@@ -41,9 +41,31 @@ function downloadPackage(pkg, callback) {
           else {
             fs.unlink(filename);
 
+            pkg.url_dispatcher = data.urls;
+            pkg.permissions = data.permissions;
+            pkg.features = [];
+            pkg.desktop_file = {};
+            pkg.scope_ini = {};
+
             pkg.webapp_inject = false;
             var types = [];
             _.forEach(data.apps, function(app) {
+              if (Object.keys(app.desktop).length > 0) {
+                pkg.desktop_file[app.name] = app.desktop;
+              }
+
+              if (Object.keys(app.scopeIni).length > 0) {
+                pkg.scope_ini[app.name] = {};
+
+                _.forEach(app.scopeIni, function(value, key) {
+                  pkg.scope_ini[app.name][key.replace('.', '__')] = value;
+                });
+              }
+
+              if (app.features && app.features.length > 0) {
+                pkg.features = _.uniq(pkg.features.concat(app.features));
+              }
+
               if (app.webappInject) {
                 pkg.webapp_inject = true;
               }

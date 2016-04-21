@@ -1,4 +1,5 @@
 var React = require('react');
+var React = require('react');
 var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');

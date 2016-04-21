@@ -16,6 +16,7 @@ var Price = require('./appinfo/price');
 var AppRow = require('./appinfo/appRow');
 var Reviews = require('./appinfo/reviews');
 var AddToList = require('./appinfo/addToList');
+var Features = require('./appinfo/features');
 var Share = require('./helpers/share');
 var If = require('./helpers/if');
 
@@ -39,6 +40,7 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       swipe: null,
+      moreInfo: false,
     };
   },
 
@@ -87,6 +89,10 @@ module.exports = React.createClass({
     event.stopPropagation();
   },
 
+  moreInfo: function() {
+    this.setState({moreInfo: !this.state.moreInfo});
+  },
+
   render: function() {
     var cls = 'app';
     if (this.state.swipe == 'previous') {
@@ -105,6 +111,30 @@ module.exports = React.createClass({
 
         return previous;
       }, false);
+    }
+
+    var desktop_file = '';
+    var scope_ini = '';
+    if (this.state.app && this.state.app.desktop_file) {
+      for (var name in this.state.app.desktop_file) {
+        desktop_file += name + '.desktop\n';
+        for (var key in this.state.app.desktop_file[name]) {
+          desktop_file += key + '=' + this.state.app.desktop_file[name][key] + '\n';
+        }
+
+        desktop_file += '\n\n';
+      }
+    }
+
+    if (this.state.app && this.state.app.scope_ini) {
+      for (var sname in this.state.app.scope_ini) {
+        scope_ini += sname + '.ini\n';
+        for (var skey in this.state.app.scope_ini[sname]) {
+          scope_ini += skey.replace('__', '.') + '=' + this.state.app.scope_ini[sname][skey] + '\n';
+        }
+
+        scope_ini += '\n\n';
+      }
     }
 
     return (
@@ -184,6 +214,8 @@ module.exports = React.createClass({
 
                               <Types types={this.state.app.types} />
                               <Price prices={this.state.app.prices} />
+                              <br/>
+                              <Features features={this.state.app.features} />
                             </div>
                           </div>
                         </div>
@@ -282,49 +314,104 @@ module.exports = React.createClass({
                   <div className="well app-tab">
                     <div className="row">
                       <div className="col-md-6">
-                          <h3>{i18n.t('Description')}</h3>
-                          <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>
+                        <h3>{i18n.t('Description')}</h3>
+                        <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>
 
-                          <If value={this.state.app.changelog}>
-                            <h4>{i18n.t('Changelog')}</h4>
-                            <div dangerouslySetInnerHTML={utils.nl2br(this.state.app.changelog)} className="changelog"></div>
-                          </If>
+                        <If value={this.state.app.changelog}>
+                          <h4>{i18n.t('Changelog')}</h4>
+                          <div dangerouslySetInnerHTML={utils.nl2br(this.state.app.changelog)} className="changelog"></div>
+                        </If>
                       </div>
 
                       <div className="col-md-6">
-                          <h3>{i18n.t('Info')}</h3>
+                        <If value={this.state.app.permissions && this.state.app.permissions.length > 0}>
+                          <h3>{i18n.t('Permissions')}</h3>
+                          <ul>
+                            {this.state.app.permissions.map(function(permission) {
+                              var permissionName = permission.replace('_', ' ').replace(/\w\S*/g, function(txt) {
+                                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); //To title Case
+                              });
 
-                          <div>
-                            <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
-                              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
+                              return (
+                                <li key={permission}>{permissionName}</li>
+                              );
+                            })}
+                          </ul>
+                        </If>
+
+                        <h3>{i18n.t('Info')}</h3>
+
+                        <div>
+                          <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
+                            {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
+                          </If>
+
+                          <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') == -1}>
+                            {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
+                          </If>
+
+                          <If value={this.state.app.website}>
+                            {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
+                          </If>
+
+                          <If value={this.state.app.terms}>
+                            {i18n.t('Terms:')}
+                            <div>{this.state.app.terms}</div>
+                          </If>
+                        </div>
+
+                        <div>
+                          <br/>
+                          {i18n.t('Version:')} {this.state.app.version}
+                          <br/>
+                          {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
+                          <br/>
+                          {i18n.t('License:')} {this.state.app.license}
+                          <br/>
+                          {i18n.t('File Size:')} {this.state.app.filesize}
+                          <br/>
+                          {i18n.t('Architectures:')} {this.state.app.architecture.join(', ')}
+
+                          <If value={this.state.app.framework.length > 0} element="span">
+                            <br/>
+                            {i18n.t('Framework:')} {this.state.app.framework.join(', ')}
+                          </If>
+
+                          <If value={this.state.app.url_dispatcher.length > 0} element="span">
+                            <br/>
+                            {i18n.t('Urls that open in this app:')} &nbsp;
+                            <If value={this.state.app.url_dispatcher.length == 1} element="span">
+                              {this.state.app.url_dispatcher[0]}
                             </If>
 
-                            <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') == -1}>
-                              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
+                            <If value={this.state.app.url_dispatcher.length > 1} element="span">
+                              <ul>
+                                {this.state.app.url_dispatcher.map(function(url, index) {
+                                  return (
+                                    <li key={index}>{url}</li>
+                                  );
+                                })}
+                              </ul>
                             </If>
+                          </If>
 
-                            <If value={this.state.app.website}>
-                              {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
+                          <If value={desktop_file || scope_ini}>
+                            <a className="clickable btn btn-success btn-sm" onClick={this.moreInfo}>
+                              {this.state.moreInfo ? i18n.t('Less Info') : i18n.t('More Info')}
+                            </a>
+                            <If value={this.state.moreInfo}>
+                              <If value={desktop_file}>
+                                {i18n.t('Desktop File:')}
+                                <pre>{desktop_file}</pre>
+                              </If>
+
+                              <If value={scope_ini}>
+                                {i18n.t('Scope INI File:')}
+                                <pre>{scope_ini}</pre>
+                              </If>
                             </If>
-
-                            <If value={this.state.app.terms}>
-                              {i18n.t('Terms:')}
-                              <div>{this.state.app.terms}</div>
-                            </If>
-                          </div>
-
-                          <div>
-                            <br/>
-                            {i18n.t('Version:')} {this.state.app.version}
-                            <br/>
-                            {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
-                            <br/>
-                            {i18n.t('License:')} {this.state.app.license}
-                            <br/>
-                            {i18n.t('File Size:')} {this.state.app.filesize}
-                            <br/>
-                            {i18n.t('Architectures:')} {this.state.app.architecture.join(', ')}
-                          </div>
+                          </If>
+                        </div>
                       </div>
                     </div>
                   </div>

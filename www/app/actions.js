@@ -18,7 +18,9 @@ actions = {
     }
   },
 
-  getApps: function(paging, no_set_last) {
+  getApps: function(paging, no_set_last, set_loading) {
+    set_loading = (set_loading === undefined) ? true : set_loading;
+
     var key = JSON.stringify(paging);
     var cached = tree.get('apps')[key];
     var now = moment();
@@ -32,13 +34,18 @@ actions = {
       promise = Promise.resolve(cached);
     }
     else {
-      tree.set('loading', true);
+      if (set_loading) {
+        tree.set('loading', true);
+      }
 
       promise = api.getApps(paging).then(function(data) {
         data.fetched = moment();
 
         tree.set(['apps', key], data);
-        tree.set('loading', false);
+
+        if (set_loading) {
+          tree.set('loading', false);
+        }
 
         tree.push('cache_keys', key);
         var cache_keys = tree.get('cache_keys');
@@ -62,7 +69,7 @@ actions = {
     var key = JSON.stringify(last_page);
 
     tree.set('previousApp', null);
-    return actions.getApps(last_page, true).then(function() {
+    return actions.getApps(last_page, true, false).then(function() {
       var apps = tree.get(['apps', key]);
       var last = null;
 
@@ -89,7 +96,7 @@ actions = {
           last_page.skip = (last_page.skip > 0) ? last_page.skip : 0;
 
           var key2 = JSON.stringify(last_page);
-          value = actions.getApps(last_page, true).then(function() {
+          value = actions.getApps(last_page, true, false).then(function() {
             var apps2 = tree.get(['apps', key2]);
 
             if (apps2.apps.length > 0) {
@@ -111,7 +118,7 @@ actions = {
     var key = JSON.stringify(last_page);
 
     tree.set('nextApp', null);
-    return actions.getApps(last_page, true).then(function() {
+    return actions.getApps(last_page, true, false).then(function() {
       var apps = tree.get(['apps', key]);
       var next = null;
 
@@ -133,7 +140,7 @@ actions = {
         last_page.skip = last_page.skip + last_page.limit;
 
         var key2 = JSON.stringify(last_page);
-        value = actions.getApps(last_page, true).then(function() {
+        value = actions.getApps(last_page, true, false).then(function() {
           var apps2 = tree.get(['apps', key2]);
 
           if (apps2.apps.length > 0) {

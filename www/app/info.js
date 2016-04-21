@@ -32,7 +32,7 @@ module.exports = {
         label: i18n.t('Scopes'),
         value: 'scope',
       }, {
-        label: i18n.t('All Snappy Apps'),
+        label: i18n.t('All Snappy Packages'),
         value: 'snappy',
       }, {
         label: i18n.t('Snappy Applications'),
