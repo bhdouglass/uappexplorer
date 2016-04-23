@@ -1,3 +1,0 @@
-#!/bin/bash
-
-docker attach --sig-proxy=false appstore_web

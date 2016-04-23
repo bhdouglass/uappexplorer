@@ -40,7 +40,7 @@ var config = {
   },
   mongo: {
     //The uri (with username/password) for accessing a mongo database
-    uri: process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URI || 'mongodb://localhost/',
+    uri: process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URI || 'mongodb://localhost',
     //The name of the mongo database to use
     database: process.env.MONGODB_DB || 'uappexplorer',
   },

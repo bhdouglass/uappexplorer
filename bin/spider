@@ -1,3 +1,0 @@
-#!/bin/bash
-
-vagrant docker-run web -- node /srv/uappexplorer/src/runSpider.js $@

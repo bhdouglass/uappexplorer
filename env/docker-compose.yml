@@ -1,0 +1,23 @@
+server:
+    build: ./
+    ports:
+        - "8080:8080"
+    links:
+        - mongo
+        - elasticsearch
+    volumes:
+        - /srv/uappexplorer:/srv/uappexplorer
+
+mongo:
+    image: mongo
+    ports:
+        - "27017:27017"
+    volumes:
+        - /data/db:/data/db
+
+elasticsearch:
+    image: elasticsearch
+    ports:
+        - "9200:9200"
+    volumes:
+        - /usr/share/elasticsearch/data:/usr/share/elasticsearch/data

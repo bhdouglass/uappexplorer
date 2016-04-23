@@ -1,36 +1,20 @@
-# -*- mode: ruby -*-
 VAGRANTFILE_API_VERSION = "2"
-ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.define "mongo" do |mongo|
-    mongo.vm.provider 'docker' do |d|
-      d.image = 'library/mongo'
-      d.name = 'appstore_mongo'
-      d.ports = ['27017:27017']
-    end
-  end
 
-  config.vm.define "elasticsearch" do |elasticsearch|
-    elasticsearch.vm.provider 'docker' do |d|
-      d.image = 'library/elasticsearch'
-      d.name = 'appstore_elasticsearch'
-      d.ports = ['9200:9200']
-    end
-  end
-
-  config.vm.define "web" do |web|
-    web.vm.provider 'docker' do |d|
-      d.build_dir = './docker'
-      d.name = 'appstore_web'
-      d.ports = ['8080:8080', '3000:3000']
-
-      d.link('appstore_mongo:mongo')
-      d.link('appstore_elasticsearch:elasticsearch')
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 1024
     end
 
-    web.vm.hostname = "uappexplorer"
-    web.vm.synced_folder "./", "/srv/uappexplorer", id: "vagrant-root"
-    web.vm.network "forwarded_port", guest: 8080, host: 8080
-  end
+    config.vm.box = "ubuntu/trusty64"
+    config.vm.network "private_network", ip: "192.168.57.123"
+    config.vm.hostname = "uappexplorer"
+    config.vm.synced_folder "./", "/srv/uappexplorer", id: "vagrant-root"
+    config.vm.network "forwarded_port", guest: 80, host: 8080
+
+    config.vm.provision :docker
+    config.vm.provision :docker_compose, project_name: "uappexplorer", yml: "/vagrant/env/docker-compose.yml", rebuild: true, run: "always"
+
+    config.vm.provision "shell", path: "./env/vagrant-setup.sh"
+    config.vm.provision "shell", run: "always", inline: "service nginx restart"
 end

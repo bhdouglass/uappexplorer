@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/github/license/bhdouglass/uappexplorer.svg)
 [ ![Gratipay](https://img.shields.io/gratipay/bhdouglass.svg) ](https://gratipay.com/bhdouglass/)
 
-Browse and search apps from the Ubuntu Touch click appstore -
+Browse and search apps from the Ubuntu Touch appstore -
 [uappexplorer.com](https://uappexplorer.com/).
 
 uApp Explorer uses publically available data from the Ubuntu Touch
@@ -19,33 +19,38 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 
 ## Development ##
 
-* Install [vagrant](http://vagrantup.com/) and [docker](https://www.docker.com/):
-    * Ubuntu: `sudo apt-get install vagrant docker.io`
-    * Arch Linux: `pacman -S vagrant docker`
+* Install [vagrant](http://vagrantup.com/)
+* Install the docker compose vagrant plugin:
+    * Run: `vagrant plugin install vagrant-docker-compose`
 * Install NPM dependencies:
     * Run: `npm install`
     * Run: `cd www && npm install`
 * Install gulp and bower:
     * Run `npm install -g gulp bower`
 * Start vagrant:
-    * Run: `vagrant up --no-parallel`
-* Run the spider:
-    * Run: `./bin/spider`
-* Attach to the docker container (if needed):
-    * Run: `./bin/attach`
+    * Run: `vagrant up`
+* Run the spider (Inside the vagrant VM):
+    * Run: `spider`
+* Compile the frontend:
+    * Run: `cd www && gulp build-watch`
+* Attach to the docker container (if needed - from inside the vagrant VM):
+    * Run: `attach`
+* Update your system's hosts file:
+    * Add `192.168.57.123 local.uappexplorer.com`
 * Visit the site:
-    * In your browser go to: `localhost:8080`
-    * You may want to put a friendly name in your host machine's `/etc/hosts`
+    * In your browser go to: `local.uappexplorer.com`
 * Profit!
 
 ## Using the Spider ##
 
-* Fetch all packages - `./bin/spider`
-* Fetch only updated/missing packages - `./bin/spider update`
-* Fetch departments/categories - `./bin/spider department`
-* Fetch reviews - `./bin/spider review`
-* Fetch reviews for a single package - `./bin/spider review com.example.pacakge.name`
-* Fetch a single package - `./bin/spider com.example.pacakge.name`
+Run this commands from inside the vagrant VM.
+
+* Fetch all packages - `spider`
+* Fetch only updated/missing packages - `spider update`
+* Fetch departments/categories - `spider department`
+* Fetch reviews - `spider review`
+* Fetch reviews for a single package - `spider review com.example.pacakge.name`
+* Fetch a single package - `spider com.example.pacakge.name`
 
 ## Deploying ##
 
@@ -53,9 +58,9 @@ uApp Explorer is setup to deploy to [Heroku](https://www.heroku.com/) via [Codes
 After code is pushed to the Github repo [Codeship](https://codeship.com/) runs the following to deploy:
 
 ~~~
-#Switch to node v0.12.0
-nvm install 0.12.0
-nvm use 0.12.0
+#Switch to node v5
+nvm install 5
+nvm use 5
 
 #Install dependencies
 npm install
@@ -105,7 +110,7 @@ The logo is derived from the compass icon from [FontAwesome](http://fontawesome.
 
 ## License ##
 
-Copyright (C) 2015 [Brian Douglass](http://bhdouglass.com/)
+Copyright (C) 2016 [Brian Douglass](http://bhdouglass.com/)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.

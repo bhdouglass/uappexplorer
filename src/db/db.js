@@ -8,7 +8,7 @@ var config = require('../config');
 var logger = require('../logger');
 var mongoose = require('mongoose');
 
-mongoose.connect(config.mongo.uri + config.mongo.database, function(err) {
+mongoose.connect(config.mongo.uri + '/' + config.mongo.database, function(err) {
   if (err) {
     logger.error('database: ' + err);
     process.exit(1);

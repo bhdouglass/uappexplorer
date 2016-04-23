@@ -420,9 +420,10 @@ function parseUbuntuPackage(data, callback) {
               logger.error('error saving package: ' + err);
               callback(err);
             }
-
-            logger.debug('saved ' + pkg.name);
-            callback(null, pkg);
+            else {
+              logger.debug('saved ' + pkg.name);
+              callback(null, pkg);
+            }
           });
         }
       });
@@ -443,14 +444,11 @@ function parsePackages(updatesOnly, callback) {
         //These are lists of packages pull from the api, not our own package format
         var updates = [];
         var additions = [];
-        var all_packages = [];
 
         packages.forEach(function(pkg) {
           existingNames.push(pkg.name);
 
           if (packageMap[pkg.name]) { //Check for app updates
-            all_packages.push(packageMap[pkg.name]);
-
             if (pkg.version != packageMap[pkg.name].version) {
               updates.push(packageMap[pkg.name]);
 
@@ -503,8 +501,12 @@ function parsePackages(updatesOnly, callback) {
           updates = updates.concat(additions);
         }
         else { //Reparse all packages
-          updates = all_packages;
-          logger.info(removals.length + ' removals, ' + all_packages.length + ' total apps');
+          updates = [];
+          for (var name in packageMap) {
+            updates.push(packageMap[name]);
+          }
+
+          logger.info(removals.length + ' removals, ' + updates.length + ' total apps');
         }
 
         var tasks = [];

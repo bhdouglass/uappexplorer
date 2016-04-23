@@ -27,40 +27,29 @@ function miniPkg(pkg) {
 }
 
 function counts(callback) {
-  var results = {
-    applications: 0,
-    webapps: 0,
-    scopes: 0,
-    games: 0,
-  };
-
-  function count(query, name) {
+  function count(query) {
     return function(callback) {
       db.Package.count(query, function(err, count) {
         if (err) {
           callback(err);
         }
         else {
-          callback(null, name, count);
+          callback(null, count);
         }
       });
     };
   }
 
-  async.series([
-    count({types: {'$in': ['application']}}, 'applications'),
-    count({types: {'$in': ['webapp']}}, 'webapps'),
-    count({types: {'$in': ['scope']}}, 'scopes'),
-    count({categories: 'games'}, 'games'),
-  ], function(err, result) {
+  async.parallel({
+    applications: count({types: {'$in': ['application']}}),
+    webapps: count({types: {'$in': ['webapp']}}),
+    scopes: count({types: {'$in': ['scope']}}),
+    games: count({categories: 'games'}),
+  }, function(err, results) {
     if (err) {
       callback(err);
     }
     else {
-      _.forEach(result, function(r) {
-        results[r[0]] = r[1];
-      });
-
       callback(null, results);
     }
   });
