@@ -502,8 +502,8 @@ function parsePackages(updatesOnly, callback) {
         }
         else { //Reparse all packages
           updates = [];
-          for (var name in packageMap) {
-            updates.push(packageMap[name]);
+          for (var pkgName in packageMap) {
+            updates.push(packageMap[pkgName]);
           }
 
           logger.info(removals.length + ' removals, ' + updates.length + ' total apps');
