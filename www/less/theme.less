@@ -189,6 +189,8 @@ a.list-group-item:focus {
 }
 
 .footer {
+  margin-top: 20px;
+
   a {
     display: inline-block;
     margin-right: 10px;
@@ -298,19 +300,34 @@ a.list-group-item:focus {
 }
 
 .qr-code-wrapper {
-  margin-top: 10px;
+  .qr-code-box {
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+  }
 
   .qr-code {
     margin: 10px;
   }
 }
 
+@media (min-width: 768px) {
+  .qr-code-wrapper {
+    margin-left: -100px;
+  }
+}
+
 @media (max-width: 768px) {
-  .row {
-    margin-right: 0px !important;
+  .qr-code-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: -20px;
   }
 
-  .app .qr-code-wrapper {
-    margin-left: -50px;
+  .row {
+    margin-right: 0px !important;
   }
 }

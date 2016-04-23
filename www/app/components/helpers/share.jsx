@@ -81,7 +81,7 @@ module.exports = React.createClass({
             {i18n.t('Share')} &nbsp;
             <span className="caret"></span>
            </button>
-           <ul className="dropdown-menu">
+           <ul className="dropdown-menu pull-right">
               <li>
                 <a href={gp} style={style}>
                   {i18n.t('Share on Google+')}

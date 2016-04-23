@@ -26,19 +26,21 @@ module.exports = React.createClass({
     return (
       <div className="qr-code-wrapper">
         <If value={this.props.show}>
-          <div className="text-center">
-            <div className="qr-code">
-              <QRCode value={this.props.value} size={256} />
+          <div className="qr-code-box">
+            <div className="text-center">
+              <div className="qr-code">
+                <QRCode value={this.props.value} size={256} />
+              </div>
+              <div>
+                <Link to="/app/com.ubuntu.developer.mzanetti.tagger" onClick={this.props.onHide}>
+                  {i18n.t('Get a QR scanner for your Ubuntu Touch device')}
+                </Link>
+              </div>
             </div>
-            <div>
-              <Link to="/app/com.ubuntu.developer.mzanetti.tagger" onClick={this.props.onHide}>
-                {i18n.t('Get a QR scanner for your Ubuntu Touch device')}
-              </Link>
-            </div>
-          </div>
 
-          <div className="pull-right">
-            <a className="btn btn-info" onClick={this.props.onHide}>{i18n.t('Close')}</a>
+            <div className="pull-right">
+              <a className="btn btn-info" onClick={this.props.onHide}>{i18n.t('Close')}</a>
+            </div>
           </div>
         </If>
       </div>
