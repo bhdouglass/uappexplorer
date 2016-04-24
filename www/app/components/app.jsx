@@ -1,6 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
 var moment = require('moment');
+var yaml = require('js-yaml');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var PureRenderMixin = require('react-addons-pure-render-mixin');
@@ -115,6 +116,8 @@ module.exports = React.createClass({
 
     var desktop_file = '';
     var scope_ini = '';
+    var snapcraft = '';
+
     if (this.state.app && this.state.app.desktop_file) {
       for (var name in this.state.app.desktop_file) {
         desktop_file += name + '.desktop\n';
@@ -135,6 +138,10 @@ module.exports = React.createClass({
 
         scope_ini += '\n\n';
       }
+    }
+
+    if (this.state.app && this.state.app.snapcraft) {
+      snapcraft = yaml.safeDump(this.state.app.snapcraft);
     }
 
     return (
@@ -328,7 +335,7 @@ module.exports = React.createClass({
                           <h3>{i18n.t('Permissions')}</h3>
                           <ul>
                             {this.state.app.permissions.map(function(permission) {
-                              var permissionName = permission.replace('_', ' ').replace(/\w\S*/g, function(txt) {
+                              var permissionName = permission.replace(/_/g, ' ').replace(/-/g, ' ').replace(/\w\S*/g, function(txt) {
                                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); //To title Case
                               });
 
@@ -395,7 +402,7 @@ module.exports = React.createClass({
                             </If>
                           </If>
 
-                          <If value={desktop_file || scope_ini}>
+                          <If value={desktop_file || scope_ini || snapcraft}>
                             <a className="clickable btn btn-success btn-sm" onClick={this.moreInfo}>
                               {this.state.moreInfo ? i18n.t('Less Info') : i18n.t('More Info')}
                             </a>
@@ -408,6 +415,11 @@ module.exports = React.createClass({
                               <If value={scope_ini}>
                                 {i18n.t('Scope INI File:')}
                                 <pre>{scope_ini}</pre>
+                              </If>
+
+                              <If value={snapcraft}>
+                                {i18n.t('Snappy Metadata:')}
+                                <pre>{snapcraft}</pre>
                               </If>
                             </If>
                           </If>

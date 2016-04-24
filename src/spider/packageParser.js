@@ -46,6 +46,7 @@ function downloadPackage(pkg, callback) {
             pkg.features = [];
             pkg.desktop_file = {};
             pkg.scope_ini = {};
+            pkg.snapcraft = data.snappy_meta;
 
             pkg.webapp_inject = false;
             var types = [];

@@ -650,6 +650,9 @@ msgstr ""
 msgid "Snappy Kernels"
 msgstr ""
 
+msgid "Snappy Metadata:"
+msgstr ""
+
 msgid "Snappy OEM"
 msgstr ""
 

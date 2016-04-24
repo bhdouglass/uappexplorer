@@ -36,6 +36,7 @@ var packageSchema = mongoose.Schema({
   scope_ini: {},
   screenshot: String,
   screenshots: [String],
+  snapcraft: {},
   status: String,
   support: String,
   tagline: String,

@@ -64,6 +64,11 @@
       "from": "archy@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/archy/-/archy-1.0.0.tgz"
     },
+    "argparse": {
+      "version": "1.0.7",
+      "from": "argparse@>=1.0.7 <2.0.0",
+      "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.7.tgz"
+    },
     "arr-diff": {
       "version": "1.1.0",
       "from": "arr-diff@>=1.1.0 <2.0.0",
@@ -1356,6 +1361,18 @@
       "from": "js-tokens@>=1.0.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-1.0.2.tgz"
     },
+    "js-yaml": {
+      "version": "3.6.0",
+      "from": "js-yaml@latest",
+      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.6.0.tgz",
+      "dependencies": {
+        "esprima": {
+          "version": "2.7.2",
+          "from": "esprima@>=2.6.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/esprima/-/esprima-2.7.2.tgz"
+        }
+      }
+    },
     "jsbn": {
       "version": "0.1.0",
       "from": "jsbn@>=0.1.0 <0.2.0",
@@ -2460,6 +2477,11 @@
       "version": "0.2.10",
       "from": "split@>=0.2.0 <0.3.0",
       "resolved": "https://registry.npmjs.org/split/-/split-0.2.10.tgz"
+    },
+    "sprintf-js": {
+      "version": "1.0.3",
+      "from": "sprintf-js@>=1.0.2 <1.1.0",
+      "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
     },
     "sshpk": {
       "version": "1.7.0",

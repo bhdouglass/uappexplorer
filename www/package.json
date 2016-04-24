@@ -23,6 +23,7 @@
     "history": "^1.13.1",
     "i18next-client": "^1.11.1",
     "jquery": "^2.1.4",
+    "js-yaml": "^3.6.0",
     "qrcode.react": "^0.5.1",
     "react": "^0.14.2",
     "react-addons-pure-render-mixin": "^0.14.2",
