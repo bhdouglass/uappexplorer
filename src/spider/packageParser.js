@@ -51,17 +51,21 @@ function downloadPackage(pkg, callback) {
             pkg.webapp_inject = false;
             var types = [];
             _.forEach(data.apps, function(app) {
-              var key = app.name.replace(/\./g, '__');
+              var appname = app.name.replace(/\./g, '__');
 
               if (Object.keys(app.desktop).length > 0) {
-                pkg.desktop_file[key] = app.desktop;
+                pkg.desktop_file[appname] = {};
+
+                _.forEach(app.desktop, function(value, key) {
+                  pkg.desktop_file[appname][key.replace(/\./g, '__')] = value;
+                });
               }
 
               if (Object.keys(app.scopeIni).length > 0) {
-                pkg.scope_ini[key] = {};
+                pkg.scope_ini[appname] = {};
 
                 _.forEach(app.scopeIni, function(value, key) {
-                  pkg.scope_ini[key][key.replace('.', '__')] = value;
+                  pkg.scope_ini[appname][key.replace(/\./g, '__')] = value;
                 });
               }
 
