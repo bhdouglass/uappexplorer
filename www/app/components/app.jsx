@@ -120,7 +120,7 @@ module.exports = React.createClass({
 
     if (this.state.app && this.state.app.desktop_file) {
       for (var name in this.state.app.desktop_file) {
-        desktop_file += name + '.desktop\n';
+        desktop_file += name.replace(/__/g, '.') + '.desktop\n';
         for (var key in this.state.app.desktop_file[name]) {
           desktop_file += key + '=' + this.state.app.desktop_file[name][key] + '\n';
         }
@@ -131,7 +131,7 @@ module.exports = React.createClass({
 
     if (this.state.app && this.state.app.scope_ini) {
       for (var sname in this.state.app.scope_ini) {
-        scope_ini += sname + '.ini\n';
+        scope_ini += sname.replace(/__/g, '.') + '.ini\n';
         for (var skey in this.state.app.scope_ini[sname]) {
           scope_ini += skey.replace('__', '.') + '=' + this.state.app.scope_ini[sname][skey] + '\n';
         }
