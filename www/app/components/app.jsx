@@ -406,22 +406,24 @@ module.exports = React.createClass({
                             <a className="clickable btn btn-success btn-sm" onClick={this.moreInfo}>
                               {this.state.moreInfo ? i18n.t('Less Info') : i18n.t('More Info')}
                             </a>
-                            <If value={this.state.moreInfo}>
-                              <If value={desktop_file}>
-                                {i18n.t('Desktop File:')}
-                                <pre>{desktop_file}</pre>
-                              </If>
+                            <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
+                              <If value={this.state.moreInfo}>
+                                <If value={desktop_file}>
+                                  {i18n.t('Desktop File:')}
+                                  <pre>{desktop_file}</pre>
+                                </If>
 
-                              <If value={scope_ini}>
-                                {i18n.t('Scope INI File:')}
-                                <pre>{scope_ini}</pre>
-                              </If>
+                                <If value={scope_ini}>
+                                  {i18n.t('Scope INI File:')}
+                                  <pre>{scope_ini}</pre>
+                                </If>
 
-                              <If value={snapcraft}>
-                                {i18n.t('Snappy Metadata:')}
-                                <pre>{snapcraft}</pre>
+                                <If value={snapcraft}>
+                                  {i18n.t('Snappy Metadata:')}
+                                  <pre>{snapcraft}</pre>
+                                </If>
                               </If>
-                            </If>
+                            </Swipeable>
                           </If>
                         </div>
                       </div>
