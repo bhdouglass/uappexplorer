@@ -8,6 +8,12 @@ var typeMap = {
   scope: 'Scope',
   webapp: 'Web App',
   snappy: 'Snappy App',
+  snappy_oem: 'Snappy OEM',
+  snappy_os: 'Snappy OS',
+  snappy_kernel: 'Snappy Kernel',
+  snappy_gadget: 'Snappy Gadget',
+  snappy_framework: 'Snappy Framework',
+  snappy_application: 'Snappy App',
 };
 
 function type(types) {
