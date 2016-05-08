@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2016-03-29 11:56+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
+"PO-Revision-Date: 2016-05-07 08:58+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: nl\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -42,6 +42,9 @@ msgstr "- Kies een lijst -"
 msgid "A wish with the same name already exists"
 msgstr "Er bestaat al een wens met dezelfde naam"
 
+msgid "Account Integration"
+msgstr "Account-integratie"
+
 msgid "Add Apps:"
 msgstr "Apps toevoegen:"
 
@@ -60,8 +63,8 @@ msgstr "Alle processorarchitecturen"
 msgid "All Frameworks"
 msgstr "Alle frameworks"
 
-msgid "All Types"
-msgstr "Alle soorten"
+msgid "All Snappy Packages"
+msgstr "Alle Snappy-pakketten"
 
 msgid "Amazon Link"
 msgstr "Link naar Amazon"
@@ -114,7 +117,10 @@ msgid "Apps:"
 msgstr "Apps:"
 
 msgid "Architecture:"
-msgstr "Architectuur:"
+msgstr "Processorarchitectuur:"
+
+msgid "Architectures:"
+msgstr "Processorarchitecturen"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Weet u zeker dat u deze lijst wilt verwijderen?"
@@ -132,16 +138,16 @@ msgid "Browse"
 msgstr "Bladeren"
 
 msgid "Browse Apps"
-msgstr "Door apps bladeren"
+msgstr "Bladeren door de apps"
 
 msgid "Browse Games"
-msgstr "Door spelletjes bladeren"
+msgstr "Bladeren door de spellen"
 
 msgid "Browse Scopes"
-msgstr "Door scopes bladeren"
+msgstr "Bladeren door de scopes"
 
 msgid "Browse Web Apps"
-msgstr "Door webapps bladeren"
+msgstr "Bladeren door de webapps"
 
 msgid "Business"
 msgstr "Zakelijk"
@@ -150,7 +156,7 @@ msgid "Buy the Webapp"
 msgstr "Webapp kopen"
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Webapp kopen in the Ubuntu Touch appstore"
+msgstr "Webapp kopen in de Ubuntu Touch-appwinkel"
 
 msgid "By:"
 msgstr "Door:"
@@ -165,7 +171,7 @@ msgid "Caxton Code"
 msgstr "Caxton-code"
 
 msgid "Changelog"
-msgstr "Overzicht van wijzigingen"
+msgstr "Wijzigingslog"
 
 msgid "Close"
 msgstr "Sluiten"
@@ -177,25 +183,25 @@ msgid "Company"
 msgstr "Bedrijf"
 
 msgid "Containing:"
-msgstr "bevatten"
+msgstr "Bevat:"
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Kan de app momenteel niet toevoegen aan je lijst. Probeer het later nog een "
-"keer."
+"De app kan momenteel niet worden toegevoegd aan uw lijst. Probeer het later "
+"opnieuw."
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Kan momenteel geen verbinding maken met Caxton. Probeer het later nog een "
-"keer."
+"Er momenteel geen verbinding worden gemaakt met Caxton. Probeer het later "
+"opnieuw."
 
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Kan momenteel geen nieuwe lijst aanmaken. Probeer het later nog een keer."
+"Er kan momenteel geen lijst worden gecreëerd. Probeer het later opnieuw."
 
 msgid "Could not create a new wish at this time, please try again later"
 msgstr ""
-"Kan momenteel geen wenslijst-item toevoegen. Probeer het later nog een keer."
+"Er kan momenteel geen wens worden gecreëerd. Probeer het later opnieuw."
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
@@ -253,6 +259,9 @@ msgstr "Verwijderen"
 msgid "Description"
 msgstr "Omschrijving"
 
+msgid "Desktop File:"
+msgstr "Bureaubladbestand:"
+
 msgid "Developer Tools"
 msgstr "Hulpmiddelen voor ontwikkelaars"
 
@@ -308,7 +317,7 @@ msgid "Entertainment"
 msgstr "Amusement"
 
 msgid "Essential Apps"
-msgstr "Essentiële apps"
+msgstr "Onmisbare apps"
 
 msgid "FAQ"
 msgstr "Veelgestelde vragen (FAQ)"
@@ -351,7 +360,7 @@ msgid "Get a QR scanner for your Ubuntu Touch device"
 msgstr "Installeer een QR-code-scanner op uw Ubuntu Touch-apparaat"
 
 msgid "Go there now"
-msgstr "Ga naar de scannerpagina"
+msgstr "Ga naar de scannerapp-pagina"
 
 msgid "Google Play Link"
 msgstr "Google Play-link"
@@ -458,10 +467,13 @@ msgid "Language"
 msgstr "Taal"
 
 msgid "Latest Update"
-msgstr "Recentste update"
+msgstr "Meest recente update"
 
 msgid "Least Popular (This Month)"
 msgstr "Minst populair (deze maand)"
+
+msgid "Less Info"
+msgstr "Minder informatie"
 
 msgid "License:"
 msgstr "Licentie:"
@@ -473,7 +485,7 @@ msgid "List"
 msgstr "Lijst"
 
 msgid "List Name:"
-msgstr "Lijstnaam;"
+msgstr "Lijstnaam:"
 
 msgid "Load more reviews"
 msgstr "Laad meer reviews"
@@ -533,7 +545,7 @@ msgid "Music & Audio"
 msgstr "Muziek & Audio"
 
 msgid "My Lists"
-msgstr "Mijn lijsen"
+msgstr "Mijn lijsten"
 
 msgid "New Apps"
 msgstr "Nieuwe apps"
@@ -554,7 +566,7 @@ msgid "Newest"
 msgstr "Nieuwste"
 
 msgid "News & Magazines"
-msgstr "Nieuws & Magazines"
+msgstr "Nieuws & Tijdschriften"
 
 msgid "Next App:"
 msgstr "Volgende app:"
@@ -564,28 +576,24 @@ msgstr "Nee"
 
 msgid "No apps found, try searching again."
 msgstr ""
-"Er konden geen apps worden gevonden; probeer het opnieuw met een andere "
-"zoekopdracht."
+"Er zijn geen apps gevonden; probeer het opnieuw met een andere zoekopdracht."
 
 msgid "No lists, create one!"
-msgstr "Er zijn geen lijsten, creëer er één."
-
-msgid "No recent changes"
-msgstr "Geen recente wijzigingen"
+msgstr "Er zijn geen lijsten; creëer er één!"
 
 msgid "No reviews yet!"
 msgstr "Er zijn nog geen reviews!"
 
 msgid "No wishes found, try searching again."
 msgstr ""
-"Er konden geen wensen worden gevonden; probeer het opnieuw met een andere "
+"Er zijn geen wensen gevonden; probeer het opnieuw met een andere "
 "zoekopdracht."
 
 msgid "Oldest"
 msgstr "Oudste"
 
 msgid "Oldest Update"
-msgstr "Oudste update"
+msgstr "Minst recente update"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
 msgstr "Stemmers zijn bereid om gemiddeld %d USD te betalen voor deze app."
@@ -593,14 +601,23 @@ msgstr "Stemmers zijn bereid om gemiddeld %d USD te betalen voor deze app."
 msgid "Open Source"
 msgstr "Open bron"
 
+msgid "Opens Urls"
+msgstr "Opent URL's"
+
 msgid "Other Link"
-msgstr "Overige link"
+msgstr "Ander soort link"
 
 msgid "Other link is not a valid url"
-msgstr "De overige link is geen geldige URL"
+msgstr "De andersoortige link is geen geldige URL"
+
+msgid "Permissions"
+msgstr "Toegangsrechten"
 
 msgid "Personalisation"
 msgstr "Personalisatie"
+
+msgid "Phone Apps & Scopes"
+msgstr "Telefoonapps & -scopes"
 
 msgid "Please login to send via Caxton"
 msgstr "Log in via Caxton om te kunnen versturen"
@@ -627,11 +644,11 @@ msgstr "Productiviteit"
 msgid "Proprietary"
 msgstr "Niet-vrij"
 
+msgid "Push Notifications"
+msgstr "Pushmeldingen"
+
 msgid "QR Code"
 msgstr "QR-code"
-
-msgid "QR Code:"
-msgstr "QR-code:"
 
 msgid "Reference"
 msgstr "Verwijzing"
@@ -647,6 +664,9 @@ msgstr "Wetenschap & Techniek"
 
 msgid "Scope"
 msgstr "Scope"
+
+msgid "Scope INI File:"
+msgstr "INI-bestand van Scope"
 
 msgid "Scopes"
 msgstr "Scopes"
@@ -665,6 +685,9 @@ msgstr "Verstuurd via Caxton"
 
 msgid "Settings"
 msgstr "Instellingen"
+
+msgid "Share"
+msgstr "Delen"
 
 msgid "Share on Facebook"
 msgstr "Delen op Facebook"
@@ -687,14 +710,44 @@ msgstr "Vergelijkbare apps"
 msgid "Snappy App"
 msgstr "Snappy-app"
 
-msgid "Snappy Apps"
-msgstr "Snappy-apps"
+msgid "Snappy Applications"
+msgstr "Snappy-applicaties"
+
+msgid "Snappy Framework"
+msgstr "Snappy-framework"
+
+msgid "Snappy Frameworks"
+msgstr "Snappy-frameworks"
+
+msgid "Snappy Gadget"
+msgstr "Snappy-gadget"
+
+msgid "Snappy Gadgets"
+msgstr "Snappy-gadgets"
+
+msgid "Snappy Kernel"
+msgstr "Snappy-kernel"
+
+msgid "Snappy Kernels"
+msgstr "Snappy-kernels"
+
+msgid "Snappy Metadata:"
+msgstr "Snappy-metagegevens:"
+
+msgid "Snappy OEM"
+msgstr "Snappy-OEM"
+
+msgid "Snappy OEMs"
+msgstr "Snappy-oem's"
+
+msgid "Snappy OS"
+msgstr "Snappy-besturingssysteem"
 
 msgid "Social Networking"
 msgstr "Sociale netwerken"
 
 msgid "Sort Apps By:"
-msgstr "Apps sorteren op:"
+msgstr "Sorteer apps op:"
 
 msgid "Sort By:"
 msgstr "Sorteren op:"
@@ -710,9 +763,6 @@ msgstr "Versturen"
 
 msgid "Submitted by"
 msgstr "Ingediend door"
-
-msgid "Support"
-msgstr "Ondersteunong"
 
 msgid "Support:"
 msgstr "Ondersteuning:"
@@ -755,9 +805,9 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Deze app staat op deze lijsten:"
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
-"Dit is een niet-officiële app voor het weergeven van Ubuntu Touch-apps."
+"Dit is een niet-officiële appweergever voor Ubuntu Touch en Snappy-apps."
 
 msgid "This list is empty!"
 msgstr "Deze lijst is leeg!"
@@ -812,6 +862,9 @@ msgstr "Soort:"
 msgid "Universal Accesss/Accessibility"
 msgstr "Universele toegang/Toegankelijkheid"
 
+msgid "Unknown"
+msgstr "Onbekend"
+
 msgid "Updated Apps"
 msgstr "Bijgewerkte apps"
 
@@ -821,11 +874,14 @@ msgstr "Bijgewerkt op:"
 msgid "Upvote"
 msgstr "Omhoog stemmen"
 
+msgid "Urls that open in this app:"
+msgstr "URL's die worden geopend in deze app:"
+
 msgid "User List:"
 msgstr "Gebruikerslijst:"
 
 msgid "User Reviews"
-msgstr "Gebruikerslijst"
+msgstr "Gebruikersrecensies"
 
 msgid "Utilities"
 msgstr "Hulpprogramma's"
@@ -846,16 +902,13 @@ msgid "Web App"
 msgstr "Web-app"
 
 msgid "Web Apps"
-msgstr "Web-apps"
+msgstr "Webapps"
 
 msgid "Website:"
 msgstr "Website:"
 
 msgid "Welcome"
 msgstr "Welkom"
-
-msgid "Welcome to uApp Explorer!"
-msgstr "Welkom bij uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr "Welke app zou u graag willen zien op Ubuntu Touch?"
@@ -875,7 +928,7 @@ msgid "What is the star rating?"
 msgstr "Wat is de sterwaardering?"
 
 msgid "What is this site?"
-msgstr "Wat is de website?"
+msgstr "Wat is deze website?"
 
 msgid "Where can I report a problem or request a new feature?"
 msgstr "Waar kan ik een probleem rapporteren of een idee aandragen?"
@@ -889,7 +942,7 @@ msgid "Why donate?"
 msgstr "Waarom doneren?"
 
 msgid "Wishlist"
-msgstr "Wensenlijst"
+msgstr "Wenslijst"
 
 msgid "Yes"
 msgstr "Ja"
@@ -916,9 +969,6 @@ msgid_plural "apps"
 msgstr[0] "apps"
 msgstr[1] "apps"
 
-msgid "apps & scopes"
-msgstr "apps&scopes"
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] "spellen"
@@ -930,6 +980,9 @@ msgstr "iTunes-link"
 msgid "iTunes link is not a valid url"
 msgstr "De iTunes-link is geen geldige URL"
 
+msgid "phone apps & scopes"
+msgstr "telefoonapps & -scopes"
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "scopes"
@@ -938,7 +991,22 @@ msgstr[1] "scopes"
 msgid "snappy apps"
 msgstr "snappy-apps"
 
+msgid "snappy frameworks"
+msgstr "snappy-frameworks"
+
+msgid "snappy gadgets"
+msgstr "snappy-gadges"
+
+msgid "snappy kernels"
+msgstr "snappy-kernels"
+
+msgid "snappy oems"
+msgstr "snappy-oem's"
+
+msgid "snappy os"
+msgstr "snappy-besturingssysteem"
+
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] "web-apps"
+msgstr[0] "webapps"
 msgstr[1] "web-apps"

@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2015-11-30 20:08+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
+"PO-Revision-Date: 2016-04-17 17:02+0000\n"
 "Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(Nun t'esmolezas, ¡hai tamién una versión de baldre!)"
@@ -39,6 +39,9 @@ msgid "- Choose a list -"
 msgstr "-Escueye una llista-"
 
 msgid "A wish with the same name already exists"
+msgstr "Yá esiste un deséu col mesmu nome"
+
+msgid "Account Integration"
 msgstr ""
 
 msgid "Add Apps:"
@@ -57,16 +60,16 @@ msgid "All Architectures"
 msgstr "Toles arquitectures"
 
 msgid "All Frameworks"
-msgstr ""
+msgstr "Toles estructures"
 
-msgid "All Types"
-msgstr "Tolos tipos"
+msgid "All Snappy Packages"
+msgstr ""
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Enllaz a Amazon"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "L'enllaz a Amazon nun ye una url válida"
 
 msgid "Any Architecture"
 msgstr "Cualquier arquitectura"
@@ -93,7 +96,7 @@ msgid "App"
 msgstr "Aplicación"
 
 msgid "App Name"
-msgstr ""
+msgstr "Nome de la App"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nome de l'aplicación (exemplu: com.ubuntu.developer.example)"
@@ -115,71 +118,76 @@ msgstr "Aplicaciones:"
 msgid "Architecture:"
 msgstr "Arquitectura:"
 
+msgid "Architectures:"
+msgstr ""
+
 msgid "Are you sure you want to delete this list?"
 msgstr ""
 
 msgid "Article"
-msgstr ""
+msgstr "Artículu"
 
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 msgid "Books & Comics"
-msgstr ""
+msgstr "Llibros y cómics"
 
 msgid "Browse"
-msgstr ""
+msgstr "Desaminar"
 
 msgid "Browse Apps"
-msgstr ""
+msgstr "Desaminar Apps"
 
 msgid "Browse Games"
-msgstr ""
+msgstr "Desaminar xuegos"
 
 msgid "Browse Scopes"
 msgstr ""
 
 msgid "Browse Web Apps"
-msgstr ""
+msgstr "Desaminar apps pa la web"
 
 msgid "Business"
-msgstr ""
+msgstr "Negocios"
 
 msgid "Buy the Webapp"
-msgstr ""
+msgstr "Mercar la app web"
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr ""
+msgstr "Mercar la app web na tienda d'apps d'Ubuntu Touch"
 
 msgid "By:"
-msgstr ""
+msgstr "Por:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Encaboxar"
 
 msgid "Category:"
-msgstr ""
+msgstr "Categoría:"
 
 msgid "Caxton Code"
-msgstr ""
+msgstr "Codigu Caxton"
 
 msgid "Changelog"
-msgstr ""
+msgstr "Rexistru de cambios"
 
 msgid "Close"
-msgstr ""
+msgstr "Zarrar"
 
 msgid "Communication"
-msgstr ""
+msgstr "Comunicación"
 
 msgid "Company"
-msgstr ""
+msgstr "Empresa"
 
 msgid "Containing:"
-msgstr ""
+msgstr "Que contenga:"
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
+"Nun pudo amestase nestos momentos la app a la llista, tentalo otra vuelta "
+"sero"
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
@@ -236,6 +244,9 @@ msgid "Delete"
 msgstr ""
 
 msgid "Description"
+msgstr ""
+
+msgid "Desktop File:"
 msgstr ""
 
 msgid "Developer Tools"
@@ -434,6 +445,9 @@ msgstr ""
 msgid "Least Popular (This Month)"
 msgstr ""
 
+msgid "Less Info"
+msgstr ""
+
 msgid "License:"
 msgstr ""
 
@@ -536,9 +550,6 @@ msgstr ""
 msgid "No lists, create one!"
 msgstr ""
 
-msgid "No recent changes"
-msgstr ""
-
 msgid "No reviews yet!"
 msgstr ""
 
@@ -557,13 +568,22 @@ msgstr ""
 msgid "Open Source"
 msgstr ""
 
+msgid "Opens Urls"
+msgstr ""
+
 msgid "Other Link"
 msgstr ""
 
 msgid "Other link is not a valid url"
 msgstr ""
 
+msgid "Permissions"
+msgstr ""
+
 msgid "Personalisation"
+msgstr ""
+
+msgid "Phone Apps & Scopes"
 msgstr ""
 
 msgid "Please login to send via Caxton"
@@ -589,10 +609,10 @@ msgstr ""
 msgid "Proprietary"
 msgstr ""
 
-msgid "QR Code"
+msgid "Push Notifications"
 msgstr ""
 
-msgid "QR Code:"
+msgid "QR Code"
 msgstr ""
 
 msgid "Reference"
@@ -608,6 +628,9 @@ msgid "Science & Engineering"
 msgstr ""
 
 msgid "Scope"
+msgstr ""
+
+msgid "Scope INI File:"
 msgstr ""
 
 msgid "Scopes"
@@ -626,6 +649,9 @@ msgid "Sent via Caxton"
 msgstr ""
 
 msgid "Settings"
+msgstr ""
+
+msgid "Share"
 msgstr ""
 
 msgid "Share on Facebook"
@@ -649,7 +675,37 @@ msgstr ""
 msgid "Snappy App"
 msgstr ""
 
-msgid "Snappy Apps"
+msgid "Snappy Applications"
+msgstr ""
+
+msgid "Snappy Framework"
+msgstr ""
+
+msgid "Snappy Frameworks"
+msgstr ""
+
+msgid "Snappy Gadget"
+msgstr ""
+
+msgid "Snappy Gadgets"
+msgstr ""
+
+msgid "Snappy Kernel"
+msgstr ""
+
+msgid "Snappy Kernels"
+msgstr ""
+
+msgid "Snappy Metadata:"
+msgstr ""
+
+msgid "Snappy OEM"
+msgstr ""
+
+msgid "Snappy OEMs"
+msgstr ""
+
+msgid "Snappy OS"
 msgstr ""
 
 msgid "Social Networking"
@@ -671,9 +727,6 @@ msgid "Submit"
 msgstr ""
 
 msgid "Submitted by"
-msgstr ""
-
-msgid "Support"
 msgstr ""
 
 msgid "Support:"
@@ -706,7 +759,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
 
 msgid "This list is empty!"
@@ -751,6 +804,9 @@ msgstr ""
 msgid "Universal Accesss/Accessibility"
 msgstr ""
 
+msgid "Unknown"
+msgstr ""
+
 msgid "Updated Apps"
 msgstr ""
 
@@ -758,6 +814,9 @@ msgid "Updated:"
 msgstr ""
 
 msgid "Upvote"
+msgstr ""
+
+msgid "Urls that open in this app:"
 msgstr ""
 
 msgid "User List:"
@@ -791,9 +850,6 @@ msgid "Website:"
 msgstr ""
 
 msgid "Welcome"
-msgstr ""
-
-msgid "Welcome to uApp Explorer!"
 msgstr ""
 
 msgid "What app do you wish to see on Ubuntu Touch?"
@@ -850,9 +906,6 @@ msgid_plural "apps"
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "apps & scopes"
-msgstr ""
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] ""
@@ -864,12 +917,30 @@ msgstr ""
 msgid "iTunes link is not a valid url"
 msgstr ""
 
+msgid "phone apps & scopes"
+msgstr ""
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] ""
 msgstr[1] ""
 
 msgid "snappy apps"
+msgstr ""
+
+msgid "snappy frameworks"
+msgstr ""
+
+msgid "snappy gadgets"
+msgstr ""
+
+msgid "snappy kernels"
+msgstr ""
+
+msgid "snappy oems"
+msgstr ""
+
+msgid "snappy os"
 msgstr ""
 
 msgid "web apps"

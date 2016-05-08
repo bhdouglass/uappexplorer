@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
 "PO-Revision-Date: 2015-12-11 15:19+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: gl\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -42,6 +42,9 @@ msgstr "-Escolla unha lista-"
 msgid "A wish with the same name already exists"
 msgstr ""
 
+msgid "Account Integration"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "Engadir aplicacións:"
 
@@ -60,8 +63,8 @@ msgstr "Todas as arquitecturas"
 msgid "All Frameworks"
 msgstr "Todos os marcos de traballo"
 
-msgid "All Types"
-msgstr "Todos os tipos"
+msgid "All Snappy Packages"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr ""
@@ -115,6 +118,9 @@ msgstr "Aplicacións:"
 
 msgid "Architecture:"
 msgstr "Arquitectura:"
+
+msgid "Architectures:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Confirma a eliminación desta lista?"
@@ -254,6 +260,9 @@ msgstr "Borrar"
 
 msgid "Description"
 msgstr "Descrición"
+
+msgid "Desktop File:"
+msgstr ""
 
 msgid "Developer Tools"
 msgstr "Ferramentas de desenvolvemento"
@@ -461,6 +470,9 @@ msgstr "Última actualización"
 msgid "Least Popular (This Month)"
 msgstr "Menos populares (este mes)"
 
+msgid "Less Info"
+msgstr ""
+
 msgid "License:"
 msgstr "Licenza:"
 
@@ -566,9 +578,6 @@ msgstr "Non se atoparon aplicacións, ténteo de novo"
 msgid "No lists, create one!"
 msgstr "Non existen listaxes, cree algunha!"
 
-msgid "No recent changes"
-msgstr "Non hai cambios recentes"
-
 msgid "No reviews yet!"
 msgstr "Aínda non hai críticas!"
 
@@ -587,14 +596,23 @@ msgstr ""
 msgid "Open Source"
 msgstr "Código aberto"
 
+msgid "Opens Urls"
+msgstr ""
+
 msgid "Other Link"
 msgstr ""
 
 msgid "Other link is not a valid url"
 msgstr ""
 
+msgid "Permissions"
+msgstr ""
+
 msgid "Personalisation"
 msgstr "Personalización"
+
+msgid "Phone Apps & Scopes"
+msgstr ""
 
 msgid "Please login to send via Caxton"
 msgstr "Por favor, inicie sesión para enviar via Caxton"
@@ -621,11 +639,11 @@ msgstr "Produtividade"
 msgid "Proprietary"
 msgstr "Propietario"
 
+msgid "Push Notifications"
+msgstr ""
+
 msgid "QR Code"
 msgstr "Código QR"
-
-msgid "QR Code:"
-msgstr "Código QR:"
 
 msgid "Reference"
 msgstr "Referencias"
@@ -641,6 +659,9 @@ msgstr "Ciencia e enxeñaría"
 
 msgid "Scope"
 msgstr "Ámbito"
+
+msgid "Scope INI File:"
+msgstr ""
 
 msgid "Scopes"
 msgstr "Ámbitos"
@@ -659,6 +680,9 @@ msgstr "Enviada via Caxton"
 
 msgid "Settings"
 msgstr "Axustes"
+
+msgid "Share"
+msgstr ""
 
 msgid "Share on Facebook"
 msgstr "Compartir no Facebook"
@@ -681,8 +705,38 @@ msgstr "Aplicacións semellantes"
 msgid "Snappy App"
 msgstr "Aplicación Snappy"
 
-msgid "Snappy Apps"
-msgstr "Aplicacións Snappy"
+msgid "Snappy Applications"
+msgstr ""
+
+msgid "Snappy Framework"
+msgstr ""
+
+msgid "Snappy Frameworks"
+msgstr ""
+
+msgid "Snappy Gadget"
+msgstr ""
+
+msgid "Snappy Gadgets"
+msgstr ""
+
+msgid "Snappy Kernel"
+msgstr ""
+
+msgid "Snappy Kernels"
+msgstr ""
+
+msgid "Snappy Metadata:"
+msgstr ""
+
+msgid "Snappy OEM"
+msgstr ""
+
+msgid "Snappy OEMs"
+msgstr ""
+
+msgid "Snappy OS"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Redes sociais"
@@ -704,9 +758,6 @@ msgstr ""
 
 msgid "Submitted by"
 msgstr ""
-
-msgid "Support"
-msgstr "Asistencia"
 
 msgid "Support:"
 msgstr "Asistencia:"
@@ -747,10 +798,8 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Esta aplicación esta nas seguintes listaxes:"
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
-"Esta aplicación es un expositor non oficial de aplicaciones para Ubuntu "
-"Touch."
 
 msgid "This list is empty!"
 msgstr "Esta listaxe está vacía!"
@@ -802,6 +851,9 @@ msgstr "Tipo:"
 msgid "Universal Accesss/Accessibility"
 msgstr "Acceso universal/Accesibilidade"
 
+msgid "Unknown"
+msgstr ""
+
 msgid "Updated Apps"
 msgstr "Aplicacións actualizadas"
 
@@ -809,6 +861,9 @@ msgid "Updated:"
 msgstr "Actualizadas:"
 
 msgid "Upvote"
+msgstr ""
+
+msgid "Urls that open in this app:"
 msgstr ""
 
 msgid "User List:"
@@ -843,9 +898,6 @@ msgstr "Sitio web:"
 
 msgid "Welcome"
 msgstr "Benvido"
-
-msgid "Welcome to uApp Explorer!"
-msgstr "Benvido a uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr ""
@@ -902,9 +954,6 @@ msgid_plural "apps"
 msgstr[0] "aplicativo"
 msgstr[1] "aplicativos"
 
-msgid "apps & scopes"
-msgstr "aplicativos e ámbitos"
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] "xogo"
@@ -916,6 +965,9 @@ msgstr ""
 msgid "iTunes link is not a valid url"
 msgstr ""
 
+msgid "phone apps & scopes"
+msgstr ""
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "ámbito"
@@ -923,6 +975,21 @@ msgstr[1] "ámbitos"
 
 msgid "snappy apps"
 msgstr "aplicativos snappy"
+
+msgid "snappy frameworks"
+msgstr ""
+
+msgid "snappy gadgets"
+msgstr ""
+
+msgid "snappy kernels"
+msgstr ""
+
+msgid "snappy oems"
+msgstr ""
+
+msgid "snappy os"
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
 "PO-Revision-Date: 2016-02-03 11:18+0000\n"
 "Last-Translator: muzzol <muzzol@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(No us preocupeu, també hi ha una versió lliure!)"
@@ -41,6 +41,9 @@ msgstr "- Trieu una llista -"
 msgid "A wish with the same name already exists"
 msgstr "Ja existeix un desig amb el mateix nom"
 
+msgid "Account Integration"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "Afegeix Aplicaccions:"
 
@@ -59,8 +62,8 @@ msgstr "Totes les arquitectures"
 msgid "All Frameworks"
 msgstr "Tots els frameworks"
 
-msgid "All Types"
-msgstr "Tots els tipus"
+msgid "All Snappy Packages"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Enllaç d'Amazon"
@@ -115,6 +118,9 @@ msgstr "Aplicacions:"
 
 msgid "Architecture:"
 msgstr "Arquitectura:"
+
+msgid "Architectures:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Esteu segurs que voleu eliminar aquesta llista?"
@@ -261,6 +267,9 @@ msgstr "Suprimeix"
 
 msgid "Description"
 msgstr "Descripció"
+
+msgid "Desktop File:"
+msgstr ""
 
 msgid "Developer Tools"
 msgstr "Eines per a desenvolupadors"
@@ -470,6 +479,9 @@ msgstr "Darrera actualització"
 msgid "Least Popular (This Month)"
 msgstr "El menys popular (aquest mes)"
 
+msgid "Less Info"
+msgstr ""
+
 msgid "License:"
 msgstr "Llicència:"
 
@@ -575,9 +587,6 @@ msgstr "No s'han trobat aplicacions, intenteu cercar de nou."
 msgid "No lists, create one!"
 msgstr "No hi ha llistes, creeu-na una!"
 
-msgid "No recent changes"
-msgstr "No hi ha canvis recents"
-
 msgid "No reviews yet!"
 msgstr "Encara no hi ha opinions!"
 
@@ -597,14 +606,23 @@ msgstr ""
 msgid "Open Source"
 msgstr "Codi obert"
 
+msgid "Opens Urls"
+msgstr ""
+
 msgid "Other Link"
 msgstr "Un altre enllaç"
 
 msgid "Other link is not a valid url"
 msgstr "L'altre enllaç no és una URL vàlida"
 
+msgid "Permissions"
+msgstr ""
+
 msgid "Personalisation"
 msgstr "Personalització"
+
+msgid "Phone Apps & Scopes"
+msgstr ""
 
 msgid "Please login to send via Caxton"
 msgstr "Si us plau, inicieu sessió per enviar via Caxton"
@@ -631,11 +649,11 @@ msgstr "Productivitat"
 msgid "Proprietary"
 msgstr "Propietari"
 
+msgid "Push Notifications"
+msgstr ""
+
 msgid "QR Code"
 msgstr "Codi QR"
-
-msgid "QR Code:"
-msgstr "Codi QR:"
 
 msgid "Reference"
 msgstr "Referència"
@@ -651,6 +669,9 @@ msgstr "Ciència i enginyeria"
 
 msgid "Scope"
 msgstr "Àmbit"
+
+msgid "Scope INI File:"
+msgstr ""
 
 msgid "Scopes"
 msgstr "Àmbits"
@@ -669,6 +690,9 @@ msgstr "S'ha enviat via Caxton"
 
 msgid "Settings"
 msgstr "Configuració"
+
+msgid "Share"
+msgstr ""
 
 msgid "Share on Facebook"
 msgstr "Comparteix a Facebook"
@@ -691,8 +715,38 @@ msgstr "Aplicacions semblants"
 msgid "Snappy App"
 msgstr "Aplicació Snappy"
 
-msgid "Snappy Apps"
-msgstr "Aplicacions Snappy"
+msgid "Snappy Applications"
+msgstr ""
+
+msgid "Snappy Framework"
+msgstr ""
+
+msgid "Snappy Frameworks"
+msgstr ""
+
+msgid "Snappy Gadget"
+msgstr ""
+
+msgid "Snappy Gadgets"
+msgstr ""
+
+msgid "Snappy Kernel"
+msgstr ""
+
+msgid "Snappy Kernels"
+msgstr ""
+
+msgid "Snappy Metadata:"
+msgstr ""
+
+msgid "Snappy OEM"
+msgstr ""
+
+msgid "Snappy OEMs"
+msgstr ""
+
+msgid "Snappy OS"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Xarxes socials"
@@ -714,9 +768,6 @@ msgstr "Envia"
 
 msgid "Submitted by"
 msgstr "Tramès per"
-
-msgid "Support"
-msgstr "Suport"
 
 msgid "Support:"
 msgstr "Suport:"
@@ -755,9 +806,8 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Aquesta aplicació es troba dins aquestes llistes:"
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
-"Això és un visualitzador d'aplicacions no oficial per a Ubuntu Touch."
 
 msgid "This list is empty!"
 msgstr "Aquesta llista és buida!"
@@ -811,6 +861,9 @@ msgstr "Tipus:"
 msgid "Universal Accesss/Accessibility"
 msgstr "Accés universal/Accessibilitat"
 
+msgid "Unknown"
+msgstr ""
+
 msgid "Updated Apps"
 msgstr "Aplicacions actualitzades"
 
@@ -819,6 +872,9 @@ msgstr "Actualitzat:"
 
 msgid "Upvote"
 msgstr "Vota positiu"
+
+msgid "Urls that open in this app:"
+msgstr ""
 
 msgid "User List:"
 msgstr "Llista d'usuaris:"
@@ -852,9 +908,6 @@ msgstr "Lloc web:"
 
 msgid "Welcome"
 msgstr "Benvingut"
-
-msgid "Welcome to uApp Explorer!"
-msgstr "Benvingut a l'uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr "Que us agradaria veure a l'Ubuntu Touch?"
@@ -917,9 +970,6 @@ msgid_plural "apps"
 msgstr[0] "aplicació"
 msgstr[1] "aplicacions"
 
-msgid "apps & scopes"
-msgstr "aplicacions i àmbits"
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] "joc"
@@ -931,6 +981,9 @@ msgstr "Enllaç d'iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "L'enllaç d'iTunes no és una URL vàlida"
 
+msgid "phone apps & scopes"
+msgstr ""
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "àmbit"
@@ -938,6 +991,21 @@ msgstr[1] "àmbits"
 
 msgid "snappy apps"
 msgstr "aplicacions snappy"
+
+msgid "snappy frameworks"
+msgstr ""
+
+msgid "snappy gadgets"
+msgstr ""
+
+msgid "snappy kernels"
+msgstr ""
+
+msgid "snappy oems"
+msgstr ""
+
+msgid "snappy os"
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

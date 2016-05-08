@@ -1,23 +1,22 @@
-# Swedish translation for uappexplorer
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Malay translation for uappexplorer
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the uappexplorer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 03:12+0000\n"
-"PO-Revision-Date: 2015-10-05 20:11+0000\n"
-"Last-Translator: Fredrik Andersson <fredrikfritte@gmail.com>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2016-04-28 11:33+0000\n"
+"Last-Translator: Norman Haikal <Unknown>\n"
+"Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
 "X-Generator: Launchpad (build 18025)\n"
-"Language: sv\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr ""
@@ -44,13 +43,13 @@ msgid "Add Apps:"
 msgstr ""
 
 msgid "Add to list:"
-msgstr ""
+msgstr "Tambah ke dalam senarai:"
 
 msgid "All"
-msgstr "Alla"
+msgstr ""
 
 msgid "All Apps"
-msgstr "Alla Appar"
+msgstr ""
 
 msgid "All Architectures"
 msgstr ""
@@ -83,7 +82,7 @@ msgid ""
 msgstr ""
 
 msgid "App"
-msgstr "App"
+msgstr ""
 
 msgid "App Name"
 msgstr ""
@@ -95,16 +94,16 @@ msgid "App Wishlist"
 msgstr ""
 
 msgid "Apps"
-msgstr "Appar"
+msgstr ""
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
 
 msgid "Apps:"
-msgstr "Appar:"
+msgstr ""
 
 msgid "Architecture:"
-msgstr "Arkitektur:"
+msgstr ""
 
 msgid "Architectures:"
 msgstr ""
@@ -122,19 +121,19 @@ msgid "Books & Comics"
 msgstr ""
 
 msgid "Browse"
-msgstr "Bläddra"
+msgstr ""
 
 msgid "Browse Apps"
-msgstr "Bläddra bland appar"
+msgstr ""
 
 msgid "Browse Games"
-msgstr "Bläddra bland spel"
+msgstr ""
 
 msgid "Browse Scopes"
-msgstr "Bläddra bland Scopes"
+msgstr ""
 
 msgid "Browse Web Apps"
-msgstr "Bländra bland Webappar"
+msgstr ""
 
 msgid "Business"
 msgstr ""
@@ -152,16 +151,16 @@ msgid "Cancel"
 msgstr ""
 
 msgid "Category:"
-msgstr "Kategori:"
+msgstr ""
 
 msgid "Caxton Code"
 msgstr ""
 
 msgid "Changelog"
-msgstr "Ändringslogg"
+msgstr ""
 
 msgid "Close"
-msgstr "Stäng"
+msgstr ""
 
 msgid "Communication"
 msgstr ""
@@ -170,7 +169,7 @@ msgid "Company"
 msgstr ""
 
 msgid "Containing:"
-msgstr "Innehåller:"
+msgstr ""
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
@@ -221,16 +220,16 @@ msgid "Could not update the list at this time, please try again later"
 msgstr ""
 
 msgid "Create"
-msgstr "Skapa"
+msgstr ""
 
 msgid "Create List"
-msgstr "Skapa lista"
+msgstr ""
 
 msgid "Delete"
-msgstr "Ta bort"
+msgstr ""
 
 msgid "Description"
-msgstr "Beskrivning"
+msgstr ""
 
 msgid "Desktop File:"
 msgstr ""
@@ -242,16 +241,16 @@ msgid "Developer/Company"
 msgstr ""
 
 msgid "Donate"
-msgstr "Donera"
+msgstr ""
 
 msgid "Donate via Bitcoin"
-msgstr "Donera via Bitcoin"
+msgstr ""
 
 msgid "Donate via Gratipay"
-msgstr "Donera via Gratipay"
+msgstr ""
 
 msgid "Donate via Paypal"
-msgstr "Donera via Paypal"
+msgstr ""
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -270,7 +269,7 @@ msgid "Downvote"
 msgstr ""
 
 msgid "Edit"
-msgstr "Ändra"
+msgstr ""
 
 msgid "Edit List"
 msgstr ""
@@ -288,19 +287,19 @@ msgid "Essential Apps"
 msgstr ""
 
 msgid "FAQ"
-msgstr "FAQ"
+msgstr ""
 
 msgid "File Size:"
 msgstr ""
 
 msgid "Filters"
-msgstr "Filter"
+msgstr ""
 
 msgid "Finance"
 msgstr ""
 
 msgid "Find"
-msgstr "Sök"
+msgstr ""
 
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
@@ -318,10 +317,10 @@ msgid "Framework:"
 msgstr ""
 
 msgid "Free"
-msgstr "Gratis"
+msgstr ""
 
 msgid "Games"
-msgstr "Spel"
+msgstr ""
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
 msgstr ""
@@ -369,7 +368,7 @@ msgid "How can I help improve this site?"
 msgstr ""
 
 msgid "How do I install apps?"
-msgstr "Hur installerar jag appar?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr ""
@@ -408,7 +407,7 @@ msgid ""
 msgstr ""
 
 msgid "Info"
-msgstr "Info"
+msgstr ""
 
 msgid "Install"
 msgstr ""
@@ -423,10 +422,10 @@ msgid "Itunes Link"
 msgstr ""
 
 msgid "Language"
-msgstr "Språk"
+msgstr ""
 
 msgid "Latest Update"
-msgstr "Senaste uppdatering"
+msgstr ""
 
 msgid "Least Popular (This Month)"
 msgstr ""
@@ -435,13 +434,13 @@ msgid "Less Info"
 msgstr ""
 
 msgid "License:"
-msgstr "Licens:"
+msgstr ""
 
 msgid "Lifestyle"
 msgstr ""
 
 msgid "List"
-msgstr "Lista"
+msgstr ""
 
 msgid "List Name:"
 msgstr ""
@@ -453,13 +452,13 @@ msgid "Loading reviews..."
 msgstr ""
 
 msgid "Log In"
-msgstr "Logga in"
+msgstr ""
 
 msgid "Log Out"
-msgstr "Logga ut"
+msgstr ""
 
 msgid "Log in via Ubuntu"
-msgstr "Logga in via Ubuntu"
+msgstr ""
 
 msgid "Login to make a wish"
 msgstr ""
@@ -507,10 +506,10 @@ msgid "My Lists"
 msgstr ""
 
 msgid "New Apps"
-msgstr "Nya Appar"
+msgstr ""
 
 msgid "New List"
-msgstr "Ny lista"
+msgstr ""
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -519,16 +518,16 @@ msgid ""
 msgstr ""
 
 msgid "Newest"
-msgstr "Senaste"
+msgstr ""
 
 msgid "News & Magazines"
 msgstr ""
 
 msgid "Next App:"
-msgstr "Nästa App:"
+msgstr ""
 
 msgid "No"
-msgstr "Nej"
+msgstr ""
 
 msgid "No apps found, try searching again."
 msgstr ""
@@ -543,7 +542,7 @@ msgid "No wishes found, try searching again."
 msgstr ""
 
 msgid "Oldest"
-msgstr "Äldsta"
+msgstr ""
 
 msgid "Oldest Update"
 msgstr ""
@@ -599,7 +598,7 @@ msgid "Push Notifications"
 msgstr ""
 
 msgid "QR Code"
-msgstr "QR-kod"
+msgstr ""
 
 msgid "Reference"
 msgstr ""
@@ -608,58 +607,58 @@ msgid "Remove this app from your list"
 msgstr ""
 
 msgid "Save"
-msgstr "Spara"
+msgstr ""
 
 msgid "Science & Engineering"
 msgstr ""
 
 msgid "Scope"
-msgstr "Scope"
+msgstr ""
 
 msgid "Scope INI File:"
 msgstr ""
 
 msgid "Scopes"
-msgstr "Scopes"
+msgstr ""
 
 msgid "Screenshots"
-msgstr "Skärmbilder"
+msgstr ""
 
 msgid "Search for a wish:"
 msgstr ""
 
 msgid "Send via Caxton"
-msgstr "Sänd via Caxton"
+msgstr ""
 
 msgid "Sent via Caxton"
-msgstr "Skickat via Caxton"
+msgstr ""
 
 msgid "Settings"
-msgstr "Inställningar"
+msgstr ""
 
 msgid "Share"
 msgstr ""
 
 msgid "Share on Facebook"
-msgstr "Dela på Facebook"
+msgstr ""
 
 msgid "Share on Google+"
-msgstr "Dela på Google+"
+msgstr ""
 
 msgid "Share on Reddit"
-msgstr "Dela på Reddit"
+msgstr ""
 
 msgid "Share on Twitter"
-msgstr "Dela på Twitter"
+msgstr ""
 
 msgid "Shopping"
 msgstr ""
 
 msgid "Similar Apps"
-msgstr "Liknande Appar"
+msgstr ""
 
 msgid "Snappy App"
-msgstr "Snappy App"
+msgstr ""
 
 msgid "Snappy Applications"
 msgstr ""
@@ -701,7 +700,7 @@ msgid "Sort Apps By:"
 msgstr ""
 
 msgid "Sort By:"
-msgstr "Sortera efter:"
+msgstr ""
 
 msgid "Sports"
 msgstr ""
@@ -716,16 +715,16 @@ msgid "Submitted by"
 msgstr ""
 
 msgid "Support:"
-msgstr "Support:"
+msgstr ""
 
 msgid "Terms:"
-msgstr "Villkor:"
+msgstr ""
 
 msgid "Thank you for your vote!"
 msgstr ""
 
 msgid "Thank you!"
-msgstr "Tack!"
+msgstr ""
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
@@ -785,19 +784,19 @@ msgid "Travel & Local"
 msgstr ""
 
 msgid "Type:"
-msgstr "Typ:"
+msgstr "Jenis:"
 
 msgid "Universal Accesss/Accessibility"
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "Anu"
 
 msgid "Updated Apps"
-msgstr "Uppdaterade Appar"
+msgstr ""
 
 msgid "Updated:"
-msgstr "Uppdaterad:"
+msgstr ""
 
 msgid "Upvote"
 msgstr ""
@@ -812,31 +811,31 @@ msgid "User Reviews"
 msgstr ""
 
 msgid "Utilities"
-msgstr ""
+msgstr "Utiliti"
 
 msgid "Version:"
-msgstr "Version:"
+msgstr ""
 
 msgid "View"
-msgstr "Visa"
+msgstr "Lihat"
 
 msgid "Vote"
 msgstr ""
 
 msgid "Weather"
-msgstr ""
+msgstr "Cuaca"
 
 msgid "Web App"
-msgstr "Web App"
+msgstr ""
 
 msgid "Web Apps"
-msgstr "Web Appar"
+msgstr ""
 
 msgid "Website:"
-msgstr "Hemsida:"
+msgstr "Laman Web:"
 
 msgid "Welcome"
-msgstr "Välkommen"
+msgstr "Selamat Datang"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr ""
@@ -871,7 +870,7 @@ msgid "Wishlist"
 msgstr ""
 
 msgid "Yes"
-msgstr "Ja"
+msgstr "Ya"
 
 msgid "You are already connected via Caxton!"
 msgstr ""
@@ -894,8 +893,7 @@ msgstr[1] ""
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "permainan"
 
 msgid "iTunes Link"
 msgstr ""

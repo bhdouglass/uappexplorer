@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
 "PO-Revision-Date: 2016-04-05 14:13+0000\n"
 "Last-Translator: Hüseyin Karacabey <karacabey66@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(Merak etmeyin, ücretsiz bir sürümü de var!)"
@@ -34,6 +34,9 @@ msgid "- Choose a list -"
 msgstr "- Bir liste seç -"
 
 msgid "A wish with the same name already exists"
+msgstr ""
+
+msgid "Account Integration"
 msgstr ""
 
 msgid "Add Apps:"
@@ -54,8 +57,8 @@ msgstr "Tüm Mimariler"
 msgid "All Frameworks"
 msgstr "Bütün Sistemler"
 
-msgid "All Types"
-msgstr "Bütün Türler"
+msgid "All Snappy Packages"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Amazon Bağlantısı"
@@ -101,6 +104,9 @@ msgstr "Uygulamalar:"
 
 msgid "Architecture:"
 msgstr "Mimari:"
+
+msgid "Architectures:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Bu listeyi silmek istediğinden emin misin?"
@@ -224,6 +230,9 @@ msgstr "Sil"
 
 msgid "Description"
 msgstr "Açıklama"
+
+msgid "Desktop File:"
+msgstr ""
 
 msgid "Developer Tools"
 msgstr "Geliştirici Araçları"
@@ -421,6 +430,9 @@ msgstr ""
 msgid "Least Popular (This Month)"
 msgstr ""
 
+msgid "Less Info"
+msgstr ""
+
 msgid "License:"
 msgstr ""
 
@@ -523,9 +535,6 @@ msgstr ""
 msgid "No lists, create one!"
 msgstr ""
 
-msgid "No recent changes"
-msgstr ""
-
 msgid "No reviews yet!"
 msgstr ""
 
@@ -544,13 +553,22 @@ msgstr ""
 msgid "Open Source"
 msgstr ""
 
+msgid "Opens Urls"
+msgstr ""
+
 msgid "Other Link"
 msgstr ""
 
 msgid "Other link is not a valid url"
 msgstr ""
 
+msgid "Permissions"
+msgstr ""
+
 msgid "Personalisation"
+msgstr ""
+
+msgid "Phone Apps & Scopes"
 msgstr ""
 
 msgid "Please login to send via Caxton"
@@ -576,10 +594,10 @@ msgstr ""
 msgid "Proprietary"
 msgstr ""
 
-msgid "QR Code"
+msgid "Push Notifications"
 msgstr ""
 
-msgid "QR Code:"
+msgid "QR Code"
 msgstr ""
 
 msgid "Reference"
@@ -595,6 +613,9 @@ msgid "Science & Engineering"
 msgstr ""
 
 msgid "Scope"
+msgstr ""
+
+msgid "Scope INI File:"
 msgstr ""
 
 msgid "Scopes"
@@ -613,6 +634,9 @@ msgid "Sent via Caxton"
 msgstr ""
 
 msgid "Settings"
+msgstr ""
+
+msgid "Share"
 msgstr ""
 
 msgid "Share on Facebook"
@@ -636,7 +660,37 @@ msgstr ""
 msgid "Snappy App"
 msgstr ""
 
-msgid "Snappy Apps"
+msgid "Snappy Applications"
+msgstr ""
+
+msgid "Snappy Framework"
+msgstr ""
+
+msgid "Snappy Frameworks"
+msgstr ""
+
+msgid "Snappy Gadget"
+msgstr ""
+
+msgid "Snappy Gadgets"
+msgstr ""
+
+msgid "Snappy Kernel"
+msgstr ""
+
+msgid "Snappy Kernels"
+msgstr ""
+
+msgid "Snappy Metadata:"
+msgstr ""
+
+msgid "Snappy OEM"
+msgstr ""
+
+msgid "Snappy OEMs"
+msgstr ""
+
+msgid "Snappy OS"
 msgstr ""
 
 msgid "Social Networking"
@@ -658,9 +712,6 @@ msgid "Submit"
 msgstr ""
 
 msgid "Submitted by"
-msgstr ""
-
-msgid "Support"
 msgstr ""
 
 msgid "Support:"
@@ -693,7 +744,7 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr ""
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
 
 msgid "This list is empty!"
@@ -738,6 +789,9 @@ msgstr ""
 msgid "Universal Accesss/Accessibility"
 msgstr ""
 
+msgid "Unknown"
+msgstr ""
+
 msgid "Updated Apps"
 msgstr ""
 
@@ -745,6 +799,9 @@ msgid "Updated:"
 msgstr ""
 
 msgid "Upvote"
+msgstr ""
+
+msgid "Urls that open in this app:"
 msgstr ""
 
 msgid "User List:"
@@ -778,9 +835,6 @@ msgid "Website:"
 msgstr ""
 
 msgid "Welcome"
-msgstr ""
-
-msgid "Welcome to uApp Explorer!"
 msgstr ""
 
 msgid "What app do you wish to see on Ubuntu Touch?"
@@ -837,9 +891,6 @@ msgid_plural "apps"
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "apps & scopes"
-msgstr ""
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] ""
@@ -851,12 +902,30 @@ msgstr ""
 msgid "iTunes link is not a valid url"
 msgstr ""
 
+msgid "phone apps & scopes"
+msgstr ""
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] ""
 msgstr[1] ""
 
 msgid "snappy apps"
+msgstr ""
+
+msgid "snappy frameworks"
+msgstr ""
+
+msgid "snappy gadgets"
+msgstr ""
+
+msgid "snappy kernels"
+msgstr ""
+
+msgid "snappy oems"
+msgstr ""
+
+msgid "snappy os"
 msgstr ""
 
 msgid "web apps"

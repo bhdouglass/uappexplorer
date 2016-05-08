@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2016-01-08 10:49+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
+"PO-Revision-Date: 2016-04-25 20:03+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: cs\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -40,6 +40,9 @@ msgstr "- Zvolte seznam -"
 msgid "A wish with the same name already exists"
 msgstr "Přání se stejným názvem již existuje"
 
+msgid "Account Integration"
+msgstr "Integrace s účtem"
+
 msgid "Add Apps:"
 msgstr "Přidat aplikace:"
 
@@ -58,8 +61,8 @@ msgstr "Všechny architektury"
 msgid "All Frameworks"
 msgstr "Všechny frameworky"
 
-msgid "All Types"
-msgstr "Všechny typy"
+msgid "All Snappy Packages"
+msgstr "Veškeré balíky snappy"
 
 msgid "Amazon Link"
 msgstr "Odkaz na Amazon"
@@ -111,6 +114,9 @@ msgstr "Aplikace:"
 
 msgid "Architecture:"
 msgstr "Architektura:"
+
+msgid "Architectures:"
+msgstr "Architektury:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Skutečně chcete tento seznam smazat?"
@@ -242,6 +248,9 @@ msgstr "Smazat"
 
 msgid "Description"
 msgstr "Popis"
+
+msgid "Desktop File:"
+msgstr "Desktop soubot:"
 
 msgid "Developer Tools"
 msgstr "Nástroje pro vývojáře"
@@ -454,6 +463,9 @@ msgstr "Poslední aktualizace"
 msgid "Least Popular (This Month)"
 msgstr "Nejméně oblíbené (tento měsíc)"
 
+msgid "Less Info"
+msgstr "Méně informací"
+
 msgid "License:"
 msgstr "Licence:"
 
@@ -559,14 +571,11 @@ msgstr "Žádné aplikace nebyly nalezeny, zkuste opakovat vyhledávání"
 msgid "No lists, create one!"
 msgstr "Žádné seznamy. Vytvořte nějaký."
 
-msgid "No recent changes"
-msgstr "Žádné nedávné změny"
-
 msgid "No reviews yet!"
 msgstr "Tato aplikace ještě nebyla okomentována."
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "Nenalezena žádná přání, zkuste hledat znova."
 
 msgid "Oldest"
 msgstr "Nejstarší"
@@ -582,14 +591,23 @@ msgstr ""
 msgid "Open Source"
 msgstr "Otevřený zdrojový kód"
 
+msgid "Opens Urls"
+msgstr "Otevře odkazy"
+
 msgid "Other Link"
 msgstr "Jiný odkaz"
 
 msgid "Other link is not a valid url"
 msgstr "Odkaz není validní"
 
+msgid "Permissions"
+msgstr "Oprávnění"
+
 msgid "Personalisation"
 msgstr "Přizpůsobení"
+
+msgid "Phone Apps & Scopes"
+msgstr "Mobilní aplikace a rozsahy"
 
 msgid "Please login to send via Caxton"
 msgstr "Přihlaste se prosím pro zaslání skrze Caxton"
@@ -616,11 +634,11 @@ msgstr "Produktivita"
 msgid "Proprietary"
 msgstr "Proprietární"
 
+msgid "Push Notifications"
+msgstr "Push notifikace"
+
 msgid "QR Code"
 msgstr "QR kód"
-
-msgid "QR Code:"
-msgstr "QR Kód:"
 
 msgid "Reference"
 msgstr "Odkazy"
@@ -637,6 +655,9 @@ msgstr "Věda a inženýrství"
 msgid "Scope"
 msgstr "Rozsah"
 
+msgid "Scope INI File:"
+msgstr "INI soubor pro rozsah:"
+
 msgid "Scopes"
 msgstr "Rozsahy"
 
@@ -644,7 +665,7 @@ msgid "Screenshots"
 msgstr "Snímky obrazovky"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Hledat přání:"
 
 msgid "Send via Caxton"
 msgstr "Odeslat skrze Caxton"
@@ -654,6 +675,9 @@ msgstr "Odesláno skrze Caxton"
 
 msgid "Settings"
 msgstr "Nastavení"
+
+msgid "Share"
+msgstr "Sdílet"
 
 msgid "Share on Facebook"
 msgstr "Sdílet na Facebooku"
@@ -676,8 +700,38 @@ msgstr "Podobné aplikace"
 msgid "Snappy App"
 msgstr "Aplikace Snappy"
 
-msgid "Snappy Apps"
+msgid "Snappy Applications"
 msgstr "Snappy aplikace"
+
+msgid "Snappy Framework"
+msgstr "Snappy knihovna"
+
+msgid "Snappy Frameworks"
+msgstr "Snappy knihovny"
+
+msgid "Snappy Gadget"
+msgstr "Snappy doplněk"
+
+msgid "Snappy Gadgets"
+msgstr "Snappy doplňky"
+
+msgid "Snappy Kernel"
+msgstr "Snappy jádro"
+
+msgid "Snappy Kernels"
+msgstr "Snappy jádra"
+
+msgid "Snappy Metadata:"
+msgstr "Snappy metadata:"
+
+msgid "Snappy OEM"
+msgstr "Snappy OEM"
+
+msgid "Snappy OEMs"
+msgstr "Snappy OEM"
+
+msgid "Snappy OS"
+msgstr "Snappy OS"
 
 msgid "Social Networking"
 msgstr "Sociální sítě"
@@ -699,9 +753,6 @@ msgstr "Odeslat"
 
 msgid "Submitted by"
 msgstr "Zaslal(a)"
-
-msgid "Support"
-msgstr "Podpora"
 
 msgid "Support:"
 msgstr "Podpora:"
@@ -743,8 +794,8 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Tato aplikace se nachází na těchto seznamech:"
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Toto je neoficiální katalog aplikací pro Ubuntu"
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
+msgstr "Toto je neoficiální prohlížeč pro Ubuntu Touch a aplikace Snappy"
 
 msgid "This list is empty!"
 msgstr "Tento seznam je prázdný!"
@@ -800,6 +851,9 @@ msgstr "Typ aplikace:"
 msgid "Universal Accesss/Accessibility"
 msgstr "Univerzální přístup/Přístupnost"
 
+msgid "Unknown"
+msgstr "Neznámý"
+
 msgid "Updated Apps"
 msgstr "Aktualizované aplikace"
 
@@ -808,6 +862,9 @@ msgstr "Aktualizováno:"
 
 msgid "Upvote"
 msgstr "Zvýšit hodnocení"
+
+msgid "Urls that open in this app:"
+msgstr "Odkazy otevírané v této aplikaci:"
 
 msgid "User List:"
 msgstr "Uživatelský seznam"
@@ -841,9 +898,6 @@ msgstr "Webová stránka:"
 
 msgid "Welcome"
 msgstr "Vítejte"
-
-msgid "Welcome to uApp Explorer!"
-msgstr "Vítejte v uApp Exploreru!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr "Jakou aplikaci byste si na Ubuntu Touch přáli?"
@@ -906,9 +960,6 @@ msgstr[0] "aplikace"
 msgstr[1] "aplikace/í"
 msgstr[2] "aplikace/í"
 
-msgid "apps & scopes"
-msgstr "aplikace a rozsahy"
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] "hra"
@@ -921,6 +972,9 @@ msgstr "odkaz na iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "Odkaz na iTunes není validní"
 
+msgid "phone apps & scopes"
+msgstr "mobilní aplikace a rozsahy"
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "rozsah"
@@ -929,6 +983,21 @@ msgstr[2] "rozsahy/ů"
 
 msgid "snappy apps"
 msgstr "snappy aplikace"
+
+msgid "snappy frameworks"
+msgstr "snappy knihovny"
+
+msgid "snappy gadgets"
+msgstr "snappy doplňky"
+
+msgid "snappy kernels"
+msgstr "snappy jádra"
+
+msgid "snappy oems"
+msgstr "snappy oem"
+
+msgid "snappy os"
+msgstr "snappy os"
 
 msgid "web apps"
 msgid_plural "web apps"

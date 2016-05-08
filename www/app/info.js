@@ -313,33 +313,37 @@ module.exports = {
 
   languages: [
     {
+      'name': 'Arabic',
+      'code': 'ar',
+      'untranslated': 0,
+    }, {
       'name': 'Asturian',
       'code': 'ast',
-      'untranslated': 245,
+      'untranslated': 244,
     }, {
       'name': 'Basque',
       'code': 'eu',
-      'untranslated': 0,
+      'untranslated': 31,
     }, {
       'name': 'Brazilian Portuguese',
       'code': 'pt_BR',
-      'untranslated': 0,
+      'untranslated': 31,
     }, {
       'name': 'Burmese',
       'code': 'my',
-      'untranslated': 243,
+      'untranslated': 266,
     }, {
       'name': 'Catalan',
       'code': 'ca',
-      'untranslated': 0,
+      'untranslated': 31,
     }, {
       'name': 'Chinese (Simplified)',
       'code': 'zh_CN',
-      'untranslated': 0,
+      'untranslated': 18,
     }, {
       'name': 'Czech',
       'code': 'cs',
-      'untranslated': 2,
+      'untranslated': 0,
     }, {
       'name': 'Dutch',
       'code': 'nl',
@@ -351,19 +355,19 @@ module.exports = {
     }, {
       'name': 'French',
       'code': 'fr',
-      'untranslated': 0,
+      'untranslated': 20,
     }, {
       'name': 'Galician',
       'code': 'gl',
-      'untranslated': 42,
+      'untranslated': 73,
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 0,
+      'untranslated': 27,
     }, {
       'name': 'Greek',
       'code': 'el',
-      'untranslated': 0,
+      'untranslated': 30,
     }, {
       'name': 'Hungarian',
       'code': 'hu',
@@ -371,27 +375,31 @@ module.exports = {
     }, {
       'name': 'Italian',
       'code': 'it',
-      'untranslated': 0,
+      'untranslated': 31,
+    }, {
+      'name': 'Maylay',
+      'code': 'ms',
+      'untranslated': 278,
     }, {
       'name': 'Norwegian Bokmal',
       'code': 'nb',
-      'untranslated': 115,
+      'untranslated': 143,
     }, {
       'name': 'Polish',
       'code': 'pl',
-      'untranslated': 35,
+      'untranslated': 66,
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 0,
+      'untranslated': 31,
     }, {
       'name': 'Romanian',
       'code': 'ro',
-      'untranslated': 57,
+      'untranslated': 86,
     }, {
       'name': 'Russian',
       'code': 'ru',
-      'untranslated': 79,
+      'untranslated': 107,
     }, {
       'name': 'Serbian',
       'code': 'sr',
@@ -399,19 +407,19 @@ module.exports = {
     }, {
       'name': 'Spanish',
       'code': 'es',
-      'untranslated': 13,
+      'untranslated': 44,
     }, {
       'name': 'Swedish',
       'code': 'sv',
-      'untranslated': 188,
+      'untranslated': 215,
     }, {
       'name': 'Turkish',
       'code': 'tr',
-      'untranslated': 207,
+      'untranslated': 231,
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 18,
+      'untranslated': 41,
     },
   ],
 };

@@ -1,0 +1,991 @@
+# Arabic translation for uappexplorer
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the uappexplorer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uappexplorer\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
+"PO-Revision-Date: 2016-04-26 05:25+0000\n"
+"Last-Translator: Abdulrahman M. S. <Unknown>\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
+"3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
+
+msgid "(Don't worry, there is a free version too!)"
+msgstr "لاتقلق، هناك نسخة مجانية ايضاً!"
+
+msgid ""
+"*Install will take you to the official appstore on an Ubuntu Touch device"
+msgstr "*عند التثبيت سيتم الانتقال للمتجر الرئيسي على جهاز اوبونتو تتش"
+
+msgid ""
+"*This webapp injects custom code into the website which can add extra "
+"features or be malicious. Only use this app if you trust the author."
+msgstr ""
+"*تطبيق الويب هذا يقوم بحقن اكواد مُخصصة في شفرة الموقع وهذا يضيف مميزات "
+"اضافية او احياناً اكواد مُضرة. استخدم هذا التطبيق اذا كُنت تثق بالمطور فقط."
+
+msgid "- Choose a list -"
+msgstr "- اختر قائمة -"
+
+msgid "A wish with the same name already exists"
+msgstr "يوجد  عنصر بنفس الاسم في قائمة الامنيات"
+
+msgid "Account Integration"
+msgstr "الاندماج مع الحساب"
+
+msgid "Add Apps:"
+msgstr "اضف تطبيقات:"
+
+msgid "Add to list:"
+msgstr "اضف للقائمة:"
+
+msgid "All"
+msgstr "الكل"
+
+msgid "All Apps"
+msgstr "جميع التطبيقات"
+
+msgid "All Architectures"
+msgstr "كل انظمة البناء"
+
+msgid "All Frameworks"
+msgstr "كل الاُطر البرمجية"
+
+msgid "All Snappy Packages"
+msgstr "جميع حزم سنابي"
+
+msgid "Amazon Link"
+msgstr "رابط Amazon"
+
+msgid "Amazon link is not a valid url"
+msgstr "رابط  Amazon يبدو انه رابط غير صحيح"
+
+msgid "Any Architecture"
+msgstr "اي نظام بناء"
+
+msgid "Any License"
+msgstr "اي رخصة"
+
+msgid ""
+"Any requests to remove copyright or trademark infringing content should be "
+"taken up with Canonical or the app's author (an author usually has a method "
+"of contact listed under the Support tab on their app's page). uApp Explorer "
+"is not affiliated with Canonical and does not host any apps. uApp Explorer "
+"only displays publicly available information about the official Ubuntu Touch "
+"appstore."
+msgstr ""
+"اي طلبات لحذف الحقوق او التعارض في العلامة التجارية يجب ان يتم عبر شركة "
+"Canonical او مطور التطبيق نفسه (المطور غالبا لديه وسيلة اتصال معروضة في صفحة "
+"التطبيق تحت تبويب دعم). uApp Explorer غير تابع او مرتبط مع شركة Canonical و "
+"لا يقوم باستضافة ملفات التطبيقات. uApp Explorer  يقوم فقط بعرض المعلومات "
+"المتوفرة بشكل عام حول متجر ابونتو تتش الرسمي."
+
+msgid "App"
+msgstr "تطبيق"
+
+msgid "App Name"
+msgstr "اسم التطبيق"
+
+msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr "اسم التطبيق (مثال: com.ubuntu.developer.example)"
+
+msgid "App Wishlist"
+msgstr "قائمة التطبيقات المُتمناه"
+
+msgid "Apps"
+msgstr "تطبيقات"
+
+msgid "Apps are not installed via this site, but via the official appstore."
+msgstr "التطبيقات لا يتم تثبيتها بواسطة هذا الموقع، بل عبر المتجر الرسمي."
+
+msgid "Apps:"
+msgstr "تطبيقات:"
+
+msgid "Architecture:"
+msgstr "البنية:"
+
+msgid "Architectures:"
+msgstr "انظمة البناء:"
+
+msgid "Are you sure you want to delete this list?"
+msgstr "هل انت متأكد من انك تريد حذف هذه القائمة؟"
+
+msgid "Article"
+msgstr "مقال"
+
+msgid "Author"
+msgstr "مطور"
+
+msgid "Books & Comics"
+msgstr "الكتب و كُتب الرسومات"
+
+msgid "Browse"
+msgstr "تصفح"
+
+msgid "Browse Apps"
+msgstr "تصفح التطبيقات"
+
+msgid "Browse Games"
+msgstr "تصفح الالعاب"
+
+msgid "Browse Scopes"
+msgstr "تصفح السكوبز"
+
+msgid "Browse Web Apps"
+msgstr "تصفح تطبيقات الويب"
+
+msgid "Business"
+msgstr "التجارة"
+
+msgid "Buy the Webapp"
+msgstr "شراء تطبيق الويب"
+
+msgid "Buy the webapp from the Ubuntu Touch app store"
+msgstr "شراء تطبيق الويب من متجر اوبونتو تتش"
+
+msgid "By:"
+msgstr "بواسطة:"
+
+msgid "Cancel"
+msgstr "الغاء الامر"
+
+msgid "Category:"
+msgstr "التصنيف:"
+
+msgid "Caxton Code"
+msgstr "رمز Caxton"
+
+msgid "Changelog"
+msgstr "سجل التغييرات"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Communication"
+msgstr "التواصل"
+
+msgid "Company"
+msgstr "الشركة"
+
+msgid "Containing:"
+msgstr "يحتوي:"
+
+msgid "Could not add app to list at this time, please try again later"
+msgstr "لا يمكننا اضافة التطبيق للقائمة حالياً، ارجوك جرب مرة اخرى لاحقا."
+
+msgid "Could not connect to Caxton at this time, please try again later"
+msgstr "لايمكننا الاتصال بـ Caxton حالياً، حاول مجدداً لاحقاً"
+
+msgid "Could not create a new list at this time, please try again later"
+msgstr "لا يمكننا انشاء قائمة جديدة في هذا الوقت، جرب لاحقاً رجاءاً."
+
+msgid "Could not create a new wish at this time, please try again later"
+msgstr "لا يمكننا انشاء عنصر مُتمنى جديد في هذا الوقت، جرب لاحقاً رجاءاً."
+
+msgid "Could not delete the list at this time, please try again later"
+msgstr "لا يمكننا حذف القائمة في هذا الوقت، جرب لاحقاً رجاءاً."
+
+msgid "Could not download app data, click to retry"
+msgstr "لايمكن تحميل بيانات التطبيق، اضغط اعادة المحاولة"
+
+msgid "Could not download app list, click to retry"
+msgstr "لايمكن تحميل قائمة التطبيقات، اضغط اعادة المحاولة"
+
+msgid "Could not find app"
+msgstr "لايمكن ايجاد التطبيق"
+
+msgid "Could not find the requested app"
+msgstr "لايمكن ايجاد التطبيق الذي طلبت"
+
+msgid "Could not find this list, it may not exist any more"
+msgstr "لايمكن ايجاد هذه القائمة، قد تكون حُذفت للابد"
+
+msgid "Could not find wish"
+msgstr "لايمكننا ايجاد العنصر المُتمنى"
+
+msgid "Could not load lists at this time, click to retry"
+msgstr "لايمكننا جلب القوائم هذه اللحظة، اضغط اعادة المحاولة"
+
+msgid "Could not load wishes at this time, click to retry"
+msgstr "لايمكننا جلب العناصر المُتمناه في هذه اللحظة، اضغط اعادة المحاولة"
+
+msgid "Could not remove the app from this list, please try again later"
+msgstr "لايمكننا حذف التطبيق من هذه القائمة، رجاءاً حاول مجدداً لاحقاً."
+
+msgid "Could not save your settings at this time, please try again later"
+msgstr "لايمكننا حفظ اعداداتك في هذه اللحظة، رجاءاً جرب لاحقاً."
+
+msgid "Could not update the list at this time, please try again later"
+msgstr "لايمكننا تحديث هذه القائمة في هذه اللحظة، رجاءاً جرب لاحقاً."
+
+msgid "Create"
+msgstr "إنشاء"
+
+msgid "Create List"
+msgstr "إنشاء قائمة"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Description"
+msgstr "وصف"
+
+msgid "Desktop File:"
+msgstr "ملف سطح المكتب:"
+
+msgid "Developer Tools"
+msgstr "أدوات مطوّري البرامج"
+
+msgid "Developer/Company"
+msgstr "المطور/الشركة"
+
+msgid "Donate"
+msgstr "تبرع"
+
+msgid "Donate via Bitcoin"
+msgstr "تبرع باستخدام  Bitcoin"
+
+msgid "Donate via Gratipay"
+msgstr "تبرع باستخدام Gratipay"
+
+msgid "Donate via Paypal"
+msgstr "تبرع باستخدام Paypal"
+
+msgid ""
+"Donating to uApp Explorer is just one way you can help make it better. If "
+"you choose to donate, you money will go towards infrastructure costs. Costs "
+"include domain names, hosting, etc. uApp Explorer will always be a free and "
+"open source service, regardless of the number of donations."
+msgstr ""
+"التبرع لـ uApp Explorer  هي احدى الطرق التي تجعله افضل. اذا اخترت ان تتبرع، "
+"مالك سيذهب للاموال التي تصرف التكاليف على البنية التحتية،. التكاليف تشمل "
+"نطاقات الموقع و الاستضافة و خلافة. uApp Explorer سيظل دائماً مجاني و مفتوح "
+"المصدر بغض النظر عن كمية التبرعات."
+
+msgid "Donation Web App"
+msgstr "تطبيق ويب للتبرعات"
+
+msgid "Download"
+msgstr "تحميل"
+
+msgid "Downvote"
+msgstr "تصويت ادنى"
+
+msgid "Edit"
+msgstr "تحرير"
+
+msgid "Edit List"
+msgstr "تحرير القائمة"
+
+msgid "Education"
+msgstr "التعليم"
+
+msgid "Email Support"
+msgstr "دعم بالبريد الالكتروني"
+
+msgid "Entertainment"
+msgstr "ترفيه"
+
+msgid "Essential Apps"
+msgstr "تطبيقات اساسية"
+
+msgid "FAQ"
+msgstr "الأسئلة الشائعة"
+
+msgid "File Size:"
+msgstr "حجم الملف:"
+
+msgid "Filters"
+msgstr "المرشحات"
+
+msgid "Finance"
+msgstr "الماليّة"
+
+msgid "Find"
+msgstr "ابحث"
+
+msgid "Find an app that has not yet been fetched from the official appstore."
+msgstr "قم بايجاد تطبيق لم يتم جلبه من المتجر الرسمي حتى الآن."
+
+msgid "Food & Drink"
+msgstr "الاطمعة و المشروبات"
+
+msgid "For version:"
+msgstr "للنسخة:"
+
+msgid "Found the requested app"
+msgstr "تم ايجاد التطبيق المطلوب"
+
+msgid "Framework:"
+msgstr "الاطار البرمجي:"
+
+msgid "Free"
+msgstr "مجاني"
+
+msgid "Games"
+msgstr "الألعاب"
+
+msgid "Get a QR scanner for your Ubuntu Touch device"
+msgstr "قم بالحصول على ماسح QR لجهاز اوبونتو تتش الخاص بك"
+
+msgid "Go there now"
+msgstr "الذهاب هناك الآن"
+
+msgid "Google Play Link"
+msgstr "رابط متجر جوجل"
+
+msgid "Google Play link is not a valid url"
+msgstr "رابط متجر جوجل يبدو انه غير صحيح"
+
+msgid "Graphics"
+msgstr "الرّسوميّات"
+
+msgid "Grid"
+msgstr "شبكة"
+
+msgid "Health & Fitness"
+msgstr "اللياقة و الصحة"
+
+msgid "Heart Rating"
+msgstr "التقييم بالقلوب"
+
+msgid ""
+"Heart ratings are calculated from the star rating where a 5 star review is 1 "
+"heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
+"hearts, and 1 star = -1 hearts."
+msgstr ""
+"التقييم بالقلوب يتم احتسابه من التقييم بالنجوم حيث ان  5 نجوم تعطي  1 "
+"بالقلوب و  4 نجوم = 0.5 بالقلوب و 3 نجوم = 0 بالقلوب و نجمتان = -0.5 بالقلوب "
+" و  نجمة واحدة = -1 بالقلوب"
+
+msgid "Help this wish get more votes!"
+msgstr "ساعد هذه الامنية على الحصول على تصويتات اكثر!"
+
+msgid "Help translate!"
+msgstr "ساعد بالترجمة!"
+
+msgid "Highest Heart Rating"
+msgstr "الاعلى تقييماً بالقلوب"
+
+msgid "Highest Star Rating"
+msgstr "الاعلى تقييماً بالنجوم"
+
+msgid "How can I help improve this site?"
+msgstr "كيف استطيع ان اُحسن من هذا الموقع؟"
+
+msgid "How do I install apps?"
+msgstr "كيف استطيع ان اقوم بتثبيت و تركيب التطبيقات؟"
+
+msgid "How is the popularity determined?"
+msgstr "كيف يتم تحديد الاكثر شعبية؟"
+
+msgid "How much would you be willing pay for this app?"
+msgstr "كم من المال لو كان بمقدورك ستدفع لهذا التطبيق؟"
+
+msgid "I just published my app, why don't I see it?"
+msgstr "لقد قمت بنشر تطبيقي، لماذا لا استطيع رؤيته؟"
+
+msgid "I'm wishing for..."
+msgstr "انا اتمنى ..."
+
+msgid "I'm wishing for: "
+msgstr "انا اتمنى: "
+
+msgid "Idea Summary"
+msgstr "ملخص اﻻفكار"
+
+msgid "If you want to contribute code visit the GitHub repo."
+msgstr ""
+"اذا اردت ان تساعد في المساهمة في التطوير البرمجي قم بالتوجه لمستودع GitHub."
+
+msgid "If you want to help translate, visit the Launchpad project."
+msgstr "اذا اردت المساعدة في الترجمة، قم بزيارة المشروع على Launchpad."
+
+msgid ""
+"If you want to submit bugs or feature requests visit the GitHub issues page."
+msgstr ""
+"اذا اردت ان تقوم بالابلاغ عن خطأ او ثغرة او تطلب ميزة جديدة فقم بزيارة صفحة "
+"البلاغات على GitHub."
+
+msgid "If you would like to contact the author, visit his website."
+msgstr "اذا اردت التواصل مع المطور، فقم بزيارة موقعه."
+
+msgid ""
+"If you would like to contribute monetarily, there are multiple options for "
+"donating."
+msgstr "اذا اردت ان تساهم مادياً، هناك خيارات متعدده للتبرع."
+
+msgid "Info"
+msgstr "معلومات"
+
+msgid "Install"
+msgstr "تثبيت"
+
+msgid "Is this an existing app?"
+msgstr "هل هذا تطبيق موجود مسبقاً؟"
+
+msgid "It is possible to have a negative heart rating."
+msgstr "من المحتمل ان تحصل على تقييم سالب بالقلوب."
+
+msgid "Itunes Link"
+msgstr "رابط Itunes"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Latest Update"
+msgstr "آخر تحديث"
+
+msgid "Least Popular (This Month)"
+msgstr "الاقل شعبية (هذا الشهر)"
+
+msgid "Less Info"
+msgstr "معلومات اقل"
+
+msgid "License:"
+msgstr "الترخيص:"
+
+msgid "Lifestyle"
+msgstr "أسلوب الحياة"
+
+msgid "List"
+msgstr "قائمة"
+
+msgid "List Name:"
+msgstr "اسم القائمة:"
+
+msgid "Load more reviews"
+msgstr "جلب مراجعات اكثر"
+
+msgid "Loading reviews..."
+msgstr "جاري جلب المراجعات ..."
+
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+msgid "Log Out"
+msgstr "تسجيل الخروج"
+
+msgid "Log in via Ubuntu"
+msgstr "تسجيل دخول بواسطة حساب اوبونتو"
+
+msgid "Login to make a wish"
+msgstr "قم بتسجيل الدخول لاضافة امنية"
+
+msgid "Lowest Heart Rating"
+msgstr "الاقل تقييماً بالقلوب"
+
+msgid "Lowest Star Rating"
+msgstr "الاقل تقييماً بالنجوم"
+
+msgid "Make a wish"
+msgstr "قم بالتمني"
+
+msgid "Media & Video"
+msgstr "وسائط متعددة و فيديو"
+
+msgid "Medical"
+msgstr "طبي"
+
+msgid "Missing an app?"
+msgstr "تفتقد تطبيق/"
+
+msgid "Monthly Popularity"
+msgstr "الشعبية الشهرية"
+
+msgid "More Apps by:"
+msgstr "تطبيقات اكثر بواسطة:"
+
+msgid "More Info"
+msgstr "مزيد من المعلومات"
+
+msgid "Most Expensive (USD)"
+msgstr "الاكثر غلاءاً (بالدولار)"
+
+msgid "Most Popular (This Month)"
+msgstr "الاكثر شعبية (هذا الشهر)"
+
+msgid "Most Relevant"
+msgstr "الاكثر صلةً"
+
+msgid "Music & Audio"
+msgstr "الموسيقى و الصوتيات"
+
+msgid "My Lists"
+msgstr "قوائمي"
+
+msgid "New Apps"
+msgstr "التطبيقات الجديدة"
+
+msgid "New List"
+msgstr "قائمة جديدة"
+
+msgid ""
+"New apps are fetched from the official appstore every hour, you can either "
+"wait until the new apps are fetched or use the request form to request that "
+"the app be found early."
+msgstr ""
+"التطبيقات الجديدة يتم جلبها من المتجر الرسمي كل ساعة و يمكنك اما الانتطار "
+"حتى يتم جلب التطبيقات الجديدة او قم باستخدام نموذج الطلب لطلب التطبيق "
+"مُبكراً."
+
+msgid "Newest"
+msgstr "الأحدث"
+
+msgid "News & Magazines"
+msgstr "الاخبار و المجلات"
+
+msgid "Next App:"
+msgstr "التطبيق التالي:"
+
+msgid "No"
+msgstr "لا"
+
+msgid "No apps found, try searching again."
+msgstr "لم يتم ايجاد تطبيقات، حاول البحث مجدداً."
+
+msgid "No lists, create one!"
+msgstr "لايوجد قوائم، قم بإنشاء واحدة!"
+
+msgid "No reviews yet!"
+msgstr "لايوجد مراجعات حتى هذه اللحظة!"
+
+msgid "No wishes found, try searching again."
+msgstr "لم يتم ايجاد اي امنية، ابحث مجدداً."
+
+msgid "Oldest"
+msgstr "الاقدم"
+
+msgid "Oldest Update"
+msgstr "التحديث الاقدم"
+
+msgid "On average, voters would be willing to pay %d USD for this app."
+msgstr "بالمتوسط، الذين قامو بالتصويت قادرون على دفع %d  دولار لهذا التطبيق."
+
+msgid "Open Source"
+msgstr "مفتوح المصدر"
+
+msgid "Opens Urls"
+msgstr "فتح روابط"
+
+msgid "Other Link"
+msgstr "رابط آخر"
+
+msgid "Other link is not a valid url"
+msgstr "الرابط الآخر يبدو انه غير صحيح"
+
+msgid "Permissions"
+msgstr "التصاريح"
+
+msgid "Personalisation"
+msgstr "التخصيص"
+
+msgid "Phone Apps & Scopes"
+msgstr "تطبيقات الهاتف و السكوبز"
+
+msgid "Please login to send via Caxton"
+msgstr "رجاءاً سجل دخول للارسال بواسطة Caxton"
+
+msgid "Please specify a name or idea for your wish"
+msgstr "رجاءاً حدد اسما او فكرة لامنيتك"
+
+msgid ""
+"Popularity is based on the number of 4 and 5 star reviews given to and app "
+"during the current month."
+msgstr "الشعبية تعتمد على ماتم تقييمه بـ 4 او 5 نجوم خلال الشهر الحالي."
+
+msgid "Previous App:"
+msgstr "التطبيق السابق:"
+
+msgid "Price must be between 0 and 20 USD"
+msgstr "السعر يجب ان يكون بين 0 او 20 دولار"
+
+msgid "Productivity"
+msgstr "إنتاجية"
+
+msgid "Proprietary"
+msgstr "تجاري"
+
+msgid "Push Notifications"
+msgstr "التنبيهات المجلوبة"
+
+msgid "QR Code"
+msgstr "رمز QR"
+
+msgid "Reference"
+msgstr "المرجع"
+
+msgid "Remove this app from your list"
+msgstr "حذف هذا التطبيق من قائمتك"
+
+msgid "Save"
+msgstr "احفظ"
+
+msgid "Science & Engineering"
+msgstr "العلوم والهندسة"
+
+msgid "Scope"
+msgstr "سكوب"
+
+msgid "Scope INI File:"
+msgstr "ملف INI  للسكوب"
+
+msgid "Scopes"
+msgstr "سكوبز"
+
+msgid "Screenshots"
+msgstr "صور الشاشة"
+
+msgid "Search for a wish:"
+msgstr "بحث عن امنية"
+
+msgid "Send via Caxton"
+msgstr "ارسال بواسطة Caxton"
+
+msgid "Sent via Caxton"
+msgstr "مُرسل بواسطة Caxton"
+
+msgid "Settings"
+msgstr "الإعدادات"
+
+msgid "Share"
+msgstr "مشاركة"
+
+msgid "Share on Facebook"
+msgstr "مشاركة على Facebook"
+
+msgid "Share on Google+"
+msgstr "مشاركة على  Google+"
+
+msgid "Share on Reddit"
+msgstr "مشاركة على Reddit"
+
+msgid "Share on Twitter"
+msgstr "مشاركة على Twitter"
+
+msgid "Shopping"
+msgstr "تسوق"
+
+msgid "Similar Apps"
+msgstr "تطبيقات مشابهة"
+
+msgid "Snappy App"
+msgstr "تطبيق Snappy"
+
+msgid "Snappy Applications"
+msgstr "تطبيقات Snappy"
+
+msgid "Snappy Framework"
+msgstr "اطار Snappy البرمجي"
+
+msgid "Snappy Frameworks"
+msgstr "اُطر Snappy البرمجية"
+
+msgid "Snappy Gadget"
+msgstr "اداة Gadget"
+
+msgid "Snappy Gadgets"
+msgstr "ادوات Gadget"
+
+msgid "Snappy Kernel"
+msgstr "النواة البرمجية Snappy"
+
+msgid "Snappy Kernels"
+msgstr "الانوية البرمجية Snappy"
+
+msgid "Snappy Metadata:"
+msgstr "Snappy Metadata:"
+
+msgid "Snappy OEM"
+msgstr "Snappy OEM"
+
+msgid "Snappy OEMs"
+msgstr "Snappy OEMs"
+
+msgid "Snappy OS"
+msgstr "نظام Snappy"
+
+msgid "Social Networking"
+msgstr "التواصل الاجتماعي"
+
+msgid "Sort Apps By:"
+msgstr "فرز التطبيقات بواسطة:"
+
+msgid "Sort By:"
+msgstr "فرز بواسطه:"
+
+msgid "Sports"
+msgstr "الرياضة"
+
+msgid "Star Rating"
+msgstr "التقييم بالنجوم"
+
+msgid "Submit"
+msgstr "تقديم"
+
+msgid "Submitted by"
+msgstr "مُقدم بواسطة"
+
+msgid "Support:"
+msgstr "الدعم:"
+
+msgid "Terms:"
+msgstr "مصطلحات:"
+
+msgid "Thank you for your vote!"
+msgstr "شُكراً  لك لتقييمك!"
+
+msgid "Thank you!"
+msgstr "شكرًا لك!"
+
+msgid ""
+"The heart rating is similar to the star rating, but it rewards apps for "
+"having more good reviews. An app with more 5 star ratings will have a higher "
+"heart rating than an app with only a few 5 star ratings."
+msgstr ""
+"التقييم بالقلوب مشابة للتقييم بالنجوم، لكن يكافئ التطبيقات لحصولها على "
+"مراجعات اكثر و  افضل. التطبيق الحاصل على عدد اكثر من تقييمات 5 نجوم سيحصل "
+"على اعلى تقييم بالقلوب من تطبيق حاصل على اقل  عدداً للتقييمات بـ 5 نجوم."
+
+msgid ""
+"The star rating is the Bayesian average of the star ratings that user give "
+"to an app when they leave a review. The Bayesian average allows apps with "
+"more reviews to rank better than apps with less reviews. The star rating can "
+"be between 1 and 5, where a 0 means that there have not been any reviews "
+"yet. For more information about the Bayesian average calculation, check out "
+"this article."
+msgstr ""
+"التقييم بالنجوم يعتمد على متوسط عدد النجوم التي يعطيها المستخدم للتطبيق عند "
+"مراجعته. هذا المتوسط (متوسط Bayesian)  يسمح للتطبيقات التي تملك مراجعات اكثر "
+"بالتفوق على تلك التي تملك مراجعات اقل . التقييم بالنجوم يكون مابين 1  و 5  "
+"حيث ان 0  يعني انه لايوجد مراجعات حتى الان للتطبيق. لمعلومات اكثر حول حسابات "
+"متوسط Bayesian، قم بمراجعة هذا المقال."
+
+msgid "This app is on these lists:"
+msgstr "هذا التطبيق يوجد في هذه القوائم:"
+
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
+msgstr ""
+"هذا هو مستعرض التطبيقات الغير رسمي لتطبيقات اوبونتو تتش و تطبيقات Snappy."
+
+msgid "This list is empty!"
+msgstr "هذه القائمة فارغة!"
+
+msgid ""
+"This site is an unofficial app browser for Ubuntu Touch apps. All data for "
+"the apps comes from a publicly accessible api. This site is maintained by "
+"Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
+"Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr ""
+"هذا الموقع هو مستعرض غير رسمي لتطبيقات اوبونتو تتش. كل بيانات التطبيقات تأتي "
+"من api (وصلة تواصل برمجية) مفتوحه للعامة. هذا الموقع يتم ادارته بواسطة براين "
+"دوغلاس (Brian Douglass) وهو غير مرتبط او مدعوم من اوبونتو او شركة  "
+"Canonical. و Canonical و اوبونتو تعتبر علامات تجاريه مسجلة لشركة Canonical "
+"المحدودة."
+
+msgid "Title A-Z"
+msgstr "العنوان A-Z"
+
+msgid "Title Z-A"
+msgstr "العنوان Z-A"
+
+msgid ""
+"To install an app, visit this site on your Ubuntu Touch device. Find the app "
+"that you wish to install and click the \"Install\" button. You will then be "
+"taken to the official appstore on your device where you can install the app."
+msgstr ""
+"لتثبيت تطبيق، قم بزيارة هذا الموقع على جهاز اوبونتو تتش. ابحث عن التطبيق "
+"المُراد تنصيبه ثم قم بضغط زر \"تثبيت\"، عندها سيتم اخذك لمتجر اوبونتو الرسمي "
+"حيث يتم تثبيت التطبيق من هناك."
+
+msgid ""
+"To report a problem or request a new feature visit the issues page for this "
+"site on GitHub."
+msgstr ""
+"للابلاغ عن مشكلة او طلب ميزة جديدة قم بزيارة صفحة البلاغات لهذا لموقع على "
+"GitHub."
+
+msgid "Top Apps"
+msgstr "التطبيقات الافضل"
+
+msgid "Total Reviews"
+msgstr "اجمالي المراجعات"
+
+msgid "Travel & Local"
+msgstr "السفر و المحليات"
+
+msgid "Type:"
+msgstr "النوع:"
+
+msgid "Universal Accesss/Accessibility"
+msgstr "الوصول الشامل/ امكانية الوصول"
+
+msgid "Unknown"
+msgstr "غير معروف"
+
+msgid "Updated Apps"
+msgstr "التطبيقات المحدثة"
+
+msgid "Updated:"
+msgstr "مُحدَّث:"
+
+msgid "Upvote"
+msgstr "تصويت اعلى"
+
+msgid "Urls that open in this app:"
+msgstr "الروابط التي تفتح بهذا التطبيق:"
+
+msgid "User List:"
+msgstr "قائمة المستخدم:"
+
+msgid "User Reviews"
+msgstr "مراجعات المستخدم"
+
+msgid "Utilities"
+msgstr "الأدوات"
+
+msgid "Version:"
+msgstr "الإصدار:"
+
+msgid "View"
+msgstr "عرض"
+
+msgid "Vote"
+msgstr "تصويت"
+
+msgid "Weather"
+msgstr "الطقس"
+
+msgid "Web App"
+msgstr "تطبيق ويب"
+
+msgid "Web Apps"
+msgstr "تطبيقات ويب"
+
+msgid "Website:"
+msgstr "موقع الإنترنت:"
+
+msgid "Welcome"
+msgstr "مرحبًا"
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr "مالتطبيق الذي تتمنى رؤيته على ابونتو تتش"
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr "مالتطبيقات التي تتمنى رؤيتها على اوبونتو تتش؟"
+
+msgid "What do I do if I find copyright or trademark infringing content?"
+msgstr ""
+"مالذي يجب على فعله عندما اجد محتوى يخالف حقوق الملكية او العلامات المسجلة؟"
+
+msgid "What is the heart rating?"
+msgstr "ماهو التقييم بالقلوب؟"
+
+msgid "What is the star rating?"
+msgstr "ماهو التقييم بالنجوم؟"
+
+msgid "What is this site?"
+msgstr "ماهذا الموقع؟"
+
+msgid "Where can I report a problem or request a new feature?"
+msgstr "اين يمكنني التبليغ عن مشكلة او طلب ميزة جديدة؟"
+
+msgid ""
+"Whether you choose to donate or not, I still appreciate you support. Thank "
+"you!"
+msgstr "سواءاً اخترت التبرع ام لا، سأظل شاكر و مُقدر لدعمك، شُكرا جزيلاً لك."
+
+msgid "Why donate?"
+msgstr "لماذا التبرع؟"
+
+msgid "Wishlist"
+msgstr "قائمة الأماني"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "You are already connected via Caxton!"
+msgstr "انت مُتصل مُسبقاً مع Caxton"
+
+msgid ""
+"You do not have your account connected to Caxton, click to go to your "
+"settings"
+msgstr "حسابك غير مرتبط مع Caxton، اضغط للذهاب لاعداداتك"
+
+msgid "You must be logged in to vote"
+msgstr "يجب ان تكون مسجل دخول للتقييم"
+
+msgid "You vote could not be saved at this time, please try again later"
+msgstr "تقييم لايمكن حفظه حالياً، حاول مجدداً لاحقاً"
+
+msgid "apps"
+msgid_plural "apps"
+msgstr[0] "تطبيقات"
+msgstr[1] "تطبيقات"
+msgstr[2] "تطبيقات"
+msgstr[3] "تطبيقات"
+msgstr[4] "تطبيقات"
+msgstr[5] "تطبيقات"
+
+msgid "games"
+msgid_plural "games"
+msgstr[0] "ألعاب"
+msgstr[1] "ألعاب"
+msgstr[2] "ألعاب"
+msgstr[3] "ألعاب"
+msgstr[4] "ألعاب"
+msgstr[5] "ألعاب"
+
+msgid "iTunes Link"
+msgstr "رابط iTunes"
+
+msgid "iTunes link is not a valid url"
+msgstr "رابط iTunes يبدو انه غير صحيح"
+
+msgid "phone apps & scopes"
+msgstr "تطبيقات الهاتف و سكوبز"
+
+msgid "scopes"
+msgid_plural "scopes"
+msgstr[0] "سكوبز"
+msgstr[1] "سكوبز"
+msgstr[2] "سكوبز"
+msgstr[3] "سكوبز"
+msgstr[4] "سكوبز"
+msgstr[5] "سكوبز"
+
+msgid "snappy apps"
+msgstr "تطبيقات snappy"
+
+msgid "snappy frameworks"
+msgstr "اطر snappy البرمجية"
+
+msgid "snappy gadgets"
+msgstr "ادوات snappy"
+
+msgid "snappy kernels"
+msgstr "انوية snappy للنطام"
+
+msgid "snappy oems"
+msgstr "snappy oems"
+
+msgid "snappy os"
+msgstr "نظام snappy"
+
+msgid "web apps"
+msgid_plural "web apps"
+msgstr[0] "تطبيقات ويب"
+msgstr[1] "تطبيقات ويب"
+msgstr[2] "تطبيقات ويب"
+msgstr[3] "تطبيقات ويب"
+msgstr[4] "تطبيقات ويب"
+msgstr[5] "تطبيقات ويب"

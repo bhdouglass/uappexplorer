@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
-"PO-Revision-Date: 2016-01-14 08:42+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
+"PO-Revision-Date: 2016-05-01 16:59+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: hu\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -24,7 +24,7 @@ msgstr "(Ne aggódjon, van egy ingyenes verzió is)"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr "*A telepítés a eszköz hivatalos áruházához fogja irányítani"
+msgstr "*A telepítés az eszköz hivatalos áruházához fogja irányítani"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
@@ -39,6 +39,9 @@ msgstr "- Válasszon egy listát -"
 
 msgid "A wish with the same name already exists"
 msgstr "Már létezik ilyen névvel kívánság"
+
+msgid "Account Integration"
+msgstr "Fiókintegráció"
 
 msgid "Add Apps:"
 msgstr "Alkalmazások hozzáadása:"
@@ -58,8 +61,8 @@ msgstr "Minden architektúra"
 msgid "All Frameworks"
 msgstr "Minden keretrendszer"
 
-msgid "All Types"
-msgstr "Összes típus"
+msgid "All Snappy Packages"
+msgstr "Minden Snappy csomag"
 
 msgid "Amazon Link"
 msgstr "Amazon hivatkozás"
@@ -114,6 +117,9 @@ msgstr "Alkalmazások:"
 
 msgid "Architecture:"
 msgstr "Architektúra:"
+
+msgid "Architectures:"
+msgstr "Architektúrák:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Biztos, hogy törölni szeretné ezt a listát?"
@@ -240,6 +246,9 @@ msgstr "Törlés"
 
 msgid "Description"
 msgstr "Leírás"
+
+msgid "Desktop File:"
+msgstr "Asztali fájl:"
 
 msgid "Developer Tools"
 msgstr "Fejlesztői eszközök"
@@ -453,6 +462,9 @@ msgstr "Legutóbb frissítve"
 msgid "Least Popular (This Month)"
 msgstr "Legkevésbé népszerű (e hónapban)"
 
+msgid "Less Info"
+msgstr "Kevesebb információ"
+
 msgid "License:"
 msgstr "Licenc:"
 
@@ -558,9 +570,6 @@ msgstr "Nem található alkalmazás, próbáljon másképp rákeresni"
 msgid "No lists, create one!"
 msgstr "Nincsenek listák, hozzon létre egyet."
 
-msgid "No recent changes"
-msgstr "Nincs változás"
-
 msgid "No reviews yet!"
 msgstr "Nincsenek értékelések."
 
@@ -579,14 +588,23 @@ msgstr "A szavazók átlagosan %d USD-t lennének hajlandóak fizetni ezért."
 msgid "Open Source"
 msgstr "Nyílt forrású"
 
+msgid "Opens Urls"
+msgstr "URL-ek megnyitása"
+
 msgid "Other Link"
 msgstr "Egyéb hivatkozás"
 
 msgid "Other link is not a valid url"
 msgstr "Érvénytelen egyéb hivatkozás"
 
+msgid "Permissions"
+msgstr "Jogosultságok"
+
 msgid "Personalisation"
 msgstr "Testreszabás"
+
+msgid "Phone Apps & Scopes"
+msgstr "Telefon alkalmazások és lencsék"
 
 msgid "Please login to send via Caxton"
 msgstr "Jelentkezzen be a Caxtonnal való küldéshez"
@@ -613,11 +631,11 @@ msgstr "Hatékonyság"
 msgid "Proprietary"
 msgstr "Zárt"
 
+msgid "Push Notifications"
+msgstr "„Push” értesítések"
+
 msgid "QR Code"
 msgstr "QR kód"
-
-msgid "QR Code:"
-msgstr "QR-kód:"
 
 msgid "Reference"
 msgstr "Információforrás"
@@ -633,6 +651,9 @@ msgstr "Tudomány és mérnöki"
 
 msgid "Scope"
 msgstr "Lencse"
+
+msgid "Scope INI File:"
+msgstr "Lencse INI fájlja:"
 
 msgid "Scopes"
 msgstr "Lencsék"
@@ -651,6 +672,9 @@ msgstr "Elküldve Caxtonnal"
 
 msgid "Settings"
 msgstr "Beállítások"
+
+msgid "Share"
+msgstr "Megosztás"
 
 msgid "Share on Facebook"
 msgstr "Megosztás Facebook-on"
@@ -673,8 +697,38 @@ msgstr "Hasonló alkalmazások"
 msgid "Snappy App"
 msgstr "Snappy alkalmazás"
 
-msgid "Snappy Apps"
+msgid "Snappy Applications"
 msgstr "Snappy alkalmazások"
+
+msgid "Snappy Framework"
+msgstr "Snappy keretrendszer"
+
+msgid "Snappy Frameworks"
+msgstr "Snappy keretrendszerek"
+
+msgid "Snappy Gadget"
+msgstr "Snappy eszköz"
+
+msgid "Snappy Gadgets"
+msgstr "Snappy eszközök"
+
+msgid "Snappy Kernel"
+msgstr "Snappy kernel"
+
+msgid "Snappy Kernels"
+msgstr "Snappy kernelek"
+
+msgid "Snappy Metadata:"
+msgstr "Snappy metaadat:"
+
+msgid "Snappy OEM"
+msgstr "Snappy OEM"
+
+msgid "Snappy OEMs"
+msgstr "Snappy OEM-ek"
+
+msgid "Snappy OS"
+msgstr "Snappy operációs rendszer"
 
 msgid "Social Networking"
 msgstr "Közösségi háló"
@@ -696,9 +750,6 @@ msgstr "Elküldés"
 
 msgid "Submitted by"
 msgstr "Beküldte:"
-
-msgid "Support"
-msgstr "Támogatás"
 
 msgid "Support:"
 msgstr "Támogatás:"
@@ -740,8 +791,9 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Ez az alkalmazás ezeken a listákon van:"
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Nem hivatalos alkalmazásböngésző az Ubuntu Touch rendszerhez."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
+msgstr ""
+"Nem hivatalos alkalmazásböngésző Ubuntu Touch és Snappy alkalmazásokhoz."
 
 msgid "This list is empty!"
 msgstr "Ez a lista üres."
@@ -794,6 +846,9 @@ msgstr "Típus:"
 msgid "Universal Accesss/Accessibility"
 msgstr "Kisegítő lehetőségek"
 
+msgid "Unknown"
+msgstr "Ismeretlen"
+
 msgid "Updated Apps"
 msgstr "Frissített alkalmazások"
 
@@ -802,6 +857,9 @@ msgstr "Frissítve:"
 
 msgid "Upvote"
 msgstr "Felszavazás"
+
+msgid "Urls that open in this app:"
+msgstr "Az alkalmazásban megnyitott URL-ek:"
 
 msgid "User List:"
 msgstr "Felhasználói lista:"
@@ -835,9 +893,6 @@ msgstr "Weboldal:"
 
 msgid "Welcome"
 msgstr "Üdvözöljük"
-
-msgid "Welcome to uApp Explorer!"
-msgstr "Üdvözli az uApp Explorer!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr "Melyik alkalmazást látná szívesen az Ubuntu Touch-hoz?"
@@ -897,9 +952,6 @@ msgid_plural "apps"
 msgstr[0] "alkalmazás"
 msgstr[1] "alkalmazás"
 
-msgid "apps & scopes"
-msgstr "alkalmazások és lencsék"
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] "játék"
@@ -911,6 +963,9 @@ msgstr "Itunes hivatkozás"
 msgid "iTunes link is not a valid url"
 msgstr "Érvénytelen Itunes hivatkozás"
 
+msgid "phone apps & scopes"
+msgstr "telefonalkalmazások és -lencsék"
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "lencse"
@@ -918,6 +973,21 @@ msgstr[1] "lencse"
 
 msgid "snappy apps"
 msgstr "snappy alkalmazás"
+
+msgid "snappy frameworks"
+msgstr "snappy keretrendszerek"
+
+msgid "snappy gadgets"
+msgstr "snappy eszköz"
+
+msgid "snappy kernels"
+msgstr "snappy kernelek"
+
+msgid "snappy oems"
+msgstr "snappy oem-ek"
+
+msgid "snappy os"
+msgstr "snappy operációs rendszer"
 
 msgid "web apps"
 msgid_plural "web apps"

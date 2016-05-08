@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-14 06:00+0000\n"
+"POT-Creation-Date: 2016-04-24 03:12+0000\n"
 "PO-Revision-Date: 2016-01-28 07:00+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-10 22:52+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: eu\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -42,6 +42,9 @@ msgstr "Zerrenda bat aukeratu"
 msgid "A wish with the same name already exists"
 msgstr "Iada badago izen bereko gurari bat."
 
+msgid "Account Integration"
+msgstr ""
+
 msgid "Add Apps:"
 msgstr "Aplikazioak gehitu"
 
@@ -60,8 +63,8 @@ msgstr "Arkitektura guztiak"
 msgid "All Frameworks"
 msgstr "Framework guztiak"
 
-msgid "All Types"
-msgstr "Mota guztiak"
+msgid "All Snappy Packages"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Amazon Esteka"
@@ -116,6 +119,9 @@ msgstr "Aplikazioak"
 
 msgid "Architecture:"
 msgstr "Arkitektura:"
+
+msgid "Architectures:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Ziur al zaude zerrenda hau ezabatu nahi duzula?"
@@ -254,6 +260,9 @@ msgstr "Ezabatu"
 
 msgid "Description"
 msgstr "Deskribapena"
+
+msgid "Desktop File:"
+msgstr ""
 
 msgid "Developer Tools"
 msgstr "Garatzaileentzako tresnak"
@@ -462,6 +471,9 @@ msgstr "Azken Eguneraketak"
 msgid "Least Popular (This Month)"
 msgstr "Arrakasta gutxienekoak"
 
+msgid "Less Info"
+msgstr ""
+
 msgid "License:"
 msgstr "Lizentzia:"
 
@@ -567,9 +579,6 @@ msgstr "Ez da aplikaziorik aurkitu, saiatu berriro bilatzen."
 msgid "No lists, create one!"
 msgstr "Zerrendarik ez, bat sortu!"
 
-msgid "No recent changes"
-msgstr "Ez dago aldaketa berririk"
-
 msgid "No reviews yet!"
 msgstr "Berrikuspenik ez du oraindik!"
 
@@ -589,14 +598,23 @@ msgstr ""
 msgid "Open Source"
 msgstr "Kode Irekia"
 
+msgid "Opens Urls"
+msgstr ""
+
 msgid "Other Link"
 msgstr "Bestelako Esteka"
 
 msgid "Other link is not a valid url"
 msgstr "Bestelako estekaren url-a ez da balekoa"
 
+msgid "Permissions"
+msgstr ""
+
 msgid "Personalisation"
 msgstr "Pertsonalizazioa"
+
+msgid "Phone Apps & Scopes"
+msgstr ""
 
 msgid "Please login to send via Caxton"
 msgstr "Mesedez hasi saioa Caxton bidez"
@@ -623,11 +641,11 @@ msgstr "Produktibitatea"
 msgid "Proprietary"
 msgstr "Jabeduna"
 
+msgid "Push Notifications"
+msgstr ""
+
 msgid "QR Code"
 msgstr "QR kodea"
-
-msgid "QR Code:"
-msgstr "QR Kodea:"
 
 msgid "Reference"
 msgstr "Erreferentzia"
@@ -643,6 +661,9 @@ msgstr "Zientzia eta ingeniaritza"
 
 msgid "Scope"
 msgstr "Eremua"
+
+msgid "Scope INI File:"
+msgstr ""
 
 msgid "Scopes"
 msgstr "Eremuak"
@@ -661,6 +682,9 @@ msgstr "Caxton bidez bidalia"
 
 msgid "Settings"
 msgstr "Ezarpenak"
+
+msgid "Share"
+msgstr ""
 
 msgid "Share on Facebook"
 msgstr "Facebook-en partekatu"
@@ -683,8 +707,38 @@ msgstr "Antzeko aplikazioak"
 msgid "Snappy App"
 msgstr "S"
 
-msgid "Snappy Apps"
-msgstr "Snappy Aplikazioak"
+msgid "Snappy Applications"
+msgstr ""
+
+msgid "Snappy Framework"
+msgstr ""
+
+msgid "Snappy Frameworks"
+msgstr ""
+
+msgid "Snappy Gadget"
+msgstr ""
+
+msgid "Snappy Gadgets"
+msgstr ""
+
+msgid "Snappy Kernel"
+msgstr ""
+
+msgid "Snappy Kernels"
+msgstr ""
+
+msgid "Snappy Metadata:"
+msgstr ""
+
+msgid "Snappy OEM"
+msgstr ""
+
+msgid "Snappy OEMs"
+msgstr ""
+
+msgid "Snappy OS"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Sare sozialak"
@@ -706,9 +760,6 @@ msgstr "Bidali"
 
 msgid "Submitted by"
 msgstr "Bidaltzailea:"
-
-msgid "Support"
-msgstr "Sostengua"
 
 msgid "Support:"
 msgstr "Sostengua:"
@@ -751,8 +802,8 @@ msgstr ""
 msgid "This app is on these lists:"
 msgstr "Aplikazio hau zerrenda hauetan aurkitzen da:"
 
-msgid "This is an unofficial app viewer for Ubuntu Touch apps."
-msgstr "Honako hau Ubuntu Touch Aplikazioen arakatzaile ez-ofiziala da."
+msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
+msgstr ""
 
 msgid "This list is empty!"
 msgstr "Zerrenda hau hutsik dago!"
@@ -807,6 +858,9 @@ msgstr "Mota:"
 msgid "Universal Accesss/Accessibility"
 msgstr "Sarbide unibertsala/Irisgarritasuna"
 
+msgid "Unknown"
+msgstr ""
+
 msgid "Updated Apps"
 msgstr "Eguneratutako aplikazioak"
 
@@ -815,6 +869,9 @@ msgstr "Eguneratua:"
 
 msgid "Upvote"
 msgstr "Aldeko bozka"
+
+msgid "Urls that open in this app:"
+msgstr ""
 
 msgid "User List:"
 msgstr "Erabiltzaile Zerrenda"
@@ -848,9 +905,6 @@ msgstr "Webgunea:"
 
 msgid "Welcome"
 msgstr "Ongi etorri"
-
-msgid "Welcome to uApp Explorer!"
-msgstr "Ongi etorri uApp Explorer-era!"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr "Zein aplikazio nahi zenuke Ubuntu Touch-en ikusi?"
@@ -915,9 +969,6 @@ msgid_plural "apps"
 msgstr[0] "aplikazio"
 msgstr[1] "aplikazioak"
 
-msgid "apps & scopes"
-msgstr "Aplikazio eta eremuak"
-
 msgid "games"
 msgid_plural "games"
 msgstr[0] "joko"
@@ -929,6 +980,9 @@ msgstr "iTunes Esteka"
 msgid "iTunes link is not a valid url"
 msgstr "iTunes esteka ez da baleko url-a"
 
+msgid "phone apps & scopes"
+msgstr ""
+
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "eremu"
@@ -936,6 +990,21 @@ msgstr[1] "eremuak"
 
 msgid "snappy apps"
 msgstr "snappy aplikazioak"
+
+msgid "snappy frameworks"
+msgstr ""
+
+msgid "snappy gadgets"
+msgstr ""
+
+msgid "snappy kernels"
+msgstr ""
+
+msgid "snappy oems"
+msgstr ""
+
+msgid "snappy os"
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"
