@@ -335,7 +335,7 @@ module.exports = {
     }, {
       'name': 'Catalan',
       'code': 'ca',
-      'untranslated': 31,
+      'untranslated': 18,
     }, {
       'name': 'Chinese (Simplified)',
       'code': 'zh_CN',
@@ -363,7 +363,7 @@ module.exports = {
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 27,
+      'untranslated': 0,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -375,7 +375,7 @@ module.exports = {
     }, {
       'name': 'Italian',
       'code': 'it',
-      'untranslated': 31,
+      'untranslated': 0,
     }, {
       'name': 'Maylay',
       'code': 'ms',
@@ -407,7 +407,7 @@ module.exports = {
     }, {
       'name': 'Spanish',
       'code': 'es',
-      'untranslated': 44,
+      'untranslated': 23,
     }, {
       'name': 'Swedish',
       'code': 'sv',
@@ -415,7 +415,7 @@ module.exports = {
     }, {
       'name': 'Turkish',
       'code': 'tr',
-      'untranslated': 231,
+      'untranslated': 215,
     }, {
       'name': 'Uyghur',
       'code': 'ug',

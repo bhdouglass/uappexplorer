@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 03:12+0000\n"
-"PO-Revision-Date: 2016-04-21 18:27+0000\n"
-"Last-Translator: Antonio Fernandes <Unknown>\n"
+"PO-Revision-Date: 2016-05-08 07:42+0000\n"
+"Last-Translator: Sergi Quiles Pérez <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Launchpad-Export-Date: 2016-05-09 12:04+0000\n"
 "X-Generator: Launchpad (build 18025)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -37,7 +37,7 @@ msgid "- Choose a list -"
 msgstr "- Elige un listado -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Ya existe un deseo con el mismo nombre"
 
 msgid "Account Integration"
 msgstr ""
@@ -61,7 +61,7 @@ msgid "All Frameworks"
 msgstr "Todas las estructuras"
 
 msgid "All Snappy Packages"
-msgstr ""
+msgstr "Todos los paquetes <snappy>"
 
 msgid "Amazon Link"
 msgstr "Enlace a Amazon"
@@ -117,7 +117,7 @@ msgid "Architecture:"
 msgstr "Arquitectura:"
 
 msgid "Architectures:"
-msgstr ""
+msgstr "Arquitecturas:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "¿Está seguro que quieres borrar esta lista?"
@@ -298,7 +298,7 @@ msgid "Download"
 msgstr "Descargar"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Voto negativo"
 
 msgid "Edit"
 msgstr "Editar"
@@ -391,7 +391,7 @@ msgstr ""
 "estrellas = 0 corazón, 2 estrellas = -0.5 corazón y 1 estrella = -1 corazón"
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "¡Ayuda a que este deseo tenga más votos!"
 
 msgid "Help translate!"
 msgstr "¡Ayuda a traducir!"
@@ -412,16 +412,16 @@ msgid "How is the popularity determined?"
 msgstr "¿Cómo se determina la popularidad?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "¿Cuánto pagarías por esta aplicación?"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "He publicado mi aplicación, ¿porqué no la veo?"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "Deseo..."
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "Deseo: "
 
 msgid "Idea Summary"
 msgstr "Resumen de la idea"
@@ -474,7 +474,7 @@ msgid "Least Popular (This Month)"
 msgstr "El menos popular (este mes)"
 
 msgid "Less Info"
-msgstr ""
+msgstr "Menos información"
 
 msgid "License:"
 msgstr "Licencia:"
@@ -585,7 +585,7 @@ msgid "No reviews yet!"
 msgstr "¡No hay evaluaciones recientes!"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "No se han encontrado deseos, prueba a buscar otra vez."
 
 msgid "Oldest"
 msgstr "Lo más antiguo"
@@ -594,7 +594,7 @@ msgid "Oldest Update"
 msgstr "La actualización mas antigua"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
+msgstr "En promedio, los votantes pagarían % USD por esta aplicación."
 
 msgid "Open Source"
 msgstr "Open Source"
@@ -609,7 +609,7 @@ msgid "Other link is not a valid url"
 msgstr ""
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permisos"
 
 msgid "Personalisation"
 msgstr "Personalización"
@@ -621,7 +621,7 @@ msgid "Please login to send via Caxton"
 msgstr "Por favor ingresa para enviar via Caxton"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Por favor, indica un nombre o idea para tu deseo"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -673,7 +673,7 @@ msgid "Screenshots"
 msgstr "Capturas de pantalla"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Busca un deseo:"
 
 msgid "Send via Caxton"
 msgstr "Envia vía Caxton"
@@ -685,7 +685,7 @@ msgid "Settings"
 msgstr "Configuración"
 
 msgid "Share"
-msgstr ""
+msgstr "Compartir"
 
 msgid "Share on Facebook"
 msgstr "Compartir en Facebook"
@@ -709,7 +709,7 @@ msgid "Snappy App"
 msgstr "Aplicacion Snappy"
 
 msgid "Snappy Applications"
-msgstr ""
+msgstr "Aplicaciones <snappy>>"
 
 msgid "Snappy Framework"
 msgstr ""
@@ -724,13 +724,13 @@ msgid "Snappy Gadgets"
 msgstr ""
 
 msgid "Snappy Kernel"
-msgstr ""
+msgstr "Nucleo <<snappy>>"
 
 msgid "Snappy Kernels"
-msgstr ""
+msgstr "Nucleos <<snappy>>"
 
 msgid "Snappy Metadata:"
-msgstr ""
+msgstr "Metadatos <<snappy>>"
 
 msgid "Snappy OEM"
 msgstr ""
@@ -804,6 +804,8 @@ msgstr "Esta aplicación este en estas listas"
 
 msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
+"Este es un visor de aplicaciones no oficial para aplicaciones de Ubuntu "
+"Touch i aplicaciones Snappy."
 
 msgid "This list is empty!"
 msgstr "¡La lista esta vacia!"
@@ -859,7 +861,7 @@ msgid "Universal Accesss/Accessibility"
 msgstr "Acceso universal/Accesibilidad"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Desconocido"
 
 msgid "Updated Apps"
 msgstr "Aplicaciones actualizadas"

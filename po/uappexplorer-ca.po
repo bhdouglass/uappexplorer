@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 03:12+0000\n"
-"PO-Revision-Date: 2016-02-03 11:18+0000\n"
-"Last-Translator: muzzol <muzzol@gmail.com>\n"
+"PO-Revision-Date: 2016-05-08 07:40+0000\n"
+"Last-Translator: Sergi Quiles Pérez <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-08 04:16+0000\n"
+"X-Launchpad-Export-Date: 2016-05-09 12:04+0000\n"
 "X-Generator: Launchpad (build 18025)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -63,7 +63,7 @@ msgid "All Frameworks"
 msgstr "Tots els frameworks"
 
 msgid "All Snappy Packages"
-msgstr ""
+msgstr "Tots els paquets <<Snappy>>"
 
 msgid "Amazon Link"
 msgstr "Enllaç d'Amazon"
@@ -120,7 +120,7 @@ msgid "Architecture:"
 msgstr "Arquitectura:"
 
 msgid "Architectures:"
-msgstr ""
+msgstr "Arquitectures"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Esteu segurs que voleu eliminar aquesta llista?"
@@ -480,7 +480,7 @@ msgid "Least Popular (This Month)"
 msgstr "El menys popular (aquest mes)"
 
 msgid "Less Info"
-msgstr ""
+msgstr "Menys informació"
 
 msgid "License:"
 msgstr "Llicència:"
@@ -607,7 +607,7 @@ msgid "Open Source"
 msgstr "Codi obert"
 
 msgid "Opens Urls"
-msgstr ""
+msgstr "Obre Urls"
 
 msgid "Other Link"
 msgstr "Un altre enllaç"
@@ -616,7 +616,7 @@ msgid "Other link is not a valid url"
 msgstr "L'altre enllaç no és una URL vàlida"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permisos"
 
 msgid "Personalisation"
 msgstr "Personalització"
@@ -692,7 +692,7 @@ msgid "Settings"
 msgstr "Configuració"
 
 msgid "Share"
-msgstr ""
+msgstr "Comparteix"
 
 msgid "Share on Facebook"
 msgstr "Comparteix a Facebook"
@@ -716,7 +716,7 @@ msgid "Snappy App"
 msgstr "Aplicació Snappy"
 
 msgid "Snappy Applications"
-msgstr ""
+msgstr "Aplicacions <<Snappy>>"
 
 msgid "Snappy Framework"
 msgstr ""
@@ -731,13 +731,13 @@ msgid "Snappy Gadgets"
 msgstr ""
 
 msgid "Snappy Kernel"
-msgstr ""
+msgstr "Nucli <<Snappy>>"
 
 msgid "Snappy Kernels"
-msgstr ""
+msgstr "Nuclis <<Snappy>"
 
 msgid "Snappy Metadata:"
-msgstr ""
+msgstr "Metadades <<Snappy>>"
 
 msgid "Snappy OEM"
 msgstr ""
@@ -808,6 +808,8 @@ msgstr "Aquesta aplicació es troba dins aquestes llistes:"
 
 msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
+"Aquest és un visor d'aplicacions no oficial per aplicacions d'Ubuntu Touch i "
+"Snappy."
 
 msgid "This list is empty!"
 msgstr "Aquesta llista és buida!"
@@ -862,7 +864,7 @@ msgid "Universal Accesss/Accessibility"
 msgstr "Accés universal/Accessibilitat"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 msgid "Updated Apps"
 msgstr "Aplicacions actualitzades"
@@ -999,7 +1001,7 @@ msgid "snappy gadgets"
 msgstr ""
 
 msgid "snappy kernels"
-msgstr ""
+msgstr "Nuclis <<snappy>>"
 
 msgid "snappy oems"
 msgstr ""
