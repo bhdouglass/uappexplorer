@@ -227,8 +227,9 @@
       }
     },
     "click-parser": {
-      "version": "3.0.1",
-      "from": "click-parser@3.0.1",
+      "version": "3.0.2",
+      "from": "click-parser@3.0.2",
+      "resolved": "https://registry.npmjs.org/click-parser/-/click-parser-3.0.2.tgz",
       "dependencies": {
         "glob": {
           "version": "7.0.3",
@@ -664,9 +665,9 @@
       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.3.0.tgz"
     },
     "fstream": {
-      "version": "1.0.8",
+      "version": "1.0.9",
       "from": "fstream@>=1.0.2 <2.0.0",
-      "resolved": "https://registry.npmjs.org/fstream/-/fstream-1.0.8.tgz"
+      "resolved": "https://registry.npmjs.org/fstream/-/fstream-1.0.9.tgz"
     },
     "gaze": {
       "version": "0.5.2",
@@ -1176,9 +1177,9 @@
       "resolved": "https://registry.npmjs.org/jodid25519/-/jodid25519-1.0.2.tgz"
     },
     "js-yaml": {
-      "version": "3.6.0",
+      "version": "3.6.1",
       "from": "js-yaml@>=3.6.0 <4.0.0",
-      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.6.0.tgz"
+      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.6.1.tgz"
     },
     "jsbn": {
       "version": "0.1.0",
@@ -2207,9 +2208,9 @@
       "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
     },
     "squashfs-nodejs": {
-      "version": "1.0.5",
-      "from": "squashfs-nodejs@>=1.0.5 <2.0.0",
-      "resolved": "https://registry.npmjs.org/squashfs-nodejs/-/squashfs-nodejs-1.0.5.tgz"
+      "version": "1.0.6",
+      "from": "squashfs-nodejs@latest",
+      "resolved": "https://registry.npmjs.org/squashfs-nodejs/-/squashfs-nodejs-1.0.6.tgz"
     },
     "sshpk": {
       "version": "1.7.4",
