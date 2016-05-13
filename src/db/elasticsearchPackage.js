@@ -127,7 +127,7 @@ function bulk(upserts, removals, callback) {
 }
 
 function mongoToElasticsearch(removals, callback_or_create_indices, callback) {
-  create_indices = false;
+  var create_indices = false;
   if (typeof callback_or_create_indices == 'function') {
     callback = callback_or_create_indices;
   }

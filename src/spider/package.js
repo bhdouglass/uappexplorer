@@ -10,7 +10,6 @@ var request = require('request');
 var async = require('async');
 var crypto = require('crypto');
 var Mailhide = require('mailhide');
-var elasticsearch = require('elasticsearch');
 var sanitizeHtml = require('sanitize-html');
 
 var mailhider = null;

@@ -1,4 +1,3 @@
-var package = require('./package');
 var config = require('../config');
 var db = require('../db/db');
 var elasticsearchPackage = require('../db/elasticsearchPackage');
