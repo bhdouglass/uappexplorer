@@ -1,5 +1,6 @@
 var config = require('../config');
 var logger = require('../logger');
+var db = require('./db');
 var elasticsearch = require('elasticsearch');
 var _ = require('lodash');
 
@@ -125,6 +126,105 @@ function bulk(upserts, removals, callback) {
   });
 }
 
+function mongoToElasticsearch(removals, callback_or_create_indices, callback) {
+  create_indices = false;
+  if (typeof callback_or_create_indices == 'function') {
+    callback = callback_or_create_indices;
+  }
+  else {
+    create_indices = callback_or_create_indices;
+  }
+
+  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
+
+  if (create_indices) {
+    client.indices.create({
+      index: 'packages',
+      body: {
+        packages: 'packages',
+        settings: {
+          'analysis':{
+            'analyzer': {
+              'lower_standard': {
+                'type': 'custom',
+                'tokenizer': 'standard',
+                'filter': 'lowercase'
+              }
+            }
+          }
+        },
+        mappings: {
+          'package': {
+            'properties': {
+              'title': {
+                'type': 'string',
+                'analyzer': 'lower_standard'
+              },
+              'description': {
+                'type': 'string',
+                'analyzer': 'lower_standard'
+              },
+              'keywords': {
+                'type': 'string',
+                'analyzer': 'lower_standard'
+              },
+              'author': {
+                'type': 'string',
+                'analyzer': 'lower_standard'
+              },
+              'company': {
+                'type': 'string',
+                'analyzer': 'lower_standard'
+              },
+              'license': {
+                'type': 'string',
+                'index': 'not_analyzed'
+              },
+              'framework': {
+                'type': 'string',
+                'index': 'not_analyzed'
+              },
+              'architecture': {
+                'type': 'string',
+                'index': 'not_analyzed'
+              },
+              'raw_title': {
+                'type': 'string',
+                'index': 'not_analyzed'
+              }
+            }
+          }
+        }
+      }
+    },
+    function (err) {
+      if (err) {
+        logger.error(err);
+      }
+
+      db.Package.find({}, function(err, pkgs) {
+        if (err) {
+          logger.error(err);
+        }
+        else {
+          bulk(pkgs, removals, callback);
+        }
+      });
+    });
+  }
+  else {
+    db.Package.find({}, function(err, pkgs) {
+      if (err) {
+        logger.error(err);
+      }
+      else {
+        bulk(pkgs, removals, callback);
+      }
+    });
+  }
+}
+
 exports.upsert = upsert;
 exports.remove = remove;
 exports.bulk = bulk;
+exports.mongoToElasticsearch = mongoToElasticsearch;

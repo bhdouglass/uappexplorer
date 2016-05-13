@@ -1,6 +1,7 @@
 var package = require('./package');
 var config = require('../config');
 var db = require('../db/db');
+var elasticsearchPackage = require('../db/elasticsearchPackage');
 var logger = require('../logger');
 var request = require('request');
 var _ = require('lodash');
@@ -211,7 +212,7 @@ function parseReviews(pkgName, callback) {
               logger.error(err);
             }
 
-            package.mongoToElasticsearch(null, callback);
+            elasticsearchPackage.mongoToElasticsearch(null, callback);
           });
         }
       });

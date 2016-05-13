@@ -179,85 +179,6 @@ function ubuntuToUAppExplorer(data) {
   return pkg;
 }
 
-//TODO move this to the elastic search js file
-function mongoToElasticsearch(removals, callback) {
-  var client = new elasticsearch.Client({host: config.elasticsearch.uri});
-
-  client.indices.create({
-    index: 'packages',
-    body: {
-      packages: 'packages',
-      settings: {
-        'analysis':{
-          'analyzer': {
-            'lower_standard': {
-              'type': 'custom',
-              'tokenizer': 'standard',
-              'filter': 'lowercase'
-            }
-          }
-        }
-      },
-      mappings: {
-        'package': {
-          'properties': {
-            'title': {
-              'type': 'string',
-              'analyzer': 'lower_standard'
-            },
-            'description': {
-              'type': 'string',
-              'analyzer': 'lower_standard'
-            },
-            'keywords': {
-              'type': 'string',
-              'analyzer': 'lower_standard'
-            },
-            'author': {
-              'type': 'string',
-              'analyzer': 'lower_standard'
-            },
-            'company': {
-              'type': 'string',
-              'analyzer': 'lower_standard'
-            },
-            'license': {
-              'type': 'string',
-              'index': 'not_analyzed'
-            },
-            'framework': {
-              'type': 'string',
-              'index': 'not_analyzed'
-            },
-            'architecture': {
-              'type': 'string',
-              'index': 'not_analyzed'
-            },
-            'raw_title': {
-              'type': 'string',
-              'index': 'not_analyzed'
-            }
-          }
-        }
-      }
-    }
-  },
-  function (err) {
-    if (err) {
-      logger.error(err);
-    }
-
-    db.Package.find({}, function(err, pkgs) {
-      if (err) {
-        logger.error(err);
-      }
-      else {
-        elasticsearchPackage.bulk(pkgs, removals, callback);
-      }
-    });
-  });
-}
-
 function doFetchList(url, arch, results, callback) {
   results = results ? results : [];
 
@@ -527,11 +448,11 @@ function parsePackages(updatesOnly, callback) {
                 logger.error(err);
               }
 
-              mongoToElasticsearch(removals, callback);
+              elasticsearchPackage.mongoToElasticsearch(removals, callback);
             });
           }
           else { //Don't reparse the click files
-            mongoToElasticsearch(removals, callback);
+            elasticsearchPackage.mongoToElasticsearch(removals, callback);
           }
         });
       }
@@ -602,4 +523,3 @@ function parsePackageByName(name, callback) {
 
 exports.parsePackageByName = parsePackageByName;
 exports.parsePackages = parsePackages;
-exports.mongoToElasticsearch = mongoToElasticsearch;

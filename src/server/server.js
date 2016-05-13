@@ -36,7 +36,7 @@ function success(res, data, message) {
 }
 
 function error(res, message, code, noLog) {
-  if (!noLog && code != 401) {
+  if (!noLog && code != 401 && code != 404) {
     logger.error('server: ' + message);
   }
 

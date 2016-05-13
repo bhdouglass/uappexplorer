@@ -87,7 +87,6 @@ function server() {
 
 exports.parsePackageByName = package.parsePackageByName;
 exports.parsePackages = package.parsePackages;
-exports.mongoToElasticsearch = package.mongoToElasticsearch;
 exports.parseDepartments = department.parseDepartments;
 exports.parseReviews = review.parseReviews;
 exports.refreshRatings = review.refreshRatings;

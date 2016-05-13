@@ -1,5 +1,6 @@
 var spider = require('./spider/spider');
 var wish = require('./server/wish');
+var elasticsearchPackage = require('./db/elasticsearchPackage');
 
 function callback(err, value) {
   if (err) {
@@ -23,7 +24,7 @@ if (process.argv[2]) {
   else if (process.argv[2] == 'review' || process.argv[2] == 'reviews') {
     if (process.argv[3] == 'refresh') {
       spider.refreshRatings(function() {
-        spider.mongoToElasticsearch(null, callback);
+        elasticsearchPackage.mongoToElasticsearch(null, callback);
       });
     }
     else {
@@ -36,12 +37,12 @@ if (process.argv[2]) {
     }
     else {
       spider.parseAllClickPackages(function() {
-        spider.mongoToElasticsearch(null, callback);
+        elasticsearchPackage.mongoToElasticsearch(null, callback);
       });
     }
   }
   else if (process.argv[2] == 'mongoToElasticsearch') {
-    spider.mongoToElasticsearch(null, callback);
+    elasticsearchPackage.mongoToElasticsearch(null, true, callback);
   }
   else if (process.argv[2] == 'normalizeVotes') {
     wish.normalizeVotes(callback);
