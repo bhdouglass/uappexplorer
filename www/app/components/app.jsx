@@ -373,6 +373,8 @@ module.exports = React.createClass({
                           <br/>
                           {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
                           <br/>
+                          {i18n.t('Published:')} {moment(this.state.app.published_date).format('MMM D, YYYY')}
+                          <br/>
                           {i18n.t('License:')} {this.state.app.license}
                           <br/>
                           {i18n.t('File Size:')} {this.state.app.filesize}
