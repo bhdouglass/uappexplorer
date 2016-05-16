@@ -147,7 +147,7 @@ function fallbackType(pkg, callback) {
 }
 
 function parseClickPackage(pkg, callback) {
-  logger.debug('Going to parse ' + pkg.name);
+  logger.info('Going to parse the package for: ' + pkg.name);
 
   if (!oauth || !token) {
     fetchOAuth(function(err) {

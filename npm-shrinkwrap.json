@@ -227,9 +227,9 @@
       }
     },
     "click-parser": {
-      "version": "3.0.2",
-      "from": "click-parser@3.0.2",
-      "resolved": "https://registry.npmjs.org/click-parser/-/click-parser-3.0.2.tgz",
+      "version": "3.0.3",
+      "from": "click-parser@3.0.3",
+      "resolved": "https://registry.npmjs.org/click-parser/-/click-parser-3.0.3.tgz",
       "dependencies": {
         "glob": {
           "version": "7.0.3",
