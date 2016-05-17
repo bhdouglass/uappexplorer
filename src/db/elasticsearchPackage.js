@@ -13,6 +13,9 @@ function upsert(pkg, callback) {
   pkg = JSON.parse(JSON.stringify(pkg));
   delete pkg.__v;
   delete pkg._id;
+  delete pkg.snapcraft;
+  delete pkg.scope_ini;
+  delete pkg.desktop_file;
   pkg.raw_title = pkg.title;
 
   client.update({
