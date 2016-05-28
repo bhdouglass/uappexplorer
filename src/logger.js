@@ -22,6 +22,10 @@ else {
 
 process.on('uncaughtException', function(err) {
   logger.error(err);
+
+  if (err && err.stack) {
+    logger.error(err.stack);
+  }
 });
 
 module.exports = logger;
