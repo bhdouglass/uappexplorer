@@ -127,13 +127,16 @@ function generateUpdatesFeed(callback) {
     }
     else {
       _.forEach(pkgs, function(pkg) {
+        var changelog = pkg.changelog ? pkg.changelog : '';
+        changelog = changelog.replace('\n', '<br/>');
+
         feed.item({
           title:           type(pkg.types) + ': ' + pkg.title + ' (v' + pkg.version + ')',
           url:             config.server.host + '/app/' + pkg.name,
           description:     '<a href="' + config.server.host + '/app/' + pkg.name +
                            '"><img src="' + config.server.host + '/api/icon/' +
                            pkg.name + '.png" /></a><br/><br/>Changelog:<br/>' +
-                           pkg.changelog.replace('\n', '<br/>') +
+                           changelog +
                            '<br/><br/>Description:<br/>' + pkg.description,
           author:          pkg.author,
           date:            pkg.last_updated,

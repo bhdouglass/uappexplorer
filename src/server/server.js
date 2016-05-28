@@ -88,6 +88,7 @@ app_express.use(function(req, res) {
 });
 
 function run() {
+  logger.info('listening on ' + config.server.ip + ':' + config.server.port);
   app_express.listen(config.server.port, config.server.ip);
 }
 
