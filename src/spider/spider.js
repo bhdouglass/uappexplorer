@@ -56,6 +56,16 @@ function setupSchedule() {
     review.parseReviews();
   });
 
+  var types_reparse = new schedule.RecurrenceRule();
+  types_reparse.dayOfWeek = new schedule.Range(0, 6, 1);
+  types_reparse.hour = 3;
+  types_reparse.minute = 0;
+
+  schedule.scheduleJob(types_reparse, function() {
+    logger.info('spider: running types reparser');
+    package.reparsePackagesMissingTypes();
+  });
+
   //one time scheduling
   var one_time = new Date(2016, 3, 25, 5, 0, 0);
   var now = new Date();
