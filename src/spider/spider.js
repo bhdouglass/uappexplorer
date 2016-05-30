@@ -87,6 +87,7 @@ function server() {
 
 exports.parsePackageByName = package.parsePackageByName;
 exports.parsePackages = package.parsePackages;
+exports.reparsePackagesMissingTypes = package.reparsePackagesMissingTypes;
 exports.parseDepartments = department.parseDepartments;
 exports.parseReviews = review.parseReviews;
 exports.refreshRatings = review.refreshRatings;

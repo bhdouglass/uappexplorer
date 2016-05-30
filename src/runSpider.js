@@ -47,6 +47,9 @@ if (process.argv[2]) {
   else if (process.argv[2] == 'normalizeVotes') {
     wish.normalizeVotes(callback);
   }
+  else if (process.argv[2] == 'reparsePackagesMissingTypes') {
+    spider.reparsePackagesMissingTypes(callback);
+  }
   else {
     spider.parsePackageByName(process.argv[2], callback);
   }

@@ -520,5 +520,23 @@ function parsePackageByName(name, callback) {
   });
 }
 
+function reparsePackagesMissingTypes(callback) {
+  db.Package.find({types: []}, function(err, pkgs) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      async.eachSeries(pkgs, packageParser.parseClickPackage, function(err) {
+        if (err) {
+          logger.error(err);
+        }
+
+        elasticsearchPackage.mongoToElasticsearch([], callback);
+      });
+    }
+  });
+}
+
 exports.parsePackageByName = parsePackageByName;
 exports.parsePackages = parsePackages;
+exports.reparsePackagesMissingTypes = reparsePackagesMissingTypes;

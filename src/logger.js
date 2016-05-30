@@ -21,7 +21,7 @@ else {
 }
 
 process.on('uncaughtException', function(err) {
-  logger.error(err);
+  logger.error('uncaughtException: ' + err);
 
   if (err && err.stack) {
     logger.error(err.stack);
