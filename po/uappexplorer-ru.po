@@ -1,23 +1,24 @@
 # Russian translation for uappexplorer
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the uappexplorer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# Boris Pek <tehnick-8@yandex.ru>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-24 03:12+0000\n"
-"PO-Revision-Date: 2015-11-29 09:33+0000\n"
-"Last-Translator: Hamel <hameloid@gmail.com>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"PO-Revision-Date: 2016-05-21 23:01+0000\n"
+"Last-Translator: Tehnick <tehnick-8@yandex.ru>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-05-09 12:04+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-06-02 03:08+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 "Language: ru\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -25,7 +26,9 @@ msgstr "(Не беспокойтесь, бесплатная версия тож
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr "*Установка перенаправит вас в официальный магазин  Ubuntu"
+msgstr ""
+"* Установка перенаправит вас в официальный магазин приложений для устройств "
+"с Ubuntu Touch"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
@@ -36,16 +39,16 @@ msgstr ""
 "приложение, только если вы доверяете автору."
 
 msgid "- Choose a list -"
-msgstr "- Виберите список -"
+msgstr "- Выберите список -"
 
 msgid "A wish with the same name already exists"
-msgstr ""
+msgstr "Пожелание с таким именем уже существует"
 
 msgid "Account Integration"
-msgstr ""
+msgstr "Интеграция аккаунта"
 
 msgid "Add Apps:"
-msgstr ""
+msgstr "Добавить приложения:"
 
 msgid "Add to list:"
 msgstr "Добавить в список:"
@@ -63,19 +66,19 @@ msgid "All Frameworks"
 msgstr "Все фреймворки"
 
 msgid "All Snappy Packages"
-msgstr ""
+msgstr "Все пакеты Snappy"
 
 msgid "Amazon Link"
-msgstr ""
+msgstr "Ссылка на Amazon"
 
 msgid "Amazon link is not a valid url"
-msgstr ""
+msgstr "Ссылка на Amazon некорректна"
 
 msgid "Any Architecture"
 msgstr "Любая архитектура"
 
 msgid "Any License"
-msgstr "Любая лиценция"
+msgstr "Любая лицензия"
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -85,26 +88,32 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
+"Любые запросы по удалению контента, нарушающего авторские права или товарный "
+"знак, должны обсуждаться с Canonical или с автором приложения (контактная "
+"информация автора, как правило, есть под вкладкой Поддержка на странице "
+"приложения). uApp Explorer не связан с Canonical и не размещает приложения. "
+"Он лишь отображает общедоступную информацию из официального магазина "
+"приложений Ubuntu Touch."
 
 msgid "App"
 msgstr "Приложение"
 
 msgid "App Name"
-msgstr ""
+msgstr "Имя приложения"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Название приложения (например: com.ubuntu.developer.example)"
+msgstr "Имя приложения (например: com.ubuntu.developer.example)"
 
 msgid "App Wishlist"
-msgstr ""
+msgstr "Список пожеланий"
 
 msgid "Apps"
 msgstr "Приложения"
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Приложения не устанавливаются с помощью этого сайта, только через "
-"официальный AppStore."
+"Приложения устанавливаются не с этого веб-сайта, а из официального магазина "
+"приложений."
 
 msgid "Apps:"
 msgstr "Приложения:"
@@ -113,10 +122,10 @@ msgid "Architecture:"
 msgstr "Архитектура:"
 
 msgid "Architectures:"
-msgstr ""
+msgstr "Архитектуры:"
 
 msgid "Are you sure you want to delete this list?"
-msgstr "Вы уверены что хотите удалить этот список?"
+msgstr "Удалить этот список?"
 
 msgid "Article"
 msgstr "Статья"
@@ -131,40 +140,40 @@ msgid "Browse"
 msgstr "Обзор"
 
 msgid "Browse Apps"
-msgstr "Обзор приложения"
+msgstr "Обзор приложений"
 
 msgid "Browse Games"
-msgstr "Обзор игры"
+msgstr "Обзор игр"
 
 msgid "Browse Scopes"
-msgstr ""
+msgstr "Обзор областей"
 
 msgid "Browse Web Apps"
-msgstr "Обзор Веб-Приложения"
+msgstr "Обзор веб-приложений"
 
 msgid "Business"
 msgstr "Бизнес"
 
 msgid "Buy the Webapp"
-msgstr "Купить Web-приложение"
+msgstr "Купить веб-приложение"
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Купить web-приложение через магазин Ubuntu Touch"
+msgstr "Купить web-приложение в магазине Ubuntu Touch"
 
 msgid "By:"
 msgstr "От:"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 msgid "Category:"
 msgstr "Категория:"
 
 msgid "Caxton Code"
-msgstr "Caxton код"
+msgstr "Код Caxton"
 
 msgid "Changelog"
-msgstr "Список изменений"
+msgstr "Журнал изменений"
 
 msgid "Close"
 msgstr "Закрыть"
@@ -179,27 +188,20 @@ msgid "Containing:"
 msgstr "Содержит:"
 
 msgid "Could not add app to list at this time, please try again later"
-msgstr ""
-"В данный момент не удалось добавить приложение в список, пожалуйста, "
-"повторите попытку позже"
+msgstr "Не удалось добавить приложение в список, повторите попытку позже"
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"В данный момент не удалось подключиться к Caxton, пожалуйста, повторите "
-"попытку позже"
+"Не удалось подключиться к Caxton, пожалуйста, повторите попытку позже"
 
 msgid "Could not create a new list at this time, please try again later"
-msgstr ""
-"В данный момент не удалось создать новый список, пожалуйста, повторите "
-"попытку позже"
+msgstr "Не удалось создать новый список, повторите попытку позже"
 
 msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
+msgstr "Не удалось создать новое пожелание, повторите попытку позже"
 
 msgid "Could not delete the list at this time, please try again later"
-msgstr ""
-"В данный момент не удалось удалить список, пожалуйста, повторите попытку "
-"позже"
+msgstr "Не удалось удалить список, повторите попытку позже"
 
 msgid "Could not download app data, click to retry"
 msgstr ""
@@ -207,7 +209,7 @@ msgstr ""
 
 msgid "Could not download app list, click to retry"
 msgstr ""
-"Не удалось загрузить список приложения, нажмите, чтобы повторить попытку"
+"Не удалось загрузить список приложений, нажмите, чтобы повторить попытку"
 
 msgid "Could not find app"
 msgstr "Не удалось найти приложение"
@@ -219,28 +221,24 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "Не удалось найти этот список, возможно он  больше не существует"
 
 msgid "Could not find wish"
-msgstr ""
+msgstr "Не удалось найти пожелание"
 
 msgid "Could not load lists at this time, click to retry"
-msgstr "В данный момент не удалось загрузить список, нажмите для повтора"
+msgstr "Не удалось загрузить список, нажмите, чтобы повторить попытку"
 
 msgid "Could not load wishes at this time, click to retry"
 msgstr ""
+"Не удалось загрузить список пожеланий, нажмите, чтобы повторить попытку"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
-"Не удалось удалить приложение из этого списка, пожалуйста, повторите попытку "
-"позже"
+"Не удалось удалить приложение из этого списка, повторите попытку позже"
 
 msgid "Could not save your settings at this time, please try again later"
-msgstr ""
-"В данный момент не удалось сохранить настройки, пожалуйста, повторите "
-"попытку позже"
+msgstr "Не удалось сохранить Ваши настройки, повторите попытку позже"
 
 msgid "Could not update the list at this time, please try again later"
-msgstr ""
-"В данный момент не удалось обновить список, пожалуйста, повторите попытку "
-"позже"
+msgstr "Не удалось обновить список, повторите попытку позже"
 
 msgid "Create"
 msgstr "Создать"
@@ -255,13 +253,13 @@ msgid "Description"
 msgstr "Описание"
 
 msgid "Desktop File:"
-msgstr ""
+msgstr "Desktop файл:"
 
 msgid "Developer Tools"
 msgstr "Средства разработки"
 
 msgid "Developer/Company"
-msgstr ""
+msgstr "Разработчик/компания"
 
 msgid "Donate"
 msgstr "Пожертвования"
@@ -281,15 +279,20 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
+"Пожертвование для uApp Explorer это лишь один из способов, которым вы можете "
+"помочь проекту. Эти деньги пойдут на поддержание инфраструктуры проекта, "
+"например: оплату доменного имени, хостинг и т.д.. uApp Explorer всегда будет "
+"бесплатным сервисом с открытым исходным кодом, независимо от количества "
+"пожертвований."
 
 msgid "Donation Web App"
-msgstr "Платное Веб-приложение"
+msgstr "Платное веб-приложение"
 
 msgid "Download"
 msgstr "Скачать"
 
 msgid "Downvote"
-msgstr ""
+msgstr "Дизлайк"
 
 msgid "Edit"
 msgstr "Редактировать"
@@ -301,7 +304,7 @@ msgid "Education"
 msgstr "Образование"
 
 msgid "Email Support"
-msgstr ""
+msgstr "cвязь через email"
 
 msgid "Entertainment"
 msgstr "Развлечения"
@@ -326,7 +329,7 @@ msgstr "Найти"
 
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
-"Найти приложение, которое еще не было получено  из официального AppStore."
+"Найти приложение, установленное не из официального магазина приложений."
 
 msgid "Food & Drink"
 msgstr "Еда и напитки"
@@ -335,7 +338,7 @@ msgid "For version:"
 msgstr "Для версии:"
 
 msgid "Found the requested app"
-msgstr "Найдено требуемое приложение"
+msgstr "Найдено запрошенное приложение"
 
 msgid "Framework:"
 msgstr "Фреймворк:"
@@ -347,16 +350,16 @@ msgid "Games"
 msgstr "Игры"
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr ""
+msgstr "Получить QR-сканер для вашего устройства Ubuntu Touch"
 
 msgid "Go there now"
-msgstr "Перейти туда сейчас"
+msgstr "Перейти сейчас"
 
 msgid "Google Play Link"
-msgstr ""
+msgstr "Ссылка на Google Play"
 
 msgid "Google Play link is not a valid url"
-msgstr ""
+msgstr "Ссылка на Google Play некорректна"
 
 msgid "Graphics"
 msgstr "Графика"
@@ -375,21 +378,25 @@ msgid ""
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr ""
+"Рейтинг сердец рассчитывается по количеству отзывов: каждые 5 отзывов "
+"увеличиваю количество сердец на единицу, за 4 отзыва начисляется половина "
+"сердца, 3 отзыва соответствуют отсутсвию сердец, 2 звезды -- минус половина "
+"сердца и 1 звезда -- минус одно сердце."
 
 msgid "Help this wish get more votes!"
-msgstr ""
+msgstr "Помогите этому пожеланию набрать больше голосов!"
 
 msgid "Help translate!"
-msgstr "Помогите перевести!"
+msgstr "Помогите с переводом!"
 
 msgid "Highest Heart Rating"
-msgstr "С самым большим рейтингом сердец"
+msgstr "Максимальный рейтинг сердец"
 
 msgid "Highest Star Rating"
-msgstr "С самым большим рейтингом звезд"
+msgstr "Максимальный рейтинг по отзывам"
 
 msgid "How can I help improve this site?"
-msgstr "Как я могу помочь улучшить этот сайт?"
+msgstr "Как помочь улучшить этот веб-сайт?"
 
 msgid "How do I install apps?"
 msgstr "Как установить приложениe?"
@@ -398,22 +405,23 @@ msgid "How is the popularity determined?"
 msgstr "Как определяется популярность?"
 
 msgid "How much would you be willing pay for this app?"
-msgstr ""
+msgstr "Сколько вы готовы заплатить за это приложение?"
 
 msgid "I just published my app, why don't I see it?"
 msgstr "Я только что опубликовал мое приложение, почему я не вижу его?"
 
 msgid "I'm wishing for..."
-msgstr ""
+msgstr "Я желаю..."
 
 msgid "I'm wishing for: "
-msgstr ""
+msgstr "Я желаю: "
 
 msgid "Idea Summary"
-msgstr ""
+msgstr "Описание идеи"
 
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "Если вы хотите внести свой вклад в код посетите GitHub репозиторий."
+msgstr ""
+"Если вы хотите присоединиться к разработке, посетите репозиторий на GitHub."
 
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr "Если вы хотите помочь с переводом, посетите проект на Launchpad."
@@ -421,11 +429,11 @@ msgstr "Если вы хотите помочь с переводом, посе�
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
-"Если вы нашли ошибки или хотите оставить пожелания, посетите страницу  с "
-"проблемами на GitHub."
+"Если вы нашли ошибки или хотите оставить пожелания, посетите трекер ошибок "
+"на GitHub."
 
 msgid "If you would like to contact the author, visit his website."
-msgstr "Если вы хотите связаться с автором, посетить его сайт."
+msgstr "Если вы хотите связаться с автором, посетите его веб-сайт."
 
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
@@ -441,25 +449,25 @@ msgid "Install"
 msgstr "Установить"
 
 msgid "Is this an existing app?"
-msgstr ""
+msgstr "Это существующее приложение?"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Возможен и отрицательный рейтинг сердец."
 
 msgid "Itunes Link"
-msgstr ""
+msgstr "Ссылка на Itunes"
 
 msgid "Language"
 msgstr "Язык"
 
 msgid "Latest Update"
-msgstr "Последнее обновление"
+msgstr "Недавно обновленные"
 
 msgid "Least Popular (This Month)"
 msgstr "Наименее популярные (в этом месяце)"
 
 msgid "Less Info"
-msgstr ""
+msgstr "Скрыть детали"
 
 msgid "License:"
 msgstr "Лицензия:"
@@ -489,16 +497,16 @@ msgid "Log in via Ubuntu"
 msgstr "Войти через Ubuntu"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Войдите, чтобы добавить пожелание"
 
 msgid "Lowest Heart Rating"
-msgstr "С минимальным рейтингом сердец"
+msgstr "Минимальный рейтинг сердец"
 
 msgid "Lowest Star Rating"
-msgstr "С минимальным рейтингом звезд"
+msgstr "Минимальный рейтинг по отзывам"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Добавить пожелание"
 
 msgid "Media & Video"
 msgstr "Видео и мультимедиа"
@@ -510,22 +518,22 @@ msgid "Missing an app?"
 msgstr "Отсутствует приложение?"
 
 msgid "Monthly Popularity"
-msgstr "Ежемесячная популярность"
+msgstr "Месячная популярность"
 
 msgid "More Apps by:"
 msgstr "Больше приложений от:"
 
 msgid "More Info"
-msgstr ""
+msgstr "Показать детали"
 
 msgid "Most Expensive (USD)"
 msgstr "Самые дорогие (USD)"
 
 msgid "Most Popular (This Month)"
-msgstr "Самые популярные (в этом месяце)"
+msgstr "Наиболее популярные (в этом месяце)"
 
 msgid "Most Relevant"
-msgstr "Наиболее актуальные"
+msgstr "Наиболее соответствующие"
 
 msgid "Music & Audio"
 msgstr "Музыка и аудио"
@@ -544,6 +552,9 @@ msgid ""
 "wait until the new apps are fetched or use the request form to request that "
 "the app be found early."
 msgstr ""
+"Информация о новых приложениях загружается из официального магазина "
+"приложений один раз в час, вы можете дождаться автоматической загрузки или "
+"воспользоваться формой запроса для ускорения обнаружения программы."
 
 msgid "Newest"
 msgstr "Самые новые"
@@ -558,78 +569,84 @@ msgid "No"
 msgstr "Нет"
 
 msgid "No apps found, try searching again."
-msgstr "Приложение не найдено, попробуйте поискать еще раз."
+msgstr "Приложения не найдены, попробуйте поискать еще."
 
 msgid "No lists, create one!"
-msgstr "Нет списков, создать один!"
+msgstr "Списков нет, создайте хотя бы один!"
 
 msgid "No reviews yet!"
 msgstr "Отзывов еще нет!"
 
 msgid "No wishes found, try searching again."
-msgstr ""
+msgstr "Пожелания не найдены, попробуйте поискать еще."
 
 msgid "Oldest"
 msgstr "Самые старые"
 
 msgid "Oldest Update"
-msgstr "Самое старое обновление"
+msgstr "Давно не обновляемые"
 
 msgid "On average, voters would be willing to pay %d USD for this app."
 msgstr ""
+"В среднем, проголосовавшие готовы заплатить %d USD за это приложениe."
 
 msgid "Open Source"
 msgstr "Открытое ПО"
 
 msgid "Opens Urls"
-msgstr ""
+msgstr "Открытые ссылки"
 
 msgid "Other Link"
-msgstr ""
+msgstr "Другая ссылка"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "Некорректный формат ссылки"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Разрешения"
 
 msgid "Personalisation"
-msgstr ""
+msgstr "Индивидуализация"
 
 msgid "Phone Apps & Scopes"
-msgstr ""
+msgstr "Приложения и области"
 
 msgid "Please login to send via Caxton"
 msgstr "Пожалуйста авторизуйтесь чтобы послать через Caxton"
 
 msgid "Please specify a name or idea for your wish"
-msgstr ""
+msgstr "Укажите имя или ключевую идею вашего пожелания"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
 msgstr ""
+"Популярность рассчитывается по рейтингу из 4 или 5 последних отзывов за "
+"текущий месяц."
 
 msgid "Previous App:"
 msgstr "Предыдущее приложение:"
 
 msgid "Price must be between 0 and 20 USD"
-msgstr ""
+msgstr "Цена должна быть от 0 до 20 USD"
 
 msgid "Productivity"
-msgstr ""
+msgstr "Производительность"
 
 msgid "Proprietary"
-msgstr ""
+msgstr "Проприетарное"
+
+msgid "Published:"
+msgstr "Опубликовано:"
 
 msgid "Push Notifications"
-msgstr ""
+msgstr "Push-уведомления"
 
 msgid "QR Code"
 msgstr "QR код"
 
 msgid "Reference"
-msgstr ""
+msgstr "Ссылка"
 
 msgid "Remove this app from your list"
 msgstr "Удалить это приложение из списка"
@@ -638,22 +655,22 @@ msgid "Save"
 msgstr "Сохранить"
 
 msgid "Science & Engineering"
-msgstr ""
+msgstr "Наука и инженерия"
 
 msgid "Scope"
-msgstr ""
+msgstr "Область"
 
 msgid "Scope INI File:"
-msgstr ""
+msgstr "Ini-файл области:"
 
 msgid "Scopes"
-msgstr ""
+msgstr "Области"
 
 msgid "Screenshots"
 msgstr "Скриншоты"
 
 msgid "Search for a wish:"
-msgstr ""
+msgstr "Найти пожелание:"
 
 msgid "Send via Caxton"
 msgstr "Отправить через Caxton"
@@ -665,7 +682,7 @@ msgid "Settings"
 msgstr "Настройки"
 
 msgid "Share"
-msgstr ""
+msgstr "Поделиться"
 
 msgid "Share on Facebook"
 msgstr "Поделиться в Facebook"
@@ -680,7 +697,7 @@ msgid "Share on Twitter"
 msgstr "Поделиться в Twitter"
 
 msgid "Shopping"
-msgstr ""
+msgstr "Покупки"
 
 msgid "Similar Apps"
 msgstr "Похожие приложения"
@@ -689,40 +706,40 @@ msgid "Snappy App"
 msgstr "Snappy приложение"
 
 msgid "Snappy Applications"
-msgstr ""
+msgstr "Snappy приложения"
 
 msgid "Snappy Framework"
-msgstr ""
+msgstr "Snappy фреймворк"
 
 msgid "Snappy Frameworks"
-msgstr ""
+msgstr "Snappy фреймворки"
 
 msgid "Snappy Gadget"
-msgstr ""
+msgstr "Кастомизатор Snappy"
 
 msgid "Snappy Gadgets"
-msgstr ""
+msgstr "Кастомизаторы Snappy"
 
 msgid "Snappy Kernel"
-msgstr ""
+msgstr "Ядро Snappy"
 
 msgid "Snappy Kernels"
-msgstr ""
+msgstr "Ядра Snappy"
 
 msgid "Snappy Metadata:"
-msgstr ""
+msgstr "Метаданные Snappy:"
 
 msgid "Snappy OEM"
-msgstr ""
+msgstr "Snappy OEM"
 
 msgid "Snappy OEMs"
-msgstr ""
+msgstr "Snappy OEM'ы"
 
 msgid "Snappy OS"
-msgstr ""
+msgstr "ОС Snappy"
 
 msgid "Social Networking"
-msgstr ""
+msgstr "Социальные сети"
 
 msgid "Sort Apps By:"
 msgstr "Сортировать приложения по:"
@@ -731,16 +748,16 @@ msgid "Sort By:"
 msgstr "Сортировать по:"
 
 msgid "Sports"
-msgstr ""
+msgstr "Спорт"
 
 msgid "Star Rating"
-msgstr ""
+msgstr "Отзывы"
 
 msgid "Submit"
-msgstr ""
+msgstr "Отправить"
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Отправлен"
 
 msgid "Support:"
 msgstr "Поддержка:"
@@ -749,7 +766,7 @@ msgid "Terms:"
 msgstr "Условия:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Спасибо за ваш голос!"
 
 msgid "Thank you!"
 msgstr "Спасибо!"
@@ -759,6 +776,10 @@ msgid ""
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
+"Рейтинг сердец похож на рейтинг по отзывам, но он опирается на количество "
+"отзывов, а не на оценку в них. Приложение с пятью отзывами будет выше в "
+"рейтинге сердец, чем приложение с несколькими пятизвездочными оценками в "
+"отзывах."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -768,12 +789,18 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
+"Рейтинг по отзывам -- это Байесовское среднее значение по оценкам "
+"приложения, которые выставили пользователи в своих отзывах.  Такой способ "
+"рассчета позволяет приложениям с большим количеством отзывов иметь больший "
+"рейтинг. Рейтинг по отзывам может быть от 1 до 5, а ноль означает полное "
+"отсутсвие отзывов. Подробнее о расчете Байесовского среднего можно прочитать "
+"в этой статье."
 
 msgid "This app is on these lists:"
-msgstr "Это приложение находится в этих списках:"
+msgstr "Это приложение находится в списках:"
 
 msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr ""
+msgstr "Это неофициальный обозреватель приложений Ubuntu Touch и Snappy."
 
 msgid "This list is empty!"
 msgstr "Этот список пуст!"
@@ -784,6 +811,11 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
+"Этот сайт является неофициальным обозревателем приложений для Ubuntu Touch. "
+"Все данные о приложениях получены через публично доступный API. Этот сайт "
+"сопровождается Брайаном Дугласом и никак не связан с Ubuntu или Canonical. "
+"Ubuntu и Canonical являются зарегистрированными торговыми марками Canonical "
+"Ltd."
 
 msgid "Title A-Z"
 msgstr "Название A-Z"
@@ -796,31 +828,35 @@ msgid ""
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
+"Чтобы установить приложение, посетите этот сайт на устройстве с Ubuntu "
+"Touch. Найдите интересующее вас приложение и нажмите на кнопку "
+"\"Установить\". После этого вы будете перенаправлены на официальный магазин "
+"приложений, где сможете установить его."
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
-"Чтобы сообщить о проблеме или запросить новую функцию, посетите страницу "
-"вопросов для этого сайта на GitHub."
+"Чтобы сообщить о проблеме или запросить новую функцию, посетите баг трекер "
+"этого сайта на GitHub."
 
 msgid "Top Apps"
-msgstr "Топ приложения"
+msgstr "Топ приложений"
 
 msgid "Total Reviews"
-msgstr ""
+msgstr "Всего отзывов"
 
 msgid "Travel & Local"
-msgstr ""
+msgstr "Путешествия и места"
 
 msgid "Type:"
 msgstr "Тип:"
 
 msgid "Universal Accesss/Accessibility"
-msgstr ""
+msgstr "Универсальный доступ/Доступность"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
 msgid "Updated Apps"
 msgstr "Обновленные приложения"
@@ -829,19 +865,19 @@ msgid "Updated:"
 msgstr "Обновлено:"
 
 msgid "Upvote"
-msgstr ""
+msgstr "Лайк"
 
 msgid "Urls that open in this app:"
-msgstr ""
+msgstr "Ссылки, которые открываются в этом приложении:"
 
 msgid "User List:"
 msgstr "Список пользователя:"
 
 msgid "User Reviews"
-msgstr "Отзывы"
+msgstr "Отзывы пользователей"
 
 msgid "Utilities"
-msgstr ""
+msgstr "Утилиты"
 
 msgid "Version:"
 msgstr "Версия:"
@@ -850,10 +886,10 @@ msgid "View"
 msgstr "Вид"
 
 msgid "Vote"
-msgstr ""
+msgstr "Проголосовать"
 
 msgid "Weather"
-msgstr ""
+msgstr "Погода"
 
 msgid "Web App"
 msgstr "Веб-приложение"
@@ -862,107 +898,109 @@ msgid "Web Apps"
 msgstr "Веб-приложения"
 
 msgid "Website:"
-msgstr "Web-сайт:"
+msgstr "Веб-сайт:"
 
 msgid "Welcome"
 msgstr "Добро пожаловать"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Какое приложение вы бы хотели видеть в Ubuntu Touch?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr ""
+msgstr "Какие приложения вы бы хотели видеть в Ubuntu Touch?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
-"Что мне делать, если я нахожу нарушение авторского права или торговой марки?"
+"Что делать, если обнаружил нарушение авторского права или торговой марки?"
 
 msgid "What is the heart rating?"
 msgstr "Что такое рейтинг сердец?"
 
 msgid "What is the star rating?"
-msgstr "Что такое рейтинг звезд?"
+msgstr "Что такое рейтинг по отзывам?"
 
 msgid "What is this site?"
-msgstr "Что это за сайт?"
+msgstr "Что это за веб-сайт?"
 
 msgid "Where can I report a problem or request a new feature?"
-msgstr "Где я могу сообщить о проблеме или запросить новую функцию?"
+msgstr "Где можно сообщить о проблеме или запросить новую функцию?"
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
-"Помогаете вы деньгами или нет, я все равно ценю вашу поддержку. Спасибо!"
+"Помогаете ли вы деньгами или нет, я все равно ценю вашу поддержку. Спасибо!"
 
 msgid "Why donate?"
 msgstr "Для чего нужны пожертования?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Пожелания"
 
 msgid "Yes"
 msgstr "Да"
 
 msgid "You are already connected via Caxton!"
-msgstr "Вы уже соединены через Caxton!"
+msgstr "Вы уже подключены через Caxton!"
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr ""
-"У вас нет учетной записи, подключенной к Caxton, нажмите, чтобы перейти к "
-"настройкам"
+msgstr "Вы еще не подключены к Caxton, нажмите, чтобы перейти к настройкам"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "Чтобы проголосовать, необходимо авторизоваться"
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
+msgstr "Не удалось сохранить ваш отзыв, повторите попытку позже"
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "приложение"
+msgstr[1] "приложения"
+msgstr[2] "приложений"
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "игра"
+msgstr[1] "игры"
+msgstr[2] "игр"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "Ссылка на iTunes"
 
 msgid "iTunes link is not a valid url"
-msgstr ""
+msgstr "Ссылка на iTunes некорректна"
 
 msgid "phone apps & scopes"
-msgstr ""
+msgstr "Приложения и области"
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "область"
+msgstr[1] "области"
+msgstr[2] "областей"
 
 msgid "snappy apps"
-msgstr ""
+msgstr "приложения snappy"
 
 msgid "snappy frameworks"
-msgstr ""
+msgstr "фреймворки snappy"
 
 msgid "snappy gadgets"
-msgstr ""
+msgstr "кастомизаторы snappy"
 
 msgid "snappy kernels"
-msgstr ""
+msgstr "ядра snappy"
 
 msgid "snappy oems"
-msgstr ""
+msgstr "snappy oem'ы"
 
 msgid "snappy os"
-msgstr ""
+msgstr "операционные системы snappy"
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "веб-приложение"
+msgstr[1] "веб-приложения"
+msgstr[2] "веб-приложений"

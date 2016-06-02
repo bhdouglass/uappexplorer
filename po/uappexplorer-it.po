@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-24 03:12+0000\n"
-"PO-Revision-Date: 2016-05-08 04:36+0000\n"
-"Last-Translator: Emanuele Antonio Faraone <emanueleant03@gmail.com>\n"
+"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"PO-Revision-Date: 2016-05-17 15:56+0000\n"
+"Last-Translator: max <maxymilians@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-09 12:04+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-06-02 03:08+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 "Language: it\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -57,25 +57,25 @@ msgid "All Apps"
 msgstr "Tutte le applicazioni"
 
 msgid "All Architectures"
-msgstr "Tutte le Architetture"
+msgstr "italiano"
 
 msgid "All Frameworks"
-msgstr "Tutti i Framework"
+msgstr "italiano"
 
 msgid "All Snappy Packages"
-msgstr "Tutti i pacchetti Snappy"
+msgstr "italiano"
 
 msgid "Amazon Link"
-msgstr "Link di Amazon"
+msgstr "italiano"
 
 msgid "Amazon link is not a valid url"
-msgstr "Il link di Amazon ha un URL invalido"
+msgstr "italiano"
 
 msgid "Any Architecture"
-msgstr "Qualsiasi Architettura"
+msgstr "italiano"
 
 msgid "Any License"
-msgstr "Qualsiasi Licenza"
+msgstr "italiano"
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -100,10 +100,10 @@ msgid "App Name"
 msgstr "Nome dell'app"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Nome applicazione (esempio: com.ubuntu.developer.example)"
+msgstr "italiano"
 
 msgid "App Wishlist"
-msgstr "Lista dei desideri delle app"
+msgstr "italiano"
 
 msgid "Apps"
 msgstr "Applicazioni"
@@ -639,6 +639,9 @@ msgstr "Produttività"
 
 msgid "Proprietary"
 msgstr "Proprietario"
+
+msgid "Published:"
+msgstr ""
 
 msgid "Push Notifications"
 msgstr "Notifiche push"
