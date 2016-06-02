@@ -27,17 +27,17 @@ var propertyMap = {
     pkg.changelog = sanitizeHtml(changelog, {
       allowedTags: [],
       allowedAttributes: [],
-    });
+    }).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/\r/g, '');
   },
   description: function(pkg, description) {
     description = sanitizeHtml(description, {
       allowedTags: [],
       allowedAttributes: [],
-    });
+    }).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/\r/g, '');
 
-    var split = description.replace('\r', '').split('\n');
+    var split = description.split('\n');
     if (split.length == 2 && split[0] == split[1]) { //Remove duplicated second line
-      pkg.description = split[0].replace('\n', '');
+      pkg.description = split[0].replace(/\n/g, '');
     }
     else {
       pkg.description = description;
