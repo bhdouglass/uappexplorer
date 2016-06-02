@@ -58,8 +58,8 @@ function setupSchedule() {
 
   var types_reparse = new schedule.RecurrenceRule();
   types_reparse.dayOfWeek = new schedule.Range(0, 6, 1);
-  types_reparse.hour = 3;
-  types_reparse.minute = 0;
+  types_reparse.hour = new schedule.Range(0, 23, 1);
+  types_reparse.minute = 30;
 
   schedule.scheduleJob(types_reparse, function() {
     logger.info('spider: running types reparser');
