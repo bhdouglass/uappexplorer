@@ -62,7 +62,7 @@ function setupSchedule() {
   types_reparse.minute = 30;
 
   schedule.scheduleJob(types_reparse, function() {
-    logger.info('spider: running types reparser');
+    logger.debug('spider: running types reparser');
     package.reparsePackagesMissingTypes();
   });
 

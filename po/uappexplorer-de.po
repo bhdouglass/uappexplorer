@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-05-21 10:19+0000\n"
-"Last-Translator: tobson <Unknown>\n"
+"PO-Revision-Date: 2016-06-10 16:14+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-06-02 03:08+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-19 13:44+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: de\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -43,7 +43,7 @@ msgid "A wish with the same name already exists"
 msgstr "Ein Wunsch mit den selben Namen existiert bereits"
 
 msgid "Account Integration"
-msgstr "Benutzerkonten-Intergration"
+msgstr "Kontoeinbindung"
 
 msgid "Add Apps:"
 msgstr "Apps hinzufügen:"
@@ -70,7 +70,7 @@ msgid "Amazon Link"
 msgstr "Amazon-Verweis"
 
 msgid "Amazon link is not a valid url"
-msgstr "Der Amazon-Verweis ist keine gültige Url"
+msgstr "Amazon-Verknüpfung ist keine gültige Adresse"
 
 msgid "Any Architecture"
 msgstr "Jede Architektur"
@@ -147,16 +147,16 @@ msgid "Browse Scopes"
 msgstr "Scopes durchsuchen"
 
 msgid "Browse Web Apps"
-msgstr "Web Apps durchsuchen"
+msgstr "Webapps durchsuchen"
 
 msgid "Business"
 msgstr "Geschäftliches"
 
 msgid "Buy the Webapp"
-msgstr "Diese Web App kaufen"
+msgstr "Diese Webapp kaufen"
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Kaufe diese WebApp im Ubuntu Touch-Store"
+msgstr "Diese Webapp im Ubuntu-Touch-Store kaufen"
 
 msgid "By:"
 msgstr "Von:"
@@ -168,7 +168,7 @@ msgid "Category:"
 msgstr "Kategorie:"
 
 msgid "Caxton Code"
-msgstr "Caxton Code"
+msgstr "Caxton-Code"
 
 msgid "Changelog"
 msgstr "Änderungsprotokoll"
@@ -259,10 +259,10 @@ msgid "Description"
 msgstr "Beschreibung"
 
 msgid "Desktop File:"
-msgstr "Desktop Dateien:"
+msgstr "Schreibtischdatei:"
 
 msgid "Developer Tools"
-msgstr "Entwicklertools"
+msgstr "Entwicklerwerkzeuge"
 
 msgid "Developer/Company"
 msgstr "Entwickler/Unternehmen"
@@ -364,7 +364,7 @@ msgid "Google Play Link"
 msgstr "Google Play Verweis"
 
 msgid "Google Play link is not a valid url"
-msgstr "Der Google Play Verweis ist keine gültige Url"
+msgstr "Google-Play-Verknüpfung ist keine gültige Adresse"
 
 msgid "Graphics"
 msgstr "Bildbearbeitung"
@@ -598,13 +598,13 @@ msgid "Open Source"
 msgstr "Open Source"
 
 msgid "Opens Urls"
-msgstr "URLs öffnen"
+msgstr "Öffnet Adressen"
 
 msgid "Other Link"
 msgstr "Anderer Verweis"
 
 msgid "Other link is not a valid url"
-msgstr "Anderer Verweis ist keine gültige Url"
+msgstr "Andere Verknüpfung ist keine gültige Adresse"
 
 msgid "Permissions"
 msgstr "Berechtigungen"
@@ -710,7 +710,7 @@ msgid "Snappy App"
 msgstr "Snappy App"
 
 msgid "Snappy Applications"
-msgstr "Snappy Applikationen"
+msgstr "Snappy-Anwendung"
 
 msgid "Snappy Framework"
 msgstr "Snappy Framework"
@@ -725,13 +725,13 @@ msgid "Snappy Gadgets"
 msgstr "Snappy Gadgets"
 
 msgid "Snappy Kernel"
-msgstr "Snappy Kernel"
+msgstr "Snappy-Kernel"
 
 msgid "Snappy Kernels"
-msgstr "Snappy Kernels"
+msgstr "Snappy-Kernel"
 
 msgid "Snappy Metadata:"
-msgstr "Snappy Metadaten:"
+msgstr "Snappy-Metadaten:"
 
 msgid "Snappy OEM"
 msgstr "Snappy OEM"
@@ -874,7 +874,7 @@ msgid "Upvote"
 msgstr "Positiv bewerten"
 
 msgid "Urls that open in this app:"
-msgstr "URLs zum öffnen der App:"
+msgstr "Adresse zum Öffnen der App:"
 
 msgid "User List:"
 msgstr "Anwender Liste:"
@@ -980,7 +980,7 @@ msgid "iTunes Link"
 msgstr "iTunes Verweis"
 
 msgid "iTunes link is not a valid url"
-msgstr "iTunes Verweis ist keine gültige url"
+msgstr "iTunes-Verknüpfung ist keine gültige Adresse"
 
 msgid "phone apps & scopes"
 msgstr "Telefon Apps & Scopes"
@@ -1000,7 +1000,7 @@ msgid "snappy gadgets"
 msgstr "Snappy Gadgets"
 
 msgid "snappy kernels"
-msgstr "Snappy Kernels"
+msgstr "Snappy-Kernel"
 
 msgid "snappy oems"
 msgstr "Snappy OEMs"

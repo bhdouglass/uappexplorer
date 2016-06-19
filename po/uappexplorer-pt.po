@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-01-26 19:34+0000\n"
+"PO-Revision-Date: 2016-06-06 09:20+0000\n"
 "Last-Translator: Ivo Xavier <ivoxavier.8@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-06-02 03:08+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-19 13:44+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: pt\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -42,7 +42,7 @@ msgid "A wish with the same name already exists"
 msgstr "Esse nome já existe"
 
 msgid "Account Integration"
-msgstr ""
+msgstr "Integração de conta"
 
 msgid "Add Apps:"
 msgstr "Adicionar apps:"
@@ -63,7 +63,7 @@ msgid "All Frameworks"
 msgstr "Todos os frameworks"
 
 msgid "All Snappy Packages"
-msgstr ""
+msgstr "Todos os ficheiros Snappy"
 
 msgid "Amazon Link"
 msgstr "Amazon Link"
@@ -119,7 +119,7 @@ msgid "Architecture:"
 msgstr "Arquitetura:"
 
 msgid "Architectures:"
-msgstr ""
+msgstr "Arquitetura:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Você tem certeza que deseja deletar esta lista?"
@@ -260,7 +260,7 @@ msgid "Description"
 msgstr "Descrição"
 
 msgid "Desktop File:"
-msgstr ""
+msgstr "Ficheiro desktop:"
 
 msgid "Developer Tools"
 msgstr "Ferramentas de programador"
@@ -471,7 +471,7 @@ msgid "Least Popular (This Month)"
 msgstr "Menos populares (este mês)"
 
 msgid "Less Info"
-msgstr ""
+msgstr "Menos informação"
 
 msgid "License:"
 msgstr "Licença"
@@ -598,7 +598,7 @@ msgid "Open Source"
 msgstr "Código aberto"
 
 msgid "Opens Urls"
-msgstr ""
+msgstr "Urls abertos"
 
 msgid "Other Link"
 msgstr "Outro link"
@@ -607,13 +607,13 @@ msgid "Other link is not a valid url"
 msgstr "Outro link não é um url válido"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permissões"
 
 msgid "Personalisation"
 msgstr "Personalização"
 
 msgid "Phone Apps & Scopes"
-msgstr ""
+msgstr "Apps do telefone e Scopes"
 
 msgid "Please login to send via Caxton"
 msgstr "Inicie sessão para enviar via Caxton"
@@ -641,7 +641,7 @@ msgid "Proprietary"
 msgstr "Proprietário"
 
 msgid "Published:"
-msgstr ""
+msgstr "Publicado:"
 
 msgid "Push Notifications"
 msgstr ""
@@ -686,7 +686,7 @@ msgid "Settings"
 msgstr "Definições"
 
 msgid "Share"
-msgstr ""
+msgstr "Partilhar"
 
 msgid "Share on Facebook"
 msgstr "Partilhar no Facebook"
@@ -710,37 +710,37 @@ msgid "Snappy App"
 msgstr "Snappy app"
 
 msgid "Snappy Applications"
-msgstr ""
+msgstr "Snappy Apps"
 
 msgid "Snappy Framework"
 msgstr ""
 
 msgid "Snappy Frameworks"
-msgstr ""
+msgstr "Snappy Frameworks"
 
 msgid "Snappy Gadget"
-msgstr ""
+msgstr "Snappy Gadget"
 
 msgid "Snappy Gadgets"
-msgstr ""
+msgstr "Snappy Gadgets"
 
 msgid "Snappy Kernel"
-msgstr ""
+msgstr "Snappy Kernel"
 
 msgid "Snappy Kernels"
-msgstr ""
+msgstr "Snappy Kernels"
 
 msgid "Snappy Metadata:"
-msgstr ""
+msgstr "Snappy Metadata:"
 
 msgid "Snappy OEM"
-msgstr ""
+msgstr "Snappy OEM"
 
 msgid "Snappy OEMs"
-msgstr ""
+msgstr "Snappy OEMs"
 
 msgid "Snappy OS"
-msgstr ""
+msgstr "Snappy OS"
 
 msgid "Social Networking"
 msgstr "Rede social"
@@ -861,7 +861,7 @@ msgid "Universal Accesss/Accessibility"
 msgstr "Acesso Universal/Acessebilidade"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 msgid "Updated Apps"
 msgstr "Apps atualizadas"
@@ -987,19 +987,19 @@ msgid "snappy apps"
 msgstr "Aplicativos mal-humorados"
 
 msgid "snappy frameworks"
-msgstr ""
+msgstr "snappy frameworks"
 
 msgid "snappy gadgets"
-msgstr ""
+msgstr "snappy gadgets"
 
 msgid "snappy kernels"
-msgstr ""
+msgstr "snappy kernels"
 
 msgid "snappy oems"
-msgstr ""
+msgstr "snappy oems"
 
 msgid "snappy os"
-msgstr ""
+msgstr "snappy os"
 
 msgid "web apps"
 msgid_plural "web apps"

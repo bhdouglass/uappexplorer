@@ -339,7 +339,7 @@ module.exports = {
     }, {
       'name': 'Chinese (Simplified)',
       'code': 'zh_CN',
-      'untranslated': 16,
+      'untranslated': 14,
     }, {
       'name': 'Czech',
       'code': 'cs',
@@ -387,11 +387,11 @@ module.exports = {
     }, {
       'name': 'Polish',
       'code': 'pl',
-      'untranslated': 67,
+      'untranslated': 49,
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 32,
+      'untranslated': 6,
     }, {
       'name': 'Romanian',
       'code': 'ro',
@@ -403,7 +403,7 @@ module.exports = {
     }, {
       'name': 'Serbian',
       'code': 'sr',
-      'untranslated': 1,
+      'untranslated': 0,
     }, {
       'name': 'Spanish',
       'code': 'es',

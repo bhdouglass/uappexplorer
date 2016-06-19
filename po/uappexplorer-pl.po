@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-03-23 13:19+0000\n"
+"PO-Revision-Date: 2016-06-08 11:21+0000\n"
 "Last-Translator: Krzysztof Tataradziński <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-06-02 03:08+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-19 13:44+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: pl\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -66,7 +66,7 @@ msgid "All Frameworks"
 msgstr "Wszystkie Platformy Programistyczne"
 
 msgid "All Snappy Packages"
-msgstr ""
+msgstr "Wszystkie pakiety Snappy"
 
 msgid "Amazon Link"
 msgstr "Link Amazon"
@@ -122,7 +122,7 @@ msgid "Architecture:"
 msgstr "Architektura:"
 
 msgid "Architectures:"
-msgstr ""
+msgstr "Architektury:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Czy na pewno chcesz usunąć tę listę?"
@@ -473,7 +473,7 @@ msgid "Least Popular (This Month)"
 msgstr "Najmniej Popularne (w tym miesiącu)"
 
 msgid "Less Info"
-msgstr ""
+msgstr "Mniej informacji"
 
 msgid "License:"
 msgstr "Licencja:"
@@ -602,13 +602,13 @@ msgid "Opens Urls"
 msgstr ""
 
 msgid "Other Link"
-msgstr ""
+msgstr "Inny link"
 
 msgid "Other link is not a valid url"
 msgstr ""
 
 msgid "Permissions"
-msgstr ""
+msgstr "Uprawnienia"
 
 msgid "Personalisation"
 msgstr "Personalizacja"
@@ -633,7 +633,7 @@ msgid "Previous App:"
 msgstr "Poprzednia aplikacja:"
 
 msgid "Price must be between 0 and 20 USD"
-msgstr ""
+msgstr "Cena musi być z zakresu 0, a 20 dolarów"
 
 msgid "Productivity"
 msgstr "Produktywność"
@@ -642,10 +642,10 @@ msgid "Proprietary"
 msgstr "Własność producenta"
 
 msgid "Published:"
-msgstr ""
+msgstr "Opublikowane:"
 
 msgid "Push Notifications"
-msgstr ""
+msgstr "Powiadomienia Push"
 
 msgid "QR Code"
 msgstr "Kod QR"
@@ -687,7 +687,7 @@ msgid "Settings"
 msgstr "Ustawienia"
 
 msgid "Share"
-msgstr ""
+msgstr "Udostępnij"
 
 msgid "Share on Facebook"
 msgstr "Podziel się na Facebooku"
@@ -711,7 +711,7 @@ msgid "Snappy App"
 msgstr "Aplikacja Snappy"
 
 msgid "Snappy Applications"
-msgstr ""
+msgstr "Aplikacje Snappy"
 
 msgid "Snappy Framework"
 msgstr ""
@@ -762,7 +762,7 @@ msgid "Submit"
 msgstr ""
 
 msgid "Submitted by"
-msgstr ""
+msgstr "Zgłoszone przez"
 
 msgid "Support:"
 msgstr "Wsparcie:"
@@ -771,7 +771,7 @@ msgid "Terms:"
 msgstr "Warunki:"
 
 msgid "Thank you for your vote!"
-msgstr ""
+msgstr "Dziękujemy za twój głos!"
 
 msgid "Thank you!"
 msgstr "Dziękujemy!"
@@ -805,7 +805,7 @@ msgid "This app is on these lists:"
 msgstr "Aplikacja jest na następujących listach:"
 
 msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr ""
+msgstr "Nie to nieoficjalna przeglądarka aplikacji na Ubuntu Touch i Snappy."
 
 msgid "This list is empty!"
 msgstr "Lista jest pusta!"
@@ -861,7 +861,7 @@ msgid "Universal Accesss/Accessibility"
 msgstr "Uniwersalny dostęp/Ułatwienia dostępu"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Nieznane"
 
 msgid "Updated Apps"
 msgstr "Zaktualizowane aplikacje"
@@ -891,7 +891,7 @@ msgid "View"
 msgstr "Widok"
 
 msgid "Vote"
-msgstr ""
+msgstr "Głosuj"
 
 msgid "Weather"
 msgstr "Pogoda"
@@ -942,7 +942,7 @@ msgid "Why donate?"
 msgstr "Dlaczego warto przekazać darowiznę?"
 
 msgid "Wishlist"
-msgstr ""
+msgstr "Lista życzeń"
 
 msgid "Yes"
 msgstr "Tak"
@@ -957,7 +957,7 @@ msgstr ""
 "Twoje konto nie jest połączone z Caxton, kliknij aby przejść do ustawień"
 
 msgid "You must be logged in to vote"
-msgstr ""
+msgstr "Musisz być zalogowany, aby zagłosować"
 
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
@@ -975,7 +975,7 @@ msgstr[1] "gry"
 msgstr[2] "gry"
 
 msgid "iTunes Link"
-msgstr ""
+msgstr "Link iTunes"
 
 msgid "iTunes link is not a valid url"
 msgstr ""
