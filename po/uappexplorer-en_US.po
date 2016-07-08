@@ -686,6 +686,11 @@ msgstr[1] "scope"
 msgid "snappy apps"
 msgstr ""
 
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] "snaps"
+msgstr[1] "snap"
+
 msgid "web apps"
 msgid_plural "web apps"
 msgstr[0] "web apps"

@@ -119,7 +119,7 @@ msgstr ""
 msgid "Browse Scopes"
 msgstr ""
 
-msgid "Browse Web Apps"
+msgid "Browse Snaps"
 msgstr ""
 
 msgid "Business"
@@ -668,6 +668,9 @@ msgstr ""
 msgid "Snappy Metadata:"
 msgstr ""
 
+msgid "Snaps"
+msgstr ""
+
 msgid "Social Networking"
 msgstr ""
 
@@ -882,11 +885,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 msgid "snaps"
-msgstr ""
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"
 msgstr[0] ""
 msgstr[1] ""
-
-

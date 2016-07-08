@@ -125,6 +125,7 @@ var propertyMap = {
       if (pkg.download.indexOf('.snap') == (pkg.download.length - 5)) {
         if (['oem', 'os', 'kernel', 'gadget', 'framework', 'application'].indexOf(content) >= 0) {
           pkg.type = 'snappy_' + content;
+          pkg.types = [pkg.type];
         }
       }
       else {

@@ -90,12 +90,12 @@ module.exports = React.createClass({
           )}
 
           {this.renderCell(
-            i18n.t('Web Apps'),
-            i18n.t('web apps', {count: this.state.info.counts.webapps}),
-            this.state.info.counts.webapps,
-            '/apps?type=webapp',
-            i18n.t('Browse Web Apps'),
-            'fa fa-bookmark background-material-cyan'
+            i18n.t('Scopes'),
+            i18n.t('scopes', {count: this.state.info.counts.scopes}),
+            this.state.info.counts.scopes,
+            '/apps?type=scope',
+            i18n.t('Browse Scopes'),
+            'fa fa-search background-material-deep-orange'
           )}
 
           {this.renderCell(
@@ -108,12 +108,12 @@ module.exports = React.createClass({
           )}
 
           {this.renderCell(
-            i18n.t('Scopes'),
-            i18n.t('scopes', {count: this.state.info.counts.scopes}),
-            this.state.info.counts.scopes,
-            '/apps?type=scope',
-            i18n.t('Browse Scopes'),
-            'fa fa-search background-material-deep-orange'
+            i18n.t('Snaps'),
+            i18n.t('snaps', {count: this.state.info.counts.snaps}),
+            this.state.info.counts.snaps,
+            '/apps?type=snappy',
+            i18n.t('Browse Snaps'),
+            'fa fa-laptop background-material-cyan'
           )}
         </div>
 
