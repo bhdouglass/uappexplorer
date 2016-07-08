@@ -391,7 +391,7 @@ module.exports = {
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 6,
+      'untranslated': 5,
     }, {
       'name': 'Romanian',
       'code': 'ro',
@@ -415,11 +415,11 @@ module.exports = {
     }, {
       'name': 'Turkish',
       'code': 'tr',
-      'untranslated': 232,
+      'untranslated': 229,
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 42,
+      'untranslated': 20,
     },
   ],
 };
