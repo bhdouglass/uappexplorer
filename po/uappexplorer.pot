@@ -47,7 +47,7 @@ msgstr ""
 msgid "All Frameworks"
 msgstr ""
 
-msgid "All Snappy Packages"
+msgid "All Snaps"
 msgstr ""
 
 msgid "Amazon Link"
@@ -72,6 +72,9 @@ msgid "App Name"
 msgstr ""
 
 msgid "App Name (example: com.ubuntu.developer.example)"
+msgstr ""
+
+msgid "App Snaps"
 msgstr ""
 
 msgid "App Wishlist"
@@ -293,10 +296,22 @@ msgstr ""
 msgid "Found the requested app"
 msgstr ""
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr ""
 
 msgid "Free"
+msgstr ""
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
 msgstr ""
 
 msgid "Games"
@@ -393,6 +408,12 @@ msgid "It is possible to have a negative heart rating."
 msgstr ""
 
 msgid "Itunes Link"
+msgstr ""
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
 msgstr ""
 
 msgid "Language"
@@ -512,6 +533,18 @@ msgstr ""
 msgid "No wishes found, try searching again."
 msgstr ""
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr ""
 
@@ -629,40 +662,10 @@ msgstr ""
 msgid "Similar Apps"
 msgstr ""
 
-msgid "Snappy App"
-msgstr ""
-
-msgid "Snappy Applications"
-msgstr ""
-
-msgid "Snappy Framework"
-msgstr ""
-
-msgid "Snappy Frameworks"
-msgstr ""
-
-msgid "Snappy Gadget"
-msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr ""
-
-msgid "Snappy Kernels"
+msgid "Snap"
 msgstr ""
 
 msgid "Snappy Metadata:"
-msgstr ""
-
-msgid "Snappy OEM"
-msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
 msgstr ""
 
 msgid "Social Networking"
@@ -836,10 +839,19 @@ msgstr ""
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] ""
 msgstr[1] ""
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -852,6 +864,15 @@ msgstr ""
 msgid "iTunes link is not a valid url"
 msgstr ""
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr ""
 
@@ -860,22 +881,7 @@ msgid_plural "scopes"
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "snappy apps"
-msgstr ""
-
-msgid "snappy frameworks"
-msgstr ""
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr ""
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
+msgid "snaps"
 msgstr ""
 
 msgid "web apps"

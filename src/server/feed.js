@@ -7,13 +7,13 @@ var typeMap = {
   application: 'App',
   scope: 'Scope',
   webapp: 'Web App',
-  snappy: 'Snappy App',
-  snappy_oem: 'Snappy OEM',
-  snappy_os: 'Snappy OS',
-  snappy_kernel: 'Snappy Kernel',
-  snappy_gadget: 'Snappy Gadget',
-  snappy_framework: 'Snappy Framework',
-  snappy_application: 'Snappy App',
+  snappy: 'Snap',
+  snappy_oem: 'OEM Snap',
+  snappy_os: 'OS Snap',
+  snappy_kernel: 'Kernel Snap',
+  snappy_gadget: 'Gadget Snap',
+  snappy_framework: 'Framework Snap',
+  snappy_application: 'Snap',
 };
 
 function type(types) {

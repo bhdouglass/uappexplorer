@@ -7,13 +7,13 @@ module.exports = {
       application: i18n.t('apps'),
       scope: i18n.t('scopes'),
       webapp: i18n.t('web apps'),
-      snappy: i18n.t('snappy apps'),
-      snappy_oem: i18n.t('snappy oems'),
-      snappy_os: i18n.t('snappy os'),
-      snappy_kernel: i18n.t('snappy kernels'),
-      snappy_gadget: i18n.t('snappy gadgets'),
-      snappy_framework: i18n.t('snappy frameworks'),
-      snappy_application: i18n.t('snappy apps'),
+      snappy: i18n.t('snaps'),
+      snappy_oem: i18n.t('oem snaps'),
+      snappy_os: i18n.t('os snaps'),
+      snappy_kernel: i18n.t('kernel snaps'),
+      snappy_gadget: i18n.t('gadget snaps'),
+      snappy_framework: i18n.t('framework snaps'),
+      snappy_application: i18n.t('app snaps'),
     };
   },
 
@@ -32,25 +32,25 @@ module.exports = {
         label: i18n.t('Scopes'),
         value: 'scope',
       }, {
-        label: i18n.t('All Snappy Packages'),
+        label: i18n.t('All Snaps'),
         value: 'snappy',
       }, {
-        label: i18n.t('Snappy Applications'),
+        label: i18n.t('App Snaps'),
         value: 'snappy_application',
       }, {
-        label: i18n.t('Snappy Frameworks'),
+        label: i18n.t('Framework Snaps'),
         value: 'snappy_framework',
       }, {
-        label: i18n.t('Snappy OEMs'),
+        label: i18n.t('OEM Snaps'),
         value: 'snappy_oem',
       }, {
-        label: i18n.t('Snappy OS'),
+        label: i18n.t('OS Snaps'),
         value: 'snappy_os',
       }, {
-        label: i18n.t('Snappy Kernels'),
+        label: i18n.t('Kernel Snaps'),
         value: 'snappy_kernel',
       }, {
-        label: i18n.t('Snappy Gadgets'),
+        label: i18n.t('Gadget Snaps'),
         value: 'snappy_gadget',
       },
     ];
