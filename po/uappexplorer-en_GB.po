@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-05-19 17:53+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: en_GB\n"
 
@@ -61,8 +61,8 @@ msgstr "All Architectures"
 msgid "All Frameworks"
 msgstr "All Frameworks"
 
-msgid "All Snappy Packages"
-msgstr "All Snappy Packages"
+msgid "All Snaps"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Amazon Link"
@@ -99,6 +99,9 @@ msgstr "App Name"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "App Name (example: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr "App Wishlist"
@@ -142,8 +145,8 @@ msgstr "Browse Games"
 msgid "Browse Scopes"
 msgstr "Browse Scopes"
 
-msgid "Browse Web Apps"
-msgstr "Browse Web Apps"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "Business"
@@ -328,11 +331,23 @@ msgstr "For version:"
 msgid "Found the requested app"
 msgstr "Found the requested app"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Framework:"
 
 msgid "Free"
 msgstr "Free"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Games"
@@ -441,6 +456,12 @@ msgstr "It is possible to have a negative heart rating."
 
 msgid "Itunes Link"
 msgstr "iTunes Link"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "Language"
@@ -565,6 +586,18 @@ msgstr "No reviews yet!"
 msgid "No wishes found, try searching again."
 msgstr "No wishes found, try searching again."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Oldest"
 
@@ -686,41 +719,14 @@ msgstr "Shopping"
 msgid "Similar Apps"
 msgstr "Similar Apps"
 
-msgid "Snappy App"
-msgstr "Snappy App"
-
-msgid "Snappy Applications"
-msgstr "Snappy Applications"
-
-msgid "Snappy Framework"
-msgstr "Snappy Framework"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy Frameworks"
-
-msgid "Snappy Gadget"
-msgstr "Snappy Gadget"
-
-msgid "Snappy Gadgets"
-msgstr "Snappy Gadgets"
-
-msgid "Snappy Kernel"
-msgstr "Snappy Kernel"
-
-msgid "Snappy Kernels"
-msgstr "Snappy Kernels"
+msgid "Snap"
+msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr "Snappy Metadata:"
 
-msgid "Snappy OEM"
-msgstr "Snappy OEM"
-
-msgid "Snappy OEMs"
-msgstr "Snappy OEMs"
-
-msgid "Snappy OS"
-msgstr "Snappy OS"
+msgid "Snaps"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Social Networking"
@@ -937,10 +943,19 @@ msgstr "You must be logged in to vote"
 msgid "You vote could not be saved at this time, please try again later"
 msgstr "You vote could not be saved at this time, please try again later"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "apps"
 msgstr[1] "apps"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -953,6 +968,15 @@ msgstr "iTunes Link"
 msgid "iTunes link is not a valid url"
 msgstr "iTunes link is not a valid URL"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr "phone apps & scopes"
 
@@ -961,23 +985,10 @@ msgid_plural "scopes"
 msgstr[0] "scopes"
 msgstr[1] "scopes"
 
-msgid "snappy apps"
-msgstr "snappy apps"
-
-msgid "snappy frameworks"
-msgstr "snappy frameworks"
-
-msgid "snappy gadgets"
-msgstr "snappy gadgets"
-
-msgid "snappy kernels"
-msgstr "snappy kernels"
-
-msgid "snappy oems"
-msgstr "snappy oems"
-
-msgid "snappy os"
-msgstr "snappy os"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

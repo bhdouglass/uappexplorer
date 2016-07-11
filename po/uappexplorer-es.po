@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-05-08 07:42+0000\n"
-"Last-Translator: Sergi Quiles Pérez <Unknown>\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"PO-Revision-Date: 2016-07-08 12:55+0000\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -40,7 +40,7 @@ msgid "A wish with the same name already exists"
 msgstr "Ya existe un deseo con el mismo nombre"
 
 msgid "Account Integration"
-msgstr ""
+msgstr "Integración de Cuenta"
 
 msgid "Add Apps:"
 msgstr "Añadir apps:"
@@ -60,8 +60,8 @@ msgstr "Todas las arquitecturas"
 msgid "All Frameworks"
 msgstr "Todas las estructuras"
 
-msgid "All Snappy Packages"
-msgstr "Todos los paquetes <snappy>"
+msgid "All Snaps"
+msgstr "Todas las Snaps"
 
 msgid "Amazon Link"
 msgstr "Enlace a Amazon"
@@ -98,6 +98,9 @@ msgstr "Nombre de la App"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nombre de la App (ejemplo: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr "Snaps de apps"
 
 msgid "App Wishlist"
 msgstr "Lista de Apps deseadas"
@@ -143,8 +146,8 @@ msgstr "Explirar juegos"
 msgid "Browse Scopes"
 msgstr "Explorar scopes"
 
-msgid "Browse Web Apps"
-msgstr "Explorar aplicaciones web"
+msgid "Browse Snaps"
+msgstr "Navega por las Snaps"
 
 msgid "Business"
 msgstr "Negocios"
@@ -259,7 +262,7 @@ msgid "Description"
 msgstr "Descripción"
 
 msgid "Desktop File:"
-msgstr ""
+msgstr "Archivo Desktop:"
 
 msgid "Developer Tools"
 msgstr "Herramientas de desarrollo"
@@ -346,11 +349,23 @@ msgstr "Para versión:"
 msgid "Found the requested app"
 msgstr "Encuentra la aplicación solicitada"
 
+msgid "Framework Snap"
+msgstr "Snap de framework"
+
+msgid "Framework Snaps"
+msgstr "Snaps de framework"
+
 msgid "Framework:"
 msgstr "Estructura"
 
 msgid "Free"
 msgstr "Gratuita"
+
+msgid "Gadget Snap"
+msgstr "Snap de dispositivo"
+
+msgid "Gadget Snaps"
+msgstr "Snaps de dispositivo"
 
 msgid "Games"
 msgstr "Juegos"
@@ -464,6 +479,12 @@ msgstr "Es posible tener una clasificacion negativa de corazón"
 msgid "Itunes Link"
 msgstr "Enlace a Itunes"
 
+msgid "Kernel Snap"
+msgstr "Snap de núcleo"
+
+msgid "Kernel Snaps"
+msgstr "Snaps de núcleo"
+
 msgid "Language"
 msgstr "Idioma"
 
@@ -504,7 +525,7 @@ msgid "Log in via Ubuntu"
 msgstr "Inicinar sesión con Ubuntu"
 
 msgid "Login to make a wish"
-msgstr ""
+msgstr "Inicie Sesión para pedir un deseo"
 
 msgid "Lowest Heart Rating"
 msgstr "La menor clasificación de corazón"
@@ -513,7 +534,7 @@ msgid "Lowest Star Rating"
 msgstr "La menor clasificacion de estrella"
 
 msgid "Make a wish"
-msgstr ""
+msgstr "Pide un deseo"
 
 msgid "Media & Video"
 msgstr "Multimedia"
@@ -587,6 +608,18 @@ msgstr "¡No hay evaluaciones recientes!"
 msgid "No wishes found, try searching again."
 msgstr "No se han encontrado deseos, prueba a buscar otra vez."
 
+msgid "OEM Snap"
+msgstr "Snap OEM"
+
+msgid "OEM Snaps"
+msgstr "Snaps OEM"
+
+msgid "OS Snap"
+msgstr "Snap de sistema operativo"
+
+msgid "OS Snaps"
+msgstr "Snaps de sistema operativo"
+
 msgid "Oldest"
 msgstr "Lo más antiguo"
 
@@ -600,13 +633,13 @@ msgid "Open Source"
 msgstr "Open Source"
 
 msgid "Opens Urls"
-msgstr ""
+msgstr "Abrir Urls"
 
 msgid "Other Link"
 msgstr "Otros enlaces"
 
 msgid "Other link is not a valid url"
-msgstr ""
+msgstr "El otro link no tiene un url valido"
 
 msgid "Permissions"
 msgstr "Permisos"
@@ -615,7 +648,7 @@ msgid "Personalisation"
 msgstr "Personalización"
 
 msgid "Phone Apps & Scopes"
-msgstr ""
+msgstr "Aplicaciones de Telefono y Scopes"
 
 msgid "Please login to send via Caxton"
 msgstr "Por favor ingresa para enviar via Caxton"
@@ -643,10 +676,10 @@ msgid "Proprietary"
 msgstr "Propietario"
 
 msgid "Published:"
-msgstr ""
+msgstr "Publicado:"
 
 msgid "Push Notifications"
-msgstr ""
+msgstr "Notificaciones Push"
 
 msgid "QR Code"
 msgstr "Código QR"
@@ -667,7 +700,7 @@ msgid "Scope"
 msgstr "Scope"
 
 msgid "Scope INI File:"
-msgstr ""
+msgstr "Archivo INI del Scope:"
 
 msgid "Scopes"
 msgstr "Ámbitos"
@@ -708,41 +741,14 @@ msgstr "Compras"
 msgid "Similar Apps"
 msgstr "Aplicaciones parecidas"
 
-msgid "Snappy App"
-msgstr "Aplicacion Snappy"
-
-msgid "Snappy Applications"
-msgstr "Aplicaciones <snappy>>"
-
-msgid "Snappy Framework"
-msgstr ""
-
-msgid "Snappy Frameworks"
-msgstr ""
-
-msgid "Snappy Gadget"
-msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr "Nucleo <<snappy>>"
-
-msgid "Snappy Kernels"
-msgstr "Nucleos <<snappy>>"
+msgid "Snap"
+msgstr "Snap"
 
 msgid "Snappy Metadata:"
 msgstr "Metadatos <<snappy>>"
 
-msgid "Snappy OEM"
-msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
-msgstr ""
+msgid "Snaps"
+msgstr "Snaps"
 
 msgid "Social Networking"
 msgstr "Redes sociales"
@@ -876,7 +882,7 @@ msgid "Upvote"
 msgstr "Votar a favor"
 
 msgid "Urls that open in this app:"
-msgstr ""
+msgstr "Urls que se abren en esta app:"
 
 msgid "User List:"
 msgstr "Lista de usuario:"
@@ -966,10 +972,19 @@ msgstr ""
 "Su voto no puede ser guardado en este momento, por favor intente de nuevo "
 "más tarde."
 
+msgid "app snaps"
+msgstr "snaps de app"
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplicación"
 msgstr[1] "aplicaciones"
+
+msgid "framework snaps"
+msgstr "snaps de framework"
+
+msgid "gadget snaps"
+msgstr "snpas de dispositivo"
 
 msgid "games"
 msgid_plural "games"
@@ -982,31 +997,27 @@ msgstr "Enlace de iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "Enlace de iTunes no válido"
 
+msgid "kernel snaps"
+msgstr "snaps de núcleo"
+
+msgid "oem snaps"
+msgstr "snaps oem"
+
+msgid "os snaps"
+msgstr "snaps de sistema operativo"
+
 msgid "phone apps & scopes"
-msgstr ""
+msgstr "aplicaciones de telefono y scopes"
 
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "scopes"
 msgstr[1] "ámbitos"
 
-msgid "snappy apps"
-msgstr "aplicaciones snappy"
-
-msgid "snappy frameworks"
-msgstr ""
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr ""
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
-msgstr ""
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] "snap"
+msgstr[1] "snaps"
 
 msgid "web apps"
 msgid_plural "web apps"

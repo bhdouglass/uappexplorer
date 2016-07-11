@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-06-17 17:17+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"PO-Revision-Date: 2016-07-08 05:11+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: zh_CN\n"
 
@@ -38,7 +38,7 @@ msgid "A wish with the same name already exists"
 msgstr "存在相同名称的愿望"
 
 msgid "Account Integration"
-msgstr ""
+msgstr "帐号集成"
 
 msgid "Add Apps:"
 msgstr "添加应用："
@@ -58,8 +58,8 @@ msgstr "所有架构"
 msgid "All Frameworks"
 msgstr "所有框架"
 
-msgid "All Snappy Packages"
-msgstr "全部 Snappy 包"
+msgid "All Snaps"
+msgstr "全部 Snaps"
 
 msgid "Amazon Link"
 msgstr "亚马逊链接"
@@ -92,6 +92,9 @@ msgstr "应用名称"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "应用名称 (例如: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr "应用 Snaps"
 
 msgid "App Wishlist"
 msgstr "应用愿望清单"
@@ -135,8 +138,8 @@ msgstr "浏览游戏"
 msgid "Browse Scopes"
 msgstr "浏览Scope"
 
-msgid "Browse Web Apps"
-msgstr "浏览Web应用"
+msgid "Browse Snaps"
+msgstr "浏览 Snaps"
 
 msgid "Business"
 msgstr "商务"
@@ -319,11 +322,23 @@ msgstr "版本："
 msgid "Found the requested app"
 msgstr "找到请求的应用"
 
+msgid "Framework Snap"
+msgstr "框架 Snap"
+
+msgid "Framework Snaps"
+msgstr "框架 Snaps"
+
 msgid "Framework:"
 msgstr "框架"
 
 msgid "Free"
 msgstr "免费"
+
+msgid "Gadget Snap"
+msgstr "工具 Snap"
+
+msgid "Gadget Snaps"
+msgstr "工具 Snaps"
 
 msgid "Games"
 msgstr "游戏"
@@ -426,6 +441,12 @@ msgstr "可能有负心评级。"
 
 msgid "Itunes Link"
 msgstr "Itunes 连接"
+
+msgid "Kernel Snap"
+msgstr "内核 Snap"
+
+msgid "Kernel Snaps"
+msgstr "内核 Snaps"
 
 msgid "Language"
 msgstr "语言"
@@ -547,6 +568,18 @@ msgstr "还没有评论！"
 msgid "No wishes found, try searching again."
 msgstr "没有找到愿望，尝试重新搜索。"
 
+msgid "OEM Snap"
+msgstr "OEM Snap"
+
+msgid "OEM Snaps"
+msgstr "OEM Snaps"
+
+msgid "OS Snap"
+msgstr "操作系统 Snap"
+
+msgid "OS Snaps"
+msgstr "操作系统 Snap"
+
 msgid "Oldest"
 msgstr "最旧"
 
@@ -666,41 +699,14 @@ msgstr "购物"
 msgid "Similar Apps"
 msgstr "类似的应用"
 
-msgid "Snappy App"
-msgstr "Snappy 应用"
-
-msgid "Snappy Applications"
-msgstr "Snappy 应用"
-
-msgid "Snappy Framework"
-msgstr "Snappy 框架"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy 框架"
-
-msgid "Snappy Gadget"
-msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr ""
-
-msgid "Snappy Kernels"
-msgstr ""
+msgid "Snap"
+msgstr "Snap"
 
 msgid "Snappy Metadata:"
-msgstr ""
+msgstr "Snappy 元数据："
 
-msgid "Snappy OEM"
-msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
-msgstr ""
+msgid "Snaps"
+msgstr "Snaps"
 
 msgid "Social Networking"
 msgstr "社交网络"
@@ -902,9 +908,18 @@ msgstr "登录后才能投票"
 msgid "You vote could not be saved at this time, please try again later"
 msgstr "你的投票此刻无法保存，请稍后重试"
 
+msgid "app snaps"
+msgstr "应用 snaps"
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "应用"
+
+msgid "framework snaps"
+msgstr "框架 snaps"
+
+msgid "gadget snaps"
+msgstr "工具 snaps"
 
 msgid "games"
 msgid_plural "games"
@@ -916,6 +931,15 @@ msgstr "iTunes 链接"
 msgid "iTunes link is not a valid url"
 msgstr "iTunes 链接不是一个有效的 url"
 
+msgid "kernel snaps"
+msgstr "内核 snaps"
+
+msgid "oem snaps"
+msgstr "oem snaps"
+
+msgid "os snaps"
+msgstr "操作系统 snaps"
+
 msgid "phone apps & scopes"
 msgstr "手机应用与socpe"
 
@@ -923,23 +947,9 @@ msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "scopes"
 
-msgid "snappy apps"
-msgstr "snappy 应用"
-
-msgid "snappy frameworks"
-msgstr ""
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr ""
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
-msgstr ""
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] "snaps"
 
 msgid "web apps"
 msgid_plural "web apps"

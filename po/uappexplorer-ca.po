@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-05-08 07:40+0000\n"
-"Last-Translator: Sergi Quiles Pérez <Unknown>\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"PO-Revision-Date: 2016-07-08 09:39+0000\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -42,7 +42,7 @@ msgid "A wish with the same name already exists"
 msgstr "Ja existeix un desig amb el mateix nom"
 
 msgid "Account Integration"
-msgstr ""
+msgstr "Integració del compte"
 
 msgid "Add Apps:"
 msgstr "Afegeix Aplicaccions:"
@@ -62,8 +62,8 @@ msgstr "Totes les arquitectures"
 msgid "All Frameworks"
 msgstr "Tots els frameworks"
 
-msgid "All Snappy Packages"
-msgstr "Tots els paquets <<Snappy>>"
+msgid "All Snaps"
+msgstr "Tots els Snaps"
 
 msgid "Amazon Link"
 msgstr "Enllaç d'Amazon"
@@ -101,6 +101,9 @@ msgstr "Nom de l'Aplicació"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nom de l'Aplicació (exemple: com.ubuntu.desenvolupador.exemple)"
+
+msgid "App Snaps"
+msgstr "Sanps d'aplicació"
 
 msgid "App Wishlist"
 msgstr "Llista de desitjos d'aplicacions"
@@ -146,8 +149,8 @@ msgstr "Navega pels jocs"
 msgid "Browse Scopes"
 msgstr "Navega pels scopes"
 
-msgid "Browse Web Apps"
-msgstr "Navega per les aplicacions web"
+msgid "Browse Snaps"
+msgstr "Navega pels Snaps"
 
 msgid "Business"
 msgstr "Negocis"
@@ -269,7 +272,7 @@ msgid "Description"
 msgstr "Descripció"
 
 msgid "Desktop File:"
-msgstr ""
+msgstr "Arxiu d'escriptori:"
 
 msgid "Developer Tools"
 msgstr "Eines per a desenvolupadors"
@@ -356,11 +359,23 @@ msgstr "Per la versió:"
 msgid "Found the requested app"
 msgstr "S'ha trobat l'aplicació demanada"
 
+msgid "Framework Snap"
+msgstr "Snap de Framework"
+
+msgid "Framework Snaps"
+msgstr "Snaps de Framework"
+
 msgid "Framework:"
 msgstr "Framework:"
 
 msgid "Free"
 msgstr "Lliure"
+
+msgid "Gadget Snap"
+msgstr "Snap de giny"
+
+msgid "Gadget Snaps"
+msgstr "Snaps de giny"
 
 msgid "Games"
 msgstr "Jocs"
@@ -469,6 +484,12 @@ msgstr "Es pot tenir una valoració de cors negativa."
 
 msgid "Itunes Link"
 msgstr "Enllaç d'Itunes"
+
+msgid "Kernel Snap"
+msgstr "Snap de nucli"
+
+msgid "Kernel Snaps"
+msgstr "Snaps de nucli"
 
 msgid "Language"
 msgstr "Llengua"
@@ -593,6 +614,18 @@ msgstr "Encara no hi ha opinions!"
 msgid "No wishes found, try searching again."
 msgstr "No s'han trobat desitjos, intenteu cercar de nou."
 
+msgid "OEM Snap"
+msgstr "Snap d'OEM"
+
+msgid "OEM Snaps"
+msgstr "Snaps d'OEM"
+
+msgid "OS Snap"
+msgstr "Snap de sistema operatiu"
+
+msgid "OS Snaps"
+msgstr "Snaps de sistema operatiu"
+
 msgid "Oldest"
 msgstr "Més antic"
 
@@ -622,7 +655,7 @@ msgid "Personalisation"
 msgstr "Personalització"
 
 msgid "Phone Apps & Scopes"
-msgstr ""
+msgstr "Aplicacions mòbils i lents"
 
 msgid "Please login to send via Caxton"
 msgstr "Si us plau, inicieu sessió per enviar via Caxton"
@@ -650,10 +683,10 @@ msgid "Proprietary"
 msgstr "Propietari"
 
 msgid "Published:"
-msgstr ""
+msgstr "Publicat:"
 
 msgid "Push Notifications"
-msgstr ""
+msgstr "Notificacions de tramesa automàtica (Push)"
 
 msgid "QR Code"
 msgstr "Codi QR"
@@ -674,7 +707,7 @@ msgid "Scope"
 msgstr "Àmbit"
 
 msgid "Scope INI File:"
-msgstr ""
+msgstr "Arxiu INI de la lent:"
 
 msgid "Scopes"
 msgstr "Àmbits"
@@ -715,41 +748,14 @@ msgstr "Compres"
 msgid "Similar Apps"
 msgstr "Aplicacions semblants"
 
-msgid "Snappy App"
-msgstr "Aplicació Snappy"
-
-msgid "Snappy Applications"
-msgstr "Aplicacions <<Snappy>>"
-
-msgid "Snappy Framework"
-msgstr ""
-
-msgid "Snappy Frameworks"
-msgstr ""
-
-msgid "Snappy Gadget"
-msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr "Nucli <<Snappy>>"
-
-msgid "Snappy Kernels"
-msgstr "Nuclis <<Snappy>"
+msgid "Snap"
+msgstr "Snap"
 
 msgid "Snappy Metadata:"
 msgstr "Metadades <<Snappy>>"
 
-msgid "Snappy OEM"
-msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
-msgstr ""
+msgid "Snaps"
+msgstr "Snaps"
 
 msgid "Social Networking"
 msgstr "Xarxes socials"
@@ -879,7 +885,7 @@ msgid "Upvote"
 msgstr "Vota positiu"
 
 msgid "Urls that open in this app:"
-msgstr ""
+msgstr "Adreces que s'obren a aquesta aplicació:"
 
 msgid "User List:"
 msgstr "Llista d'usuaris:"
@@ -970,10 +976,19 @@ msgstr ""
 "No s'ha pogut desar el vostre vot en aquest moment, si us plau intenteu-ho "
 "més tard."
 
+msgid "app snaps"
+msgstr "snaps d'aplicació"
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplicació"
 msgstr[1] "aplicacions"
+
+msgid "framework snaps"
+msgstr "apps de framework"
+
+msgid "gadget snaps"
+msgstr "snaps de giny"
 
 msgid "games"
 msgid_plural "games"
@@ -986,31 +1001,27 @@ msgstr "Enllaç d'iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "L'enllaç d'iTunes no és una URL vàlida"
 
+msgid "kernel snaps"
+msgstr "snaps de nucli"
+
+msgid "oem snaps"
+msgstr "snaps d'oem"
+
+msgid "os snaps"
+msgstr "snaps de sistema operatiu"
+
 msgid "phone apps & scopes"
-msgstr ""
+msgstr "aplicacions mòbil i lents"
 
 msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "àmbit"
 msgstr[1] "àmbits"
 
-msgid "snappy apps"
-msgstr "aplicacions snappy"
-
-msgid "snappy frameworks"
-msgstr ""
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr "Nuclis <<snappy>>"
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
-msgstr ""
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] "snap"
+msgstr[1] "snaps"
 
 msgid "web apps"
 msgid_plural "web apps"

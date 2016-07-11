@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-05-16 09:06+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: hu\n"
 
@@ -61,8 +61,8 @@ msgstr "Minden architektúra"
 msgid "All Frameworks"
 msgstr "Minden keretrendszer"
 
-msgid "All Snappy Packages"
-msgstr "Minden Snappy csomag"
+msgid "All Snaps"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Amazon hivatkozás"
@@ -100,6 +100,9 @@ msgstr "Alkalmazás neve"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Alkalmazás neve (például: com.ubuntu.fejleszto.pelda)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr "Alkalmazás kívánságlista"
@@ -145,8 +148,8 @@ msgstr "Játékok böngészése"
 msgid "Browse Scopes"
 msgstr "Lencsék böngészése"
 
-msgid "Browse Web Apps"
-msgstr "Webalkalmazások böngészése"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "Üzleti"
@@ -336,11 +339,23 @@ msgstr "Verzió:"
 msgid "Found the requested app"
 msgstr "Keresett alkalmazás megtalálva"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Keretrendszer:"
 
 msgid "Free"
 msgstr "Ingyenes"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Játékok"
@@ -452,6 +467,12 @@ msgstr "Lehetséges a negatív szíves értékelés is."
 
 msgid "Itunes Link"
 msgstr "Itunes hivatkozás"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "Nyelv"
@@ -576,6 +597,18 @@ msgstr "Nincsenek értékelések."
 msgid "No wishes found, try searching again."
 msgstr "Nem található kívánság, próbálja másképp."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Legrégibb"
 
@@ -697,41 +730,14 @@ msgstr "Bevásárlás"
 msgid "Similar Apps"
 msgstr "Hasonló alkalmazások"
 
-msgid "Snappy App"
-msgstr "Snappy alkalmazás"
-
-msgid "Snappy Applications"
-msgstr "Snappy alkalmazások"
-
-msgid "Snappy Framework"
-msgstr "Snappy keretrendszer"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy keretrendszerek"
-
-msgid "Snappy Gadget"
-msgstr "Snappy eszköz"
-
-msgid "Snappy Gadgets"
-msgstr "Snappy eszközök"
-
-msgid "Snappy Kernel"
-msgstr "Snappy kernel"
-
-msgid "Snappy Kernels"
-msgstr "Snappy kernelek"
+msgid "Snap"
+msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr "Snappy metaadat:"
 
-msgid "Snappy OEM"
-msgstr "Snappy OEM"
-
-msgid "Snappy OEMs"
-msgstr "Snappy OEM-ek"
-
-msgid "Snappy OS"
-msgstr "Snappy operációs rendszer"
+msgid "Snaps"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Közösségi háló"
@@ -950,10 +956,19 @@ msgstr "Be kell jelentkezni a szavazáshoz"
 msgid "You vote could not be saved at this time, please try again later"
 msgstr "A szavazatát nem sikerült időben elmenteni, próbálja újra később"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "alkalmazás"
 msgstr[1] "alkalmazás"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -966,6 +981,15 @@ msgstr "Itunes hivatkozás"
 msgid "iTunes link is not a valid url"
 msgstr "Érvénytelen Itunes hivatkozás"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr "telefonalkalmazások és -lencsék"
 
@@ -974,23 +998,10 @@ msgid_plural "scopes"
 msgstr[0] "lencse"
 msgstr[1] "lencse"
 
-msgid "snappy apps"
-msgstr "snappy alkalmazás"
-
-msgid "snappy frameworks"
-msgstr "snappy keretrendszerek"
-
-msgid "snappy gadgets"
-msgstr "snappy eszköz"
-
-msgid "snappy kernels"
-msgstr "snappy kernelek"
-
-msgid "snappy oems"
-msgstr "snappy oem-ek"
-
-msgid "snappy os"
-msgstr "snappy operációs rendszer"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

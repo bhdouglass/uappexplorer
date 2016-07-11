@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-04-26 05:25+0000\n"
 "Last-Translator: Abdulrahman M. S. <Unknown>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -60,8 +60,8 @@ msgstr "كل انظمة البناء"
 msgid "All Frameworks"
 msgstr "كل الاُطر البرمجية"
 
-msgid "All Snappy Packages"
-msgstr "جميع حزم سنابي"
+msgid "All Snaps"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "رابط Amazon"
@@ -97,6 +97,9 @@ msgstr "اسم التطبيق"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "اسم التطبيق (مثال: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr "قائمة التطبيقات المُتمناه"
@@ -140,8 +143,8 @@ msgstr "تصفح الالعاب"
 msgid "Browse Scopes"
 msgstr "تصفح السكوبز"
 
-msgid "Browse Web Apps"
-msgstr "تصفح تطبيقات الويب"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "التجارة"
@@ -325,11 +328,23 @@ msgstr "للنسخة:"
 msgid "Found the requested app"
 msgstr "تم ايجاد التطبيق المطلوب"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "الاطار البرمجي:"
 
 msgid "Free"
 msgstr "مجاني"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "الألعاب"
@@ -438,6 +453,12 @@ msgstr "من المحتمل ان تحصل على تقييم سالب بالقل�
 
 msgid "Itunes Link"
 msgstr "رابط Itunes"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "اللغة"
@@ -562,6 +583,18 @@ msgstr "لايوجد مراجعات حتى هذه اللحظة!"
 msgid "No wishes found, try searching again."
 msgstr "لم يتم ايجاد اي امنية، ابحث مجدداً."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "الاقدم"
 
@@ -681,41 +714,14 @@ msgstr "تسوق"
 msgid "Similar Apps"
 msgstr "تطبيقات مشابهة"
 
-msgid "Snappy App"
-msgstr "تطبيق Snappy"
-
-msgid "Snappy Applications"
-msgstr "تطبيقات Snappy"
-
-msgid "Snappy Framework"
-msgstr "اطار Snappy البرمجي"
-
-msgid "Snappy Frameworks"
-msgstr "اُطر Snappy البرمجية"
-
-msgid "Snappy Gadget"
-msgstr "اداة Gadget"
-
-msgid "Snappy Gadgets"
-msgstr "ادوات Gadget"
-
-msgid "Snappy Kernel"
-msgstr "النواة البرمجية Snappy"
-
-msgid "Snappy Kernels"
-msgstr "الانوية البرمجية Snappy"
+msgid "Snap"
+msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr "Snappy Metadata:"
 
-msgid "Snappy OEM"
-msgstr "Snappy OEM"
-
-msgid "Snappy OEMs"
-msgstr "Snappy OEMs"
-
-msgid "Snappy OS"
-msgstr "نظام Snappy"
+msgid "Snaps"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "التواصل الاجتماعي"
@@ -930,6 +936,9 @@ msgstr "يجب ان تكون مسجل دخول للتقييم"
 msgid "You vote could not be saved at this time, please try again later"
 msgstr "تقييم لايمكن حفظه حالياً، حاول مجدداً لاحقاً"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "تطبيقات"
@@ -938,6 +947,12 @@ msgstr[2] "تطبيقات"
 msgstr[3] "تطبيقات"
 msgstr[4] "تطبيقات"
 msgstr[5] "تطبيقات"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -954,6 +969,15 @@ msgstr "رابط iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "رابط iTunes يبدو انه غير صحيح"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr "تطبيقات الهاتف و سكوبز"
 
@@ -966,23 +990,10 @@ msgstr[3] "سكوبز"
 msgstr[4] "سكوبز"
 msgstr[5] "سكوبز"
 
-msgid "snappy apps"
-msgstr "تطبيقات snappy"
-
-msgid "snappy frameworks"
-msgstr "اطر snappy البرمجية"
-
-msgid "snappy gadgets"
-msgstr "ادوات snappy"
-
-msgid "snappy kernels"
-msgstr "انوية snappy للنطام"
-
-msgid "snappy oems"
-msgstr "snappy oems"
-
-msgid "snappy os"
-msgstr "نظام snappy"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

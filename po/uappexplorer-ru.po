@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-05-21 23:01+0000\n"
-"Last-Translator: Tehnick <tehnick-8@yandex.ru>\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"PO-Revision-Date: 2016-07-08 06:08+0000\n"
+"Last-Translator: Maxim Gnidak <maxvanceffer@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: ru\n"
 
@@ -65,8 +65,8 @@ msgstr "Все архитектуры"
 msgid "All Frameworks"
 msgstr "Все фреймворки"
 
-msgid "All Snappy Packages"
-msgstr "Все пакеты Snappy"
+msgid "All Snaps"
+msgstr "Все snap пакеты"
 
 msgid "Amazon Link"
 msgstr "Ссылка на Amazon"
@@ -103,6 +103,9 @@ msgstr "Имя приложения"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Имя приложения (например: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr "Snap пакеты"
 
 msgid "App Wishlist"
 msgstr "Список пожеланий"
@@ -148,8 +151,8 @@ msgstr "Обзор игр"
 msgid "Browse Scopes"
 msgstr "Обзор областей"
 
-msgid "Browse Web Apps"
-msgstr "Обзор веб-приложений"
+msgid "Browse Snaps"
+msgstr "Каталог snap пакетов"
 
 msgid "Business"
 msgstr "Бизнес"
@@ -340,11 +343,23 @@ msgstr "Для версии:"
 msgid "Found the requested app"
 msgstr "Найдено запрошенное приложение"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Фреймворк:"
 
 msgid "Free"
 msgstr "Бесплатные"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Игры"
@@ -456,6 +471,12 @@ msgstr "Возможен и отрицательный рейтинг серде
 
 msgid "Itunes Link"
 msgstr "Ссылка на Itunes"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "Язык"
@@ -580,6 +601,18 @@ msgstr "Отзывов еще нет!"
 msgid "No wishes found, try searching again."
 msgstr "Пожелания не найдены, попробуйте поискать еще."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Самые старые"
 
@@ -702,41 +735,14 @@ msgstr "Покупки"
 msgid "Similar Apps"
 msgstr "Похожие приложения"
 
-msgid "Snappy App"
-msgstr "Snappy приложение"
-
-msgid "Snappy Applications"
-msgstr "Snappy приложения"
-
-msgid "Snappy Framework"
-msgstr "Snappy фреймворк"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy фреймворки"
-
-msgid "Snappy Gadget"
-msgstr "Кастомизатор Snappy"
-
-msgid "Snappy Gadgets"
-msgstr "Кастомизаторы Snappy"
-
-msgid "Snappy Kernel"
-msgstr "Ядро Snappy"
-
-msgid "Snappy Kernels"
-msgstr "Ядра Snappy"
+msgid "Snap"
+msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr "Метаданные Snappy:"
 
-msgid "Snappy OEM"
-msgstr "Snappy OEM"
-
-msgid "Snappy OEMs"
-msgstr "Snappy OEM'ы"
-
-msgid "Snappy OS"
-msgstr "ОС Snappy"
+msgid "Snaps"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Социальные сети"
@@ -954,11 +960,20 @@ msgstr "Чтобы проголосовать, необходимо автори
 msgid "You vote could not be saved at this time, please try again later"
 msgstr "Не удалось сохранить ваш отзыв, повторите попытку позже"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "приложение"
 msgstr[1] "приложения"
 msgstr[2] "приложений"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -972,6 +987,15 @@ msgstr "Ссылка на iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "Ссылка на iTunes некорректна"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr "Приложения и области"
 
@@ -981,23 +1005,10 @@ msgstr[0] "область"
 msgstr[1] "области"
 msgstr[2] "областей"
 
-msgid "snappy apps"
-msgstr "приложения snappy"
-
-msgid "snappy frameworks"
-msgstr "фреймворки snappy"
-
-msgid "snappy gadgets"
-msgstr "кастомизаторы snappy"
-
-msgid "snappy kernels"
-msgstr "ядра snappy"
-
-msgid "snappy oems"
-msgstr "snappy oem'ы"
-
-msgid "snappy os"
-msgstr "операционные системы snappy"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

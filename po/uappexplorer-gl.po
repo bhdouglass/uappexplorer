@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2015-12-11 15:19+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: gl\n"
 
@@ -63,7 +63,7 @@ msgstr "Todas as arquitecturas"
 msgid "All Frameworks"
 msgstr "Todos os marcos de traballo"
 
-msgid "All Snappy Packages"
+msgid "All Snaps"
 msgstr ""
 
 msgid "Amazon Link"
@@ -101,6 +101,9 @@ msgstr ""
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nome da aplicación (exemplo: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr ""
@@ -146,8 +149,8 @@ msgstr "Explorar xogos"
 msgid "Browse Scopes"
 msgstr "Explorar ámbitos"
 
-msgid "Browse Web Apps"
-msgstr "Explorar web apps"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "Negocios"
@@ -348,11 +351,23 @@ msgstr "Para a versión:"
 msgid "Found the requested app"
 msgstr "Atopouse a aplicación solicitada"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Framework:"
 
 msgid "Free"
 msgstr "Gratis"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Xogos"
@@ -459,6 +474,12 @@ msgid "It is possible to have a negative heart rating."
 msgstr "É posíbel ter unha puntuación de corazóns negativa"
 
 msgid "Itunes Link"
+msgstr ""
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
 msgstr ""
 
 msgid "Language"
@@ -584,6 +605,18 @@ msgstr "Aínda non hai críticas!"
 msgid "No wishes found, try searching again."
 msgstr ""
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Máis antigas"
 
@@ -705,40 +738,13 @@ msgstr "Compras"
 msgid "Similar Apps"
 msgstr "Aplicacións semellantes"
 
-msgid "Snappy App"
-msgstr "Aplicación Snappy"
-
-msgid "Snappy Applications"
-msgstr ""
-
-msgid "Snappy Framework"
-msgstr ""
-
-msgid "Snappy Frameworks"
-msgstr ""
-
-msgid "Snappy Gadget"
-msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr ""
-
-msgid "Snappy Kernels"
+msgid "Snap"
 msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr ""
 
-msgid "Snappy OEM"
-msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
+msgid "Snaps"
 msgstr ""
 
 msgid "Social Networking"
@@ -952,10 +958,19 @@ msgstr ""
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplicativo"
 msgstr[1] "aplicativos"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -968,6 +983,15 @@ msgstr ""
 msgid "iTunes link is not a valid url"
 msgstr ""
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr ""
 
@@ -976,23 +1000,10 @@ msgid_plural "scopes"
 msgstr[0] "ámbito"
 msgstr[1] "ámbitos"
 
-msgid "snappy apps"
-msgstr "aplicativos snappy"
-
-msgid "snappy frameworks"
-msgstr ""
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr ""
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
-msgstr ""
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-05-28 08:02+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"PO-Revision-Date: 2016-07-08 08:41+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: nl\n"
 
@@ -63,8 +63,8 @@ msgstr "Alle processorarchitecturen"
 msgid "All Frameworks"
 msgstr "Alle frameworks"
 
-msgid "All Snappy Packages"
-msgstr "Alle Snappy-pakketten"
+msgid "All Snaps"
+msgstr "Alle Snaps"
 
 msgid "Amazon Link"
 msgstr "Link naar Amazon"
@@ -101,6 +101,9 @@ msgstr "App-naam"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "App-naam (voorbeeld: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr "App-Snaps"
 
 msgid "App Wishlist"
 msgstr "Wenslijst voor apps"
@@ -146,8 +149,8 @@ msgstr "Bladeren door de spellen"
 msgid "Browse Scopes"
 msgstr "Bladeren door de scopes"
 
-msgid "Browse Web Apps"
-msgstr "Bladeren door de webapps"
+msgid "Browse Snaps"
+msgstr "Bladeren door Snaps"
 
 msgid "Business"
 msgstr "Zakelijk"
@@ -347,11 +350,23 @@ msgstr "Voor versie:"
 msgid "Found the requested app"
 msgstr "De opgevraagde app is gevonden"
 
+msgid "Framework Snap"
+msgstr "Framework-Snap"
+
+msgid "Framework Snaps"
+msgstr "Framework-Snaps"
+
 msgid "Framework:"
 msgstr "Framework:"
 
 msgid "Free"
 msgstr "Gratis"
+
+msgid "Gadget Snap"
+msgstr "Gadget-Snap"
+
+msgid "Gadget Snaps"
+msgstr "Gadget-Snaps"
 
 msgid "Games"
 msgstr "Spellen"
@@ -462,6 +477,12 @@ msgstr "Het is mogelijk om een negatieve hart-waardering te hebben."
 
 msgid "Itunes Link"
 msgstr "iTunes-link"
+
+msgid "Kernel Snap"
+msgstr "Kernel-Snap"
+
+msgid "Kernel Snaps"
+msgstr "Kernel-Snaps"
 
 msgid "Language"
 msgstr "Taal"
@@ -589,6 +610,18 @@ msgstr ""
 "Er zijn geen wensen gevonden; probeer het opnieuw met een andere "
 "zoekopdracht."
 
+msgid "OEM Snap"
+msgstr "OEM-Snap"
+
+msgid "OEM Snaps"
+msgstr "OEM-Snaps"
+
+msgid "OS Snap"
+msgstr "Besturingssysteem-Snap"
+
+msgid "OS Snaps"
+msgstr "Besturingssysteem-Snaps"
+
 msgid "Oldest"
 msgstr "Oudste"
 
@@ -710,41 +743,14 @@ msgstr "Winkelen"
 msgid "Similar Apps"
 msgstr "Vergelijkbare apps"
 
-msgid "Snappy App"
-msgstr "Snappy-app"
-
-msgid "Snappy Applications"
-msgstr "Snappy-applicaties"
-
-msgid "Snappy Framework"
-msgstr "Snappy-framework"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy-frameworks"
-
-msgid "Snappy Gadget"
-msgstr "Snappy-gadget"
-
-msgid "Snappy Gadgets"
-msgstr "Snappy-gadgets"
-
-msgid "Snappy Kernel"
-msgstr "Snappy-kernel"
-
-msgid "Snappy Kernels"
-msgstr "Snappy-kernels"
+msgid "Snap"
+msgstr "Snap"
 
 msgid "Snappy Metadata:"
 msgstr "Snappy-metagegevens:"
 
-msgid "Snappy OEM"
-msgstr "Snappy-OEM"
-
-msgid "Snappy OEMs"
-msgstr "Snappy-oem's"
-
-msgid "Snappy OS"
-msgstr "Snappy-besturingssysteem"
+msgid "Snaps"
+msgstr "Snaps"
 
 msgid "Social Networking"
 msgstr "Sociale netwerken"
@@ -967,10 +973,19 @@ msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
 "Uw stem kan momenteel niet worden opgeslagen; probeer het later opnieuw"
 
+msgid "app snaps"
+msgstr "app-snaps"
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "apps"
 msgstr[1] "apps"
+
+msgid "framework snaps"
+msgstr "framework-snaps"
+
+msgid "gadget snaps"
+msgstr "gadget-snaps"
 
 msgid "games"
 msgid_plural "games"
@@ -983,6 +998,15 @@ msgstr "iTunes-link"
 msgid "iTunes link is not a valid url"
 msgstr "De iTunes-link is geen geldige URL"
 
+msgid "kernel snaps"
+msgstr "kernel-snaps"
+
+msgid "oem snaps"
+msgstr "oem-snaps"
+
+msgid "os snaps"
+msgstr "besturingssysteem-snaps"
+
 msgid "phone apps & scopes"
 msgstr "telefoonapps & -scopes"
 
@@ -991,23 +1015,10 @@ msgid_plural "scopes"
 msgstr[0] "scopes"
 msgstr[1] "scopes"
 
-msgid "snappy apps"
-msgstr "snappy-apps"
-
-msgid "snappy frameworks"
-msgstr "snappy-frameworks"
-
-msgid "snappy gadgets"
-msgstr "snappy-gadges"
-
-msgid "snappy kernels"
-msgstr "snappy-kernels"
-
-msgid "snappy oems"
-msgstr "snappy-oem's"
-
-msgid "snappy os"
-msgstr "snappy-besturingssysteem"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] "snaps"
+msgstr[1] "snaps"
 
 msgid "web apps"
 msgid_plural "web apps"

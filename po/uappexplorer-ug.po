@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-07-03 13:42+0000\n"
 "Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: ug\n"
 
@@ -62,8 +62,8 @@ msgstr "بارلىق قۇرۇلمىلار"
 msgid "All Frameworks"
 msgstr "بارلىق رامكىلار"
 
-msgid "All Snappy Packages"
-msgstr "ھەممە Snappy بولاق"
+msgid "All Snaps"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "ئامازون ئۇلانمىسى"
@@ -94,6 +94,9 @@ msgstr "ئەپ ئىسمى"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "ئەپ نامى"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr "ئەپ ئارزۇ تىزىمى"
@@ -139,8 +142,8 @@ msgstr "ئۇيۇنلارغا كۆز يۈگۈرت"
 msgid "Browse Scopes"
 msgstr "ئەپچەلەرگە كۆزيۈگۈرت"
 
-msgid "Browse Web Apps"
-msgstr "تور ئەپلىرىگە كۆز يۈگۈرت"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "ئىش بېجىرىش"
@@ -321,11 +324,23 @@ msgstr "نەشىرى :"
 msgid "Found the requested app"
 msgstr "ئىزدەلگەن ئەپ تېپىلدى"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "قۇرۇلما :"
 
 msgid "Free"
 msgstr "ھەقسىز"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "ئويۇنلار"
@@ -436,6 +451,12 @@ msgstr "راسچىللىق بىلەن باھالانىغان"
 
 msgid "Itunes Link"
 msgstr "iTunes ئۇلىنىشى"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "تىل"
@@ -557,6 +578,18 @@ msgstr "بۇ ئەپكە باھا يېزىلمىغان"
 msgid "No wishes found, try searching again."
 msgstr "ئارزۇيىڭزدىكى ئۇچۇر تېپىلمىدى قايتىدىن سىناپ كۈرۈڭ"
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "ئەڭ كونا"
 
@@ -676,41 +709,14 @@ msgstr "مال سېتىۋېلىش"
 msgid "Similar Apps"
 msgstr "ئەپ تۈرلىرى"
 
-msgid "Snappy App"
-msgstr "Snappy ئەپ"
-
-msgid "Snappy Applications"
-msgstr "Snappy قوللىنشچان"
-
-msgid "Snappy Framework"
-msgstr "Snappy رامكا"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy رامكا"
-
-msgid "Snappy Gadget"
+msgid "Snap"
 msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr "Snappy يادىرو"
-
-msgid "Snappy Kernels"
-msgstr "Snappy يادىروسى"
 
 msgid "Snappy Metadata:"
 msgstr "Snappy مېتا سانلىق مەلۇمات"
 
-msgid "Snappy OEM"
+msgid "Snaps"
 msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
-msgstr "Snappy مەشغۇلات سىستېمسى"
 
 msgid "Social Networking"
 msgstr "ئىجتىمائىي ئالاقە تورى"
@@ -910,9 +916,18 @@ msgstr "تىزىملىتىپ كىرگەندىن كېيىن بېلەت تاشلا
 msgid "You vote could not be saved at this time, please try again later"
 msgstr "بۇ قېتىمقى بىلەت تاشلاش ساقلانمىدى سەل تۇرۇپ سىناپ كۈرۈڭ"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "ئەپلەر"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -924,6 +939,15 @@ msgstr "iTunes ئۇلىنىشى"
 msgid "iTunes link is not a valid url"
 msgstr "iTunes  ئۇلىنىشى ئىناۋەتلىك ئۇلىنىش ئەمەس"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr ""
 
@@ -931,23 +955,10 @@ msgid "scopes"
 msgid_plural "scopes"
 msgstr[0] "ئەپچىلەر"
 
-msgid "snappy apps"
-msgstr "بىخەتەر ئەپلەر"
-
-msgid "snappy frameworks"
-msgstr "snappy رامكا"
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr "snappy  يادىروسى"
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
-msgstr "Snappy مەشغۇلات سىستېمسى"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

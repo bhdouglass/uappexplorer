@@ -41,6 +41,11 @@ function downloadPackage(pkg, callback) {
           else {
             fs.unlink(filename);
 
+            //logger.debug(JSON.stringify(data, null, 2));
+            /*_.forEach(data.apps, function(app) {
+              logger.debug(data.name + '_' + app.name);
+            });*/
+
             pkg.url_dispatcher = data.urls;
             pkg.permissions = data.permissions;
             pkg.features = [];

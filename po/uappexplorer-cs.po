@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-06-01 10:06+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: cs\n"
 
@@ -61,8 +61,8 @@ msgstr "Všechny architektury"
 msgid "All Frameworks"
 msgstr "Všechny frameworky"
 
-msgid "All Snappy Packages"
-msgstr "Veškeré balíky snappy"
+msgid "All Snaps"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Odkaz na Amazon"
@@ -98,6 +98,9 @@ msgstr "Název aplikace"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Název aplikace (například: com.ubuntu.developer.ukazkove_jmeno)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr "Seznam přání"
@@ -142,8 +145,8 @@ msgstr "Procházet hry"
 msgid "Browse Scopes"
 msgstr "Procházet rozsahy"
 
-msgid "Browse Web Apps"
-msgstr "Procházet webové aplikace"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "Business"
@@ -335,11 +338,23 @@ msgstr "Pro verzi:"
 msgid "Found the requested app"
 msgstr "Hledaná aplikace byla nalezena"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Framework"
 
 msgid "Free"
 msgstr "Zdarma"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Hry"
@@ -453,6 +468,12 @@ msgstr "Je možné mít záporné vnitřní hodnocení aplikace"
 
 msgid "Itunes Link"
 msgstr "Odkaz na Itunes"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "Jazyk"
@@ -577,6 +598,18 @@ msgstr "Tato aplikace ještě nebyla okomentována."
 msgid "No wishes found, try searching again."
 msgstr "Nenalezena žádná přání, zkuste hledat znova."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Nejstarší"
 
@@ -700,41 +733,14 @@ msgstr "Nakupování"
 msgid "Similar Apps"
 msgstr "Podobné aplikace"
 
-msgid "Snappy App"
-msgstr "Aplikace Snappy"
-
-msgid "Snappy Applications"
-msgstr "Snappy aplikace"
-
-msgid "Snappy Framework"
-msgstr "Snappy knihovna"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy knihovny"
-
-msgid "Snappy Gadget"
-msgstr "Snappy doplněk"
-
-msgid "Snappy Gadgets"
-msgstr "Snappy doplňky"
-
-msgid "Snappy Kernel"
-msgstr "Snappy jádro"
-
-msgid "Snappy Kernels"
-msgstr "Snappy jádra"
+msgid "Snap"
+msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr "Snappy metadata:"
 
-msgid "Snappy OEM"
-msgstr "Snappy OEM"
-
-msgid "Snappy OEMs"
-msgstr "Snappy OEM"
-
-msgid "Snappy OS"
-msgstr "Snappy OS"
+msgid "Snaps"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Sociální sítě"
@@ -957,11 +963,20 @@ msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
 "Vaše hlasování nemohlo být v tento moment uloženo, zkuste to prosím později"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplikace"
 msgstr[1] "aplikace/í"
 msgstr[2] "aplikace/í"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -975,6 +990,15 @@ msgstr "odkaz na iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "Odkaz na iTunes není validní"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr "mobilní aplikace a rozsahy"
 
@@ -984,23 +1008,10 @@ msgstr[0] "rozsah"
 msgstr[1] "rozsahy/ů"
 msgstr[2] "rozsahy/ů"
 
-msgid "snappy apps"
-msgstr "snappy aplikace"
-
-msgid "snappy frameworks"
-msgstr "snappy knihovny"
-
-msgid "snappy gadgets"
-msgstr "snappy doplňky"
-
-msgid "snappy kernels"
-msgstr "snappy jádra"
-
-msgid "snappy oems"
-msgstr "snappy oem"
-
-msgid "snappy os"
-msgstr "snappy os"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

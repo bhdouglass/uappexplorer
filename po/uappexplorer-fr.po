@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
-"PO-Revision-Date: 2016-06-01 05:00+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"PO-Revision-Date: 2016-07-09 12:17+0000\n"
 "Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: fr\n"
 
@@ -63,8 +63,8 @@ msgstr "Toutes les architectures"
 msgid "All Frameworks"
 msgstr "Toutes les structures logicielles"
 
-msgid "All Snappy Packages"
-msgstr "Tous les paquets Snappy"
+msgid "All Snaps"
+msgstr "Tous les Snaps"
 
 msgid "Amazon Link"
 msgstr "Lien Amazon"
@@ -102,6 +102,9 @@ msgstr "Nom de l'application"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nom de l'application (exemple : com.ubuntu.developer.exemple)"
+
+msgid "App Snaps"
+msgstr "Applications Snaps"
 
 msgid "App Wishlist"
 msgstr "Liste de souhaits"
@@ -147,8 +150,8 @@ msgstr "Parcourir les jeux"
 msgid "Browse Scopes"
 msgstr "Parcourir les moteurs de recherche"
 
-msgid "Browse Web Apps"
-msgstr "Parcourir les applications web"
+msgid "Browse Snaps"
+msgstr "Parcourir les Snaps"
 
 msgid "Business"
 msgstr "Professionnel"
@@ -357,11 +360,23 @@ msgstr "Pour la version :"
 msgid "Found the requested app"
 msgstr "Application demandée trouvée"
 
+msgid "Framework Snap"
+msgstr "Environnement applicatif Snap"
+
+msgid "Framework Snaps"
+msgstr "Environnements applicatifs Snaps"
+
 msgid "Framework:"
 msgstr "Structure logicielle :"
 
 msgid "Free"
 msgstr "Gratuit"
+
+msgid "Gadget Snap"
+msgstr "Gadget Snap"
+
+msgid "Gadget Snaps"
+msgstr "Gadgets Snaps"
 
 msgid "Games"
 msgstr "Jeux"
@@ -472,6 +487,12 @@ msgstr "Il est possible d'avoir un nombre négatif de cœurs"
 
 msgid "Itunes Link"
 msgstr "Lien Itunes"
+
+msgid "Kernel Snap"
+msgstr "Noyau Snap"
+
+msgid "Kernel Snaps"
+msgstr "Noyaux Snaps"
 
 msgid "Language"
 msgstr "Langues"
@@ -597,6 +618,18 @@ msgstr "Pas encore de commentaires !"
 msgid "No wishes found, try searching again."
 msgstr "Aucun souhait trouvé, essayez de chercher à nouveau."
 
+msgid "OEM Snap"
+msgstr "Snap du constructeur"
+
+msgid "OEM Snaps"
+msgstr "Snaps du constructeur"
+
+msgid "OS Snap"
+msgstr "Système d'exploitation Snap"
+
+msgid "OS Snaps"
+msgstr "Systèmes d'exploitation Snaps"
+
 msgid "Oldest"
 msgstr "Les plus anciennes"
 
@@ -719,41 +752,14 @@ msgstr "Achats"
 msgid "Similar Apps"
 msgstr "Application similaires"
 
-msgid "Snappy App"
-msgstr "Application Snappy"
-
-msgid "Snappy Applications"
-msgstr "Applications Snappy"
-
-msgid "Snappy Framework"
-msgstr "Environnement Snappy"
-
-msgid "Snappy Frameworks"
-msgstr "Environnements Snappy"
-
-msgid "Snappy Gadget"
-msgstr "Gadget Snappy"
-
-msgid "Snappy Gadgets"
-msgstr "Gadgets Snappy"
-
-msgid "Snappy Kernel"
-msgstr "Noyau Snappy"
-
-msgid "Snappy Kernels"
-msgstr "Noyaux Snappy"
+msgid "Snap"
+msgstr "Snap"
 
 msgid "Snappy Metadata:"
 msgstr "Metadonnées Snappy :"
 
-msgid "Snappy OEM"
-msgstr "Fabricant de Snappy"
-
-msgid "Snappy OEMs"
-msgstr "Fabricants de Snappy"
-
-msgid "Snappy OS"
-msgstr "Système d'exploitation Snappy"
+msgid "Snaps"
+msgstr "Snaps"
 
 msgid "Social Networking"
 msgstr "Réseaux sociaux"
@@ -981,10 +987,19 @@ msgstr ""
 "Votre vote n'a pas pu être enregistré pour le moment, veuillez réessayer "
 "plus tard"
 
+msgid "app snaps"
+msgstr "applications Snaps"
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "application"
 msgstr[1] "applications"
+
+msgid "framework snaps"
+msgstr "environnements applicatifs Snaps"
+
+msgid "gadget snaps"
+msgstr "gadgets Snaps"
 
 msgid "games"
 msgid_plural "games"
@@ -997,6 +1012,15 @@ msgstr "Lien iTunes"
 msgid "iTunes link is not a valid url"
 msgstr "Le lien iTunes n'est pas une URL valide"
 
+msgid "kernel snaps"
+msgstr "noyaux Snaps"
+
+msgid "oem snaps"
+msgstr "Snaps du constructeur"
+
+msgid "os snaps"
+msgstr "systèmes d'exploitation Snaps"
+
 msgid "phone apps & scopes"
 msgstr "Applications et moteurs de recherche pour téléphone"
 
@@ -1005,23 +1029,10 @@ msgid_plural "scopes"
 msgstr[0] "moteur de recherche"
 msgstr[1] "moteurs de recherche"
 
-msgid "snappy apps"
-msgstr "applications snappy"
-
-msgid "snappy frameworks"
-msgstr "environnements snappy"
-
-msgid "snappy gadgets"
-msgstr "gadgets snappy"
-
-msgid "snappy kernels"
-msgstr "noyaux snappy"
-
-msgid "snappy oems"
-msgstr "équipementiers snappy"
-
-msgid "snappy os"
-msgstr "système d'exploitation snappy"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] "Snap"
+msgstr[1] "Snaps"
 
 msgid "web apps"
 msgid_plural "web apps"

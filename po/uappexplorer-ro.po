@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-04-24 20:36+0000\n"
 "Last-Translator: Buzea Bogdan <Unknown>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -59,7 +59,7 @@ msgstr "Toate Arhitecturile"
 msgid "All Frameworks"
 msgstr "Toate Framework-urile"
 
-msgid "All Snappy Packages"
+msgid "All Snaps"
 msgstr ""
 
 msgid "Amazon Link"
@@ -91,6 +91,9 @@ msgstr "Nume aplicație"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nume aplicație (exemplu: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr ""
@@ -136,8 +139,8 @@ msgstr "Navigare jocuri"
 msgid "Browse Scopes"
 msgstr "Navigare Scope-uri"
 
-msgid "Browse Web Apps"
-msgstr "Navigare aplicații web"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "Afaceri"
@@ -325,11 +328,23 @@ msgstr "Pentru versiunea:"
 msgid "Found the requested app"
 msgstr "Aplicatia solicitata a fost gasita"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Framework:"
 
 msgid "Free"
 msgstr "Gratuit"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Jocuri"
@@ -432,6 +447,12 @@ msgstr ""
 
 msgid "Itunes Link"
 msgstr "Link Itunes"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "Limba"
@@ -553,6 +574,18 @@ msgstr "Fara recenzii inca!"
 msgid "No wishes found, try searching again."
 msgstr "Nu au fost gasite dorinte, incearca o noua cautare."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Cele mai vechi"
 
@@ -672,40 +705,13 @@ msgstr "Cumparaturi"
 msgid "Similar Apps"
 msgstr "Aplicatii Similare"
 
-msgid "Snappy App"
-msgstr "Aplicatie Snappy"
-
-msgid "Snappy Applications"
-msgstr ""
-
-msgid "Snappy Framework"
-msgstr ""
-
-msgid "Snappy Frameworks"
-msgstr ""
-
-msgid "Snappy Gadget"
-msgstr ""
-
-msgid "Snappy Gadgets"
-msgstr ""
-
-msgid "Snappy Kernel"
-msgstr ""
-
-msgid "Snappy Kernels"
+msgid "Snap"
 msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr ""
 
-msgid "Snappy OEM"
-msgstr ""
-
-msgid "Snappy OEMs"
-msgstr ""
-
-msgid "Snappy OS"
+msgid "Snaps"
 msgstr ""
 
 msgid "Social Networking"
@@ -901,11 +907,20 @@ msgstr "Trebuie sa fii logat pentru a vota"
 msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplicatii"
 msgstr[1] "aplicatii"
 msgstr[2] "aplicatii"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -919,6 +934,15 @@ msgstr "Link itunes"
 msgid "iTunes link is not a valid url"
 msgstr ""
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr ""
 
@@ -928,23 +952,10 @@ msgstr[0] "scope-uri"
 msgstr[1] "scope-uri"
 msgstr[2] "scope-uri"
 
-msgid "snappy apps"
-msgstr "aplicatii snappy"
-
-msgid "snappy frameworks"
-msgstr ""
-
-msgid "snappy gadgets"
-msgstr ""
-
-msgid "snappy kernels"
-msgstr ""
-
-msgid "snappy oems"
-msgstr ""
-
-msgid "snappy os"
-msgstr ""
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"

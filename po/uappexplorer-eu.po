@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-13 09:21+0000\n"
+"POT-Creation-Date: 2016-07-08 04:42+0000\n"
 "PO-Revision-Date: 2016-05-21 17:32+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-08 01:32+0000\n"
+"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: eu\n"
 
@@ -63,8 +63,8 @@ msgstr "Arkitektura guztiak"
 msgid "All Frameworks"
 msgstr "Framework guztiak"
 
-msgid "All Snappy Packages"
-msgstr "Snappy pakete guztiak"
+msgid "All Snaps"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "Amazon Esteka"
@@ -102,6 +102,9 @@ msgstr "Aplikazio izena"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Aplikazio Izena(adib: com.ubuntu.developer.example)"
+
+msgid "App Snaps"
+msgstr ""
 
 msgid "App Wishlist"
 msgstr "Gura diren aplikazioen zerrenda"
@@ -147,8 +150,8 @@ msgstr "Jokuak arakatu"
 msgid "Browse Scopes"
 msgstr "Eremuak arakatu"
 
-msgid "Browse Web Apps"
-msgstr "Web aplikazioak arakatu"
+msgid "Browse Snaps"
+msgstr ""
 
 msgid "Business"
 msgstr "Negozioak"
@@ -348,11 +351,23 @@ msgstr "Bertsio honentzat:"
 msgid "Found the requested app"
 msgstr "Eskatutako aplikazioa aurkitua"
 
+msgid "Framework Snap"
+msgstr ""
+
+msgid "Framework Snaps"
+msgstr ""
+
 msgid "Framework:"
 msgstr "Esparrua:"
 
 msgid "Free"
 msgstr "Dohainik"
+
+msgid "Gadget Snap"
+msgstr ""
+
+msgid "Gadget Snaps"
+msgstr ""
 
 msgid "Games"
 msgstr "Jokoak"
@@ -461,6 +476,12 @@ msgstr "Litekeena da bihotz neurketa negatiboa izatea."
 
 msgid "Itunes Link"
 msgstr "Itunes Esteka"
+
+msgid "Kernel Snap"
+msgstr ""
+
+msgid "Kernel Snaps"
+msgstr ""
 
 msgid "Language"
 msgstr "Hizkuntza"
@@ -585,6 +606,18 @@ msgstr "Berrikuspenik ez du oraindik!"
 msgid "No wishes found, try searching again."
 msgstr "Ez da guraririk aurkitu, saiatu berriro bilatzen."
 
+msgid "OEM Snap"
+msgstr ""
+
+msgid "OEM Snaps"
+msgstr ""
+
+msgid "OS Snap"
+msgstr ""
+
+msgid "OS Snaps"
+msgstr ""
+
 msgid "Oldest"
 msgstr "Zaharrenak"
 
@@ -707,41 +740,14 @@ msgstr "Erosketak"
 msgid "Similar Apps"
 msgstr "Antzeko aplikazioak"
 
-msgid "Snappy App"
-msgstr "S"
-
-msgid "Snappy Applications"
-msgstr "Snappy Aplikazioak"
-
-msgid "Snappy Framework"
-msgstr "Snappy Framework-a"
-
-msgid "Snappy Frameworks"
-msgstr "Snappy Framework-ak"
-
-msgid "Snappy Gadget"
-msgstr "Snappy Gadgeta"
-
-msgid "Snappy Gadgets"
-msgstr "Snappy Gadgetak"
-
-msgid "Snappy Kernel"
-msgstr "Snappy Kernela"
-
-msgid "Snappy Kernels"
-msgstr "Snappy Kernelak"
+msgid "Snap"
+msgstr ""
 
 msgid "Snappy Metadata:"
 msgstr "Snappy Meta:datuak:"
 
-msgid "Snappy OEM"
-msgstr "Snappy OEMa"
-
-msgid "Snappy OEMs"
-msgstr "Snappy OEMak"
-
-msgid "Snappy OS"
-msgstr "Snappy SE"
+msgid "Snaps"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "Sare sozialak"
@@ -968,10 +974,19 @@ msgstr ""
 "Une honetan ezin izan da zure bozka gorde, mesedez saia zaitez berriro "
 "beranduago"
 
+msgid "app snaps"
+msgstr ""
+
 msgid "apps"
 msgid_plural "apps"
 msgstr[0] "aplikazio"
 msgstr[1] "aplikazioak"
+
+msgid "framework snaps"
+msgstr ""
+
+msgid "gadget snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
@@ -984,6 +999,15 @@ msgstr "iTunes Esteka"
 msgid "iTunes link is not a valid url"
 msgstr "iTunes esteka ez da baleko url-a"
 
+msgid "kernel snaps"
+msgstr ""
+
+msgid "oem snaps"
+msgstr ""
+
+msgid "os snaps"
+msgstr ""
+
 msgid "phone apps & scopes"
 msgstr "Telefono aplikazio eta eremuak"
 
@@ -992,23 +1016,10 @@ msgid_plural "scopes"
 msgstr[0] "eremu"
 msgstr[1] "eremuak"
 
-msgid "snappy apps"
-msgstr "snappy aplikazioak"
-
-msgid "snappy frameworks"
-msgstr "snappy framework-ak"
-
-msgid "snappy gadgets"
-msgstr "snappy gadget-ak"
-
-msgid "snappy kernels"
-msgstr "snappy kernel-ak"
-
-msgid "snappy oems"
-msgstr "snappy oem-ak"
-
-msgid "snappy os"
-msgstr "snappy SE"
+msgid "snaps"
+msgid_plural "snaps"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "web apps"
 msgid_plural "web apps"
