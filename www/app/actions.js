@@ -87,6 +87,7 @@ actions = {
       if (last) { //previous app on current page
         value = last;
         tree.set('previousApp', last);
+        tree.set('previousLastPage', null);
       }
       else {
         if (last_page.skip > 0) {
@@ -94,6 +95,8 @@ actions = {
           last_page = JSON.parse(JSON.stringify(last_page));
           last_page.skip -= last_page.limit;
           last_page.skip = (last_page.skip > 0) ? last_page.skip : 0;
+
+          tree.set('previousLastPage', last_page);
 
           var key2 = JSON.stringify(last_page);
           value = actions.getApps(last_page, true, false).then(function() {
@@ -133,11 +136,14 @@ actions = {
       if (next) { //next app on current page
         value = next;
         tree.set('nextApp', next);
+        tree.set('nextLastPage', null);
       }
       else {
         //check for next app on next page
         last_page = JSON.parse(JSON.stringify(last_page));
         last_page.skip = last_page.skip + last_page.limit;
+
+        tree.set('nextLastPage', last_page);
 
         var key2 = JSON.stringify(last_page);
         value = actions.getApps(last_page, true, false).then(function() {
@@ -154,6 +160,20 @@ actions = {
 
       return value;
     });
+  },
+
+  triggerPreviousApp: function() {
+    if (tree.get('previousLastPage')) {
+      tree.set('lastPage', tree.get('previousLastPage'));
+      tree.set('previousLastPage', null);
+    }
+  },
+
+  triggerNextApp: function() {
+    if (tree.get('nextLastPage')) {
+      tree.set('lastPage', tree.get('nextLastPage'));
+      tree.set('nextLastPage', null);
+    }
   },
 
   getFrameworks: function() {

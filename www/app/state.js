@@ -58,6 +58,8 @@ module.exports = new Baobab({
     mini: true,
     query: {},
   },
+  previousLastPage: null,
+  nextLastPage: null,
 
   apps: {},
   cache_keys: [],

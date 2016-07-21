@@ -71,9 +71,11 @@ module.exports = React.createClass({
     var app = null;
     if (direction == 'previous') {
       app = this.state.previousApp;
+      actions.triggerPreviousApp();
     }
     else {
       app = this.state.nextApp;
+      actions.triggerNextApp();
     }
 
     this.setState({swipe: direction});
