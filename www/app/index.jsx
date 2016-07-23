@@ -2,8 +2,9 @@ window.React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var createBrowserHistory = require('history/lib/createBrowserHistory');
-//window.$ = window.jQuery = require('jquery');
+window.jQuery = window.$ = require('jquery');
 require('bootstrap');
+require('swipebox');
 
 var Root = require('./components/root');
 var Index = require('./components/index');

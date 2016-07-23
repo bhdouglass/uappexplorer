@@ -24,6 +24,8 @@ var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 var stylish = require('jshint-stylish');
 var watchify = require('watchify');
+var webpack = require('gulp-webpack');
+var webpackConfig = require('./webpack.config');
 
 var paths = {
   main_js: 'app/index.jsx',
@@ -31,34 +33,23 @@ var paths = {
   lint: ['app/**/*.js', 'app/**/*.jsx'],
   imgs: [
     'img/*',
-    'bower/swipebox/src/img/*'
+    'bower_components/swipebox/src/img/*'
   ],
   less: 'less/*.less',
-  lib_js: [ //TODO see if there is a better way to include this
-    'bower/jquery/dist/jquery.min.js',
-    'bower/swipebox/src/js/jquery.swipebox.min.js',
-  ],
   css: [
-    'bower/bootstrap/dist/css/bootstrap.min.css',
-    'bower/bootstrap-material-design/dist/css/material.min.css',
-    'bower/font-awesome/css/font-awesome.min.css',
-    'bower/slick-carousel/slick/slick.css',
-    'bower/animate.css/animate.min.css',
-    'bower/swipebox/src/css/swipebox.min.css',
+    'bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'bower_components/bootstrap-material-design/dist/css/material.min.css',
+    'bower_components/font-awesome/css/font-awesome.min.css',
+    'bower_components/slick-carousel/slick/slick.css',
+    'bower_components/animate.css/animate.min.css',
+    'bower_components/swipebox/src/css/swipebox.min.css',
   ],
   fonts: [
-    'bower/font-awesome/fonts/*',
+    'bower_components/font-awesome/fonts/*',
   ],
   html: ['*.html'],
   po: '../po/**/*.po',
   dist: ['dist/**', '!dist/.git'],
-};
-
-var bargs = {
-  entries: paths.main_js,
-  extensions: ['.jsx'],
-  cache: {},
-  packageCache: {},
 };
 
 gulp.task('clean', function() {
@@ -67,11 +58,12 @@ gulp.task('clean', function() {
 
 gulp.task('lint', function() {
   return merge(
-    gulp.src(paths.lint)
+    //TODO find a way to integrate this into webpack
+    /*gulp.src(paths.lint)
       .pipe(react())
       .pipe(jshint())
       .pipe(jshint.reporter(stylish))
-      .pipe(jshint.reporter('fail')),
+      .pipe(jshint.reporter('fail')),*/
 
     gulp.src(paths.less)
       .pipe(recess({
@@ -123,18 +115,8 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('build-js', function() {
-  var b = browserify(bargs);
-
-  b.transform(reactify);
-  b.on('log', gutil.log);
-
-  return b.bundle()
-    .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-    .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(addsrc(paths.lib_js))
-    .pipe(concat('app.js'))
+  return gulp.src(paths.main_js)
+    .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -149,26 +131,9 @@ gulp.task('build-translations', function() {
 
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations']);
 
-gulp.task('build-watch', ['lint', 'clean', /*'build-js',*/ 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations'], function() {
+gulp.task('watch', ['build'], function() {
   gulp.watch(paths.front_js, ['lint']);
   gulp.watch(paths.html, ['build-html']);
   gulp.watch(paths.less, ['lint', 'build-less']);
-
-  var b = watchify(browserify(bargs));
-
-  b.transform(reactify);
-  b.on('log', gutil.log);
-
-  function bundle() {
-    return b.bundle()
-      .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-      .pipe(source('app.js'))
-      .pipe(buffer())
-      .pipe(addsrc(paths.lib_js))
-      .pipe(concat('app.js'))
-      .pipe(gulp.dest('dist/js'));
-  }
-
-  bundle();
-  b.on('update', bundle);
+  gulp.watch(paths.front_js, ['lint', 'build-js'])
 });
