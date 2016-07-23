@@ -32,7 +32,7 @@ registered trademarks of [Canonical Ltd.](http://www.canonical.com/)
 * Run the spider (Inside the vagrant VM):
     * Run: `spider`
 * Compile the frontend:
-    * Run: `cd www && gulp build-watch`
+    * Run: `cd www && gulp watch`
 * Attach to the docker container (if needed - from inside the vagrant VM):
     * Run: `attach`
 * Update your system's hosts file:

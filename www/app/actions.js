@@ -187,6 +187,7 @@ actions = {
   getApp: function(name) {
     tree.set('loading', true);
     tree.set('app', {});
+    tree.set('missingApp', null);
 
     api.getApp(name).then(function(data) {
       tree.set('loading', false);
@@ -194,9 +195,7 @@ actions = {
     }).catch(function(err) {
       tree.set('loading', false);
       if (err.status == 404) {
-        actions.createAlert(i18n.t('Could not find app'), 'error', function() {
-          window.location.pathname = '/apps';
-        });
+        tree.set('missingApp', name);
       }
       else {
         actions.createAlert(i18n.t('Could not download app data, click to retry'), 'error', actions.getApp.bind(actions, name));

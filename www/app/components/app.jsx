@@ -31,6 +31,7 @@ module.exports = React.createClass({
   cursors: {
     auth: ['auth'],
     app: ['app'],
+    missingApp: ['missingApp'],
     loading: ['loading'],
     userLists: ['userLists'],
     previousApp: ['previousApp'],
@@ -159,292 +160,302 @@ module.exports = React.createClass({
 
           {(function() {
             var component = '';
-            if (!this.state.loading && this.state.app && this.state.app.name == this.props.params.name) {
-              var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
-              var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
-              var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
-              var author_query = {q: 'author:' + this.state.app.author};
+            if (!this.state.loading) {
+              if (this.state.app && this.state.app.name == this.props.params.name) {
+                var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
+                var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
+                var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
+                var author_query = {q: 'author:' + this.state.app.author};
 
-              component = (
-                <div className="swipe-container">
-                  {(function() {
-                    var prev = '';
-                    if (this.state.previousApp && this.state.previousApp.title) {
-                      prev = (
-                        <div className="previous-app">
-                          <a onClick={this.swipe.bind(this, 'previous')} title={i18n.t('Previous App:') + ' ' + this.state.previousApp.title} className="text-material-grey clickable">
-                            <i className="fa fa-2x fa-chevron-left"></i>
-                          </a>
-                        </div>
-                      );
-                    }
-
-                    return prev;
-                  }).bind(this)()}
-
-                  {(function() {
-                    var next = '';
-                    if (this.state.nextApp && this.state.nextApp.title) {
-                      next = (
-                        <div className="next-app">
-                          <a onClick={this.swipe.bind(this, 'next')} title={i18n.t('Next App:') + ' ' + this.state.nextApp.title} className="text-material-grey clickable">
-                            <i className="fa fa-2x fa-chevron-right"></i>
-                          </a>
-                        </div>
-                      );
-                    }
-
-                    return next;
-                  }).bind(this)()}
-
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="list-group">
-                        <div className="list-group-item">
-                          <div className="row-action-primary">
-                            <div className="icon-large ubuntu-shape">
-                              <img src={this.state.app.icon} alt={this.state.app.name} />
-                            </div>
+                component = (
+                  <div className="swipe-container">
+                    {(function() {
+                      var prev = '';
+                      if (this.state.previousApp && this.state.previousApp.title) {
+                        prev = (
+                          <div className="previous-app">
+                            <a onClick={this.swipe.bind(this, 'previous')} title={i18n.t('Previous App:') + ' ' + this.state.previousApp.title} className="text-material-grey clickable">
+                              <i className="fa fa-2x fa-chevron-left"></i>
+                            </a>
                           </div>
+                        );
+                      }
 
-                          <div className="row-content app-info">
-                            <h1 className="list-group-item-heading">{this.state.app.title}</h1>
-                            <div className="list-group-item-text">
-                              <Stars stars={this.state.app.bayesian_average} />
-                              <Hearts hearts={this.state.app.points} />
+                      return prev;
+                    }).bind(this)()}
 
-                              <If value={this.state.app.author}>
-                                <Link to="/apps" query={author_query} title={i18n.t('Author')} className="clickable">{this.state.app.author}</Link>
-                              </If>
-
-                              <If value={this.state.app.company}>
-                                <span title={i18n.t('Company')}>{this.state.app.company}</span>
-                              </If>
-
-                              <Types types={this.state.app.types} />
-                              <Price prices={this.state.app.prices} />
-                              <br/>
-                              <Features features={this.state.app.features} />
-                            </div>
+                    {(function() {
+                      var next = '';
+                      if (this.state.nextApp && this.state.nextApp.title) {
+                        next = (
+                          <div className="next-app">
+                            <a onClick={this.swipe.bind(this, 'next')} title={i18n.t('Next App:') + ' ' + this.state.nextApp.title} className="text-material-grey clickable">
+                              <i className="fa fa-2x fa-chevron-right"></i>
+                            </a>
                           </div>
-                        </div>
-                      </div>
-                    </div>
+                        );
+                      }
 
-                    <div className="col-md-6">
-                      <div className="list-group">
-                        <div className="list-group-item sharing">
-                          <div className="row-action-primary">
-                              <div className="action-icon ubuntu-shape">
-                                <i className="fa fa-sa" style={download_style}></i>
-                              </div>
-                          </div>
+                      return next;
+                    }).bind(this)()}
 
-                          <div className="row-content">
-                            <If value={is_snappy}>
-                              <div className="list-group-item-text">
-                                <If value={Object.keys(this.state.app.downloads).length > 0} element="span">
-                                  <div className="download-dropdown">
-                                    <div className="dropdown">
-                                      <button className="btn btn-sm btn-success dropdown-toggle" type="button" data-toggle="dropdown">
-                                       {i18n.t('Download')} &nbsp;
-                                       <span className="caret"></span>
-                                      </button>
-                                      <ul className="dropdown-menu">
-                                        {Object.keys(this.state.app.downloads).sort().map(function(arch, index) {
-                                          return (
-                                            <li key={index}>
-                                              <a href={this.state.app.downloads[arch]}>{arch}</a>
-                                            </li>
-                                          );
-                                        }, this)}
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </If>
-
-                                <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
-                              </div>
-                            </If>
-
-                            <If value={!is_snappy}>
-                              <div className="list-group-item-text">
-                                <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
-
-                                <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
-
-                                <div className="small-note">
-                                  {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
-                                </div>
-
-                                <If value={this.state.app.webapp_inject}>
-                                  <div className="small-note text-material-red">
-                                    {i18n.t('*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.')}
-                                  </div>
-                                </If>
-                              </div>
-                            </If>
-                          </div>
-                        </div>
-
-                        <div className="list-group-separator"></div>
-
-                        <AddToList />
-                      </div>
-                    </div>
-                  </div>
-
-                  <If value={this.state.app.screenshots.length > 0 && this.state.app.screenshots[0] !== ''}>
-                    <div className="screenshots">
-                      <div className="row">
-                        <div className="col-md-12 text-center">
-                          <h3>{i18n.t('Screenshots')}</h3>
-                        </div>
-                      </div>
-
-                      <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
-                        <div className="row">
-                          <div className="col-md-12 screenshot-scroll">
-                            {this.state.app.screenshots.map(function(screenshot) {
-                              return (
-                                <div key={screenshot}>
-                                  <a href={screenshot} className="swipebox" rel="nofollow">
-                                    <img src={screenshot} alt="" className="screenshot" />
-                                  </a>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      </Swipeable>
-                    </div>
-                  </If>
-
-                  <div className="well app-tab">
                     <div className="row">
                       <div className="col-md-6">
-                        <h3>{i18n.t('Description')}</h3>
-                        <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>
+                        <div className="list-group">
+                          <div className="list-group-item">
+                            <div className="row-action-primary">
+                              <div className="icon-large ubuntu-shape">
+                                <img src={this.state.app.icon} alt={this.state.app.name} />
+                              </div>
+                            </div>
 
-                        <If value={this.state.app.changelog}>
-                          <h4>{i18n.t('Changelog')}</h4>
-                          <div dangerouslySetInnerHTML={utils.nl2br(this.state.app.changelog)} className="changelog"></div>
-                        </If>
+                            <div className="row-content app-info">
+                              <h1 className="list-group-item-heading">{this.state.app.title}</h1>
+                              <div className="list-group-item-text">
+                                <Stars stars={this.state.app.bayesian_average} />
+                                <Hearts hearts={this.state.app.points} />
+
+                                <If value={this.state.app.author}>
+                                  <Link to="/apps" query={author_query} title={i18n.t('Author')} className="clickable">{this.state.app.author}</Link>
+                                </If>
+
+                                <If value={this.state.app.company}>
+                                  <span title={i18n.t('Company')}>{this.state.app.company}</span>
+                                </If>
+
+                                <Types types={this.state.app.types} />
+                                <Price prices={this.state.app.prices} />
+                                <br/>
+                                <Features features={this.state.app.features} />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       <div className="col-md-6">
-                        <If value={this.state.app.permissions && this.state.app.permissions.length > 0}>
-                          <h3>{i18n.t('Permissions')}</h3>
-                          <ul>
-                            {this.state.app.permissions.map(function(permission) {
-                              var permissionName = permission.replace(/_/g, ' ').replace(/-/g, ' ').replace(/\w\S*/g, function(txt) {
-                                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); //To title Case
-                              });
+                        <div className="list-group">
+                          <div className="list-group-item sharing">
+                            <div className="row-action-primary">
+                                <div className="action-icon ubuntu-shape">
+                                  <i className="fa fa-sa" style={download_style}></i>
+                                </div>
+                            </div>
 
-                              return (
-                                <li key={permission}>{permissionName}</li>
-                              );
-                            })}
-                          </ul>
-                        </If>
+                            <div className="row-content">
+                              <If value={is_snappy}>
+                                <div className="list-group-item-text">
+                                  <If value={Object.keys(this.state.app.downloads).length > 0} element="span">
+                                    <div className="download-dropdown">
+                                      <div className="dropdown">
+                                        <button className="btn btn-sm btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                                         {i18n.t('Download')} &nbsp;
+                                         <span className="caret"></span>
+                                        </button>
+                                        <ul className="dropdown-menu">
+                                          {Object.keys(this.state.app.downloads).sort().map(function(arch, index) {
+                                            return (
+                                              <li key={index}>
+                                                <a href={this.state.app.downloads[arch]}>{arch}</a>
+                                              </li>
+                                            );
+                                          }, this)}
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </If>
 
-                        <h3>{i18n.t('Info')}</h3>
-
-                        <div>
-                          <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
-                            {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
-                          </If>
-
-                          <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') == -1}>
-                            {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
-                          </If>
-
-                          <If value={this.state.app.website}>
-                            {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
-                          </If>
-
-                          <If value={this.state.app.terms}>
-                            {i18n.t('Terms:')}
-                            <div>{this.state.app.terms}</div>
-                          </If>
-                        </div>
-
-                        <div>
-                          <br/>
-                          {i18n.t('Version:')} {this.state.app.version}
-                          <br/>
-                          {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
-                          <br/>
-                          {i18n.t('Published:')} {moment(this.state.app.published_date).format('MMM D, YYYY')}
-                          <br/>
-                          {i18n.t('License:')} {this.state.app.license}
-                          <br/>
-                          {i18n.t('File Size:')} {this.state.app.filesize}
-                          <br/>
-                          {i18n.t('Architectures:')} {this.state.app.architecture.join(', ')}
-
-                          <If value={this.state.app.framework.length > 0} element="span">
-                            <br/>
-                            {i18n.t('Framework:')} {this.state.app.framework.join(', ')}
-                          </If>
-
-                          <If value={this.state.app.url_dispatcher.length > 0} element="span">
-                            <br/>
-                            {i18n.t('Urls that open in this app:')} &nbsp;
-                            <If value={this.state.app.url_dispatcher.length == 1} element="span">
-                              {this.state.app.url_dispatcher[0]}
-                            </If>
-
-                            <If value={this.state.app.url_dispatcher.length > 1} element="span">
-                              <ul>
-                                {this.state.app.url_dispatcher.map(function(url, index) {
-                                  return (
-                                    <li key={index}>{url}</li>
-                                  );
-                                })}
-                              </ul>
-                            </If>
-                          </If>
-
-                          <If value={desktop_file || scope_ini || snapcraft}>
-                            <a className="clickable btn btn-success btn-sm" onClick={this.moreInfo}>
-                              {this.state.moreInfo ? i18n.t('Less Info') : i18n.t('More Info')}
-                            </a>
-                            <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
-                              <If value={this.state.moreInfo}>
-                                <If value={desktop_file}>
-                                  {i18n.t('Desktop File:')}
-                                  <pre>{desktop_file}</pre>
-                                </If>
-
-                                <If value={scope_ini}>
-                                  {i18n.t('Scope INI File:')}
-                                  <pre>{scope_ini}</pre>
-                                </If>
-
-                                <If value={snapcraft}>
-                                  {i18n.t('Snappy Metadata:')}
-                                  <pre>{snapcraft}</pre>
-                                </If>
+                                  <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
+                                </div>
                               </If>
-                            </Swipeable>
-                          </If>
+
+                              <If value={!is_snappy}>
+                                <div className="list-group-item-text">
+                                  <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
+
+                                  <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
+
+                                  <div className="small-note">
+                                    {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
+                                  </div>
+
+                                  <If value={this.state.app.webapp_inject}>
+                                    <div className="small-note text-material-red">
+                                      {i18n.t('*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.')}
+                                    </div>
+                                  </If>
+                                </div>
+                              </If>
+                            </div>
+                          </div>
+
+                          <div className="list-group-separator"></div>
+
+                          <AddToList />
                         </div>
                       </div>
                     </div>
+
+                    <If value={this.state.app.screenshots.length > 0 && this.state.app.screenshots[0] !== ''}>
+                      <div className="screenshots">
+                        <div className="row">
+                          <div className="col-md-12 text-center">
+                            <h3>{i18n.t('Screenshots')}</h3>
+                          </div>
+                        </div>
+
+                        <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
+                          <div className="row">
+                            <div className="col-md-12 screenshot-scroll">
+                              {this.state.app.screenshots.map(function(screenshot) {
+                                return (
+                                  <div key={screenshot}>
+                                    <a href={screenshot} className="swipebox" rel="nofollow">
+                                      <img src={screenshot} alt="" className="screenshot" />
+                                    </a>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </Swipeable>
+                      </div>
+                    </If>
+
+                    <div className="well app-tab">
+                      <div className="row">
+                        <div className="col-md-6">
+                          <h3>{i18n.t('Description')}</h3>
+                          <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>
+
+                          <If value={this.state.app.changelog}>
+                            <h4>{i18n.t('Changelog')}</h4>
+                            <div dangerouslySetInnerHTML={utils.nl2br(this.state.app.changelog)} className="changelog"></div>
+                          </If>
+                        </div>
+
+                        <div className="col-md-6">
+                          <If value={this.state.app.permissions && this.state.app.permissions.length > 0}>
+                            <h3>{i18n.t('Permissions')}</h3>
+                            <ul>
+                              {this.state.app.permissions.map(function(permission) {
+                                var permissionName = permission.replace(/_/g, ' ').replace(/-/g, ' ').replace(/\w\S*/g, function(txt) {
+                                  return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); //To title Case
+                                });
+
+                                return (
+                                  <li key={permission}>{permissionName}</li>
+                                );
+                              })}
+                            </ul>
+                          </If>
+
+                          <h3>{i18n.t('Info')}</h3>
+
+                          <div>
+                            <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
+                              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
+                            </If>
+
+                            <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') == -1}>
+                              {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{this.state.app.support}</a>
+                            </If>
+
+                            <If value={this.state.app.website}>
+                              {i18n.t('Website:')} <a href={this.state.app.website} rel="nofollow">{this.state.app.website}</a>
+                            </If>
+
+                            <If value={this.state.app.terms}>
+                              {i18n.t('Terms:')}
+                              <div>{this.state.app.terms}</div>
+                            </If>
+                          </div>
+
+                          <div>
+                            <br/>
+                            {i18n.t('Version:')} {this.state.app.version}
+                            <br/>
+                            {i18n.t('Updated:')} {moment(this.state.app.last_updated).format('MMM D, YYYY')}
+                            <br/>
+                            {i18n.t('Published:')} {moment(this.state.app.published_date).format('MMM D, YYYY')}
+                            <br/>
+                            {i18n.t('License:')} {this.state.app.license}
+                            <br/>
+                            {i18n.t('File Size:')} {this.state.app.filesize}
+                            <br/>
+                            {i18n.t('Architectures:')} {this.state.app.architecture.join(', ')}
+
+                            <If value={this.state.app.framework.length > 0} element="span">
+                              <br/>
+                              {i18n.t('Framework:')} {this.state.app.framework.join(', ')}
+                            </If>
+
+                            <If value={this.state.app.url_dispatcher.length > 0} element="span">
+                              <br/>
+                              {i18n.t('Urls that open in this app:')} &nbsp;
+                              <If value={this.state.app.url_dispatcher.length == 1} element="span">
+                                {this.state.app.url_dispatcher[0]}
+                              </If>
+
+                              <If value={this.state.app.url_dispatcher.length > 1} element="span">
+                                <ul>
+                                  {this.state.app.url_dispatcher.map(function(url, index) {
+                                    return (
+                                      <li key={index}>{url}</li>
+                                    );
+                                  })}
+                                </ul>
+                              </If>
+                            </If>
+
+                            <If value={desktop_file || scope_ini || snapcraft}>
+                              <a className="clickable btn btn-success btn-sm" onClick={this.moreInfo}>
+                                {this.state.moreInfo ? i18n.t('Less Info') : i18n.t('More Info')}
+                              </a>
+                              <Swipeable onSwipedRight={this.cancelSwipe} onSwipedLeft={this.cancelSwipe}>
+                                <If value={this.state.moreInfo}>
+                                  <If value={desktop_file}>
+                                    {i18n.t('Desktop File:')}
+                                    <pre>{desktop_file}</pre>
+                                  </If>
+
+                                  <If value={scope_ini}>
+                                    {i18n.t('Scope INI File:')}
+                                    <pre>{scope_ini}</pre>
+                                  </If>
+
+                                  <If value={snapcraft}>
+                                    {i18n.t('Snappy Metadata:')}
+                                    <pre>{snapcraft}</pre>
+                                  </If>
+                                </If>
+                              </Swipeable>
+                            </If>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <AppRow apps={this.state.app.author_apps}>
+                      <Link to="/apps" query={author_query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>
+                    </AppRow>
+
+                    <AppRow apps={this.state.app.related_apps}>
+                      {i18n.t('Similar Apps')}
+                    </AppRow>
+
+                    <Reviews name={this.state.app.name} bayesian_average={this.state.app.bayesian_average ? this.state.app.bayesian_average : 0} points={this.state.app.points} />
                   </div>
-
-                  <AppRow apps={this.state.app.author_apps}>
-                    <Link to="/apps" query={author_query}>{i18n.t('More Apps by:')} {this.state.app.author}</Link>
-                  </AppRow>
-
-                  <AppRow apps={this.state.app.related_apps}>
-                    {i18n.t('Similar Apps')}
-                  </AppRow>
-
-                  <Reviews name={this.state.app.name} bayesian_average={this.state.app.bayesian_average ? this.state.app.bayesian_average : 0} points={this.state.app.points} />
-                </div>
-              );
+                );
+              }
+              else if (this.state.missingApp == this.props.params.name) {
+                component = (
+                  <div className="text-center">
+                    <h1>{i18n.t('The app you are trying to find does not exist or has been removed.')}</h1>
+                    <h2><Link to="/apps">{i18n.t('Return to the search page')}</Link></h2>
+                  </div>
+                );
+              }
             }
 
             return component;

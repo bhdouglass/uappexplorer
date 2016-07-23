@@ -66,6 +66,7 @@ module.exports = new Baobab({
   frameworks: [],
 
   app: null,
+  missingApp: null,
   reviews: {
     params: {},
     reviews: [],
