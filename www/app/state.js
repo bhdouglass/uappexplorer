@@ -64,6 +64,7 @@ module.exports = new Baobab({
   apps: {},
   cache_keys: [],
   frameworks: [],
+  releases: [],
 
   app: null,
   missingApp: null,

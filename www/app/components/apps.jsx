@@ -13,6 +13,7 @@ var If = require('./helpers/if');
 var DEFAULT_ARCH = 'any';
 var DEFAULT_CATEGORY = 'all';
 var DEFAULT_FRAMEWORK = 'all';
+var DEFAULT_RELEASE = 'all';
 var DEFAULT_LICENSE = 'any';
 var DEFAULT_SORT = '-published_date';
 var DEFAULT_TYPE = 'all';
@@ -29,6 +30,7 @@ module.exports = React.createClass({
     apps: ['apps'],
     loading: ['loading'],
     frameworks: ['frameworks'],
+    releases: ['releases'],
     lng: ['lng'],
   },
 
@@ -42,6 +44,7 @@ module.exports = React.createClass({
       architecture: DEFAULT_ARCH,
       category: DEFAULT_CATEGORY,
       framework: DEFAULT_FRAMEWORK,
+      release: DEFAULT_RELEASE,
       license: DEFAULT_LICENSE,
       sort: DEFAULT_SORT,
       type: DEFAULT_TYPE,
@@ -85,6 +88,7 @@ module.exports = React.createClass({
         categories: params.category ? params.category : null,
         architecture: arch ? {'$in': arch} : null,
         framework: params.framework ? params.framework : null,
+        release: params.release ? params.release : null,
         license: license,
         types: params.type ? params.type : null,
       }
@@ -115,12 +119,18 @@ module.exports = React.createClass({
         architecture: arch ? arch[0] : DEFAULT_ARCH,
         category: paging.query.categories ? paging.query.categories : DEFAULT_CATEGORY,
         framework: paging.query.framework ? paging.query.framework : DEFAULT_FRAMEWORK,
+        release: paging.query.release ? paging.query.release : DEFAULT_RELEASE,
         license: params.license ? params.license : DEFAULT_LICENSE,
         sort: paging.sort ? paging.sort : DEFAULT_SORT,
         type: paging.query.types ? paging.query.types : DEFAULT_TYPE,
       };
 
-      if (s.architecture != DEFAULT_ARCH || s.framework != DEFAULT_FRAMEWORK || s.license != DEFAULT_LICENSE) {
+      if (
+        s.architecture != DEFAULT_ARCH ||
+        s.framework != DEFAULT_FRAMEWORK ||
+        s.license != DEFAULT_LICENSE ||
+        s.release != DEFAULT_RELEASE
+      ) {
         s.filters = true;
       }
 
@@ -134,6 +144,7 @@ module.exports = React.createClass({
 
   componentWillMount: function() {
     actions.getFrameworks();
+    actions.getReleases();
     this.getApps(this.props, this.state);
 
     actions.setOG({
@@ -246,6 +257,22 @@ module.exports = React.createClass({
     this.history.pushState(null, '/apps', this.props.location.query);
   },
 
+  changeRelease: function(event) {
+    var value = event.target.value.toLowerCase();
+    if (value == DEFAULT_RELEASE) {
+      delete this.props.location.query.release;
+    }
+    else {
+      this.props.location.query.release = value;
+    }
+
+    if (value != this.state.release && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
+    this.history.pushState(null, '/apps', this.props.location.query);
+  },
+
   render: function() {
     var count = 0;
     var pages = 0;
@@ -274,7 +301,7 @@ module.exports = React.createClass({
       <div className="apps">
         <div className="app-search">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-5">
               <h1>{category}</h1>
               <span>{count} {type}</span>
               <span>
@@ -282,7 +309,7 @@ module.exports = React.createClass({
                 {this.state.search ? i18n.t('Containing:') + ' "' + this.state.search + '"' : ''}
               </span>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-7">
               <div className="row">
                 <form className="top-filters">
                   <fieldset>
@@ -341,7 +368,7 @@ module.exports = React.createClass({
                 <div className="row">
                   <form>
                     <fieldset>
-                      <div className="form-group col-md-4">
+                      <div className="form-group col-md-3">
                         <label htmlFor="license" className="control-label">{i18n.t('License:')}</label>
                         <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
                           {info.licenses().map(function(license) {
@@ -350,7 +377,7 @@ module.exports = React.createClass({
                         </select>
                       </div>
 
-                      <div className="form-group col-md-4">
+                      <div className="form-group col-md-3">
                         <label htmlFor="architecture" className="control-label">{i18n.t('Architecture:')}</label>
                         <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
                           {info.architectures().map(function(architecture) {
@@ -359,12 +386,22 @@ module.exports = React.createClass({
                         </select>
                       </div>
 
-                      <div className="form-group col-md-4">
+                      <div className="form-group col-md-3">
                         <label htmlFor="framework" className="control-label">{i18n.t('Framework:')}</label>
                         <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
                           <option value="All">{i18n.t('All Frameworks')}</option>
                           {this.state.frameworks.map(function(framework) {
                             return <option value={framework} key={framework}>{framework}</option>;
+                          }, this)}
+                        </select>
+                      </div>
+
+                      <div className="form-group col-md-3">
+                        <label htmlFor="release" className="control-label">{i18n.t('Release:')}</label>
+                        <select id="release" className="form-control" value={this.state.release} onChange={this.changeRelease}>
+                          <option value="all">{i18n.t('All Releases')}</option>
+                          {this.state.releases.map(function(release) {
+                            return <option value={release} key={release}>{release}</option>;
                           }, this)}
                         </select>
                       </div>
