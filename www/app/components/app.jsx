@@ -271,6 +271,10 @@ module.exports = React.createClass({
 
                                   <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
                                 </div>
+
+                                <div className="small-note">
+                                  <a href="http://snapcraft.io/">{i18n.t('Install using snapd')}</a>
+                                </div>
                               </If>
 
                               <If value={!is_snappy}>
