@@ -1,9 +1,7 @@
 var fs = require('fs');
 var gulp = require('gulp');
-var addsrc = require('gulp-add-src');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
-var gutil = require('gulp-util');
 var htmlmin = require('gulp-htmlmin');
 var i18nextconv = require('gulp-i18next-conv');
 var jshint = require('gulp-jshint');
@@ -15,22 +13,16 @@ var react = require('gulp-react');
 var recess = require('gulp-recess');
 var rename = require('gulp-rename');
 var template = require('gulp-template');
-var uglify = require('gulp-uglify');
-var browserify = require('browserify');
-var buffer = require('vinyl-buffer');
 var del = require('del');
 var merge = require('merge-stream');
-var reactify = require('reactify');
-var source = require('vinyl-source-stream');
 var stylish = require('jshint-stylish');
-var watchify = require('watchify');
 var webpack = require('gulp-webpack');
 var webpackConfig = require('./webpack.config');
 
 var paths = {
   main_js: 'app/index.jsx',
   front_js: ['app/**/*.js', 'app/**/*.jsx'],
-  lint: ['app/**/*.js', 'app/**/*.jsx'],
+  lint: ['app/**/*.js', 'app/**/*.jsx', 'gulpfile.js'],
   imgs: [
     'img/*',
     'bower_components/swipebox/src/img/*'
