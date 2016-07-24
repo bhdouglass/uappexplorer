@@ -39,12 +39,23 @@ module.exports = React.createClass({
         </div>
         <br/>
 
-        <h4>{i18n.t('How do I install apps?')}</h4>
+        <h4>{i18n.t('How do I install phone apps and scopes?')}</h4>
         <div>
           <p>
             {i18n.t('To install an app, visit this site on your Ubuntu Touch device. Find the app that you wish to install and click the "Install" button. You will then be taken to the official appstore on your device where you can install the app.')}
           </p>
           <p>{i18n.t('Apps are not installed via this site, but via the official appstore.')}</p>
+        </div>
+        <br/>
+
+        <h4>{i18n.t('What are snaps?')}</h4>
+        <div>
+          <p>
+            {i18n.t('Snaps are a new type of Linux package designed to be cross distribution and more secure compared to traditional packages. Snaps are available on many desktop and server distributions and eventually will be available for Ubuntu Touch.')}
+          </p>
+          <p>
+            <a href="http://snapcraft.io/">{i18n.t('For more information, visit snapcraft.io')}</a>
+          </p>
         </div>
         <br/>
 

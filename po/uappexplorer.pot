@@ -47,7 +47,13 @@ msgstr ""
 msgid "All Frameworks"
 msgstr ""
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
+msgstr ""
+
+msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
@@ -287,6 +293,9 @@ msgstr ""
 msgid "Food & Drink"
 msgstr ""
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr ""
 
@@ -356,7 +365,7 @@ msgstr ""
 msgid "How can I help improve this site?"
 msgstr ""
 
-msgid "How do I install apps?"
+msgid "How do I install phone apps and scopes?"
 msgstr ""
 
 msgid "How is the popularity determined?"
@@ -605,6 +614,9 @@ msgstr ""
 msgid "Reference"
 msgstr ""
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr ""
 
@@ -665,10 +677,13 @@ msgstr ""
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
+msgid "Snap Metadata:"
 msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid "Snaps are a new type of Linux package designed to be cross distribution and more secure compared to traditional packages. Snaps are available on many desktop and server distributions and eventually will be available for Ubuntu Touch."
 msgstr ""
 
 msgid "Social Networking"
@@ -801,6 +816,9 @@ msgid "What app do you wish to see on Ubuntu Touch?"
 msgstr ""
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What are snaps?"
 msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
