@@ -1,4 +1,3 @@
-var fs = require('fs');
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
@@ -8,21 +7,18 @@ var jshint = require('gulp-jshint');
 var jsonminify = require('gulp-jsonminify');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
-var push = require('git-push');
-var react = require('gulp-react');
 var recess = require('gulp-recess');
-var rename = require('gulp-rename');
 var template = require('gulp-template');
 var del = require('del');
 var merge = require('merge-stream');
 var stylish = require('jshint-stylish');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
 var webpackConfig = require('./webpack.config');
 
 var paths = {
   main_js: 'app/index.jsx',
   front_js: ['app/**/*.js', 'app/**/*.jsx'],
-  lint: ['app/**/*.js', 'app/**/*.jsx', 'gulpfile.js'],
+  lint: ['app/**/*.js', 'gulpfile.js'],
   imgs: [
     'img/*',
     'bower_components/swipebox/src/img/*'
@@ -50,12 +46,11 @@ gulp.task('clean', function() {
 
 gulp.task('lint', function() {
   return merge(
-    //TODO find a way to integrate this into webpack
-    /*gulp.src(paths.lint)
-      .pipe(react())
+    //TODO lint jsx in webpack
+    gulp.src(paths.lint)
       .pipe(jshint())
       .pipe(jshint.reporter(stylish))
-      .pipe(jshint.reporter('fail')),*/
+      .pipe(jshint.reporter('fail')),
 
     gulp.src(paths.less)
       .pipe(recess({
@@ -108,6 +103,18 @@ gulp.task('build-img', function() {
 
 gulp.task('build-js', function() {
   return gulp.src(paths.main_js)
+    .pipe(webpack(webpackConfig, null, function(err) {
+      if (err) {
+        throw err;
+      }
+    }))
+    .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('watch-js', function() {
+  webpackConfig.watch = true;
+
+  return gulp.src(paths.main_js)
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('dist/js'));
 });
@@ -123,9 +130,11 @@ gulp.task('build-translations', function() {
 
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations']);
 
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['lint', 'clean', 'watch-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations'], function() {
   gulp.watch(paths.front_js, ['lint']);
   gulp.watch(paths.html, ['build-html']);
   gulp.watch(paths.less, ['lint', 'build-less']);
-  gulp.watch(paths.front_js, ['lint', 'build-js'])
+
+  //webpack-stream handles the watching
+  //gulp.watch(paths.front_js, ['lint', 'build-js']);
 });
