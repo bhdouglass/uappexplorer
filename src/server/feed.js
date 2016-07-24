@@ -149,6 +149,50 @@ function generateUpdatesFeed(callback) {
   });
 }
 
+function generateNewSnapFeed(callback) {
+  var feed = new RSS({
+    title:       'uApp Explorer New Snaps',
+    description: 'New snaps in uApp Explorer',
+    feed_url:    config.server.host + '/api/rss/new-snaps.xml',
+    site_url:    config.server.host,
+    image_url:   config.server.host + '/img/app-logo.png',
+    ttl:         240 //4 hours
+  });
+
+  var query = db.Package.find({types: {$in: [
+    'snappy',
+    'snappy_oem',
+    'snappy_os',
+    'snappy_kernel',
+    'snappy_gadget',
+    'snappy_framework',
+    'snappy_application',
+  ]}});
+  query.limit(10);
+  query.sort('-published_date');
+  query.exec(function(err, pkgs) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      _.forEach(pkgs, function(pkg) {
+        feed.item({
+          title:           'New ' + type(pkg.types) + ': ' + pkg.title,
+          url:             config.server.host + '/app/' + pkg.name,
+          description:     '<a href="' + config.server.host + '/app/' + pkg.name +
+                           '"><img src="' + config.server.host + '/api/icon/' +
+                           pkg.name + '.png" /></a><br/>' + pkg.description,
+          author:          pkg.author,
+          date:            pkg.last_updated,
+          custom_elements: [{tagline: pkg.tagline}],
+        });
+      });
+
+      callback(null, feed.xml({indent: true}));
+    }
+  });
+}
+
 function setup(app, success, error) {
   app.get('/api/rss/new-apps.xml', function(req, res) {
     generateNewFeed(function(err, f) {
@@ -176,6 +220,18 @@ function setup(app, success, error) {
 
   app.get('/api/rss/updated-apps.xml', function(req, res) {
     generateUpdatesFeed(function(err, f) {
+      if (err) {
+        error(res, err);
+      }
+      else {
+        res.header('Content-Type', 'text/xml');
+        res.send(f);
+      }
+    });
+  });
+
+  app.get('/api/rss/new-snaps.xml', function(req, res) {
+    generateNewSnapFeed(function(err, f) {
       if (err) {
         error(res, err);
       }

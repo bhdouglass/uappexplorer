@@ -94,12 +94,9 @@ module.exports = React.createClass({
               <a href="https://telegram.me/joinchat/Bd_29AYVkY6F9xHvJlPq_g" style={{display: 'inline-block !important'}}><i className="fa fa-fw fa-send-o"></i> Telegram</a>
             </div>
             <div className="col-sm-4">
-              <a href="http://feeds.feedburner.com/UbuntuTouchNewApps">
-                <i className="fa fa-fw fa-rss-square"></i> {i18n.t('New Apps')}
-              </a>
-              <a href="http://feeds.feedburner.com/uAppExplorerUpdatedApps">
-                <i className="fa fa-fw fa-rss-square"></i> {i18n.t('Updated Apps')}
-              </a>
+              <Link to="/feeds">
+                <i className="fa fa-fw fa-rss-square"></i> {i18n.t('RSS Feeds')}
+              </Link>
             </div>
           </div>
         </div>

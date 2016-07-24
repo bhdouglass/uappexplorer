@@ -407,6 +407,9 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
+msgid "Install using snapd"
+msgstr ""
+
 msgid "Is this an existing app?"
 msgstr ""
 
@@ -611,6 +614,9 @@ msgstr ""
 msgid "QR Code"
 msgstr ""
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr ""
 
@@ -684,6 +690,9 @@ msgid "Snaps"
 msgstr ""
 
 msgid "Snaps are a new type of Linux package designed to be cross distribution and more secure compared to traditional packages. Snaps are available on many desktop and server distributions and eventually will be available for Ubuntu Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
