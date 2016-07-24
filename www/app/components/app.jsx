@@ -165,7 +165,11 @@ module.exports = React.createClass({
                 var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
                 var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
                 var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
-                var author_query = {q: 'author:' + this.state.app.author};
+                var author_query = {
+                  q: 'author:' + this.state.app.author,
+                  type: 'all_types',
+                  sort: '-points',
+                };
 
                 component = (
                   <div className="swipe-container">
@@ -425,7 +429,7 @@ module.exports = React.createClass({
                                   </If>
 
                                   <If value={snapcraft}>
-                                    {i18n.t('Snappy Metadata:')}
+                                    {i18n.t('Snap Metadata:')}
                                     <pre>{snapcraft}</pre>
                                   </If>
                                 </If>

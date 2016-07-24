@@ -309,8 +309,7 @@ function setup(app, success, error) {
         'scope'
       ]};
     }
-
-    if (findQuery.types == 'snappy') {
+    else if (findQuery.types == 'snappy') {
       findQuery.types = {$in: [
         'snappy',
         'snappy_oem',
@@ -320,6 +319,9 @@ function setup(app, success, error) {
         'snappy_framework',
         'snappy_application',
       ]};
+    }
+    else if (findQuery.types == 'all_types') {
+      delete findQuery.types;
     }
 
     if (findQuery.license == 'Open Source') {

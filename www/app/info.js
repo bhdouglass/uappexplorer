@@ -1,13 +1,14 @@
 var i18n = require('i18next-client');
 
 module.exports = {
-  count_types: function() {
+  count_types: function(count) {
     return {
+      all_types: i18n.t('apps', {count: count}),
       all: i18n.t('phone apps & scopes'),
-      application: i18n.t('apps'),
-      scope: i18n.t('scopes'),
-      webapp: i18n.t('web apps'),
-      snappy: i18n.t('snaps'),
+      application: i18n.t('apps', {count: count}),
+      scope: i18n.t('scopes', {count: count}),
+      webapp: i18n.t('web apps', {count: count}),
+      snappy: i18n.t('snaps', {count: count}),
       snappy_oem: i18n.t('oem snaps'),
       snappy_os: i18n.t('os snaps'),
       snappy_kernel: i18n.t('kernel snaps'),
@@ -20,6 +21,9 @@ module.exports = {
   types: function() {
     return [
       {
+        label: i18n.t('All Types'),
+        value: 'all_types',
+      }, {
         label: i18n.t('Phone Apps & Scopes'),
         value: 'all',
       }, {

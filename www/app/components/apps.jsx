@@ -266,7 +266,7 @@ module.exports = React.createClass({
       apps = this.state.apps[this.state.key].apps;
 
       if (this.state.type) {
-        type = info.count_types()[this.state.type];
+        type = info.count_types(count)[this.state.type];
       }
     }
 
