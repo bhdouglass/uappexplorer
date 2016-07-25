@@ -515,6 +515,9 @@ msgstr ""
 msgid "New List"
 msgstr ""
 
+msgid "New Snaps"
+msgstr ""
+
 msgid "New apps are fetched from the official appstore every hour, you can either wait until the new apps are fetched or use the request form to request that the app be found early."
 msgstr ""
 

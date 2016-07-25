@@ -28,6 +28,11 @@ module.exports = React.createClass({
             <i className="fa fa-fw fa-rss-square"></i> {i18n.t('Updated Apps')}
           </a>
         </h4>
+        <h4>
+          <a href="http://feeds.feedburner.com/uAppExplorerNewSnaps">
+            <i className="fa fa-fw fa-rss-square"></i> {i18n.t('New Snaps')}
+          </a>
+        </h4>
 
         <h1>{i18n.t('Social Media')}</h1>
 
