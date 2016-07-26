@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
 "PO-Revision-Date: 2016-02-20 19:12+0000\n"
 "Last-Translator: Marius Gripsgard  <me@mariogrip.com>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: nb\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -63,7 +63,13 @@ msgstr ""
 msgid "All Frameworks"
 msgstr ""
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
+msgstr ""
+
+msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
@@ -203,9 +209,6 @@ msgstr "Kunne ikke laste ned app-data. Trykk for å prøve igjen,"
 msgid "Could not download app list, click to retry"
 msgstr "Kunne ikke laste ned app-listen. Trykk for å prøve igjen."
 
-msgid "Could not find app"
-msgstr "Kunne ikke finne appen"
-
 msgid "Could not find the requested app"
 msgstr "Kunne ikke finne den forespurte appen."
 
@@ -319,6 +322,9 @@ msgstr ""
 msgid "Food & Drink"
 msgstr "Mat og drikke"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "For versjon"
 
@@ -391,7 +397,7 @@ msgstr ""
 msgid "How can I help improve this site?"
 msgstr ""
 
-msgid "How do I install apps?"
+msgid "How do I install phone apps and scopes?"
 msgstr ""
 
 msgid "How is the popularity determined?"
@@ -435,6 +441,9 @@ msgstr "Info"
 
 msgid "Install"
 msgstr "Installer"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr ""
@@ -541,6 +550,9 @@ msgstr ""
 msgid "New List"
 msgstr "Ny liste"
 
+msgid "New Snaps"
+msgstr ""
+
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
 "wait until the new apps are fetched or use the request form to request that "
@@ -645,10 +657,19 @@ msgstr ""
 msgid "QR Code"
 msgstr "QR-kode"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "Referanse"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
+msgstr ""
+
+msgid "Return to the search page"
 msgstr ""
 
 msgid "Save"
@@ -705,10 +726,20 @@ msgstr "Lignende Apps"
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
+msgid "Snap Metadata:"
 msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
@@ -744,6 +775,9 @@ msgstr ""
 msgid "Thank you!"
 msgstr "Tusen takk!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -760,9 +794,6 @@ msgid ""
 msgstr ""
 
 msgid "This app is on these lists:"
-msgstr ""
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
 msgstr ""
 
 msgid "This list is empty!"
@@ -861,6 +892,9 @@ msgstr ""
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr ""
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 
@@ -946,9 +980,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

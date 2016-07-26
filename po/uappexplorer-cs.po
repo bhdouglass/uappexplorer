@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
 "PO-Revision-Date: 2016-06-01 10:06+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: cs\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -61,7 +61,13 @@ msgstr "Všechny architektury"
 msgid "All Frameworks"
 msgstr "Všechny frameworky"
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
+msgstr ""
+
+msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
@@ -210,9 +216,6 @@ msgstr "Nebylo možné stáhnout data o aplikaci, klikněte pro opakování akce
 msgid "Could not download app list, click to retry"
 msgstr "Nebylo možné stáhnout seznam aplikací, klikněte pro opakování akce"
 
-msgid "Could not find app"
-msgstr "Nebylo možné najít aplikaci"
-
 msgid "Could not find the requested app"
 msgstr "Hledanou aplikaci nebylo možné nalézt"
 
@@ -332,6 +335,9 @@ msgstr "Hledat aplikaci která nebyla nalezena v oficiálním obchodě Ubuntu"
 msgid "Food & Drink"
 msgstr "Jídlo a pití"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "Pro verzi:"
 
@@ -407,8 +413,8 @@ msgstr "Nejvyšší počet hvězd"
 msgid "How can I help improve this site?"
 msgstr "Jak mohu pomoci vylepšit tuto stránku?"
 
-msgid "How do I install apps?"
-msgstr "Jak nainstaluji aplikace?"
+msgid "How do I install phone apps and scopes?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr "Jak je určována oblíbenost aplikací?"
@@ -459,6 +465,9 @@ msgstr "Informace o aplikaci"
 
 msgid "Install"
 msgstr "Instalovat"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr "Existuje již tato aplikace?"
@@ -564,6 +573,9 @@ msgstr "Nové aplikace"
 
 msgid "New List"
 msgstr "Nový seznam"
+
+msgid "New Snaps"
+msgstr ""
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -676,11 +688,20 @@ msgstr "Push notifikace"
 msgid "QR Code"
 msgstr "QR kód"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "Odkazy"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr "Odstranit tuto aplikaci z vašeho seznamu"
+
+msgid "Return to the search page"
+msgstr ""
 
 msgid "Save"
 msgstr "Uložit"
@@ -736,10 +757,20 @@ msgstr "Podobné aplikace"
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
-msgstr "Snappy metadata:"
+msgid "Snap Metadata:"
+msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
@@ -775,6 +806,9 @@ msgstr "Děkujeme za vaše hlasování"
 msgid "Thank you!"
 msgstr "Děkujeme!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -802,9 +836,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "Tato aplikace se nachází na těchto seznamech:"
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr "Toto je neoficiální prohlížeč pro Ubuntu Touch a aplikace Snappy"
 
 msgid "This list is empty!"
 msgstr "Tento seznam je prázdný!"
@@ -914,6 +945,9 @@ msgstr "Jakou aplikaci byste si na Ubuntu Touch přáli?"
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Jaké aplikace byste si na Ubuntu Touch přáli?"
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 "Co dělat v případě, že naleznu obsah porušující copyright nebo ochranou "
@@ -1009,9 +1043,11 @@ msgstr[1] "rozsahy/ů"
 msgstr[2] "rozsahy/ů"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

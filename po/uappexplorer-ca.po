@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
-"PO-Revision-Date: 2016-07-08 09:39+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
+"PO-Revision-Date: 2016-07-25 10:13+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(No us preocupeu, també hi ha una versió lliure!)"
@@ -62,8 +62,14 @@ msgstr "Totes les arquitectures"
 msgid "All Frameworks"
 msgstr "Tots els frameworks"
 
+msgid "All Releases"
+msgstr "Tots els llançaments"
+
 msgid "All Snaps"
 msgstr "Tots els Snaps"
+
+msgid "All Types"
+msgstr "Tots els tipus"
 
 msgid "Amazon Link"
 msgstr "Enllaç d'Amazon"
@@ -222,9 +228,6 @@ msgstr ""
 "No s'han pogut baixar la llista de les aplicacion, cliqueu per tornar a "
 "provar"
 
-msgid "Could not find app"
-msgstr "No s'ha trobat l'aplicació"
-
 msgid "Could not find the requested app"
 msgstr "No s'ha pogut trobar l'aplicació demanada"
 
@@ -353,6 +356,9 @@ msgstr ""
 msgid "Food & Drink"
 msgstr "Menjar i beguda"
 
+msgid "For more information, visit snapcraft.io"
+msgstr "Visiteu snapcraft.io per més informació"
+
 msgid "For version:"
 msgstr "Per la versió:"
 
@@ -428,8 +434,8 @@ msgstr "Màxima valoració de Estrelles"
 msgid "How can I help improve this site?"
 msgstr "Com puc ajudar a millorar aquest lloc?"
 
-msgid "How do I install apps?"
-msgstr "Com instal·lo aplicacions?"
+msgid "How do I install phone apps and scopes?"
+msgstr "Com s'instal·len les aplicacions i àmbients pel telèfon?"
 
 msgid "How is the popularity determined?"
 msgstr "Com es determina la popularitat?"
@@ -475,6 +481,9 @@ msgstr "Informació"
 
 msgid "Install"
 msgstr "Instal·la"
+
+msgid "Install using snapd"
+msgstr "Instal·la usant snapd"
 
 msgid "Is this an existing app?"
 msgstr "És una aplicació existent?"
@@ -580,6 +589,9 @@ msgstr "Noves aplicacions"
 
 msgid "New List"
 msgstr "Llista nova"
+
+msgid "New Snaps"
+msgstr "Nous Snaps"
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -691,11 +703,20 @@ msgstr "Notificacions de tramesa automàtica (Push)"
 msgid "QR Code"
 msgstr "Codi QR"
 
+msgid "RSS Feeds"
+msgstr "Canals RSS"
+
 msgid "Reference"
 msgstr "Referència"
 
+msgid "Release:"
+msgstr "Llançament:"
+
 msgid "Remove this app from your list"
 msgstr "Elimineu aquesta aplicació de la vostra llista"
+
+msgid "Return to the search page"
+msgstr "Torna a la pàgina de cerca"
 
 msgid "Save"
 msgstr "Desa"
@@ -751,11 +772,24 @@ msgstr "Aplicacions semblants"
 msgid "Snap"
 msgstr "Snap"
 
-msgid "Snappy Metadata:"
-msgstr "Metadades <<Snappy>>"
+msgid "Snap Metadata:"
+msgstr "Metadades de l'Snap:"
 
 msgid "Snaps"
 msgstr "Snaps"
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+"L'Snaps és un nou tipus de paquet per a Linux més segur i dissenyat per ser "
+"multidistribució. Els Snaps són disponibles per a moltes distribucions "
+"d'escriptori i per servidors i probablement aviat també per a l'Ubuntu Touch."
+
+msgid "Social Media"
+msgstr "Mitjans socials"
 
 msgid "Social Networking"
 msgstr "Xarxes socials"
@@ -790,6 +824,9 @@ msgstr "Gràcies pel vostre vot!"
 msgid "Thank you!"
 msgstr "Gràcies!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr "L'aplicació que esteu cercant no existeix o ha estat esborrada."
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -814,11 +851,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "Aquesta aplicació es troba dins aquestes llistes:"
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr ""
-"Aquest és un visor d'aplicacions no oficial per aplicacions d'Ubuntu Touch i "
-"Snappy."
 
 msgid "This list is empty!"
 msgstr "Aquesta llista és buida!"
@@ -926,6 +958,9 @@ msgstr "Que us agradaria veure a l'Ubuntu Touch?"
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Quines aplicacions voldrieu veure a l'Ubuntu Touch?"
 
+msgid "What are snaps?"
+msgstr "Què són els snaps?"
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 "Que he de fer si trobo infraccions de contingut amb copyright o marques "
@@ -985,7 +1020,7 @@ msgstr[0] "aplicació"
 msgstr[1] "aplicacions"
 
 msgid "framework snaps"
-msgstr "apps de framework"
+msgstr "snaps de framework"
 
 msgid "gadget snaps"
 msgstr "snaps de giny"
@@ -1019,9 +1054,13 @@ msgstr[0] "àmbit"
 msgstr[1] "àmbits"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] "snap"
-msgstr[1] "snaps"
+msgstr "snaps"
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
+"L'uApp Explorer és el visor no oficial pels snaps i les aplicacions per "
+"l'Ubuntu Touch"
 
 msgid "web apps"
 msgid_plural "web apps"

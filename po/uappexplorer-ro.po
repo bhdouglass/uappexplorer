@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
 "PO-Revision-Date: 2016-04-24 20:36+0000\n"
 "Last-Translator: Buzea Bogdan <Unknown>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(Nu-ți face griji, există și o versiune gratuită)"
@@ -59,7 +59,13 @@ msgstr "Toate Arhitecturile"
 msgid "All Frameworks"
 msgstr "Toate Framework-urile"
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
+msgstr ""
+
+msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
@@ -205,9 +211,6 @@ msgstr ""
 msgid "Could not download app list, click to retry"
 msgstr ""
 
-msgid "Could not find app"
-msgstr ""
-
 msgid "Could not find the requested app"
 msgstr ""
 
@@ -322,6 +325,9 @@ msgstr ""
 msgid "Food & Drink"
 msgstr "Hrana si Bautura"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "Pentru versiunea:"
 
@@ -394,8 +400,8 @@ msgstr ""
 msgid "How can I help improve this site?"
 msgstr "Cum pot contribui la imbunatatirea acestui site?"
 
-msgid "How do I install apps?"
-msgstr "Cum instalez aplicatii?"
+msgid "How do I install phone apps and scopes?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr "Cum este determinata popularitatea?"
@@ -438,6 +444,9 @@ msgstr "Info"
 
 msgid "Install"
 msgstr "Instaleaza"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr "Este aceasta o aplicatie existenta?"
@@ -544,6 +553,9 @@ msgstr "Aplicatii noi"
 msgid "New List"
 msgstr "Listă noua"
 
+msgid "New Snaps"
+msgstr ""
+
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
 "wait until the new apps are fetched or use the request form to request that "
@@ -648,11 +660,20 @@ msgstr ""
 msgid "QR Code"
 msgstr "Cod QR"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "Referinta"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr "Elimina aceasta aplicatie din lista ta"
+
+msgid "Return to the search page"
+msgstr ""
 
 msgid "Save"
 msgstr "Salveaza"
@@ -708,10 +729,20 @@ msgstr "Aplicatii Similare"
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
+msgid "Snap Metadata:"
 msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
@@ -747,6 +778,9 @@ msgstr "Multumesc pentru vot!"
 msgid "Thank you!"
 msgstr "Vă mulțumim!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -764,9 +798,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "Aceasta aplicatie se gaseste pe aceste liste:"
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr ""
 
 msgid "This list is empty!"
 msgstr "Aceasta lista este goala!"
@@ -864,6 +895,9 @@ msgstr "Ce aplicatie iti doresti sa vezi pe Ubuntu Touch?"
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Ce aplicatii iti doresti sa vezi pe Ubuntu Touch?"
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 
@@ -953,9 +987,11 @@ msgstr[1] "scope-uri"
 msgstr[2] "scope-uri"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

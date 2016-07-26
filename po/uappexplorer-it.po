@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
-"PO-Revision-Date: 2016-05-17 15:56+0000\n"
-"Last-Translator: max <maxymilians@libero.it>\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
+"PO-Revision-Date: 2016-07-25 08:31+0000\n"
+"Last-Translator: Emanuele Antonio Faraone <emanueleant03@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: it\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -62,8 +62,14 @@ msgstr "italiano"
 msgid "All Frameworks"
 msgstr "italiano"
 
-msgid "All Snaps"
+msgid "All Releases"
 msgstr ""
+
+msgid "All Snaps"
+msgstr "Tutto gli snap"
+
+msgid "All Types"
+msgstr "Tutti i tipi"
 
 msgid "Amazon Link"
 msgstr "italiano"
@@ -103,7 +109,7 @@ msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "italiano"
 
 msgid "App Snaps"
-msgstr ""
+msgstr "Snap di app"
 
 msgid "App Wishlist"
 msgstr "italiano"
@@ -216,9 +222,6 @@ msgstr "Impossibile scaricare i dati applicazione, fare clic per riprovare"
 
 msgid "Could not download app list, click to retry"
 msgstr "Impossibile scaricare l'elenco applicazioni, fare clic per riprovare"
-
-msgid "Could not find app"
-msgstr "Impossibile trovare applicazioni"
 
 msgid "Could not find the requested app"
 msgstr "Impossibile trovare l'applicazione richiesta"
@@ -345,6 +348,9 @@ msgstr ""
 msgid "Food & Drink"
 msgstr "Cibo e bevande"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "Per versione:"
 
@@ -420,8 +426,8 @@ msgstr "Punteggio stella più alto"
 msgid "How can I help improve this site?"
 msgstr "Come contribuire per migliorare questo sito?"
 
-msgid "How do I install apps?"
-msgstr "Come installare le applicazioni?"
+msgid "How do I install phone apps and scopes?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr "Come viene determinata la popolarità?"
@@ -468,6 +474,9 @@ msgstr "Info"
 
 msgid "Install"
 msgstr "Installa"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr "È un'app esistente?"
@@ -573,6 +582,9 @@ msgstr "Nuove applicazioni"
 
 msgid "New List"
 msgstr "Nuovo elenco"
+
+msgid "New Snaps"
+msgstr ""
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -682,11 +694,20 @@ msgstr "Notifiche push"
 msgid "QR Code"
 msgstr "Codice QR"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "Riferimento"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr "Rimuovere questa applicazione dal proprio elenco"
+
+msgid "Return to the search page"
+msgstr ""
 
 msgid "Save"
 msgstr "Salva"
@@ -742,10 +763,20 @@ msgstr "Applicazioni simili"
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
-msgstr "Metadata Snappy:"
+msgid "Snap Metadata:"
+msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
@@ -781,6 +812,9 @@ msgstr "Grazie per il tuo voto"
 msgid "Thank you!"
 msgstr "Grazie!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -808,9 +842,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "Questa applicazione è in questi elenchi:"
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr "Questo é un browser non ufficiale per app Ubuntu Touch e app Snappy."
 
 msgid "This list is empty!"
 msgstr "Questo elenco è vuoto!"
@@ -919,6 +950,9 @@ msgstr "Quale app vorresti vedere su ubuntu touch?"
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Quali app vorresti vedere su Ubuntu Touch?"
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Cosa fare se si trova una violazione di copyright o marchi?"
 
@@ -1007,9 +1041,11 @@ msgstr[0] "ambito"
 msgstr[1] "ambiti"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

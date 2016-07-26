@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
 "PO-Revision-Date: 2016-07-08 05:11+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: zh_CN\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -58,8 +58,14 @@ msgstr "所有架构"
 msgid "All Frameworks"
 msgstr "所有框架"
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
 msgstr "全部 Snaps"
+
+msgid "All Types"
+msgstr ""
 
 msgid "Amazon Link"
 msgstr "亚马逊链接"
@@ -198,9 +204,6 @@ msgstr "无法下载应用数据，点击重试"
 msgid "Could not download app list, click to retry"
 msgstr "无法下载应用列表，点击重试"
 
-msgid "Could not find app"
-msgstr "无法找到应用"
-
 msgid "Could not find the requested app"
 msgstr "无法找到请求的应用"
 
@@ -316,6 +319,9 @@ msgstr "查找尚未从官方应用商店获取的应用。"
 msgid "Food & Drink"
 msgstr "饮食"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "版本："
 
@@ -388,8 +394,8 @@ msgstr "最高星评分"
 msgid "How can I help improve this site?"
 msgstr "如何改善此站？"
 
-msgid "How do I install apps?"
-msgstr "如何安装应用？"
+msgid "How do I install phone apps and scopes?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr "受欢迎度是如何确定的?"
@@ -432,6 +438,9 @@ msgstr "信息"
 
 msgid "Install"
 msgstr "安装"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr "这是一个现有的App吗？"
@@ -538,6 +547,9 @@ msgstr "新应用"
 msgid "New List"
 msgstr "新列表"
 
+msgid "New Snaps"
+msgstr ""
+
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
 "wait until the new apps are fetched or use the request form to request that "
@@ -642,11 +654,20 @@ msgstr "推送通知"
 msgid "QR Code"
 msgstr "二维码"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "参考"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr "从你的列表里移除这个应用"
+
+msgid "Return to the search page"
+msgstr ""
 
 msgid "Save"
 msgstr "保存"
@@ -702,11 +723,21 @@ msgstr "类似的应用"
 msgid "Snap"
 msgstr "Snap"
 
-msgid "Snappy Metadata:"
-msgstr "Snappy 元数据："
+msgid "Snap Metadata:"
+msgstr ""
 
 msgid "Snaps"
 msgstr "Snaps"
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
+msgstr ""
 
 msgid "Social Networking"
 msgstr "社交网络"
@@ -741,6 +772,9 @@ msgstr "感谢您的投票！"
 msgid "Thank you!"
 msgstr "谢谢你！"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -760,9 +794,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "该应用在这些列表："
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr "这是一个 Ubuntu Touch 和 Snappy 应用的非官方应用查看器。"
 
 msgid "This list is empty!"
 msgstr "这个列表是空的！"
@@ -865,6 +896,9 @@ msgstr "你希望在Ubuntu Touch上见到什么应用？"
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "你希望在Ubuntu Touch上见到什么应用？"
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "如果我找到版权或商标侵权内容，该怎么做?"
 
@@ -948,8 +982,11 @@ msgid_plural "scopes"
 msgstr[0] "scopes"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] "snaps"
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

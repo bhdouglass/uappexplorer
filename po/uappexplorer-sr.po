@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
 "PO-Revision-Date: 2016-06-14 20:02+0000\n"
 "Last-Translator: Bojan Bogdanović <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 
 msgid "(Don't worry, there is a free version too!)"
 msgstr "(Не брините, ово је такође бесплатна верзија!)"
@@ -62,7 +62,13 @@ msgstr "Све архитектуре"
 msgid "All Frameworks"
 msgstr "Сви оквири"
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
+msgstr ""
+
+msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
@@ -207,9 +213,6 @@ msgstr "Не могу преузети податке програма, клик
 msgid "Could not download app list, click to retry"
 msgstr "Не могу преузети листу програма, кликните да покушате поново"
 
-msgid "Could not find app"
-msgstr "Не могу наћи програм"
-
 msgid "Could not find the requested app"
 msgstr "Не могу наћи захтевани програм"
 
@@ -326,6 +329,9 @@ msgstr "Пронађи програм који још увек није преу
 msgid "Food & Drink"
 msgstr "Храна & Пиће"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "За верзију:"
 
@@ -401,8 +407,8 @@ msgstr "Највиша оцена звездицом"
 msgid "How can I help improve this site?"
 msgstr "Како могу помоћи да се унапреди интернет страница?"
 
-msgid "How do I install apps?"
-msgstr "Како да инсталирам програм?"
+msgid "How do I install phone apps and scopes?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr "Како је утврђена популарност?"
@@ -447,6 +453,9 @@ msgstr "Инфо"
 
 msgid "Install"
 msgstr "Инсталирај"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr "Да ли је ово постојећи програм?"
@@ -552,6 +561,9 @@ msgstr "Нови програми"
 
 msgid "New List"
 msgstr "Нова листа"
+
+msgid "New Snaps"
+msgstr ""
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -662,11 +674,20 @@ msgstr "Обавештења гурањем"
 msgid "QR Code"
 msgstr "QR Код"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "Референце"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr "Уклните овај програм из Ваше листе"
+
+msgid "Return to the search page"
+msgstr ""
 
 msgid "Save"
 msgstr "Сачувај"
@@ -722,10 +743,20 @@ msgstr "Слични програми"
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
-msgstr "Снепи метаподаци:"
+msgid "Snap Metadata:"
+msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
@@ -761,6 +792,9 @@ msgstr "Хвала Вам на Вашем гласу!"
 msgid "Thank you!"
 msgstr "Хвала Вам!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -786,9 +820,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "Овај програм је на листама:"
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr "Ово је незванични прегледач програма за Убунту Тач и Снепи програме."
 
 msgid "This list is empty!"
 msgstr "Ова листа је празна!"
@@ -896,6 +927,9 @@ msgstr "Који програм би сте желели да видите на 
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Који програме би сте желели да видите на Убунту Тач-у?"
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
 "Шта да урадим ако пронађем нарушавање ауторских права или робне марке?"
@@ -990,9 +1024,11 @@ msgstr[1] "опсега"
 msgstr[2] "опсега"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"

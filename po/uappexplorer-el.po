@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-08 04:42+0000\n"
+"POT-Creation-Date: 2016-07-25 05:12+0000\n"
 "PO-Revision-Date: 2016-04-18 05:23+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-11 00:24+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: el\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -63,7 +63,13 @@ msgstr "Όλες οι αρχιτεκτονικές"
 msgid "All Frameworks"
 msgstr "Όλοι οι σκελετοί"
 
+msgid "All Releases"
+msgstr ""
+
 msgid "All Snaps"
+msgstr ""
+
+msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
@@ -225,9 +231,6 @@ msgstr ""
 "Δεν κατέστη δυνατή η λήψη του καταλόγου με τις εφαρμογές, πατήστε εδώ για να "
 "προσπαθήσετε ξανά"
 
-msgid "Could not find app"
-msgstr "Δε βρέθηκε η εφαρμογή"
-
 msgid "Could not find the requested app"
 msgstr "Δε βρέθηκε η εφαρμογή προς αναζήτηση"
 
@@ -358,6 +361,9 @@ msgstr ""
 msgid "Food & Drink"
 msgstr "Φαγητό & ποτά"
 
+msgid "For more information, visit snapcraft.io"
+msgstr ""
+
 msgid "For version:"
 msgstr "Για την έκδοση:"
 
@@ -433,8 +439,8 @@ msgstr "Υψηλότερη βαθμολογία σε αστέρια"
 msgid "How can I help improve this site?"
 msgstr "Πώς μπορώ να βοηθήσω στη βελτίωση αυτού του ιστότοπου;"
 
-msgid "How do I install apps?"
-msgstr "Πώς εγκαθιστώ εφαρμογές;"
+msgid "How do I install phone apps and scopes?"
+msgstr ""
 
 msgid "How is the popularity determined?"
 msgstr "Πώς υπολογίζεται η δημοτικότητα;"
@@ -487,6 +493,9 @@ msgstr "Πληροφορίες"
 
 msgid "Install"
 msgstr "Εγκατάσταση"
+
+msgid "Install using snapd"
+msgstr ""
 
 msgid "Is this an existing app?"
 msgstr "Είναι αυτή μια υπάρχουσα εφαρμογή;"
@@ -592,6 +601,9 @@ msgstr "Νέες εφαρμογές"
 
 msgid "New List"
 msgstr "Νέος κατάλογος"
+
+msgid "New Snaps"
+msgstr ""
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -704,11 +716,20 @@ msgstr ""
 msgid "QR Code"
 msgstr "Κώδικας QR"
 
+msgid "RSS Feeds"
+msgstr ""
+
 msgid "Reference"
 msgstr "Παραπομπή"
 
+msgid "Release:"
+msgstr ""
+
 msgid "Remove this app from your list"
 msgstr "Διαγραφή της εφαρμογής αυτής από τον κατάλογό σας"
+
+msgid "Return to the search page"
+msgstr ""
 
 msgid "Save"
 msgstr "Αποθήκευση"
@@ -764,10 +785,20 @@ msgstr "Αντίστοιχες εφαρμογές"
 msgid "Snap"
 msgstr ""
 
-msgid "Snappy Metadata:"
+msgid "Snap Metadata:"
 msgstr ""
 
 msgid "Snaps"
+msgstr ""
+
+msgid ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
+msgstr ""
+
+msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
@@ -803,6 +834,9 @@ msgstr "Ευχαριστώ για τη ψήφο σας!"
 msgid "Thank you!"
 msgstr "Ευχαριστώ!"
 
+msgid "The app you are trying to find does not exist or has been removed."
+msgstr ""
+
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
@@ -831,9 +865,6 @@ msgstr ""
 
 msgid "This app is on these lists:"
 msgstr "Η εφαρμογή αυτή βρίσκεται στους ακόλουθους καταλόγους:"
-
-msgid "This is an unofficial app viewer for Ubuntu Touch and Snappy apps."
-msgstr ""
 
 msgid "This list is empty!"
 msgstr "Ο κατάλογος αυτός είναι άδειος!"
@@ -943,6 +974,9 @@ msgstr "Τι εφαρμογή θα επιθυμούσατε να δείτε στ
 msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Τι εφαρμογές θα επιθυμούσατε να δείτε στο Ubuntu Touch;"
 
+msgid "What are snaps?"
+msgstr ""
+
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Τι πρέπει να κάνω αν βρω υλικό που καταπατάει πνευματικά δικαιώματα;"
 
@@ -1035,9 +1069,11 @@ msgstr[0] "επισκόπια"
 msgstr[1] "επισκόπια"
 
 msgid "snaps"
-msgid_plural "snaps"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
+msgid ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
+msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"
