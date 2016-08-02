@@ -254,6 +254,10 @@ function setup(app, success, error) {
           eQuery.and.push({terms: terms});
         }
       });
+
+      if (eQuery.and.length === 0) {
+        delete eQuery.and;
+      }
     }
 
     var sort = '';
