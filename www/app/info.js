@@ -327,7 +327,7 @@ module.exports = {
     }, {
       'name': 'Basque',
       'code': 'eu',
-      'untranslated': 37,
+      'untranslated': 31,
     }, {
       'name': 'Brazilian Portuguese',
       'code': 'pt_BR',
@@ -367,7 +367,7 @@ module.exports = {
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 2,
+      'untranslated': 0,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -375,7 +375,7 @@ module.exports = {
     }, {
       'name': 'Hungarian',
       'code': 'hu',
-      'untranslated': 37,
+      'untranslated': 0,
     }, {
       'name': 'Italian',
       'code': 'it',
@@ -395,7 +395,7 @@ module.exports = {
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 35,
+      'untranslated': 32,
     }, {
       'name': 'Romanian',
       'code': 'ro',

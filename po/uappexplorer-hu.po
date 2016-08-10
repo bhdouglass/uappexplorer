@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-25 05:12+0000\n"
-"PO-Revision-Date: 2016-05-16 09:06+0000\n"
+"PO-Revision-Date: 2016-08-05 11:25+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-26 02:44+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-08-10 02:56+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 "Language: hu\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -62,13 +62,13 @@ msgid "All Frameworks"
 msgstr "Minden keretrendszer"
 
 msgid "All Releases"
-msgstr ""
+msgstr "Minden kiadás"
 
 msgid "All Snaps"
-msgstr ""
+msgstr "Minden Snap"
 
 msgid "All Types"
-msgstr ""
+msgstr "Minden típus"
 
 msgid "Amazon Link"
 msgstr "Amazon hivatkozás"
@@ -108,7 +108,7 @@ msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Alkalmazás neve (például: com.ubuntu.fejleszto.pelda)"
 
 msgid "App Snaps"
-msgstr ""
+msgstr "Alkalmazás Snap-ek"
 
 msgid "App Wishlist"
 msgstr "Alkalmazás kívánságlista"
@@ -155,7 +155,7 @@ msgid "Browse Scopes"
 msgstr "Lencsék böngészése"
 
 msgid "Browse Snaps"
-msgstr ""
+msgstr "Snap-ek böngészése"
 
 msgid "Business"
 msgstr "Üzleti"
@@ -337,7 +337,7 @@ msgid "Food & Drink"
 msgstr "Étel és ital"
 
 msgid "For more information, visit snapcraft.io"
-msgstr ""
+msgstr "További információ: snapcraft.io"
 
 msgid "For version:"
 msgstr "Verzió:"
@@ -346,10 +346,10 @@ msgid "Found the requested app"
 msgstr "Keresett alkalmazás megtalálva"
 
 msgid "Framework Snap"
-msgstr ""
+msgstr "Keretrendszer Snap"
 
 msgid "Framework Snaps"
-msgstr ""
+msgstr "Keretrendszer Snap-ek"
 
 msgid "Framework:"
 msgstr "Keretrendszer:"
@@ -358,10 +358,10 @@ msgid "Free"
 msgstr "Ingyenes"
 
 msgid "Gadget Snap"
-msgstr ""
+msgstr "Eszköz Snap"
 
 msgid "Gadget Snaps"
-msgstr ""
+msgstr "Eszköz Snap-ek"
 
 msgid "Games"
 msgstr "Játékok"
@@ -416,7 +416,7 @@ msgid "How can I help improve this site?"
 msgstr "Hogy tudok segíteni az oldal fejlesztésében?"
 
 msgid "How do I install phone apps and scopes?"
-msgstr ""
+msgstr "Hogyan telepítheti telefonalkalmazásokat és -lencséket?"
 
 msgid "How is the popularity determined?"
 msgstr "Hogy történik a népszerűség meghatározása?"
@@ -466,7 +466,7 @@ msgid "Install"
 msgstr "Telepítés"
 
 msgid "Install using snapd"
-msgstr ""
+msgstr "Telepítés a snapd-vel"
 
 msgid "Is this an existing app?"
 msgstr "Ez már egy létező alkalmazás?"
@@ -478,10 +478,10 @@ msgid "Itunes Link"
 msgstr "Itunes hivatkozás"
 
 msgid "Kernel Snap"
-msgstr ""
+msgstr "Kernel Snap"
 
 msgid "Kernel Snaps"
-msgstr ""
+msgstr "Kernel Snap-ek"
 
 msgid "Language"
 msgstr "Nyelv"
@@ -574,7 +574,7 @@ msgid "New List"
 msgstr "Új lista"
 
 msgid "New Snaps"
-msgstr ""
+msgstr "Új Snap-ek"
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -610,16 +610,16 @@ msgid "No wishes found, try searching again."
 msgstr "Nem található kívánság, próbálja másképp."
 
 msgid "OEM Snap"
-msgstr ""
+msgstr "OEM Snap"
 
 msgid "OEM Snaps"
-msgstr ""
+msgstr "OEM Snap-ek"
 
 msgid "OS Snap"
-msgstr ""
+msgstr "OS Snap"
 
 msgid "OS Snaps"
-msgstr ""
+msgstr "OS Snap-ek"
 
 msgid "Oldest"
 msgstr "Legrégibb"
@@ -686,19 +686,19 @@ msgid "QR Code"
 msgstr "QR kód"
 
 msgid "RSS Feeds"
-msgstr ""
+msgstr "RSS hírcsatornák"
 
 msgid "Reference"
 msgstr "Információforrás"
 
 msgid "Release:"
-msgstr ""
+msgstr "Kiadás:"
 
 msgid "Remove this app from your list"
 msgstr "Alkalmazás eltávolítása a személyes listáról"
 
 msgid "Return to the search page"
-msgstr ""
+msgstr "Vissza a keresési oldalra"
 
 msgid "Save"
 msgstr "Mentés"
@@ -752,13 +752,13 @@ msgid "Similar Apps"
 msgstr "Hasonló alkalmazások"
 
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 msgid "Snap Metadata:"
-msgstr ""
+msgstr "Snap metaadat:"
 
 msgid "Snaps"
-msgstr ""
+msgstr "Snaps"
 
 msgid ""
 "Snaps are a new type of Linux package designed to be cross distribution and "
@@ -766,9 +766,13 @@ msgid ""
 "desktop and server distributions and eventually will be available for Ubuntu "
 "Touch."
 msgstr ""
+"A Snap egy olyan új típusú Linux csomag, amit disztribúció függetlenre, és a "
+"hagyományos csomagoknál biztonságosabbra terveztek. A Snap-ek elérhetőek a "
+"asztali és a kiszolgáló kiadásokban, illetve idővel az Ubuntu Touch "
+"rendszeren is."
 
 msgid "Social Media"
-msgstr ""
+msgstr "Közösségi média"
 
 msgid "Social Networking"
 msgstr "Közösségi háló"
@@ -805,6 +809,7 @@ msgstr "Köszönjük!"
 
 msgid "The app you are trying to find does not exist or has been removed."
 msgstr ""
+"A megtalálni kívánt alkalmazás nem létezik vagy eltávolításra került."
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
@@ -940,7 +945,7 @@ msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Melyik alkalmazásokat látná szívesen az Ubuntu Touch-hoz?"
 
 msgid "What are snaps?"
-msgstr ""
+msgstr "Mik a „Snap-ek”?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Mit tegyek, ha jog-, vagy védjegysértő tartalmat találok?"
@@ -990,7 +995,7 @@ msgid "You vote could not be saved at this time, please try again later"
 msgstr "A szavazatát nem sikerült időben elmenteni, próbálja újra később"
 
 msgid "app snaps"
-msgstr ""
+msgstr "alkalmazás snap-ek"
 
 msgid "apps"
 msgid_plural "apps"
@@ -998,10 +1003,10 @@ msgstr[0] "alkalmazás"
 msgstr[1] "alkalmazás"
 
 msgid "framework snaps"
-msgstr ""
+msgstr "keretrendszer snap-ek"
 
 msgid "gadget snaps"
-msgstr ""
+msgstr "eszköz snap-ek"
 
 msgid "games"
 msgid_plural "games"
@@ -1015,13 +1020,13 @@ msgid "iTunes link is not a valid url"
 msgstr "Érvénytelen Itunes hivatkozás"
 
 msgid "kernel snaps"
-msgstr ""
+msgstr "kernel snap-ek"
 
 msgid "oem snaps"
-msgstr ""
+msgstr "oem snap-ek"
 
 msgid "os snaps"
-msgstr ""
+msgstr "rendszer snap-ek"
 
 msgid "phone apps & scopes"
 msgstr "telefonalkalmazások és -lencsék"
@@ -1032,11 +1037,13 @@ msgstr[0] "lencse"
 msgstr[1] "lencse"
 
 msgid "snaps"
-msgstr ""
+msgstr "snap-ek"
 
 msgid ""
 "uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
 msgstr ""
+"A uApp Explorer egy nem hivatalos böngészőalkalmazás Snap és Ubuntu Touch "
+"alkalmazásokhoz."
 
 msgid "web apps"
 msgid_plural "web apps"
