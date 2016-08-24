@@ -97,9 +97,14 @@ module.exports = React.createClass({
       if (!this.props.location.query.sort) {
         this.props.location.query.sort = 'relevance';
       }
+
+      if (this.props.location.query.page) {
+        delete this.props.location.query.page;
+      }
     }
     else {
       delete this.props.location.query.q;
+      delete this.props.location.query.page;
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);
