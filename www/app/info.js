@@ -389,6 +389,10 @@ module.exports = {
       'code': 'nb',
       'untranslated': 161,
     }, {
+      'name': 'Persian',
+      'code': 'fa',
+      'untranslated': 299,
+    }, {
       'name': 'Polish',
       'code': 'pl',
       'untranslated': 71,
@@ -403,7 +407,7 @@ module.exports = {
     }, {
       'name': 'Russian',
       'code': 'ru',
-      'untranslated': 34,
+      'untranslated': 21,
     }, {
       'name': 'Serbian',
       'code': 'sr',

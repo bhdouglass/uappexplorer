@@ -104,7 +104,10 @@ module.exports = React.createClass({
     }
     else {
       delete this.props.location.query.q;
-      delete this.props.location.query.page;
+
+      if (this.props.location.query.page) {
+        delete this.props.location.query.page;
+      }
     }
 
     this.history.pushState(null, '/apps', this.props.location.query);

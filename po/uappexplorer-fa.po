@@ -1,4 +1,4 @@
-# Turkish translation for uappexplorer
+# Persian translation for uappexplorer
 # Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the uappexplorer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
@@ -8,22 +8,23 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-25 05:12+0000\n"
-"PO-Revision-Date: 2016-07-07 22:02+0000\n"
-"Last-Translator: Bilal <kira.gazerock@gmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"PO-Revision-Date: 2016-09-09 14:13+0000\n"
+"Last-Translator: Sajjad Husseini <toospool@gmail.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2016-09-14 03:28+0000\n"
 "X-Generator: Launchpad (build 18186)\n"
 
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Merak etmeyin, ücretsiz bir sürümü de var!)"
+msgstr "(نگران نباشید، نسخهٔ رایگانی نیز وجود دارد)"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
+"* نصب برنامه شما را به فروشگاه رسمی بر روی دستگاه اوبونتو تاچ هدایت می‌کند."
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
@@ -31,31 +32,31 @@ msgid ""
 msgstr ""
 
 msgid "- Choose a list -"
-msgstr "- Bir liste seç -"
+msgstr ""
 
 msgid "A wish with the same name already exists"
 msgstr ""
 
 msgid "Account Integration"
-msgstr "Hesap Birleştirildi"
+msgstr ""
 
 msgid "Add Apps:"
-msgstr "Uygulama Ekle:"
+msgstr ""
 
 msgid "Add to list:"
-msgstr "Listeye Ekle"
+msgstr ""
 
 msgid "All"
-msgstr "Tümü"
+msgstr ""
 
 msgid "All Apps"
-msgstr "Tüm Uygulamalar"
+msgstr ""
 
 msgid "All Architectures"
-msgstr "Tüm Mimariler"
+msgstr "تمامب معماری‌ها"
 
 msgid "All Frameworks"
-msgstr "Bütün Sistemler"
+msgstr ""
 
 msgid "All Releases"
 msgstr ""
@@ -67,16 +68,16 @@ msgid "All Types"
 msgstr ""
 
 msgid "Amazon Link"
-msgstr "Amazon Bağlantısı"
+msgstr ""
 
 msgid "Amazon link is not a valid url"
-msgstr "Amazon bağlantısı geçerli bir adres değil."
+msgstr ""
 
 msgid "Any Architecture"
-msgstr "Bütün Mimariler"
+msgstr ""
 
 msgid "Any License"
-msgstr "Bütün Lisanslar"
+msgstr ""
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -88,98 +89,97 @@ msgid ""
 msgstr ""
 
 msgid "App"
-msgstr "Uygulama"
+msgstr ""
 
 msgid "App Name"
-msgstr "Uygulama İsmi"
+msgstr ""
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Uygulama İsmi (örnek: com.ubuntu.developer.example)"
+msgstr ""
 
 msgid "App Snaps"
 msgstr ""
 
 msgid "App Wishlist"
-msgstr "Uygulama İstekleri"
+msgstr ""
 
 msgid "Apps"
-msgstr "Uygulamalar"
+msgstr ""
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Uygulamalar bu sitede kurulu değil, fakat resmi uygulama mağazasında kurulu."
 
 msgid "Apps:"
-msgstr "Uygulamalar:"
+msgstr ""
 
 msgid "Architecture:"
-msgstr "Mimari:"
+msgstr ""
 
 msgid "Architectures:"
-msgstr "Yapılar:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
-msgstr "Bu listeyi silmek istediğinden emin misin?"
+msgstr ""
 
 msgid "Article"
-msgstr "Makale"
+msgstr ""
 
 msgid "Author"
-msgstr "Yazar"
+msgstr ""
 
 msgid "Books & Comics"
-msgstr "Kitaplar & Çizgi Romanlar"
+msgstr ""
 
 msgid "Browse"
-msgstr "Gözat"
+msgstr ""
 
 msgid "Browse Apps"
-msgstr "Uygulamarda Ara"
+msgstr ""
 
 msgid "Browse Games"
-msgstr "Oyunlarda Ara"
+msgstr ""
 
 msgid "Browse Scopes"
-msgstr "Alanlarda Ara"
+msgstr ""
 
 msgid "Browse Snaps"
 msgstr ""
 
 msgid "Business"
-msgstr "İş Dünyası"
+msgstr ""
 
 msgid "Buy the Webapp"
-msgstr "Web Uygulamasını Satın Al"
+msgstr ""
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Ubuntu Touch uygulama mağazasından web ugulamasını satın al"
+msgstr ""
 
 msgid "By:"
-msgstr "Tarafından"
+msgstr ""
 
 msgid "Cancel"
-msgstr "İptal"
+msgstr ""
 
 msgid "Category:"
-msgstr "Kategori:"
+msgstr ""
 
 msgid "Caxton Code"
 msgstr ""
 
 msgid "Changelog"
-msgstr "Sürüm Geçmişi"
+msgstr ""
 
 msgid "Close"
-msgstr "Kapat"
+msgstr ""
 
 msgid "Communication"
-msgstr "Topluluk"
+msgstr ""
 
 msgid "Company"
-msgstr "Şirket"
+msgstr ""
 
 msgid "Containing:"
-msgstr "İçeren:"
+msgstr ""
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
@@ -209,7 +209,7 @@ msgid "Could not find this list, it may not exist any more"
 msgstr ""
 
 msgid "Could not find wish"
-msgstr "Aradığınız istek bulunamadı"
+msgstr ""
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
@@ -227,37 +227,37 @@ msgid "Could not update the list at this time, please try again later"
 msgstr ""
 
 msgid "Create"
-msgstr "Oluştur"
+msgstr ""
 
 msgid "Create List"
-msgstr "Liste Oluştur"
+msgstr ""
 
 msgid "Delete"
-msgstr "Sil"
+msgstr ""
 
 msgid "Description"
-msgstr "Açıklama"
+msgstr ""
 
 msgid "Desktop File:"
 msgstr ""
 
 msgid "Developer Tools"
-msgstr "Geliştirici Araçları"
+msgstr ""
 
 msgid "Developer/Company"
-msgstr "Geliştirici/Topluluk"
+msgstr ""
 
 msgid "Donate"
-msgstr "Bağış Yap"
+msgstr ""
 
 msgid "Donate via Bitcoin"
-msgstr "Bitcoin ile bağış yap"
+msgstr ""
 
 msgid "Donate via Gratipay"
-msgstr "Gratipay ile bağış yap"
+msgstr ""
 
 msgid "Donate via Paypal"
-msgstr "Paypal ile bağış yap"
+msgstr ""
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -270,22 +270,22 @@ msgid "Donation Web App"
 msgstr ""
 
 msgid "Download"
-msgstr "İndir"
+msgstr ""
 
 msgid "Downvote"
 msgstr ""
 
 msgid "Edit"
-msgstr "Düzenle"
+msgstr ""
 
 msgid "Edit List"
-msgstr "Listeyi Düzenle"
+msgstr ""
 
 msgid "Education"
-msgstr "Eğitim"
+msgstr ""
 
 msgid "Email Support"
-msgstr "Email Desteği"
+msgstr ""
 
 msgid "Entertainment"
 msgstr ""
