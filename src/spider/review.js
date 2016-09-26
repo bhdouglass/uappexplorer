@@ -198,6 +198,8 @@ function parseReviews(pkgName, callback) {
       logger.error(err);
     }
     else {
+      logger.info('Going parse ' + packages.length + ' package reviews');
+
       var tasks = [];
       packages.forEach(function(pkg) {
         tasks.push(function(cb) {
@@ -213,11 +215,13 @@ function parseReviews(pkgName, callback) {
           }
         }
         else {
+          logger.info('Finished parsing reviews, going to refresh ratings');
           refreshRatings(function(err) {
             if (err) {
               logger.error(err);
             }
 
+            logger.info('Finished refreshing reviews');
             elasticsearchPackage.mongoToElasticsearch(null, callback);
           });
         }
