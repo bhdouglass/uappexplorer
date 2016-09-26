@@ -198,7 +198,14 @@ function parseReviews(pkgName, callback) {
       logger.error(err);
     }
     else {
-      async.eachSeries(packages, parseReview, function(err) {
+      var tasks = [];
+      packages.forEach(function(pkg) {
+        tasks.push(function(cb) {
+          parseReview(pkg, cb);
+        });
+      });
+
+      async.parallelLimit(tasks, 10, function(err) {
         if (err) {
           logger.error(err);
           if (callback) {
