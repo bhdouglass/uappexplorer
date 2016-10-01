@@ -48,12 +48,24 @@ function setupSchedule() {
 
   var reviews_rule = new schedule.RecurrenceRule();
   reviews_rule.dayOfWeek = new schedule.Range(0, 6, 1);
-  reviews_rule.hour = 1;
+  reviews_rule.hour = new schedule.Range(0, 23, 6);
   reviews_rule.minute = 0;
 
   schedule.scheduleJob(reviews_rule, function() {
-    logger.info('spider: running review spider');
-    review.parseReviews();
+    logger.info('spider: running review spider 0');
+    review.parseReviews(null, 0, 3);
+  });
+
+  reviews_rule.hour = new schedule.Range(1, 23, 6);
+  schedule.scheduleJob(reviews_rule, function() {
+    logger.info('spider: running review spider 1');
+    review.parseReviews(null, 1, 3);
+  });
+
+  reviews_rule.hour = new schedule.Range(2, 23, 6);
+  schedule.scheduleJob(reviews_rule, function() {
+    logger.info('spider: running review spider 2');
+    review.parseReviews(null, 2, 3);
   });
 
   var types_reparse = new schedule.RecurrenceRule();
@@ -65,18 +77,6 @@ function setupSchedule() {
     logger.debug('spider: running types reparser');
     package.reparsePackagesMissingTypes();
   });
-
-  //one time scheduling
-  var one_time = new Date(2016, 3, 25, 5, 0, 0);
-  var now = new Date();
-  if (one_time > now) {
-    schedule.scheduleJob(one_time, function() {
-      logger.info('spider: running spider (once)');
-      //package.parsePackages();
-      //review.parseReviews();
-      packageParser.parseAllClickPackages();
-    });
-  }
 }
 
 function server() {

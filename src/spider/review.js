@@ -187,27 +187,30 @@ function parseReview(pkg, callback) {
   });
 }
 
-function parseReviews(pkgName, callback) {
+function parseReviews(pkgName, page, pages, callback) {
   var query = {};
   if (pkgName) {
     query.name = pkgName;
   }
 
-  db.Package.find(query, function(err, packages) {
+  db.Package.count(query, function(err, count) {
     if (err) {
       logger.error(err);
+      if (callback) {
+        callback(err);
+      }
     }
     else {
-      logger.info('Going parse ' + packages.length + ' package reviews');
+      var q = db.Package.find(query);
 
-      var tasks = [];
-      packages.forEach(function(pkg) {
-        tasks.push(function(cb) {
-          parseReview(pkg, cb);
-        });
-      });
+      if (page !== undefined && pages !== undefined && page !== null && pages !== null) {
+        var limit = Math.ceil(count / pages);
+        var skip = limit * page;
 
-      async.parallelLimit(tasks, 10, function(err) {
+        q.limit(limit).skip(skip);
+      }
+
+      q.exec(function(err, packages) {
         if (err) {
           logger.error(err);
           if (callback) {
@@ -215,14 +218,36 @@ function parseReviews(pkgName, callback) {
           }
         }
         else {
-          logger.info('Finished parsing reviews, going to refresh ratings');
-          refreshRatings(function(err) {
+          logger.info('Going parse ' + packages.length + ' package reviews');
+
+          var tasks = [];
+          packages.forEach(function(pkg) {
+            tasks.push(function(cb) {
+              parseReview(pkg, cb);
+            });
+          });
+
+          async.parallelLimit(tasks, 10, function(err) {
             if (err) {
               logger.error(err);
+              if (callback) {
+                callback(err);
+              }
             }
+            else {
+              logger.info('Finished parsing reviews, going to refresh ratings');
+              refreshRatings(function(err) {
+                if (err) {
+                  logger.error(err);
+                  if (callback) {
+                    callback(err);
+                  }
+                }
 
-            logger.info('Finished refreshing reviews');
-            elasticsearchPackage.mongoToElasticsearch(null, callback);
+                logger.info('Finished refreshing reviews');
+                elasticsearchPackage.mongoToElasticsearch(null, callback);
+              });
+            }
           });
         }
       });

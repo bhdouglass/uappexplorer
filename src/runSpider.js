@@ -28,7 +28,7 @@ if (process.argv[2]) {
       });
     }
     else {
-      spider.parseReviews(process.argv[3], callback);
+      spider.parseReviews(process.argv[3], null, null, callback);
     }
   }
   else if (process.argv[2] == 'type' || process.argv[2] == 'types') {
