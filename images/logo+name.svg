@@ -16,9 +16,9 @@
    id="svg2"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo+name.svg"
-   inkscape:export-filename="/home/brian/dev/web/uappexplorer/images/logo+name.png"
-   inkscape:export-xdpi="926.08636"
-   inkscape:export-ydpi="926.08636">
+   inkscape:export-filename="/home/brian/dev/web/uappexplorer/images/logo+name-small.png"
+   inkscape:export-xdpi="99.64286"
+   inkscape:export-ydpi="99.64286">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -27,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,11 +43,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1036"
+     inkscape:window-height="1009"
      id="namedview6"
      showgrid="false"
      inkscape:zoom="4.2142857"
-     inkscape:cx="105.63639"
+     inkscape:cx="63.399102"
      inkscape:cy="-3.9922381"
      inkscape:window-x="0"
      inkscape:window-y="0"

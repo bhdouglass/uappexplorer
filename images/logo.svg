@@ -16,9 +16,9 @@
    id="svg2"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="/home/brian/dev/web/uappexplorer/src/server/static/img/logo.png"
-   inkscape:export-xdpi="115.7608"
-   inkscape:export-ydpi="115.7608">
+   inkscape:export-filename="/home/brian/dev/web/uappexplorer/images/logo-200x200.png"
+   inkscape:export-xdpi="642.85999"
+   inkscape:export-ydpi="642.85999">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -42,7 +42,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1036"
+     inkscape:window-height="1009"
      id="namedview6"
      showgrid="false"
      inkscape:zoom="23.8396"

@@ -93,10 +93,13 @@ module.exports = React.createClass({
               <a href="https://plus.google.com/+Uappexplorer-ubuntu" style={{display: 'inline-block !important'}}><i className="fa fa-fw fa-gp"></i> Google+</a>
               <a href="https://telegram.me/joinchat/Bd_29AYVkY6F9xHvJlPq_g" style={{display: 'inline-block !important'}}><i className="fa fa-fw fa-send-o"></i> Telegram</a>
             </div>
+
             <div className="col-sm-4">
               <Link to="/feeds">
                 <i className="fa fa-fw fa-rss-square"></i> {i18n.t('RSS Feeds')}
               </Link>
+
+              <a href="http://status.uappexplorer.com/"><i className="fa fa-info-circle"></i> {i18n.t('Status')}</a>
             </div>
           </div>
         </div>
