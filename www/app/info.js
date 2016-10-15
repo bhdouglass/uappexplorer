@@ -319,115 +319,115 @@ module.exports = {
     {
       'name': 'Arabic',
       'code': 'ar',
-      'untranslated': 38,
+      'untranslated': 39,
     }, {
       'name': 'Asturian',
       'code': 'ast',
-      'untranslated': 260,
+      'untranslated': 261,
     }, {
       'name': 'Basque',
       'code': 'eu',
-      'untranslated': 31,
+      'untranslated': 32,
     }, {
       'name': 'Brazilian Portuguese',
       'code': 'pt_BR',
-      'untranslated': 29,
+      'untranslated': 30,
     }, {
       'name': 'Burmese',
       'code': 'my',
-      'untranslated': 282,
+      'untranslated': 283,
     }, {
       'name': 'Catalan',
       'code': 'ca',
-      'untranslated': 0,
+      'untranslated': 1,
     }, {
       'name': 'Chinese (Simplified)',
       'code': 'zh_CN',
-      'untranslated': 16,
+      'untranslated': 17,
     }, {
       'name': 'Czech',
       'code': 'cs',
-      'untranslated': 37,
+      'untranslated': 38,
     }, {
       'name': 'Dutch',
       'code': 'nl',
-      'untranslated': 16,
+      'untranslated': 0,
     }, {
       'name': 'English (UK)',
       'code': 'en_GB',
-      'untranslated': 37,
+      'untranslated': 38,
     }, {
       'name': 'French',
       'code': 'fr',
-      'untranslated': 0,
+      'untranslated': 1,
     }, {
       'name': 'Galician',
       'code': 'gl',
-      'untranslated': 93,
+      'untranslated': 94,
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 0,
+      'untranslated': 1,
     }, {
       'name': 'Greek',
       'code': 'el',
-      'untranslated': 50,
+      'untranslated': 0,
     }, {
       'name': 'Hungarian',
       'code': 'hu',
-      'untranslated': 0,
+      'untranslated': 1,
     }, {
       'name': 'Italian',
       'code': 'it',
-      'untranslated': 35,
+      'untranslated': 36,
     }, {
       'name': 'Maylay',
       'code': 'ms',
-      'untranslated': 293,
+      'untranslated': 294,
     }, {
       'name': 'Norwegian Bokmal',
       'code': 'nb',
-      'untranslated': 161,
+      'untranslated': 162,
     }, {
       'name': 'Persian',
       'code': 'fa',
-      'untranslated': 299,
+      'untranslated': 300,
     }, {
       'name': 'Polish',
       'code': 'pl',
-      'untranslated': 71,
+      'untranslated': 72,
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 32,
+      'untranslated': 33,
     }, {
       'name': 'Romanian',
       'code': 'ro',
-      'untranslated': 105,
+      'untranslated': 106,
     }, {
       'name': 'Russian',
       'code': 'ru',
-      'untranslated': 21,
+      'untranslated': 22,
     }, {
       'name': 'Serbian',
       'code': 'sr',
-      'untranslated': 37,
+      'untranslated': 38,
     }, {
       'name': 'Spanish',
       'code': 'es',
-      'untranslated': 0,
+      'untranslated': 1,
     }, {
       'name': 'Swedish',
       'code': 'sv',
-      'untranslated': 233,
+      'untranslated': 234,
     }, {
       'name': 'Turkish',
       'code': 'tr',
-      'untranslated': 245,
+      'untranslated': 246,
     }, {
       'name': 'Uyghur',
       'code': 'ug',
-      'untranslated': 50,
+      'untranslated': 51,
     },
   ],
 };

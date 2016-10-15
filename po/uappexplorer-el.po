@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-25 05:12+0000\n"
-"PO-Revision-Date: 2016-04-18 05:23+0000\n"
+"POT-Creation-Date: 2016-10-11 07:21+0000\n"
+"PO-Revision-Date: 2016-10-14 22:31+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-09-14 03:28+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-10-15 03:04+0000\n"
+"X-Generator: Launchpad (build 18232)\n"
 "Language: el\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -43,7 +43,7 @@ msgid "A wish with the same name already exists"
 msgstr "Η επιθυμία με το όνομα αυτό υπάρχει ήδη"
 
 msgid "Account Integration"
-msgstr ""
+msgstr "Ενσωμάτωση λογαριασμού"
 
 msgid "Add Apps:"
 msgstr "Προσθήκη εφαρμογών:"
@@ -64,13 +64,13 @@ msgid "All Frameworks"
 msgstr "Όλοι οι σκελετοί"
 
 msgid "All Releases"
-msgstr ""
+msgstr "Όλες οι τελικές εκδόσεις"
 
 msgid "All Snaps"
-msgstr ""
+msgstr "Όλα τα πακέτα snap"
 
 msgid "All Types"
-msgstr ""
+msgstr "Όλοι οι τύποι"
 
 msgid "Amazon Link"
 msgstr "Σύνδεσμος στο amazon"
@@ -110,7 +110,7 @@ msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Όνομα εφαρμογής (π.χ.: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
-msgstr ""
+msgstr "Πακέτα snap εφαρμογής"
 
 msgid "App Wishlist"
 msgstr "Λίστα επιθυμιών εφαρμογών"
@@ -130,7 +130,7 @@ msgid "Architecture:"
 msgstr "Αρχιτεκτονική:"
 
 msgid "Architectures:"
-msgstr ""
+msgstr "Αρχιτεκτονικές:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον κατάλογο;"
@@ -157,7 +157,7 @@ msgid "Browse Scopes"
 msgstr "Πλοήγηση σε επισκόπια"
 
 msgid "Browse Snaps"
-msgstr ""
+msgstr "Πλοήγηση σε πακέτα snap"
 
 msgid "Business"
 msgstr "Επαγγελματικά"
@@ -278,7 +278,7 @@ msgid "Description"
 msgstr "Περιγραφή"
 
 msgid "Desktop File:"
-msgstr ""
+msgstr "Desktop αρχείο:"
 
 msgid "Developer Tools"
 msgstr "Εργαλεία ανάπτυξης"
@@ -362,7 +362,7 @@ msgid "Food & Drink"
 msgstr "Φαγητό & ποτά"
 
 msgid "For more information, visit snapcraft.io"
-msgstr ""
+msgstr "Για περισσότερες πληροφορίες, επισκεφτείτε το snapcraft.io"
 
 msgid "For version:"
 msgstr "Για την έκδοση:"
@@ -371,10 +371,10 @@ msgid "Found the requested app"
 msgstr "Βρέθηκε η εφαρμογή προς αναζήτηση"
 
 msgid "Framework Snap"
-msgstr ""
+msgstr "Πακέτο snap σκελετού"
 
 msgid "Framework Snaps"
-msgstr ""
+msgstr "Πακέτα snap σκελετού"
 
 msgid "Framework:"
 msgstr "Σκελετός:"
@@ -383,10 +383,10 @@ msgid "Free"
 msgstr "Δωρεάν"
 
 msgid "Gadget Snap"
-msgstr ""
+msgstr "Πακέτο snap συσκευής"
 
 msgid "Gadget Snaps"
-msgstr ""
+msgstr "Πακέτα snap συσκευής"
 
 msgid "Games"
 msgstr "Παιχνίδια"
@@ -440,7 +440,7 @@ msgid "How can I help improve this site?"
 msgstr "Πώς μπορώ να βοηθήσω στη βελτίωση αυτού του ιστότοπου;"
 
 msgid "How do I install phone apps and scopes?"
-msgstr ""
+msgstr "Πώς εγκαθιστώ εφαρμογές και επισκόπια για κινητά;"
 
 msgid "How is the popularity determined?"
 msgstr "Πώς υπολογίζεται η δημοτικότητα;"
@@ -495,7 +495,7 @@ msgid "Install"
 msgstr "Εγκατάσταση"
 
 msgid "Install using snapd"
-msgstr ""
+msgstr "Εγκατάσταση με χρήση snapd"
 
 msgid "Is this an existing app?"
 msgstr "Είναι αυτή μια υπάρχουσα εφαρμογή;"
@@ -507,10 +507,10 @@ msgid "Itunes Link"
 msgstr "Σύνδεσμος στο iTunes"
 
 msgid "Kernel Snap"
-msgstr ""
+msgstr "Πακέτο snap πυρήνα"
 
 msgid "Kernel Snaps"
-msgstr ""
+msgstr "Πακέτα snap πυρήνα"
 
 msgid "Language"
 msgstr "Γλώσσα"
@@ -522,7 +522,7 @@ msgid "Least Popular (This Month)"
 msgstr "Λιγότερο δημοφιλή (αυτόν το μήνα)"
 
 msgid "Less Info"
-msgstr ""
+msgstr "Λιγότερες πληροφορίες"
 
 msgid "License:"
 msgstr "Άδεια χρήσης:"
@@ -603,7 +603,7 @@ msgid "New List"
 msgstr "Νέος κατάλογος"
 
 msgid "New Snaps"
-msgstr ""
+msgstr "Νέα πακέτα snap"
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -639,16 +639,16 @@ msgid "No wishes found, try searching again."
 msgstr "Δεν βρέθηκαν επιθυμίες, παρακαλώ κάντε πάλι αναζήτηση."
 
 msgid "OEM Snap"
-msgstr ""
+msgstr "Πακέτο snap κατασκευαστή"
 
 msgid "OEM Snaps"
-msgstr ""
+msgstr "Πακέτα snap κατασκευαστή"
 
 msgid "OS Snap"
-msgstr ""
+msgstr "Πακέτο snap λειτουργικού"
 
 msgid "OS Snaps"
-msgstr ""
+msgstr "Πακέτα snap λειτουργικού"
 
 msgid "Oldest"
 msgstr "Παλαιότερα"
@@ -665,7 +665,7 @@ msgid "Open Source"
 msgstr "Ανοικτού κώδικα"
 
 msgid "Opens Urls"
-msgstr ""
+msgstr "Ανοίγει διευθύνσεις URL"
 
 msgid "Other Link"
 msgstr "Άλλος σύνδεσμος"
@@ -674,7 +674,7 @@ msgid "Other link is not a valid url"
 msgstr "Άλλος σύνδεσμος δεν είναι έγκυρη διεύθυνση"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Δικαιώματα"
 
 msgid "Personalisation"
 msgstr "Εξατομίκευση"
@@ -708,28 +708,28 @@ msgid "Proprietary"
 msgstr "Κλειστού κώδικα"
 
 msgid "Published:"
-msgstr ""
+msgstr "Δημοσίευση:"
 
 msgid "Push Notifications"
-msgstr ""
+msgstr "Άμεσες ενημερώσεις"
 
 msgid "QR Code"
 msgstr "Κώδικας QR"
 
 msgid "RSS Feeds"
-msgstr ""
+msgstr "Ροές RSS"
 
 msgid "Reference"
 msgstr "Παραπομπή"
 
 msgid "Release:"
-msgstr ""
+msgstr "Τελική έκδοση:"
 
 msgid "Remove this app from your list"
 msgstr "Διαγραφή της εφαρμογής αυτής από τον κατάλογό σας"
 
 msgid "Return to the search page"
-msgstr ""
+msgstr "Επιστροφή στη σελίδα αναζήτησης"
 
 msgid "Save"
 msgstr "Αποθήκευση"
@@ -741,7 +741,7 @@ msgid "Scope"
 msgstr "Επισκόπιο"
 
 msgid "Scope INI File:"
-msgstr ""
+msgstr "INI αρχείο επισκοπίου:"
 
 msgid "Scopes"
 msgstr "Επισκόπια"
@@ -762,7 +762,7 @@ msgid "Settings"
 msgstr "Ρυθμίσεις"
 
 msgid "Share"
-msgstr ""
+msgstr "Κοινοποίηση"
 
 msgid "Share on Facebook"
 msgstr "Διαμοιρασμός στο Facebook"
@@ -783,13 +783,13 @@ msgid "Similar Apps"
 msgstr "Αντίστοιχες εφαρμογές"
 
 msgid "Snap"
-msgstr ""
+msgstr "Πακέτο snap"
 
 msgid "Snap Metadata:"
-msgstr ""
+msgstr "Μεταδεδομένα snap:"
 
 msgid "Snaps"
-msgstr ""
+msgstr "Πακέτα snap"
 
 msgid ""
 "Snaps are a new type of Linux package designed to be cross distribution and "
@@ -797,9 +797,14 @@ msgid ""
 "desktop and server distributions and eventually will be available for Ubuntu "
 "Touch."
 msgstr ""
+"Τα πακέτα snap είναι ένας νέος τύπος πακέτων για το Linux που έχει "
+"σχεδιαστεί να δουλεύει σε πολλές διαφορετικές διανομές και να παρέχει "
+"μεγαλύτερη ασφάλεια σε σχέση με τους παραδοσιακούς τρόπους πακεταρίσματος. "
+"Τα πακέτα snap είναι διαθέσιμα σε πολλές διανομές για υπολογιστές γραφείου "
+"και διακομιστές και κάποια στιγμή θα γίνουν διαθέσιμα και στο Ubuntu Touch."
 
 msgid "Social Media"
-msgstr ""
+msgstr "Μέσα κοινωνικής δικτύωσης"
 
 msgid "Social Networking"
 msgstr "Κοινωνική δικτύωση"
@@ -815,6 +820,9 @@ msgstr "Αθλητικά"
 
 msgid "Star Rating"
 msgstr "Βαθμολογία σε αστέρια"
+
+msgid "Status"
+msgstr "Κατάσταση"
 
 msgid "Submit"
 msgstr "Υποβολή"
@@ -835,7 +843,7 @@ msgid "Thank you!"
 msgstr "Ευχαριστώ!"
 
 msgid "The app you are trying to find does not exist or has been removed."
-msgstr ""
+msgstr "Η εφαρμογή που αναζητείτε δεν υπάρχει ή έχει αφαιρεθεί."
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
@@ -921,19 +929,19 @@ msgid "Universal Accesss/Accessibility"
 msgstr "Γενική πρόσβαση/Προσβασιμότητα"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Άγνωστο"
 
 msgid "Updated Apps"
 msgstr "Ενημερωμένες εφαρμογές"
 
 msgid "Updated:"
-msgstr "Ενημερώθηκε:"
+msgstr "Ενημέρωση:"
 
 msgid "Upvote"
 msgstr "Θετική ψήφος"
 
 msgid "Urls that open in this app:"
-msgstr ""
+msgstr "Διευθύνσεις URL που ανοίγουν σε αυτήν την εφαρμοφή:"
 
 msgid "User List:"
 msgstr "Κατάλογος χρηστών:"
@@ -975,7 +983,7 @@ msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Τι εφαρμογές θα επιθυμούσατε να δείτε στο Ubuntu Touch;"
 
 msgid "What are snaps?"
-msgstr ""
+msgstr "Τι είναι τα snap πακέτα;"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "Τι πρέπει να κάνω αν βρω υλικό που καταπατάει πνευματικά δικαιώματα;"
@@ -1027,7 +1035,7 @@ msgstr ""
 "αργότερα"
 
 msgid "app snaps"
-msgstr ""
+msgstr "πακέτα snap εφαρμογής"
 
 msgid "apps"
 msgid_plural "apps"
@@ -1035,10 +1043,10 @@ msgstr[0] "εφαρμογές"
 msgstr[1] "εφαρμογές"
 
 msgid "framework snaps"
-msgstr ""
+msgstr "πακέτα snap σκελετού"
 
 msgid "gadget snaps"
-msgstr ""
+msgstr "πακέτα snap συσκευής"
 
 msgid "games"
 msgid_plural "games"
@@ -1052,16 +1060,16 @@ msgid "iTunes link is not a valid url"
 msgstr "Σύνδεσμος iTunes δεν είναι έγκυρη διεύθυνση"
 
 msgid "kernel snaps"
-msgstr ""
+msgstr "πακέτα snap πυρήνα"
 
 msgid "oem snaps"
-msgstr ""
+msgstr "πακέτα snap κατασκευαστή"
 
 msgid "os snaps"
-msgstr ""
+msgstr "πακέτα snap λειτουργικού"
 
 msgid "phone apps & scopes"
-msgstr ""
+msgstr "εφαρμογές & επισκόπια για κινητά"
 
 msgid "scopes"
 msgid_plural "scopes"
@@ -1069,11 +1077,13 @@ msgstr[0] "επισκόπια"
 msgstr[1] "επισκόπια"
 
 msgid "snaps"
-msgstr ""
+msgstr "πακέτα snap"
 
 msgid ""
 "uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
 msgstr ""
+"Το uApp Explorer είναι ο ανεπίσημος προβολέας για πακέτα snap και Ubuntu "
+"Touch εφαρμογές."
 
 msgid "web apps"
 msgid_plural "web apps"
