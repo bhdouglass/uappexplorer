@@ -80,6 +80,12 @@ module.exports = {
       }, {
         label: 'arm64',
         value: 'arm64',
+      }, {
+        label: 'ppc64el',
+        value: 'ppc64el',
+      }, {
+        label: 's390x',
+        value: 's390x',
       }
     ];
   },

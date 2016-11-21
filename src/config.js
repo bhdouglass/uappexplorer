@@ -56,7 +56,7 @@ var config = {
     //How many packages to pull in a page
     page_size: 500,
     //Which architectures to pull from the store
-    architectures: ['i386', 'amd64', 'armhf', 'arm64'],
+    architectures: ['i386', 'amd64', 'armhf', 'arm64', 'ppc64el', 's390x'],
   },
   //Credentials for logging to Papertrail - https://papertrailapp.com
   papertrail: {
