@@ -296,7 +296,10 @@ function setup(app, success, error) {
 
     if (sort) {
       var s = {};
-      s[sort] = direction;
+      s[sort] = {
+        'order': direction,
+        'ignore_unmapped': true,
+      };
       body.sort = [s];
     }
 

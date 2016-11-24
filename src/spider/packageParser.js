@@ -3,6 +3,7 @@ var logger = require('../logger');
 var config = require('../config');
 var request = require('request');
 var OAuth = require('oauth-1.0a');
+var crypto = require('crypto');
 var fs = require('fs');
 var async = require('async');
 var parse = require('click-parser');
@@ -130,15 +131,18 @@ function fetchOAuth(callback) {
     else {
       oauth = new OAuth({
           consumer: {
-              public: body.consumer_key,
-              secret: body.consumer_secret
+            key: body.consumer_key,
+            secret: body.consumer_secret
           },
-          signature_method: 'HMAC-SHA1'
+          signature_method: 'HMAC-SHA1',
+          hash_function: function(base_string, key) {
+            return crypto.createHmac('sha1', key).update(base_string).digest('base64');
+          }
       });
 
       token = {
-          public: body.token_key,
-          secret: body.token_secret
+        key: body.token_key,
+        secret: body.token_secret
       };
 
       callback();

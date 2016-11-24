@@ -1,3 +1,6 @@
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
 var Department = require('./department').Department;
 var List = require('./list').List;
 var Package = require('./package').Package;
@@ -6,7 +9,6 @@ var User = require('./user').User;
 var Wish = require('./wish').Wish;
 var config = require('../config');
 var logger = require('../logger');
-var mongoose = require('mongoose');
 
 mongoose.connect(config.mongo.uri + '/' + config.mongo.database, function(err) {
   if (err) {
