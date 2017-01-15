@@ -279,19 +279,6 @@ module.exports = React.createClass({
                     }
                   }, this)}
 
-                  {info.languages.map(function(lng) {
-                    if (lng.untranslated >= comingTranslation) {
-                      var url = 'https://translations.launchpad.net/uappexplorer/trunk/+pots/uappexplorer/' + lng.code + '/+translate';
-                      return (
-                        <li className={(this.state.lng == lng.code) ? 'active' : ''} key={lng.code}>
-                          <a href={url} className="clickable" target="_blank">
-                            {lng.name} (Coming soon!)
-                          </a>
-                        </li>
-                      );
-                    }
-                  }, this)}
-
                   <li>
                     <a href="https://translations.launchpad.net/uappexplorer" target="_blank">{i18n.t('Help translate!')}</a>
                   </li>

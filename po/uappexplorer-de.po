@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-10-11 07:21+0000\n"
-"PO-Revision-Date: 2016-08-02 20:17+0000\n"
-"Last-Translator: Denis Graipel <Unknown>\n"
+"PO-Revision-Date: 2017-01-08 16:21+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-10-15 03:04+0000\n"
-"X-Generator: Launchpad (build 18232)\n"
+"X-Launchpad-Export-Date: 2017-01-15 14:28+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 "Language: de\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -25,8 +25,8 @@ msgstr "(Keine Angst, es gibt auch eine kostenlose Version!)"
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Beim Klick auf Installieren mit Ihrem Ubuntu Phone werden Sie zum "
-"offiziellen Ubuntu Touch Store weitergeleitet."
+"* Beim Klick auf »Installieren« werden Sie zum offiziellen App-Laden auf "
+"Ihrem Ubuntu-Touch-Gerät weitergeleitet."
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
@@ -40,7 +40,7 @@ msgid "- Choose a list -"
 msgstr "- Liste auswählen -"
 
 msgid "A wish with the same name already exists"
-msgstr "Ein Wunsch mit den selben Namen existiert bereits"
+msgstr "Ein Wunsch mit dem selben Namen ist bereits vorhanden"
 
 msgid "Account Integration"
 msgstr "Kontoeinbindung"
@@ -109,10 +109,10 @@ msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Anwendungsname (Beispiel: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
-msgstr "App Snaps"
+msgstr "App-Snaps"
 
 msgid "App Wishlist"
-msgstr "Anwendungs-Wunschliste"
+msgstr "Anwendungswunschliste"
 
 msgid "Apps"
 msgstr "Apps"
@@ -156,7 +156,7 @@ msgid "Browse Scopes"
 msgstr "Scopes durchsuchen"
 
 msgid "Browse Snaps"
-msgstr "Blättern durch Snaps"
+msgstr "Snaps durchsuchen"
 
 msgid "Business"
 msgstr "Geschäftliches"
@@ -229,7 +229,7 @@ msgid "Could not find this list, it may not exist any more"
 msgstr "Konnte diese Liste nicht finden, vielleicht existiert sie nicht mehr"
 
 msgid "Could not find wish"
-msgstr "Kann den Wunsch nicht finden"
+msgstr "Wunsch kann nicht gefunden werden"
 
 msgid "Could not load lists at this time, click to retry"
 msgstr "Liste konnte nicht geladen werden, klicken zum Wiederholen"
@@ -298,7 +298,7 @@ msgstr ""
 "der Spenden."
 
 msgid "Donation Web App"
-msgstr "Spenden Web App"
+msgstr "Spende-Webapp"
 
 msgid "Download"
 msgstr "Herunterladen"
@@ -346,7 +346,7 @@ msgid "Food & Drink"
 msgstr "Essen & Trinken"
 
 msgid "For more information, visit snapcraft.io"
-msgstr "Für weitere Informationen, besuche snapcraft.io"
+msgstr "Für weitere Informationen, bitte snapcraft.io besuchen"
 
 msgid "For version:"
 msgstr "Für Version:"
@@ -370,13 +370,13 @@ msgid "Gadget Snap"
 msgstr "Gadget Snap"
 
 msgid "Gadget Snaps"
-msgstr "Gadget Snaps"
+msgstr "Geräte-Snaps"
 
 msgid "Games"
 msgstr "Spiele"
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "Einen QR-Scanner für Ihr Ubuntu Touch Gerät bekommen"
+msgstr "Einen QR-Scanner für Ihr Ubuntu-Touch-Gerät erhalten"
 
 msgid "Go there now"
 msgstr "Zu App wechseln"
@@ -397,7 +397,7 @@ msgid "Health & Fitness"
 msgstr "Gesundheit & Fitness"
 
 msgid "Heart Rating"
-msgstr "Herz-Bewertung"
+msgstr "Herzbewertung"
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
@@ -412,13 +412,13 @@ msgid "Help this wish get more votes!"
 msgstr "Hilf diesem Wunsch mehr Stimmen zu bekommen!"
 
 msgid "Help translate!"
-msgstr "Hilf beim Übersetzen!"
+msgstr "Beim Übersetzen helfen!"
 
 msgid "Highest Heart Rating"
-msgstr "Höchste Herz-Bewertung"
+msgstr "höchste Herzbewertung"
 
 msgid "Highest Star Rating"
-msgstr "Höchste Stern-Bewertung"
+msgstr "höchste Sternbewertung"
 
 msgid "How can I help improve this site?"
 msgstr "Wie kann ich helfen, die Seite zu verbessern?"
@@ -474,13 +474,13 @@ msgid "Install"
 msgstr "Installieren"
 
 msgid "Install using snapd"
-msgstr "Installiere mit snapd"
+msgstr "Mit Snapd installieren"
 
 msgid "Is this an existing app?"
 msgstr "Ist dies eine existierende Anwendung?"
 
 msgid "It is possible to have a negative heart rating."
-msgstr "Es ist möglich ein negatives Herz-Rating zu haben."
+msgstr "Es ist möglich eine negative Herzbewertung zu haben."
 
 msgid "Itunes Link"
 msgstr "Itunes Verweis"
@@ -489,7 +489,7 @@ msgid "Kernel Snap"
 msgstr "Kernel Snap"
 
 msgid "Kernel Snaps"
-msgstr "Kernel Snaps"
+msgstr "Kernel-Snaps"
 
 msgid "Language"
 msgstr "Sprache"
@@ -507,7 +507,7 @@ msgid "License:"
 msgstr "Lizenz"
 
 msgid "Lifestyle"
-msgstr "Lifestyle"
+msgstr "Lebensstil"
 
 msgid "List"
 msgstr "Liste"
@@ -534,10 +534,10 @@ msgid "Login to make a wish"
 msgstr "Anmelden um einen Wunsch vorzuschlagen"
 
 msgid "Lowest Heart Rating"
-msgstr "niedrigstes Herz-Rating"
+msgstr "niedrigstes Herzbewertung"
 
 msgid "Lowest Star Rating"
-msgstr "Niedrigstes Stern Rating"
+msgstr "niedrigste Sternbewertung"
 
 msgid "Make a wish"
 msgstr "Wünschen Sie sich was"
@@ -609,7 +609,7 @@ msgid "No apps found, try searching again."
 msgstr "Keine Apps gefunden, versuche es erneut."
 
 msgid "No lists, create one!"
-msgstr "Keine Liste da, erstelle eine!"
+msgstr "Keine Listen! Eine erstellen?"
 
 msgid "No reviews yet!"
 msgstr "Bisher keine Bewertungen!"
@@ -618,16 +618,16 @@ msgid "No wishes found, try searching again."
 msgstr "Keine Wünsche gefunden, versuchen Sie es erneut."
 
 msgid "OEM Snap"
-msgstr "OEM Snap"
+msgstr "OEM-Snap"
 
 msgid "OEM Snaps"
-msgstr "OEM Snaps"
+msgstr "OEM-Snaps"
 
 msgid "OS Snap"
-msgstr "OS Snap"
+msgstr "BS-Snap"
 
 msgid "OS Snaps"
-msgstr "OS Snaps"
+msgstr "BS-Snaps"
 
 msgid "Oldest"
 msgstr "Älteste"
@@ -658,7 +658,7 @@ msgid "Personalisation"
 msgstr "Personalisierung"
 
 msgid "Phone Apps & Scopes"
-msgstr "Telefon-Apps & Scopes"
+msgstr "Telefon-Apps & -Scopes"
 
 msgid "Please login to send via Caxton"
 msgstr "Bitte einloggen um über Caxton zu senden"
@@ -695,7 +695,7 @@ msgid "QR Code"
 msgstr "QR Code"
 
 msgid "RSS Feeds"
-msgstr "RSS Feeds"
+msgstr "RSS-Quellen"
 
 msgid "Reference"
 msgstr "Referenz"
@@ -719,7 +719,7 @@ msgid "Scope"
 msgstr "Scope"
 
 msgid "Scope INI File:"
-msgstr "Scope INI-Datei:"
+msgstr "Scope-INI-Datei:"
 
 msgid "Scopes"
 msgstr "Scopes"
@@ -728,7 +728,7 @@ msgid "Screenshots"
 msgstr "Bildschirmfotos"
 
 msgid "Search for a wish:"
-msgstr "Suche nach einem Wunsch:"
+msgstr "Nach einem Wunsch suchen:"
 
 msgid "Send via Caxton"
 msgstr "Senden über Caxton"
@@ -764,7 +764,7 @@ msgid "Snap"
 msgstr "Snap"
 
 msgid "Snap Metadata:"
-msgstr "Snap Metadaten:"
+msgstr "Snap-Metadaten:"
 
 msgid "Snaps"
 msgstr "Snaps"
@@ -775,10 +775,10 @@ msgid ""
 "desktop and server distributions and eventually will be available for Ubuntu "
 "Touch."
 msgstr ""
-"Snaps sind ein neuer Typ von Linux-Paketen für verschiedene Distributionen. "
-"Sie sind sicherer als normale Pakete und funktionieren auf verschiedenen "
-"Server- und Desktop-Distributionen und vielleicht später auch für Ubuntu "
-"Touch."
+"Snaps sind ein neuer Typ von Linux-Paketen die auf verschiedene "
+"Distributionen funktionieren und sind sicherer als traditionelle Pakete. Sie "
+"sind für verschiedenen Server- und Schreibtisch-Distributionen verfügbar und "
+"vielleicht später auch für Ubuntu-Touch."
 
 msgid "Social Media"
 msgstr "Soziale Medien"
@@ -796,10 +796,10 @@ msgid "Sports"
 msgstr "Sport"
 
 msgid "Star Rating"
-msgstr "Stern Rating"
+msgstr "Sternbewertung"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Submit"
 msgstr "Absenden"
@@ -866,10 +866,10 @@ msgstr ""
 "eingetragene Marken der Canonical Ltd."
 
 msgid "Title A-Z"
-msgstr "Title A-Z"
+msgstr "Titel A-Z"
 
 msgid "Title Z-A"
-msgstr "Title A-Z"
+msgstr "Titel A-Z"
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
@@ -940,10 +940,10 @@ msgid "Weather"
 msgstr "Wetter"
 
 msgid "Web App"
-msgstr "Web App"
+msgstr "Webapp"
 
 msgid "Web Apps"
-msgstr "Web Apps"
+msgstr "Webapps"
 
 msgid "Website:"
 msgstr "Webseite:"
@@ -952,13 +952,13 @@ msgid "Welcome"
 msgstr "Willkommen"
 
 msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Welche Anwendung möchten Sie auf den Ubuntu Touch sehen?"
+msgstr "Welche Anwendung möchten Sie auf Ubuntu-Touch sehen?"
 
 msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Welche Anwendungen möchten Sie auf den Ubuntu Touch sehen?"
+msgstr "Welche Anwendungen möchten Sie auf Ubuntu-Touch sehen?"
 
 msgid "What are snaps?"
-msgstr "Was sind snaps?"
+msgstr "Was sind Snaps?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -966,10 +966,10 @@ msgstr ""
 "entdecke?"
 
 msgid "What is the heart rating?"
-msgstr "Was ist das Herz Rating?"
+msgstr "Was ist die Herzbewertung?"
 
 msgid "What is the star rating?"
-msgstr "Was ist das Stern Rating?"
+msgstr "Was ist die Sternbewertung?"
 
 msgid "What is this site?"
 msgstr "Worüber ist diese Seite?"
@@ -1023,7 +1023,7 @@ msgid "framework snaps"
 msgstr "framework snaps"
 
 msgid "gadget snaps"
-msgstr "gadget snaps"
+msgstr "Geräte-Snaps"
 
 msgid "games"
 msgid_plural "games"
@@ -1037,16 +1037,16 @@ msgid "iTunes link is not a valid url"
 msgstr "iTunes-Verknüpfung ist keine gültige Adresse"
 
 msgid "kernel snaps"
-msgstr "kernel snaps"
+msgstr "Kernel-Snaps"
 
 msgid "oem snaps"
-msgstr "oem snaps"
+msgstr "OEM-Snaps"
 
 msgid "os snaps"
-msgstr "os snaps"
+msgstr "BS-Snaps"
 
 msgid "phone apps & scopes"
-msgstr "Telefon Apps & Scopes"
+msgstr "Telefon-Apps & -Scopes"
 
 msgid "scopes"
 msgid_plural "scopes"
@@ -1054,12 +1054,13 @@ msgstr[0] "Scopes"
 msgstr[1] "Scopes"
 
 msgid "snaps"
-msgstr "snaps"
+msgstr "Snaps"
 
 msgid ""
 "uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
 msgstr ""
-"uApp Explorer ist eine unoffizielle Sammlung von Snaps und Ubuntu-Touch-Apps."
+"uApp-Explorer ist der inoffizielle Betrachter für Snaps und Ubuntu-Touch-"
+"Apps."
 
 msgid "web apps"
 msgid_plural "web apps"

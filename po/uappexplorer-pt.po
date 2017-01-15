@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-10-11 07:21+0000\n"
-"PO-Revision-Date: 2016-07-26 14:50+0000\n"
+"PO-Revision-Date: 2016-10-18 13:29+0000\n"
 "Last-Translator: Ivo Xavier <ivoxavier.8@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-10-15 03:04+0000\n"
-"X-Generator: Launchpad (build 18232)\n"
+"X-Launchpad-Export-Date: 2017-01-15 14:28+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 "Language: pt\n"
 
 msgid "(Don't worry, there is a free version too!)"
@@ -474,7 +474,7 @@ msgid "Install"
 msgstr "Instalar"
 
 msgid "Install using snapd"
-msgstr ""
+msgstr "Instalar usando o snapd"
 
 msgid "Is this an existing app?"
 msgstr "É esta uma app que já existe?"
@@ -486,10 +486,10 @@ msgid "Itunes Link"
 msgstr "Itunes Link"
 
 msgid "Kernel Snap"
-msgstr ""
+msgstr "Kernel Snap"
 
 msgid "Kernel Snaps"
-msgstr ""
+msgstr "Kernel Snaps"
 
 msgid "Language"
 msgstr "Idioma"
@@ -582,7 +582,7 @@ msgid "New List"
 msgstr "Nova lista"
 
 msgid "New Snaps"
-msgstr ""
+msgstr "Novos Snaps"
 
 msgid ""
 "New apps are fetched from the official appstore every hour, you can either "
@@ -619,16 +619,16 @@ msgid "No wishes found, try searching again."
 msgstr "Sem desejos encontrados, tente procurar novamente."
 
 msgid "OEM Snap"
-msgstr ""
+msgstr "OEM Snap"
 
 msgid "OEM Snaps"
-msgstr ""
+msgstr "OEM Snaps"
 
 msgid "OS Snap"
-msgstr ""
+msgstr "SO Snap"
 
 msgid "OS Snaps"
-msgstr ""
+msgstr "SO Snaps"
 
 msgid "Oldest"
 msgstr "Mais antigas"
@@ -695,13 +695,13 @@ msgid "QR Code"
 msgstr "Código QR"
 
 msgid "RSS Feeds"
-msgstr ""
+msgstr "Fontes RSS"
 
 msgid "Reference"
 msgstr "Referência"
 
 msgid "Release:"
-msgstr ""
+msgstr "Lançamento:"
 
 msgid "Remove this app from your list"
 msgstr "Remove esta app da sua lista"
@@ -777,7 +777,7 @@ msgid ""
 msgstr ""
 
 msgid "Social Media"
-msgstr ""
+msgstr "Social Media"
 
 msgid "Social Networking"
 msgstr "Rede social"
@@ -795,7 +795,7 @@ msgid "Star Rating"
 msgstr "Classificação por estrelas"
 
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 msgid "Submit"
 msgstr "Submeter"
@@ -955,7 +955,7 @@ msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr "Que apps deseja ver no Ubuntu Touch?"
 
 msgid "What are snaps?"
-msgstr ""
+msgstr "O que são snaps?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
@@ -1028,10 +1028,10 @@ msgid "iTunes link is not a valid url"
 msgstr "iTunes não é um link de url válido"
 
 msgid "kernel snaps"
-msgstr ""
+msgstr "kernel snaps"
 
 msgid "oem snaps"
-msgstr ""
+msgstr "oem snaps"
 
 msgid "os snaps"
 msgstr ""
