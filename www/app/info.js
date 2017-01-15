@@ -365,15 +365,15 @@ module.exports = {
     }, {
       'name': 'French',
       'code': 'fr',
-      'untranslated': 1,
+      'untranslated': 0,
     }, {
       'name': 'Galician',
       'code': 'gl',
-      'untranslated': 94,
+      'untranslated': 0,
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 1,
+      'untranslated': 0,
     }, {
       'name': 'Greek',
       'code': 'el',
@@ -381,7 +381,7 @@ module.exports = {
     }, {
       'name': 'Hungarian',
       'code': 'hu',
-      'untranslated': 1,
+      'untranslated': 0,
     }, {
       'name': 'Italian',
       'code': 'it',
@@ -405,11 +405,11 @@ module.exports = {
     }, {
       'name': 'Portuguese',
       'code': 'pt',
-      'untranslated': 33,
+      'untranslated': 18,
     }, {
       'name': 'Romanian',
       'code': 'ro',
-      'untranslated': 106,
+      'untranslated': 104,
     }, {
       'name': 'Russian',
       'code': 'ru',
