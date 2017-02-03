@@ -91,7 +91,6 @@ module.exports = React.createClass({
             <div className="col-sm-4">
               <a href="https://twitter.com/uappexplorer" style={{display: 'inline-block !important'}}><i className="fa fa-fw fa-t"></i> Twitter</a>
               <a href="https://plus.google.com/+Uappexplorer-ubuntu" style={{display: 'inline-block !important'}}><i className="fa fa-fw fa-gp"></i> Google+</a>
-              <a href="https://telegram.me/joinchat/Bd_29AYVkY6F9xHvJlPq_g" style={{display: 'inline-block !important'}}><i className="fa fa-fw fa-send-o"></i> Telegram</a>
             </div>
 
             <div className="col-sm-4">
