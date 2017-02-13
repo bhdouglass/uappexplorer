@@ -16,7 +16,7 @@ mongo:
         - /data/db:/data/db
 
 elasticsearch:
-    image: elasticsearch
+    image: elasticsearch:2-alpine
     ports:
         - "9200:9200"
     volumes:

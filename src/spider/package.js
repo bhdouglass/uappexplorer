@@ -229,15 +229,23 @@ function parseArchPackages(packageMap, packages, arch) {
 
 function fetchList(callback) {
   var url = config.spider.search_api + '?size=' + config.spider.page_size;
+  var snap_url = config.spider.snap_search_api + '?size=' + config.spider.page_size + '&confinement=strict%2Cclassic';
   var fns = {
     all: function(callback) {
       doFetchList(url, null, null, callback);
+    },
+    all_snap: function(callback) {
+      doFetchList(snap_url, null, null, callback);
     },
   };
 
   config.spider.architectures.forEach(function(arch) {
     fns[arch] = function(callback) {
       doFetchList(url, arch, null, callback);
+    };
+
+    fns[arch + '_snap'] = function(callback) {
+      doFetchList(snap_url, arch, null, callback);
     };
   });
 
@@ -248,12 +256,24 @@ function fetchList(callback) {
     else {
       config.spider.architectures.forEach(function(arch) {
         logger.debug(arch + ' packages: ' + results[arch].length);
+        logger.debug(arch + ' snap packages: ' + results[arch + '_snap'].length);
       });
       logger.debug('all packages: ' + results.all.length);
+      logger.debug('all snap packages: ' + results.all_snap.length);
 
       var packageMap = {};
-
       results.all.forEach(function(pkg) {
+        if (packageMap[pkg.name]) {
+          if (pkg.revision > packageMap[pkg.name].revision) {
+            packageMap[pkg.name] = pkg;
+          }
+        }
+        else {
+          packageMap[pkg.name] = pkg;
+        }
+      });
+
+      results.all_snap.forEach(function(pkg) {
         if (packageMap[pkg.name]) {
           if (pkg.revision > packageMap[pkg.name].revision) {
             packageMap[pkg.name] = pkg;
@@ -266,6 +286,7 @@ function fetchList(callback) {
 
       config.spider.architectures.forEach(function(arch) {
         parseArchPackages(packageMap, results[arch], arch);
+        parseArchPackages(packageMap, results[arch + '_snap'], arch);
       });
 
       logger.debug('total packages: ' + Object.keys(packageMap).length);
@@ -275,28 +296,44 @@ function fetchList(callback) {
   });
 }
 
-function parsePackageByUrl(url, arch, callback) {
+function parsePackageByUrl(url, arch, release, callback) {
   var headers = {};
   if (arch && arch != 'all') {
     headers['X-Ubuntu-Architecture'] = arch;
   }
 
+  if (url.indexOf(config.spider.snap_packages_api) === 0 && release) {
+    headers['X-Ubuntu-Series'] = release;
+  }
+
   request({url: url, headers: headers}, function(err, resp, body) {
     if (err) {
-      callback(err);
+      callback('HTTP error from store api: ' + err + ' (' + url + ' ' + JSON.stringify(headers) + ')');
     }
     else {
-      callback(null, JSON.parse(body));
+      body = JSON.parse(body);
+      if (body.result == 'error') {
+        callback(null, {error: 'Error from store api: ' + body.errors.join(', ') + ' (' + url + ' ' + JSON.stringify(headers) + ')'});
+      }
+      else {
+        callback(null, body);
+      }
     }
   });
 }
 
 //Parse a package pull from the api, not our own package format
 function parseUbuntuPackage(data, callback) {
+  var release = null;
+  if (data.release && data.release.length > 0) {
+    data.release.sort();
+    release = data.release[data.release.length - 1];
+  }
+
   var fns = {};
   data.architecture.forEach(function(arch) {
     fns[arch] = function(cb) {
-      parsePackageByUrl(data._links.self.href, arch, cb);
+      parsePackageByUrl(data._links.self.href, arch, release, cb);
     };
   });
 
@@ -308,11 +345,17 @@ function parseUbuntuPackage(data, callback) {
       var pkg_data = {};
 
       for (var arch2 in results) {
-        results[arch2] = ubuntuToUAppExplorer(results[arch2]);
+        if (results.error) {
+          //Errors aren't returned normally when the error come from the api, this is so we don't fail the whole async.parallel list when one package is missing
+          logger.error(results[arch2].error);
+        }
+        else {
+          results[arch2] = ubuntuToUAppExplorer(results[arch2]);
 
-        if (!pkg_data.revision || results[arch2].revision > pkg_data.revision) {
-          for (var key in results[arch2]) {
-            pkg_data[key] = results[arch2][key];
+          if (!pkg_data.revision || results[arch2].revision > pkg_data.revision) {
+            for (var key in results[arch2]) {
+              pkg_data[key] = results[arch2][key];
+            }
           }
         }
       }
@@ -320,15 +363,21 @@ function parseUbuntuPackage(data, callback) {
       pkg_data.architecture = data.architecture;
       pkg_data.downloads = {};
       for (var arch3 in results) {
-        pkg_data.downloads[arch3] = results[arch3].download;
+        if (!results[arch3].error) {
+          pkg_data.downloads[arch3] = results[arch3].download;
+        }
       }
 
-      db.Package.findOne({name: pkg_data.name}, function(err, pkg) {
+      db.Package.find({name: pkg_data.name}, function(err, pkgs) {
         if (err) {
-          callback(err);
+          callback(pkg_data.name + ': ' + err);
         }
         else {
-          if (!pkg) {
+          var pkg = null;
+          if (pkgs.length > 0) {
+            pkg = pkgs[0];
+          }
+          else {
             pkg = new db.Package();
           }
 
