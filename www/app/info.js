@@ -351,6 +351,10 @@ module.exports = {
       'code': 'zh_CN',
       'untranslated': 17,
     }, {
+      'name': 'Chinese (Traditional)',
+      'code': 'zh_TW',
+      'untranslated': 196,
+    }, {
       'name': 'Czech',
       'code': 'cs',
       'untranslated': 38,
@@ -421,7 +425,7 @@ module.exports = {
     }, {
       'name': 'Spanish',
       'code': 'es',
-      'untranslated': 1,
+      'untranslated': 0,
     }, {
       'name': 'Swedish',
       'code': 'sv',

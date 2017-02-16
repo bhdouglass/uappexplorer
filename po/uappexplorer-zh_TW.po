@@ -1,87 +1,84 @@
-# Italian translation for uappexplorer
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Chinese (Traditional) translation for uappexplorer
+# Copyright (c) 2017 Rosetta Contributors and Canonical Ltd 2017
 # This file is distributed under the same license as the uappexplorer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-10-11 07:21+0000\n"
-"PO-Revision-Date: 2016-07-25 08:31+0000\n"
-"Last-Translator: Emanuele Antonio Faraone <emanueleant03@gmail.com>\n"
-"Language-Team: Italian <it@li.org>\n"
+"PO-Revision-Date: 2017-02-08 15:06+0000\n"
+"Last-Translator: Jesse Sung <Unknown>\n"
+"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-"Language: it\n"
 
 msgid "(Don't worry, there is a free version too!)"
-msgstr "(Niente paura, c'è anche una versione gratuita!)"
+msgstr "(別擔心, 也有免費的版本!)"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Installa vi porterà sull'appstore ufficiale del dispositivo Ubuntu Touch"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"*Questa applicazione web inserisce codice personalizzato nel sito web che "
-"può aggiungere funzionalità o essere dannoso. Usare questa applicazione solo "
-"se si considera attendibile l'autore."
+"* 為了提供更多的功能, 這個 webapp 會在原始網頁之上加入額外的程式碼, 但請小心有時被加入的是惡意程式。除非您相信作者, 不然請不要使用這個 "
+"app。"
 
 msgid "- Choose a list -"
-msgstr "- Scegliere un elenco -"
+msgstr ""
 
 msgid "A wish with the same name already exists"
-msgstr "Esiste già un desiderio con lo stesso nome"
+msgstr ""
 
 msgid "Account Integration"
-msgstr "Integrazione Account"
+msgstr ""
 
 msgid "Add Apps:"
-msgstr "Aggiungere Applicazione:"
+msgstr ""
 
 msgid "Add to list:"
-msgstr "Aggiungi all'elenco:"
+msgstr ""
 
 msgid "All"
-msgstr "Tutto"
+msgstr "全部"
 
 msgid "All Apps"
-msgstr "Tutte le applicazioni"
+msgstr "所有的 Apps"
 
 msgid "All Architectures"
-msgstr "italiano"
+msgstr ""
 
 msgid "All Frameworks"
-msgstr "italiano"
+msgstr ""
 
 msgid "All Releases"
 msgstr ""
 
 msgid "All Snaps"
-msgstr "Tutto gli snap"
+msgstr ""
 
 msgid "All Types"
-msgstr "Tutti i tipi"
+msgstr ""
 
 msgid "Amazon Link"
-msgstr "italiano"
+msgstr "Amazon 連結"
 
 msgid "Amazon link is not a valid url"
-msgstr "italiano"
+msgstr ""
 
 msgid "Any Architecture"
-msgstr "italiano"
+msgstr ""
 
 msgid "Any License"
-msgstr "italiano"
+msgstr ""
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -91,200 +88,177 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
-"Eventuali richieste di rimozione di contenuti in violazione del copyright o "
-"marchi dovrebbero essere rivolte a Canonical o all'autore dell'app "
-"(solitamente un autore ha un metodo per essere contattato elencato sotto il "
-"tab Supporto nella pagina della propria App). uApp Explorer non è affiliata "
-"con Canonical e non ospita nessuna delle app. uApp Explorer mostra solamente "
-"informazioni pubblicamente disponibili riguardo l'appstore ufficiale di "
-"Ubuntu Touch"
 
 msgid "App"
-msgstr "Applicazione"
+msgstr "App"
 
 msgid "App Name"
-msgstr "Nome dell'app"
+msgstr "App 名稱"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "italiano"
+msgstr "App 名稱 (例如: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
-msgstr "Snap di app"
+msgstr "App Snaps"
 
 msgid "App Wishlist"
-msgstr "italiano"
+msgstr "App 許願池"
 
 msgid "Apps"
-msgstr "Applicazioni"
+msgstr "Apps"
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Le applicazioni non sono installate tramite questo sito, ma tramite "
-"l'appstore ufficiale"
 
 msgid "Apps:"
-msgstr "Applicazioni:"
+msgstr "Apps:"
 
 msgid "Architecture:"
-msgstr "Architettura:"
+msgstr ""
 
 msgid "Architectures:"
-msgstr "Architetture:"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
-msgstr "Si è sicuri di voler eliminare questa lista?"
+msgstr ""
 
 msgid "Article"
-msgstr "Articolo"
+msgstr ""
 
 msgid "Author"
-msgstr "Autore"
+msgstr ""
 
 msgid "Books & Comics"
-msgstr "Libri e fumetti"
+msgstr "書籍與漫畫"
 
 msgid "Browse"
-msgstr "Sfoglia"
+msgstr ""
 
 msgid "Browse Apps"
-msgstr "Sfoglia applicazioni"
+msgstr ""
 
 msgid "Browse Games"
-msgstr "Sfoglia giochi"
+msgstr ""
 
 msgid "Browse Scopes"
-msgstr "Sfoglia ambiti"
+msgstr ""
 
 msgid "Browse Snaps"
 msgstr ""
 
 msgid "Business"
-msgstr "Affari"
+msgstr "商務"
 
 msgid "Buy the Webapp"
-msgstr "Acquista l'applicazione web"
+msgstr "購買這個 Webapp"
 
 msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Acquista l'applicazione web da app store di Ubuntu Touch"
+msgstr "前往 Ubuntu Touch app store 購買這個 Webapp"
 
 msgid "By:"
-msgstr "Da:"
+msgstr ""
 
 msgid "Cancel"
-msgstr "Cancella"
+msgstr "取消"
 
 msgid "Category:"
-msgstr "Categoria:"
+msgstr ""
 
 msgid "Caxton Code"
-msgstr "Codice Caxton"
+msgstr ""
 
 msgid "Changelog"
-msgstr "Elenco modifiche"
+msgstr ""
 
 msgid "Close"
-msgstr "Chiudi"
+msgstr ""
 
 msgid "Communication"
-msgstr "Comunicazione"
+msgstr "通訊"
 
 msgid "Company"
-msgstr "Società"
+msgstr "公司"
 
 msgid "Containing:"
-msgstr "Contenuto:"
+msgstr "包含:"
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Impossibile aggiungere un'applicazione all'elenco in questo momento, si "
-"prega di riprovare più tardi"
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Impossibile connettersi a Caxton in questo momento, si prega di riprovare "
-"più tardi"
 
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Impossibile creare un nuovo elenco in questo momento, si prega di riprovare "
-"più tardi"
 
 msgid "Could not create a new wish at this time, please try again later"
-msgstr "non posso creare un desiderio adesso, prova più tardi"
+msgstr ""
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
-"Impossibile eliminare l'elenco in questo momento, si prega di riprovare più "
-"tardi"
 
 msgid "Could not download app data, click to retry"
-msgstr "Impossibile scaricare i dati applicazione, fare clic per riprovare"
+msgstr ""
 
 msgid "Could not download app list, click to retry"
-msgstr "Impossibile scaricare l'elenco applicazioni, fare clic per riprovare"
+msgstr ""
 
 msgid "Could not find the requested app"
-msgstr "Impossibile trovare l'applicazione richiesta"
+msgstr ""
 
 msgid "Could not find this list, it may not exist any more"
-msgstr "Impossibile trovare questo elenco, potrebbe non esistere più"
+msgstr ""
 
 msgid "Could not find wish"
-msgstr "non riesco a trovare desideri"
+msgstr ""
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
-"Impossibile caricare la lista in questo momento, cliccare per riprovare"
 
 msgid "Could not load wishes at this time, click to retry"
-msgstr "non posso caricare desideri adesso, premi indietro"
+msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
-"Impossibile rimuovere l'applicazione da questo elenco, si prega di riprovare "
-"più tardi"
 
 msgid "Could not save your settings at this time, please try again later"
-msgstr ""
-"Impossibile salvare le impostazioni in questo momento, riprovare più tardi"
+msgstr "目前無法儲存您的設定值, 請稍後再試看看"
 
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
-"Impossibile aggiornare l'elenco in questo momento, si prega di riprovare più "
-"tardi"
 
 msgid "Create"
-msgstr "Crea"
+msgstr ""
 
 msgid "Create List"
-msgstr "Crea elenco"
+msgstr ""
 
 msgid "Delete"
-msgstr "Rimuovi"
+msgstr "刪除"
 
 msgid "Description"
-msgstr "Descrizione"
+msgstr "說明"
 
 msgid "Desktop File:"
-msgstr "File desktop"
+msgstr ""
 
 msgid "Developer Tools"
-msgstr "Strumenti per lo sviluppo"
+msgstr ""
 
 msgid "Developer/Company"
-msgstr "Sviluppatore/Compagnia"
+msgstr ""
 
 msgid "Donate"
-msgstr "Dona"
+msgstr "贊助"
 
 msgid "Donate via Bitcoin"
-msgstr "Dona tramite Bitcoin"
+msgstr "使用 Bitcoin 贊助"
 
 msgid "Donate via Gratipay"
-msgstr "Dona tramite Gratipay"
+msgstr "使用 Gratipay 贊助"
 
 msgid "Donate via Paypal"
-msgstr "Donate tramite Paypal"
+msgstr "使用 Paypal 贊助"
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -292,70 +266,63 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
-"Donare ad uApp Explorer è solo uno dei modi per aiutare a renderlo migliore. "
-"Se si sceglie di donare, il denaro verrà usato per coprirè i costi "
-"dell'infrastruttura. I costi comprendono il mantenimento dei nomi del "
-"dominio, l'hosting, ecc. uApp Explorer sarà sempre un servizio gratuito ed "
-"opensource a prescindere dal numero di donazioni."
 
 msgid "Donation Web App"
-msgstr "Donazione applicazione web"
+msgstr ""
 
 msgid "Download"
-msgstr "Scarica"
+msgstr "下載"
 
 msgid "Downvote"
-msgstr "Togli il voto"
+msgstr ""
 
 msgid "Edit"
-msgstr "Modifica"
+msgstr ""
 
 msgid "Edit List"
-msgstr "Modifica elenco"
+msgstr ""
 
 msgid "Education"
-msgstr "Istruzione"
+msgstr ""
 
 msgid "Email Support"
-msgstr "Email supporto"
+msgstr ""
 
 msgid "Entertainment"
-msgstr "Intrattenimento"
+msgstr ""
 
 msgid "Essential Apps"
-msgstr "Applicazioni essenziali"
+msgstr ""
 
 msgid "FAQ"
-msgstr "FAQ"
+msgstr ""
 
 msgid "File Size:"
-msgstr "Dimensione file:"
+msgstr "檔案大小："
 
 msgid "Filters"
-msgstr "Filtri"
+msgstr ""
 
 msgid "Finance"
-msgstr "Finanza"
+msgstr ""
 
 msgid "Find"
-msgstr "Trova"
+msgstr "搜尋"
 
 msgid "Find an app that has not yet been fetched from the official appstore."
 msgstr ""
-"Trovare un applicazione che non è stata ancora recuperata dall'appstore "
-"ufficiale."
 
 msgid "Food & Drink"
-msgstr "Cibo e bevande"
-
-msgid "For more information, visit snapcraft.io"
 msgstr ""
 
+msgid "For more information, visit snapcraft.io"
+msgstr "在 snapcraft.io 可以找到更多的相關資訊"
+
 msgid "For version:"
-msgstr "Per versione:"
+msgstr ""
 
 msgid "Found the requested app"
-msgstr "Applicazione richiesta trovata"
+msgstr ""
 
 msgid "Framework Snap"
 msgstr ""
@@ -364,10 +331,10 @@ msgid "Framework Snaps"
 msgstr ""
 
 msgid "Framework:"
-msgstr "Framework:"
+msgstr ""
 
 msgid "Free"
-msgstr "Gratuito"
+msgstr ""
 
 msgid "Gadget Snap"
 msgstr ""
@@ -376,212 +343,205 @@ msgid "Gadget Snaps"
 msgstr ""
 
 msgid "Games"
-msgstr "Giochi"
+msgstr "遊戲"
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "Ottenere una scansione QR per il proprio dispositivo Ubuntu Touch"
+msgstr ""
 
 msgid "Go there now"
-msgstr "Procedere ora"
+msgstr ""
 
 msgid "Google Play Link"
-msgstr "Link di Google Play"
+msgstr "Google Play 連結"
 
 msgid "Google Play link is not a valid url"
-msgstr "Il link di Google Play ha un URL invalido"
+msgstr ""
 
 msgid "Graphics"
-msgstr "Grafica"
+msgstr "美工繪圖"
 
 msgid "Grid"
-msgstr "Griglia"
+msgstr ""
 
 msgid "Health & Fitness"
-msgstr "Salute e fitness"
+msgstr ""
 
 msgid "Heart Rating"
-msgstr "Valutazione cuore"
+msgstr ""
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr ""
-"I punteggi cuore sono calcolati dalle valutazioni tramite stelle, dove 5 "
-"stelle vale 1 punto cuore, 4 stelle=0.5 cuori, 3 stelle=0 cuori, 2 stelle=-"
-"0.5 cuori ed 1 stella=-1 cuori."
 
 msgid "Help this wish get more votes!"
-msgstr "Aiuta questo desiderio per avere nuovi voti"
+msgstr ""
 
 msgid "Help translate!"
-msgstr "Aiutare a tradurre!"
+msgstr ""
 
 msgid "Highest Heart Rating"
-msgstr "Punteggio cuore più alto"
+msgstr ""
 
 msgid "Highest Star Rating"
-msgstr "Punteggio stella più alto"
+msgstr ""
 
 msgid "How can I help improve this site?"
-msgstr "Come contribuire per migliorare questo sito?"
+msgstr ""
 
 msgid "How do I install phone apps and scopes?"
 msgstr ""
 
 msgid "How is the popularity determined?"
-msgstr "Come viene determinata la popolarità?"
+msgstr ""
 
 msgid "How much would you be willing pay for this app?"
-msgstr "quanto pagheresti per quest' app?"
+msgstr ""
 
 msgid "I just published my app, why don't I see it?"
-msgstr "Ho appena pubblicato la mia applicazione, perché non la vedo?"
+msgstr ""
 
 msgid "I'm wishing for..."
-msgstr "Desidero..."
+msgstr ""
 
 msgid "I'm wishing for: "
-msgstr "Desidero: "
+msgstr ""
 
 msgid "Idea Summary"
-msgstr "Riepilogo Idea"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "Se si vuole contribuire al codice visitare il repo GitHub"
+msgstr "若您想協助開發, 請參見 GitHub repo"
 
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr "Se si vuole aiutare a tradurre, visitare il progetto in Launchpad!"
+msgstr ""
 
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
-"Se si desidera inviare segnalazioni errori o richieste visitare la pagina "
-"dei problemi su GitHub."
 
 msgid "If you would like to contact the author, visit his website."
-msgstr "Se si desidera contattare l'autore, visitare il suo sito."
+msgstr ""
 
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
-"Se si vuole contribuire monetariamente, ci sono diverse opzioni per la "
-"donazione."
 
 msgid "Info"
-msgstr "Info"
+msgstr ""
 
 msgid "Install"
-msgstr "Installa"
+msgstr "安裝"
 
 msgid "Install using snapd"
 msgstr ""
 
 msgid "Is this an existing app?"
-msgstr "È un'app esistente?"
+msgstr ""
 
 msgid "It is possible to have a negative heart rating."
-msgstr "E' possibile avere un punteggio cuore negativo."
+msgstr ""
 
 msgid "Itunes Link"
-msgstr "Link di iTunes"
+msgstr "Itunes 連結"
 
 msgid "Kernel Snap"
-msgstr ""
+msgstr "Kernel Snap"
 
 msgid "Kernel Snaps"
-msgstr ""
+msgstr "Kernel Snaps"
 
 msgid "Language"
-msgstr "Lingua"
+msgstr ""
 
 msgid "Latest Update"
-msgstr "Ultimo aggiornamento"
+msgstr ""
 
 msgid "Least Popular (This Month)"
-msgstr "Meno popolare (questo mese)"
+msgstr ""
 
 msgid "Less Info"
-msgstr "Altre info"
+msgstr ""
 
 msgid "License:"
-msgstr "Licenza:"
+msgstr ""
 
 msgid "Lifestyle"
-msgstr "Stile di vita"
+msgstr "生活"
 
 msgid "List"
-msgstr "Elenco"
+msgstr ""
 
 msgid "List Name:"
-msgstr "Nome elenco:"
+msgstr ""
 
 msgid "Load more reviews"
-msgstr "Carica altre recensioni"
+msgstr "載入更多評論"
 
 msgid "Loading reviews..."
-msgstr "Caricamento recensioni ..."
+msgstr "載入評論中..."
 
 msgid "Log In"
-msgstr "Accedi"
+msgstr "登入"
 
 msgid "Log Out"
-msgstr "Uscire"
+msgstr "登出"
 
 msgid "Log in via Ubuntu"
-msgstr "Accedere tramite Ubuntu"
+msgstr ""
 
 msgid "Login to make a wish"
-msgstr "Esegui il Login per esprimere un desiderio"
+msgstr ""
 
 msgid "Lowest Heart Rating"
-msgstr "Valutazione cuore peggiore"
+msgstr ""
 
 msgid "Lowest Star Rating"
-msgstr "Valutazione stella peggiore"
+msgstr ""
 
 msgid "Make a wish"
-msgstr "Esprimi un desiderio"
+msgstr ""
 
 msgid "Media & Video"
-msgstr "Multimedia e video"
+msgstr ""
 
 msgid "Medical"
-msgstr "Medicina"
+msgstr ""
 
 msgid "Missing an app?"
-msgstr "Manca un applicazione?"
+msgstr ""
 
 msgid "Monthly Popularity"
-msgstr "Popolarità mensile"
+msgstr ""
 
 msgid "More Apps by:"
-msgstr "Altre applicazioni da:"
+msgstr ""
 
 msgid "More Info"
-msgstr "Ulteriori Informazioni"
+msgstr ""
 
 msgid "Most Expensive (USD)"
-msgstr "Più costoso (USD)"
+msgstr ""
 
 msgid "Most Popular (This Month)"
-msgstr "Più popolare (questo mese)"
+msgstr ""
 
 msgid "Most Relevant"
-msgstr "Più rilevanti"
+msgstr ""
 
 msgid "Music & Audio"
-msgstr "Musica e suono"
+msgstr ""
 
 msgid "My Lists"
-msgstr "Propri elenchi"
+msgstr ""
 
 msgid "New Apps"
-msgstr "Nuove applicazioni"
+msgstr ""
 
 msgid "New List"
-msgstr "Nuovo elenco"
+msgstr ""
 
 msgid "New Snaps"
 msgstr ""
@@ -591,183 +551,179 @@ msgid ""
 "wait until the new apps are fetched or use the request form to request that "
 "the app be found early."
 msgstr ""
-"nuove applicazioni vengono pubblicate nello store ufficiale ogni ora, non ti "
-"arrabbiare se non trovi subito l' applicazione che stai cercando."
 
 msgid "Newest"
-msgstr "Più recente"
+msgstr "最新"
 
 msgid "News & Magazines"
-msgstr "Notizie e riviste"
+msgstr ""
 
 msgid "Next App:"
-msgstr "Applicazione successiva:"
+msgstr ""
 
 msgid "No"
-msgstr "No"
+msgstr ""
 
 msgid "No apps found, try searching again."
-msgstr "Nessuna applicazione trovata, riprovare la ricerca."
+msgstr ""
 
 msgid "No lists, create one!"
-msgstr "Nessun elenco, crearne uno!"
+msgstr ""
 
 msgid "No reviews yet!"
-msgstr "Ancora nessuna recensione!"
+msgstr "目前尚無評論"
 
 msgid "No wishes found, try searching again."
-msgstr "Nessun desiderio trovato, prova a cercare di nuovo"
+msgstr ""
 
 msgid "OEM Snap"
-msgstr ""
+msgstr "OEM Snap"
 
 msgid "OEM Snaps"
-msgstr ""
+msgstr "OEM Snaps"
 
 msgid "OS Snap"
-msgstr ""
+msgstr "OS Snap"
 
 msgid "OS Snaps"
-msgstr ""
+msgstr "OS Snaps"
 
 msgid "Oldest"
-msgstr "Meno recenti"
+msgstr "最舊"
 
 msgid "Oldest Update"
-msgstr "Aggiornamento meno recente"
+msgstr ""
 
 msgid "On average, voters would be willing to pay %d USD for this app."
 msgstr ""
-"In media, gli elettori sarebbero disposti a pagare %d per questa "
-"applicazione."
 
 msgid "Open Source"
-msgstr "Open Source"
+msgstr "開放源碼"
 
 msgid "Opens Urls"
-msgstr "Url aperti"
+msgstr ""
 
 msgid "Other Link"
-msgstr "Altro link"
+msgstr ""
 
 msgid "Other link is not a valid url"
-msgstr "Il link alternativo non ha un URL valido"
+msgstr ""
 
 msgid "Permissions"
-msgstr "Autorizzazioni"
+msgstr "權限"
 
 msgid "Personalisation"
-msgstr "Personalizzazione"
+msgstr "個人化"
 
 msgid "Phone Apps & Scopes"
-msgstr "App per telefono e scope"
+msgstr "Phone Apps & Scopes"
 
 msgid "Please login to send via Caxton"
-msgstr "Effettuare l'accesso per inviare tramite Caxton"
+msgstr ""
 
 msgid "Please specify a name or idea for your wish"
-msgstr "Specifica un nome o un'idea per il desiderio"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
-msgstr "P"
+msgstr ""
 
 msgid "Previous App:"
-msgstr "Applicazione precedente:"
+msgstr ""
 
 msgid "Price must be between 0 and 20 USD"
-msgstr "prezzo deve essere tra gli 0 e i 20 USD"
+msgstr "價格必須介於 0 到 20 USD 之間"
 
 msgid "Productivity"
-msgstr "Produttività"
+msgstr ""
 
 msgid "Proprietary"
-msgstr "Proprietario"
+msgstr ""
 
 msgid "Published:"
 msgstr ""
 
 msgid "Push Notifications"
-msgstr "Notifiche push"
-
-msgid "QR Code"
-msgstr "Codice QR"
-
-msgid "RSS Feeds"
 msgstr ""
 
+msgid "QR Code"
+msgstr "QR Code"
+
+msgid "RSS Feeds"
+msgstr "RSS Feed"
+
 msgid "Reference"
-msgstr "Riferimento"
+msgstr ""
 
 msgid "Release:"
 msgstr ""
 
 msgid "Remove this app from your list"
-msgstr "Rimuovere questa applicazione dal proprio elenco"
+msgstr ""
 
 msgid "Return to the search page"
-msgstr ""
+msgstr "回到搜尋頁"
 
 msgid "Save"
-msgstr "Salva"
+msgstr "儲存"
 
 msgid "Science & Engineering"
-msgstr "Scienza e ingegneria"
+msgstr "科學與工程"
 
 msgid "Scope"
-msgstr "Ambito"
+msgstr "Scope"
 
 msgid "Scope INI File:"
-msgstr "INI file scope"
+msgstr "Scope INI 檔案:"
 
 msgid "Scopes"
-msgstr "Ambiti"
+msgstr "Scopes"
 
 msgid "Screenshots"
-msgstr "Screenshots"
+msgstr "螢幕截圖"
 
 msgid "Search for a wish:"
-msgstr "Cerca per un desiderio"
+msgstr ""
 
 msgid "Send via Caxton"
-msgstr "Invia tramite Caxton"
+msgstr ""
 
 msgid "Sent via Caxton"
-msgstr "Inviato tramite Caxton"
+msgstr ""
 
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "設定"
 
 msgid "Share"
-msgstr "Condividi"
+msgstr "分享"
 
 msgid "Share on Facebook"
-msgstr "Condividere su Facebook"
+msgstr "在 Facebook 分享"
 
 msgid "Share on Google+"
-msgstr "Condividere su Google+"
+msgstr "在 Google+ 分享"
 
 msgid "Share on Reddit"
-msgstr "Condividere su Reddit"
+msgstr "在 Reddit 分享"
 
 msgid "Share on Twitter"
-msgstr "Condividere su Twitter"
+msgstr "在 Twitter 分享"
 
 msgid "Shopping"
-msgstr "Acquisti"
+msgstr "購物"
 
 msgid "Similar Apps"
-msgstr "Applicazioni simili"
+msgstr "類似的 Apps"
 
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 msgid "Snap Metadata:"
-msgstr ""
+msgstr "Snap Metadata:"
 
 msgid "Snaps"
-msgstr ""
+msgstr "Snaps"
 
 msgid ""
 "Snaps are a new type of Linux package designed to be cross distribution and "
@@ -775,58 +731,56 @@ msgid ""
 "desktop and server distributions and eventually will be available for Ubuntu "
 "Touch."
 msgstr ""
+"Snaps 是一種新的 Linux 套件型式, 目的是在各 distribution 上都能使用, 並且比以往的套件格式更為安全。目前在許多的 "
+"desktop 及 server distributions 上都能使用 Snaps, 未來您更能在 Ubuntu Touch 上使用它。"
 
 msgid "Social Media"
-msgstr ""
+msgstr "社交媒體"
 
 msgid "Social Networking"
-msgstr "Social network"
+msgstr "社交網路"
 
 msgid "Sort Apps By:"
-msgstr "Ordina applicazioni per:"
+msgstr ""
 
 msgid "Sort By:"
-msgstr "Ordina per:"
+msgstr "排序依據："
 
 msgid "Sports"
-msgstr "Sport"
+msgstr "運動"
 
 msgid "Star Rating"
-msgstr "Valutazione stella"
+msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "狀態"
 
 msgid "Submit"
-msgstr "Invia"
+msgstr "送出"
 
 msgid "Submitted by"
-msgstr "Inserita da"
+msgstr ""
 
 msgid "Support:"
-msgstr "Supporto:"
+msgstr ""
 
 msgid "Terms:"
-msgstr "Termini:"
+msgstr ""
 
 msgid "Thank you for your vote!"
-msgstr "Grazie per il tuo voto"
+msgstr ""
 
 msgid "Thank you!"
-msgstr "Grazie!"
+msgstr "謝謝!"
 
 msgid "The app you are trying to find does not exist or has been removed."
-msgstr ""
+msgstr "您想找的 App 不存在或是已被刪除。"
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
-"Il punteggio cuori è simile al punteggio stella, ma premia le app che hanno "
-"valutazioni migliori. Una app con più valutazioni 5 stelle avrà un punteggio "
-"cuore superiore rispetto ad un altra app con solo alcune valutazioni 5 "
-"stelle."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -836,18 +790,12 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
-"Il numero di stelle è la media bayesiana delle stelle di classificazione che "
-"gli utenti danno a un app quando lasciano una recensione. La media Bayesiana "
-"permette applicazioni con altre recensioni di rango meglio di applicazioni "
-"con meno recensioni. Il numero di stelle può essere compreso tra 1 e 5, dove "
-"0 significa che non c'è stato ancora nessun giudizio. Per ulteriori "
-"informazioni sul calcolo della media Bayesiana, consulta questo articolo."
 
 msgid "This app is on these lists:"
-msgstr "Questa applicazione è in questi elenchi:"
+msgstr ""
 
 msgid "This list is empty!"
-msgstr "Questo elenco è vuoto!"
+msgstr ""
 
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for "
@@ -855,196 +803,180 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
-"Questo è un sito non ufficiale di ricerca per le applicazioni Ubuntu Touch. "
-"Tutti i dati delle applicazioni provengono da api accessibili pubblicamente. "
-"Questo sito è gestito da Brian Douglass e non è affiliato o approvato da "
-"Ubuntu o Canonical. Ubuntu e Canonical sono marchi registrati da Canonical "
-"Ltd."
 
 msgid "Title A-Z"
-msgstr "Titolo A-Z"
+msgstr "名稱, A 到 Z"
 
 msgid "Title Z-A"
-msgstr "Titolo Z-A"
+msgstr "名稱, Z 到A"
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"Per installare un applicazione visitare il sito dal proprio dispositivo "
-"Ubuntu Touch. Trovare l'applicazione che si desidera installare e cliccare "
-"il tasto \"Installa\". Si verrà quindi reindirizzati su appstore ufficiale "
-"del proprio dispositivo dove sarà possibile installare l'applicazione."
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
-"Per segnalare problematiche o richiedere nuove funzioni visitare la pagina "
-"degli errori per questo sito su GitHub."
 
 msgid "Top Apps"
-msgstr "Applicazioni migliori"
-
-msgid "Total Reviews"
-msgstr "Recensioni totali"
-
-msgid "Travel & Local"
-msgstr "Viaggi e info locali"
-
-msgid "Type:"
-msgstr "Tipo:"
-
-msgid "Universal Accesss/Accessibility"
-msgstr "Accesso/accessibilità universale"
-
-msgid "Unknown"
-msgstr "Sconosciuto"
-
-msgid "Updated Apps"
-msgstr "Applicazioni aggiornate"
-
-msgid "Updated:"
-msgstr "Aggiornato:"
-
-msgid "Upvote"
-msgstr "Togli il voto"
-
-msgid "Urls that open in this app:"
-msgstr "URL che apre quest'app:"
-
-msgid "User List:"
-msgstr "Elenco utenti:"
-
-msgid "User Reviews"
-msgstr "Recensione degli utenti"
-
-msgid "Utilities"
-msgstr "Utilità"
-
-msgid "Version:"
-msgstr "Versione:"
-
-msgid "View"
-msgstr "Vista"
-
-msgid "Vote"
-msgstr "Vota"
-
-msgid "Weather"
-msgstr "Meteo"
-
-msgid "Web App"
-msgstr "Applicazione web"
-
-msgid "Web Apps"
-msgstr "Applicazioni web"
-
-msgid "Website:"
-msgstr "Sito web:"
-
-msgid "Welcome"
-msgstr "Benvenuto"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Quale app vorresti vedere su ubuntu touch?"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Quali app vorresti vedere su Ubuntu Touch?"
-
-msgid "What are snaps?"
 msgstr ""
 
+msgid "Total Reviews"
+msgstr ""
+
+msgid "Travel & Local"
+msgstr ""
+
+msgid "Type:"
+msgstr ""
+
+msgid "Universal Accesss/Accessibility"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Updated Apps"
+msgstr ""
+
+msgid "Updated:"
+msgstr ""
+
+msgid "Upvote"
+msgstr ""
+
+msgid "Urls that open in this app:"
+msgstr ""
+
+msgid "User List:"
+msgstr ""
+
+msgid "User Reviews"
+msgstr ""
+
+msgid "Utilities"
+msgstr ""
+
+msgid "Version:"
+msgstr "版本:"
+
+msgid "View"
+msgstr ""
+
+msgid "Vote"
+msgstr "評分"
+
+msgid "Weather"
+msgstr "氣象"
+
+msgid "Web App"
+msgstr "Web App"
+
+msgid "Web Apps"
+msgstr "Web Apps"
+
+msgid "Website:"
+msgstr "網站:"
+
+msgid "Welcome"
+msgstr ""
+
+msgid "What app do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What apps do you wish to see on Ubuntu Touch?"
+msgstr ""
+
+msgid "What are snaps?"
+msgstr "Snaps 是什麼?"
+
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr "Cosa fare se si trova una violazione di copyright o marchi?"
+msgstr ""
 
 msgid "What is the heart rating?"
-msgstr "Cos'è la valutazione cuore?"
+msgstr ""
 
 msgid "What is the star rating?"
-msgstr "Cos'è la valutazione stella?"
+msgstr ""
 
 msgid "What is this site?"
-msgstr "Cos'è questo sito?"
+msgstr ""
 
 msgid "Where can I report a problem or request a new feature?"
-msgstr "Dove segnalare un problema o richiedere una nuova funzione?"
+msgstr ""
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr "Se si sceglie di donare o no, apprezzo comunque il supporto. Grazie!"
+msgstr ""
 
 msgid "Why donate?"
-msgstr "Perchè donare?"
+msgstr ""
 
 msgid "Wishlist"
-msgstr "Lista desideri"
+msgstr "許願池"
 
 msgid "Yes"
-msgstr "Sì"
+msgstr ""
 
 msgid "You are already connected via Caxton!"
-msgstr "Si è già connessi tramite Caxton!"
+msgstr ""
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
-"Il proprio account non è connesso a Caxton, fare clic per andare alle "
-"impostazioni"
 
 msgid "You must be logged in to vote"
-msgstr "Devi essere collegato per poter votare"
+msgstr ""
 
 msgid "You vote could not be saved at this time, please try again later"
-msgstr "il tuo voto non piò essere salvato adesso, riprova più tardi"
+msgstr ""
 
 msgid "app snaps"
 msgstr ""
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] "applicazione"
-msgstr[1] "applicazioni"
+msgstr[0] "apps"
 
 msgid "framework snaps"
-msgstr ""
+msgstr "framework snaps"
 
 msgid "gadget snaps"
-msgstr ""
+msgstr "gadget snaps"
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] "gioco"
-msgstr[1] "giochi"
+msgstr[0] "遊戲"
 
 msgid "iTunes Link"
-msgstr "link di iTunes"
+msgstr "iTunes 連結"
 
 msgid "iTunes link is not a valid url"
-msgstr "il link di iTunes non ha un URL valido"
+msgstr ""
 
 msgid "kernel snaps"
-msgstr ""
+msgstr "kernel snaps"
 
 msgid "oem snaps"
-msgstr ""
+msgstr "oem snaps"
 
 msgid "os snaps"
-msgstr ""
+msgstr "os snaps"
 
 msgid "phone apps & scopes"
-msgstr "App per telefono & scopes"
+msgstr "phone apps 和 scopes"
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] "ambito"
-msgstr[1] "ambiti"
+msgstr[0] "scopes"
 
 msgid "snaps"
-msgstr ""
+msgstr "snaps"
 
 msgid ""
 "uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
@@ -1052,5 +984,4 @@ msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] "applicazione web"
-msgstr[1] "applicazioni web"
+msgstr[0] "web apps"
