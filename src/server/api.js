@@ -170,8 +170,6 @@ function setup(app, success, error) {
   });
 
   function appsFromMongo(findQuery, req, callback) {
-    var regxp = null;
-
     findQuery.takedown = {'$ne': true};
     var countQuery = db.Package.count(findQuery);
     if (req.query.search) {
