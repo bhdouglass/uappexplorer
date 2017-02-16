@@ -40,15 +40,31 @@
     }
 
     .list-group-item-heading {
+      display: block;
+      display: -webkit-box;
+
+      max-height: 85px;
+      overflow: hidden!important;
       font-size: 24px;
+
+      text-overflow: ellipsis;
       word-break: break-all;
       word-break: break-word;
+
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
     }
 
     .list-group-item-text {
       position: absolute;
       bottom: 15px;
       left: 215px;
+    }
+
+    @media (max-width: 768px) {
+      .list-group-item-text .fa {
+        font-size: 20px;
+      }
     }
   }
 
