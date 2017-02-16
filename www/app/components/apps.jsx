@@ -297,6 +297,16 @@ module.exports = React.createClass({
       }
     }
 
+    var search_hint = '';
+    if (this.state.search) {
+        if (this.state.search.indexOf('author:') === 0) {
+            search_hint = i18n.t('Author') + ': ' + this.state.search.replace('author:', '').trim();
+        }
+        else {
+            search_hint = i18n.t('Containing:') + ' "' + this.state.search + '"';
+        }
+    }
+
     return (
       <div className="apps">
         <div className="app-search">
@@ -306,7 +316,7 @@ module.exports = React.createClass({
               <span>{count} {type}</span>
               <span>
                 <br/>
-                {this.state.search ? i18n.t('Containing:') + ' "' + this.state.search + '"' : ''}
+                {search_hint}
               </span>
             </div>
             <div className="col-md-7">

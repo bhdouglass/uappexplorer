@@ -176,8 +176,7 @@ function setup(app, success, error) {
     var countQuery = db.Package.count(findQuery);
     if (req.query.search) {
       if (req.query.search.indexOf('author:') === 0) {
-        regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
-        countQuery.where({author: regxp});
+        countQuery.where({author: req.query.search.replace('author:', '').trim()});
       }
     }
 
@@ -197,8 +196,7 @@ function setup(app, success, error) {
 
         if (req.query.search) {
           if (req.query.search.indexOf('author:') === 0) {
-            regxp = new RegExp(req.query.search.replace('author:', ''), 'i');
-            query.where({author: regxp});
+            query.where({author: req.query.search.replace('author:', '').trim()});
           }
         }
 
