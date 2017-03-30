@@ -278,6 +278,12 @@ function fetchList(callback) {
           if (pkg.revision > packageMap[pkg.name].revision) {
             packageMap[pkg.name] = pkg;
           }
+          else if (!packageMap[pkg.name].snap_id) {
+            //Overwrite any click package with the snap package
+            //This is a temporary fix until a better solution is found
+            packageMap[pkg.name] = pkg;
+            console.log('Overwriting a click for a snap: ' + pkg.name);
+          }
         }
         else {
           packageMap[pkg.name] = pkg;
