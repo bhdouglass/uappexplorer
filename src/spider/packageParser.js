@@ -88,7 +88,10 @@ function downloadPackage(pkg, callback) {
                 type = 'application';
               }
 
-              if (type != 'push') {
+              if (type == 'webapp+') { //TODO add support for this in the frontend
+                types.push('webapp');
+              }
+              else if (type != 'push') {
                 types.push(type);
               }
             });
