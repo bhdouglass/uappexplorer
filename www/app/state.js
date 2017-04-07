@@ -84,12 +84,6 @@ module.exports = new Baobab({
     lists: [],
   },
 
-  wishes: {
-    count: 0,
-    wishes: [],
-  },
-  wish: {},
-
   og: {
     title: 'uApp Explorer',
     description: 'Browse and discover apps for Ubuntu Touch',

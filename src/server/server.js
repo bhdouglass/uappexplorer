@@ -3,7 +3,6 @@ var logger = require('../logger');
 var feed = require('./feed');
 var icons = require('./icons');
 var api = require('./api');
-var wish = require('./wish');
 var app = require('./app');
 var auth = require('./auth');
 var lists = require('./lists');
@@ -65,7 +64,6 @@ if (config.use_app()) {
 if (config.use_api()) {
   api.setup(app_express, success, error, isAuthenticated);
   lists.setup(app_express, success, error, isAuthenticated);
-  wish.setup(app_express, success, error, isAuthenticated);
 
   if (config.use_icons()) {
     icons.setup(app_express, success, error, isAuthenticated);

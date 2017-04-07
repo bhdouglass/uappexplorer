@@ -36,7 +36,7 @@ module.exports = React.createClass({
   componentWillMount: function() {
     this.debounceSearch = debounce(this.search, 300);
 
-    if (this.props.location.pathname != '/wishlist' && this.props.location && this.props.location.query && this.props.location.query.q) {
+    if (this.props.location && this.props.location.query && this.props.location.query.q) {
       this.setState({search: this.props.location.query.q});
       actions.showSearch(true);
     }
@@ -44,7 +44,6 @@ module.exports = React.createClass({
 
   componentWillUpdate: function(nextProps, nextState) {
     if (
-      nextProps.location.pathname != '/wishlist' &&
       nextProps.location &&
       nextProps.location.query &&
       (nextState.search != nextProps.location.query.q) &&
@@ -236,9 +235,6 @@ module.exports = React.createClass({
               </li>
               <li>
                 <a onClick={this.open.bind(this, 'donate')} className="clickable">{i18n.t('Donate')}</a>
-              </li>
-              <li>
-                <Link to="/wishlist">{i18n.t('Wishlist')}</Link>
               </li>
 
               <If value={this.state.auth.loggedin} element="li">

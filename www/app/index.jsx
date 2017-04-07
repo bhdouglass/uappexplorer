@@ -12,8 +12,6 @@ var Apps = require('./components/apps');
 var App = require('./components/app');
 var Me = require('./components/me');
 var List = require('./components/list');
-var Wishlist = require('./components/wishlist');
-var Wish = require('./components/wish');
 var FAQ = require('./components/faq');
 var Login = require('./components/login');
 var Feeds = require('./components/feeds');
@@ -45,8 +43,6 @@ ReactDOM.render((
       <ReactRouter.Route path="/app/:name" component={App} />
       <ReactRouter.Route path="/me" component={Me} />
       <ReactRouter.Route path="/list/:id" component={List} />
-      <ReactRouter.Route path="/wishlist" component={Wishlist} />
-      <ReactRouter.Route path="/wishlist/:id" component={Wish} />
       <ReactRouter.Route path="/faq" component={FAQ} />
       <ReactRouter.Route path="/login" component={Login} />
       <ReactRouter.Route path="/feeds" component={Feeds} />

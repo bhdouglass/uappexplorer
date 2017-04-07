@@ -1,5 +1,4 @@
 var spider = require('./spider/spider');
-var wish = require('./server/wish');
 var elasticsearchPackage = require('./db/elasticsearchPackage');
 
 function callback(err, value) {
@@ -43,9 +42,6 @@ if (process.argv[2]) {
   }
   else if (process.argv[2] == 'mongoToElasticsearch') {
     elasticsearchPackage.mongoToElasticsearch(null, true, callback);
-  }
-  else if (process.argv[2] == 'normalizeVotes') {
-    wish.normalizeVotes(callback);
   }
   else if (process.argv[2] == 'reparsePackagesMissingTypes') {
     spider.reparsePackagesMissingTypes(callback);

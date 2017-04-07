@@ -475,20 +475,6 @@ actions = {
         current: location,
       });
     }
-    else if (location.indexOf('/wishlist') === 0 && location.indexOf('/wishlist/') == -1) {
-      //Return to the app list from the wishlist
-      tree.set('location', {
-        previous: '/apps',
-        current: location,
-      });
-    }
-    else if (location.indexOf('/wishlist/') === 0 && current.indexOf('/wishlist') == -1) {
-      //Return to the main wishlist from a wish page if not already returning to the wishlist
-      tree.set('location', {
-        previous: '/wishlist',
-        current: location,
-      });
-    }
     else {
       tree.set('location', {
         previous: current,
@@ -531,69 +517,6 @@ actions = {
         cookie.set('language', lng, {expires: 365});
       });
     }
-  },
-
-  getWishes: function(limit, skip, search) {
-    return api.getWishes(limit, skip, search).then(function(data) {
-      tree.set('wishes', data);
-    }).catch(function() {
-      actions.createAlert(i18n.t('Could not load wishes at this time, click to retry'), 'error', actions.getUserLists.bind(actions));
-    });
-  },
-
-  getWish: function(id) {
-    tree.set('wish', null);
-
-    return api.getWish(id).then(function(data) {
-      tree.set('wish', data);
-
-      return data;
-    }).catch(function() {
-      actions.createAlert(i18n.t('Could not find wish'), 'error');
-      tree.set('wish', null);
-    });
-  },
-
-  createWish: function(wish) {
-    return api.createWish(wish).catch(function(err) {
-      if (err.status == 420) {
-        actions.createAlert(i18n.t('A wish with the same name already exists'), 'error');
-      }
-      else if (err.status == 421) {
-        actions.createAlert(i18n.t('Amazon link is not a valid url'), 'error');
-      }
-      else if (err.status == 422) {
-        actions.createAlert(i18n.t('Google Play link is not a valid url'), 'error');
-      }
-      else if (err.status == 423) {
-        actions.createAlert(i18n.t('iTunes link is not a valid url'), 'error');
-      }
-      else if (err.status == 424) {
-        actions.createAlert(i18n.t('Other link is not a valid url'), 'error');
-      }
-      else {
-        actions.createAlert(i18n.t('Could not create a new wish at this time, please try again later'), 'error');
-      }
-
-      return null;
-    });
-  },
-
-  voteWish: function(id, direction, price) {
-    api.voteWish(id, direction, price).then(function(wish) {
-      actions.createAlert(i18n.t('Thank you for your vote!'), 'success');
-      tree.set('wish', wish);
-    }).catch(function(err) {
-      if (err.status == 401) {
-        actions.createAlert(i18n.t('You must be logged in to vote'), 'info');
-      }
-      else if (err.status == 425) {
-        actions.createAlert(i18n.t('Price must be between 0 and 20 USD'), 'error');
-      }
-      else {
-        actions.createAlert(i18n.t('You vote could not be saved at this time, please try again later'), 'error');
-      }
-    });
   },
 };
 

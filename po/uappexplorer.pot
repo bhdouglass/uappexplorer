@@ -23,9 +23,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr ""
 
-msgid "A wish with the same name already exists"
-msgstr ""
-
 msgid "Account Integration"
 msgstr ""
 
@@ -56,12 +53,6 @@ msgstr ""
 msgid "All Types"
 msgstr ""
 
-msgid "Amazon Link"
-msgstr ""
-
-msgid "Amazon link is not a valid url"
-msgstr ""
-
 msgid "Any Architecture"
 msgstr ""
 
@@ -74,16 +65,10 @@ msgstr ""
 msgid "App"
 msgstr ""
 
-msgid "App Name"
-msgstr ""
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr ""
 
 msgid "App Snaps"
-msgstr ""
-
-msgid "App Wishlist"
 msgstr ""
 
 msgid "Apps"
@@ -140,9 +125,6 @@ msgstr ""
 msgid "By:"
 msgstr ""
 
-msgid "Cancel"
-msgstr ""
-
 msgid "Category:"
 msgstr ""
 
@@ -173,9 +155,6 @@ msgstr ""
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
 
@@ -191,13 +170,7 @@ msgstr ""
 msgid "Could not find this list, it may not exist any more"
 msgstr ""
 
-msgid "Could not find wish"
-msgstr ""
-
 msgid "Could not load lists at this time, click to retry"
-msgstr ""
-
-msgid "Could not load wishes at this time, click to retry"
 msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
@@ -227,9 +200,6 @@ msgstr ""
 msgid "Developer Tools"
 msgstr ""
 
-msgid "Developer/Company"
-msgstr ""
-
 msgid "Donate"
 msgstr ""
 
@@ -249,9 +219,6 @@ msgid "Donation Web App"
 msgstr ""
 
 msgid "Download"
-msgstr ""
-
-msgid "Downvote"
 msgstr ""
 
 msgid "Edit"
@@ -329,12 +296,6 @@ msgstr ""
 msgid "Go there now"
 msgstr ""
 
-msgid "Google Play Link"
-msgstr ""
-
-msgid "Google Play link is not a valid url"
-msgstr ""
-
 msgid "Graphics"
 msgstr ""
 
@@ -348,9 +309,6 @@ msgid "Heart Rating"
 msgstr ""
 
 msgid "Heart ratings are calculated from the star rating where a 5 star review is 1 heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 hearts, and 1 star = -1 hearts."
-msgstr ""
-
-msgid "Help this wish get more votes!"
 msgstr ""
 
 msgid "Help translate!"
@@ -371,19 +329,7 @@ msgstr ""
 msgid "How is the popularity determined?"
 msgstr ""
 
-msgid "How much would you be willing pay for this app?"
-msgstr ""
-
 msgid "I just published my app, why don't I see it?"
-msgstr ""
-
-msgid "I'm wishing for..."
-msgstr ""
-
-msgid "I'm wishing for: "
-msgstr ""
-
-msgid "Idea Summary"
 msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
@@ -410,13 +356,7 @@ msgstr ""
 msgid "Install using snapd"
 msgstr ""
 
-msgid "Is this an existing app?"
-msgstr ""
-
 msgid "It is possible to have a negative heart rating."
-msgstr ""
-
-msgid "Itunes Link"
 msgstr ""
 
 msgid "Kernel Snap"
@@ -464,16 +404,10 @@ msgstr ""
 msgid "Log in via Ubuntu"
 msgstr ""
 
-msgid "Login to make a wish"
-msgstr ""
-
 msgid "Lowest Heart Rating"
 msgstr ""
 
 msgid "Lowest Star Rating"
-msgstr ""
-
-msgid "Make a wish"
 msgstr ""
 
 msgid "Media & Video"
@@ -518,7 +452,7 @@ msgstr ""
 msgid "New Snaps"
 msgstr ""
 
-msgid "New apps are fetched from the official appstore every hour, you can either wait until the new apps are fetched or use the request form to request that the app be found early."
+msgid "New apps are fetched from the official appstore every few hours, you can either wait until the new apps are fetched or use the request form to request that the app be found early."
 msgstr ""
 
 msgid "Newest"
@@ -542,9 +476,6 @@ msgstr ""
 msgid "No reviews yet!"
 msgstr ""
 
-msgid "No wishes found, try searching again."
-msgstr ""
-
 msgid "OEM Snap"
 msgstr ""
 
@@ -563,19 +494,10 @@ msgstr ""
 msgid "Oldest Update"
 msgstr ""
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
-
 msgid "Open Source"
 msgstr ""
 
 msgid "Opens Urls"
-msgstr ""
-
-msgid "Other Link"
-msgstr ""
-
-msgid "Other link is not a valid url"
 msgstr ""
 
 msgid "Permissions"
@@ -590,16 +512,10 @@ msgstr ""
 msgid "Please login to send via Caxton"
 msgstr ""
 
-msgid "Please specify a name or idea for your wish"
-msgstr ""
-
 msgid "Popularity is based on the number of 4 and 5 star reviews given to and app during the current month."
 msgstr ""
 
 msgid "Previous App:"
-msgstr ""
-
-msgid "Price must be between 0 and 20 USD"
 msgstr ""
 
 msgid "Productivity"
@@ -648,9 +564,6 @@ msgid "Scopes"
 msgstr ""
 
 msgid "Screenshots"
-msgstr ""
-
-msgid "Search for a wish:"
 msgstr ""
 
 msgid "Send via Caxton"
@@ -716,19 +629,10 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-msgid "Submit"
-msgstr ""
-
-msgid "Submitted by"
-msgstr ""
-
 msgid "Support:"
 msgstr ""
 
 msgid "Terms:"
-msgstr ""
-
-msgid "Thank you for your vote!"
 msgstr ""
 
 msgid "Thank you!"
@@ -788,9 +692,6 @@ msgstr ""
 msgid "Updated:"
 msgstr ""
 
-msgid "Upvote"
-msgstr ""
-
 msgid "Urls that open in this app:"
 msgstr ""
 
@@ -809,9 +710,6 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-msgid "Vote"
-msgstr ""
-
 msgid "Weather"
 msgstr ""
 
@@ -825,12 +723,6 @@ msgid "Website:"
 msgstr ""
 
 msgid "Welcome"
-msgstr ""
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr ""
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
 msgstr ""
 
 msgid "What are snaps?"
@@ -857,9 +749,6 @@ msgstr ""
 msgid "Why donate?"
 msgstr ""
 
-msgid "Wishlist"
-msgstr ""
-
 msgid "Yes"
 msgstr ""
 
@@ -867,12 +756,6 @@ msgid "You are already connected via Caxton!"
 msgstr ""
 
 msgid "You do not have your account connected to Caxton, click to go to your settings"
-msgstr ""
-
-msgid "You must be logged in to vote"
-msgstr ""
-
-msgid "You vote could not be saved at this time, please try again later"
 msgstr ""
 
 msgid "app snaps"
@@ -893,12 +776,6 @@ msgid "games"
 msgid_plural "games"
 msgstr[0] ""
 msgstr[1] ""
-
-msgid "iTunes Link"
-msgstr ""
-
-msgid "iTunes link is not a valid url"
-msgstr ""
 
 msgid "kernel snaps"
 msgstr ""
