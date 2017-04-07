@@ -117,7 +117,7 @@ module.exports = React.createClass({
           )}
         </div>
 
-        <If value={this.state.info.loaded && this.state.info.essentials}>
+        {/*<If value={this.state.info.loaded && this.state.info.essentials}>
           <div className="row">
             <div className="col-md-12 text-center">
               <h1>
@@ -144,7 +144,7 @@ module.exports = React.createClass({
               </Slider>
             </div>
           </div>
-        </If>
+        </If>*/}
 
         <If value={this.state.info.top.apps.length > 0}>
           <div>
