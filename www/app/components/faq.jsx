@@ -94,7 +94,7 @@ module.exports = React.createClass({
         <div>
           <p>
             <a href="/apps/request" onClick={this.props.onHide}>
-              {i18n.t('New apps are fetched from the official appstore every hour, you can either wait until the new apps are fetched or use the request form to request that the app be found early.')}
+              {i18n.t('New apps are fetched from the official appstore every few hours, you can either wait until the new apps are fetched or use the request form to request that the app be found early.')}
             </a>
           </p>
         </div>
