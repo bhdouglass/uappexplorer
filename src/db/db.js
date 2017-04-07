@@ -10,7 +10,23 @@ var Wish = require('./wish').Wish;
 var config = require('../config');
 var logger = require('../logger');
 
-mongoose.connect(config.mongo.uri + '/' + config.mongo.database, function(err) {
+//As recommended here: https://blog.mlab.com/2014/04/mongodb-driver-mongoose/
+var options = {
+  server: {
+    socketOptions: {
+      keepAlive: 300000,
+      connectTimeoutMS: 30000
+    }
+  },
+  replset: {
+    socketOptions: {
+      keepAlive: 300000,
+      connectTimeoutMS : 30000
+    }
+  }
+};
+
+mongoose.connect(config.mongo.uri + '/' + config.mongo.database, options, function(err) {
   if (err) {
     logger.error('database: ' + err);
     process.exit(1);
