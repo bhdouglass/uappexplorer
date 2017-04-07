@@ -182,7 +182,7 @@ function ubuntuToUAppExplorer(data) {
 function doFetchList(url, arch, results, callback) {
   results = results ? results : [];
 
-  var headers = {};
+  var headers = {'User-Agent': config.spider.user_agent};
   if (arch) {
     headers['X-Ubuntu-Architecture'] = arch;
   }
@@ -303,7 +303,7 @@ function fetchList(callback) {
 }
 
 function parsePackageByUrl(url, arch, release, callback) {
-  var headers = {};
+  var headers = {'User-Agent': config.spider.user_agent};
   if (arch && arch != 'all') {
     headers['X-Ubuntu-Architecture'] = arch;
   }
@@ -522,7 +522,7 @@ function parsePackageByName(name, callback) {
     }
     else {
       if (!pkg) {
-        request({url: config.spider.packages_api + name}, function(err, resp, body) {
+        request({url: config.spider.packages_api + name, headers: {'User-Agent': config.spider.user_agent}}, function(err, resp, body) {
           if (err) {
             callback(err);
           }

@@ -35,7 +35,7 @@ function saveDepartment(d, callback) {
 }
 
 function parseDepartments(callback) {
-  request(config.spider.departments_api, function(err, resp, body) {
+  request({url: config.spider.departments_api, headers: {'User-Agent': config.spider.user_agent}}, function(err, resp, body) {
     if (err) {
       logger.error('error fetching departments: ' + err);
       if (callback) {

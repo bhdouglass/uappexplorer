@@ -18,10 +18,13 @@ function downloadPackage(pkg, callback) {
       method: 'GET',
   };
 
+  var headers = oauth.toHeader(oauth.authorize(request_data, token));
+  headers['User-Agent'] = config.spider.user_agent;
+
   var r = request({
       url: request_data.url,
       method: request_data.method,
-      headers: oauth.toHeader(oauth.authorize(request_data, token))
+      headers: headers,
   });
 
   r.on('error', function(err) {
@@ -126,7 +129,8 @@ function fetchOAuth(callback) {
       email: config.ubuntu_sso.email,
       password: config.ubuntu_sso.password,
       token_name: config.ubuntu_sso.token_name,
-    }
+    },
+    headers: {'User-Agent': config.spider.user_agent}
   }, function(err, resp, body) {
     if (err) {
       callback(err);

@@ -59,6 +59,7 @@ var config = {
     page_size: 500,
     //Which architectures to pull from the store
     architectures: ['i386', 'amd64', 'armhf', 'arm64', 'ppc64el', 's390x'],
+    user_agent: 'uappexplorer.com',
   },
   //Credentials for logging to Papertrail - https://papertrailapp.com
   papertrail: {

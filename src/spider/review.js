@@ -114,7 +114,7 @@ function refreshRatings(callback) {
 
 function parseReview(pkg, callback) {
   logger.debug('parsing reviews for ' + pkg.name);
-  request(config.spider.reviews_api + '?package_name=' + pkg.name, function(err, resp, body) {
+  request({url: config.spider.reviews_api + '?package_name=' + pkg.name, headers: {'User-Agent': config.spider.user_agent}}, function(err, resp, body) {
     if (err) {
       callback(err);
     }
