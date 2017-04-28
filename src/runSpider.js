@@ -1,4 +1,5 @@
 var spider = require('./spider/spider');
+var snaps = require('./spider/snaps');
 var elasticsearchPackage = require('./db/elasticsearchPackage');
 
 function callback(err, value) {
@@ -14,7 +15,12 @@ function callback(err, value) {
 }
 
 if (process.argv[2]) {
-  if (process.argv[2] == 'update' || process.argv[2] == 'updates') {
+  if (process.argv[2] == 'snaps' || process.argv[2] == 'snap') {
+    snaps.fetchSnaps().then(() => {
+      process.exit(0);
+    });
+  }
+  else if (process.argv[2] == 'update' || process.argv[2] == 'updates') {
     spider.parsePackages(true, callback);
   }
   else if (process.argv[2] == 'dep' || process.argv[2] == 'department' || process.argv[2] == 'departments') {

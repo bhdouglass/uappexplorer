@@ -6,6 +6,7 @@ var List = require('./list').List;
 var Package = require('./package').Package;
 var Review = require('./review').Review;
 var User = require('./user').User;
+var Snap = require('./snap').Snap;
 var config = require('../config');
 var logger = require('../logger');
 
@@ -37,3 +38,4 @@ exports.List = List;
 exports.Package = Package;
 exports.Review = Review;
 exports.User = User;
+exports.Snap = Snap;

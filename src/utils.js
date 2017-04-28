@@ -87,6 +87,19 @@ function download(url, filename, callback) {
   });
 }
 
+function downloadAsync(url, filename) {
+  return new Promise((resolve, reject) => {
+    download(url, filename, (err) => {
+      if (err) {
+        reject(err);
+      }
+      else {
+        resolve(filename);
+      }
+    });
+  });
+}
+
 function isJson(string) {
   var value = true;
   try {
@@ -100,6 +113,7 @@ function isJson(string) {
 }
 
 exports.download = download;
+exports.downloadAsync = downloadAsync;
 exports.niceBytes = niceBytes;
 exports.fixUrl = fixUrl;
 exports.isJson = isJson;

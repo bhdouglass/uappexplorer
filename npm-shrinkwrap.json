@@ -121,6 +121,11 @@
       "from": "aws4@>=1.2.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.5.0.tgz"
     },
+    "axios": {
+      "version": "0.16.0",
+      "from": "axios@latest",
+      "resolved": "https://registry.npmjs.org/axios/-/axios-0.16.0.tgz"
+    },
     "balanced-match": {
       "version": "0.4.2",
       "from": "balanced-match@>=0.4.1 <0.5.0",
@@ -182,9 +187,9 @@
       "dev": true
     },
     "bson": {
-      "version": "0.5.7",
-      "from": "bson@>=0.5.4 <0.6.0",
-      "resolved": "https://registry.npmjs.org/bson/-/bson-0.5.7.tgz"
+      "version": "1.0.4",
+      "from": "bson@>=1.0.4 <1.1.0",
+      "resolved": "https://registry.npmjs.org/bson/-/bson-1.0.4.tgz"
     },
     "buffer-shims": {
       "version": "1.0.0",
@@ -724,6 +729,11 @@
       "resolved": "https://registry.npmjs.org/flagged-respawn/-/flagged-respawn-0.3.2.tgz",
       "dev": true
     },
+    "follow-redirects": {
+      "version": "1.0.0",
+      "from": "follow-redirects@1.0.0",
+      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.0.0.tgz"
+    },
     "for-in": {
       "version": "0.1.6",
       "from": "for-in@>=0.1.5 <0.2.0",
@@ -1054,9 +1064,9 @@
       "resolved": "https://registry.npmjs.org/hoek/-/hoek-2.16.3.tgz"
     },
     "hooks-fixed": {
-      "version": "1.2.0",
-      "from": "hooks-fixed@1.2.0",
-      "resolved": "https://registry.npmjs.org/hooks-fixed/-/hooks-fixed-1.2.0.tgz"
+      "version": "2.0.0",
+      "from": "hooks-fixed@2.0.0",
+      "resolved": "https://registry.npmjs.org/hooks-fixed/-/hooks-fixed-2.0.0.tgz"
     },
     "hosted-git-info": {
       "version": "2.1.5",
@@ -1530,9 +1540,9 @@
       "resolved": "https://registry.npmjs.org/jsprim/-/jsprim-1.3.1.tgz"
     },
     "kareem": {
-      "version": "1.1.3",
-      "from": "kareem@1.1.3",
-      "resolved": "https://registry.npmjs.org/kareem/-/kareem-1.1.3.tgz"
+      "version": "1.2.1",
+      "from": "kareem@1.2.1",
+      "resolved": "https://registry.npmjs.org/kareem/-/kareem-1.2.1.tgz"
     },
     "keygrip": {
       "version": "1.0.1",
@@ -1951,9 +1961,9 @@
       "resolved": "https://registry.npmjs.org/moment/-/moment-2.17.0.tgz"
     },
     "mongodb": {
-      "version": "2.2.11",
-      "from": "mongodb@2.2.11",
-      "resolved": "https://registry.npmjs.org/mongodb/-/mongodb-2.2.11.tgz",
+      "version": "2.2.25",
+      "from": "mongodb@2.2.25",
+      "resolved": "https://registry.npmjs.org/mongodb/-/mongodb-2.2.25.tgz",
       "dependencies": {
         "readable-stream": {
           "version": "2.1.5",
@@ -1963,19 +1973,19 @@
       }
     },
     "mongodb-core": {
-      "version": "2.0.13",
-      "from": "mongodb-core@2.0.13",
-      "resolved": "https://registry.npmjs.org/mongodb-core/-/mongodb-core-2.0.13.tgz"
+      "version": "2.1.9",
+      "from": "mongodb-core@2.1.9",
+      "resolved": "https://registry.npmjs.org/mongodb-core/-/mongodb-core-2.1.9.tgz"
     },
     "mongoose": {
-      "version": "4.7.0",
-      "from": "mongoose@>=4.7.0 <5.0.0",
-      "resolved": "https://registry.npmjs.org/mongoose/-/mongoose-4.7.0.tgz",
+      "version": "4.9.4",
+      "from": "mongoose@4.9.4",
+      "resolved": "https://registry.npmjs.org/mongoose/-/mongoose-4.9.4.tgz",
       "dependencies": {
-        "async": {
-          "version": "2.1.2",
-          "from": "async@2.1.2",
-          "resolved": "https://registry.npmjs.org/async/-/async-2.1.2.tgz"
+        "ms": {
+          "version": "0.7.2",
+          "from": "ms@0.7.2",
+          "resolved": "https://registry.npmjs.org/ms/-/ms-0.7.2.tgz"
         }
       }
     },
@@ -1990,9 +2000,9 @@
       "resolved": "https://registry.npmjs.org/mpromise/-/mpromise-0.5.5.tgz"
     },
     "mquery": {
-      "version": "2.0.0",
-      "from": "mquery@2.0.0",
-      "resolved": "https://registry.npmjs.org/mquery/-/mquery-2.0.0.tgz",
+      "version": "2.3.0",
+      "from": "mquery@2.3.0",
+      "resolved": "https://registry.npmjs.org/mquery/-/mquery-2.3.0.tgz",
       "dependencies": {
         "sliced": {
           "version": "0.0.5",
@@ -2013,9 +2023,9 @@
       "dev": true
     },
     "muri": {
-      "version": "1.1.1",
-      "from": "muri@1.1.1",
-      "resolved": "https://registry.npmjs.org/muri/-/muri-1.1.1.tgz"
+      "version": "1.2.1",
+      "from": "muri@1.2.1",
+      "resolved": "https://registry.npmjs.org/muri/-/muri-1.2.1.tgz"
     },
     "nan": {
       "version": "2.4.0",
@@ -2309,6 +2319,11 @@
       "version": "7.1.1",
       "from": "promise@>=7.1.1 <8.0.0",
       "resolved": "https://registry.npmjs.org/promise/-/promise-7.1.1.tgz"
+    },
+    "promise-limit": {
+      "version": "2.3.0",
+      "from": "promise-limit@latest",
+      "resolved": "https://registry.npmjs.org/promise-limit/-/promise-limit-2.3.0.tgz"
     },
     "proxy-addr": {
       "version": "1.1.2",
@@ -2623,7 +2638,7 @@
     },
     "squashfs-nodejs": {
       "version": "1.0.6",
-      "from": "squashfs-nodejs@>=1.0.6 <2.0.0",
+      "from": "squashfs-nodejs@latest",
       "resolved": "https://registry.npmjs.org/squashfs-nodejs/-/squashfs-nodejs-1.0.6.tgz"
     },
     "sshpk": {

@@ -3,6 +3,7 @@ var logger = require('../logger');
 var feed = require('./feed');
 var icons = require('./icons');
 var api = require('./api');
+var snap = require('./snap');
 var app = require('./app');
 var auth = require('./auth');
 var lists = require('./lists');
@@ -63,6 +64,7 @@ if (config.use_app()) {
 
 if (config.use_api()) {
   api.setup(app_express, success, error, isAuthenticated);
+  snap.setup(app_express, success, error, isAuthenticated);
   lists.setup(app_express, success, error, isAuthenticated);
 
   if (config.use_icons()) {
