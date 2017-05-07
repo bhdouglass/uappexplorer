@@ -102,6 +102,10 @@ function setup(app, success, error, isAuthenticated) {
     successRedirect: '/me',
     failureRedirect: '/'
   }));
+  app.post('/auth/ubuntu/return', passport.authenticate('ubuntu', {
+    successRedirect: '/me',
+    failureRedirect: '/'
+  }));
 
   app.get('/auth/me', function(req, res) {
     if (req.user) {
