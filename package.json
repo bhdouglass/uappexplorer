@@ -39,7 +39,7 @@
     "oauth-1.0a": "^2.0.0",
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
-    "passport-ubuntu": "^0.1.3",
+    "passport-ubuntu": "^0.2.0",
     "request": "^2.79.0",
     "rss": "^1.2.1",
     "sanitize-html": "^1.13.0",
