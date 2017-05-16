@@ -15,6 +15,7 @@ module.exports = React.createClass({
   },
   props: {
     types: React.PropTypes.array.isRequired,
+    isSnap: React.PropTypes.boolean,
   },
 
   render: function() {
@@ -34,6 +35,10 @@ module.exports = React.createClass({
             snappy_application: i18n.t('Snap'),
             unknown: i18n.t('Unknown'),
           };
+
+          if (this.props.isSnap) {
+            type = 'snappy_' + type;
+          }
 
           var cls = 'label ';
           var title = types[type];

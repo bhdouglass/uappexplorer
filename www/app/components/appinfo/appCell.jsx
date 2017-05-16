@@ -46,6 +46,8 @@ module.exports = React.createClass({
   render: function() {
     var url = '/app/' + this.props.app.name;
 
+    var types = this.props.app.types ? this.props.app.types : [this.props.app.type];
+
     return (
       <div className="list-group app-view">
         <Link className="list-group-item clickable" to={url} title={this.props.app.tagline} onClick={this.handleClick}>
@@ -57,7 +59,7 @@ module.exports = React.createClass({
 
           <div className="row-content">
             <div className="least-content">
-              <Types types={this.props.app.types} />
+              <Types types={types} isSnap={this.props.app.isSnap} />
             </div>
             <div className="least-content-lower">
               <Price prices={this.props.app.prices} currency="USD" />

@@ -162,6 +162,56 @@ actions = {
     });
   },
 
+  getSnaps: function(paging, no_set_last, set_loading) {
+    set_loading = (set_loading === undefined) ? true : set_loading;
+
+    var key = JSON.stringify(paging);
+    var cached = tree.get('snaps')[key];
+    var now = moment();
+
+    if (!no_set_last) {
+      tree.set('lastPage', paging);
+    }
+
+    var promise = null;
+    if (cached && now.diff(cached.fetched, 'minutes') <= 60) {
+      promise = Promise.resolve(cached);
+    }
+    else {
+      if (set_loading) {
+        tree.set('loading', true);
+      }
+
+      promise = api.getSnaps(paging).then(function(data) {
+        data.fetched = moment();
+
+        data.snaps.forEach(function(snap) {
+          snap.isSnap = true;
+        });
+        tree.set(['snaps', key], data);
+
+        if (set_loading) {
+          tree.set('loading', false);
+        }
+
+        tree.push('cache_keys', key);
+        var cache_keys = tree.get('cache_keys');
+        if (cache_keys.length > 10) {
+          tree.unset(['snaps', cache_keys[0]]);
+          tree.splice('cache_keys', [0, 1]);
+        }
+
+        return data;
+      }).catch(function(err) {
+        console.log(err);
+        tree.set('loading', false);
+        actions.createAlert(i18n.t('Could not download snap list, click to retry'), 'error', actions.getSnaps.bind(actions, paging));
+      });
+    }
+
+    return promise;
+  },
+
   triggerPreviousApp: function() {
     if (tree.get('previousLastPage')) {
       tree.set('lastPage', tree.get('previousLastPage'));

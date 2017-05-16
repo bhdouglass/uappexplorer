@@ -11,7 +11,7 @@ const mime = require('mime');
 
 function setup(app, success, error) {
     app.get('/api/v1/snaps', (req, res) => {
-        //Filter by category, type, confinement, license arch
+        //Filter by arch, release
 
         let types = req.query.types ? req.query.types.split(',') : null;
         let category = req.query.category ? req.query.category : null;
@@ -25,6 +25,7 @@ function setup(app, success, error) {
             //Fetch apps from elasticsearch
 
             //TODO
+            throw 'Not yet implemented!';
         }
         else {
             //Fetch apps from mongo
@@ -62,10 +63,10 @@ function setup(app, success, error) {
 
             if (req.query.sort) {
                 if (req.query.sort == 'relevance') {
-                    query.sort('-points');
+                    findQuery.sort('-points');
                 }
                 else {
-                    query.sort(req.query.sort);
+                    findQuery.sort(req.query.sort);
                 }
             }
 

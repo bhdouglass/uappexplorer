@@ -22,9 +22,6 @@ module.exports = {
     return [
       {
         label: i18n.t('All Types'),
-        value: 'all_types',
-      }, {
-        label: i18n.t('Phone Apps & Scopes'),
         value: 'all',
       }, {
         label: i18n.t('Apps'),
@@ -35,7 +32,13 @@ module.exports = {
       }, {
         label: i18n.t('Scopes'),
         value: 'scope',
-      }, {
+      },
+    ];
+  },
+
+  snap_types: function() {
+    return [
+      {
         label: i18n.t('All Snaps'),
         value: 'snappy',
       }, {
@@ -94,7 +97,7 @@ module.exports = {
     return [ //copied from the api, it doesn't change often, no need for an extra network request
       {
         internal_name: 'all',
-        name: i18n.t('All Apps'),
+        name: i18n.t('All Categories'),
       }, {
         internal_name: 'books-comics',
         name: i18n.t('Books & Comics'),
@@ -227,6 +230,33 @@ module.exports = {
       }, {
         label: i18n.t('Most Expensive (USD)'),
         value: '-prices.USD'
+      },
+    ];
+  },
+
+  snap_sorts: function() {
+    return [
+      {
+        label: i18n.t('Most Relevant'),
+        value: 'relevance',
+      }, {
+        label: i18n.t('Title A-Z'),
+        value: 'title'
+      }, {
+        label: i18n.t('Title Z-A'),
+        value: '-title'
+      }, {
+        label: i18n.t('Newest'),
+        value: '-published_date'
+      }, {
+        label: i18n.t('Oldest'),
+        value: 'published_date'
+      }, {
+        label: i18n.t('Latest Update'),
+        value: '-last_updated'
+      }, {
+        label: i18n.t('Oldest Update'),
+        value: 'last_updated'
       },
     ];
   },

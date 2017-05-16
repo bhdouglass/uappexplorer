@@ -62,6 +62,7 @@ module.exports = new Baobab({
   nextLastPage: null,
 
   apps: {},
+  snaps: {},
   cache_keys: [],
   frameworks: [],
   releases: [],
