@@ -16,6 +16,8 @@ function setup(app, success, error) {
         let types = req.query.types ? req.query.types.split(',') : null;
         let category = req.query.category ? req.query.category : null;
         let confinement = req.query.confinement ? req.query.confinement.split(',') : null;
+        let architecture = req.query.architecture ? req.query.architecture.split(',') : null;
+        let release = req.query.release ? req.query.release : null;
         let license = req.query.license ? [req.query.license] : null;
         if (req.query.license == 'Open Source') {
             license = licenses;
@@ -33,7 +35,7 @@ function setup(app, success, error) {
             let query = {};
 
             if (types) {
-                query.types = {$in: types};
+                query.type = {$in: types};
             }
 
             if (category) {
@@ -42,6 +44,14 @@ function setup(app, success, error) {
 
             if (confinement) {
                 query.confinement = {$in: confinement};
+            }
+
+            if (architecture) {
+                query.architecture = {$in: architecture};
+            }
+
+            if (release) {
+                query.release = release;
             }
 
             if (license) {
@@ -70,6 +80,7 @@ function setup(app, success, error) {
                 }
             }
 
+            console.log(query);
             Promise.all([
                 db.Snap.count(query).exec(),
                 findQuery.exec(),

@@ -16,7 +16,7 @@ function fetchSnaps() {
             const limit = promiseLimit(config.spider.snaps.rate_limit);
             return Promise.all(snaps.map((snap) => {
                 //Get the latest release
-                let release = null;
+                let release = config.spider.snaps.default_release;
                 if (snap.release && snap.release.length > 0) {
                     snap.release.sort();
                     release = snap.release[snap.release.length - 1];
@@ -29,6 +29,7 @@ function fetchSnaps() {
             let promises = snaps.map((snapData) => {
                 let internalData = convert(snapData);
                 internalData.store = store.id;
+                console.log(internalData);
 
                 return db.Snap.findOne({name: internalData.name, store: store.id}).then((snap) => {
                     let operation = null;

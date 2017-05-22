@@ -29,7 +29,7 @@ class SnapApi {
                 results = results.concat(res.data._embedded['clickindex:package']);
             }
 
-            if (res.data._links.next && res.data._links.next.href) {
+            if (res.data._links && res.data._links.next && res.data._links.next.href) {
                 return this.listArch(res.data._links.next.href, arch, results);
             }
             else {
@@ -56,20 +56,20 @@ class SnapApi {
                 list.forEach((snap) => {
                     snap.architecture = (snap.architecture) ? snap.architecture : [arch];
 
-                    if (!snapMap[snap.name]) {
-                        snapMap[snap.name] = snap;
+                    if (!snapMap[snap.package_name]) {
+                        snapMap[snap.package_name] = snap;
                     }
                     else {
-                        let arches = snap.architecture.concat(snapMap[snap.name].architecture);
+                        let arches = snap.architecture.concat(snapMap[snap.package_name].architecture);
                         if (arches.indexOf('all') > -1) {
                             arches = ['all'];
                         }
 
-                        if (snap.revision > snapMap[snap.name].revision) {
-                            snapMap[snap.name] = snap;
+                        if (snap.revision > snapMap[snap.package_name].revision) {
+                            snapMap[snap.package_name] = snap;
                         }
 
-                        snapMap[snap.name].architecture = arches;
+                        snapMap[snap.package_name].architecture = arches;
                     }
                 });
 
@@ -99,6 +99,8 @@ class SnapApi {
         if (arch && arch != 'all') {
             headers['X-Ubuntu-Architecture'] = arch;
         }
+
+        console.log(url, headers);
 
         return axios({
             method: 'get',

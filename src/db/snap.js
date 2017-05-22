@@ -27,6 +27,7 @@ var snapSchema = mongoose.Schema({
     architecture: [String],
     categories: {type: [String], index: true},
     permissions: [String],
+    release: String,
 
     average_rating: Number,
     total_rating: Number,

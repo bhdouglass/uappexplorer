@@ -74,8 +74,10 @@ let propertyMap = {
     keywords: 'keywords',
     last_updated: 'last_updated',
     license: 'license',
-    name: 'name',
-    package_name: 'package_name',
+    package_name: function(snap, package_name) {
+        snap.package_name = package_name;
+        snap.name = package_name;
+    },
     prices: 'prices',
     date_published: 'published_date',
     screenshot_urls: 'screenshot_urls',
@@ -94,6 +96,7 @@ let propertyMap = {
     website: 'website',
     content: 'type',
     confinement: 'confinement',
+    release: 'release',
 };
 
 function convert(data) {
