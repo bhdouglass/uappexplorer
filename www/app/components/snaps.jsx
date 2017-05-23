@@ -12,10 +12,9 @@ var If = require('./helpers/if');
 
 var DEFAULT_ARCH = 'any';
 var DEFAULT_CATEGORY = 'all';
-var DEFAULT_RELEASE = 'all';
 var DEFAULT_LICENSE = 'any';
 var DEFAULT_SORT = '-published_date';
-var DEFAULT_TYPE = 'snappy';
+var DEFAULT_TYPE = 'all';
 var LIMIT = 30;
 
 module.exports = React.createClass({
@@ -28,7 +27,6 @@ module.exports = React.createClass({
   cursors: {
     snaps: ['snaps'],
     loading: ['loading'],
-    releases: ['releases'],
     lng: ['lng'],
   },
 
@@ -41,7 +39,6 @@ module.exports = React.createClass({
       search: '',
       architecture: DEFAULT_ARCH,
       category: DEFAULT_CATEGORY,
-      release: DEFAULT_RELEASE,
       license: DEFAULT_LICENSE,
       sort: DEFAULT_SORT,
       type: DEFAULT_TYPE,
@@ -83,7 +80,6 @@ module.exports = React.createClass({
       sort: params.sort ? params.sort : DEFAULT_SORT,
       category: params.category ? params.category : null,
       architecture: arch ? arch.join(',') : null,
-      release: params.release ? params.release : null,
       license: license,
       types: params.type ? params.type : null,
     };
@@ -103,7 +99,6 @@ module.exports = React.createClass({
         search: paging.search ? paging.search : '',
         architecture: arch ? arch[0] : DEFAULT_ARCH,
         category: paging.category ? paging.category : DEFAULT_CATEGORY,
-        release: paging.release ? paging.release : DEFAULT_RELEASE,
         license: params.license ? params.license : DEFAULT_LICENSE,
         sort: paging.sort ? paging.sort : DEFAULT_SORT,
         type: paging.types ? paging.types : DEFAULT_TYPE,
@@ -111,8 +106,7 @@ module.exports = React.createClass({
 
       if (
         s.architecture != DEFAULT_ARCH ||
-        s.license != DEFAULT_LICENSE ||
-        s.release != DEFAULT_RELEASE
+        s.license != DEFAULT_LICENSE
       ) {
         s.filters = true;
       }
@@ -126,7 +120,6 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
-    actions.getReleases();
     this.getSnaps(this.props, this.state);
 
     actions.setOG({
@@ -217,22 +210,6 @@ module.exports = React.createClass({
     }
 
     if (event.target.value != this.state.arch && this.state.page) {
-      delete this.props.location.query.page;
-    }
-
-    this.history.pushState(null, '/snaps', this.props.location.query);
-  },
-
-  changeRelease: function(event) {
-    var value = event.target.value.toLowerCase();
-    if (value == DEFAULT_RELEASE) {
-      delete this.props.location.query.release;
-    }
-    else {
-      this.props.location.query.release = value;
-    }
-
-    if (value != this.state.release && this.state.page) {
       delete this.props.location.query.page;
     }
 
@@ -344,7 +321,7 @@ module.exports = React.createClass({
                 <div className="row">
                   <form>
                     <fieldset>
-                      <div className="form-group col-md-4">
+                      <div className="form-group col-md-4 col-md-offset-4">
                         <label htmlFor="license" className="control-label">{i18n.t('License:')}</label>
                         <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
                           {info.licenses().map(function(license) {
@@ -358,16 +335,6 @@ module.exports = React.createClass({
                         <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
                           {info.architectures().map(function(architecture) {
                             return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
-                          }, this)}
-                        </select>
-                      </div>
-
-                      <div className="form-group col-md-4">
-                        <label htmlFor="release" className="control-label">{i18n.t('Release:')}</label>
-                        <select id="release" className="form-control" value={this.state.release} onChange={this.changeRelease}>
-                          <option value="all">{i18n.t('All Releases')}</option>
-                          {this.state.releases.map(function(release) {
-                            return <option value={release} key={release}>{release}</option>;
                           }, this)}
                         </select>
                       </div>

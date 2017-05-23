@@ -11,13 +11,10 @@ const mime = require('mime');
 
 function setup(app, success, error) {
     app.get('/api/v1/snaps', (req, res) => {
-        //Filter by arch, release
-
         let types = req.query.types ? req.query.types.split(',') : null;
         let category = req.query.category ? req.query.category : null;
         let confinement = req.query.confinement ? req.query.confinement.split(',') : null;
         let architecture = req.query.architecture ? req.query.architecture.split(',') : null;
-        let release = req.query.release ? req.query.release : null;
         let license = req.query.license ? [req.query.license] : null;
         if (req.query.license == 'Open Source') {
             license = licenses;
@@ -48,10 +45,6 @@ function setup(app, success, error) {
 
             if (architecture) {
                 query.architecture = {$in: architecture};
-            }
-
-            if (release) {
-                query.release = release;
             }
 
             if (license) {

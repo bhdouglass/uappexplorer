@@ -40,25 +40,25 @@ module.exports = {
     return [
       {
         label: i18n.t('All Snaps'),
-        value: 'snappy',
+        value: 'all',
       }, {
         label: i18n.t('App Snaps'),
-        value: 'snappy_application',
+        value: 'application',
       }, {
         label: i18n.t('Framework Snaps'),
-        value: 'snappy_framework',
+        value: 'framework',
       }, {
         label: i18n.t('OEM Snaps'),
-        value: 'snappy_oem',
+        value: 'oem',
       }, {
         label: i18n.t('OS Snaps'),
-        value: 'snappy_os',
+        value: 'os',
       }, {
         label: i18n.t('Kernel Snaps'),
-        value: 'snappy_kernel',
+        value: 'kernel',
       }, {
         label: i18n.t('Gadget Snaps'),
-        value: 'snappy_gadget',
+        value: 'gadget',
       },
     ];
   },
