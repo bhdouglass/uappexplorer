@@ -261,6 +261,26 @@ actions = {
     });
   },
 
+  getSnap: function(store, name) {
+    tree.set('loading', true);
+    tree.set('snap', {});
+    tree.set('missingSnap', null);
+
+    api.getSnap(store, name).then(function(data) {
+      tree.set('loading', false);
+      tree.set('snap', data);
+    }).catch(function(err) {
+      console.log(err);
+      tree.set('loading', false);
+      if (err.status == 404) {
+        tree.set('missingSnap', name);
+      }
+      else {
+        actions.createAlert(i18n.t('Could not download snap data, click to retry'), 'error', actions.getSnap.bind(actions, name));
+      }
+    });
+  },
+
   getReviews: function(name, params) {
     if (name != tree.get('reviews').name) {
       tree.set('reviews', {loaded: false});

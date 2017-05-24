@@ -78,6 +78,9 @@ module.exports = new Baobab({
     loaded: false,
   },
 
+  snap: null,
+  missingSnap: null,
+
   savingSettings: false,
   userList: {},
   userLists: {

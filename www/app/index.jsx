@@ -11,7 +11,7 @@ var Index = require('./components/index');
 var Apps = require('./components/apps');
 var App = require('./components/app');
 var Snaps = require('./components/snaps');
-//var Snap = require('./components/snap');
+var Snap = require('./components/snap');
 var Me = require('./components/me');
 var List = require('./components/list');
 var FAQ = require('./components/faq');
@@ -44,8 +44,7 @@ ReactDOM.render((
       <ReactRouter.Route path="/apps/request" component={AppRequest} />
       <ReactRouter.Route path="/app/:name" component={App} />
       <ReactRouter.Route path="/snaps" component={Snaps} />
-      {/*<ReactRouter.Route path="/snap/:store/:name" component={Snap} />*/}
-
+      <ReactRouter.Route path="/snap/:store/:name" component={Snap} />
       <ReactRouter.Route path="/me" component={Me} />
       <ReactRouter.Route path="/list/:id" component={List} />
       <ReactRouter.Route path="/faq" component={FAQ} />

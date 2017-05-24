@@ -61,6 +61,10 @@ class SnapApi {
                     }
                     else {
                         let arches = snap.architecture.concat(snapMap[snap.package_name].architecture);
+                        arches = arches.filter((value, index, self) => {
+                            return self.indexOf(value) === index;
+                        });
+
                         if (arches.indexOf('all') > -1) {
                             arches = ['all'];
                         }
@@ -100,8 +104,6 @@ class SnapApi {
             headers['X-Ubuntu-Architecture'] = arch;
         }
 
-        console.log(url, headers);
-
         return axios({
             method: 'get',
             url: url,
@@ -128,7 +130,7 @@ class SnapApi {
                     snap = result;
                 }
 
-                if (result.allow_unauthenticated && result.anon_download_url) {
+                if (result.anon_download_url) {
                     downloads[result.architecture[0]] = result.anon_download_url;
                 }
             });

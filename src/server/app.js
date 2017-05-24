@@ -173,7 +173,7 @@ function setup(app) {
 
   //TODO opengraph data for snaps
 
-  app.all(['/apps', '/apps/request', '/me', '/me/list/:id', '/faq', '/login', '/feeds', '/snaps'], function(req, res) { //For html5mode on frontend
+  app.all(['/apps', '/apps/request', '/me', '/me/list/:id', '/faq', '/login', '/feeds', '/snaps', '/snap/:store/:id'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
   });
 }

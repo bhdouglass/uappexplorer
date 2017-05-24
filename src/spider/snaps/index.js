@@ -29,7 +29,6 @@ function fetchSnaps() {
             let promises = snaps.map((snapData) => {
                 let internalData = convert(snapData);
                 internalData.store = store.id;
-                console.log(internalData);
 
                 return db.Snap.findOne({name: internalData.name, store: store.id}).then((snap) => {
                     let operation = null;
@@ -56,7 +55,7 @@ function fetchSnaps() {
             });
 
             //Remove snaps not in the store api
-            let names = snaps.map((snap) => snap.name);
+            let names = snaps.map((snap) => snap.package_name);
             promises.push(db.Snap.find({store: store.id, name: {'$nin': names}}).then((snaps) => {
                 if (snaps.length > 0) {
                     snaps.forEach((snap) => {

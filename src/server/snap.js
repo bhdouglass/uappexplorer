@@ -96,10 +96,12 @@ function setup(app, success, error) {
             snap.icon = `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`;
 
             //TODO author apps & related apps
+            snap.author_snaps = [];
+            snap.related_snaps = [];
 
             success(res, snap);
         }).catch((err) => {
-            error(res, `Snap ${req.params.name} was not found in the ${rea.params.store} store`, 404);
+            error(res, `Snap ${req.params.name} was not found in the ${req.params.store} store`, 404);
         });
     });
 

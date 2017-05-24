@@ -29,6 +29,10 @@ module.exports = {
     return axios.get('/api/apps/' + name).then(success);
   },
 
+  getSnap: function(store, name) {
+    return axios.get('/api/v1/snaps/' + store + '/' + name).then(success);
+  },
+
   getReviews: function(name, params) {
     return axios.get('/api/apps/reviews/' + name, {params: params}).then(success);
   },

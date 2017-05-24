@@ -97,6 +97,7 @@ let propertyMap = {
     content: 'type',
     confinement: 'confinement',
     release: 'release',
+    downloads: 'downloads',
 };
 
 function convert(data) {
