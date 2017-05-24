@@ -85,6 +85,10 @@ module.exports = React.createClass({
                 sort: '-points',
               };
               var types = [this.state.snap.type];
+              var description = utils.nl2br(this.state.snap.description);
+              if (!this.state.snap.description) {
+                description = {__html: i18n.t('None Yet')};
+              }
 
               component = (
                 <div className="swipe-container">
@@ -109,7 +113,7 @@ module.exports = React.createClass({
                                 <span title={i18n.t('Company')}>{this.state.snap.company}</span>
                               </If>
 
-                              <Types types={types} />
+                              <Types types={types} isSnap={true} />
                               <Price prices={this.state.snap.prices} />
                             </div>
                           </div>
@@ -178,7 +182,7 @@ module.exports = React.createClass({
                     <div className="row">
                       <div className="col-md-6">
                         <h3>{i18n.t('Description')}</h3>
-                        <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.snap.description)}></div>
+                        <div className="description" dangerouslySetInnerHTML={description}></div>
 
                         <If value={this.state.snap.changelog}>
                           <h4>{i18n.t('Changelog')}</h4>
@@ -220,11 +224,11 @@ module.exports = React.createClass({
                           <If value={this.state.snap.terms}>
                             {i18n.t('Terms:')}
                             <div>{this.state.snap.terms}</div>
+                            <br/>
                           </If>
                         </div>
 
                         <div>
-                          <br/>
                           {i18n.t('Confinement:')} {this.state.snap.confinement}
                           <br/>
                           {i18n.t('Version:')} {this.state.snap.version}

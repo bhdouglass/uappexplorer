@@ -45,6 +45,9 @@ module.exports = React.createClass({
 
   render: function() {
     var url = '/app/' + this.props.app.name;
+    if (this.props.app.isSnap) {
+      url = '/snap/' + this.props.app.store + '/' + this.props.app.name;
+    }
 
     var types = this.props.app.types ? this.props.app.types : [this.props.app.type];
 
