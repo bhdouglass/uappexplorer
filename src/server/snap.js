@@ -81,7 +81,10 @@ function setup(app, success, error) {
                     //TODO next/previous links
 
                     count: results[0],
-                    snaps: results[1],
+                    snaps: results[1].map((snap) => {
+                        snap.icon = `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`;
+                        return snap;
+                    }),
                 })
             }).catch((err) => {
                 logger.warning('Error fetching snap packages from mongo:', err);
