@@ -1,7 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
 var moment = require('moment');
-var yaml = require('js-yaml');
 var mixins = require('baobab-react/mixins');
 var Link = require('react-router').Link;
 var PureRenderMixin = require('react-addons-pure-render-mixin');
@@ -106,20 +105,8 @@ module.exports = React.createClass({
       cls = 'app slideOutLeft';
     }
 
-    var is_snappy = false;
-    if (this.state.app && this.state.app.types) {
-      is_snappy = this.state.app.types.reduce(function(previous, current) {
-        if (['snappy', 'snappy_oem', 'snappy_os', 'snappy_kernel', 'snappy_gadget', 'snappy_framework', 'snappy_application'].indexOf(current) >= 0) {
-          previous = true;
-        }
-
-        return previous;
-      }, false);
-    }
-
     var desktop_file = '';
     var scope_ini = '';
-    var snapcraft = '';
 
     if (this.state.app && this.state.app.desktop_file) {
       for (var name in this.state.app.desktop_file) {
@@ -141,10 +128,6 @@ module.exports = React.createClass({
 
         scope_ini += '\n\n';
       }
-    }
-
-    if (this.state.app && this.state.app.snapcraft) {
-      snapcraft = yaml.safeDump(this.state.app.snapcraft);
     }
 
     return (
@@ -247,53 +230,21 @@ module.exports = React.createClass({
                             </div>
 
                             <div className="row-content">
-                              <If value={is_snappy}>
-                                <div className="list-group-item-text">
-                                  <If value={Object.keys(this.state.app.downloads).length > 0} element="span">
-                                    <div className="download-dropdown">
-                                      <div className="dropdown">
-                                        <button className="btn btn-sm btn-success dropdown-toggle" type="button" data-toggle="dropdown">
-                                         {i18n.t('Download')} &nbsp;
-                                         <span className="caret"></span>
-                                        </button>
-                                        <ul className="dropdown-menu">
-                                          {Object.keys(this.state.app.downloads).sort().map(function(arch, index) {
-                                            return (
-                                              <li key={index}>
-                                                <a href={this.state.app.downloads[arch]}>{arch}</a>
-                                              </li>
-                                            );
-                                          }, this)}
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </If>
+                              <div className="list-group-item-text">
+                                <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
 
-                                  <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
-                                </div>
+                                <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
 
                                 <div className="small-note">
-                                  <a href="http://snapcraft.io/">{i18n.t('Install using snapd')}</a>
+                                  {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
                                 </div>
-                              </If>
 
-                              <If value={!is_snappy}>
-                                <div className="list-group-item-text">
-                                  <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
-
-                                  <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
-
-                                  <div className="small-note">
-                                    {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
+                                <If value={this.state.app.webapp_inject}>
+                                  <div className="small-note text-material-red">
+                                    {i18n.t('*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.')}
                                   </div>
-
-                                  <If value={this.state.app.webapp_inject}>
-                                    <div className="small-note text-material-red">
-                                      {i18n.t('*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author.')}
-                                    </div>
-                                  </If>
-                                </div>
-                              </If>
+                                </If>
+                              </div>
                             </div>
                           </div>
 
@@ -416,7 +367,7 @@ module.exports = React.createClass({
                               </If>
                             </If>
 
-                            <If value={desktop_file || scope_ini || snapcraft}>
+                            <If value={desktop_file || scope_ini}>
                               <a className="clickable btn btn-success btn-sm" onClick={this.moreInfo}>
                                 {this.state.moreInfo ? i18n.t('Less Info') : i18n.t('More Info')}
                               </a>
@@ -430,11 +381,6 @@ module.exports = React.createClass({
                                   <If value={scope_ini}>
                                     {i18n.t('Scope INI File:')}
                                     <pre>{scope_ini}</pre>
-                                  </If>
-
-                                  <If value={snapcraft}>
-                                    {i18n.t('Snap Metadata:')}
-                                    <pre>{snapcraft}</pre>
                                   </If>
                                 </If>
                               </Swipeable>

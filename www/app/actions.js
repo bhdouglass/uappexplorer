@@ -234,14 +234,6 @@ actions = {
     }
   },
 
-  getReleases: function() {
-    if (tree.get('releases').length === 0) {
-      api.getReleases().then(function(data) {
-        tree.set('releases', data);
-      });
-    }
-  },
-
   getApp: function(name) {
     tree.set('loading', true);
     tree.set('app', {});

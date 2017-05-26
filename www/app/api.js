@@ -21,10 +21,6 @@ module.exports = {
     return axios.get('/api/frameworks').then(success);
   },
 
-  getReleases: function() {
-    return axios.get('/api/releases').then(success);
-  },
-
   getApp: function(name) {
     return axios.get('/api/apps/' + name).then(success);
   },

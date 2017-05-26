@@ -135,34 +135,8 @@ function setup(app, success, error) {
     }
   });
 
-  var releases = [];
-  var releases_date = null;
   app.get('/api/releases', function(req, res) {
-    var now = moment();
-    if (!releases_date || now.diff(releases_date, 'hours') > 12 || releases.length === 0) { //Cache miss
-      db.Package.find({release: {$exists: true, $not: {$size: 0}}}, 'release', function(err, pkgs) {
-        if (err) {
-          error(res, err);
-        }
-        else {
-          releases = [];
-          _.forEach(pkgs, function(pkg) {
-            _.forEach(pkg.release, function(release) {
-              if (releases.indexOf(release) == -1) {
-                releases.push(release);
-              }
-            });
-          });
-
-          releases = _.sortBy(releases);
-          releases_date = moment();
-          success(res, releases);
-        }
-      });
-    }
-    else { //Cache hit
-      success(res, releases);
-    }
+    success(res, []); //Keeping this to not break any clients depending on this route
   });
 
   app.get('/api/licenses', function(req, res) {

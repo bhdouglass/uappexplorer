@@ -70,9 +70,11 @@ module.exports = React.createClass({
 
             <h4 className="list-group-item-heading word-break">{this.props.app.title}</h4>
             <div className="list-group-item-text">
-              <Stars stars={this.props.app.bayesian_average} />
+              <If value={this.props.app.bayesian_average} element="span">
+                <Stars stars={this.props.app.bayesian_average} />
 
-              <Hearts hearts={this.props.app.points} popularity={this.props.app.monthly_popularity} pop={this.props.popularity} />
+                <Hearts hearts={this.props.app.points} popularity={this.props.app.monthly_popularity} pop={this.props.popularity} />
+              </If>
             </div>
 
             <If value={this.props.description}>
