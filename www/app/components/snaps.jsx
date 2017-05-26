@@ -1,5 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
+var Link = require('react-router').Link;
 var mixins = require('baobab-react/mixins');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var i18n = require('i18next-client');
@@ -271,6 +272,17 @@ module.exports = React.createClass({
 
     return (
       <div className="apps">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="btn-toolbar">
+              <div className="btn-group">
+                <Link to="/apps" className="btn clickable">Phone Apps</Link>
+                <Link to="/snaps" className="btn clickable bold btn-material-light-blue">Snaps</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="app-search">
           <div className="row">
             <div className="col-md-5">
