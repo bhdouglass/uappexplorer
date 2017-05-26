@@ -84,7 +84,7 @@ module.exports = {
         label: i18n.t('Classic'),
         value: 'classic',
       }
-    ]
+    ];
   },
 
   architectures: function() {

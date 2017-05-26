@@ -73,7 +73,6 @@ function setup(app, success, error) {
                 }
             }
 
-            console.log(query);
             Promise.all([
                 db.Snap.count(query).exec(),
                 findQuery.exec(),

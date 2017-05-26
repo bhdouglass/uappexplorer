@@ -132,6 +132,8 @@ module.exports = React.createClass({
 
                           <div className="row-content">
                             <div className="list-group-item-text">
+                              <a href={'snap://' + this.state.snap.title} className='btn btn-sm btn-material-green'>{i18n.t('Install')}</a>
+
                               <If value={Object.keys(this.state.snap.downloads).length > 0} element="span">
                                 <div className="download-dropdown">
                                   <div className="dropdown">
@@ -156,7 +158,9 @@ module.exports = React.createClass({
                             </div>
 
                             <div className="small-note">
-                              <a href="http://snapcraft.io/">{i18n.t('Install using snapd')}</a>
+                              {i18n.t('Install will take you to the GNOME Software Center (if installed)')}
+                              <br/>
+                              {i18n.t('Downloading the snap will not give you automatic updates')}
                             </div>
                           </div>
                         </div>
