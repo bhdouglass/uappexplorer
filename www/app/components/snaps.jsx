@@ -15,6 +15,7 @@ var DEFAULT_CATEGORY = 'all';
 var DEFAULT_LICENSE = 'any';
 var DEFAULT_SORT = '-published_date';
 var DEFAULT_TYPE = 'all';
+var DEFAULT_CONFINEMENT = 'any';
 var LIMIT = 30;
 
 module.exports = React.createClass({
@@ -40,6 +41,7 @@ module.exports = React.createClass({
       architecture: DEFAULT_ARCH,
       category: DEFAULT_CATEGORY,
       license: DEFAULT_LICENSE,
+      confinement: DEFAULT_CONFINEMENT,
       sort: DEFAULT_SORT,
       type: DEFAULT_TYPE,
     };
@@ -72,7 +74,6 @@ module.exports = React.createClass({
       }
     }
 
-    //TODO filter by confinement
     var paging = {
       skip: page * LIMIT,
       limit: LIMIT,
@@ -81,6 +82,7 @@ module.exports = React.createClass({
       category: params.category ? params.category : null,
       architecture: arch ? arch.join(',') : null,
       license: license,
+      confinement: params.confinement ? params.confinement : null,
       types: params.type ? params.type : null,
     };
 
@@ -100,13 +102,15 @@ module.exports = React.createClass({
         architecture: arch ? arch[0] : DEFAULT_ARCH,
         category: paging.category ? paging.category : DEFAULT_CATEGORY,
         license: params.license ? params.license : DEFAULT_LICENSE,
+        confinement: params.confinement ? params.confinement : DEFAULT_CONFINEMENT,
         sort: paging.sort ? paging.sort : DEFAULT_SORT,
         type: paging.types ? paging.types : DEFAULT_TYPE,
       };
 
       if (
         s.architecture != DEFAULT_ARCH ||
-        s.license != DEFAULT_LICENSE
+        s.license != DEFAULT_LICENSE ||
+        s.confinement != DEFAULT_CONFINEMENT
       ) {
         s.filters = true;
       }
@@ -201,6 +205,21 @@ module.exports = React.createClass({
     this.history.pushState(null, '/snaps', this.props.location.query);
   },
 
+  changeConfinement: function(event) {
+    if (event.target.value == DEFAULT_CONFINEMENT) {
+      delete this.props.location.query.confinement;
+    }
+    else {
+      this.props.location.query.confinement = event.target.value;
+    }
+
+    if (event.target.value != this.state.confinement && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
+    this.history.pushState(null, '/snaps', this.props.location.query);
+  },
+
   changeArcitecture: function(event) {
     if (event.target.value == DEFAULT_ARCH) {
       delete this.props.location.query.arch;
@@ -221,7 +240,7 @@ module.exports = React.createClass({
     var pages = 0;
     var snaps = [];
     var category = i18n.t('All');
-    var type = info.count_types().all;
+    var type = info.snap_count_types().all;
 
     var categories = info.categories();
     for (var i = 0; i < categories.length; i++) {
@@ -236,7 +255,7 @@ module.exports = React.createClass({
       snaps = this.state.snaps[this.state.key].snaps;
 
       if (this.state.type) {
-        type = info.count_types(count)[this.state.type];
+        type = info.snap_count_types(count)[this.state.type];
       }
     }
 
@@ -321,7 +340,7 @@ module.exports = React.createClass({
                 <div className="row">
                   <form>
                     <fieldset>
-                      <div className="form-group col-md-4 col-md-offset-4">
+                      <div className="form-group col-md-4">
                         <label htmlFor="license" className="control-label">{i18n.t('License:')}</label>
                         <select id="license" className="form-control" value={this.state.license} onChange={this.changeLicense}>
                           {info.licenses().map(function(license) {
@@ -335,6 +354,15 @@ module.exports = React.createClass({
                         <select id="architecture" className="form-control" value={this.state.architecture} onChange={this.changeArcitecture}>
                           {info.architectures().map(function(architecture) {
                             return <option value={architecture.value} key={architecture.value}>{architecture.label}</option>;
+                          }, this)}
+                        </select>
+                      </div>
+
+                      <div className="form-group col-md-4">
+                        <label htmlFor="confinement" className="control-label">{i18n.t('Confinement:')}</label>
+                        <select id="confinement" className="form-control" value={this.state.confinement} onChange={this.changeConfinement}>
+                          {info.snap_confinement().map(function(confinement) {
+                            return <option value={confinement.value} key={confinement.value}>{confinement.label}</option>;
                           }, this)}
                         </select>
                       </div>

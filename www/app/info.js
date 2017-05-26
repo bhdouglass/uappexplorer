@@ -8,13 +8,19 @@ module.exports = {
       application: i18n.t('apps', {count: count}),
       scope: i18n.t('scopes', {count: count}),
       webapp: i18n.t('web apps', {count: count}),
-      snappy: i18n.t('snaps', {count: count}),
-      snappy_oem: i18n.t('oem snaps'),
-      snappy_os: i18n.t('os snaps'),
-      snappy_kernel: i18n.t('kernel snaps'),
-      snappy_gadget: i18n.t('gadget snaps'),
-      snappy_framework: i18n.t('framework snaps'),
-      snappy_application: i18n.t('app snaps'),
+    };
+  },
+
+  snap_count_types: function(count) {
+    return {
+      all_types: i18n.t('snaps', {count: count}),
+      all: i18n.t('snaps'),
+      oem: i18n.t('oem snaps'),
+      os: i18n.t('os snaps'),
+      kernel: i18n.t('kernel snaps'),
+      gadget: i18n.t('gadget snaps'),
+      framework: i18n.t('framework snaps'),
+      application: i18n.t('app snaps'),
     };
   },
 
@@ -61,6 +67,24 @@ module.exports = {
         value: 'gadget',
       },
     ];
+  },
+
+  snap_confinement: function() {
+    return [
+      {
+        label: i18n.t('Any Confinement'),
+        value: 'any',
+      }, {
+        label: i18n.t('Strict'),
+        value: 'strict',
+      }, {
+        label: i18n.t('Dev Mode'),
+        value: 'devmode',
+      }, {
+        label: i18n.t('Classic'),
+        value: 'classic',
+      }
+    ]
   },
 
   architectures: function() {
