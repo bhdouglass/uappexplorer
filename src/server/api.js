@@ -45,15 +45,16 @@ function counts(callback) {
     webapps: count({types: {'$in': ['webapp']}}),
     scopes: count({types: {'$in': ['scope']}}),
     games: count({categories: 'games'}),
-    snaps: count({types: {'$in': [
-      'snappy',
-      'snappy_oem',
-      'snappy_os',
-      'snappy_kernel',
-      'snappy_gadget',
-      'snappy_framework',
-      'snappy_application',
-    ]}})
+    snaps: function(callback) {
+      db.Snap.count({}, function(err, count) {
+        if (err) {
+          callback(err);
+        }
+        else {
+          callback(null, count);
+        }
+      });
+    }
   }, function(err, results) {
     if (err) {
       callback(err);

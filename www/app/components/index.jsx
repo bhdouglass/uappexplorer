@@ -111,7 +111,7 @@ module.exports = React.createClass({
             i18n.t('Snaps'),
             i18n.t('snaps', {count: this.state.info.counts.snaps}),
             this.state.info.counts.snaps,
-            '/apps?type=snappy',
+            '/snaps',
             i18n.t('Browse Snaps'),
             'fa fa-laptop background-material-cyan'
           )}
