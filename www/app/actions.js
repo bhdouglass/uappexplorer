@@ -530,6 +530,20 @@ actions = {
         current: location,
       });
     }
+    else if (location.indexOf('/snaps') === 0) {
+      //Return to the main page from the snap list
+      tree.set('location', {
+        previous: '/',
+        current: location,
+      });
+    }
+    else if (location.indexOf('/snap/') === 0) {
+      //Return to the snap list from a snap page
+      tree.set('location', {
+        previous: '/snaps',
+        current: location,
+      });
+    }
     else if (location.indexOf('/me') === 0) {
       //Return to the main page from the user page
       tree.set('location', {
