@@ -7,6 +7,7 @@ const logger = require('../../logger');
 
 const properties = [
     'title',
+    'store',
     'description',
     'keywords',
     'author',
@@ -28,18 +29,21 @@ class SnapElasticsearch {
     }
 
     _convert(snap) {
-        let doc = properties.map((prop) => snap[prop]);
-        doc.search_title = title;
-        doc.keywords = doc.keywords.map((keyword) => snap.toLowerCase());
+        let doc = {};
+        properties.forEach((prop) => {
+            doc[prop] = snap[prop] ? snap[prop] : null;
+        });
+        doc.search_title = snap.title;
+        doc.keywords = doc.keywords ? doc.keywords.map((keyword) => snap.toLowerCase()) : [];
 
         return doc;
     }
 
     upsert(snap) {
-        return this.cleint.update({
+        return this.client.update({
             index: this.index,
             type: this.type,
-            id: snap.store + snap.name,
+            id: snap.name,
             retryOnConflict: 3,
             body: {
                 doc_as_upsert: true,
@@ -57,9 +61,8 @@ class SnapElasticsearch {
         });
     }
 
+    //TODO set the id to name & store
     bulk(upserts, removals) {
-        //TODO
-
         var body = [];
         upserts.forEach(function(snap) {
             body.push({update: {
@@ -70,15 +73,15 @@ class SnapElasticsearch {
             }});
 
             body.push({
-                doc_as_upsert: true
+                doc_as_upsert: true,
                 doc: this._convert(snap),
             });
-        });
+        }, this);
 
         if (removals) {
-            body = body.concat(removals.map((snap) => {
+            body = body.concat(removals.map((snapName) => {
                 return {delete: {
-                    _id: snap.name,
+                    _id: snapName,
                     _index: this.index,
                     _type: this.type,
                     _retry_on_conflict : 3
@@ -86,11 +89,15 @@ class SnapElasticsearch {
             }))
         }
 
-        return client.bulk(body);
+        return this.client.bulk({body: body});
+    }
+
+    removeIndex() {
+        return this.client.indices.delete({index: this.index});
     }
 
     createIndex() {
-        return client.indices.create({
+        return this.client.indices.create({
             index: this.index,
             body: {
                 snap: this.index,
@@ -109,6 +116,10 @@ class SnapElasticsearch {
                     snap: {
                         properties: {
                             search_title: {
+                                type: 'string',
+                                analyzer: 'lower_standard'
+                            },
+                            store: {
                                 type: 'string',
                                 analyzer: 'lower_standard'
                             },
@@ -151,3 +162,5 @@ class SnapElasticsearch {
         });
     }
 }
+
+module.exports = SnapElasticsearch;

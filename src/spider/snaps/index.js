@@ -3,6 +3,7 @@
 const promiseLimit = require('promise-limit');
 
 const db = require('../../db/db');
+const SnapElasticsearch = require('../../db/elasticsearch/snap');
 const SnapApi = require('./api');
 const convert = require('./convert');
 const config = require('../../config');
@@ -73,12 +74,37 @@ function fetchSnaps() {
 
             return Promise.all(promises);
         }).then((operations) => {
-            logger.debug('Saving snaps to db');
             //Filter out any undefined (a result of not needing to remove any snaps)
-            return db.Snap.bulkWrite(operations.filter((operation) => !!operation));
-        }).then(() => {
+            operations = operations.filter((operation) => !!operation);
+
+            logger.debug('Saving snaps to db');
+            return Promise.all([
+                operations,
+                db.Snap.bulkWrite(operations),
+            ]);
+        }).then((results) => {
+            let operations = results[0];
             logger.debug('Saving snaps to elasticsearch');
-            //TODO push updates to elasticsearch
+
+            let upserts = [];
+            let removals = [];
+            operations.forEach((snap) => {
+                if (snap.updateOne) {
+                    upserts.push(snap.updateOne.update.$set);
+                }
+                else if (snap.insertOne) {
+                    upserts.push(snap.insertOne.document);
+                }
+                else if (snap.deleteMany) {
+                    removals = snap.deleteMany.filter.name.$in;
+                }
+            });
+
+            let ses = new SnapElasticsearch();
+
+            return ses.bulk(upserts, removals);
+        }).then(() => {
+            logger.debug('Finished parsing snaps');
         }).catch((err) => {
             logger.error(err);
         });

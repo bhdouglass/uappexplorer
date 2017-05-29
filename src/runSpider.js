@@ -1,7 +1,10 @@
+'use strict';
+
 var spider = require('./spider/spider');
 var snaps = require('./spider/snaps');
 var elasticsearchPackage = require('./db/elasticsearchPackage');
 var db = require('./db/db');
+var SnapElasticsearch = require('./db/elasticsearch/snap');
 
 function callback(err, value) {
   if (err) {
@@ -28,6 +31,24 @@ if (process.argv[2]) {
         return pkg.remove();
       }));
     }).then(() => {
+      process.exit(0);
+    }).catch((err) => {
+      console.log(err);
+      process.exit(1);
+    });
+  }
+  else if (process.argv[2] == 'snap_elasticsearch_index') {
+    let ses = new SnapElasticsearch();
+    ses.createIndex().then(() => {
+      process.exit(0);
+    }).catch((err) => {
+      console.log(err);
+      process.exit(1);
+    });
+  }
+  else if (process.argv[2] == 'snap_elasticsearch_index_remove') {
+    let ses = new SnapElasticsearch();
+    ses.removeIndex().then(() => {
       process.exit(0);
     }).catch((err) => {
       console.log(err);
