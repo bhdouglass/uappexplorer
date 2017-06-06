@@ -19,6 +19,8 @@ const properties = [
     'points',
     'tagline',
     'type',
+    'categories',
+    'confinement',
 ];
 
 class SnapElasticsearch {
@@ -90,6 +92,32 @@ class SnapElasticsearch {
         }
 
         return this.client.bulk({body: body});
+    }
+
+    search(query, sort, filters, skip, limit) { //TODO sort
+        let request = {
+            index: this.index,
+            type: this.type,
+            body: {
+                from: skip ? skip : 0,
+                size: limit ? limit : 30,
+                query: {
+                    multi_match: {
+                        query: query.toLowerCase(),
+                        fields: ['title^3', 'description^2', 'keywords^2', 'author', 'company'],
+                        slop: 10,
+                        max_expansions: 50,
+                        type: 'phrase_prefix',
+                    }
+                }
+            }
+        };
+
+        if (filters && filters.and) {
+            request.body.filter = filters;
+        }
+
+        return this.client.search(request);
     }
 
     removeIndex() {

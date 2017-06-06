@@ -1,6 +1,7 @@
 'use strict';
 
 const db = require('../db/db');
+const SnapElasticsearch = require('../db/elasticsearch/snap');
 const logger = require('../logger');
 const config = require('../config');
 const licenses = require('./json/open-source-licenses.json');
@@ -23,8 +24,54 @@ function setup(app, success, error) {
         if (req.query.search && req.query.search.indexOf('author:') !== 0) {
             //Fetch apps from elasticsearch
 
-            //TODO
-            throw 'Not yet implemented!';
+            let filters = {
+                and: []
+            };
+
+            if (types) {
+                filters.and.push({in: {
+                    type: types
+                }});
+            }
+
+            if (category) {
+                filters.and.push({terms: {
+                    'categories': category
+                }});
+            }
+
+            if (confinement) {
+                filters.and.push({in: {
+                    confinement: confinement
+                }});
+            }
+
+            if (architecture) {
+                filters.and.push({in: {
+                    architecture: architecture
+                }});
+            }
+
+            if (license) {
+                filters.and.push({in: {
+                    license: license
+                }});
+            }
+
+            let sort = null; //TODO
+
+            let ses = new SnapElasticsearch();
+            ses.search(req.query.search, sort, filters, req.query.skip, req.query.limit).then((response) => {
+                success(res, {
+                    //TODO next/previous links
+
+                    count: response.hits.total,
+                    snaps: response.hits.hits.map((snap) => {
+                        snap._source.icon = `${config.server.host}/api/v1/snaps/icon/${snap._source.store}/${snap._source.icon_hash}/${snap._source.name}.png`;
+                        return snap._source;
+                    })
+                });
+            });
         }
         else {
             //Fetch apps from mongo
@@ -85,7 +132,7 @@ function setup(app, success, error) {
                         snap.icon = `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`;
                         return snap;
                     }),
-                })
+                });
             }).catch((err) => {
                 logger.warning('Error fetching snap packages from mongo:', err);
                 error(res, 'Could not load the snap list at this time, please try again later');
