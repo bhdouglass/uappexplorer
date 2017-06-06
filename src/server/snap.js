@@ -58,10 +58,20 @@ function setup(app, success, error) {
                 }});
             }
 
-            let sort = null; //TODO
+            let field = null; //TODO
+            let direction = 'asc';
+            if (req.query.sort && req.query.sort != 'relevance') {
+                if (req.query.sort.charAt(0) == '-') {
+                    direction = 'desc';
+                    field = req.query.sort.substring(1);
+                }
+                else {
+                    field = req.query.sort;
+                }
+            }
 
             let ses = new SnapElasticsearch();
-            ses.search(req.query.search, sort, filters, req.query.skip, req.query.limit).then((response) => {
+            ses.search(req.query.search, {field: field, direction: direction}, filters, req.query.skip, req.query.limit).then((response) => {
                 success(res, {
                     //TODO next/previous links
 

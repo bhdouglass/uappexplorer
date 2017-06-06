@@ -104,7 +104,7 @@ class SnapElasticsearch {
                 query: {
                     multi_match: {
                         query: query.toLowerCase(),
-                        fields: ['title^3', 'description^2', 'keywords^2', 'author', 'company'],
+                        fields: ['search_title^3', 'description^2', 'keywords^2', 'author', 'company'],
                         slop: 10,
                         max_expansions: 50,
                         type: 'phrase_prefix',
@@ -115,6 +115,15 @@ class SnapElasticsearch {
 
         if (filters && filters.and) {
             request.body.filter = filters;
+        }
+
+        if (sort && sort.field) {
+            let s = {};
+            s[sort.field] = {
+                'order': sort.direction,
+                'ignore_unmapped': true,
+            };
+            request.body.sort = [s];
         }
 
         return this.client.search(request);
@@ -180,6 +189,10 @@ class SnapElasticsearch {
                                 index: 'not_analyzed'
                             },
                             title: {
+                                type: 'string',
+                                index: 'not_analyzed'
+                            },
+                            confinement: {
                                 type: 'string',
                                 index: 'not_analyzed'
                             }
