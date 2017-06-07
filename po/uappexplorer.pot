@@ -35,16 +35,13 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-msgid "All Apps"
-msgstr ""
-
 msgid "All Architectures"
 msgstr ""
 
-msgid "All Frameworks"
+msgid "All Categories"
 msgstr ""
 
-msgid "All Releases"
+msgid "All Frameworks"
 msgstr ""
 
 msgid "All Snaps"
@@ -54,6 +51,9 @@ msgid "All Types"
 msgstr ""
 
 msgid "Any Architecture"
+msgstr ""
+
+msgid "Any Confinement"
 msgstr ""
 
 msgid "Any License"
@@ -134,6 +134,9 @@ msgstr ""
 msgid "Changelog"
 msgstr ""
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr ""
 
@@ -141,6 +144,9 @@ msgid "Communication"
 msgstr ""
 
 msgid "Company"
+msgstr ""
+
+msgid "Confinement:"
 msgstr ""
 
 msgid "Containing:"
@@ -162,6 +168,12 @@ msgid "Could not download app data, click to retry"
 msgstr ""
 
 msgid "Could not download app list, click to retry"
+msgstr ""
+
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
 msgstr ""
 
 msgid "Could not find the requested app"
@@ -197,6 +209,9 @@ msgstr ""
 msgid "Desktop File:"
 msgstr ""
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr ""
 
@@ -219,6 +234,9 @@ msgid "Donation Web App"
 msgstr ""
 
 msgid "Download"
+msgstr ""
+
+msgid "Downloading the snap will not give you automatic updates"
 msgstr ""
 
 msgid "Edit"
@@ -353,7 +371,7 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-msgid "Install using snapd"
+msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
 msgid "It is possible to have a negative heart rating."
@@ -428,6 +446,9 @@ msgstr ""
 msgid "More Info"
 msgstr ""
 
+msgid "More Snaps by:"
+msgstr ""
+
 msgid "Most Expensive (USD)"
 msgstr ""
 
@@ -476,6 +497,9 @@ msgstr ""
 msgid "No reviews yet!"
 msgstr ""
 
+msgid "None Yet"
+msgstr ""
+
 msgid "OEM Snap"
 msgstr ""
 
@@ -506,9 +530,6 @@ msgstr ""
 msgid "Personalisation"
 msgstr ""
 
-msgid "Phone Apps & Scopes"
-msgstr ""
-
 msgid "Please login to send via Caxton"
 msgstr ""
 
@@ -537,9 +558,6 @@ msgid "RSS Feeds"
 msgstr ""
 
 msgid "Reference"
-msgstr ""
-
-msgid "Release:"
 msgstr ""
 
 msgid "Remove this app from your list"
@@ -596,10 +614,10 @@ msgstr ""
 msgid "Similar Apps"
 msgstr ""
 
-msgid "Snap"
+msgid "Similar Snaps"
 msgstr ""
 
-msgid "Snap Metadata:"
+msgid "Snap"
 msgstr ""
 
 msgid "Snaps"
@@ -629,6 +647,9 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
+msgid "Strict"
+msgstr ""
+
 msgid "Support:"
 msgstr ""
 
@@ -642,6 +663,9 @@ msgid "The app you are trying to find does not exist or has been removed."
 msgstr ""
 
 msgid "The heart rating is similar to the star rating, but it rewards apps for having more good reviews. An app with more 5 star ratings will have a higher heart rating than an app with only a few 5 star ratings."
+msgstr ""
+
+msgid "The snap you are trying to find does not exist or has been removed."
 msgstr ""
 
 msgid "The star rating is the Bayesian average of the star ratings that user give to an app when they leave a review. The Bayesian average allows apps with more reviews to rank better than apps with less reviews. The star rating can be between 1 and 5, where a 0 means that there have not been any reviews yet. For more information about the Bayesian average calculation, check out this article."
