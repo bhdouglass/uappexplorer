@@ -39,7 +39,7 @@ function fetchSnaps() {
                                 filter: {name: internalData.name, store: store.id},
                                 update: internalData,
                             }
-                        }
+                        };
                     }
                     else {
                         logger.debug('New snap: ' + internalData.name);

@@ -145,4 +145,4 @@ class SnapApi {
     }
 }
 
-module.exports = SnapApi
+module.exports = SnapApi;

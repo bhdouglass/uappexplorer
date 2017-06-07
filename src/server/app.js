@@ -182,7 +182,7 @@ function setup(app) {
     else {
       res.sendFile('index.html', {root: __dirname + config.server.static});
     }
-  })
+  });
 
   app.get('/list/:id', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
     if (isMatch(req)) {

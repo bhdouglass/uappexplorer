@@ -3,7 +3,6 @@
 const elasticsearch = require('elasticsearch');
 
 const config = require('../../config');
-const logger = require('../../logger');
 
 const properties = [
     'title',
@@ -36,7 +35,7 @@ class SnapElasticsearch {
             doc[prop] = snap[prop] ? snap[prop] : null;
         });
         doc.search_title = snap.title;
-        doc.keywords = doc.keywords ? doc.keywords.map((keyword) => snap.toLowerCase()) : [];
+        doc.keywords = doc.keywords ? doc.keywords.map((keyword) => keyword.toLowerCase()) : [];
 
         return doc;
     }
@@ -87,8 +86,8 @@ class SnapElasticsearch {
                     _index: this.index,
                     _type: this.type,
                     _retry_on_conflict : 3
-                }}
-            }))
+                }};
+            }));
         }
 
         return this.client.bulk({body: body});

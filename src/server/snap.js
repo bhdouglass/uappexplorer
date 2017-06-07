@@ -159,7 +159,7 @@ function setup(app, success, error) {
             snap.related_snaps = [];
 
             success(res, snap);
-        }).catch((err) => {
+        }).catch(() => {
             error(res, `Snap ${req.params.name} was not found in the ${req.params.store} store`, 404);
         });
     });
