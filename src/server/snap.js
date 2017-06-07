@@ -58,7 +58,7 @@ function setup(app, success, error) {
                 }});
             }
 
-            let field = null; //TODO
+            let field = null;
             let direction = 'asc';
             if (req.query.sort && req.query.sort != 'relevance') {
                 if (req.query.sort.charAt(0) == '-') {

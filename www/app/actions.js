@@ -498,7 +498,7 @@ actions = {
   setLocation: function(location) {
     var current = tree.get(['location', 'current']);
 
-    if (location.indexOf('/apps') === 0) {
+    if (location.indexOf('/apps') === 0 || location.indexOf('/snaps') === 0) {
       actions.showSearch(true);
     }
     else {

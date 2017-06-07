@@ -109,7 +109,12 @@ module.exports = React.createClass({
       }
     }
 
-    this.history.pushState(null, '/apps', this.props.location.query);
+    if (this.props.location.pathname == '/snaps') {
+      this.history.pushState(null, '/snaps', this.props.location.query);
+    }
+    else {
+      this.history.pushState(null, '/apps', this.props.location.query);
+    }
   },
 
   open: function(modal) {

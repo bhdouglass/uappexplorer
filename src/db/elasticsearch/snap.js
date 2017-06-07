@@ -94,7 +94,7 @@ class SnapElasticsearch {
         return this.client.bulk({body: body});
     }
 
-    search(query, sort, filters, skip, limit) { //TODO sort
+    search(query, sort, filters, skip, limit) {
         let request = {
             index: this.index,
             type: this.type,
@@ -113,7 +113,7 @@ class SnapElasticsearch {
             }
         };
 
-        if (filters && filters.and) {
+        if (filters && filters.and && filters.and.length > 0) {
             request.body.filter = filters;
         }
 
