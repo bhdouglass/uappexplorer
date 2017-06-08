@@ -7,13 +7,15 @@ var typeMap = {
   application: 'App',
   scope: 'Scope',
   webapp: 'Web App',
-  snappy: 'Snap',
-  snappy_oem: 'OEM Snap',
-  snappy_os: 'OS Snap',
-  snappy_kernel: 'Kernel Snap',
-  snappy_gadget: 'Gadget Snap',
-  snappy_framework: 'Framework Snap',
-  snappy_application: 'Snap',
+};
+
+var snapTypeMap = {
+  oem: 'OEM Snap',
+  os: 'OS Snap',
+  kernel: 'Kernel Snap',
+  gadget: 'Gadget Snap',
+  framework: 'Framework Snap',
+  application: 'Snap',
 };
 
 function type(types) {
@@ -159,32 +161,26 @@ function generateNewSnapFeed(callback) {
     ttl:         240 //4 hours
   });
 
-  var query = db.Package.find({types: {$in: [
-    'snappy',
-    'snappy_oem',
-    'snappy_os',
-    'snappy_kernel',
-    'snappy_gadget',
-    'snappy_framework',
-    'snappy_application',
-  ]}});
+  var query = db.Snap.find({});
   query.limit(10);
   query.sort('-published_date');
-  query.exec(function(err, pkgs) {
+  query.exec(function(err, snaps) {
     if (err) {
       callback(err);
     }
     else {
-      _.forEach(pkgs, function(pkg) {
+      _.forEach(snaps, function(snap) {
+        var description = snap.description ? '<br/>' + snap.description : '';
+
         feed.item({
-          title:           'New ' + type(pkg.types) + ': ' + pkg.title,
-          url:             config.server.host + '/app/' + pkg.name,
-          description:     '<a href="' + config.server.host + '/app/' + pkg.name +
+          title:           'New ' + snapTypeMap[snap.type] + ': ' + snap.title,
+          url:             config.server.host + '/app/' + snap.name,
+          description:     '<a href="' + config.server.host + '/app/' + snap.name +
                            '"><img src="' + config.server.host + '/api/icon/' +
-                           pkg.name + '.png" /></a><br/>' + pkg.description,
-          author:          pkg.author,
-          date:            pkg.last_updated,
-          custom_elements: [{tagline: pkg.tagline}],
+                           snap.name + '.png" /></a>' + description,
+          author:          snap.author,
+          date:            snap.last_updated,
+          custom_elements: [{tagline: snap.tagline}],
         });
       });
 
