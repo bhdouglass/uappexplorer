@@ -1,3 +1,5 @@
+'use strict';
+
 var db = require('../db/db');
 var config = require('../config');
 var logger = require('../logger');
@@ -35,6 +37,7 @@ function setup(app) {
     cacheTime: 1200000,  //2 hours
     urls: [
       {url: '/apps/',  changefreq: 'daily', priority: 1},
+      {url: '/snaps/',  changefreq: 'daily', priority: 1},
     ]
   });
 
@@ -44,8 +47,14 @@ function setup(app) {
         sm.add({url: '/app/' + pkg.name, changefreq: 'weekly', priority: 0.7});
       });
 
-      res.header('Content-Type', 'application/xml');
-      res.send(sm.toString());
+      db.Snap.find({}, ['name', 'store'], function(err, snaps) {
+        snaps.forEach((snap) => {
+          sm.add({url: '/snap/' + snap.store + '/' + snap.name, changefreq: 'monthly', priority: 0.7});
+        });
+
+        res.header('Content-Type', 'application/xml');
+        res.send(sm.toString());
+      });
     });
   });
 
@@ -132,6 +141,49 @@ function setup(app) {
     }
   });
 
+  app.get('/snap/:store/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
+    if (isMatch(req)) {
+      res.header('Content-Type', 'text/html');
+      db.Snap.findOne({name: req.params.name, store: req.params.store}, function(err, snap) {
+        if (err) {
+          logger.error('server: ' + err);
+          res.status(500);
+          res.send();
+        }
+        else if (!snap) {
+          res.status(404);
+          fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res);
+        }
+        else {
+          fs.readFile(__dirname + config.server.static + '/index.html', {encoding: 'utf8'}, function(err, data) {
+            if (err) {
+              res.status(500);
+              res.send();
+            }
+            else {
+              res.status(200);
+
+              let description = snap.tagline ? snap.tagline : snap.description;
+              description = description ? description : '';
+
+              let og = {
+                title: snap.title,
+                url: `${config.server.host}/snap/${snap.store}/${snap.name}`,
+                image: `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`,
+                description: description,
+              };
+
+              res.send(openGraphData(data, og));
+            }
+          });
+        }
+      });
+    }
+    else {
+      res.sendFile('index.html', {root: __dirname + config.server.static});
+    }
+  });
+
   app.get('/list/:id', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
     if (isMatch(req)) {
       res.header('Content-Type', 'text/html');
@@ -171,7 +223,7 @@ function setup(app) {
     }
   });
 
-  app.all(['/apps', '/apps/request', '/me', '/me/list/:id', '/faq', '/login', '/feeds'], function(req, res) { //For html5mode on frontend
+  app.all(['/apps', '/apps/request', '/me', '/me/list/:id', '/faq', '/login', '/feeds', '/snaps'], function(req, res) { //For html5mode on frontend
     res.sendFile('index.html', {root: __dirname + config.server.static});
   });
 }

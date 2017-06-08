@@ -45,6 +45,11 @@ module.exports = React.createClass({
 
   render: function() {
     var url = '/app/' + this.props.app.name;
+    if (this.props.app.isSnap) {
+      url = '/snap/' + this.props.app.store + '/' + this.props.app.name;
+    }
+
+    var types = this.props.app.types ? this.props.app.types : [this.props.app.type];
 
     return (
       <div className="list-group app-view">
@@ -57,7 +62,7 @@ module.exports = React.createClass({
 
           <div className="row-content">
             <div className="least-content">
-              <Types types={this.props.app.types} />
+              <Types types={types} isSnap={this.props.app.isSnap} />
             </div>
             <div className="least-content-lower">
               <Price prices={this.props.app.prices} currency="USD" />
@@ -65,9 +70,11 @@ module.exports = React.createClass({
 
             <h4 className="list-group-item-heading word-break">{this.props.app.title}</h4>
             <div className="list-group-item-text">
-              <Stars stars={this.props.app.bayesian_average} />
+              <If value={this.props.app.bayesian_average} element="span">
+                <Stars stars={this.props.app.bayesian_average} />
 
-              <Hearts hearts={this.props.app.points} popularity={this.props.app.monthly_popularity} pop={this.props.popularity} />
+                <Hearts hearts={this.props.app.points} popularity={this.props.app.monthly_popularity} pop={this.props.popularity} />
+              </If>
             </div>
 
             <If value={this.props.description}>

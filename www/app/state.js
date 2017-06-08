@@ -62,9 +62,9 @@ module.exports = new Baobab({
   nextLastPage: null,
 
   apps: {},
+  snaps: {},
   cache_keys: [],
   frameworks: [],
-  releases: [],
 
   app: null,
   missingApp: null,
@@ -76,6 +76,9 @@ module.exports = new Baobab({
     stats: {},
     loaded: false,
   },
+
+  snap: null,
+  missingSnap: null,
 
   savingSettings: false,
   userList: {},

@@ -162,6 +162,56 @@ actions = {
     });
   },
 
+  getSnaps: function(paging, no_set_last, set_loading) {
+    set_loading = (set_loading === undefined) ? true : set_loading;
+
+    var key = JSON.stringify(paging);
+    var cached = tree.get('snaps')[key];
+    var now = moment();
+
+    if (!no_set_last) {
+      tree.set('lastPage', paging);
+    }
+
+    var promise = null;
+    if (cached && now.diff(cached.fetched, 'minutes') <= 60) {
+      promise = Promise.resolve(cached);
+    }
+    else {
+      if (set_loading) {
+        tree.set('loading', true);
+      }
+
+      promise = api.getSnaps(paging).then(function(data) {
+        data.fetched = moment();
+
+        data.snaps.forEach(function(snap) {
+          snap.isSnap = true;
+        });
+        tree.set(['snaps', key], data);
+
+        if (set_loading) {
+          tree.set('loading', false);
+        }
+
+        tree.push('cache_keys', key);
+        var cache_keys = tree.get('cache_keys');
+        if (cache_keys.length > 10) {
+          tree.unset(['snaps', cache_keys[0]]);
+          tree.splice('cache_keys', [0, 1]);
+        }
+
+        return data;
+      }).catch(function(err) {
+        console.log(err);
+        tree.set('loading', false);
+        actions.createAlert(i18n.t('Could not download snap list, click to retry'), 'error', actions.getSnaps.bind(actions, paging));
+      });
+    }
+
+    return promise;
+  },
+
   triggerPreviousApp: function() {
     if (tree.get('previousLastPage')) {
       tree.set('lastPage', tree.get('previousLastPage'));
@@ -184,14 +234,6 @@ actions = {
     }
   },
 
-  getReleases: function() {
-    if (tree.get('releases').length === 0) {
-      api.getReleases().then(function(data) {
-        tree.set('releases', data);
-      });
-    }
-  },
-
   getApp: function(name) {
     tree.set('loading', true);
     tree.set('app', {});
@@ -207,6 +249,26 @@ actions = {
       }
       else {
         actions.createAlert(i18n.t('Could not download app data, click to retry'), 'error', actions.getApp.bind(actions, name));
+      }
+    });
+  },
+
+  getSnap: function(store, name) {
+    tree.set('loading', true);
+    tree.set('snap', {});
+    tree.set('missingSnap', null);
+
+    api.getSnap(store, name).then(function(data) {
+      tree.set('loading', false);
+      tree.set('snap', data);
+    }).catch(function(err) {
+      console.log(err);
+      tree.set('loading', false);
+      if (err.status == 404) {
+        tree.set('missingSnap', name);
+      }
+      else {
+        actions.createAlert(i18n.t('Could not download snap data, click to retry'), 'error', actions.getSnap.bind(actions, name));
       }
     });
   },
@@ -436,7 +498,7 @@ actions = {
   setLocation: function(location) {
     var current = tree.get(['location', 'current']);
 
-    if (location.indexOf('/apps') === 0) {
+    if (location.indexOf('/apps') === 0 || location.indexOf('/snaps') === 0) {
       actions.showSearch(true);
     }
     else {
@@ -465,6 +527,20 @@ actions = {
       //Return to the main page from the app list
       tree.set('location', {
         previous: '/',
+        current: location,
+      });
+    }
+    else if (location.indexOf('/snaps') === 0) {
+      //Return to the main page from the snap list
+      tree.set('location', {
+        previous: '/',
+        current: location,
+      });
+    }
+    else if (location.indexOf('/snap/') === 0) {
+      //Return to the snap list from a snap page
+      tree.set('location', {
+        previous: '/snaps',
         current: location,
       });
     }

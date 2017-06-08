@@ -8,13 +8,19 @@ module.exports = {
       application: i18n.t('apps', {count: count}),
       scope: i18n.t('scopes', {count: count}),
       webapp: i18n.t('web apps', {count: count}),
-      snappy: i18n.t('snaps', {count: count}),
-      snappy_oem: i18n.t('oem snaps'),
-      snappy_os: i18n.t('os snaps'),
-      snappy_kernel: i18n.t('kernel snaps'),
-      snappy_gadget: i18n.t('gadget snaps'),
-      snappy_framework: i18n.t('framework snaps'),
-      snappy_application: i18n.t('app snaps'),
+    };
+  },
+
+  snap_count_types: function(count) {
+    return {
+      all_types: i18n.t('snaps', {count: count}),
+      all: i18n.t('snaps'),
+      oem: i18n.t('oem snaps'),
+      os: i18n.t('os snaps'),
+      kernel: i18n.t('kernel snaps'),
+      gadget: i18n.t('gadget snaps'),
+      framework: i18n.t('framework snaps'),
+      application: i18n.t('app snaps'),
     };
   },
 
@@ -22,9 +28,6 @@ module.exports = {
     return [
       {
         label: i18n.t('All Types'),
-        value: 'all_types',
-      }, {
-        label: i18n.t('Phone Apps & Scopes'),
         value: 'all',
       }, {
         label: i18n.t('Apps'),
@@ -35,28 +38,52 @@ module.exports = {
       }, {
         label: i18n.t('Scopes'),
         value: 'scope',
-      }, {
+      },
+    ];
+  },
+
+  snap_types: function() {
+    return [
+      {
         label: i18n.t('All Snaps'),
-        value: 'snappy',
+        value: 'all',
       }, {
         label: i18n.t('App Snaps'),
-        value: 'snappy_application',
+        value: 'application',
       }, {
         label: i18n.t('Framework Snaps'),
-        value: 'snappy_framework',
+        value: 'framework',
       }, {
         label: i18n.t('OEM Snaps'),
-        value: 'snappy_oem',
+        value: 'oem',
       }, {
         label: i18n.t('OS Snaps'),
-        value: 'snappy_os',
+        value: 'os',
       }, {
         label: i18n.t('Kernel Snaps'),
-        value: 'snappy_kernel',
+        value: 'kernel',
       }, {
         label: i18n.t('Gadget Snaps'),
-        value: 'snappy_gadget',
+        value: 'gadget',
       },
+    ];
+  },
+
+  snap_confinement: function() {
+    return [
+      {
+        label: i18n.t('Any Confinement'),
+        value: 'any',
+      }, {
+        label: i18n.t('Strict'),
+        value: 'strict',
+      }, {
+        label: i18n.t('Dev Mode'),
+        value: 'devmode',
+      }, {
+        label: i18n.t('Classic'),
+        value: 'classic',
+      }
     ];
   },
 
@@ -94,7 +121,7 @@ module.exports = {
     return [ //copied from the api, it doesn't change often, no need for an extra network request
       {
         internal_name: 'all',
-        name: i18n.t('All Apps'),
+        name: i18n.t('All Categories'),
       }, {
         internal_name: 'books-comics',
         name: i18n.t('Books & Comics'),
@@ -227,6 +254,33 @@ module.exports = {
       }, {
         label: i18n.t('Most Expensive (USD)'),
         value: '-prices.USD'
+      },
+    ];
+  },
+
+  snap_sorts: function() {
+    return [
+      {
+        label: i18n.t('Most Relevant'),
+        value: 'relevance',
+      }, {
+        label: i18n.t('Title A-Z'),
+        value: 'title'
+      }, {
+        label: i18n.t('Title Z-A'),
+        value: '-title'
+      }, {
+        label: i18n.t('Newest'),
+        value: '-published_date'
+      }, {
+        label: i18n.t('Oldest'),
+        value: 'published_date'
+      }, {
+        label: i18n.t('Latest Update'),
+        value: '-last_updated'
+      }, {
+        label: i18n.t('Oldest Update'),
+        value: 'last_updated'
       },
     ];
   },

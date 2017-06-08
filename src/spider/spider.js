@@ -3,13 +3,14 @@ var logger = require('../logger');
 var department = require('./department');
 var review = require('./review');
 var package = require('./package');
+var snaps = require('./snaps');
 var packageParser = require('./packageParser');
 var schedule = require('node-schedule');
 var express = require('express');
 
 function setupSchedule() {
   logger.debug('scheduling spider');
-  var spider_rule = new schedule.RecurrenceRule();
+  /*var spider_rule = new schedule.RecurrenceRule();
   spider_rule.dayOfWeek = 1;
   spider_rule.hour = 0;
   spider_rule.minute = 0;
@@ -34,6 +35,15 @@ function setupSchedule() {
 
   schedule.scheduleJob(spider_rule_updates, function() {
     package.parsePackages(true);
+  });*/
+
+  var spider_rule_snaps = new schedule.RecurrenceRule();
+  spider_rule_snaps.dayOfWeek = new schedule.Range(0, 6, 1);
+  spider_rule_snaps.hour = new schedule.Range(0, 23, 6);
+  spider_rule_snaps.minute = 0;
+
+  schedule.scheduleJob(spider_rule_snaps, function() {
+    snaps.fetchSnaps();
   });
 
   /*var department_rule = new schedule.RecurrenceRule();
@@ -46,7 +56,7 @@ function setupSchedule() {
     department.parseDepartments();
   });*/
 
-  var reviews_rule = new schedule.RecurrenceRule();
+  /*var reviews_rule = new schedule.RecurrenceRule();
   reviews_rule.dayOfWeek = new schedule.Range(0, 6, 1);
   reviews_rule.hour = 6;
   reviews_rule.minute = 0;
@@ -76,7 +86,7 @@ function setupSchedule() {
   schedule.scheduleJob(types_reparse, function() {
     logger.debug('spider: running types reparser');
     package.reparsePackagesMissingTypes();
-  });
+  });*/
 }
 
 function server() {

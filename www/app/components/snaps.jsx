@@ -13,23 +13,22 @@ var If = require('./helpers/if');
 
 var DEFAULT_ARCH = 'any';
 var DEFAULT_CATEGORY = 'all';
-var DEFAULT_FRAMEWORK = 'all';
 var DEFAULT_LICENSE = 'any';
 var DEFAULT_SORT = '-published_date';
 var DEFAULT_TYPE = 'all';
+var DEFAULT_CONFINEMENT = 'any';
 var LIMIT = 30;
 
 module.exports = React.createClass({
-  displayName: 'Apps',
+  displayName: 'Snaps',
   mixins: [
     mixins.branch,
     Router.History,
     PureRenderMixin,
   ],
   cursors: {
-    apps: ['apps'],
+    snaps: ['snaps'],
     loading: ['loading'],
-    frameworks: ['frameworks'],
     lng: ['lng'],
   },
 
@@ -42,14 +41,14 @@ module.exports = React.createClass({
       search: '',
       architecture: DEFAULT_ARCH,
       category: DEFAULT_CATEGORY,
-      framework: DEFAULT_FRAMEWORK,
       license: DEFAULT_LICENSE,
+      confinement: DEFAULT_CONFINEMENT,
       sort: DEFAULT_SORT,
       type: DEFAULT_TYPE,
     };
   },
 
-  getApps: function(props, state) {
+  getSnaps: function(props, state) {
     var params = props.location.query;
 
     var page = params.page ? parseInt(params.page) : 0;
@@ -81,29 +80,17 @@ module.exports = React.createClass({
       limit: LIMIT,
       search: params.q ? params.q : null,
       sort: params.sort ? params.sort : DEFAULT_SORT,
-      mini: true,
-      query: {
-        categories: params.category ? params.category : null,
-        architecture: arch ? {'$in': arch} : null,
-        framework: params.framework ? params.framework : null,
-        license: license,
-        types: params.type ? params.type : null,
-      }
+      category: params.category ? params.category : null,
+      architecture: arch ? arch.join(',') : null,
+      license: license,
+      confinement: params.confinement ? params.confinement : null,
+      types: params.type ? params.type : null,
     };
 
     var cleanPaging = {};
     for (var key in paging) {
       if (paging[key] !== null) {
         cleanPaging[key] = paging[key];
-      }
-    }
-
-    cleanPaging.query = {};
-    if (paging.query) {
-      for (var subkey in paging.query) {
-        if (paging.query[subkey] !== null) {
-          cleanPaging.query[subkey] = paging.query[subkey];
-        }
       }
     }
 
@@ -114,32 +101,31 @@ module.exports = React.createClass({
         page: page,
         search: paging.search ? paging.search : '',
         architecture: arch ? arch[0] : DEFAULT_ARCH,
-        category: paging.query.categories ? paging.query.categories : DEFAULT_CATEGORY,
-        framework: paging.query.framework ? paging.query.framework : DEFAULT_FRAMEWORK,
+        category: paging.category ? paging.category : DEFAULT_CATEGORY,
         license: params.license ? params.license : DEFAULT_LICENSE,
+        confinement: params.confinement ? params.confinement : DEFAULT_CONFINEMENT,
         sort: paging.sort ? paging.sort : DEFAULT_SORT,
-        type: paging.query.types ? paging.query.types : DEFAULT_TYPE,
+        type: paging.types ? paging.types : DEFAULT_TYPE,
       };
 
       if (
         s.architecture != DEFAULT_ARCH ||
-        s.framework != DEFAULT_FRAMEWORK ||
-        s.license != DEFAULT_LICENSE
+        s.license != DEFAULT_LICENSE ||
+        s.confinement != DEFAULT_CONFINEMENT
       ) {
         s.filters = true;
       }
 
       this.setState(s);
 
-      actions.getApps(cleanPaging).then(function() {
+      actions.getSnaps(cleanPaging).then(function() {
         window.scrollTo(0, 0);
       });
     }
   },
 
   componentWillMount: function() {
-    actions.getFrameworks();
-    this.getApps(this.props, this.state);
+    this.getSnaps(this.props, this.state);
 
     actions.setOG({
       title: 'uApp Explorer',
@@ -149,7 +135,7 @@ module.exports = React.createClass({
   },
 
   componentWillUpdate: function(nextProps, nextState) {
-    this.getApps(nextProps, nextState);
+    this.getSnaps(nextProps, nextState);
   },
 
   changeView: function(view) {
@@ -172,7 +158,7 @@ module.exports = React.createClass({
       delete this.props.location.query.page;
     }
 
-    this.history.pushState(null, '/apps', this.props.location.query);
+    this.history.pushState(null, '/snaps', this.props.location.query);
   },
 
   changeType: function(event) {
@@ -187,7 +173,7 @@ module.exports = React.createClass({
       delete this.props.location.query.page;
     }
 
-    this.history.pushState(null, '/apps', this.props.location.query);
+    this.history.pushState(null, '/snaps', this.props.location.query);
   },
 
   changeSort: function(event) {
@@ -202,7 +188,7 @@ module.exports = React.createClass({
       delete this.props.location.query.page;
     }
 
-    this.history.pushState(null, '/apps', this.props.location.query);
+    this.history.pushState(null, '/snaps', this.props.location.query);
   },
 
   changeLicense: function(event) {
@@ -217,7 +203,22 @@ module.exports = React.createClass({
       delete this.props.location.query.page;
     }
 
-    this.history.pushState(null, '/apps', this.props.location.query);
+    this.history.pushState(null, '/snaps', this.props.location.query);
+  },
+
+  changeConfinement: function(event) {
+    if (event.target.value == DEFAULT_CONFINEMENT) {
+      delete this.props.location.query.confinement;
+    }
+    else {
+      this.props.location.query.confinement = event.target.value;
+    }
+
+    if (event.target.value != this.state.confinement && this.state.page) {
+      delete this.props.location.query.page;
+    }
+
+    this.history.pushState(null, '/snaps', this.props.location.query);
   },
 
   changeArcitecture: function(event) {
@@ -232,31 +233,15 @@ module.exports = React.createClass({
       delete this.props.location.query.page;
     }
 
-    this.history.pushState(null, '/apps', this.props.location.query);
-  },
-
-  changeFramework: function(event) {
-    var value = event.target.value.toLowerCase();
-    if (value == DEFAULT_FRAMEWORK) {
-      delete this.props.location.query.framework;
-    }
-    else {
-      this.props.location.query.framework = value;
-    }
-
-    if (value != this.state.framework && this.state.page) {
-      delete this.props.location.query.page;
-    }
-
-    this.history.pushState(null, '/apps', this.props.location.query);
+    this.history.pushState(null, '/snaps', this.props.location.query);
   },
 
   render: function() {
     var count = 0;
     var pages = 0;
-    var apps = [];
+    var snaps = [];
     var category = i18n.t('All');
-    var type = info.count_types().all;
+    var type = info.snap_count_types().all;
 
     var categories = info.categories();
     for (var i = 0; i < categories.length; i++) {
@@ -265,13 +250,13 @@ module.exports = React.createClass({
       }
     }
 
-    if (this.state.key && this.state.apps && this.state.apps[this.state.key]) {
-      count = this.state.apps[this.state.key].count;
+    if (this.state.key && this.state.snaps && this.state.snaps[this.state.key]) {
+      count = this.state.snaps[this.state.key].count;
       pages = Math.ceil(count / LIMIT);
-      apps = this.state.apps[this.state.key].apps;
+      snaps = this.state.snaps[this.state.key].snaps;
 
       if (this.state.type) {
-        type = info.count_types(count)[this.state.type];
+        type = info.snap_count_types(count)[this.state.type];
       }
     }
 
@@ -291,8 +276,8 @@ module.exports = React.createClass({
           <div className="col-md-12">
             <div className="btn-toolbar">
               <div className="btn-group">
-                <Link to="/apps" className="btn clickable bold btn-material-light-blue">Phone Apps</Link>
-                <Link to="/snaps" className="btn clickable">Snaps</Link>
+                <Link to="/apps" className="btn clickable">Phone Apps</Link>
+                <Link to="/snaps" className="btn clickable bold btn-material-light-blue">Snaps</Link>
               </div>
             </div>
           </div>
@@ -324,7 +309,7 @@ module.exports = React.createClass({
                     <div className="form-group col-md-4">
                       <label htmlFor="type" className="control-label hidden-xs">{i18n.t('Type:')}</label>
                       <select id="type" className="form-control" value={this.state.type} onChange={this.changeType}>
-                        {info.types().map(function(type) {
+                        {info.snap_types().map(function(type) {
                           return <option value={type.value} key={type.value}>{type.label}</option>;
                         }, this)}
                       </select>
@@ -333,7 +318,7 @@ module.exports = React.createClass({
                     <div className="form-group col-md-4">
                       <label htmlFor="sort" className="control-label hidden-xs">{i18n.t('Sort By:')}</label>
                       <select id="sort" className="form-control" value={this.state.sort} onChange={this.changeSort}>
-                        {info.sorts().map(function(sort) {
+                        {info.snap_sorts().map(function(sort) {
                           return <option value={sort.value} key={sort.value}>{sort.label}</option>;
                         }, this)}
                       </select>
@@ -386,11 +371,10 @@ module.exports = React.createClass({
                       </div>
 
                       <div className="form-group col-md-4">
-                        <label htmlFor="framework" className="control-label">{i18n.t('Framework:')}</label>
-                        <select id="framework" className="form-control" value={this.state.framework} onChange={this.changeFramework}>
-                          <option value="All">{i18n.t('All Frameworks')}</option>
-                          {this.state.frameworks.map(function(framework) {
-                            return <option value={framework} key={framework}>{framework}</option>;
+                        <label htmlFor="confinement" className="control-label">{i18n.t('Confinement:')}</label>
+                        <select id="confinement" className="form-control" value={this.state.confinement} onChange={this.changeConfinement}>
+                          {info.snap_confinement().map(function(confinement) {
+                            return <option value={confinement.value} key={confinement.value}>{confinement.label}</option>;
                           }, this)}
                         </select>
                       </div>
@@ -413,13 +397,13 @@ module.exports = React.createClass({
         <If value={count === 0 && !this.state.loading}>
           <div className="row">
             <div className="col-md-12 text-center">
-              No apps found, try searching again.
+              No snaps found, try searching again.
             </div>
           </div>
         </If>
 
-        <AppList apps={apps} view={this.state.view} popularity={(this.state.sort == '-monthly_popularity' || this.state.sort == 'monthly_popularity')} />
-        <Pagination active={this.state.page} total={pages} base={'/apps'} query={this.props.location.query} />
+        <AppList apps={snaps} view={this.state.view} popularity={(this.state.sort == '-monthly_popularity' || this.state.sort == 'monthly_popularity')} />
+        <Pagination active={this.state.page} total={pages} base={'/snaps'} query={this.props.location.query} />
       </div>
     );
   }

@@ -1,5 +1,10 @@
+'use strict';
+
 var spider = require('./spider/spider');
+var snaps = require('./spider/snaps');
 var elasticsearchPackage = require('./db/elasticsearchPackage');
+var db = require('./db/db');
+var SnapElasticsearch = require('./db/elasticsearch/snap');
 
 function callback(err, value) {
   if (err) {
@@ -14,7 +19,43 @@ function callback(err, value) {
 }
 
 if (process.argv[2]) {
-  if (process.argv[2] == 'update' || process.argv[2] == 'updates') {
+  if (process.argv[2] == 'snaps' || process.argv[2] == 'snap') {
+    snaps.fetchSnaps().then(() => {
+      process.exit(0);
+    });
+  }
+  else if (process.argv[2] == 'remove_old_snaps') {
+    db.Package.find({types: {$in: ['snappy', 'snappy_oem', 'snappy_os', 'snappy_kernel', 'snappy_gadget', 'snappy_framework', 'snappy_application']}}).then((pkgs) => {
+      return Promise.all(pkgs.map((pkg) => {
+        console.log(`removing ${pkg.name}`, pkg.types);
+        return pkg.remove();
+      }));
+    }).then(() => {
+      process.exit(0);
+    }).catch((err) => {
+      console.log(err);
+      process.exit(1);
+    });
+  }
+  else if (process.argv[2] == 'snap_elasticsearch_index') {
+    let ses = new SnapElasticsearch();
+    ses.createIndex().then(() => {
+      process.exit(0);
+    }).catch((err) => {
+      console.log(err);
+      process.exit(1);
+    });
+  }
+  else if (process.argv[2] == 'snap_elasticsearch_index_remove') {
+    let ses = new SnapElasticsearch();
+    ses.removeIndex().then(() => {
+      process.exit(0);
+    }).catch((err) => {
+      console.log(err);
+      process.exit(1);
+    });
+  }
+  else if (process.argv[2] == 'update' || process.argv[2] == 'updates') {
     spider.parsePackages(true, callback);
   }
   else if (process.argv[2] == 'dep' || process.argv[2] == 'department' || process.argv[2] == 'departments') {

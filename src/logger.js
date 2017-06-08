@@ -28,4 +28,8 @@ process.on('uncaughtException', function(err) {
   }
 });
 
+process.on('unhandledRejection', (reason) => {
+  logger.error('unhandledRejection: ' + reason);
+});
+
 module.exports = logger;

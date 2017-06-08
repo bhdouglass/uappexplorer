@@ -13,16 +13,20 @@ module.exports = {
     return axios.get('/api/apps', {params: params}).then(success);
   },
 
+  getSnaps: function(params) {
+    return axios.get('/api/v1/snaps', {params: params}).then(success);
+  },
+
   getFrameworks: function() {
     return axios.get('/api/frameworks').then(success);
   },
 
-  getReleases: function() {
-    return axios.get('/api/releases').then(success);
-  },
-
   getApp: function(name) {
     return axios.get('/api/apps/' + name).then(success);
+  },
+
+  getSnap: function(store, name) {
+    return axios.get('/api/v1/snaps/' + store + '/' + name).then(success);
   },
 
   getReviews: function(name, params) {
