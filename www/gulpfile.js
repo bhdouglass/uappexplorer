@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
-//var i18nextconv = require('gulp-i18next-conv');
+var i18nextconv = require('gulp-i18next-conv');
 var jshint = require('gulp-jshint');
-//var jsonminify = require('gulp-jsonminify');
+var jsonminify = require('gulp-jsonminify');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
 var recess = require('gulp-recess');
@@ -120,12 +120,12 @@ gulp.task('watch-js', function() {
 });
 
 gulp.task('build-translations', function() {
-  /*return gulp.src(paths.po)
+  return gulp.src(paths.po)
     .pipe(i18nextconv(function() {
       return 'uappexplorer';
     }))
     .pipe(jsonminify())
-    .pipe(gulp.dest('dist/translations'));*/
+    .pipe(gulp.dest('dist/translations'));
 });
 
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations']);
