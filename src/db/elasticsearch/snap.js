@@ -5,6 +5,7 @@ const elasticsearch = require('elasticsearch');
 const config = require('../../config');
 
 const properties = [
+    'name',
     'title',
     'store',
     'description',
