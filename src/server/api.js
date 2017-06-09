@@ -1,5 +1,4 @@
 var db = require('../db/db');
-var spider = require('../spider/spider');
 var logger = require('../logger');
 var config = require('../config');
 var essential = require('./json/essential-apps.json');
@@ -386,14 +385,8 @@ function setup(app, success, error) {
   });
 
   app.get('/api/apps/find/:name', function(req, res) {
-    spider.parsePackageByName(req.params.name, function(err, pkg) {
-      if (err) {
-        error(res, err, 404);
-      }
-      else {
-        success(res, pkg);
-      }
-    });
+    //TODO bring this back when the openstore is supported
+    error(res, 'Not Found', 404);
   });
 
   app.get('/api/apps/:name', function(req, res) {

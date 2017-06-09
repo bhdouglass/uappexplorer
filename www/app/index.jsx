@@ -41,7 +41,9 @@ ReactDOM.render((
     <ReactRouter.Route path="/" component={Root}>
       <ReactRouter.IndexRoute component={Index} />
       <ReactRouter.Route path="/apps" component={Apps} />
-      <ReactRouter.Route path="/apps/request" component={AppRequest} />
+      {/* TODO bring back when the api supports it again 
+        <ReactRouter.Route path="/apps/request" component={AppRequest} />
+      */}
       <ReactRouter.Route path="/app/:name" component={App} />
       <ReactRouter.Route path="/snaps" component={Snaps} />
       <ReactRouter.Route path="/snap/:store/:name" component={Snap} />

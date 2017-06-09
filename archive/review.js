@@ -1,3 +1,7 @@
+/*
+Keeping this for easy reference if snaps ever get reviews
+
+
 var config = require('../config');
 var db = require('../db/db');
 var elasticsearchPackage = require('../db/elasticsearchPackage');
@@ -257,3 +261,4 @@ function parseReviews(pkgName, page, pages, callback) {
 
 exports.parseReviews = parseReviews;
 exports.refreshRatings = refreshRatings;
+*/

@@ -90,6 +90,7 @@ module.exports = React.createClass({
         </div>
         <br/>
 
+        {/* TODO bring this back when the api supports it again
         <h4>{i18n.t("I just published my app, why don't I see it?")}</h4>
         <div>
           <p>
@@ -99,6 +100,7 @@ module.exports = React.createClass({
           </p>
         </div>
         <br/>
+        */}
 
         <h4>{i18n.t('What do I do if I find copyright or trademark infringing content?')}</h4>
         <div>
