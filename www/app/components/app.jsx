@@ -406,7 +406,15 @@ module.exports = React.createClass({
                 component = (
                   <div className="text-center">
                     <h1>{i18n.t('The app you are trying to find does not exist or has been removed.')}</h1>
-                    <h2><Link to="/apps">{i18n.t('Return to the search page')}</Link></h2>
+
+                    <div className="row">
+                      <div className="col-sm-6 text-center">
+                        <h2><i className="fa fa-search"></i> <Link to="/apps">{i18n.t('Search phone apps')}</Link></h2>
+                      </div>
+                      <div className="col-sm-6 text-center">
+                        <h2><i className="fa fa-search"></i> <Link to="/snaps">{i18n.t('Search snaps')}</Link></h2>
+                      </div>
+                    </div>
                   </div>
                 );
               }
