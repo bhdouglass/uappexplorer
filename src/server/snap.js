@@ -10,6 +10,10 @@ const utils = require('../utils');
 const fs = require('fs');
 const mime = require('mime');
 
+function snapIcon(snap) {
+    return `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`;
+}
+
 function setup(app, success, error) {
     app.get('/api/v1/snaps', (req, res) => {
         let types = req.query.types ? req.query.types.split(',') : null;
@@ -77,7 +81,7 @@ function setup(app, success, error) {
 
                     count: response.hits.total,
                     snaps: response.hits.hits.map((snap) => {
-                        snap._source.icon = `${config.server.host}/api/v1/snaps/icon/${snap._source.store}/${snap._source.icon_hash}/${snap._source.name}.png`;
+                        snap._source.icon = snapIcon(snap._source);
                         return snap._source;
                     })
                 });
@@ -139,7 +143,7 @@ function setup(app, success, error) {
 
                     count: results[0],
                     snaps: results[1].map((snap) => {
-                        snap.icon = `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`;
+                        snap.icon = snapIcon(snap);
                         return snap;
                     }),
                 });
@@ -152,7 +156,7 @@ function setup(app, success, error) {
 
     app.get('/api/v1/snaps/:store/:name', (req, res) => {
         db.Snap.findOne({store: req.params.store, name: req.params.name}).then((snap) => {
-            snap.icon = `${config.server.host}/api/v1/snaps/icon/${snap.store}/${snap.icon_hash}/${snap.name}.png`;
+            snap.icon = snapIcon(snap);
 
             //TODO author apps & related apps
             snap.author_snaps = [];
@@ -196,3 +200,4 @@ function setup(app, success, error) {
 }
 
 exports.setup = setup;
+exports.snapIcon = snapIcon;

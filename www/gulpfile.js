@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
-var i18nextconv = require('gulp-i18next-conv');
 var jshint = require('gulp-jshint');
 var jsonminify = require('gulp-jsonminify');
 var less = require('gulp-less');
@@ -120,6 +119,9 @@ gulp.task('watch-js', function() {
 });
 
 gulp.task('build-translations', function() {
+  //Requiring it here because the local environment is broken
+  var i18nextconv = require('gulp-i18next-conv');
+
   return gulp.src(paths.po)
     .pipe(i18nextconv(function() {
       return 'uappexplorer';
@@ -130,7 +132,7 @@ gulp.task('build-translations', function() {
 
 gulp.task('build', ['lint', 'clean', 'build-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations']);
 
-gulp.task('watch', ['lint', 'clean', 'watch-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html', 'build-translations'], function() {
+gulp.task('watch', ['lint', 'clean', 'watch-js', 'build-img', 'build-less', 'build-css', 'build-fonts', 'build-html'], function() {
   gulp.watch(paths.front_js, ['lint']);
   gulp.watch(paths.html, ['build-html']);
   gulp.watch(paths.less, ['lint', 'build-less']);
