@@ -1,6 +1,6 @@
 'use strict';
 
-const db = require('../db/db');
+const db = require('../db');
 const config = require('../config');
 const logger = require('../logger');
 const snapIcon = require('./snap').snapIcon;

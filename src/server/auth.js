@@ -1,5 +1,5 @@
 var config = require('../config');
-var db = require('../db/db');
+var db = require('../db');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');

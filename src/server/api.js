@@ -1,4 +1,4 @@
-var db = require('../db/db');
+var db = require('../db');
 var logger = require('../logger');
 var config = require('../config');
 var essential = require('./json/essential-apps.json');

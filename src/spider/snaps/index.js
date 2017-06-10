@@ -2,7 +2,7 @@
 
 const promiseLimit = require('promise-limit');
 
-const db = require('../../db/db');
+const db = require('../../db');
 const SnapElasticsearch = require('../../db/elasticsearch/snap');
 const SnapApi = require('./api');
 const convert = require('./convert');

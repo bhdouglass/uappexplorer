@@ -1,6 +1,6 @@
 'use strict';
 
-var db = require('../db/db');
+var db = require('../db');
 var config = require('../config');
 var logger = require('../logger');
 var express = require('express');

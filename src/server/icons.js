@@ -1,4 +1,4 @@
-var db = require('../db/db');
+var db = require('../db');
 var config = require('../config');
 var utils = require('../utils');
 var moment = require('moment');

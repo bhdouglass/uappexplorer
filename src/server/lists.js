@@ -1,4 +1,4 @@
-var db = require('../db/db');
+var db = require('../db');
 var _ = require('lodash');
 
 function setup(app, success, error, isAuthenticated) {
