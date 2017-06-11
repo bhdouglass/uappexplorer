@@ -9,6 +9,7 @@ module.exports = React.createClass({
   props: {
     value: React.PropTypes.bool.isRequired,
     element: React.PropTypes.string,
+    className: React.PropTypes.string,
   },
 
   render: function() {
@@ -19,13 +20,13 @@ module.exports = React.createClass({
 
     var component = <div></div>;
     if (this.props.element == 'li') {
-      component = <li>{children}</li>;
+      component = <li className={this.props.className}>{children}</li>;
     }
     else if (this.props.element == 'span') {
-      component = <span>{children}</span>;
+      component = <span className={this.props.className}>{children}</span>;
     }
     else {
-      component = <div>{children}</div>;
+      component = <div className={this.props.className}>{children}</div>;
     }
 
     return component;

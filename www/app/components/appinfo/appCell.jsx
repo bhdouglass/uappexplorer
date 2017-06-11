@@ -57,6 +57,7 @@ module.exports = React.createClass({
           <div className="row-action-primary">
             <div className="icon ubuntu-shape">
               <img src={this.props.app.icon} alt={this.props.app.name} />
+              <If value={this.props.app.store == 'openstore'} className="openstore-tag label label-material-light-blue">OpenStore</If>
             </div>
           </div>
 

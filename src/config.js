@@ -64,7 +64,6 @@ var config = {
     snaps: {
         rate_limit: 100,
         page_size: 1000,
-        default_release: '16',
         architectures: ['i386', 'amd64', 'armhf', 'arm64', 'ppc64el', 's390x'],
         user_agent: 'uappexplorer.com',
         stores: [

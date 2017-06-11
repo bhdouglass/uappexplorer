@@ -9,7 +9,7 @@ const config = require('../../config');
 
 let mailhider = null;
 if (config.mailhide.privateKey && config.mailhide.publicKey) {
-mailhider = new Mailhide(config.mailhide);
+    mailhider = new Mailhide(config.mailhide);
 }
 
 function sanitize(html) {

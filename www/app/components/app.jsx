@@ -105,6 +105,16 @@ module.exports = React.createClass({
       cls = 'app slideOutLeft';
     }
 
+    var installLink = '';
+    if (this.state.app) {
+      if (this.state.app.store == 'openstore') {
+        installLink = 'openstore://' + this.state.app.name;
+      }
+      else {
+        installLink = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
+      }
+    }
+
     var desktop_file = '';
     var scope_ini = '';
 
@@ -193,14 +203,17 @@ module.exports = React.createClass({
                             <div className="row-action-primary">
                               <div className="icon-large ubuntu-shape">
                                 <img src={this.state.app.icon} alt={this.state.app.name} />
+                                <If value={this.state.app.store == 'openstore'} className="openstore-tag label label-material-light-blue">OpenStore</If>
                               </div>
                             </div>
 
                             <div className="row-content app-info">
                               <h1 className="list-group-item-heading">{this.state.app.title}</h1>
                               <div className="list-group-item-text">
-                                <Stars stars={this.state.app.bayesian_average} />
-                                <Hearts hearts={this.state.app.points} />
+                                <If value={this.state.app.bayesian_average}>
+                                  <Stars stars={this.state.app.bayesian_average} />
+                                  <Hearts hearts={this.state.app.points} />
+                                </If>
 
                                 <If value={this.state.app.author}>
                                   <Link to="/apps" query={author_query} title={i18n.t('Author')} className="clickable">{this.state.app.author}</Link>
@@ -231,12 +244,12 @@ module.exports = React.createClass({
 
                             <div className="row-content">
                               <div className="list-group-item-text">
-                                <a href={'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
+                                <a href={installLink} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
 
                                 <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
 
                                 <div className="small-note">
-                                  {i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
+                                  {this.state.app.store == 'openstore' ? i18n.t('*Install will take you to the OpenStore app on an Ubuntu Touch device') : i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
                                 </div>
 
                                 <If value={this.state.app.webapp_inject}>
@@ -312,6 +325,10 @@ module.exports = React.createClass({
                           <h3>{i18n.t('Info')}</h3>
 
                           <div>
+                            <If value={this.state.app.store == 'openstore'}>
+                              <a href={this.state.app.url} target="_blank" rel="nofollow">{i18n.t('Available from the OpenStore!')}</a>
+                            </If>
+
                             <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
                               {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
                             </If>

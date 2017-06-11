@@ -22,6 +22,7 @@ function miniPkg(pkg) {
     tagline: pkg.tagline,
     title: pkg.title,
     types: pkg.types,
+    store: pkg.store,
   };
 }
 
