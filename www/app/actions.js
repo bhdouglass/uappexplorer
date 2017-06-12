@@ -537,7 +537,7 @@ actions = {
         current: location,
       });
     }
-    else if (location.indexOf('/snap/') === 0) {
+    else if (location.indexOf('/snap/') === 0 && current.indexOf('/snaps') == -1 ) {
       //Return to the snap list from a snap page
       tree.set('location', {
         previous: '/snaps',
