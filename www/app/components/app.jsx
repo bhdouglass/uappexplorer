@@ -328,6 +328,9 @@ module.exports = React.createClass({
                             <If value={this.state.app.store == 'openstore'}>
                               <a href={this.state.app.url} target="_blank" rel="nofollow">{i18n.t('Available from the OpenStore!')}</a>
                             </If>
+                            <If value={this.state.app.store != 'openstore'}>
+                              {i18n.t('Not available in the OpenStore')}
+                            </If>
 
                             <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
                               {i18n.t('Support:')} <a href={this.state.app.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>

@@ -1,6 +1,7 @@
 'use strict';
 
 const db = require('../../db');
+const ClickElasticsearch = require('../../db/elasticsearch/click');
 const OpenStoreApi = require('./api');
 const convert = require('./convert');
 const logger = require('../../logger');
@@ -83,10 +84,9 @@ function fetchClicks() {
             }
         });
 
-        //TODO elasticsearch saving
-        //let ses = new SnapElasticsearch();
+        let ces = new ClickElasticsearch();
 
-        //return ses.bulk(upserts, removals);
+        return ces.bulk(upserts, removals);
     }).then(() => {
         logger.debug('Finished parsing clicks');
     }).catch((err) => {

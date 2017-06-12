@@ -2,13 +2,13 @@
 
 const Elasticsearch = require('./elasticsearch');
 
-class SnapElasticsearch extends Elasticsearch {
+class ClickElasticsearch extends Elasticsearch {
     constructor() {
         super();
 
-        this.index = 'snap';
-        this.type = 'snap';
-  
+        this.index = 'packages';
+        this.type = 'package';
+
         this.properties = [
             'name',
             'title',
@@ -23,11 +23,11 @@ class SnapElasticsearch extends Elasticsearch {
             'bayesian_average',
             'points',
             'tagline',
-            'type',
+            'types',
             'categories',
-            'confinement',
+            'framework',
         ];
-        
+
         this.search_fields = [
             'search_title^3',
             'description^2',
@@ -41,7 +41,7 @@ class SnapElasticsearch extends Elasticsearch {
         return this.client.indices.create({
             index: this.index,
             body: {
-                snap: this.index,
+                packages: this.index,
                 settings: {
                     analysis: {
                         analyzer: {
@@ -54,7 +54,7 @@ class SnapElasticsearch extends Elasticsearch {
                     }
                 },
                 mappings: {
-                    snap: {
+                    'package': {
                         properties: {
                             search_title: {
                                 type: 'string',
@@ -92,7 +92,7 @@ class SnapElasticsearch extends Elasticsearch {
                                 type: 'string',
                                 index: 'not_analyzed'
                             },
-                            confinement: {
+                            framework: {
                                 type: 'string',
                                 index: 'not_analyzed'
                             }
@@ -104,4 +104,4 @@ class SnapElasticsearch extends Elasticsearch {
     }
 }
 
-module.exports = SnapElasticsearch;
+module.exports = ClickElasticsearch;

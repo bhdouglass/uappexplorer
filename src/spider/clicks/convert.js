@@ -11,6 +11,34 @@ if (config.mailhide.privateKey && config.mailhide.publicKey) {
     mailhider = new Mailhide(config.mailhide);
 }
 
+const categoryMap = {
+    'Books': 'books-comics',
+    'Books & Comics': 'books-comics',
+    'Business': 'business',
+    'Communication': 'communication',
+    'Developer Tools': 'developer-tools',
+    'Education': 'education',
+    'Entertainment': 'entertainment',
+    'Finance': 'finance',
+    'Food & Drink': 'food-drink',
+    'Games': 'games',
+    'Graphics': 'Graphics',
+    'Health & Fitness': 'health-fitness',
+    'Media & Video': 'media-video',
+    'Music & Audio': 'music-audio',
+    'News & Magazines': 'news-magazines',
+    'Personalisation': 'personalisation',
+    'Productivity': 'productivity',
+    'Reference': 'reference',
+    'Science & Engineering': 'science-engineering',
+    'Shopping': 'shopping',
+    'Social Networking': 'social-networking',
+    'Sports': 'sports',
+    'Travel & Local': 'travel-local',
+    'Utilities': 'accessories',
+    'Weather': 'weather',
+};
+
 function sanitize(html) {
     return sanitizeHtml(html, {
         allowedTags: [],
@@ -49,14 +77,46 @@ let propertyMap = {
     },
     license: 'license',
     category: function(click, category) {
-        click.categories = [category]; //TODO normalize this
+        click.categories = [
+            categoryMap[category]
+        ];
     },
     manifest: function(click, manifest) {
-        //TODO features, framework, scope_ini, desktop_file, url_dispatcher, webapp_inject, etc
+        click.framework = manifest.framework ? manifest.framework : '';
+        click.desktop_file = {};
+        click.scope_ini = {};
+        click.permissions = [];
+
+        if (manifest.hooks) {
+            for (let app in manifest.hooks) {
+                if (manifest.hooks[app].desktop) {
+                    click.desktop_file[app] = manifest.hooks[app].desktop;
+                }
+
+                if (manifest.hooks[app].scope) {
+                    click.scope_ini[app] = manifest.hooks[app].scope;
+                }
+
+                if (manifest.hooks[app].apparmor) {
+                    if (manifest.hooks[app].apparmor.policy_groups) {
+                        click.permissions = click.permissions.concat(manifest.hooks[app].apparmor.policy_groups);
+                    }
+
+                    if (manifest.hooks[app].apparmor.template == 'unconfined') {
+                        click.permissions.push('unconfined');
+                    }
+                }
+            }
+        }
+
+        click.permissions = click.permissions.filter(function(item, pos, self) {
+            return self.indexOf(item) == pos; //Remove duplicates
+        });
+
+        //TODO features, url_dispatcher, webapp_inject, etc
     },
     architectures: 'architecture',
     keywords: 'keywords',
-    permissions: 'permissions',
     download: 'download',
     filesize: 'filesize',
     icon: function(click, icon) {
