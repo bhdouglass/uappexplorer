@@ -82,10 +82,6 @@ module.exports = React.createClass({
               <Link to="/app/uappexplorer-scope.bhdouglass">
                 <i className="fa fa-fw fa-mobile"></i> {i18n.t('Scope')}
               </Link>
-
-              <Link to="/app/uappexplorer-donate.bhdouglass" className="hidden-xs">
-                <i className="fa fa-fw fa-mobile"></i> {i18n.t('Donation Web App')}
-              </Link>
             </div>
 
             <div className="col-sm-4">
