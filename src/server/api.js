@@ -243,17 +243,14 @@ function setup(app, success, error) {
       }
     }
 
-    if (sort == 'title') {
-      sort = 'raw_title';
-    }
-
+    //TODO use the new elastic search class
     var body = {
       'from' : req.query.skip ? req.query.skip : 0,
       'size' : req.query.limit ? req.query.limit : 30,
       'query': {
         'multi_match': {
           'query': req.query.search.toLowerCase(),
-          'fields': ['title^3', 'description^2', 'keywords^2', 'author', 'company'],
+          'fields': ['search_title^3', 'description^2', 'keywords^2', 'author', 'company'],
           'slop': 10,
           'max_expansions': 50,
           'type': 'phrase_prefix',
