@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-msgid "(Don't worry, there is a free version too!)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
 
 msgid "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -95,6 +95,9 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr ""
 
@@ -114,12 +117,6 @@ msgid "Browse Snaps"
 msgstr ""
 
 msgid "Business"
-msgstr ""
-
-msgid "Buy the Webapp"
-msgstr ""
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
 msgstr ""
 
 msgid "By:"
@@ -221,16 +218,10 @@ msgstr ""
 msgid "Donate via Bitcoin"
 msgstr ""
 
-msgid "Donate via Gratipay"
-msgstr ""
-
 msgid "Donate via Paypal"
 msgstr ""
 
 msgid "Donating to uApp Explorer is just one way you can help make it better. If you choose to donate, you money will go towards infrastructure costs. Costs include domain names, hosting, etc. uApp Explorer will always be a free and open source service, regardless of the number of donations."
-msgstr ""
-
-msgid "Donation Web App"
 msgstr ""
 
 msgid "Download"
@@ -500,6 +491,9 @@ msgstr ""
 msgid "None Yet"
 msgstr ""
 
+msgid "Not available in the OpenStore"
+msgstr ""
+
 msgid "OEM Snap"
 msgstr ""
 
@@ -563,9 +557,6 @@ msgstr ""
 msgid "Remove this app from your list"
 msgstr ""
 
-msgid "Return to the search page"
-msgstr ""
-
 msgid "Save"
 msgstr ""
 
@@ -582,6 +573,12 @@ msgid "Scopes"
 msgstr ""
 
 msgid "Screenshots"
+msgstr ""
+
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
 msgstr ""
 
 msgid "Send via Caxton"
