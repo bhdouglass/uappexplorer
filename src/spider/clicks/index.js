@@ -67,26 +67,29 @@ function fetchClicks() {
             db.Package.bulkWrite(operations),
         ]);
     }).then((results) => {
-        let operations = results[0];
-        logger.debug('Saving clicks to elasticsearch');
-
-        let upserts = [];
+        let names = [];
         let removals = [];
-        operations.forEach((snap) => {
-            if (snap.updateOne) {
-                upserts.push(snap.updateOne.update.$set);
+        results[0].forEach((click) => {
+            if (click.updateOne) {
+                names.push(click.updateOne.update.$set.name);
             }
-            else if (snap.insertOne) {
-                upserts.push(snap.insertOne.document);
+            else if (click.insertOne) {
+                names.push(click.insertOne.document.name);
             }
-            else if (snap.deleteMany) {
-                removals = snap.deleteMany.filter.name.$in;
+            else if (click.deleteMany) {
+                removals = click.deleteMany.filter.name.$in;
             }
         });
 
-        let ces = new ClickElasticsearch();
+        return Promise.all([
+            db.Package.find({name: {$in: names}}),
+            removals
+        ]);
+    }).then((results) => {
+        logger.debug('Saving clicks to elasticsearch');
 
-        return ces.bulk(upserts, removals);
+        let ces = new ClickElasticsearch();
+        return ces.bulk(results[0], results[1]);
     }).then(() => {
         logger.debug('Finished parsing clicks');
     }).catch((err) => {
