@@ -102,19 +102,33 @@ function setup(app) {
   }
 
   app.get('/app/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
-    if (isMatch(req)) {
-      res.header('Content-Type', 'text/html');
-      db.Package.findOne({name: req.params.name}, function(err, pkg) {
-        if (err) {
-          logger.error('server: ' + err);
-          res.status(500);
-          res.send();
-        }
-        else if (!pkg) {
-          res.status(404);
-          fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res);
-        }
-        else {
+    res.header('Content-Type', 'text/html');
+    db.Package.findOne({name: req.params.name}, function(err, pkg) {
+      if (err) {
+        logger.error('server: ' + err);
+        res.status(500);
+        res.send();
+      }
+      else if (!pkg) {
+        //Check if a snap exists with this name so we can redirect to it
+        db.Snap.findOne({name: req.params.name}, function(err, snap) {
+          if (err) {
+            logger.error('server: ' + err);
+            res.status(500);
+            res.send();
+          }
+          else if (snap) {
+            res.redirect(301, `/snap/${snap.store}/${snap.name}`);
+          }
+          else {
+            res.status(404);
+            fs.createReadStream(__dirname + config.server.static + '/404.html').pipe(res);
+          }
+        });
+      }
+      else {
+        if (isMatch(req)) {
+
           fs.readFile(__dirname + config.server.static + '/index.html', {encoding: 'utf8'}, function(err, data) {
             if (err) {
               res.status(500);
@@ -134,11 +148,11 @@ function setup(app) {
             }
           });
         }
-      });
-    }
-    else {
-      res.sendFile('index.html', {root: __dirname + config.server.static});
-    }
+        else {
+          res.sendFile('index.html', {root: __dirname + config.server.static});
+        }
+      }
+    });
   });
 
   app.get('/snap/:store/:name', function(req, res) { //For populating opengraph data, etc for bots that don't execute javascript (like twitter cards)
