@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
 "PO-Revision-Date: 2016-07-09 23:52+0000\n"
 "Last-Translator: Jorge Marques <gastmaier@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(Não se preocupe, há uma versão gratuita também!)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -37,9 +37,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Escolha uma lista -"
 
-msgid "A wish with the same name already exists"
-msgstr "Já existe um desejo com esse nome"
-
 msgid "Account Integration"
 msgstr "Integração de Contas"
 
@@ -52,17 +49,14 @@ msgstr "Adicionar à lista:"
 msgid "All"
 msgstr "Tudo"
 
-msgid "All Apps"
-msgstr "Todos os aplicativos"
-
 msgid "All Architectures"
 msgstr "Todas Arquiteturas"
 
+msgid "All Categories"
+msgstr ""
+
 msgid "All Frameworks"
 msgstr "Todos os Frameworks"
-
-msgid "All Releases"
-msgstr ""
 
 msgid "All Snaps"
 msgstr ""
@@ -70,14 +64,11 @@ msgstr ""
 msgid "All Types"
 msgstr ""
 
-msgid "Amazon Link"
-msgstr "Link Amazon"
-
-msgid "Amazon link is not a valid url"
-msgstr "O link da Amazon não é uma url válida"
-
 msgid "Any Architecture"
 msgstr "Qualquer Arquitetura"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "Qualquer Licença"
@@ -101,17 +92,11 @@ msgstr ""
 msgid "App"
 msgstr "Aplicativo"
 
-msgid "App Name"
-msgstr "Nome do aplicativo"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Nome do Aplicativo (exemplo: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
 msgstr ""
-
-msgid "App Wishlist"
-msgstr "Lista de desejos de aplicativos"
 
 msgid "Apps"
 msgstr "Aplicativos"
@@ -139,6 +124,9 @@ msgstr "Artigo"
 msgid "Author"
 msgstr "Autor(a)"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "Livros e HQs"
 
@@ -160,17 +148,8 @@ msgstr ""
 msgid "Business"
 msgstr "Negócios"
 
-msgid "Buy the Webapp"
-msgstr "Comprar Aplicativo Web"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Comprar aplicativo web da loja de aplicativos do Ubuntu Touch"
-
 msgid "By:"
 msgstr "Por:"
-
-msgid "Cancel"
-msgstr "Cancelar"
 
 msgid "Category:"
 msgstr "Categoria:"
@@ -181,6 +160,9 @@ msgstr "Código Caxton"
 msgid "Changelog"
 msgstr "Registro de alterações"
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr "Fechar"
 
@@ -189,6 +171,9 @@ msgstr "Comunicações"
 
 msgid "Company"
 msgstr "Empresa"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "Contendo:"
@@ -203,11 +188,6 @@ msgstr "Não foi possível conectar ao Caxton, tente novamente mais tarde."
 msgid "Could not create a new list at this time, please try again later"
 msgstr "Não foi possível criar uma lista nova, tente novamente mais tarde"
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
-"Não foi possível criar um novo desejo neste momento, tente novamente mais "
-"tarde"
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr "Não foi possível deletar a lista, tente novamente mais tarde."
 
@@ -221,20 +201,20 @@ msgstr ""
 "Não foi possível fazer o download da lista de aplicativo, clique para tentar "
 "novamente"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+
 msgid "Could not find the requested app"
 msgstr "Requisição de aplicativo não encontrada"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr "Não foi possível encontrar esta lista, ela não existe mais"
 
-msgid "Could not find wish"
-msgstr "Desejo não encontrado"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr "Não foi possível carregar as listas, clique pra tentar novamente"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr "Não foi possível carregar desejos, clique para tentar novamente"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -262,20 +242,17 @@ msgstr "Descrição"
 msgid "Desktop File:"
 msgstr "Arquivo Desktop:"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "Ferramentas de desenvolvimento"
-
-msgid "Developer/Company"
-msgstr "Desenvolvedor/Companhia"
 
 msgid "Donate"
 msgstr "Faça uma doação"
 
 msgid "Donate via Bitcoin"
 msgstr "Doar via Bitcoin"
-
-msgid "Donate via Gratipay"
-msgstr "Doar via Gratipay"
 
 msgid "Donate via Paypal"
 msgstr "Doar via Paypal"
@@ -291,14 +268,11 @@ msgstr ""
 "custos inclui: nome do domínio, hosting, etc. uApp Explorer sempre vai ser "
 "grátis e um serviço open source,  independentemente do número de doações."
 
-msgid "Donation Web App"
-msgstr "Doação de Aplicativo Web"
-
 msgid "Download"
 msgstr "Download"
 
-msgid "Downvote"
-msgstr "Voto contra"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "Editar"
@@ -377,12 +351,6 @@ msgstr "Obter um scanner QR para o seu dispositivo Ubuntu Touch"
 msgid "Go there now"
 msgstr "Ir agora"
 
-msgid "Google Play Link"
-msgstr "Link Google Play"
-
-msgid "Google Play link is not a valid url"
-msgstr "Link Google Play não é uma url válida"
-
 msgid "Graphics"
 msgstr "Gráficos"
 
@@ -404,9 +372,6 @@ msgstr ""
 "é um ponto coração, 4 estrelas = 0,5 coração, 3 estrelas = 0 coração, 2 "
 "estrelas = -0,5 coração e 1 estrela = -1 coração"
 
-msgid "Help this wish get more votes!"
-msgstr "Ajude este desejo com mais votos!"
-
 msgid "Help translate!"
 msgstr "Ajude na tradução!"
 
@@ -425,20 +390,8 @@ msgstr ""
 msgid "How is the popularity determined?"
 msgstr "Como é determinado a popularidade?"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "Quanto você estaria disposto pagar por este aplicativo?"
-
 msgid "I just published my app, why don't I see it?"
 msgstr "Eu publiquei meu aplicativo, por que eu não consigo vê-lo?"
-
-msgid "I'm wishing for..."
-msgstr "Eu estou desejando para..."
-
-msgid "I'm wishing for: "
-msgstr "Eu estou desejando para: "
-
-msgid "Idea Summary"
-msgstr "Resumo da idéia"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Se você quiser contribuir com código, visite a GitHub repo."
@@ -470,17 +423,11 @@ msgstr "Informação"
 msgid "Install"
 msgstr "Instalar"
 
-msgid "Install using snapd"
+msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
-
-msgid "Is this an existing app?"
-msgstr "Este é um aplicativo que já existe?"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "É possível ter uma classificação coração negativa."
-
-msgid "Itunes Link"
-msgstr "Link Itunes"
 
 msgid "Kernel Snap"
 msgstr "Snap de Kernel"
@@ -527,17 +474,11 @@ msgstr "Sair"
 msgid "Log in via Ubuntu"
 msgstr "Entrar via Ubuntu"
 
-msgid "Login to make a wish"
-msgstr "Entrar para fazer um desejo"
-
 msgid "Lowest Heart Rating"
 msgstr "Classificação Coração mais baixa"
 
 msgid "Lowest Star Rating"
 msgstr "Classificação Estrela mais baixa"
-
-msgid "Make a wish"
-msgstr "Fazer um desejo"
 
 msgid "Media & Video"
 msgstr "Mídia & Vídeo"
@@ -556,6 +497,9 @@ msgstr "Mais aplicativos por:"
 
 msgid "More Info"
 msgstr "Mais Informações"
+
+msgid "More Snaps by:"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Mais caro (dólar americano)"
@@ -582,14 +526,10 @@ msgid "New Snaps"
 msgstr ""
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 msgstr ""
-"Novos aplicativos são obtidos a partir da AppStore oficial a cada hora, você "
-"pode esperar até que os novos aplicativos sejam obtidos ou utilize o "
-"formulário de solicitação para solicitar que o aplicativo seja encontrado "
-"mais cedo."
 
 msgid "Newest"
 msgstr "Mais recente"
@@ -612,8 +552,11 @@ msgstr "Nenhuma lista, crie uma!"
 msgid "No reviews yet!"
 msgstr "Nenhuma revisão ainda!"
 
-msgid "No wishes found, try searching again."
-msgstr "Nenhum desejo encontrado, tente procurar novamente."
+msgid "None Yet"
+msgstr ""
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr ""
@@ -633,22 +576,11 @@ msgstr "Mais antigo"
 msgid "Oldest Update"
 msgstr "Atualizar os mais antigos"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
-"Em média, os eleitores estariam dispostos a pagar %d dólares por este "
-"aplicativo."
-
 msgid "Open Source"
 msgstr "Código Aberto"
 
 msgid "Opens Urls"
 msgstr "Abrir Urls"
-
-msgid "Other Link"
-msgstr "Outro Link"
-
-msgid "Other link is not a valid url"
-msgstr "Outro Link não é uma url válida"
 
 msgid "Permissions"
 msgstr "Permissões"
@@ -656,14 +588,8 @@ msgstr "Permissões"
 msgid "Personalisation"
 msgstr "Personalização"
 
-msgid "Phone Apps & Scopes"
-msgstr "Aplicativos & Scopes de Celular"
-
 msgid "Please login to send via Caxton"
 msgstr "Por favor, entre para enviar via Caxton"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "Por favor, especifique um nome ou ideia para seu desejo"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -674,9 +600,6 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "Aplicativo anterior:"
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "Preço deve ser entre 0 e 20 dólares"
 
 msgid "Productivity"
 msgstr "Produtividade"
@@ -699,14 +622,8 @@ msgstr ""
 msgid "Reference"
 msgstr "Referência"
 
-msgid "Release:"
-msgstr ""
-
 msgid "Remove this app from your list"
 msgstr "Remover este aplicativo da sua lista"
-
-msgid "Return to the search page"
-msgstr ""
 
 msgid "Save"
 msgstr "Salvar"
@@ -726,8 +643,11 @@ msgstr "Scopes"
 msgid "Screenshots"
 msgstr "Capturas de tela"
 
-msgid "Search for a wish:"
-msgstr "Procurar por um desejo:"
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "Enviar via Caxton"
@@ -759,11 +679,11 @@ msgstr "Compras"
 msgid "Similar Apps"
 msgstr "Aplicativos similares"
 
+msgid "Similar Snaps"
+msgstr ""
+
 msgid "Snap"
 msgstr "Snap"
-
-msgid "Snap Metadata:"
-msgstr ""
 
 msgid "Snaps"
 msgstr "Snaps"
@@ -796,20 +716,14 @@ msgstr "Classificação Estrela"
 msgid "Status"
 msgstr ""
 
-msgid "Submit"
-msgstr "Enviar"
-
-msgid "Submitted by"
-msgstr "Enviado por"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "Suporte:"
 
 msgid "Terms:"
 msgstr "Termos:"
-
-msgid "Thank you for your vote!"
-msgstr "Obrigado pelo seu voto!"
 
 msgid "Thank you!"
 msgstr "Obrigado!"
@@ -826,6 +740,9 @@ msgstr ""
 "aplicativos por ter mais bons comentários. Um aplicativo com mais 5 "
 "classificações de estrelas terá uma avaliação coração acima de um aplicativo "
 "com apenas algumas classificações de 5 estrelas."
+
+msgid "The snap you are trying to find does not exist or has been removed."
+msgstr ""
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -907,9 +824,6 @@ msgstr "Aplicativos Atualizados"
 msgid "Updated:"
 msgstr "Atualizado:"
 
-msgid "Upvote"
-msgstr "Voto positivo"
-
 msgid "Urls that open in this app:"
 msgstr "Urls que abrem nesse aplicativo:"
 
@@ -928,9 +842,6 @@ msgstr "Versão:"
 msgid "View"
 msgstr "Visualizar"
 
-msgid "Vote"
-msgstr "Votar"
-
 msgid "Weather"
 msgstr "Previsão do tempo"
 
@@ -945,12 +856,6 @@ msgstr "Site da web:"
 
 msgid "Welcome"
 msgstr "Bem-vindo(a)"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Qual aplicativo você gostaria de ver no Ubuntu Touch?"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Quais aplicativos você gostaria de ver no Ubuntu Touch?"
 
 msgid "What are snaps?"
 msgstr ""
@@ -980,9 +885,6 @@ msgstr "Se você optar por doar ou não, eu ainda aprecio seu apoio. Obrigado!"
 msgid "Why donate?"
 msgstr "Por que doar?"
 
-msgid "Wishlist"
-msgstr "Lista de desejos"
-
 msgid "Yes"
 msgstr "Sim"
 
@@ -995,13 +897,6 @@ msgid ""
 msgstr ""
 "Você não tem sua conta conectada a Caxton, clique para ir para as suas "
 "definições"
-
-msgid "You must be logged in to vote"
-msgstr "Você precisa estar logado para votar"
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
-"Sua votação não pôde ser salva neste momento, tente novamente mais tarde"
 
 msgid "app snaps"
 msgstr ""
@@ -1021,12 +916,6 @@ msgid "games"
 msgid_plural "games"
 msgstr[0] "jogos"
 msgstr[1] "jogos"
-
-msgid "iTunes Link"
-msgstr "Link iTunes"
-
-msgid "iTunes link is not a valid url"
-msgstr "Link iTunes não é uma url válida"
 
 msgid "kernel snaps"
 msgstr "snaps de kernel"

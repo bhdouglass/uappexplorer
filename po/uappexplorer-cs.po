@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
 "PO-Revision-Date: 2016-06-01 10:06+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 "Language: cs\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(Bez obav, verze zdarma existuje taky)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -37,9 +37,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Zvolte seznam -"
 
-msgid "A wish with the same name already exists"
-msgstr "Přání se stejným názvem již existuje"
-
 msgid "Account Integration"
 msgstr "Integrace s účtem"
 
@@ -52,17 +49,14 @@ msgstr "Přidat do seznamu:"
 msgid "All"
 msgstr "Vše"
 
-msgid "All Apps"
-msgstr "Všechny aplikace"
-
 msgid "All Architectures"
 msgstr "Všechny architektury"
 
+msgid "All Categories"
+msgstr ""
+
 msgid "All Frameworks"
 msgstr "Všechny frameworky"
-
-msgid "All Releases"
-msgstr ""
 
 msgid "All Snaps"
 msgstr ""
@@ -70,14 +64,11 @@ msgstr ""
 msgid "All Types"
 msgstr ""
 
-msgid "Amazon Link"
-msgstr "Odkaz na Amazon"
-
-msgid "Amazon link is not a valid url"
-msgstr "Odkaz na Amazon není validní"
-
 msgid "Any Architecture"
 msgstr "Libovolná architektura"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "Libovolná licence"
@@ -99,17 +90,11 @@ msgstr ""
 msgid "App"
 msgstr "Aplikace"
 
-msgid "App Name"
-msgstr "Název aplikace"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Název aplikace (například: com.ubuntu.developer.ukazkove_jmeno)"
 
 msgid "App Snaps"
 msgstr ""
-
-msgid "App Wishlist"
-msgstr "Seznam přání"
 
 msgid "Apps"
 msgstr "Aplikace"
@@ -136,6 +121,9 @@ msgstr "Článek"
 msgid "Author"
 msgstr "Autor"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "Knihy a Komixy"
 
@@ -157,17 +145,8 @@ msgstr ""
 msgid "Business"
 msgstr "Business"
 
-msgid "Buy the Webapp"
-msgstr "Koupit webovou aplikaci"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Koupit webovou aplikaci z obchodu Ubuntu"
-
 msgid "By:"
 msgstr "Od:"
-
-msgid "Cancel"
-msgstr "Zrušit"
 
 msgid "Category:"
 msgstr "Kategorie:"
@@ -178,6 +157,9 @@ msgstr "Kód služby Caxton"
 msgid "Changelog"
 msgstr "Seznam změn"
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr "Zavřít"
 
@@ -186,6 +168,9 @@ msgstr "Komunikace"
 
 msgid "Company"
 msgstr "Společnost"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "Obsahující:"
@@ -204,9 +189,6 @@ msgid "Could not create a new list at this time, please try again later"
 msgstr ""
 "V tento moment nebylo možné vytvořit nový seznam, zkuste to prosím později."
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr "Nové přání nelze v tento okamžik vytvořit, zkuste to prosím později"
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr "V tuto chvíli nebylo možné seznam vymazat, zkuste to prosím později"
 
@@ -216,20 +198,20 @@ msgstr "Nebylo možné stáhnout data o aplikaci, klikněte pro opakování akce
 msgid "Could not download app list, click to retry"
 msgstr "Nebylo možné stáhnout seznam aplikací, klikněte pro opakování akce"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+
 msgid "Could not find the requested app"
 msgstr "Hledanou aplikaci nebylo možné nalézt"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr "Tento seznam nebylo možné nalézt, možná už neexistuje"
 
-msgid "Could not find wish"
-msgstr "Vaše přání nebylo možné dokončit"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr "Seznamy nebylo možné načíst, zkuste to znova"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr "Nebylo možné načíst vaše přání. Kliknutím zkusíte znova."
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -258,20 +240,17 @@ msgstr "Popis"
 msgid "Desktop File:"
 msgstr "Desktop soubot:"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "Nástroje pro vývojáře"
-
-msgid "Developer/Company"
-msgstr "Vývojář/Společnost"
 
 msgid "Donate"
 msgstr "Přispět"
 
 msgid "Donate via Bitcoin"
 msgstr "Přispět skrze Bitcoin"
-
-msgid "Donate via Gratipay"
-msgstr "Přispět skrze Gratipay"
 
 msgid "Donate via Paypal"
 msgstr "Přispět skrze Paypal"
@@ -287,14 +266,11 @@ msgstr ""
 "infrastrukturou. Ty zahrnují doménová jména, hosting atp. uApp Explorer bude "
 "vždy služba dostupná zdarma a open source, bez ohledu na počet příspěvků."
 
-msgid "Donation Web App"
-msgstr "Webová aplikace pro sponzory"
-
 msgid "Download"
 msgstr "Stáhnout"
 
-msgid "Downvote"
-msgstr "Snížit hodnocení"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "Upravit"
@@ -371,12 +347,6 @@ msgstr "Získejte čtečku QR kódů pro vaše zařízení Ubuntu"
 msgid "Go there now"
 msgstr "Přejít nyní"
 
-msgid "Google Play Link"
-msgstr "Odkaz na Google Play"
-
-msgid "Google Play link is not a valid url"
-msgstr "Odkaz na Google Play není validní"
-
 msgid "Graphics"
 msgstr "Grafika"
 
@@ -398,9 +368,6 @@ msgstr ""
 "znamená 1 srdce, 4 hvězdy = 0.5 srdce, 3 hvězdy = 0 srdcí, 3 hvězdy = -0.5 "
 "srdce a 1 hvězda = -1 srdce."
 
-msgid "Help this wish get more votes!"
-msgstr "Pomozte tomuto přání získat více hlasů!"
-
 msgid "Help translate!"
 msgstr "Pomozte s překlady!"
 
@@ -419,20 +386,8 @@ msgstr ""
 msgid "How is the popularity determined?"
 msgstr "Jak je určována oblíbenost aplikací?"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "Kolik byste byli ochotni za tuto aplikaci zaplatit?"
-
 msgid "I just published my app, why don't I see it?"
 msgstr "Zrovna jsem publikoval svou aplikaci. Proč ji zde nevidím?"
-
-msgid "I'm wishing for..."
-msgstr "Přeji si ..."
-
-msgid "I'm wishing for: "
-msgstr "Přeji si: "
-
-msgid "Idea Summary"
-msgstr "Shrnutí nápadu"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -466,17 +421,11 @@ msgstr "Informace o aplikaci"
 msgid "Install"
 msgstr "Instalovat"
 
-msgid "Install using snapd"
+msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
-
-msgid "Is this an existing app?"
-msgstr "Existuje již tato aplikace?"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Je možné mít záporné vnitřní hodnocení aplikace"
-
-msgid "Itunes Link"
-msgstr "Odkaz na Itunes"
 
 msgid "Kernel Snap"
 msgstr ""
@@ -523,17 +472,11 @@ msgstr "Odhlásit se"
 msgid "Log in via Ubuntu"
 msgstr "Přihlásit se skrze účet Ubuntu"
 
-msgid "Login to make a wish"
-msgstr "K vytvoření přání se přihlašte"
-
 msgid "Lowest Heart Rating"
 msgstr "Nejnižší vnitřní hodnocení"
 
 msgid "Lowest Star Rating"
 msgstr "Nejnižší počet hvězd"
-
-msgid "Make a wish"
-msgstr "Přát si něco"
 
 msgid "Media & Video"
 msgstr "Media a Video"
@@ -552,6 +495,9 @@ msgstr "Více aplikací od:"
 
 msgid "More Info"
 msgstr "Více informací"
+
+msgid "More Snaps by:"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Nejdražší (Americké dolary)"
@@ -578,13 +524,10 @@ msgid "New Snaps"
 msgstr ""
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 msgstr ""
-"Nové aplikace jsou získávány z oficiálního obchodu každou hodinu. Můžete tak "
-"počkat nebo využít formuláře a požádat o předčasné vyhledání aplikace tak, "
-"aby se zobrazila v obchodě."
 
 msgid "Newest"
 msgstr "Nejnovější"
@@ -607,8 +550,11 @@ msgstr "Žádné seznamy. Vytvořte nějaký."
 msgid "No reviews yet!"
 msgstr "Tato aplikace ještě nebyla okomentována."
 
-msgid "No wishes found, try searching again."
-msgstr "Nenalezena žádná přání, zkuste hledat znova."
+msgid "None Yet"
+msgstr ""
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr ""
@@ -628,22 +574,11 @@ msgstr "Nejstarší"
 msgid "Oldest Update"
 msgstr "Nejstarší aktualizace"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
-"Hlasující by byly za danou aplikaci ochotni platit průměrně %d amerických "
-"dolarů."
-
 msgid "Open Source"
 msgstr "Otevřený zdrojový kód"
 
 msgid "Opens Urls"
 msgstr "Otevře odkazy"
-
-msgid "Other Link"
-msgstr "Jiný odkaz"
-
-msgid "Other link is not a valid url"
-msgstr "Odkaz není validní"
 
 msgid "Permissions"
 msgstr "Oprávnění"
@@ -651,14 +586,8 @@ msgstr "Oprávnění"
 msgid "Personalisation"
 msgstr "Přizpůsobení"
 
-msgid "Phone Apps & Scopes"
-msgstr "Mobilní aplikace a rozsahy"
-
 msgid "Please login to send via Caxton"
 msgstr "Přihlaste se prosím pro zaslání skrze Caxton"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "Specifikujte prosím název nebo nápad pro vytvoření vašeho přání"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -669,9 +598,6 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "Předchozí aplikace"
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "Cena se musí pohybovat v rozmezí 0 až 20 amerických dolarů"
 
 msgid "Productivity"
 msgstr "Produktivita"
@@ -694,14 +620,8 @@ msgstr ""
 msgid "Reference"
 msgstr "Odkazy"
 
-msgid "Release:"
-msgstr ""
-
 msgid "Remove this app from your list"
 msgstr "Odstranit tuto aplikaci z vašeho seznamu"
-
-msgid "Return to the search page"
-msgstr ""
 
 msgid "Save"
 msgstr "Uložit"
@@ -721,8 +641,11 @@ msgstr "Rozsahy"
 msgid "Screenshots"
 msgstr "Snímky obrazovky"
 
-msgid "Search for a wish:"
-msgstr "Hledat přání:"
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "Odeslat skrze Caxton"
@@ -754,10 +677,10 @@ msgstr "Nakupování"
 msgid "Similar Apps"
 msgstr "Podobné aplikace"
 
-msgid "Snap"
+msgid "Similar Snaps"
 msgstr ""
 
-msgid "Snap Metadata:"
+msgid "Snap"
 msgstr ""
 
 msgid "Snaps"
@@ -791,20 +714,14 @@ msgstr "Hvězdičkové hodnocení"
 msgid "Status"
 msgstr ""
 
-msgid "Submit"
-msgstr "Odeslat"
-
-msgid "Submitted by"
-msgstr "Zaslal(a)"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "Podpora:"
 
 msgid "Terms:"
 msgstr "Podmínky:"
-
-msgid "Thank you for your vote!"
-msgstr "Děkujeme za vaše hlasování"
 
 msgid "Thank you!"
 msgstr "Děkujeme!"
@@ -821,6 +738,9 @@ msgstr ""
 "větším počtem lepších hodnocení. Aplikace s více 5 hvězdičkovými hodnoceními "
 "bude mít lepší srdcové hodnocení, než aplikace s pouze jedním 5 hvězdičkovým "
 "hodnocením."
+
+msgid "The snap you are trying to find does not exist or has been removed."
+msgstr ""
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -903,9 +823,6 @@ msgstr "Aktualizované aplikace"
 msgid "Updated:"
 msgstr "Aktualizováno:"
 
-msgid "Upvote"
-msgstr "Zvýšit hodnocení"
-
 msgid "Urls that open in this app:"
 msgstr "Odkazy otevírané v této aplikaci:"
 
@@ -924,9 +841,6 @@ msgstr "Verze:"
 msgid "View"
 msgstr "Pohled"
 
-msgid "Vote"
-msgstr "Hlasovat"
-
 msgid "Weather"
 msgstr "Počasí"
 
@@ -941,12 +855,6 @@ msgstr "Webová stránka:"
 
 msgid "Welcome"
 msgstr "Vítejte"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Jakou aplikaci byste si na Ubuntu Touch přáli?"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Jaké aplikace byste si na Ubuntu Touch přáli?"
 
 msgid "What are snaps?"
 msgstr ""
@@ -978,9 +886,6 @@ msgstr ""
 msgid "Why donate?"
 msgstr "Proč přispět?"
 
-msgid "Wishlist"
-msgstr "Přání"
-
 msgid "Yes"
 msgstr "Ano"
 
@@ -992,13 +897,6 @@ msgid ""
 "settings"
 msgstr ""
 "Váš účet není připojen ke službě Caxton. Klikněte pro přechod do nastavení"
-
-msgid "You must be logged in to vote"
-msgstr "Pro hlasování musíte být přihlášeni."
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
-"Vaše hlasování nemohlo být v tento moment uloženo, zkuste to prosím později"
 
 msgid "app snaps"
 msgstr ""
@@ -1020,12 +918,6 @@ msgid_plural "games"
 msgstr[0] "hra"
 msgstr[1] "hry/her"
 msgstr[2] "hry/her"
-
-msgid "iTunes Link"
-msgstr "odkaz na iTunes"
-
-msgid "iTunes link is not a valid url"
-msgstr "Odkaz na iTunes není validní"
 
 msgid "kernel snaps"
 msgstr ""

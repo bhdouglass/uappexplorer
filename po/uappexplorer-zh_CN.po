@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
 "PO-Revision-Date: 2016-07-08 05:11+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 "Language: zh_CN\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(别担心, 也有免费的版本!)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -34,9 +34,6 @@ msgstr "*这个web应用在网页中插入了自定义代码，它可以添加�
 msgid "- Choose a list -"
 msgstr "- 选择一个列表 -"
 
-msgid "A wish with the same name already exists"
-msgstr "存在相同名称的愿望"
-
 msgid "Account Integration"
 msgstr "帐号集成"
 
@@ -49,17 +46,14 @@ msgstr "添加到列表："
 msgid "All"
 msgstr "全部"
 
-msgid "All Apps"
-msgstr "全部应用"
-
 msgid "All Architectures"
 msgstr "所有架构"
 
+msgid "All Categories"
+msgstr ""
+
 msgid "All Frameworks"
 msgstr "所有框架"
-
-msgid "All Releases"
-msgstr ""
 
 msgid "All Snaps"
 msgstr "全部 Snaps"
@@ -67,14 +61,11 @@ msgstr "全部 Snaps"
 msgid "All Types"
 msgstr ""
 
-msgid "Amazon Link"
-msgstr "亚马逊链接"
-
-msgid "Amazon link is not a valid url"
-msgstr "亚马逊链接为无效url"
-
 msgid "Any Architecture"
 msgstr "任何架构"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "任何许可证"
@@ -93,17 +84,11 @@ msgstr ""
 msgid "App"
 msgstr "应用"
 
-msgid "App Name"
-msgstr "应用名称"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "应用名称 (例如: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
 msgstr "应用 Snaps"
-
-msgid "App Wishlist"
-msgstr "应用愿望清单"
 
 msgid "Apps"
 msgstr "应用"
@@ -129,6 +114,9 @@ msgstr "文章"
 msgid "Author"
 msgstr "作者"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "图书和漫画"
 
@@ -150,17 +138,8 @@ msgstr "浏览 Snaps"
 msgid "Business"
 msgstr "商务"
 
-msgid "Buy the Webapp"
-msgstr "购买Web应用"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "从 Ubuntu Touch 应用商店购买web应用"
-
 msgid "By:"
 msgstr "作者："
-
-msgid "Cancel"
-msgstr "取消"
 
 msgid "Category:"
 msgstr "类别："
@@ -171,6 +150,9 @@ msgstr "Caxton 代码"
 msgid "Changelog"
 msgstr "更新日志"
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr "关闭"
 
@@ -179,6 +161,9 @@ msgstr "通讯"
 
 msgid "Company"
 msgstr "公司"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "包含："
@@ -192,9 +177,6 @@ msgstr "此时无法连接到Caxton，请稍后重试"
 msgid "Could not create a new list at this time, please try again later"
 msgstr "此时无法创建新列表，请稍后重试"
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr "此时无法创建新的愿望，请稍候再试"
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr "此时无法删除列表，请稍后重试"
 
@@ -204,20 +186,20 @@ msgstr "无法下载应用数据，点击重试"
 msgid "Could not download app list, click to retry"
 msgstr "无法下载应用列表，点击重试"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+
 msgid "Could not find the requested app"
 msgstr "无法找到请求的应用"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr "无法找到此列表，可能已不存在"
 
-msgid "Could not find wish"
-msgstr "无法找到愿望"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr "此时无法载入列表，点击重试"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr "此时无法载入愿望，点击重试"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr "无法从此列表删除应用，请稍后重试"
@@ -243,20 +225,17 @@ msgstr "描述"
 msgid "Desktop File:"
 msgstr "桌面文件"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "开发者工具"
-
-msgid "Developer/Company"
-msgstr "开发者/公司"
 
 msgid "Donate"
 msgstr "捐助"
 
 msgid "Donate via Bitcoin"
 msgstr "通过比特币捐助"
-
-msgid "Donate via Gratipay"
-msgstr "通过Gratipay捐助"
 
 msgid "Donate via Paypal"
 msgstr "通过Paypal捐助"
@@ -271,14 +250,11 @@ msgstr ""
 "是你能帮助使它变得更好的一种方式。如果你选择捐助，你的捐助资金会用于基础设施的花费。花费包括域名、主机等等。不论捐助数量的多少，uApp "
 "Explorer 一直会是一个免费且开源的服务。"
 
-msgid "Donation Web App"
-msgstr "捐助Web应用"
-
 msgid "Download"
 msgstr "下载"
 
-msgid "Downvote"
-msgstr "反对"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "编辑"
@@ -355,12 +331,6 @@ msgstr "为你的 Ubuntu Touch 设备获取二维码扫描器"
 msgid "Go there now"
 msgstr "立刻跳到"
 
-msgid "Google Play Link"
-msgstr "Google Play 链接"
-
-msgid "Google Play link is not a valid url"
-msgstr "Google Play 链接不是一个有效的 url"
-
 msgid "Graphics"
 msgstr "图像"
 
@@ -378,9 +348,6 @@ msgid ""
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr "心评级由星评级计算而来，一个5星为1点心，4星 = 0.5心，3星 = 0心，2星 = -0.5心，1星 = -1心。"
-
-msgid "Help this wish get more votes!"
-msgstr "帮助这个愿望获得更多投票！"
 
 msgid "Help translate!"
 msgstr "帮助翻译！"
@@ -400,20 +367,8 @@ msgstr ""
 msgid "How is the popularity determined?"
 msgstr "受欢迎度是如何确定的?"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "你愿意为这个应用支付多少钱？"
-
 msgid "I just published my app, why don't I see it?"
 msgstr "我发布了我的应用，为什么看不到它？"
-
-msgid "I'm wishing for..."
-msgstr "我希望..."
-
-msgid "I'm wishing for: "
-msgstr "我希望： "
-
-msgid "Idea Summary"
-msgstr "创意摘要"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "如果你想贡献代码访问 GitHub 仓库。"
@@ -439,17 +394,11 @@ msgstr "信息"
 msgid "Install"
 msgstr "安装"
 
-msgid "Install using snapd"
+msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
-
-msgid "Is this an existing app?"
-msgstr "这是一个现有的App吗？"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "可能有负心评级。"
-
-msgid "Itunes Link"
-msgstr "Itunes 连接"
 
 msgid "Kernel Snap"
 msgstr "内核 Snap"
@@ -496,17 +445,11 @@ msgstr "注销"
 msgid "Log in via Ubuntu"
 msgstr "通过Ubuntu登录"
 
-msgid "Login to make a wish"
-msgstr "登录来许一个愿"
-
 msgid "Lowest Heart Rating"
 msgstr "最低心评级"
 
 msgid "Lowest Star Rating"
 msgstr "最低星评级"
-
-msgid "Make a wish"
-msgstr "许愿"
 
 msgid "Media & Video"
 msgstr "媒体与影片"
@@ -525,6 +468,9 @@ msgstr "更多应用："
 
 msgid "More Info"
 msgstr "更多信息"
+
+msgid "More Snaps by:"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "最贵的(美元)"
@@ -551,10 +497,10 @@ msgid "New Snaps"
 msgstr ""
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
-msgstr "新应用每小时从官方应用商店获取，你可以等待新应用被获取或者使用请求表来请求应用被更早的发现。"
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
+msgstr ""
 
 msgid "Newest"
 msgstr "最新"
@@ -577,8 +523,11 @@ msgstr "没有列表，创建一个！"
 msgid "No reviews yet!"
 msgstr "还没有评论！"
 
-msgid "No wishes found, try searching again."
-msgstr "没有找到愿望，尝试重新搜索。"
+msgid "None Yet"
+msgstr ""
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr "OEM Snap"
@@ -598,20 +547,11 @@ msgstr "最旧"
 msgid "Oldest Update"
 msgstr "最旧更新"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr "平均，投票者将为这个应用支付 %d 美元。"
-
 msgid "Open Source"
 msgstr "开源"
 
 msgid "Opens Urls"
 msgstr "打开 Urls"
-
-msgid "Other Link"
-msgstr "其他链接"
-
-msgid "Other link is not a valid url"
-msgstr "其他链接不是一个有效的url"
 
 msgid "Permissions"
 msgstr "权限"
@@ -619,14 +559,8 @@ msgstr "权限"
 msgid "Personalisation"
 msgstr "个性化"
 
-msgid "Phone Apps & Scopes"
-msgstr "手机应用与Scopes"
-
 msgid "Please login to send via Caxton"
 msgstr "请登录通过Caxton来发送"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "请为你的愿望指定一个名称或想法"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -635,9 +569,6 @@ msgstr "受欢迎度是基于本月应用得到的4星和5星的评论数量。"
 
 msgid "Previous App:"
 msgstr "上一个应用："
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "价格必须在0到20美元之间"
 
 msgid "Productivity"
 msgstr "生产率"
@@ -660,14 +591,8 @@ msgstr ""
 msgid "Reference"
 msgstr "参考"
 
-msgid "Release:"
-msgstr ""
-
 msgid "Remove this app from your list"
 msgstr "从你的列表里移除这个应用"
-
-msgid "Return to the search page"
-msgstr ""
 
 msgid "Save"
 msgstr "保存"
@@ -687,8 +612,11 @@ msgstr "Scopes"
 msgid "Screenshots"
 msgstr "截图"
 
-msgid "Search for a wish:"
-msgstr "搜索愿望："
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "通过Caxton发送"
@@ -720,11 +648,11 @@ msgstr "购物"
 msgid "Similar Apps"
 msgstr "类似的应用"
 
+msgid "Similar Snaps"
+msgstr ""
+
 msgid "Snap"
 msgstr "Snap"
-
-msgid "Snap Metadata:"
-msgstr ""
 
 msgid "Snaps"
 msgstr "Snaps"
@@ -757,20 +685,14 @@ msgstr "星排名"
 msgid "Status"
 msgstr ""
 
-msgid "Submit"
-msgstr "提交"
-
-msgid "Submitted by"
-msgstr "提交者"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "支持："
 
 msgid "Terms:"
 msgstr "条款:"
-
-msgid "Thank you for your vote!"
-msgstr "感谢您的投票！"
 
 msgid "Thank you!"
 msgstr "谢谢你！"
@@ -783,6 +705,9 @@ msgid ""
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr "心评级和星评级相似，但它会奖励拥有更多好评的应用。一个拥有更多5星评级的应用会比仅拥有少数5星评级的应用获得更高的心评级。"
+
+msgid "The snap you are trying to find does not exist or has been removed."
+msgstr ""
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -854,9 +779,6 @@ msgstr "更新应用"
 msgid "Updated:"
 msgstr "更新时间："
 
-msgid "Upvote"
-msgstr "赞同"
-
 msgid "Urls that open in this app:"
 msgstr "在此应用内打开的地址："
 
@@ -875,9 +797,6 @@ msgstr "版本："
 msgid "View"
 msgstr "查看"
 
-msgid "Vote"
-msgstr "投票"
-
 msgid "Weather"
 msgstr "天气"
 
@@ -892,12 +811,6 @@ msgstr "网站："
 
 msgid "Welcome"
 msgstr "欢迎"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "你希望在Ubuntu Touch上见到什么应用？"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "你希望在Ubuntu Touch上见到什么应用？"
 
 msgid "What are snaps?"
 msgstr ""
@@ -925,9 +838,6 @@ msgstr "无论你选择捐助与否，我仍然很感谢你支持。谢谢！"
 msgid "Why donate?"
 msgstr "为什么要捐助？"
 
-msgid "Wishlist"
-msgstr "愿望清单"
-
 msgid "Yes"
 msgstr "是"
 
@@ -938,12 +848,6 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr "你没有将帐号连接到Caxton，点击进入你的设置"
-
-msgid "You must be logged in to vote"
-msgstr "登录后才能投票"
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr "你的投票此刻无法保存，请稍后重试"
 
 msgid "app snaps"
 msgstr "应用 snaps"
@@ -961,12 +865,6 @@ msgstr "工具 snaps"
 msgid "games"
 msgid_plural "games"
 msgstr[0] "游戏"
-
-msgid "iTunes Link"
-msgstr "iTunes 链接"
-
-msgid "iTunes link is not a valid url"
-msgstr "iTunes 链接不是一个有效的 url"
 
 msgid "kernel snaps"
 msgstr "内核 snaps"

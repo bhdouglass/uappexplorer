@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
-"PO-Revision-Date: 2016-12-12 17:14+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"PO-Revision-Date: 2017-06-11 20:03+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 "Language: el\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(Μην ανησυχείτε, υπάρχει και δωρεάν έκδοση!)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -39,9 +39,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Επιλογή καταλόγου -"
 
-msgid "A wish with the same name already exists"
-msgstr "Η επιθυμία με το όνομα αυτό υπάρχει ήδη"
-
 msgid "Account Integration"
 msgstr "Ενσωμάτωση λογαριασμού"
 
@@ -54,17 +51,14 @@ msgstr "Προσθήκη στον κατάλογο:"
 msgid "All"
 msgstr "Όλα"
 
-msgid "All Apps"
-msgstr "Όλες οι εφαρμογές"
-
 msgid "All Architectures"
 msgstr "Όλες οι αρχιτεκτονικές"
 
+msgid "All Categories"
+msgstr "Όλες οι κατηγορίες"
+
 msgid "All Frameworks"
 msgstr "Όλοι οι σκελετοί"
-
-msgid "All Releases"
-msgstr "Όλες οι τελικές εκδόσεις"
 
 msgid "All Snaps"
 msgstr "Όλα τα πακέτα snap"
@@ -72,14 +66,11 @@ msgstr "Όλα τα πακέτα snap"
 msgid "All Types"
 msgstr "Όλοι οι τύποι"
 
-msgid "Amazon Link"
-msgstr "Σύνδεσμος στο amazon"
-
-msgid "Amazon link is not a valid url"
-msgstr "Σύνδεσμος amazon δεν είναι έγκυρη διεύθυνση"
-
 msgid "Any Architecture"
 msgstr "Οποιαδήποτε αρχιτεκτονική"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "Οποιαδήποτε άδεια χρήσης"
@@ -103,17 +94,11 @@ msgstr ""
 msgid "App"
 msgstr "Εφαρμογή"
 
-msgid "App Name"
-msgstr "Όνομα εφαρμογής"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Όνομα εφαρμογής (π.χ.: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
 msgstr "Πακέτα snap εφαρμογής"
-
-msgid "App Wishlist"
-msgstr "Λίστα επιθυμιών εφαρμογών"
 
 msgid "Apps"
 msgstr "Εφαρμογές"
@@ -141,6 +126,9 @@ msgstr "Άρθρο"
 msgid "Author"
 msgstr "Δημιουργός"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "Βιβλία & κόμικ"
 
@@ -162,18 +150,8 @@ msgstr "Πλοήγηση σε πακέτα snap"
 msgid "Business"
 msgstr "Επαγγελματικά"
 
-msgid "Buy the Webapp"
-msgstr "Αγορά της εφαρμογής ιστού"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr ""
-"Αγορά της εφαρμογής ιστού από το κατάστημα εφαρμογών του Ubuntu Touch"
-
 msgid "By:"
 msgstr "Κατά:"
-
-msgid "Cancel"
-msgstr "Ακύρωση"
 
 msgid "Category:"
 msgstr "Κατηγορία:"
@@ -184,6 +162,9 @@ msgstr "Κώδικας Caxton"
 msgid "Changelog"
 msgstr "Αρχείο καταγραφής αλλαγών"
 
+msgid "Classic"
+msgstr "Κλασικό"
+
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -192,6 +173,9 @@ msgstr "Επικοινωνία"
 
 msgid "Company"
 msgstr "Εταιρεία"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "Που περιέχουν:"
@@ -211,11 +195,6 @@ msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέου καταλόγου, παρακαλώ "
 "προσπαθήστε ξανά αργότερα"
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η δημιουργία νέας επιθυμίας, παρακαλώ "
-"προσπαθήστε ξανά αργότερα"
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η διαγραφή του καταλόγου, παρακαλώ "
@@ -231,23 +210,25 @@ msgstr ""
 "Δεν κατέστη δυνατή η λήψη του καταλόγου με τις εφαρμογές, πατήστε εδώ για να "
 "προσπαθήσετε ξανά"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+"Δεν κατέστη δυνατή η λήψη των δεδομένων του πακέτου snap, πατήστε εδώ για να "
+"προσπαθήσετε ξανά"
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+"Δεν κατέστη δυνατή η λήψη του καταλόγου με τα πακέτα snap, πατήστε εδώ για "
+"να προσπαθήσετε ξανά"
+
 msgid "Could not find the requested app"
 msgstr "Δε βρέθηκε η εφαρμογή προς αναζήτηση"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr "Δε βρέθηκε ο κατάλογος αυτός, ίσως δεν υπάρχει πια"
 
-msgid "Could not find wish"
-msgstr "Δεν βρέθηκε η επιθυμία"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
 "Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των καταλόγων, πατήστε εδώ για "
-"να προσπαθήσετε ξανά"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr ""
-"Δεν κατέστη δυνατή αυτή τη στιγμή η φόρτωση των επιθυμιών, πατήστε εδώ για "
 "να προσπαθήσετε ξανά"
 
 msgid "Could not remove the app from this list, please try again later"
@@ -280,20 +261,17 @@ msgstr "Περιγραφή"
 msgid "Desktop File:"
 msgstr "Desktop αρχείο:"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "Εργαλεία ανάπτυξης"
-
-msgid "Developer/Company"
-msgstr "Προγραμματιστής/Εταιρεία"
 
 msgid "Donate"
 msgstr "Δωρεά"
 
 msgid "Donate via Bitcoin"
 msgstr "Δωρεά μέσω Bitcoin"
-
-msgid "Donate via Gratipay"
-msgstr "Δωρεά μέσω Gratipay"
 
 msgid "Donate via Paypal"
 msgstr "Δωρεά μέσω Paypal"
@@ -311,14 +289,11 @@ msgstr ""
 "uApp Explorer θα είναι για πάντα μια υπηρεσία ανοιχτού λογισμικού που "
 "παρέχεται ελεύθερα, ανεξάρτητα από τον αριθμό των δωρεών."
 
-msgid "Donation Web App"
-msgstr "Εφαρμογή ιστού για δωρεές"
-
 msgid "Download"
 msgstr "Λήψη"
 
-msgid "Downvote"
-msgstr "Αρνητική ψήφος"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "Επεξεργασία"
@@ -397,12 +372,6 @@ msgstr "Κατεβάστε ένα σαρωτή κωδικών QR για τη Ubu
 msgid "Go there now"
 msgstr "Πήγαινε εκεί τώρα"
 
-msgid "Google Play Link"
-msgstr "Σύνδεσμος στο google play"
-
-msgid "Google Play link is not a valid url"
-msgstr "Σύνδεσμος google play δεν είναι έγκυρη διεύθυνση"
-
 msgid "Graphics"
 msgstr "Γραφικά"
 
@@ -424,9 +393,6 @@ msgstr ""
 "μια κριτική με 5 αστέρια είναι 1 πόντος καρδιάς, 4 αστέρια = 0.5 καρδιές, 3 "
 "αστέρια = 0 καρδιές, 2 αστέρια = -0.5 καρδιές, και 1 αστέρι = -1 καρδιές."
 
-msgid "Help this wish get more votes!"
-msgstr "Βοηθήστε να πάρει η επιθυμία αυτή περισσότερες ψήφους!"
-
 msgid "Help translate!"
 msgstr "Βοηθήστε στη μετάφραση!"
 
@@ -445,20 +411,8 @@ msgstr "Πώς εγκαθιστώ εφαρμογές και επισκόπια �
 msgid "How is the popularity determined?"
 msgstr "Πώς υπολογίζεται η δημοτικότητα;"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "Πόσα θα ήσασταν διατεθείμενοι να πληρώσετε για αυτήν την εφαρμογή;"
-
 msgid "I just published my app, why don't I see it?"
 msgstr "Μόλις δημοσίευσα την εφαρμογή μου, γιατί δεν μπορώ να τη δω;"
-
-msgid "I'm wishing for..."
-msgstr "Επιθυμώ..."
-
-msgid "I'm wishing for: "
-msgstr "Επιθυμώ: "
-
-msgid "Idea Summary"
-msgstr "Σύνοψη ιδέας"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -494,17 +448,13 @@ msgstr "Πληροφορίες"
 msgid "Install"
 msgstr "Εγκατάσταση"
 
-msgid "Install using snapd"
-msgstr "Εγκαθίσταται με χρήση snapd"
-
-msgid "Is this an existing app?"
-msgstr "Είναι αυτή μια υπάρχουσα εφαρμογή;"
+msgid "Install will take you to the GNOME Software Center (if installed)"
+msgstr ""
+"Η εγκατάσταση θα σε κατευθύνει στο Κέντρο Λογισμικού Gnome (αν είναι "
+"εγκατεστημένο)"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Είναι δυνατό να υπάρχει βαθμολογία σε καρδιές με αρνητικό πρόσημο."
-
-msgid "Itunes Link"
-msgstr "Σύνδεσμος στο iTunes"
 
 msgid "Kernel Snap"
 msgstr "Πακέτο snap πυρήνα"
@@ -551,17 +501,11 @@ msgstr "Αποσύνδεση"
 msgid "Log in via Ubuntu"
 msgstr "Σύνδεση μέσω Ubuntu"
 
-msgid "Login to make a wish"
-msgstr "Συνδεθείτε για να εκδηλώσετε μια επιθυμία"
-
 msgid "Lowest Heart Rating"
 msgstr "Χαμηλότερη βαθμολογία σε καρδιές"
 
 msgid "Lowest Star Rating"
 msgstr "Χαμηλότερη βαθμολογία σε αστέρια"
-
-msgid "Make a wish"
-msgstr "Εκδηλώστε μια επιθυμία"
 
 msgid "Media & Video"
 msgstr "Πολυμέσα & βίντεο"
@@ -580,6 +524,9 @@ msgstr "Περισσότερες εφαρμογές από:"
 
 msgid "More Info"
 msgstr "Περισσότερες πληροφορίες"
+
+msgid "More Snaps by:"
+msgstr "Περισσότερα πακέτα snap από:"
 
 msgid "Most Expensive (USD)"
 msgstr "Πιο ακριβά (σε δολάρια ΗΠΑ)"
@@ -606,13 +553,10 @@ msgid "New Snaps"
 msgstr "Νέα πακέτα snap"
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 msgstr ""
-"Η λήψη νέων εφαρμογών από το επίσημο κατάστημα γίνεται κάθε ώρα, μπορείτε "
-"είτε να περιμένετε μέχρι να ληφθούν οι νέες εφαρμογές ή να χρησιμοποιήσετε "
-"τη φόρμα υποβολής για να ζητήσετε να βρεθεί η εφαρμογή νωρίτερα."
 
 msgid "Newest"
 msgstr "Νεότερα"
@@ -635,8 +579,11 @@ msgstr "Δεν υπάρχουν κατάλογοι, δημιουργήστε έ�
 msgid "No reviews yet!"
 msgstr "Δεν υπάρχουν ακόμα κριτικές!"
 
-msgid "No wishes found, try searching again."
-msgstr "Δεν βρέθηκαν επιθυμίες, παρακαλώ κάντε πάλι αναζήτηση."
+msgid "None Yet"
+msgstr "Τίποτα ακόμα"
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr "Πακέτο snap κατασκευαστή"
@@ -656,22 +603,11 @@ msgstr "Παλαιότερα"
 msgid "Oldest Update"
 msgstr "Παλαιότερη ενημέρωση"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
-"Κατά μέσο όρο, οι ψηφοφόροι είναι διατεθείμενοι να πληρώσουν %d δολάρια ΗΠΑ "
-"για αυτήν την εφαρμογή."
-
 msgid "Open Source"
 msgstr "Ανοικτού κώδικα"
 
 msgid "Opens Urls"
 msgstr "Ανοίγει διευθύνσεις URL"
-
-msgid "Other Link"
-msgstr "Άλλος σύνδεσμος"
-
-msgid "Other link is not a valid url"
-msgstr "Άλλος σύνδεσμος δεν είναι έγκυρη διεύθυνση"
 
 msgid "Permissions"
 msgstr "Δικαιώματα"
@@ -679,14 +615,8 @@ msgstr "Δικαιώματα"
 msgid "Personalisation"
 msgstr "Εξατομίκευση"
 
-msgid "Phone Apps & Scopes"
-msgstr "Εφαρμογές & επισκόπια για κινητά"
-
 msgid "Please login to send via Caxton"
 msgstr "Παρακαλώ συνδεθείτε για να κάνετε αποστολή μέσω Caxton"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "Παρακαλώ ορίστε ένα όνομα ή μια ιδεά για την επιθυμία σας"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -697,9 +627,6 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "Προηγούμενη εφαρμογή:"
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "Η τιμή πρέπει να είναι ανάμεσα από 0 και 20 δολάρια ΗΠΑ"
 
 msgid "Productivity"
 msgstr "Παραγωγικότητα"
@@ -722,14 +649,8 @@ msgstr "Ροές RSS"
 msgid "Reference"
 msgstr "Παραπομπή"
 
-msgid "Release:"
-msgstr "Τελική έκδοση:"
-
 msgid "Remove this app from your list"
 msgstr "Διαγραφή της εφαρμογής αυτής από τον κατάλογό σας"
-
-msgid "Return to the search page"
-msgstr "Επιστροφή στη σελίδα αναζήτησης"
 
 msgid "Save"
 msgstr "Αποθήκευση"
@@ -749,8 +670,11 @@ msgstr "Επισκόπια"
 msgid "Screenshots"
 msgstr "Στιγμιότυπα οθόνης"
 
-msgid "Search for a wish:"
-msgstr "Αναζήτηση επιθυμίας:"
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "Αποστολή μέσω Caxton"
@@ -782,11 +706,11 @@ msgstr "Αγορές"
 msgid "Similar Apps"
 msgstr "Αντίστοιχες εφαρμογές"
 
+msgid "Similar Snaps"
+msgstr "Αντίστοιχα πακέτα snap"
+
 msgid "Snap"
 msgstr "Πακέτο snap"
-
-msgid "Snap Metadata:"
-msgstr "Μεταδεδομένα πακέτου snap:"
 
 msgid "Snaps"
 msgstr "Πακέτα snap"
@@ -824,20 +748,14 @@ msgstr "Βαθμολογία σε αστέρια"
 msgid "Status"
 msgstr "Κατάσταση"
 
-msgid "Submit"
-msgstr "Υποβολή"
-
-msgid "Submitted by"
-msgstr "Υπεβλήθη από"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "Υποστήριξη:"
 
 msgid "Terms:"
 msgstr "Όροι:"
-
-msgid "Thank you for your vote!"
-msgstr "Ευχαριστώ για τη ψήφο σας!"
 
 msgid "Thank you!"
 msgstr "Ευχαριστώ!"
@@ -854,6 +772,11 @@ msgstr ""
 "ανταμείβει τις εφαρμογές που έχουν περισσότερες καλές κριτικές. Μια εφαρμογή "
 "με πολλές βαθμολογίες 5 αστέρων θα έχει υψηλότερη βαθμολογία σε καρδιές από "
 "μια εφαρμογή που έχει μόνο λίγες βαθμολογίες με 5 αστέρια."
+
+msgid "The snap you are trying to find does not exist or has been removed."
+msgstr ""
+"Το πακέτο snap που προσπαθείτε να εγκαταστήσετε δεν υπάρχει πια ή έχει "
+"αφαιρεθεί."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -937,9 +860,6 @@ msgstr "Ενημερωμένες εφαρμογές"
 msgid "Updated:"
 msgstr "Ενημέρωση:"
 
-msgid "Upvote"
-msgstr "Θετική ψήφος"
-
 msgid "Urls that open in this app:"
 msgstr "Διευθύνσεις URL που ανοίγουν σε αυτήν την εφαρμογή:"
 
@@ -958,9 +878,6 @@ msgstr "Έκδοση:"
 msgid "View"
 msgstr "Προβολή"
 
-msgid "Vote"
-msgstr "Ψήφος"
-
 msgid "Weather"
 msgstr "Καιρός"
 
@@ -975,12 +892,6 @@ msgstr "Ιστότοπος:"
 
 msgid "Welcome"
 msgstr "Καλώς ήρθατε"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Τι εφαρμογή θα επιθυμούσατε να δείτε στο Ubuntu Touch;"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Τι εφαρμογές θα επιθυμούσατε να δείτε στο Ubuntu Touch;"
 
 msgid "What are snaps?"
 msgstr "Τι είναι τα snap πακέτα;"
@@ -1010,9 +921,6 @@ msgstr ""
 msgid "Why donate?"
 msgstr "Για ποιο λόγο να κάνω δωρεά;"
 
-msgid "Wishlist"
-msgstr "Λίστα επιθυμιών"
-
 msgid "Yes"
 msgstr "Ναι"
 
@@ -1025,14 +933,6 @@ msgid ""
 msgstr ""
 "Δεν έχετε κάνει σύνδεση του λογαριασμού σας με το Caxton, πατήστε εδώ για να "
 "πάτε στις ρυθμίσεις σας"
-
-msgid "You must be logged in to vote"
-msgstr "Συνδεθείτε για να μπορέσετε να ψηφίσετε"
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
-"Δεν κατέστη δυνατή η αποθήκευση της ψήφου σας, παρακαλώ προσπαθήστε ξανά "
-"αργότερα"
 
 msgid "app snaps"
 msgstr "πακέτα snap εφαρμογής"
@@ -1052,12 +952,6 @@ msgid "games"
 msgid_plural "games"
 msgstr[0] "παιχνίδια"
 msgstr[1] "παιχνίδια"
-
-msgid "iTunes Link"
-msgstr "Σύνδεσμος στο iTunes"
-
-msgid "iTunes link is not a valid url"
-msgstr "Σύνδεσμος iTunes δεν είναι έγκυρη διεύθυνση"
 
 msgid "kernel snaps"
 msgstr "πακέτα snap πυρήνα"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
 "PO-Revision-Date: 2016-06-14 20:02+0000\n"
 "Last-Translator: Bojan Bogdanović <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(Не брините, ово је такође бесплатна верзија!)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -38,9 +38,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Одаберите листу -"
 
-msgid "A wish with the same name already exists"
-msgstr "Жеља са истим именом већ постоји"
-
 msgid "Account Integration"
 msgstr "Интеграција налога"
 
@@ -53,17 +50,14 @@ msgstr "Додајте на листу:"
 msgid "All"
 msgstr "Сви"
 
-msgid "All Apps"
-msgstr "Сви програми"
-
 msgid "All Architectures"
 msgstr "Све архитектуре"
 
+msgid "All Categories"
+msgstr ""
+
 msgid "All Frameworks"
 msgstr "Сви оквири"
-
-msgid "All Releases"
-msgstr ""
 
 msgid "All Snaps"
 msgstr ""
@@ -71,14 +65,11 @@ msgstr ""
 msgid "All Types"
 msgstr ""
 
-msgid "Amazon Link"
-msgstr "Линк ка Амазон-у"
-
-msgid "Amazon link is not a valid url"
-msgstr "Амазон линк није исправан"
-
 msgid "Any Architecture"
 msgstr "Било која архитектура"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "Било која лиценца"
@@ -101,17 +92,11 @@ msgstr ""
 msgid "App"
 msgstr "Програм"
 
-msgid "App Name"
-msgstr "Име програма"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "Име програма (пример:  com.ubuntu.developer.example)"
 
 msgid "App Snaps"
 msgstr ""
-
-msgid "App Wishlist"
-msgstr "Листа жеља програма"
 
 msgid "Apps"
 msgstr "Програми"
@@ -138,6 +123,9 @@ msgstr "Чланак"
 msgid "Author"
 msgstr "Аутор"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "Књиге & Стрипови"
 
@@ -159,17 +147,8 @@ msgstr ""
 msgid "Business"
 msgstr "Посао"
 
-msgid "Buy the Webapp"
-msgstr "Купи вебпрограм"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Купи вебпрограм из Убунту Тач продавнице"
-
 msgid "By:"
 msgstr "Од:"
-
-msgid "Cancel"
-msgstr "Откажи"
 
 msgid "Category:"
 msgstr "Категорија:"
@@ -180,6 +159,9 @@ msgstr "Какстон код"
 msgid "Changelog"
 msgstr "Дневник измена"
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr "Затвори"
 
@@ -188,6 +170,9 @@ msgstr "Комуникације"
 
 msgid "Company"
 msgstr "Компанија"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "Садржи:"
@@ -201,9 +186,6 @@ msgstr "Не могу се сада повезати на Какстон, мол
 msgid "Could not create a new list at this time, please try again later"
 msgstr "Не могу сада направити нову листу, молимо покушајте касније"
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr "Не могу сада креирати нову жељу, молимо покушајте касније"
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr "Не могу сада обрисати листу, молимо покушајте касније"
 
@@ -213,20 +195,20 @@ msgstr "Не могу преузети податке програма, клик
 msgid "Could not download app list, click to retry"
 msgstr "Не могу преузети листу програма, кликните да покушате поново"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+
 msgid "Could not find the requested app"
 msgstr "Не могу наћи захтевани програм"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr "Не могу наћи ову листу, могуће је да више не постоји"
 
-msgid "Could not find wish"
-msgstr "Не могу наћи жељу"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr "Не могу сада учитати листу, кликните да покушате поново"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr "Не могу сада учитати жеље, кликните да покушате поново"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr "Не могу уклонити програм из листе, молимо покушајте касније"
@@ -252,20 +234,17 @@ msgstr "Опис"
 msgid "Desktop File:"
 msgstr "Десктоп документ:"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "Програмерски алати"
-
-msgid "Developer/Company"
-msgstr "Програмер/Компанија"
 
 msgid "Donate"
 msgstr "Приложите"
 
 msgid "Donate via Bitcoin"
 msgstr "Приложите преко Биткоин-а"
-
-msgid "Donate via Gratipay"
-msgstr "Приложите преко Гратипеј-а"
 
 msgid "Donate via Paypal"
 msgstr "Приложите преко Пејпал-а"
@@ -281,14 +260,11 @@ msgstr ""
 "Трошкови укључују доменска имена, хостинг, итд. uApp Explorer ће увек бити "
 "бесплатан сервис и отвореног кода, без обзира на број прилога."
 
-msgid "Donation Web App"
-msgstr "Веб програм прилога"
-
 msgid "Download"
 msgstr "Преузимање"
 
-msgid "Downvote"
-msgstr "Негативан глас"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "Уреди"
@@ -365,12 +341,6 @@ msgstr "Преузми QR скенер за Ваш Убунту Тач уређ�
 msgid "Go there now"
 msgstr "Сада иди тамо"
 
-msgid "Google Play Link"
-msgstr "Гугл Плеј линк"
-
-msgid "Google Play link is not a valid url"
-msgstr "Гугл Плеј линк није исправан"
-
 msgid "Graphics"
 msgstr "Графика"
 
@@ -392,9 +362,6 @@ msgstr ""
 "1 поен срцем, 4 звездице = 0,5 срца, 3 звездице = 0 срца, 2 звездице = -0,5 "
 "срца, и 1 звездица = -1 срце."
 
-msgid "Help this wish get more votes!"
-msgstr "Помозите да ова жеља добије више гласова!"
-
 msgid "Help translate!"
 msgstr "Помозите превођење!"
 
@@ -413,20 +380,8 @@ msgstr ""
 msgid "How is the popularity determined?"
 msgstr "Како је утврђена популарност?"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "Колико би сте желели да платите овај програм?"
-
 msgid "I just published my app, why don't I see it?"
 msgstr "Управо сам објавио програм, зашто га не видим?"
-
-msgid "I'm wishing for..."
-msgstr "Желим..."
-
-msgid "I'm wishing for: "
-msgstr "Желим: "
-
-msgid "Idea Summary"
-msgstr "Резиме идеје"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Ако желите да допринесете кодом, посетите ГитХаб репозиторијум."
@@ -454,17 +409,11 @@ msgstr "Инфо"
 msgid "Install"
 msgstr "Инсталирај"
 
-msgid "Install using snapd"
+msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
-
-msgid "Is this an existing app?"
-msgstr "Да ли је ово постојећи програм?"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Могуће је имати негативну оцену срцем."
-
-msgid "Itunes Link"
-msgstr "ајТјунс линк"
 
 msgid "Kernel Snap"
 msgstr ""
@@ -511,17 +460,11 @@ msgstr "Одјави се"
 msgid "Log in via Ubuntu"
 msgstr "Пријави се преко Убунту-а"
 
-msgid "Login to make a wish"
-msgstr "Пријавите се да поставите жељу"
-
 msgid "Lowest Heart Rating"
 msgstr "Најнижа оцена срцем"
 
 msgid "Lowest Star Rating"
 msgstr "Најнижа оцена звездицом"
-
-msgid "Make a wish"
-msgstr "Унеси жељу"
 
 msgid "Media & Video"
 msgstr "Медији & Видео"
@@ -540,6 +483,9 @@ msgstr "Више програма од:"
 
 msgid "More Info"
 msgstr "Више информација"
+
+msgid "More Snaps by:"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Скупљи (УСД)"
@@ -566,13 +512,10 @@ msgid "New Snaps"
 msgstr ""
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 msgstr ""
-"Нови програми се преузимају из званичне продавнице сваког сата, можете "
-"чекати док се преузму нови програми или користити формулар за захтев да "
-"захтевате да се програм пронађе раније."
 
 msgid "Newest"
 msgstr "Најновији"
@@ -595,8 +538,11 @@ msgstr "Нема листи, креирајте једну!"
 msgid "No reviews yet!"
 msgstr "Још увек нема рецензија!"
 
-msgid "No wishes found, try searching again."
-msgstr "Нема пронађених жеља, покушајте претрагу поново."
+msgid "None Yet"
+msgstr ""
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr ""
@@ -616,20 +562,11 @@ msgstr "Најстарији"
 msgid "Oldest Update"
 msgstr "Старије ажурирање"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr "У просеку, гласачи би желели да плате %d УСД за овај програм."
-
 msgid "Open Source"
 msgstr "Отвореног кода"
 
 msgid "Opens Urls"
 msgstr "Отрара линкове"
-
-msgid "Other Link"
-msgstr "Други линк"
-
-msgid "Other link is not a valid url"
-msgstr "Други линк није исправан"
 
 msgid "Permissions"
 msgstr "Дозволе"
@@ -637,14 +574,8 @@ msgstr "Дозволе"
 msgid "Personalisation"
 msgstr "Персонализација"
 
-msgid "Phone Apps & Scopes"
-msgstr "Телефонски Програми & Опсези"
-
 msgid "Please login to send via Caxton"
 msgstr "Молимо да се пријавите да пошаљете преко Какстон-а"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "Молимо наведите име Ваше идеје или жеље"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -655,9 +586,6 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "Претходни програм:"
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "Цена мора бити између 0 и 20 УСД"
 
 msgid "Productivity"
 msgstr "Продуктивност"
@@ -680,14 +608,8 @@ msgstr ""
 msgid "Reference"
 msgstr "Референце"
 
-msgid "Release:"
-msgstr ""
-
 msgid "Remove this app from your list"
 msgstr "Уклните овај програм из Ваше листе"
-
-msgid "Return to the search page"
-msgstr ""
 
 msgid "Save"
 msgstr "Сачувај"
@@ -707,8 +629,11 @@ msgstr "Опсези"
 msgid "Screenshots"
 msgstr "Снимци екрана"
 
-msgid "Search for a wish:"
-msgstr "Потражите жељу:"
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "Пошаљите преко Какстон-а"
@@ -740,10 +665,10 @@ msgstr "Куповина"
 msgid "Similar Apps"
 msgstr "Слични програми"
 
-msgid "Snap"
+msgid "Similar Snaps"
 msgstr ""
 
-msgid "Snap Metadata:"
+msgid "Snap"
 msgstr ""
 
 msgid "Snaps"
@@ -777,20 +702,14 @@ msgstr "Оцена звездицом"
 msgid "Status"
 msgstr ""
 
-msgid "Submit"
-msgstr "Пошаљи"
-
-msgid "Submitted by"
-msgstr "Послато од"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "Подршка:"
 
 msgid "Terms:"
 msgstr "Услови:"
-
-msgid "Thank you for your vote!"
-msgstr "Хвала Вам на Вашем гласу!"
 
 msgid "Thank you!"
 msgstr "Хвала Вам!"
@@ -806,6 +725,9 @@ msgstr ""
 "Оцена срцем је слична оцени звездицом, само што награђује за више добрих "
 "рецензија. Програм са више оцена од 5 звездица имаће већу оцену срцима од "
 "програма са само неколико оцена од 5 звездица."
+
+msgid "The snap you are trying to find does not exist or has been removed."
+msgstr ""
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -885,9 +807,6 @@ msgstr "Ажурирани програми"
 msgid "Updated:"
 msgstr "Ажурирано:"
 
-msgid "Upvote"
-msgstr "Позитиван глас"
-
 msgid "Urls that open in this app:"
 msgstr "Линквои који се отварају у овој апликацији:"
 
@@ -906,9 +825,6 @@ msgstr "Верзија:"
 msgid "View"
 msgstr "Приказ"
 
-msgid "Vote"
-msgstr "Гласајте"
-
 msgid "Weather"
 msgstr "Време"
 
@@ -923,12 +839,6 @@ msgstr "Интернет страница:"
 
 msgid "Welcome"
 msgstr "Добродошли"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Који програм би сте желели да видите на Убунту Тач-у?"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Који програме би сте желели да видите на Убунту Тач-у?"
 
 msgid "What are snaps?"
 msgstr ""
@@ -959,9 +869,6 @@ msgstr ""
 msgid "Why donate?"
 msgstr "Зашто приложити?"
 
-msgid "Wishlist"
-msgstr "Листа жеља"
-
 msgid "Yes"
 msgstr "Да"
 
@@ -974,12 +881,6 @@ msgid ""
 msgstr ""
 "Немате још увек повезан Ваш налог на Какстон, кликните да одете у Ваше "
 "подешавање"
-
-msgid "You must be logged in to vote"
-msgstr "Морате бити пријављени да би гласали"
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr "Ваш глас сада не може бити сачуван, молимо да покушате касније"
 
 msgid "app snaps"
 msgstr ""
@@ -1001,12 +902,6 @@ msgid_plural "games"
 msgstr[0] "игрица"
 msgstr[1] "игрице"
 msgstr[2] "игрица"
-
-msgid "iTunes Link"
-msgstr "ајТјунс линк"
-
-msgid "iTunes link is not a valid url"
-msgstr "ајТјунс линк није исправан"
 
 msgid "kernel snaps"
 msgstr ""

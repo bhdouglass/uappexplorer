@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
-"PO-Revision-Date: 2016-10-13 12:15+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"PO-Revision-Date: 2017-05-14 12:18+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 "Language: nl\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(Wees gerust, er is ook een gratis versie!)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -39,9 +39,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "- Kies een lijst -"
 
-msgid "A wish with the same name already exists"
-msgstr "Er bestaat al een wens met dezelfde naam"
-
 msgid "Account Integration"
 msgstr "Account-integratie"
 
@@ -54,17 +51,14 @@ msgstr "Toevoegen aan lijst:"
 msgid "All"
 msgstr "Alle"
 
-msgid "All Apps"
-msgstr "Alle apps"
-
 msgid "All Architectures"
 msgstr "Alle processorarchitecturen"
 
+msgid "All Categories"
+msgstr ""
+
 msgid "All Frameworks"
 msgstr "Alle frameworks"
-
-msgid "All Releases"
-msgstr "Alle uitgaven"
 
 msgid "All Snaps"
 msgstr "Alle Snaps"
@@ -72,14 +66,11 @@ msgstr "Alle Snaps"
 msgid "All Types"
 msgstr "Alle soorten"
 
-msgid "Amazon Link"
-msgstr "Link naar Amazon"
-
-msgid "Amazon link is not a valid url"
-msgstr "Link naar Amazon is geen geldige URL"
-
 msgid "Any Architecture"
 msgstr "Elke architectuur"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "Elke licentie"
@@ -102,17 +93,11 @@ msgstr ""
 msgid "App"
 msgstr "App"
 
-msgid "App Name"
-msgstr "App-naam"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "App-naam (voorbeeld: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
 msgstr "App-Snaps"
-
-msgid "App Wishlist"
-msgstr "Wenslijst voor apps"
 
 msgid "Apps"
 msgstr "Apps"
@@ -140,6 +125,9 @@ msgstr "Artikel"
 msgid "Author"
 msgstr "Auteur"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "Boeken & Strips"
 
@@ -161,17 +149,8 @@ msgstr "Bladeren door Snaps"
 msgid "Business"
 msgstr "Zakelijk"
 
-msgid "Buy the Webapp"
-msgstr "Webapp kopen"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "Webapp kopen in de Ubuntu Touch-appwinkel"
-
 msgid "By:"
 msgstr "Door:"
-
-msgid "Cancel"
-msgstr "Annuleren"
 
 msgid "Category:"
 msgstr "Categorie:"
@@ -182,6 +161,9 @@ msgstr "Caxton-code"
 msgid "Changelog"
 msgstr "Wijzigingslog"
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr "Sluiten"
 
@@ -190,6 +172,9 @@ msgstr "Communicatie"
 
 msgid "Company"
 msgstr "Bedrijf"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "Bevat:"
@@ -208,10 +193,6 @@ msgid "Could not create a new list at this time, please try again later"
 msgstr ""
 "Er kan momenteel geen lijst worden gecreëerd. Probeer het later opnieuw."
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr ""
-"Er kan momenteel geen wens worden gecreëerd. Probeer het later opnieuw."
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
 "De lijst kan momenteel niet worden verwijderd; probeer het later opnieuw"
@@ -223,6 +204,12 @@ msgstr ""
 msgid "Could not download app list, click to retry"
 msgstr "De applijst kan niet worden gedownload; klik om opnieuw te proberen"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+
 msgid "Could not find the requested app"
 msgstr "De opgevraagde app kan niet worden gevonden"
 
@@ -230,16 +217,9 @@ msgid "Could not find this list, it may not exist any more"
 msgstr ""
 "Deze lijst kan niet worden gevonden; misschien bestaat de lijst niet meer"
 
-msgid "Could not find wish"
-msgstr "De wens kan niet worden gevonden"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
 "De lijsten kunnen momenteel niet worden geladen; klik om opnieuw te proberen"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr ""
-"De wensen kunnen momenteel niet worden geladen; klik om opnieuw te proberen"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
@@ -268,20 +248,17 @@ msgstr "Omschrijving"
 msgid "Desktop File:"
 msgstr "Bureaubladbestand:"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "Hulpmiddelen voor ontwikkelaars"
-
-msgid "Developer/Company"
-msgstr "Ontwikkelaar/Bedrijf"
 
 msgid "Donate"
 msgstr "Doneren"
 
 msgid "Donate via Bitcoin"
 msgstr "Doneren met Bitcoin"
-
-msgid "Donate via Gratipay"
-msgstr "Doneren met Gratipay"
 
 msgid "Donate via Paypal"
 msgstr "Doneren met PayPal"
@@ -298,14 +275,11 @@ msgstr ""
 "domeinnamen, hosting, etc. uApp Explorer zal altijd een gratis en open bron-"
 "dienst blijven, ongeacht het aantal donaties."
 
-msgid "Donation Web App"
-msgstr "Donatie-webapp"
-
 msgid "Download"
 msgstr "Downloaden"
 
-msgid "Downvote"
-msgstr "Omlaag stemmen"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "Bewerken"
@@ -383,12 +357,6 @@ msgstr "Installeer een QR-code-scanner op uw Ubuntu Touch-apparaat"
 msgid "Go there now"
 msgstr "Ga naar de scannerapp-pagina"
 
-msgid "Google Play Link"
-msgstr "Google Play-link"
-
-msgid "Google Play link is not a valid url"
-msgstr "De Google Play-link is geen geldige URL"
-
 msgid "Graphics"
 msgstr "Grafisch"
 
@@ -410,9 +378,6 @@ msgstr ""
 "waardering is gelijk aan 1 hart-punt, 4 sterren is 0,5 harten, 3 sterren is "
 "0 harten, 2 sterren is -0,5 harten en 1 ster is -1 harten."
 
-msgid "Help this wish get more votes!"
-msgstr "Help deze wens bij het verkrijgen van meer stemmen!"
-
 msgid "Help translate!"
 msgstr "Help met vertalen!"
 
@@ -431,21 +396,9 @@ msgstr "Hoe installeer ik telefoonapps en -scopes?"
 msgid "How is the popularity determined?"
 msgstr "Hoe wordt de populariteit berekend?"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "Hoeveel zou u willen betalen voor deze app?"
-
 msgid "I just published my app, why don't I see it?"
 msgstr ""
 "Waarom zie ik mijn app niet, terwijl ik deze zojuist heb gepubliceerd?"
-
-msgid "I'm wishing for..."
-msgstr "Mijn wens is..."
-
-msgid "I'm wishing for: "
-msgstr "Mijn wens is: "
-
-msgid "Idea Summary"
-msgstr "Idee-samenvatting"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr "Als u code wilt bijdragen, bezoek dan de GitHub-broncodepagina."
@@ -475,17 +428,11 @@ msgstr "Informatie"
 msgid "Install"
 msgstr "Installeren"
 
-msgid "Install using snapd"
-msgstr "Installeren via snapd"
-
-msgid "Is this an existing app?"
-msgstr "Bestaat deze app al?"
+msgid "Install will take you to the GNOME Software Center (if installed)"
+msgstr ""
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Het is mogelijk om een negatieve hart-waardering te hebben."
-
-msgid "Itunes Link"
-msgstr "iTunes-link"
 
 msgid "Kernel Snap"
 msgstr "Kernel-Snap"
@@ -532,17 +479,11 @@ msgstr "Uitloggen"
 msgid "Log in via Ubuntu"
 msgstr "Inloggen met uw Ubuntu-account"
 
-msgid "Login to make a wish"
-msgstr "Log in als u een wens wilt indienen"
-
 msgid "Lowest Heart Rating"
 msgstr "Laagste hart-waardering"
 
 msgid "Lowest Star Rating"
 msgstr "Laagste ster-waardering"
-
-msgid "Make a wish"
-msgstr "Dien een wens in"
 
 msgid "Media & Video"
 msgstr "Media & Video"
@@ -561,6 +502,9 @@ msgstr "Meer apps van:"
 
 msgid "More Info"
 msgstr "Meer informatie"
+
+msgid "More Snaps by:"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "Duurste (USD)"
@@ -587,13 +531,13 @@ msgid "New Snaps"
 msgstr "Nieuwe Snaps"
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 msgstr ""
-"Nieuwe apps worden elk uur geïndexeerd vanuit de appwinkel. U kunt wachten "
-"totdat de nieuwe apps zijn geïndexeerd of het aanvraagformulier gebruiken om "
-"de app eerder te laten indexeren."
+"Nieuwe apps worden elke paar uur opgehaald uit de officiële app-winkel. U "
+"kunt wachten totdat de nieuwe apps zijn opgehaald of het formulier gebruiken "
+"om de app eerder op te halen."
 
 msgid "Newest"
 msgstr "Nieuwste"
@@ -617,10 +561,11 @@ msgstr "Er zijn geen lijsten; creëer er één!"
 msgid "No reviews yet!"
 msgstr "Er zijn nog geen reviews!"
 
-msgid "No wishes found, try searching again."
+msgid "None Yet"
 msgstr ""
-"Er zijn geen wensen gevonden; probeer het opnieuw met een andere "
-"zoekopdracht."
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr "OEM-Snap"
@@ -640,20 +585,11 @@ msgstr "Oudste"
 msgid "Oldest Update"
 msgstr "Minst recente update"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr "Stemmers zijn bereid om gemiddeld %d USD te betalen voor deze app."
-
 msgid "Open Source"
 msgstr "Open bron"
 
 msgid "Opens Urls"
 msgstr "Opent URL's"
-
-msgid "Other Link"
-msgstr "Ander soort link"
-
-msgid "Other link is not a valid url"
-msgstr "De andersoortige link is geen geldige URL"
 
 msgid "Permissions"
 msgstr "Toegangsrechten"
@@ -661,14 +597,8 @@ msgstr "Toegangsrechten"
 msgid "Personalisation"
 msgstr "Personalisatie"
 
-msgid "Phone Apps & Scopes"
-msgstr "Telefoonapps & -scopes"
-
 msgid "Please login to send via Caxton"
 msgstr "Log in via Caxton om te kunnen versturen"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "Geef een naam of idee op voor uw wens"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -679,9 +609,6 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "Vorige app:"
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "De prijs moet liggen tussen 0 en 20 USD"
 
 msgid "Productivity"
 msgstr "Productiviteit"
@@ -704,14 +631,8 @@ msgstr "RSS-feeds"
 msgid "Reference"
 msgstr "Verwijzing"
 
-msgid "Release:"
-msgstr "Uitgave:"
-
 msgid "Remove this app from your list"
 msgstr "Verwijder deze app uit uw lijst"
-
-msgid "Return to the search page"
-msgstr "Terug naar de zoekpagina"
 
 msgid "Save"
 msgstr "Opslaan"
@@ -731,8 +652,11 @@ msgstr "Scopes"
 msgid "Screenshots"
 msgstr "Schermafbeeldingen"
 
-msgid "Search for a wish:"
-msgstr "Zoek een wens:"
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "Versturen via Caxton"
@@ -764,11 +688,11 @@ msgstr "Winkelen"
 msgid "Similar Apps"
 msgstr "Vergelijkbare apps"
 
+msgid "Similar Snaps"
+msgstr ""
+
 msgid "Snap"
 msgstr "Snap"
-
-msgid "Snap Metadata:"
-msgstr "Snap-metagegevens:"
 
 msgid "Snaps"
 msgstr "Snaps"
@@ -806,20 +730,14 @@ msgstr "Sterwaardering"
 msgid "Status"
 msgstr "Status"
 
-msgid "Submit"
-msgstr "Versturen"
-
-msgid "Submitted by"
-msgstr "Ingediend door"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "Ondersteuning:"
 
 msgid "Terms:"
 msgstr "Voorwaarden:"
-
-msgid "Thank you for your vote!"
-msgstr "Bedankt voor het stemmen!"
 
 msgid "Thank you!"
 msgstr "Dank u wel!"
@@ -836,6 +754,9 @@ msgstr ""
 "hartwaardering beloont apps voor het hebben van meer goede recensies. Een "
 "app met meer 5-sterrenwaarderingen heeft een hogere hartwaardering dan een "
 "app met slechts enkele 5-sterrenwaarderingen."
+
+msgid "The snap you are trying to find does not exist or has been removed."
+msgstr ""
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -918,9 +839,6 @@ msgstr "Bijgewerkte apps"
 msgid "Updated:"
 msgstr "Bijgewerkt op:"
 
-msgid "Upvote"
-msgstr "Omhoog stemmen"
-
 msgid "Urls that open in this app:"
 msgstr "URL's die worden geopend in deze app:"
 
@@ -939,9 +857,6 @@ msgstr "Versie:"
 msgid "View"
 msgstr "Weergeven"
 
-msgid "Vote"
-msgstr "Stemmen"
-
 msgid "Weather"
 msgstr "Weer"
 
@@ -956,12 +871,6 @@ msgstr "Website:"
 
 msgid "Welcome"
 msgstr "Welkom"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "Welke app zou u graag willen zien op Ubuntu Touch?"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "Welke apps zou u graag willen zien op Ubuntu Touch?"
 
 msgid "What are snaps?"
 msgstr "Wat zijn Snaps?"
@@ -991,9 +900,6 @@ msgstr "Of u nu doneert of niet, ik waardeer uw ondersteuning. Bedankt!"
 msgid "Why donate?"
 msgstr "Waarom doneren?"
 
-msgid "Wishlist"
-msgstr "Wenslijst"
-
 msgid "Yes"
 msgstr "Ja"
 
@@ -1006,13 +912,6 @@ msgid ""
 msgstr ""
 "U heeft uw account niet verbonden met Caxton; klik om naar uw instellingen "
 "te gaan"
-
-msgid "You must be logged in to vote"
-msgstr "U moet ingelogd zijn om te kunnen stemmen"
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr ""
-"Uw stem kan momenteel niet worden opgeslagen; probeer het later opnieuw"
 
 msgid "app snaps"
 msgstr "app-snaps"
@@ -1032,12 +931,6 @@ msgid "games"
 msgid_plural "games"
 msgstr[0] "spellen"
 msgstr[1] "spellen"
-
-msgid "iTunes Link"
-msgstr "iTunes-link"
-
-msgid "iTunes link is not a valid url"
-msgstr "De iTunes-link is geen geldige URL"
 
 msgid "kernel snaps"
 msgstr "kernel-snaps"

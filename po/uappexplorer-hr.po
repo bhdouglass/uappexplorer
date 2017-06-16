@@ -1,23 +1,23 @@
-# Basque translation for uappexplorer
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Croatian translation for uappexplorer
+# Copyright (c) 2017 Rosetta Contributors and Canonical Ltd 2017
 # This file is distributed under the same license as the uappexplorer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2016-07-27 04:31+0000\n"
-"Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
-"Language-Team: Basque <eu@li.org>\n"
+"PO-Revision-Date: 2017-04-14 18:17+0000\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
 "X-Generator: Launchpad (build 18413)\n"
-"Language: eu\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
@@ -25,55 +25,50 @@ msgstr ""
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"Instalakuntzak aplikazio denda ofizialera eramango zaitu zure Ubuntu Touch "
-"gailuan."
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"Web Aplikazio honek kode pertsonalizatua txertatzen du webgunean,zeinek "
-"aparteko ezaugarriak gehitu ditzakeen edo maltzurra izan. Egileaz fidatzen "
-"baldin bazara soilik erabili."
 
 msgid "- Choose a list -"
-msgstr "Zerrenda bat aukeratu"
+msgstr "- Odaberi popis -"
 
 msgid "Account Integration"
-msgstr "Kontu integrazioa"
+msgstr "Integracija računa"
 
 msgid "Add Apps:"
-msgstr "Aplikazioak gehitu"
+msgstr "Dodaj aplikaciju:"
 
 msgid "Add to list:"
-msgstr "Zerrendara gehitu"
+msgstr "Dodaj na popis:"
 
 msgid "All"
-msgstr "Guztia"
+msgstr "Sve"
 
 msgid "All Architectures"
-msgstr "Arkitektura guztiak"
+msgstr "Sve arhitekture"
 
 msgid "All Categories"
 msgstr ""
 
 msgid "All Frameworks"
-msgstr "Framework guztiak"
+msgstr "Svi radni okviri"
 
 msgid "All Snaps"
-msgstr ""
+msgstr "Svi snapovi"
 
 msgid "All Types"
-msgstr ""
+msgstr "Sve vrste"
 
 msgid "Any Architecture"
-msgstr "Edozein Arkitektura"
+msgstr "Bilo koja arhitektura"
 
 msgid "Any Confinement"
 msgstr ""
 
 msgid "Any License"
-msgstr "Edozein Lizentzia"
+msgstr "Bilo koja licenca"
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -83,127 +78,113 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
-"Copyright edo markak eskubideak urratzen dituen edozein edukiren ezabatze "
-"eskaera Canonical-ekin edo aplikazioen egileekin(egileek normalean "
-"harremanetarako moduren bat errazten dute beraien aplikazio orriaren "
-"\"sustengua\" eremuan) gauzatu beharko da. uApp Explorer-ek ez du inolako "
-"loturarik Canonical-ekin eta ez du aplikaziorik ostatatzen. uApp Explorer-ek "
-"publikoki eskuragarria den Ubuntu Touch Aplikazio denda ofizialari buruzko "
-"informazioa erakusten du soilik."
 
 msgid "App"
-msgstr "Aplikazioa"
+msgstr "Aplikacija"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "Aplikazio Izena(adib: com.ubuntu.developer.example)"
+msgstr "Naziv aplikacije (primjer: com.ubuntu.razvijatelj.primjer)"
 
 msgid "App Snaps"
-msgstr ""
+msgstr "Svi snapovi"
 
 msgid "Apps"
-msgstr "Aplikazioak"
+msgstr "Aplikacije"
 
 msgid "Apps are not installed via this site, but via the official appstore."
 msgstr ""
-"Aplikazioak ez dira gune honen bidez instalatzen, aplikazio denda "
-"ofizialetik baizik."
+"Aplikacije nisu instalirane putem ove stranice, već putem službene trgovine "
+"aplikacija."
 
 msgid "Apps:"
-msgstr "Aplikazioak"
+msgstr "Aplikacije:"
 
 msgid "Architecture:"
-msgstr "Arkitektura:"
+msgstr "Arhitektura:"
 
 msgid "Architectures:"
-msgstr "Arkitekturak"
+msgstr "Arhitekture:"
 
 msgid "Are you sure you want to delete this list?"
-msgstr "Ziur al zaude zerrenda hau ezabatu nahi duzula?"
+msgstr "Sigurno želite obrisati ovaj popis?"
 
 msgid "Article"
-msgstr "Artikulua"
+msgstr "Članak"
 
 msgid "Author"
-msgstr "Egilea"
+msgstr "Autor"
 
 msgid "Available from the OpenStore!"
 msgstr ""
 
 msgid "Books & Comics"
-msgstr "Liburu eta komikiak"
+msgstr "Knjige i stripovi"
 
 msgid "Browse"
-msgstr "Arakatu"
+msgstr "Pregledaj"
 
 msgid "Browse Apps"
-msgstr "Aplikazioak arakatu"
+msgstr "Pregledaj aplikacije"
 
 msgid "Browse Games"
-msgstr "Jokuak arakatu"
+msgstr "Pregledaj igre"
 
 msgid "Browse Scopes"
-msgstr "Eremuak arakatu"
-
-msgid "Browse Snaps"
 msgstr ""
 
+msgid "Browse Snaps"
+msgstr "Pregledaj snapove"
+
 msgid "Business"
-msgstr "Negozioak"
+msgstr "Posao"
 
 msgid "By:"
-msgstr "Nork:"
+msgstr "Od:"
 
 msgid "Category:"
-msgstr "Kategoria:"
+msgstr "Kategorija:"
 
 msgid "Caxton Code"
-msgstr "Caxton Kodea"
+msgstr "Caxton kôd"
 
 msgid "Changelog"
-msgstr "Aldaketen egunkaria"
+msgstr ""
 
 msgid "Classic"
 msgstr ""
 
 msgid "Close"
-msgstr "Itxi"
+msgstr ""
 
 msgid "Communication"
-msgstr "Komunikazioa"
+msgstr ""
 
 msgid "Company"
-msgstr "Enpresa"
+msgstr ""
 
 msgid "Confinement:"
 msgstr ""
 
 msgid "Containing:"
-msgstr "Edukia:"
+msgstr ""
 
 msgid "Could not add app to list at this time, please try again later"
 msgstr ""
-"Une honetan ezin izan da aplikazioa zerrendara gehitu, mesedez saiatu "
-"beranduago."
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Une honetan ezin izan da Caxton-ekin konektatu, mesedez saiatu beranduago."
 
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
-"Ezin izan da une honetan zerrenda berri bat sortu du, mesedez saiatu "
-"beranduago"
 
 msgid "Could not delete the list at this time, please try again later"
-msgstr "Ezin izan da une honetan zerrenda ezabatu, mesedez saiatu beranduago"
+msgstr ""
 
 msgid "Could not download app data, click to retry"
 msgstr ""
-"Ezin izan dira aplikazio datuak deskargatu, klikatu berriro saiatzeko"
 
 msgid "Could not download app list, click to retry"
 msgstr ""
-"Ezin izan da aplikazio zerrenda deskargatu, klikatu berriro saiatzeko"
 
 msgid "Could not download snap data, click to retry"
 msgstr ""
@@ -212,57 +193,52 @@ msgid "Could not download snap list, click to retry"
 msgstr ""
 
 msgid "Could not find the requested app"
-msgstr "Ezin izan da eskatutako aplikazio aurkitu"
+msgstr ""
 
 msgid "Could not find this list, it may not exist any more"
-msgstr "Ezin izan da zerrenda aurkitu, agian ez da gehiago existituko"
+msgstr ""
 
 msgid "Could not load lists at this time, click to retry"
 msgstr ""
-"Ezinezkoa izan da zerrenda une honetan kargatzea, klikatu berriro saiatzeko"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr ""
-"Ezin izan da aplikazioa ezabatu zerrenda honetatik, mesedez saiatu "
-"beranduago."
 
 msgid "Could not save your settings at this time, please try again later"
 msgstr ""
-"Ezin izan dira une honetan zure ezarpenak gorde, mesedez saiatu beranduago"
 
 msgid "Could not update the list at this time, please try again later"
 msgstr ""
-"Ezin izan da une honetan zerrenda eguneratu, mesedez saiatu beranduago"
 
 msgid "Create"
-msgstr "Sortu"
+msgstr ""
 
 msgid "Create List"
-msgstr "Zerrenda sortu"
+msgstr ""
 
 msgid "Delete"
-msgstr "Ezabatu"
+msgstr ""
 
 msgid "Description"
-msgstr "Deskribapena"
+msgstr ""
 
 msgid "Desktop File:"
-msgstr "Mahaigaineko Fitxategia"
+msgstr ""
 
 msgid "Dev Mode"
 msgstr ""
 
 msgid "Developer Tools"
-msgstr "Garatzaileentzako tresnak"
+msgstr ""
 
 msgid "Donate"
-msgstr "Diruz lagundu"
+msgstr ""
 
 msgid "Donate via Bitcoin"
-msgstr "Bitcoin bidez"
+msgstr ""
 
 msgid "Donate via Paypal"
-msgstr "Paypal bidez"
+msgstr ""
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -270,65 +246,60 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
-"uApp Explorer diruz babestea, hobeagoa izaten laguntzeko modu bat da. Diru "
-"laguntza egitea erabakitzen baduzu, azpiegitura kostuei aurre egiten "
-"lagunduko duzu. Kostu hauek domeinu izenak, ostatatzea eta abar barnebiltzen "
-"dute. uApp Explorer beti izango da dohainekoa jasotzen diren diru laguntzen "
-"kopurua kontutan izan gabe."
 
 msgid "Download"
-msgstr "Deskargatu"
+msgstr ""
 
 msgid "Downloading the snap will not give you automatic updates"
 msgstr ""
 
 msgid "Edit"
-msgstr "Editatu"
+msgstr ""
 
 msgid "Edit List"
-msgstr "Zerrenda editatu"
+msgstr ""
 
 msgid "Education"
-msgstr "Hezkuntza"
+msgstr ""
 
 msgid "Email Support"
-msgstr "Email bidezko sostengua"
+msgstr ""
 
 msgid "Entertainment"
-msgstr "Entretenimendua"
+msgstr ""
 
 msgid "Essential Apps"
-msgstr "Ezinbesteko Aplikazioak"
+msgstr ""
 
 msgid "FAQ"
-msgstr "MEG"
+msgstr ""
 
 msgid "File Size:"
-msgstr "Fitxategiaren tamaina"
+msgstr ""
 
 msgid "Filters"
-msgstr "Iragazkiak"
+msgstr ""
 
 msgid "Finance"
-msgstr "Finantzak"
+msgstr ""
 
 msgid "Find"
-msgstr "Bilatu"
+msgstr ""
 
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr "Aplikazio denda ofizialetik oraindik jaso ez den aplikazioa aurkitu."
+msgstr ""
 
 msgid "Food & Drink"
-msgstr "Jana eta edana"
+msgstr ""
 
 msgid "For more information, visit snapcraft.io"
-msgstr "Informazio gehiagorako, bisitatu snapcraft.io"
+msgstr ""
 
 msgid "For version:"
-msgstr "Bertsio honentzat:"
+msgstr ""
 
 msgid "Found the requested app"
-msgstr "Eskatutako aplikazioa aurkitua"
+msgstr ""
 
 msgid "Framework Snap"
 msgstr ""
@@ -337,10 +308,10 @@ msgid "Framework Snaps"
 msgstr ""
 
 msgid "Framework:"
-msgstr "Esparrua:"
+msgstr ""
 
 msgid "Free"
-msgstr "Dohainik"
+msgstr ""
 
 msgid "Gadget Snap"
 msgstr ""
@@ -349,88 +320,82 @@ msgid "Gadget Snaps"
 msgstr ""
 
 msgid "Games"
-msgstr "Jokoak"
+msgstr ""
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "QR eskaneatzailea eskuratu zure Ubuntu Touch gailurako"
+msgstr ""
 
 msgid "Go there now"
-msgstr "Hara joan orain"
+msgstr ""
 
 msgid "Graphics"
-msgstr "Grafikoak"
+msgstr ""
 
 msgid "Grid"
-msgstr "Sareta"
+msgstr ""
 
 msgid "Health & Fitness"
-msgstr "Osasuna eta sasoia"
+msgstr ""
 
 msgid "Heart Rating"
-msgstr "Bihotz Neurketa"
+msgstr ""
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr ""
-"Bihotz neurketak Izar neurketen araberan kalkulatzen dira, non 5 izarri "
-"bihotz bat dagokion, 4 izarri = 0.5 bihotz, 3 izarri = 0 bihotz, 2 izarri = -"
-"0.5 bihotz, eta izar 1 = -1 bihotz."
 
 msgid "Help translate!"
-msgstr "Lagundu itzultzen!"
+msgstr ""
 
 msgid "Highest Heart Rating"
-msgstr "Bihotz Neurketa altuena"
+msgstr ""
 
 msgid "Highest Star Rating"
-msgstr "Izar Neurketa altuena"
+msgstr ""
 
 msgid "How can I help improve this site?"
-msgstr "Nola lagun dezaket gune hau hobetzen?"
+msgstr ""
 
 msgid "How do I install phone apps and scopes?"
-msgstr "Nola instalatu mugikor aplikazioak eta eremuak?"
+msgstr ""
 
 msgid "How is the popularity determined?"
-msgstr "Nola zehazten da ospea?"
+msgstr ""
 
 msgid "I just published my app, why don't I see it?"
-msgstr "Nere aplikazioa argitaratu berri dut, zergatik ez dut ikusten?"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "Lagundu nahi baduzu bisita ezazu Github repo-a."
+msgstr ""
 
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr "Itzultzen lagundu nahi baduzu, bisita ezazu Launchpad proiektua."
+msgstr ""
 
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
 msgstr ""
-"Akatsak edo ezaugarri berriak eskatu nahi badituzu, bisitatu Github-eko "
-"aleen orria."
 
 msgid "If you would like to contact the author, visit his website."
 msgstr ""
-"Egilearekin harremanetan jarri nahi baduzu, bisita ezazu bere webgunea."
 
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
-msgstr "Diruz lagundu nahi baduzu, egiteko aukera ugari dituzu."
+msgstr ""
 
 msgid "Info"
-msgstr "Info"
+msgstr ""
 
 msgid "Install"
-msgstr "Instalatu"
+msgstr ""
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
 msgid "It is possible to have a negative heart rating."
-msgstr "Litekeena da bihotz neurketa negatiboa izatea."
+msgstr ""
 
 msgid "Kernel Snap"
 msgstr ""
@@ -439,91 +404,91 @@ msgid "Kernel Snaps"
 msgstr ""
 
 msgid "Language"
-msgstr "Hizkuntza"
+msgstr ""
 
 msgid "Latest Update"
-msgstr "Azken Eguneraketak"
+msgstr ""
 
 msgid "Least Popular (This Month)"
-msgstr "Arrakasta gutxienekoak"
+msgstr ""
 
 msgid "Less Info"
-msgstr "Info gutxiago"
+msgstr ""
 
 msgid "License:"
-msgstr "Lizentzia:"
+msgstr ""
 
 msgid "Lifestyle"
-msgstr "Bizimodua"
+msgstr ""
 
 msgid "List"
-msgstr "Zerrenda"
+msgstr ""
 
 msgid "List Name:"
-msgstr "Zerrenda Izena:"
+msgstr ""
 
 msgid "Load more reviews"
-msgstr "Kargatu berrikuspen gehiago"
+msgstr ""
 
 msgid "Loading reviews..."
-msgstr "Berrikuspenak kargatzen..."
+msgstr ""
 
 msgid "Log In"
-msgstr "Saioa hasi"
+msgstr ""
 
 msgid "Log Out"
-msgstr "Saioa amaitu"
+msgstr ""
 
 msgid "Log in via Ubuntu"
-msgstr "Saioa hasi Ubuntu bidez"
+msgstr ""
 
 msgid "Lowest Heart Rating"
-msgstr "Bihotz Neurketa baxuena"
+msgstr ""
 
 msgid "Lowest Star Rating"
-msgstr "Izar Neurketa baxuena"
+msgstr ""
 
 msgid "Media & Video"
-msgstr "Multimedia eta bideoa"
+msgstr ""
 
 msgid "Medical"
-msgstr "Medikuntza"
+msgstr ""
 
 msgid "Missing an app?"
-msgstr "Aplikazio bat falta?"
+msgstr ""
 
 msgid "Monthly Popularity"
-msgstr "Hileroko arrakastak"
+msgstr ""
 
 msgid "More Apps by:"
-msgstr "Aplikazio gehiago:"
+msgstr ""
 
 msgid "More Info"
-msgstr "Informazio Gehiago"
+msgstr ""
 
 msgid "More Snaps by:"
 msgstr ""
 
 msgid "Most Expensive (USD)"
-msgstr "Garestienak(USD)"
+msgstr ""
 
 msgid "Most Popular (This Month)"
-msgstr "Arrakastatsuenak(hil honetan)"
+msgstr ""
 
 msgid "Most Relevant"
-msgstr "Aipagarrienak"
+msgstr ""
 
 msgid "Music & Audio"
-msgstr "Musika eta audioa"
+msgstr ""
 
 msgid "My Lists"
-msgstr "Nere Zerrendak"
+msgstr ""
 
 msgid "New Apps"
-msgstr "Aplikazio Berriak"
+msgstr ""
 
 msgid "New List"
-msgstr "Zerrenda berria"
+msgstr ""
 
 msgid "New Snaps"
 msgstr ""
@@ -535,25 +500,25 @@ msgid ""
 msgstr ""
 
 msgid "Newest"
-msgstr "Berrienak"
+msgstr ""
 
 msgid "News & Magazines"
-msgstr "Albisteak eta aldizkariak"
+msgstr ""
 
 msgid "Next App:"
-msgstr "Hurrengo Aplikazioa"
+msgstr ""
 
 msgid "No"
-msgstr "Ez"
+msgstr ""
 
 msgid "No apps found, try searching again."
-msgstr "Ez da aplikaziorik aurkitu, saiatu berriro bilatzen."
+msgstr ""
 
 msgid "No lists, create one!"
-msgstr "Zerrendarik ez, bat sortu!"
+msgstr ""
 
 msgid "No reviews yet!"
-msgstr "Berrikuspenik ez du oraindik!"
+msgstr ""
 
 msgid "None Yet"
 msgstr ""
@@ -574,77 +539,75 @@ msgid "OS Snaps"
 msgstr ""
 
 msgid "Oldest"
-msgstr "Zaharrenak"
+msgstr ""
 
 msgid "Oldest Update"
-msgstr "Eguneraketarik zaharrenak"
+msgstr ""
 
 msgid "Open Source"
-msgstr "Kode Irekia"
+msgstr ""
 
 msgid "Opens Urls"
-msgstr "Url-ak ireki"
+msgstr ""
 
 msgid "Permissions"
-msgstr "Baimenak"
+msgstr ""
 
 msgid "Personalisation"
-msgstr "Pertsonalizazioa"
+msgstr ""
 
 msgid "Please login to send via Caxton"
-msgstr "Mesedez hasi saioa Caxton bidez"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
 msgstr ""
-"Arrakasta aplikazioak hilean jasotzen dituen 4 eta 5 izar berrikuspenetan "
-"oinarritzen da."
 
 msgid "Previous App:"
-msgstr "Aurreko Aplikazioa:"
+msgstr ""
 
 msgid "Productivity"
-msgstr "Produktibitatea"
+msgstr ""
 
 msgid "Proprietary"
-msgstr "Jabeduna"
+msgstr ""
 
 msgid "Published:"
-msgstr "Argitaraturik:"
+msgstr ""
 
 msgid "Push Notifications"
-msgstr "Push Jakinarazpenak"
+msgstr ""
 
 msgid "QR Code"
-msgstr "QR kodea"
+msgstr ""
 
 msgid "RSS Feeds"
-msgstr "RSS Iturburuak"
+msgstr ""
 
 msgid "Reference"
-msgstr "Erreferentzia"
+msgstr ""
 
 msgid "Remove this app from your list"
-msgstr "Ezabatu aplikazio hau zure zerrendatik"
+msgstr ""
 
 msgid "Save"
-msgstr "Gorde"
+msgstr ""
 
 msgid "Science & Engineering"
-msgstr "Zientzia eta ingeniaritza"
+msgstr ""
 
 msgid "Scope"
-msgstr "Eremua"
+msgstr ""
 
 msgid "Scope INI File:"
-msgstr "Eremuaren INI fitxategia"
+msgstr ""
 
 msgid "Scopes"
-msgstr "Eremuak"
+msgstr ""
 
 msgid "Screenshots"
-msgstr "Pantaila-argazkiak"
+msgstr ""
 
 msgid "Search phone apps"
 msgstr ""
@@ -653,34 +616,34 @@ msgid "Search snaps"
 msgstr ""
 
 msgid "Send via Caxton"
-msgstr "Caxton bidez bidali"
+msgstr ""
 
 msgid "Sent via Caxton"
-msgstr "Caxton bidez bidalia"
+msgstr ""
 
 msgid "Settings"
-msgstr "Ezarpenak"
+msgstr ""
 
 msgid "Share"
-msgstr "Partekatu"
+msgstr ""
 
 msgid "Share on Facebook"
-msgstr "Facebook-en partekatu"
+msgstr ""
 
 msgid "Share on Google+"
-msgstr "Google-en partekatu"
+msgstr ""
 
 msgid "Share on Reddit"
-msgstr "Reddit-en partekatu"
+msgstr ""
 
 msgid "Share on Twitter"
-msgstr "Twitter-en partekatu"
+msgstr ""
 
 msgid "Shopping"
-msgstr "Erosketak"
+msgstr ""
 
 msgid "Similar Apps"
-msgstr "Antzeko aplikazioak"
+msgstr ""
 
 msgid "Similar Snaps"
 msgstr ""
@@ -702,19 +665,19 @@ msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
-msgstr "Sare sozialak"
+msgstr ""
 
 msgid "Sort Apps By:"
-msgstr "Sailkatu Aplikazioak:"
+msgstr ""
 
 msgid "Sort By:"
-msgstr "Sailkatu:"
+msgstr ""
 
 msgid "Sports"
-msgstr "Kirolak"
+msgstr ""
 
 msgid "Star Rating"
-msgstr "Izar Neurketa"
+msgstr ""
 
 msgid "Status"
 msgstr ""
@@ -723,13 +686,13 @@ msgid "Strict"
 msgstr ""
 
 msgid "Support:"
-msgstr "Sostengua:"
+msgstr ""
 
 msgid "Terms:"
-msgstr "Baldintzak:"
+msgstr ""
 
 msgid "Thank you!"
-msgstr "Eskerrik asko!"
+msgstr ""
 
 msgid "The app you are trying to find does not exist or has been removed."
 msgstr ""
@@ -739,10 +702,6 @@ msgid ""
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
 msgstr ""
-"Bihotz neurketa Izar neurketaren antzekoa da, baina berrikuspen on gehien "
-"dituzten aplikazioak saritzen dituzte. 5 izarreko berrikuspen gehien dituen "
-"aplikazioak bihotz neurketa altuagoa izango du 5 izarreko berrikuspen bakan "
-"batzuk besterik ez dituenaren aldean."
 
 msgid "The snap you are trying to find does not exist or has been removed."
 msgstr ""
@@ -755,19 +714,12 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
-"Izar neurketa, erabiltzaileak berrikuspenetan emandako izarren batezbesteko "
-"Bayesiarra da. Batezbesteko Bayesiarrak, berrikuspen gehiago dituzten "
-"aplikazioei leku hobea ahalbidetzen die berrikuspen gutxi dituzten "
-"aplikazioei baino. Izar neurketa 1-etik 5-erainokoa izan daiteke, non 0-k "
-"oraindik berrikuspenik ez duela jaso esan nahi duen. Batezbesteko "
-"Bayesiarraren kalkuluari buruz gehiago jakin nahi baduzu, begiratu artikulu "
-"hau."
 
 msgid "This app is on these lists:"
-msgstr "Aplikazio hau zerrenda hauetan aurkitzen da:"
+msgstr ""
 
 msgid "This list is empty!"
-msgstr "Zerrenda hau hutsik dago!"
+msgstr ""
 
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for "
@@ -775,143 +727,125 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
-"Gune hau Ubuntu Touch Aplikazioen arakatzaile ez-ofiziala da. Aplikazioen "
-"datu guztiek publikoki eskuragarria den api batetan dute jatorria. Gune hau "
-"Brian Douglass-ek mantentzen du eta ez du inolako babes eta lankidetzarik "
-"Ubuntu edo Canonical-ekin. Ubuntu eta Canonical Canonical Ltd.-ek "
-"erregistraturiko markak dira."
 
 msgid "Title A-Z"
-msgstr "Izenburua A-Z"
+msgstr ""
 
 msgid "Title Z-A"
-msgstr "Izenburua Z-A"
+msgstr ""
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"Aplikazioak instalatzeko, gune honetan sartu behar duzu zure Ubuntu Touch "
-"gailua erabiliz. Instalatu nahi duzun aplikazioa aurkitu eta egin klik "
-"\"Instalatu\" botoiean. Aplikazio denda ofizialera berbideratua izango zara "
-"eta bertan aplikazioa instalatu ahal izango duzu."
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
 msgstr ""
-"Arazo baten berri emateko edo ezaugarri baten eskaera egiteko bisitatu "
-"GitHub-en gune honi dagokion aleen orria."
 
 msgid "Top Apps"
-msgstr "Aplikaziorik onenak"
+msgstr ""
 
 msgid "Total Reviews"
-msgstr "Berrikuspen guztiak"
+msgstr ""
 
 msgid "Travel & Local"
-msgstr "Bidaiak eta tokikoak"
+msgstr ""
 
 msgid "Type:"
-msgstr "Mota:"
+msgstr ""
 
 msgid "Universal Accesss/Accessibility"
-msgstr "Sarbide unibertsala/Irisgarritasuna"
+msgstr ""
 
 msgid "Unknown"
-msgstr "Ezezaguna"
+msgstr ""
 
 msgid "Updated Apps"
-msgstr "Eguneratutako aplikazioak"
+msgstr ""
 
 msgid "Updated:"
-msgstr "Eguneratua:"
+msgstr ""
 
 msgid "Urls that open in this app:"
-msgstr "Aplikazio honetan irekitzen diren Url-ak"
+msgstr ""
 
 msgid "User List:"
-msgstr "Erabiltzaile Zerrenda"
+msgstr ""
 
 msgid "User Reviews"
-msgstr "Erabiltzaileen berrikuspenak"
+msgstr ""
 
 msgid "Utilities"
-msgstr "Utilitateak"
+msgstr ""
 
 msgid "Version:"
-msgstr "Bertsioa:"
+msgstr ""
 
 msgid "View"
-msgstr "Ikusi"
+msgstr ""
 
 msgid "Weather"
-msgstr "Eguraldia"
+msgstr ""
 
 msgid "Web App"
-msgstr "Web Aplikazioa"
+msgstr ""
 
 msgid "Web Apps"
-msgstr "Web Aplikazioak"
+msgstr ""
 
 msgid "Website:"
-msgstr "Webgunea:"
+msgstr ""
 
 msgid "Welcome"
-msgstr "Ongi etorri"
+msgstr ""
 
 msgid "What are snaps?"
-msgstr "Zer dira snap-ak?"
+msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr ""
-"Zer egin behar dut copyright edo marka urratzen duen eduki bat aurkitzen "
-"badut?"
 
 msgid "What is the heart rating?"
-msgstr "Zer da bihotz neurketa?"
+msgstr ""
 
 msgid "What is the star rating?"
-msgstr "Zer da izar neurketa?"
+msgstr ""
 
 msgid "What is this site?"
-msgstr "Zer da gune hau?"
+msgstr ""
 
 msgid "Where can I report a problem or request a new feature?"
 msgstr ""
-"Non eman dezaket arazo baten berri edo ezaugarri berri baten eskaera egin?"
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
 msgstr ""
-"Diru laguntza eman hala ez, aukeratzen duzuna aukeratzen duzula ere, zure "
-"laguntza eskertzen dut. Eskerrikasko!"
 
 msgid "Why donate?"
-msgstr "Zergatik diruz lagundu?"
+msgstr ""
 
 msgid "Yes"
-msgstr "Bai"
+msgstr ""
 
 msgid "You are already connected via Caxton!"
-msgstr "Dagoeneko Caxton bidez konetaturik zaude!"
+msgstr ""
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr ""
-"Zure kontua ez dago Caxton-era konektaturik, egin klik zure ezarpenetara "
-"joateko"
 
 msgid "app snaps"
 msgstr ""
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] "aplikazio"
-msgstr[1] "aplikazioak"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "framework snaps"
 msgstr ""
@@ -921,8 +855,8 @@ msgstr ""
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] "joko"
-msgstr[1] "jokoak"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "kernel snaps"
 msgstr ""
@@ -934,12 +868,12 @@ msgid "os snaps"
 msgstr ""
 
 msgid "phone apps & scopes"
-msgstr "Telefono aplikazio eta eremuak"
+msgstr ""
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] "eremu"
-msgstr[1] "eremuak"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "snaps"
 msgstr ""
@@ -947,9 +881,8 @@ msgstr ""
 msgid ""
 "uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
 msgstr ""
-"uApp Explorer snap eta Ubuntu Touch aplikazioen ikustatzaile ez-ofiziala da."
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] "web aplikazioa"
-msgstr[1] "web aplikazioak"
+msgstr[0] ""
+msgstr[1] ""

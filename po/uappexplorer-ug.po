@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-11 07:21+0000\n"
+"POT-Creation-Date: 2017-06-12 14:00+0000\n"
 "PO-Revision-Date: 2016-07-03 13:42+0000\n"
 "Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-02-16 04:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
+"X-Generator: Launchpad (build 18413)\n"
 "Language: ug\n"
 
-msgid "(Don't worry, there is a free version too!)"
-msgstr "(ئەنسىرىمەڭ .بۇ دېتالنىڭ يەنە ھەقسىز نۇسخىسىمۇ بار)"
+msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
+msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -38,9 +38,6 @@ msgstr ""
 msgid "- Choose a list -"
 msgstr "تىزىم تاللا"
 
-msgid "A wish with the same name already exists"
-msgstr "ئوخشاش ئاتلىق ئارزۇ مەۋجۇت"
-
 msgid "Account Integration"
 msgstr "ھىساباتنى تەرتىپكە سال"
 
@@ -53,17 +50,14 @@ msgstr "تىزىملىك قۇشۇش :"
 msgid "All"
 msgstr "بارلىق"
 
-msgid "All Apps"
-msgstr "بارلىق ئەپلەر"
-
 msgid "All Architectures"
 msgstr "بارلىق قۇرۇلمىلار"
 
+msgid "All Categories"
+msgstr ""
+
 msgid "All Frameworks"
 msgstr "بارلىق رامكىلار"
-
-msgid "All Releases"
-msgstr ""
 
 msgid "All Snaps"
 msgstr ""
@@ -71,14 +65,11 @@ msgstr ""
 msgid "All Types"
 msgstr ""
 
-msgid "Amazon Link"
-msgstr "ئامازون ئۇلانمىسى"
-
-msgid "Amazon link is not a valid url"
-msgstr "ئامازون ئۇلانمىسى ئىناۋەتلىك url ئەمەس"
-
 msgid "Any Architecture"
 msgstr "خالىغان قۇرۇلما"
+
+msgid "Any Confinement"
+msgstr ""
 
 msgid "Any License"
 msgstr "خالىغان ئىجازەتنامە"
@@ -95,17 +86,11 @@ msgstr ""
 msgid "App"
 msgstr "ئەپ"
 
-msgid "App Name"
-msgstr "ئەپ ئىسمى"
-
 msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "ئەپ نامى"
 
 msgid "App Snaps"
 msgstr ""
-
-msgid "App Wishlist"
-msgstr "ئەپ ئارزۇ تىزىمى"
 
 msgid "Apps"
 msgstr "ئەپلەر"
@@ -133,6 +118,9 @@ msgstr "ماقالە"
 msgid "Author"
 msgstr "ئاپتور"
 
+msgid "Available from the OpenStore!"
+msgstr ""
+
 msgid "Books & Comics"
 msgstr "كىتاپلار ۋە ھەجۋىي رەسىم"
 
@@ -154,17 +142,8 @@ msgstr ""
 msgid "Business"
 msgstr "ئىش بېجىرىش"
 
-msgid "Buy the Webapp"
-msgstr "تور ئەپ سېتىۋېلىش"
-
-msgid "Buy the webapp from the Ubuntu Touch app store"
-msgstr "ئۇبۇنتۇ ئەپ بازىرىدىن سېتىۋىلىنغان ئەپلەر"
-
 msgid "By:"
 msgstr "يازغۇچى:"
-
-msgid "Cancel"
-msgstr "ۋاز كەچ"
 
 msgid "Category:"
 msgstr "كاتېگورىيە:"
@@ -175,6 +154,9 @@ msgstr "Caxton كودى"
 msgid "Changelog"
 msgstr "يېڭلىنىش خاتىرىسى"
 
+msgid "Classic"
+msgstr ""
+
 msgid "Close"
 msgstr "ياپ"
 
@@ -183,6 +165,9 @@ msgstr "ئالاقە"
 
 msgid "Company"
 msgstr "شىركەت"
+
+msgid "Confinement:"
+msgstr ""
 
 msgid "Containing:"
 msgstr "تەركىبىدە :"
@@ -196,9 +181,6 @@ msgstr "سىز ھازىر  دەلىل غا ئۇلىيالمايسىز .بىز ئ
 msgid "Could not create a new list at this time, please try again later"
 msgstr "سىز يېڭدىن تىزىم قۇشالمايسىز ،بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
-msgid "Could not create a new wish at this time, please try again later"
-msgstr "بۇ ۋاقىتتا يېڭى ئارزۇ قۇرغىلى بولمايدۇ، سەل تۇرۇپ قايتا سىناڭ"
-
 msgid "Could not delete the list at this time, please try again later"
 msgstr "تىزىمنى ئۈچۈرەلمەيسىز.بىر ئازدىن كېيىن سىناپ كۈرۈڭ"
 
@@ -208,20 +190,20 @@ msgstr "ئەپ چۈشۈرۈش مەغلۇب بولدى ،قايتىدىن سىن�
 msgid "Could not download app list, click to retry"
 msgstr "پىروگىرامما تىزىمى چۈشۈرۈلمدى قايتىدىن سىناپ كۈرۈڭ"
 
+msgid "Could not download snap data, click to retry"
+msgstr ""
+
+msgid "Could not download snap list, click to retry"
+msgstr ""
+
 msgid "Could not find the requested app"
 msgstr "مۇناسىۋەتلىك ئەپ تېپىلمىدى"
 
 msgid "Could not find this list, it may not exist any more"
 msgstr "بۇنداق تىزىم تېپلمىدى،بۇنداق تىزىم ساقلانمغان"
 
-msgid "Could not find wish"
-msgstr "ئارزۇ تېپىلمىدى"
-
 msgid "Could not load lists at this time, click to retry"
 msgstr "تىزىمنى تۇلۇق يۈكلەنمدى قايتىدىن سىناپ كۈرۈڭ"
-
-msgid "Could not load wishes at this time, click to retry"
-msgstr "بۇ ۋاقىتتا ئارزۇنى يۈكلىيەلمىدى، چېكىپ قايتا سىناڭ"
 
 msgid "Could not remove the app from this list, please try again later"
 msgstr "بۇ تىزىمدىكى ئەپلەرنى ئۈچۈرۈش مەغلۇپ بولدى قايتىدىن سىناپ كۈرۈڭ"
@@ -248,20 +230,17 @@ msgstr "چۈشەندۈرۈلۈشى"
 msgid "Desktop File:"
 msgstr "ئۈستەل يۈزى ھۆججەت"
 
+msgid "Dev Mode"
+msgstr ""
+
 msgid "Developer Tools"
 msgstr "ئىجادىيەت قوراللىرى"
-
-msgid "Developer/Company"
-msgstr "ئىجادكار/شىركەت"
 
 msgid "Donate"
 msgstr "ئىئانە"
 
 msgid "Donate via Bitcoin"
 msgstr "بېت بۇلى ئىئانە"
-
-msgid "Donate via Gratipay"
-msgstr "Gratipay ئىئانە"
 
 msgid "Donate via Paypal"
 msgstr "پۇل تۈلەش چىقىمداندىن ئىئانە"
@@ -273,14 +252,11 @@ msgid ""
 "open source service, regardless of the number of donations."
 msgstr ""
 
-msgid "Donation Web App"
-msgstr "تور ئەپكە ئىئانە"
-
 msgid "Download"
 msgstr "چۈشۈر"
 
-msgid "Downvote"
-msgstr "قارشى"
+msgid "Downloading the snap will not give you automatic updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "تەھرىرلە"
@@ -357,12 +333,6 @@ msgstr "ئۇبۇنتۇ چەكمە ئۈسكۈنىڭىز ئۈچۈن ئىككىلى
 msgid "Go there now"
 msgstr "قەيەرگە بارىمەن"
 
-msgid "Google Play Link"
-msgstr "گوگىل ئۇلىنىشى"
-
-msgid "Google Play link is not a valid url"
-msgstr "Google Play ئۇلىنىشى ئىناۋەت ئەمەس"
-
 msgid "Graphics"
 msgstr "گرافىكلار"
 
@@ -380,9 +350,6 @@ msgid ""
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
 msgstr ""
-
-msgid "Help this wish get more votes!"
-msgstr "ئارزۇلار كۆپرەك بىلەت تاشلاشقا ياردىمى بۇلىدۇ"
 
 msgid "Help translate!"
 msgstr "بۇ يەردىن تەرجىمىگە قاتنىشىڭ"
@@ -402,20 +369,8 @@ msgstr ""
 msgid "How is the popularity determined?"
 msgstr "ياقتۇرۇشچانلىقى قانداق جەزملىنىدۇ؟"
 
-msgid "How much would you be willing pay for this app?"
-msgstr "بۇ ئەپ ئۈچۈن قانچىلىك ئىقسادى ياردەم بىرەلەيسىز؟"
-
 msgid "I just published my app, why don't I see it?"
 msgstr "مەن يوللىغان ئەپلەر نېمە ئۈچۈن تەستىقلانمايدۇ(ياكى كۈرۈنمەيدۇ)"
-
-msgid "I'm wishing for..."
-msgstr "ئارزۇريۇم ..."
-
-msgid "I'm wishing for: "
-msgstr "ئارزۇيۇم : "
-
-msgid "Idea Summary"
-msgstr "ئۇمۇمىي ئىدىيە"
 
 msgid "If you want to contribute code visit the GitHub repo."
 msgstr ""
@@ -449,17 +404,11 @@ msgstr "ئۇچۇرى"
 msgid "Install"
 msgstr "ئورنات"
 
-msgid "Install using snapd"
+msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
-
-msgid "Is this an existing app?"
-msgstr "بۇ ھازىر بار ئەپمۇ؟"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "راسچىللىق بىلەن باھالانىغان"
-
-msgid "Itunes Link"
-msgstr "iTunes ئۇلىنىشى"
 
 msgid "Kernel Snap"
 msgstr ""
@@ -506,17 +455,11 @@ msgstr "تىزىمدىن چىق"
 msgid "Log in via Ubuntu"
 msgstr "ئۇبۇنتۇ ھېساباتىدا كىر"
 
-msgid "Login to make a wish"
-msgstr "تىزىملىتىپ ئارزۇيىڭزنى يوللاڭ"
-
 msgid "Lowest Heart Rating"
 msgstr "ئەڭ تۈۋەن يۈرەك دەرىجسى"
 
 msgid "Lowest Star Rating"
 msgstr "ئەڭ تۈۋەن يۇلتۇز دەرىجىسى"
-
-msgid "Make a wish"
-msgstr "ئارزۇ"
 
 msgid "Media & Video"
 msgstr "ۋاستە ۋە سىن"
@@ -535,6 +478,9 @@ msgstr "تېخىمۇ كۆپ ئەپلەر:"
 
 msgid "More Info"
 msgstr "تېخىمۇ كۆپ ئۇچۇرلار"
+
+msgid "More Snaps by:"
+msgstr ""
 
 msgid "Most Expensive (USD)"
 msgstr "ئەڭ قىممىتى (دوللار)"
@@ -561,9 +507,9 @@ msgid "New Snaps"
 msgstr ""
 
 msgid ""
-"New apps are fetched from the official appstore every hour, you can either "
-"wait until the new apps are fetched or use the request form to request that "
-"the app be found early."
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 msgstr ""
 
 msgid "Newest"
@@ -587,8 +533,11 @@ msgstr "تىزىم قۇرۇلمىغان، يېڭدىن قۇرۇڭ!"
 msgid "No reviews yet!"
 msgstr "بۇ ئەپكە باھا يېزىلمىغان"
 
-msgid "No wishes found, try searching again."
-msgstr "ئارزۇيىڭزدىكى ئۇچۇر تېپىلمىدى قايتىدىن سىناپ كۈرۈڭ"
+msgid "None Yet"
+msgstr ""
+
+msgid "Not available in the OpenStore"
+msgstr ""
 
 msgid "OEM Snap"
 msgstr ""
@@ -608,20 +557,11 @@ msgstr "ئەڭ كونا"
 msgid "Oldest Update"
 msgstr "يېڭلانمىغانىلىرى"
 
-msgid "On average, voters would be willing to pay %d USD for this app."
-msgstr ""
-
 msgid "Open Source"
 msgstr "ئوچۇق مەنبە"
 
 msgid "Opens Urls"
 msgstr "ئاچ Urls"
-
-msgid "Other Link"
-msgstr "باشقا ئۇلىنىشلار"
-
-msgid "Other link is not a valid url"
-msgstr "باشقا ئۇلىنىشلارمۇ ئىناۋەتلىك ئەمەس"
 
 msgid "Permissions"
 msgstr "ئىمتىيازلار"
@@ -629,14 +569,8 @@ msgstr "ئىمتىيازلار"
 msgid "Personalisation"
 msgstr "خاسلاشتۇرۇش"
 
-msgid "Phone Apps & Scopes"
-msgstr "تىلفۇن دېتالى ۋە Scopes"
-
 msgid "Please login to send via Caxton"
 msgstr "تىزىمغا كىرىپ Caxton ئارقىلىق يوللاڭ"
-
-msgid "Please specify a name or idea for your wish"
-msgstr "سىزمۇ بىر ئىسىم ياكى تەسەۋۋۇرىڭزنى كۆرسېتىڭ"
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
@@ -645,9 +579,6 @@ msgstr ""
 
 msgid "Previous App:"
 msgstr "بۇرۇنقى ئەپلەر:"
-
-msgid "Price must be between 0 and 20 USD"
-msgstr "باھاسى چۇقۇم 0 دىن 20 ئامىرىكا دوللار دائىرسىدە بولىدۇ"
 
 msgid "Productivity"
 msgstr "ئىشلەپچىقىرىش ئۈنۈمى"
@@ -670,14 +601,8 @@ msgstr ""
 msgid "Reference"
 msgstr "نەقىل"
 
-msgid "Release:"
-msgstr ""
-
 msgid "Remove this app from your list"
 msgstr "تىزىمىڭزدىن بۇ ئەپنى ئۈچۈرەمسىز؟"
-
-msgid "Return to the search page"
-msgstr ""
 
 msgid "Save"
 msgstr "ساقلا"
@@ -697,8 +622,11 @@ msgstr "ئەپچەلەر"
 msgid "Screenshots"
 msgstr "ئېكران كۆرۈنۈشى"
 
-msgid "Search for a wish:"
-msgstr "ئارزۇيىڭزدىكى تۈرنى ئىزدەڭ:"
+msgid "Search phone apps"
+msgstr ""
+
+msgid "Search snaps"
+msgstr ""
 
 msgid "Send via Caxton"
 msgstr "Caxton دىن تەستىقلىنىپ يوللاش"
@@ -730,10 +658,10 @@ msgstr "مال سېتىۋېلىش"
 msgid "Similar Apps"
 msgstr "ئەپ تۈرلىرى"
 
-msgid "Snap"
+msgid "Similar Snaps"
 msgstr ""
 
-msgid "Snap Metadata:"
+msgid "Snap"
 msgstr ""
 
 msgid "Snaps"
@@ -767,20 +695,14 @@ msgstr "يۇلتۇرزدەرىجىسى"
 msgid "Status"
 msgstr ""
 
-msgid "Submit"
-msgstr "يوللاش"
-
-msgid "Submitted by"
-msgstr "يوللىغۇچى"
+msgid "Strict"
+msgstr ""
 
 msgid "Support:"
 msgstr "ئىجاتكار بىلەن ئالاقىلىشىش ئۈچۈن :"
 
 msgid "Terms:"
 msgstr "كېلىشىم :"
-
-msgid "Thank you for your vote!"
-msgstr "بېلەت تاشلىغىنىڭزغا كۆپ رەھمەت!"
 
 msgid "Thank you!"
 msgstr "تەشەككۈر!"
@@ -792,6 +714,9 @@ msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
+msgstr ""
+
+msgid "The snap you are trying to find does not exist or has been removed."
 msgstr ""
 
 msgid ""
@@ -858,9 +783,6 @@ msgstr "يېڭلانغان ئەپلەر"
 msgid "Updated:"
 msgstr "يېڭىلانغان:"
 
-msgid "Upvote"
-msgstr "قوللىماق"
-
 msgid "Urls that open in this app:"
 msgstr ""
 
@@ -879,9 +801,6 @@ msgstr "نەشرى:"
 msgid "View"
 msgstr "تەكشۈرۈش"
 
-msgid "Vote"
-msgstr "بېلەت تاشلاش"
-
 msgid "Weather"
 msgstr "ھاۋارايى"
 
@@ -896,12 +815,6 @@ msgstr "تور بېكەت:"
 
 msgid "Welcome"
 msgstr "خۇش كەپسىز"
-
-msgid "What app do you wish to see on Ubuntu Touch?"
-msgstr "ئۇبۇنتۇ چەكمە ئۈسكىنىلىرىدە قانداق ئەپنىڭ بۇلۇشنى ئارزۇ قىلىسىز؟"
-
-msgid "What apps do you wish to see on Ubuntu Touch?"
-msgstr "ئۇبۇنتۇ چەكمە ئۈسكىنىلىرىدە قانداق ئەپلەرنىڭ بۇلۇشىنى ئارزۇ قىلىسىز؟"
 
 msgid "What are snaps?"
 msgstr ""
@@ -933,9 +846,6 @@ msgstr ""
 msgid "Why donate?"
 msgstr "نېمە ئۈچۈن ئىئانە قىلىمىز؟"
 
-msgid "Wishlist"
-msgstr "تەلەپ"
-
 msgid "Yes"
 msgstr "ھەئە"
 
@@ -946,12 +856,6 @@ msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
 msgstr "سىز ھېساباتىڭىزنى Caxton غا باغلىمىغان، چەكسىڭىز تەڭشەككە يۆتكىلىدۇ"
-
-msgid "You must be logged in to vote"
-msgstr "تىزىملىتىپ كىرگەندىن كېيىن بېلەت تاشلاشقا قاتنىشالايسىز"
-
-msgid "You vote could not be saved at this time, please try again later"
-msgstr "بۇ قېتىمقى بىلەت تاشلاش ساقلانمىدى سەل تۇرۇپ سىناپ كۈرۈڭ"
 
 msgid "app snaps"
 msgstr ""
@@ -969,12 +873,6 @@ msgstr ""
 msgid "games"
 msgid_plural "games"
 msgstr[0] "ئويۇنلار"
-
-msgid "iTunes Link"
-msgstr "iTunes ئۇلىنىشى"
-
-msgid "iTunes link is not a valid url"
-msgstr "iTunes  ئۇلىنىشى ئىناۋەتلىك ئۇلىنىش ئەمەس"
 
 msgid "kernel snaps"
 msgstr ""
