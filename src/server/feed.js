@@ -51,19 +51,28 @@ function snapsAndApps(sort) {
             });
         }),
     ]).then((results) => {
+        let prop = sort.substring(1);
+
         let pkgs = results[0].concat(results[1]);
+        pkgs = pkgs.filter((pkg) => {
+            return !!pkg[prop];
+        });
 
         pkgs.sort((a, b) => {
-            if (a.published_date < b.published_date) {
+            if (a[prop] > b[prop]) {
                 return -1;
             }
 
-            if (a.published_date > b.published_date) {
+            if (a[prop] < b[prop]) {
                 return 1;
             }
 
             return 0;
         });
+
+        for (let index in pkgs) {
+            console.log(pkgs[index].name, pkgs[index][prop]);
+        }
 
         return pkgs.slice(0, 10).map((pkg) => {
             pkg.type = pkg.is_snap ? snapTypeMap[pkg.type] : type(pkg.types);

@@ -43,6 +43,8 @@ function fetchSnaps() {
                     }
                     else {
                         logger.debug('New snap: ' + internalData.name);
+                        let now = new Date();
+                        internalData.published_date = internalData.published_date ? internalData.published_date : now.toISOString();
 
                         operation = {
                             insertOne: {
