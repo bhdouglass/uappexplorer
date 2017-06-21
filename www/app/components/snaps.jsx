@@ -243,7 +243,7 @@ module.exports = React.createClass({
     var category = i18n.t('All');
     var type = info.snap_count_types().all;
 
-    var categories = info.categories();
+    var categories = info.snap_categories();
     for (var i = 0; i < categories.length; i++) {
       if (this.state.category == categories[i].internal_name) {
         category = categories[i].name;
@@ -300,7 +300,7 @@ module.exports = React.createClass({
                     <div className="form-group col-md-4">
                       <label htmlFor="category" className="control-label hidden-xs">{i18n.t('Category:')}</label>
                       <select id="category" className="form-control" value={this.state.category} onChange={this.changeCategory}>
-                        {info.categories().map(function(category) {
+                        {info.snap_categories().map(function(category) {
                           return <option value={category.internal_name} key={category.internal_name}>{category.name}</option>;
                         }, this)}
                       </select>

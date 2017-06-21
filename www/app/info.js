@@ -196,13 +196,37 @@ module.exports = {
         name: i18n.t('Travel & Local'),
       }, {
         internal_name: 'universal-accessaccessibility',
-        name: i18n.t('Universal Accesss/Accessibility'),
+        name: i18n.t('Universal Access/Accessibility'),
       }, {
         internal_name: 'accessories',
         name: i18n.t('Utilities'),
       }, {
         internal_name: 'weather',
         name: i18n.t('Weather'),
+      }
+    ];
+  },
+
+  snap_categories: function() {
+    return [
+      {
+        internal_name: 'all',
+        name: i18n.t('All Categories'),
+      }, {
+        internal_name: 'database',
+        name: i18n.t('Database'),
+      }, {
+        internal_name: 'internet-of-things',
+        name: i18n.t('Internet of Things'),
+      }, {
+        internal_name: 'media',
+        name: i18n.t('Media'),
+      }, {
+        internal_name: 'messaging',
+        name: i18n.t('Messaging'),
+      }, {
+        internal_name: 'ops',
+        name: i18n.t('Ops'),
       }
     ];
   },
