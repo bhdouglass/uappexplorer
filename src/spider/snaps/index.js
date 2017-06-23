@@ -23,10 +23,12 @@ function fetchSnaps() {
                     release = snap.release[snap.release.length - 1];
                 }
 
-                return limit(() => api.details(snap.package_name, snap.architecture, release));
+                return limit(() => api.details(snap.package_name, snap.architecture, snap.sections, release));
             }));
         }).then((snaps) => {
             //Update/Insert snaps
+            snaps = snaps.filter((snapData) => !!snapData);
+
             let promises = snaps.map((snapData) => {
                 let internalData = convert(snapData);
                 internalData.store = store.id;

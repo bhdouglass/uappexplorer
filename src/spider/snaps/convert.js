@@ -23,7 +23,7 @@ function sanitize(html) {
 let propertyMap = {
     developer_name: 'author',
     architecture: 'architecture',
-    department: 'categories',
+    sections: 'categories',
     company_name: 'company',
     changelog: function(snap, changelog) {
         snap.changelog = sanitize(changelog);

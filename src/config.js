@@ -72,7 +72,7 @@ var config = {
                 id: 'ubuntu',
                 url: 'https://search.apps.ubuntu.com/api/v1/snaps',
             }
-        ]
+        ],
     }
   },
   //Credentials for logging to Papertrail - https://papertrailapp.com

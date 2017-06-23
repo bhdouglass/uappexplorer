@@ -10,7 +10,7 @@ class SnapApi {
         this.url = url;
     }
 
-    listArch(url, arch, results) {
+    listArch(url, arch, section, results) {
         results = results ? results : [];
 
         let headers = {'User-Agent': config.spider.snaps.user_agent};
@@ -23,14 +23,17 @@ class SnapApi {
             url: url,
             headers: headers
         }).then((res) => {
-            logger.debug('got package list page: ' + url + ' (' + arch + ')');
+            logger.debug(`got package list page: ${url} (${arch}, ${section})`);
 
             if (res.data && res.data._embedded && res.data._embedded['clickindex:package']) {
-                results = results.concat(res.data._embedded['clickindex:package']);
+                results = results.concat(res.data._embedded['clickindex:package'].map((snap) => {
+                    snap.section = section;
+                    return snap;
+                }));
             }
 
             if (res.data._links && res.data._links.next && res.data._links.next.href) {
-                return this.listArch(res.data._links.next.href, arch, results);
+                return this.listArch(res.data._links.next.href, arch, section, results);
             }
             else {
                 return results;
@@ -38,12 +41,12 @@ class SnapApi {
         });
     }
 
-    list() {
+    searchList() {
         let url = `${this.url}/search?size=${config.spider.snaps.page_size}&confinement=strict,devmode,classic`;
         let promises = config.spider.snaps.architectures.map((arch) => {
-            return this.listArch(url, arch);
+            return this.listArch(url, arch, null);
         });
-        promises.unshift(this.listArch(url, null));
+        promises.unshift(this.listArch(url, null, null));
 
         return Promise.all(promises).then((results) => {
             let snapMap = {};
@@ -94,6 +97,26 @@ class SnapApi {
         });
     }
 
+    list() {
+        return Promise.all([
+            this.searchList(),
+            this.searchSectionList(),
+        ]).then((results) => {
+            let searchResults = results[0];
+            let sectionResults = results[1];
+
+            searchResults.forEach((searchResult) => {
+                searchResult.sections = sectionResults.filter((sectionResult) => {
+                    return (sectionResult.package_name == searchResult.package_name);
+                }).map((sectionResult) => {
+                    return sectionResult.section;
+                });
+            });
+
+            return searchResults;
+        });
+    }
+
     detailsArch(url, arch, series) {
         let headers = {
             'User-Agent': config.spider.snaps.user_agent,
@@ -113,12 +136,15 @@ class SnapApi {
         });
     }
 
-    details(packageName, arches, series) {
+    details(packageName, arches, sections, series) {
         logger.debug('getting details for ' + packageName);
 
         let url = `${this.url}/details/${packageName}`;
         let promises = arches.map((arch) => {
-            return this.detailsArch(url, arch, series);
+            return this.detailsArch(url, arch, series).catch((err) => {
+                logger.error(`Failed getting details of snap "${packageName}:${arch}"`, err);
+                return null;
+            });
         });
 
         return Promise.all(promises).then((results) => {
@@ -126,21 +152,54 @@ class SnapApi {
             let downloads = {};
 
             results.forEach((result) => {
-                if (!snap || result.revision > snap.revision) {
-                    snap = result;
-                }
+                if (result) {
+                    if (!snap || result.revision > snap.revision) {
+                        snap = result;
+                    }
 
-                if (result.anon_download_url) {
-                    downloads[result.architecture[0]] = result.anon_download_url;
+                    if (result.anon_download_url) {
+                        downloads[result.architecture[0]] = result.anon_download_url;
+                    }
                 }
             });
 
             if (snap) {
                 snap.downloads = downloads;
                 snap.architecture = arches;
+                snap.sections = sections;
             }
 
             return snap;
+        });
+    }
+
+    sections() {
+        let url = `${this.url}/sections`;
+        let headers = {
+            'User-Agent': config.spider.snaps.user_agent,
+        };
+
+        return axios({
+            method: 'get',
+            url: url,
+            headers: headers,
+        }).then((res) => {
+            return res.data._embedded['clickindex:sections'];
+        });
+    }
+
+    searchSectionList() {
+        return this.sections().then((sections) => {
+            return Promise.all(sections.map((section) => {
+                return this.listArch(`${this.url}/search?size=${config.spider.snaps.page_size}&confinement=strict,devmode,classic&section=${section.name}`, null, section.name);
+            }));
+        }).then((sectionResults) => {
+            let results = [];
+            sectionResults.forEach((sectionResult) => {
+                results = results.concat(sectionResult);
+            });
+
+            return results;
         });
     }
 }
