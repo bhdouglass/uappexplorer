@@ -80,7 +80,7 @@ let propertyMap = {
     },
     prices: 'prices',
     date_published: 'published_date',
-    screenshot_urls: 'screenshot_urls',
+    screenshot_urls: 'screenshots',
     support_url: function(snap, support_url) {
         if (support_url.indexOf('mailto:') === 0 && mailhider) {
             snap.support = mailhider.url(support_url.replace('mailto:', ''));

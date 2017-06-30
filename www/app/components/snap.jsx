@@ -179,6 +179,20 @@ module.exports = React.createClass({
                           <h3>{i18n.t('Screenshots')}</h3>
                         </div>
                       </div>
+
+                      <div className="row">
+                        <div className="col-md-12 screenshot-scroll">
+                          {this.state.snap.screenshots.map(function(screenshot) {
+                            return (
+                              <div key={screenshot}>
+                                <a href={screenshot} className="swipebox" rel="nofollow">
+                                  <img src={screenshot} alt="" className="screenshot" />
+                                </a>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
                     </div>
                   </If>
 
