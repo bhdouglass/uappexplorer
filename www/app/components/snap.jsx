@@ -132,7 +132,7 @@ module.exports = React.createClass({
 
                           <div className="row-content">
                             <div className="list-group-item-text">
-                              <a href={'snap://' + this.state.snap.title} className='btn btn-sm btn-material-green'>{i18n.t('Install')}</a>
+                              <a href={'snap://' + this.state.snap.name} className='btn btn-sm btn-material-green'>{i18n.t('Install')}</a>
 
                               <If value={Object.keys(this.state.snap.downloads).length > 0} element="span">
                                 <div className="download-dropdown">
