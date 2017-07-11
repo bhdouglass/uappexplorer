@@ -110,7 +110,7 @@ function fetchSnaps() {
         }).then(() => {
             logger.debug('Finished parsing snaps');
         }).catch((err) => {
-            logger.error(err);
+            logger.error('Error parsing snaps');
         });
     }));
 }
