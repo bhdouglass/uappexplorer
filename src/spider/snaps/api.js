@@ -141,7 +141,7 @@ class SnapApi {
 
         let url = `${this.url}/details/${packageName}`;
         let promises = arches.map((arch) => {
-            return this.detailsArch(url, arch, series).catch((err) => {
+            return this.detailsArch(url, arch, series).catch(() => {
                 logger.error(`Failed getting details of snap "${packageName}:${arch}"`);
                 return null;
             });

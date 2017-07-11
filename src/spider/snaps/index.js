@@ -109,7 +109,7 @@ function fetchSnaps() {
             return ses.bulk(upserts, removals);
         }).then(() => {
             logger.debug('Finished parsing snaps');
-        }).catch((err) => {
+        }).catch(() => {
             logger.error('Error parsing snaps');
         });
     }));
