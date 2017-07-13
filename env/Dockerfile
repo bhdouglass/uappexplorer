@@ -1,4 +1,4 @@
-FROM node:5.11
+FROM node:6.11
 MAINTAINER Brian Douglass
 
 RUN apt-get install -y libstdc++6
