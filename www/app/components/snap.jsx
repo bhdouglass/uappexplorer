@@ -250,7 +250,7 @@ module.exports = React.createClass({
                           {i18n.t('Confinement:')} {this.state.snap.confinement}
                           <br/>
                           {i18n.t('Version:')} {this.state.snap.version}
-                          <If value={this.state.last_updated > this.state.snap.published_date} element="span">
+                          <If value={this.state.snap.last_updated > this.state.snap.published_date} element="span">
                             <br/>
                             {i18n.t('Updated:')} {moment(this.state.snap.last_updated).format('MMM D, YYYY')}
                           </If>
