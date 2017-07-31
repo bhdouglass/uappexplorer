@@ -21,7 +21,9 @@ module.exports = React.createClass({
   render: function() {
     return (
       <span>
-        {this.props.types.map(function(type) {
+        {this.props.types.filter(function(type) {
+          return (type != 'push');
+        }).map(function(type) {
           var types = {
             application: i18n.t('App'),
             scope: i18n.t('Scope'),
