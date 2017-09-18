@@ -8,19 +8,21 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2017-05-14 12:18+0000\n"
+"PO-Revision-Date: 2017-07-30 16:34+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
-"X-Generator: Launchpad (build 18413)\n"
+"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
+"X-Generator: Launchpad (build 18449)\n"
 "Language: nl\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
+"*De installatie zal u begeleiden naar de OpenStore-app op een Ubuntu Touch-"
+"apparaat"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -55,7 +57,7 @@ msgid "All Architectures"
 msgstr "Alle processorarchitecturen"
 
 msgid "All Categories"
-msgstr ""
+msgstr "Alle categorieën"
 
 msgid "All Frameworks"
 msgstr "Alle frameworks"
@@ -70,7 +72,7 @@ msgid "Any Architecture"
 msgstr "Elke architectuur"
 
 msgid "Any Confinement"
-msgstr ""
+msgstr "Elke opsluiting"
 
 msgid "Any License"
 msgstr "Elke licentie"
@@ -126,7 +128,7 @@ msgid "Author"
 msgstr "Auteur"
 
 msgid "Available from the OpenStore!"
-msgstr ""
+msgstr "Beschikbaar in de OpenStore!"
 
 msgid "Books & Comics"
 msgstr "Boeken & Strips"
@@ -162,7 +164,7 @@ msgid "Changelog"
 msgstr "Wijzigingslog"
 
 msgid "Classic"
-msgstr ""
+msgstr "Klassiek"
 
 msgid "Close"
 msgstr "Sluiten"
@@ -174,7 +176,7 @@ msgid "Company"
 msgstr "Bedrijf"
 
 msgid "Confinement:"
-msgstr ""
+msgstr "Opsluiting:"
 
 msgid "Containing:"
 msgstr "Bevat:"
@@ -206,9 +208,11 @@ msgstr "De applijst kan niet worden gedownload; klik om opnieuw te proberen"
 
 msgid "Could not download snap data, click to retry"
 msgstr ""
+"De Snap-gegevens kunnen niet worden gedownload; klik om opnieuw te proberen"
 
 msgid "Could not download snap list, click to retry"
 msgstr ""
+"De Snap-lijst kan niet worden gedownload; klik om opnieuw te proberen"
 
 msgid "Could not find the requested app"
 msgstr "De opgevraagde app kan niet worden gevonden"
@@ -249,7 +253,7 @@ msgid "Desktop File:"
 msgstr "Bureaubladbestand:"
 
 msgid "Dev Mode"
-msgstr ""
+msgstr "Ontw.modus"
 
 msgid "Developer Tools"
 msgstr "Hulpmiddelen voor ontwikkelaars"
@@ -279,7 +283,7 @@ msgid "Download"
 msgstr "Downloaden"
 
 msgid "Downloading the snap will not give you automatic updates"
-msgstr ""
+msgstr "Door het downloaden van de Snap krijgt u geen automatische updates"
 
 msgid "Edit"
 msgstr "Bewerken"
@@ -430,6 +434,8 @@ msgstr "Installeren"
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
+"Installeren zal u begeleiden naar het GNOME Softwarecentrum (indien "
+"geïnstalleerd)"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Het is mogelijk om een negatieve hart-waardering te hebben."
@@ -504,7 +510,7 @@ msgid "More Info"
 msgstr "Meer informatie"
 
 msgid "More Snaps by:"
-msgstr ""
+msgstr "Meer Snaps van:"
 
 msgid "Most Expensive (USD)"
 msgstr "Duurste (USD)"
@@ -562,10 +568,10 @@ msgid "No reviews yet!"
 msgstr "Er zijn nog geen reviews!"
 
 msgid "None Yet"
-msgstr ""
+msgstr "Nog geen"
 
 msgid "Not available in the OpenStore"
-msgstr ""
+msgstr "Niet beschikbaar in de OpenStore"
 
 msgid "OEM Snap"
 msgstr "OEM-Snap"
@@ -653,10 +659,10 @@ msgid "Screenshots"
 msgstr "Schermafbeeldingen"
 
 msgid "Search phone apps"
-msgstr ""
+msgstr "Telefoonapps zoeken"
 
 msgid "Search snaps"
-msgstr ""
+msgstr "Snaps zoeken"
 
 msgid "Send via Caxton"
 msgstr "Versturen via Caxton"
@@ -689,7 +695,7 @@ msgid "Similar Apps"
 msgstr "Vergelijkbare apps"
 
 msgid "Similar Snaps"
-msgstr ""
+msgstr "Vergelijkbare Snaps"
 
 msgid "Snap"
 msgstr "Snap"
@@ -731,7 +737,7 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Strict"
-msgstr ""
+msgstr "Strikt"
 
 msgid "Support:"
 msgstr "Ondersteuning:"
@@ -756,7 +762,7 @@ msgstr ""
 "app met slechts enkele 5-sterrenwaarderingen."
 
 msgid "The snap you are trying to find does not exist or has been removed."
-msgstr ""
+msgstr "De Snap die u probeert te vinden bestaat niet of is verwijderd."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "

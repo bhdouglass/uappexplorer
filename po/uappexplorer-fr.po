@@ -8,19 +8,21 @@ msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2016-10-16 14:46+0000\n"
+"PO-Revision-Date: 2017-08-17 17:28+0000\n"
 "Last-Translator: Anne017 <anneonyme017@openmailbox.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2017-06-16 04:28+0000\n"
-"X-Generator: Launchpad (build 18413)\n"
+"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
+"X-Generator: Launchpad (build 18449)\n"
 "Language: fr\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
+"*L'installation vous redirigera vers l'application OpenStore sur un appareil "
+"utilisant Ubuntu Touch"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -55,7 +57,7 @@ msgid "All Architectures"
 msgstr "Toutes les architectures"
 
 msgid "All Categories"
-msgstr ""
+msgstr "Toutes les catégories"
 
 msgid "All Frameworks"
 msgstr "Toutes les structures logicielles"
@@ -70,7 +72,7 @@ msgid "Any Architecture"
 msgstr "Toutes les architectures"
 
 msgid "Any Confinement"
-msgstr ""
+msgstr "Tous les confinements"
 
 msgid "Any License"
 msgstr "Toutes les licences"
@@ -127,7 +129,7 @@ msgid "Author"
 msgstr "Auteur"
 
 msgid "Available from the OpenStore!"
-msgstr ""
+msgstr "Disponible à partir de l'OpenStore !"
 
 msgid "Books & Comics"
 msgstr "Livres & bandes dessinées"
@@ -163,7 +165,7 @@ msgid "Changelog"
 msgstr "Notes de version"
 
 msgid "Classic"
-msgstr ""
+msgstr "Classique"
 
 msgid "Close"
 msgstr "Fermer"
@@ -175,7 +177,7 @@ msgid "Company"
 msgstr "Société"
 
 msgid "Confinement:"
-msgstr ""
+msgstr "Confinement :"
 
 msgid "Containing:"
 msgstr "Contenant :"
@@ -211,9 +213,11 @@ msgstr ""
 
 msgid "Could not download snap data, click to retry"
 msgstr ""
+"Impossible de télécharger les données du paquet Snap, cliquez pour réessayer"
 
 msgid "Could not download snap list, click to retry"
 msgstr ""
+"Impossible de télécharger la liste des paquets Snap, cliquez pour réessayer"
 
 msgid "Could not find the requested app"
 msgstr "Impossible de trouver l'application demandée"
@@ -257,7 +261,7 @@ msgid "Desktop File:"
 msgstr "Fichier Bureau :"
 
 msgid "Dev Mode"
-msgstr ""
+msgstr "Mode développeur"
 
 msgid "Developer Tools"
 msgstr "Outils pour développeurs"
@@ -288,6 +292,8 @@ msgstr "Télécharger"
 
 msgid "Downloading the snap will not give you automatic updates"
 msgstr ""
+"Le téléchargement du paquet Snap ne générera pas des mises à jour "
+"automatiques"
 
 msgid "Edit"
 msgstr "Modifier"
@@ -299,7 +305,7 @@ msgid "Education"
 msgstr "Éducation"
 
 msgid "Email Support"
-msgstr "Prise en charge courriel"
+msgstr "Assistance par courriel"
 
 msgid "Entertainment"
 msgstr "Divertissement"
@@ -441,6 +447,8 @@ msgstr "Installer"
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
+"L'installation vous redirigera vers le centre de logiciels de GNOME (si "
+"installé)"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "Il est possible d'avoir un nombre négatif de cœurs"
@@ -515,7 +523,7 @@ msgid "More Info"
 msgstr "Plus d'informations"
 
 msgid "More Snaps by:"
-msgstr ""
+msgstr "Plus de paquets Snap par :"
 
 msgid "Most Expensive (USD)"
 msgstr "Les plus chères (USD)"
@@ -546,6 +554,10 @@ msgid ""
 "either wait until the new apps are fetched or use the request form to "
 "request that the app be found early."
 msgstr ""
+"De nouvelles applications sont récupérées à partir de la logithèque "
+"officielle à quelques heures d'intervalle, vous pouvez soit attendre que les "
+"nouvelles applications soient récupérées, soit utiliser le formulaire de "
+"demande pour que l'application soit disponible plus tôt."
 
 msgid "Newest"
 msgstr "Les plus récentes"
@@ -569,10 +581,10 @@ msgid "No reviews yet!"
 msgstr "Pas encore de commentaires !"
 
 msgid "None Yet"
-msgstr ""
+msgstr "Rien pour le moment"
 
 msgid "Not available in the OpenStore"
-msgstr ""
+msgstr "Non disponible dans l'OpenStore"
 
 msgid "OEM Snap"
 msgstr "Snap du constructeur"
@@ -660,10 +672,10 @@ msgid "Screenshots"
 msgstr "Captures d'écran"
 
 msgid "Search phone apps"
-msgstr ""
+msgstr "Rechercher des applications pour le téléphone"
 
 msgid "Search snaps"
-msgstr ""
+msgstr "Rechercher des paquets Snap"
 
 msgid "Send via Caxton"
 msgstr "Envoyer via Caxton"
@@ -696,7 +708,7 @@ msgid "Similar Apps"
 msgstr "Application similaires"
 
 msgid "Similar Snaps"
-msgstr ""
+msgstr "Paquets Snap similaires"
 
 msgid "Snap"
 msgstr "Snap"
@@ -737,7 +749,7 @@ msgid "Status"
 msgstr "État"
 
 msgid "Strict"
-msgstr ""
+msgstr "Strict"
 
 msgid "Support:"
 msgstr "Assistance :"
@@ -765,6 +777,7 @@ msgstr ""
 
 msgid "The snap you are trying to find does not exist or has been removed."
 msgstr ""
+"Le paquet Snap que vous essayez de trouver n'existe pas ou a été supprimé."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "

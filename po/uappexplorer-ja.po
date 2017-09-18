@@ -1,74 +1,73 @@
-# Chinese (Simplified) translation for uappexplorer
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Japanese translation for uappexplorer
+# Copyright (c) 2017 Rosetta Contributors and Canonical Ltd 2017
 # This file is distributed under the same license as the uappexplorer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2016-07-08 05:11+0000\n"
-"Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"PO-Revision-Date: 2017-09-18 07:33+0000\n"
+"Last-Translator: Yoshihiro Fujimoto <Unknown>\n"
+"Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
 "X-Generator: Launchpad (build 18449)\n"
-"Language: zh_CN\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr "*安装将引导你去 Ubuntu Touch 设备上的官方应用商店"
+msgstr ""
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
-msgstr "*这个web应用在网页中插入了自定义代码，它可以添加额外的功能或是恶意的。仅在信任作者的情况下使用这个应用。"
-
-msgid "- Choose a list -"
-msgstr "- 选择一个列表 -"
-
-msgid "Account Integration"
-msgstr "帐号集成"
-
-msgid "Add Apps:"
-msgstr "添加应用："
-
-msgid "Add to list:"
-msgstr "添加到列表："
-
-msgid "All"
-msgstr "全部"
-
-msgid "All Architectures"
-msgstr "所有架构"
-
-msgid "All Categories"
 msgstr ""
 
+msgid "- Choose a list -"
+msgstr ""
+
+msgid "Account Integration"
+msgstr ""
+
+msgid "Add Apps:"
+msgstr ""
+
+msgid "Add to list:"
+msgstr ""
+
+msgid "All"
+msgstr "すべて"
+
+msgid "All Architectures"
+msgstr "すべてのアーキテクチャ"
+
+msgid "All Categories"
+msgstr "すべてのカテゴリ"
+
 msgid "All Frameworks"
-msgstr "所有框架"
+msgstr ""
 
 msgid "All Snaps"
-msgstr "全部 Snaps"
+msgstr ""
 
 msgid "All Types"
 msgstr ""
 
 msgid "Any Architecture"
-msgstr "任何架构"
+msgstr ""
 
 msgid "Any Confinement"
 msgstr ""
 
 msgid "Any License"
-msgstr "任何许可证"
+msgstr ""
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -78,113 +77,111 @@ msgid ""
 "only displays publicly available information about the official Ubuntu Touch "
 "appstore."
 msgstr ""
-"所有移除版权或商标侵权内容的请求应该向 Canonical 或应用的作者(作者通常在他们应用页面的支持标签下有他们的联系方式)提出。uApp "
-"Explorer 不属于 Canonical 也不主持任何应用。uApp Explorer 仅展示在官方 Ubuntu Touch 应用商店公开的信息。"
 
 msgid "App"
-msgstr "应用"
+msgstr ""
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "应用名称 (例如: com.ubuntu.developer.example)"
+msgstr ""
 
 msgid "App Snaps"
-msgstr "应用 Snaps"
+msgstr ""
 
 msgid "Apps"
-msgstr "应用"
+msgstr ""
 
 msgid "Apps are not installed via this site, but via the official appstore."
-msgstr "应用不通过此站安装，通过官方应用商店安装。"
+msgstr ""
 
 msgid "Apps:"
-msgstr "应用："
+msgstr ""
 
 msgid "Architecture:"
-msgstr "架构："
+msgstr ""
 
 msgid "Architectures:"
-msgstr "架构"
+msgstr ""
 
 msgid "Are you sure you want to delete this list?"
-msgstr "你确认要删除这个列表吗？"
+msgstr ""
 
 msgid "Article"
-msgstr "文章"
+msgstr ""
 
 msgid "Author"
-msgstr "作者"
+msgstr ""
 
 msgid "Available from the OpenStore!"
 msgstr ""
 
 msgid "Books & Comics"
-msgstr "图书和漫画"
+msgstr ""
 
 msgid "Browse"
-msgstr "浏览"
+msgstr ""
 
 msgid "Browse Apps"
-msgstr "浏览应用"
+msgstr ""
 
 msgid "Browse Games"
-msgstr "浏览游戏"
+msgstr ""
 
 msgid "Browse Scopes"
-msgstr "浏览Scope"
+msgstr ""
 
 msgid "Browse Snaps"
-msgstr "浏览 Snaps"
+msgstr ""
 
 msgid "Business"
-msgstr "商务"
+msgstr ""
 
 msgid "By:"
-msgstr "作者："
+msgstr ""
 
 msgid "Category:"
-msgstr "类别："
+msgstr ""
 
 msgid "Caxton Code"
-msgstr "Caxton 代码"
+msgstr ""
 
 msgid "Changelog"
-msgstr "更新日志"
+msgstr ""
 
 msgid "Classic"
 msgstr ""
 
 msgid "Close"
-msgstr "关闭"
+msgstr ""
 
 msgid "Communication"
-msgstr "通讯"
+msgstr ""
 
 msgid "Company"
-msgstr "公司"
+msgstr ""
 
 msgid "Confinement:"
 msgstr ""
 
 msgid "Containing:"
-msgstr "包含："
+msgstr ""
 
 msgid "Could not add app to list at this time, please try again later"
-msgstr "此时无法添加应用到列表中，请稍后重试"
+msgstr ""
 
 msgid "Could not connect to Caxton at this time, please try again later"
-msgstr "此时无法连接到Caxton，请稍后重试"
+msgstr ""
 
 msgid "Could not create a new list at this time, please try again later"
-msgstr "此时无法创建新列表，请稍后重试"
+msgstr ""
 
 msgid "Could not delete the list at this time, please try again later"
-msgstr "此时无法删除列表，请稍后重试"
+msgstr ""
 
 msgid "Could not download app data, click to retry"
-msgstr "无法下载应用数据，点击重试"
+msgstr ""
 
 msgid "Could not download app list, click to retry"
-msgstr "无法下载应用列表，点击重试"
+msgstr ""
 
 msgid "Could not download snap data, click to retry"
 msgstr ""
@@ -193,52 +190,52 @@ msgid "Could not download snap list, click to retry"
 msgstr ""
 
 msgid "Could not find the requested app"
-msgstr "无法找到请求的应用"
+msgstr ""
 
 msgid "Could not find this list, it may not exist any more"
-msgstr "无法找到此列表，可能已不存在"
+msgstr ""
 
 msgid "Could not load lists at this time, click to retry"
-msgstr "此时无法载入列表，点击重试"
+msgstr ""
 
 msgid "Could not remove the app from this list, please try again later"
-msgstr "无法从此列表删除应用，请稍后重试"
+msgstr ""
 
 msgid "Could not save your settings at this time, please try again later"
-msgstr "此时无法保存你的设置，请稍后重试"
+msgstr ""
 
 msgid "Could not update the list at this time, please try again later"
-msgstr "此时无法更新列表，请稍后重试"
+msgstr ""
 
 msgid "Create"
-msgstr "创建"
+msgstr ""
 
 msgid "Create List"
-msgstr "创建列表"
+msgstr ""
 
 msgid "Delete"
-msgstr "删除"
+msgstr ""
 
 msgid "Description"
-msgstr "描述"
+msgstr ""
 
 msgid "Desktop File:"
-msgstr "桌面文件"
+msgstr ""
 
 msgid "Dev Mode"
 msgstr ""
 
 msgid "Developer Tools"
-msgstr "开发者工具"
+msgstr ""
 
 msgid "Donate"
-msgstr "捐助"
+msgstr ""
 
 msgid "Donate via Bitcoin"
-msgstr "通过比特币捐助"
+msgstr ""
 
 msgid "Donate via Paypal"
-msgstr "通过Paypal捐助"
+msgstr ""
 
 msgid ""
 "Donating to uApp Explorer is just one way you can help make it better. If "
@@ -246,252 +243,249 @@ msgid ""
 "include domain names, hosting, etc. uApp Explorer will always be a free and "
 "open source service, regardless of the number of donations."
 msgstr ""
-"捐助 uApp Explorer "
-"是你能帮助使它变得更好的一种方式。如果你选择捐助，你的捐助资金会用于基础设施的花费。花费包括域名、主机等等。不论捐助数量的多少，uApp "
-"Explorer 一直会是一个免费且开源的服务。"
 
 msgid "Download"
-msgstr "下载"
+msgstr ""
 
 msgid "Downloading the snap will not give you automatic updates"
 msgstr ""
 
 msgid "Edit"
-msgstr "编辑"
+msgstr ""
 
 msgid "Edit List"
-msgstr "编辑列表"
+msgstr ""
 
 msgid "Education"
-msgstr "教育"
+msgstr ""
 
 msgid "Email Support"
-msgstr "邮件支持"
+msgstr ""
 
 msgid "Entertainment"
-msgstr "娱乐"
+msgstr ""
 
 msgid "Essential Apps"
-msgstr "必备应用"
+msgstr ""
 
 msgid "FAQ"
-msgstr "FAQ"
+msgstr ""
 
 msgid "File Size:"
-msgstr "文件大小："
+msgstr ""
 
 msgid "Filters"
-msgstr "筛选"
+msgstr ""
 
 msgid "Finance"
-msgstr "财务"
+msgstr ""
 
 msgid "Find"
-msgstr "查找"
+msgstr ""
 
 msgid "Find an app that has not yet been fetched from the official appstore."
-msgstr "查找尚未从官方应用商店获取的应用。"
+msgstr ""
 
 msgid "Food & Drink"
-msgstr "饮食"
+msgstr ""
 
 msgid "For more information, visit snapcraft.io"
 msgstr ""
 
 msgid "For version:"
-msgstr "版本："
+msgstr ""
 
 msgid "Found the requested app"
-msgstr "找到请求的应用"
+msgstr ""
 
 msgid "Framework Snap"
-msgstr "框架 Snap"
+msgstr ""
 
 msgid "Framework Snaps"
-msgstr "框架 Snaps"
+msgstr ""
 
 msgid "Framework:"
-msgstr "框架"
+msgstr ""
 
 msgid "Free"
-msgstr "免费"
+msgstr ""
 
 msgid "Gadget Snap"
-msgstr "工具 Snap"
+msgstr ""
 
 msgid "Gadget Snaps"
-msgstr "工具 Snaps"
+msgstr ""
 
 msgid "Games"
-msgstr "游戏"
+msgstr ""
 
 msgid "Get a QR scanner for your Ubuntu Touch device"
-msgstr "为你的 Ubuntu Touch 设备获取二维码扫描器"
+msgstr ""
 
 msgid "Go there now"
-msgstr "立刻跳到"
+msgstr ""
 
 msgid "Graphics"
-msgstr "图像"
+msgstr ""
 
 msgid "Grid"
-msgstr "栅格"
+msgstr ""
 
 msgid "Health & Fitness"
-msgstr "健康"
+msgstr ""
 
 msgid "Heart Rating"
-msgstr "心评级"
+msgstr ""
 
 msgid ""
 "Heart ratings are calculated from the star rating where a 5 star review is 1 "
 "heart point, 4 stars = 0.5 hearts, 3 stars = 0 hearts, 2 stars = -0.5 "
 "hearts, and 1 star = -1 hearts."
-msgstr "心评级由星评级计算而来，一个5星为1点心，4星 = 0.5心，3星 = 0心，2星 = -0.5心，1星 = -1心。"
+msgstr ""
 
 msgid "Help translate!"
-msgstr "帮助翻译！"
+msgstr ""
 
 msgid "Highest Heart Rating"
-msgstr "最高心评分"
+msgstr ""
 
 msgid "Highest Star Rating"
-msgstr "最高星评分"
+msgstr ""
 
 msgid "How can I help improve this site?"
-msgstr "如何改善此站？"
+msgstr ""
 
 msgid "How do I install phone apps and scopes?"
 msgstr ""
 
 msgid "How is the popularity determined?"
-msgstr "受欢迎度是如何确定的?"
+msgstr ""
 
 msgid "I just published my app, why don't I see it?"
-msgstr "我发布了我的应用，为什么看不到它？"
+msgstr ""
 
 msgid "If you want to contribute code visit the GitHub repo."
-msgstr "如果你想贡献代码访问 GitHub 仓库。"
+msgstr ""
 
 msgid "If you want to help translate, visit the Launchpad project."
-msgstr "如果你想帮助翻译，访问 Launchpad 项目。"
+msgstr ""
 
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
-msgstr "如果你想提交bugs或功能请求访问 GitHub issues 页面。"
+msgstr ""
 
 msgid "If you would like to contact the author, visit his website."
-msgstr "如果你想联系作者，访问他的网站。"
+msgstr ""
 
 msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
-msgstr "如果您想金钱贡献，可以有多种选择的捐助。"
+msgstr ""
 
 msgid "Info"
-msgstr "信息"
+msgstr ""
 
 msgid "Install"
-msgstr "安装"
+msgstr ""
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
 msgid "It is possible to have a negative heart rating."
-msgstr "可能有负心评级。"
+msgstr ""
 
 msgid "Kernel Snap"
-msgstr "内核 Snap"
+msgstr ""
 
 msgid "Kernel Snaps"
-msgstr "内核 Snaps"
+msgstr ""
 
 msgid "Language"
-msgstr "语言"
+msgstr ""
 
 msgid "Latest Update"
-msgstr "最后更新"
+msgstr ""
 
 msgid "Least Popular (This Month)"
-msgstr "最不受欢迎(本月)"
+msgstr ""
 
 msgid "Less Info"
-msgstr "更少信息"
+msgstr ""
 
 msgid "License:"
-msgstr "许可证："
+msgstr ""
 
 msgid "Lifestyle"
-msgstr "生活方式"
+msgstr ""
 
 msgid "List"
-msgstr "列表"
+msgstr ""
 
 msgid "List Name:"
-msgstr "列表名："
+msgstr ""
 
 msgid "Load more reviews"
-msgstr "载入更多评论"
+msgstr ""
 
 msgid "Loading reviews..."
-msgstr "载入评论中..."
+msgstr ""
 
 msgid "Log In"
-msgstr "登录"
+msgstr ""
 
 msgid "Log Out"
-msgstr "注销"
+msgstr ""
 
 msgid "Log in via Ubuntu"
-msgstr "通过Ubuntu登录"
+msgstr ""
 
 msgid "Lowest Heart Rating"
-msgstr "最低心评级"
+msgstr ""
 
 msgid "Lowest Star Rating"
-msgstr "最低星评级"
+msgstr ""
 
 msgid "Media & Video"
-msgstr "媒体与影片"
+msgstr ""
 
 msgid "Medical"
-msgstr "医疗"
+msgstr ""
 
 msgid "Missing an app?"
-msgstr "缺少应用？"
+msgstr ""
 
 msgid "Monthly Popularity"
-msgstr "月度人气"
+msgstr ""
 
 msgid "More Apps by:"
-msgstr "更多应用："
+msgstr ""
 
 msgid "More Info"
-msgstr "更多信息"
+msgstr ""
 
 msgid "More Snaps by:"
 msgstr ""
 
 msgid "Most Expensive (USD)"
-msgstr "最贵的(美元)"
+msgstr ""
 
 msgid "Most Popular (This Month)"
-msgstr "最受欢迎(本月)"
+msgstr ""
 
 msgid "Most Relevant"
-msgstr "最相关"
+msgstr ""
 
 msgid "Music & Audio"
-msgstr "音乐与音频"
+msgstr ""
 
 msgid "My Lists"
-msgstr "我的列表"
+msgstr ""
 
 msgid "New Apps"
-msgstr "新应用"
+msgstr ""
 
 msgid "New List"
-msgstr "新列表"
+msgstr ""
 
 msgid "New Snaps"
 msgstr ""
@@ -503,25 +497,25 @@ msgid ""
 msgstr ""
 
 msgid "Newest"
-msgstr "最新"
+msgstr ""
 
 msgid "News & Magazines"
-msgstr "新闻与杂志"
+msgstr ""
 
 msgid "Next App:"
-msgstr "下一个应用："
+msgstr ""
 
 msgid "No"
-msgstr "没有"
+msgstr ""
 
 msgid "No apps found, try searching again."
-msgstr "没有找到应用，请重新搜索。"
+msgstr ""
 
 msgid "No lists, create one!"
-msgstr "没有列表，创建一个！"
+msgstr ""
 
 msgid "No reviews yet!"
-msgstr "还没有评论！"
+msgstr ""
 
 msgid "None Yet"
 msgstr ""
@@ -530,87 +524,87 @@ msgid "Not available in the OpenStore"
 msgstr ""
 
 msgid "OEM Snap"
-msgstr "OEM Snap"
+msgstr ""
 
 msgid "OEM Snaps"
-msgstr "OEM Snaps"
+msgstr ""
 
 msgid "OS Snap"
-msgstr "操作系统 Snap"
+msgstr ""
 
 msgid "OS Snaps"
-msgstr "操作系统 Snap"
+msgstr ""
 
 msgid "Oldest"
-msgstr "最旧"
+msgstr ""
 
 msgid "Oldest Update"
-msgstr "最旧更新"
+msgstr ""
 
 msgid "Open Source"
-msgstr "开源"
+msgstr ""
 
 msgid "Opens Urls"
-msgstr "打开 Urls"
+msgstr ""
 
 msgid "Permissions"
-msgstr "权限"
+msgstr ""
 
 msgid "Personalisation"
-msgstr "个性化"
+msgstr ""
 
 msgid "Please login to send via Caxton"
-msgstr "请登录通过Caxton来发送"
+msgstr ""
 
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
-msgstr "受欢迎度是基于本月应用得到的4星和5星的评论数量。"
+msgstr ""
 
 msgid "Previous App:"
-msgstr "上一个应用："
+msgstr ""
 
 msgid "Productivity"
-msgstr "生产率"
+msgstr ""
 
 msgid "Proprietary"
-msgstr "专有软件"
+msgstr ""
 
 msgid "Published:"
-msgstr "发布："
+msgstr ""
 
 msgid "Push Notifications"
-msgstr "推送通知"
+msgstr ""
 
 msgid "QR Code"
-msgstr "二维码"
+msgstr ""
 
 msgid "RSS Feeds"
 msgstr ""
 
 msgid "Reference"
-msgstr "参考"
+msgstr ""
 
 msgid "Remove this app from your list"
-msgstr "从你的列表里移除这个应用"
+msgstr ""
 
 msgid "Save"
-msgstr "保存"
+msgstr ""
 
 msgid "Science & Engineering"
-msgstr "科学与工程"
+msgstr ""
 
 msgid "Scope"
-msgstr "Scope"
+msgstr ""
 
 msgid "Scope INI File:"
-msgstr "Scope INI 文件："
+msgstr ""
 
 msgid "Scopes"
-msgstr "Scopes"
+msgstr ""
 
 msgid "Screenshots"
-msgstr "截图"
+msgstr ""
 
 msgid "Search phone apps"
 msgstr ""
@@ -619,43 +613,43 @@ msgid "Search snaps"
 msgstr ""
 
 msgid "Send via Caxton"
-msgstr "通过Caxton发送"
+msgstr ""
 
 msgid "Sent via Caxton"
-msgstr "通过Caxton发送"
+msgstr ""
 
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 msgid "Share"
-msgstr "分享"
+msgstr ""
 
 msgid "Share on Facebook"
-msgstr "在 Facebook 上分享"
+msgstr ""
 
 msgid "Share on Google+"
-msgstr "在 Google+ 上分享"
+msgstr ""
 
 msgid "Share on Reddit"
-msgstr "在 Reddit 上分享"
+msgstr ""
 
 msgid "Share on Twitter"
-msgstr "在 Twitter 上分享"
+msgstr ""
 
 msgid "Shopping"
-msgstr "购物"
+msgstr ""
 
 msgid "Similar Apps"
-msgstr "类似的应用"
+msgstr ""
 
 msgid "Similar Snaps"
 msgstr ""
 
 msgid "Snap"
-msgstr "Snap"
+msgstr ""
 
 msgid "Snaps"
-msgstr "Snaps"
+msgstr ""
 
 msgid ""
 "Snaps are a new type of Linux package designed to be cross distribution and "
@@ -668,19 +662,19 @@ msgid "Social Media"
 msgstr ""
 
 msgid "Social Networking"
-msgstr "社交网络"
+msgstr ""
 
 msgid "Sort Apps By:"
-msgstr "应用排序："
+msgstr ""
 
 msgid "Sort By:"
-msgstr "排序方式："
+msgstr ""
 
 msgid "Sports"
-msgstr "体育"
+msgstr ""
 
 msgid "Star Rating"
-msgstr "星排名"
+msgstr ""
 
 msgid "Status"
 msgstr ""
@@ -689,13 +683,13 @@ msgid "Strict"
 msgstr ""
 
 msgid "Support:"
-msgstr "支持："
+msgstr ""
 
 msgid "Terms:"
-msgstr "条款:"
+msgstr ""
 
 msgid "Thank you!"
-msgstr "谢谢你！"
+msgstr ""
 
 msgid "The app you are trying to find does not exist or has been removed."
 msgstr ""
@@ -704,7 +698,7 @@ msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
 "having more good reviews. An app with more 5 star ratings will have a higher "
 "heart rating than an app with only a few 5 star ratings."
-msgstr "心评级和星评级相似，但它会奖励拥有更多好评的应用。一个拥有更多5星评级的应用会比仅拥有少数5星评级的应用获得更高的心评级。"
+msgstr ""
 
 msgid "The snap you are trying to find does not exist or has been removed."
 msgstr ""
@@ -717,14 +711,12 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
-"心评级是星评级的贝叶斯平均，星评级来自用户给应用留下的评论。贝叶斯平均允许有跟多评论的应用排名比有较少评论的应用好。星评级在1到5之间，0表示还没有被评论"
-"。获取更多关于贝叶斯平均计算的信息，查阅这篇文章。"
 
 msgid "This app is on these lists:"
-msgstr "该应用在这些列表："
+msgstr ""
 
 msgid "This list is empty!"
-msgstr "这个列表是空的！"
+msgstr ""
 
 msgid ""
 "This site is an unofficial app browser for Ubuntu Touch apps. All data for "
@@ -732,155 +724,152 @@ msgid ""
 "Brian Douglass and is not endorsed by or affiliated with Ubuntu or "
 "Canonical. Ubuntu and Canonical are registered trademarks of Canonical Ltd."
 msgstr ""
-"这个站点是一个 Ubuntu Touch 应用的非官方应用浏览器。所有的应用数据来自公开访问的 api。这个站点由Brian "
-"Douglass维护，并不隶属也不被 Ubuntu 或 Canonical 认可。Ubuntu 和 Canonical 是 Canonical "
-"公司的注册商标。"
 
 msgid "Title A-Z"
-msgstr "标题 A-Z"
+msgstr ""
 
 msgid "Title Z-A"
-msgstr "标题 Z-A"
+msgstr ""
 
 msgid ""
 "To install an app, visit this site on your Ubuntu Touch device. Find the app "
 "that you wish to install and click the \"Install\" button. You will then be "
 "taken to the official appstore on your device where you can install the app."
 msgstr ""
-"在你的 Ubuntu Touch "
-"设备上访问这个网站来安装一个应用。找到你希望安装的应用并点击\"安装\"按钮。你将会来到你设备上的官方应用商店在这里安装应用。"
 
 msgid ""
 "To report a problem or request a new feature visit the issues page for this "
 "site on GitHub."
-msgstr "报告问题或请求新功能，访问 GitHub 上该站点的问题页面"
+msgstr ""
 
 msgid "Top Apps"
-msgstr "热门应用"
+msgstr ""
 
 msgid "Total Reviews"
-msgstr "总评论"
+msgstr ""
 
 msgid "Travel & Local"
-msgstr "旅游与本地"
+msgstr ""
 
 msgid "Type:"
-msgstr "类型："
+msgstr ""
 
 msgid "Universal Accesss/Accessibility"
-msgstr "无障碍可用性"
+msgstr ""
 
 msgid "Unknown"
-msgstr "未知"
+msgstr ""
 
 msgid "Updated Apps"
-msgstr "更新应用"
+msgstr ""
 
 msgid "Updated:"
-msgstr "更新时间："
+msgstr ""
 
 msgid "Urls that open in this app:"
-msgstr "在此应用内打开的地址："
+msgstr ""
 
 msgid "User List:"
-msgstr "用户列表："
+msgstr ""
 
 msgid "User Reviews"
-msgstr "用户评论"
+msgstr ""
 
 msgid "Utilities"
-msgstr "工具"
+msgstr ""
 
 msgid "Version:"
-msgstr "版本："
+msgstr ""
 
 msgid "View"
-msgstr "查看"
+msgstr ""
 
 msgid "Weather"
-msgstr "天气"
+msgstr ""
 
 msgid "Web App"
-msgstr "Web 应用"
+msgstr ""
 
 msgid "Web Apps"
-msgstr "Web 应用"
+msgstr ""
 
 msgid "Website:"
-msgstr "网站："
+msgstr ""
 
 msgid "Welcome"
-msgstr "欢迎"
+msgstr ""
 
 msgid "What are snaps?"
 msgstr ""
 
 msgid "What do I do if I find copyright or trademark infringing content?"
-msgstr "如果我找到版权或商标侵权内容，该怎么做?"
+msgstr ""
 
 msgid "What is the heart rating?"
-msgstr "什么是心评级？"
+msgstr ""
 
 msgid "What is the star rating?"
-msgstr "什么是星评级？"
+msgstr ""
 
 msgid "What is this site?"
-msgstr "这是什么网站？"
+msgstr ""
 
 msgid "Where can I report a problem or request a new feature?"
-msgstr "我能在哪里报告问题或请求新功能？"
+msgstr ""
 
 msgid ""
 "Whether you choose to donate or not, I still appreciate you support. Thank "
 "you!"
-msgstr "无论你选择捐助与否，我仍然很感谢你支持。谢谢！"
+msgstr ""
 
 msgid "Why donate?"
-msgstr "为什么要捐助？"
+msgstr ""
 
 msgid "Yes"
-msgstr "是"
+msgstr ""
 
 msgid "You are already connected via Caxton!"
-msgstr "你已经通过Caxton连接！"
+msgstr ""
 
 msgid ""
 "You do not have your account connected to Caxton, click to go to your "
 "settings"
-msgstr "你没有将帐号连接到Caxton，点击进入你的设置"
+msgstr ""
 
 msgid "app snaps"
-msgstr "应用 snaps"
+msgstr ""
 
 msgid "apps"
 msgid_plural "apps"
-msgstr[0] "应用"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "framework snaps"
-msgstr "框架 snaps"
+msgstr ""
 
 msgid "gadget snaps"
-msgstr "工具 snaps"
+msgstr ""
 
 msgid "games"
 msgid_plural "games"
-msgstr[0] "游戏"
+msgstr[0] "ゲーム"
 
 msgid "kernel snaps"
-msgstr "内核 snaps"
+msgstr ""
 
 msgid "oem snaps"
-msgstr "oem snaps"
+msgstr ""
 
 msgid "os snaps"
-msgstr "操作系统 snaps"
+msgstr ""
 
 msgid "phone apps & scopes"
-msgstr "手机应用与socpe"
+msgstr ""
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] "scopes"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "snaps"
 msgstr ""
@@ -891,4 +880,5 @@ msgstr ""
 
 msgid "web apps"
 msgid_plural "web apps"
-msgstr[0] "web 应用"
+msgstr[0] ""
+msgstr[1] ""
