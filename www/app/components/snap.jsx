@@ -228,11 +228,11 @@ module.exports = React.createClass({
 
                         <div>
                           <If value={this.state.snap.support && this.state.snap.support.indexOf('mailhide') > -1}>
-                            {i18n.t('Support:')} <a href={this.state.snap.support} target="_blank" rel="nofollow">{i18n.t('Email Support')}</a>
+                            {i18n.t('Contact:')} <a href={this.state.snap.support} target="_blank" rel="nofollow">{i18n.t('Email Contact')}</a>
                           </If>
 
                           <If value={this.state.snap.support && this.state.snap.support.indexOf('mailhide') == -1}>
-                            {i18n.t('Support:')} <a href={this.state.snap.support} target="_blank" rel="nofollow">{this.state.snap.support}</a>
+                            {i18n.t('Contact:')} <a href={this.state.snap.support} target="_blank" rel="nofollow">{this.state.snap.support}</a>
                           </If>
 
                           <If value={this.state.snap.website}>

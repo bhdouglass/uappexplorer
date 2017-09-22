@@ -146,6 +146,9 @@ msgstr ""
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr ""
 
@@ -197,6 +200,9 @@ msgstr ""
 msgid "Create List"
 msgstr ""
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr ""
 
@@ -237,6 +243,9 @@ msgid "Edit List"
 msgstr ""
 
 msgid "Education"
+msgstr ""
+
+msgid "Email Contact"
 msgstr ""
 
 msgid "Email Support"
@@ -365,6 +374,9 @@ msgstr ""
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr ""
 
@@ -419,10 +431,16 @@ msgstr ""
 msgid "Lowest Star Rating"
 msgstr ""
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr ""
 
 msgid "Medical"
+msgstr ""
+
+msgid "Messaging"
 msgstr ""
 
 msgid "Missing an app?"
@@ -516,6 +534,9 @@ msgid "Open Source"
 msgstr ""
 
 msgid "Opens Urls"
+msgstr ""
+
+msgid "Ops"
 msgstr ""
 
 msgid "Permissions"
@@ -701,7 +722,7 @@ msgstr ""
 msgid "Type:"
 msgstr ""
 
-msgid "Universal Accesss/Accessibility"
+msgid "Universal Access/Accessibility"
 msgstr ""
 
 msgid "Unknown"
