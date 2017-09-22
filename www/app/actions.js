@@ -13,6 +13,10 @@ actions = {
       api.getInfo().then(function(data) {
         data.loaded = true;
         data.essentials.apps = utils.shuffle(data.essentials.apps);
+        data.new_snaps.apps.forEach(function(snap) {
+            snap.isSnap = true;
+        });
+
         tree.set('info', data);
       });
     }

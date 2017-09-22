@@ -1,6 +1,7 @@
 var db = require('../db');
 var logger = require('../logger');
 var config = require('../config');
+var snap_api = require('./snap');
 var essential = require('./json/essential-apps.json');
 var licenses = require('./json/open-source-licenses.json');
 var _ = require('lodash');
@@ -8,6 +9,7 @@ var moment = require('moment');
 var cluster = require('cluster');
 var async = require('async');
 var elasticsearch = require('elasticsearch');
+var shuffle = require('shuffle-array');
 
 function miniPkg(pkg) {
   return {
@@ -66,7 +68,9 @@ function counts(callback) {
 }
 
 function essentials(mini, callback) {
-  db.Package.find({name: {'$in': essential}}, function(err, pkgs) {
+  let ids = shuffle(essential).slice(0, 6);
+
+  db.Package.find({name: {'$in': ids}}, function(err, pkgs) {
     if (err) {
       callback(err);
     }
@@ -539,6 +543,22 @@ function setup(app, success, error) {
           mini: 'true',
         }}, function(err, results) {
           callback(err, 'new', results);
+        });
+      },
+
+      function(callback) {
+        let findQuery = db.Snap.find({});
+        findQuery.limit(3);
+        findQuery.sort('-published_date');
+        findQuery.then((snaps) => {
+          callback(null, 'new_snaps', {
+            apps: snaps.map((snap) => {
+              snap.icon = snap_api.snapIcon(snap);
+              return snap;
+            }),
+          });
+        }).catch((err) => {
+          callback(err);
         });
       },
     ], function(err, results) {

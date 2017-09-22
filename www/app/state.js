@@ -37,6 +37,11 @@ module.exports = new Baobab({
       apps: [],
     },
 
+    new_snaps: {
+      count: 0,
+      apps: [],
+    },
+
     essentials: {
       count: 0,
       apps: [],
