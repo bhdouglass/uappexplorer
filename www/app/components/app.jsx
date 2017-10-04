@@ -298,6 +298,9 @@ module.exports = React.createClass({
                       <div className="row">
                         <div className="col-md-6">
                           <h3>{i18n.t('Description')}</h3>
+                          <If value={this.state.app.tagline}>
+                            <div className="description">{this.state.app.tagline}</div>
+                          </If>
                           <div className="description" dangerouslySetInnerHTML={utils.nl2br(this.state.app.description)}></div>
 
                           <If value={this.state.app.changelog}>
