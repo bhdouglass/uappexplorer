@@ -11,7 +11,9 @@ npm install
 
 echo "Running gulp build"
 source /srv/uappexplorer/deploy/env.sh
-gulp build-front
+cd /srv/uappexplorer/www/
+npm install
+gulp build
 
 echo "Restarting api"
 systemctl restart uappexplorer-api
