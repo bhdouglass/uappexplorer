@@ -1,0 +1,11 @@
+[Service]
+ExecStart=/srv/uappexplorer/deploy/run.sh
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=uappexplorer
+User=uappexplorer
+Group=uappexplorer
+
+[Install]
+WantedBy=multi-user.target

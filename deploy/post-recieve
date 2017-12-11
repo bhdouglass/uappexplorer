@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+echo "Deploying code"
+git --work-tree=/srv/uappexplorer --git-dir=/srv/repo/uappexplorer.git checkout -f
+
+echo "Running npm install"
+cd /srv/uappexplorer/
+npm install
+
+echo "Running gulp build"
+source /srv/uappexplorer/deploy/env.sh
+gulp build-front
+
+echo "Restarting api"
+systemctl restart uappexplorer-api

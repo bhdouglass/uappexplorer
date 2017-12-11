@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Setup git deploy: https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps
+# Setup post-recieve hooks
+
+# Setup dependencies
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+add-apt-repository ppa:certbot/certbot
+
+apt-get update
+apt-get upgrade
+
+apt-get install git nodejs nginx python-certbot-nginx build-essential
+
+npm install -g gulp
+
+# Setup nginx config
+# /etc/nginx/sites-enabled/default
+
+# Setup systemd config
+# /etc/systemd/system/uappexplorer-api.service
+systemctl enable uappexplorer-api
+systemctl start uappexplorer-api
