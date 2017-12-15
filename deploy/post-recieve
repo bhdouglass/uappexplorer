@@ -11,8 +11,10 @@ npm install
 
 echo "Builing frontend"
 source /srv/uappexplorer/deploy/env.sh
+export NODE_ENV=""  # Needed to install dev dependencies
 cd /srv/uappexplorer/www/
 npm install
+export NODE_ENV="production"
 gulp build
 
 echo "Restarting api"
