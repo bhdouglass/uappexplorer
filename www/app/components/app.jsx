@@ -106,13 +106,8 @@ module.exports = React.createClass({
     }
 
     var installLink = '';
-    if (this.state.app) {
-      if (this.state.app.store == 'openstore') {
-        installLink = 'openstore://' + this.state.app.name;
-      }
-      else {
-        installLink = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
-      }
+    if (this.state.app && this.state.app.store == 'openstore') {
+      installLink = 'openstore://' + this.state.app.name;
     }
 
     var desktop_file = '';
@@ -157,7 +152,7 @@ module.exports = React.createClass({
               if (this.state.app && this.state.app.name == this.props.params.name) {
                 var download_style = utils.strToColor(this.state.app.author, 'backgroundColor');
                 var url = window.location.protocol + '//' + window.location.host + '/app/' + this.state.app.name;
-                var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.app.title;
+                var caxton_url = installLink ? installLink : url;
                 var author_query = {
                   q: 'author:' + this.state.app.author,
                   type: 'all_types',
@@ -244,13 +239,17 @@ module.exports = React.createClass({
 
                             <div className="row-content">
                               <div className="list-group-item-text">
-                                <a href={installLink} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
+                                <If value={installLink} element="span">
+                                  <a href={installLink} className={this.state.app.webapp_inject ? 'btn btn-sm btn-material-red' : 'btn btn-sm btn-material-green'}>{i18n.t('Install')}</a>
+                                </If>
 
                                 <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
 
-                                <div className="small-note">
-                                  {this.state.app.store == 'openstore' ? i18n.t('*Install will take you to the OpenStore app on an Ubuntu Touch device') : i18n.t('*Install will take you to the official appstore on an Ubuntu Touch device')}
-                                </div>
+                                <If value={installLink}>
+                                  <div className="small-note">
+                                    {i18n.t('*Install will take you to the OpenStore app on an Ubuntu Touch device')}
+                                  </div>
+                                </If>
 
                                 <If value={this.state.app.webapp_inject}>
                                   <div className="small-note text-material-red">

@@ -79,7 +79,7 @@ module.exports = React.createClass({
             if (this.state.snap && this.state.snap.name == this.props.params.name) {
               var download_style = utils.strToColor(this.state.snap.author, 'backgroundColor');
               var url = window.location.protocol + '//' + window.location.host + '/snap/' + this.state.snap.store + '/' + this.state.snap.name;
-              var caxton_url = 'scope://com.canonical.scopes.clickstore?q=' + this.state.snap.title;
+              var caxton_url = url;
               var author_query = {
                 q: 'author:' + this.state.snap.author,
                 sort: '-points',
