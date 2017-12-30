@@ -245,10 +245,13 @@ module.exports = React.createClass({
 
                                 <Share url={url} title={this.state.app.title} caxtonUrl={caxton_url} dropdown={true} />
 
-                                <If value={installLink}>
+                                <If value={this.state.app.store == 'openstore'}>
                                   <div className="small-note">
                                     {i18n.t('*Install will take you to the OpenStore app on an Ubuntu Touch device')}
                                   </div>
+                                </If>
+                                <If value={this.state.app.store != 'openstore'}>
+                                  {i18n.t('This app is no longer available for Ubuntu Touch, please encourage the author to publish it in the OpenStore.')}
                                 </If>
 
                                 <If value={this.state.app.webapp_inject}>
@@ -331,7 +334,7 @@ module.exports = React.createClass({
                               <a href={this.state.app.url} target="_blank" rel="nofollow">{i18n.t('Available from the OpenStore!')}</a>
                             </If>
                             <If value={this.state.app.store != 'openstore'}>
-                              {i18n.t('Not available in the OpenStore')}
+                              {i18n.t('This app is no longer available for Ubuntu Touch, please encourage the author to publish it in the OpenStore.')}
                             </If>
 
                             <If value={this.state.app.support && this.state.app.support.indexOf('mailhide') > -1}>
