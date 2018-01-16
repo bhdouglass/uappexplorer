@@ -7,20 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2017-06-11 20:03+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
+"PO-Revision-Date: 2017-11-24 00:08+0000\n"
 "Last-Translator: Constantinos Koniaris <kostas291@yahoo.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: el\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
+"*Η εγκατάσταση όταν γίνεται σε συσκευή Ubuntu Touch σε κατευθύνει στο "
+"OpenStore"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -70,7 +72,7 @@ msgid "Any Architecture"
 msgstr "Οποιαδήποτε αρχιτεκτονική"
 
 msgid "Any Confinement"
-msgstr ""
+msgstr "Οποιαδήποτε απομόνωση"
 
 msgid "Any License"
 msgstr "Οποιαδήποτε άδεια χρήσης"
@@ -127,7 +129,7 @@ msgid "Author"
 msgstr "Δημιουργός"
 
 msgid "Available from the OpenStore!"
-msgstr ""
+msgstr "Είναι διαθέσιμο στο OpenStore!"
 
 msgid "Books & Comics"
 msgstr "Βιβλία & κόμικ"
@@ -163,7 +165,7 @@ msgid "Changelog"
 msgstr "Αρχείο καταγραφής αλλαγών"
 
 msgid "Classic"
-msgstr "Κλασικό"
+msgstr "Classic"
 
 msgid "Close"
 msgstr "Κλείσιμο"
@@ -175,7 +177,10 @@ msgid "Company"
 msgstr "Εταιρεία"
 
 msgid "Confinement:"
-msgstr ""
+msgstr "Απομόνωση:"
+
+msgid "Contact:"
+msgstr "Επαφή:"
 
 msgid "Containing:"
 msgstr "Που περιέχουν:"
@@ -252,6 +257,9 @@ msgstr "Δημιουργία"
 msgid "Create List"
 msgstr "Δημιουργία καταλόγου"
 
+msgid "Database"
+msgstr "Βάση δεδομένων"
+
 msgid "Delete"
 msgstr "Διαγραφή"
 
@@ -262,7 +270,7 @@ msgid "Desktop File:"
 msgstr "Desktop αρχείο:"
 
 msgid "Dev Mode"
-msgstr ""
+msgstr "Dev Mode"
 
 msgid "Developer Tools"
 msgstr "Εργαλεία ανάπτυξης"
@@ -294,6 +302,7 @@ msgstr "Λήψη"
 
 msgid "Downloading the snap will not give you automatic updates"
 msgstr ""
+"Το πακέτο αυτό αν ληφθεί από εδώ δεν θα δέχεται αυτόματες ενημερώσεις"
 
 msgid "Edit"
 msgstr "Επεξεργασία"
@@ -303,6 +312,9 @@ msgstr "Επεξεργασία καταλόγου"
 
 msgid "Education"
 msgstr "Εκπαίδευση"
+
+msgid "Email Contact"
+msgstr "Επαφή ηλεκτρονικού ταχυδρομείου"
 
 msgid "Email Support"
 msgstr "Υποστήριξη μέσω ηλεκτρονικού ταχυδρομείου"
@@ -453,6 +465,9 @@ msgstr ""
 "Η εγκατάσταση θα σε κατευθύνει στο Κέντρο Λογισμικού Gnome (αν είναι "
 "εγκατεστημένο)"
 
+msgid "Internet of Things"
+msgstr "Διαδίκτυο των πραγμάτων"
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Είναι δυνατό να υπάρχει βαθμολογία σε καρδιές με αρνητικό πρόσημο."
 
@@ -507,11 +522,17 @@ msgstr "Χαμηλότερη βαθμολογία σε καρδιές"
 msgid "Lowest Star Rating"
 msgstr "Χαμηλότερη βαθμολογία σε αστέρια"
 
+msgid "Media"
+msgstr "Πολυμέσα"
+
 msgid "Media & Video"
 msgstr "Πολυμέσα & βίντεο"
 
 msgid "Medical"
 msgstr "Ιατρικά"
+
+msgid "Messaging"
+msgstr "Διαδικτυακή επικοινωνία"
 
 msgid "Missing an app?"
 msgstr "Δε μπορείτε να βρείτε την εφαρμογή;"
@@ -557,6 +578,10 @@ msgid ""
 "either wait until the new apps are fetched or use the request form to "
 "request that the app be found early."
 msgstr ""
+"Η λήψη των νέων εφαρμογών από το επίσημο κατάστημα εφαρμογών γίνεται κάθε "
+"λίγες ώρες, μπορείτε είτε να περιμένετε μέχρι να ληφθούν οι νέες εφαρμογές ή "
+"να κάνετε αίτηση να βρεθεί η εφαρμογή νωρίτερα συμπληρώνοντας τη φόρμα "
+"υποβολής."
 
 msgid "Newest"
 msgstr "Νεότερα"
@@ -583,7 +608,7 @@ msgid "None Yet"
 msgstr "Τίποτα ακόμα"
 
 msgid "Not available in the OpenStore"
-msgstr ""
+msgstr "Δεν είναι διαθέσιμο στο OpenStore"
 
 msgid "OEM Snap"
 msgstr "Πακέτο snap κατασκευαστή"
@@ -608,6 +633,9 @@ msgstr "Ανοικτού κώδικα"
 
 msgid "Opens Urls"
 msgstr "Ανοίγει διευθύνσεις URL"
+
+msgid "Ops"
+msgstr "Υποστήριξη"
 
 msgid "Permissions"
 msgstr "Δικαιώματα"
@@ -671,10 +699,10 @@ msgid "Screenshots"
 msgstr "Στιγμιότυπα οθόνης"
 
 msgid "Search phone apps"
-msgstr ""
+msgstr "Αναζήτηση σε εφαρμογές για κινητά"
 
 msgid "Search snaps"
-msgstr ""
+msgstr "Αναζήτηση σε πακέτα snap"
 
 msgid "Send via Caxton"
 msgstr "Αποστολή μέσω Caxton"
@@ -749,7 +777,7 @@ msgid "Status"
 msgstr "Κατάσταση"
 
 msgid "Strict"
-msgstr ""
+msgstr "Strict"
 
 msgid "Support:"
 msgstr "Υποστήριξη:"
@@ -848,8 +876,8 @@ msgstr "Ταξίδια & τοπικά"
 msgid "Type:"
 msgstr "Είδος:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Γενική πρόσβαση/Προσβασιμότητα"
+msgid "Universal Access/Accessibility"
+msgstr "Προσβασιμότητα"
 
 msgid "Unknown"
 msgstr "Άγνωστο"

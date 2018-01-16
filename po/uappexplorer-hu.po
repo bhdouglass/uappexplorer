@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-10-19 06:31+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: hu\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
@@ -175,6 +175,9 @@ msgstr "Vállalat"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "Tartalmazza:"
 
@@ -229,6 +232,9 @@ msgstr "Létrehozás"
 msgid "Create List"
 msgstr "Lista létrehozása"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Törlés"
 
@@ -279,6 +285,9 @@ msgstr "Lista szerkesztése"
 
 msgid "Education"
 msgstr "Oktatás"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "E-mail támogatás"
@@ -423,6 +432,9 @@ msgstr "Telepítés"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Lehetséges a negatív szíves értékelés is."
 
@@ -477,11 +489,17 @@ msgstr "Legalacsonyabb szíves értékelés"
 msgid "Lowest Star Rating"
 msgstr "Legalacsonyabb csillagos értékelés"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Média és videó"
 
 msgid "Medical"
 msgstr "Orvostudomány"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "Hiányzik egy alkalmazás?"
@@ -578,6 +596,9 @@ msgstr "Nyílt forrású"
 
 msgid "Opens Urls"
 msgstr "URL-ek megnyitása"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Jogosultságok"
@@ -812,8 +833,8 @@ msgstr "Utazás"
 msgid "Type:"
 msgstr "Típus:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Kisegítő lehetőségek"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Ismeretlen"

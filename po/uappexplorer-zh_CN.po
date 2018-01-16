@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-07-08 05:11+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: zh_CN\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
@@ -165,6 +165,9 @@ msgstr "公司"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "包含："
 
@@ -216,6 +219,9 @@ msgstr "创建"
 msgid "Create List"
 msgstr "创建列表"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "删除"
 
@@ -264,6 +270,9 @@ msgstr "编辑列表"
 
 msgid "Education"
 msgstr "教育"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "邮件支持"
@@ -397,6 +406,9 @@ msgstr "安装"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "可能有负心评级。"
 
@@ -451,11 +463,17 @@ msgstr "最低心评级"
 msgid "Lowest Star Rating"
 msgstr "最低星评级"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "媒体与影片"
 
 msgid "Medical"
 msgstr "医疗"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "缺少应用？"
@@ -552,6 +570,9 @@ msgstr "开源"
 
 msgid "Opens Urls"
 msgstr "打开 Urls"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "权限"
@@ -767,8 +788,8 @@ msgstr "旅游与本地"
 msgid "Type:"
 msgstr "类型："
 
-msgid "Universal Accesss/Accessibility"
-msgstr "无障碍可用性"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "未知"

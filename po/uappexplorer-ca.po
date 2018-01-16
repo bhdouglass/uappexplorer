@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-07-25 10:13+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
@@ -176,6 +176,9 @@ msgstr "Empresa"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "Que continguin:"
 
@@ -246,6 +249,9 @@ msgstr "Crea"
 msgid "Create List"
 msgstr "Crea la llista"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Suprimeix"
 
@@ -296,6 +302,9 @@ msgstr "Edita la llista"
 
 msgid "Education"
 msgstr "Educació"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Correu de suport"
@@ -436,6 +445,9 @@ msgstr "Instal·la"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Es pot tenir una valoració de cors negativa."
 
@@ -490,11 +502,17 @@ msgstr "Valoració mínima de Cors"
 msgid "Lowest Star Rating"
 msgstr "Valoració mínima de Estrelles"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Multimèdia i vídeo"
 
 msgid "Medical"
 msgstr "Medicina"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "Trobeu a faltar una aplicació?"
@@ -591,6 +609,9 @@ msgstr "Codi obert"
 
 msgid "Opens Urls"
 msgstr "Obre Urls"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Permisos"
@@ -821,8 +842,8 @@ msgstr "Viatges i regional"
 msgid "Type:"
 msgstr "Tipus:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Accés universal/Accessibilitat"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Desconegut"

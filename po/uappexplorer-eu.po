@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-07-27 04:31+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: eu\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
@@ -177,6 +177,9 @@ msgstr "Enpresa"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "Edukia:"
 
@@ -240,6 +243,9 @@ msgstr "Sortu"
 msgid "Create List"
 msgstr "Zerrenda sortu"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Ezabatu"
 
@@ -290,6 +296,9 @@ msgstr "Zerrenda editatu"
 
 msgid "Education"
 msgstr "Hezkuntza"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Email bidezko sostengua"
@@ -429,6 +438,9 @@ msgstr "Instalatu"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Litekeena da bihotz neurketa negatiboa izatea."
 
@@ -483,11 +495,17 @@ msgstr "Bihotz Neurketa baxuena"
 msgid "Lowest Star Rating"
 msgstr "Izar Neurketa baxuena"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Multimedia eta bideoa"
 
 msgid "Medical"
 msgstr "Medikuntza"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "Aplikazio bat falta?"
@@ -584,6 +602,9 @@ msgstr "Kode Irekia"
 
 msgid "Opens Urls"
 msgstr "Url-ak ireki"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Baimenak"
@@ -816,8 +837,8 @@ msgstr "Bidaiak eta tokikoak"
 msgid "Type:"
 msgstr "Mota:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Sarbide unibertsala/Irisgarritasuna"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Ezezaguna"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2017-07-13 07:09+0000\n"
 "Last-Translator: Mustafa Köroğlu <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
@@ -163,6 +163,9 @@ msgstr "Şirket"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "İçeren:"
 
@@ -214,6 +217,9 @@ msgstr "Oluştur"
 msgid "Create List"
 msgstr "Liste Oluştur"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Sil"
 
@@ -259,6 +265,9 @@ msgstr "Listeyi Düzenle"
 
 msgid "Education"
 msgstr "Eğitim"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Email Desteği"
@@ -392,6 +401,9 @@ msgstr ""
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr ""
 
@@ -446,10 +458,16 @@ msgstr ""
 msgid "Lowest Star Rating"
 msgstr ""
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr ""
 
 msgid "Medical"
+msgstr ""
+
+msgid "Messaging"
 msgstr ""
 
 msgid "Missing an app?"
@@ -546,6 +564,9 @@ msgid "Open Source"
 msgstr ""
 
 msgid "Opens Urls"
+msgstr ""
+
+msgid "Ops"
 msgstr ""
 
 msgid "Permissions"
@@ -755,7 +776,7 @@ msgstr ""
 msgid "Type:"
 msgstr ""
 
-msgid "Universal Accesss/Accessibility"
+msgid "Universal Access/Accessibility"
 msgstr ""
 
 msgid "Unknown"

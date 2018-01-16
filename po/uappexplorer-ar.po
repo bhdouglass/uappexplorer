@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-04-26 05:25+0000\n"
 "Last-Translator: Abdulrahman M. S. <Unknown>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
@@ -170,6 +170,9 @@ msgstr "الشركة"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "يحتوي:"
 
@@ -221,6 +224,9 @@ msgstr "إنشاء"
 msgid "Create List"
 msgstr "إنشاء قائمة"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "حذف"
 
@@ -270,6 +276,9 @@ msgstr "تحرير القائمة"
 
 msgid "Education"
 msgstr "التعليم"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "دعم بالبريد الالكتروني"
@@ -409,6 +418,9 @@ msgstr "تثبيت"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "من المحتمل ان تحصل على تقييم سالب بالقلوب."
 
@@ -463,11 +475,17 @@ msgstr "الاقل تقييماً بالقلوب"
 msgid "Lowest Star Rating"
 msgstr "الاقل تقييماً بالنجوم"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "وسائط متعددة و فيديو"
 
 msgid "Medical"
 msgstr "طبي"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "تفتقد تطبيق/"
@@ -564,6 +582,9 @@ msgstr "مفتوح المصدر"
 
 msgid "Opens Urls"
 msgstr "فتح روابط"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "التصاريح"
@@ -790,8 +811,8 @@ msgstr "السفر و المحليات"
 msgid "Type:"
 msgstr "النوع:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "الوصول الشامل/ امكانية الوصول"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "غير معروف"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-06-14 20:02+0000\n"
 "Last-Translator: Bojan Bogdanović <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
@@ -174,6 +174,9 @@ msgstr "Компанија"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "Садржи:"
 
@@ -225,6 +228,9 @@ msgstr "Креирај"
 msgid "Create List"
 msgstr "Креирај листу"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Обриши"
 
@@ -274,6 +280,9 @@ msgstr "Уреди листу"
 
 msgid "Education"
 msgstr "Образовање"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Подршка е-поштом"
@@ -412,6 +421,9 @@ msgstr "Инсталирај"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Могуће је имати негативну оцену срцем."
 
@@ -466,11 +478,17 @@ msgstr "Најнижа оцена срцем"
 msgid "Lowest Star Rating"
 msgstr "Најнижа оцена звездицом"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Медији & Видео"
 
 msgid "Medical"
 msgstr "Медицина"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "Недостаје програм?"
@@ -567,6 +585,9 @@ msgstr "Отвореног кода"
 
 msgid "Opens Urls"
 msgstr "Отрара линкове"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Дозволе"
@@ -795,8 +816,8 @@ msgstr "Путовања & Локално"
 msgid "Type:"
 msgstr "Тип:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Универзални приступ/Приступачност"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Непознато"

@@ -7,36 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2017-07-30 16:34+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
+"PO-Revision-Date: 2018-01-02 16:54+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: nl\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
-"*De installatie zal u begeleiden naar de OpenStore-app op een Ubuntu Touch-"
-"apparaat"
+"Als u klikt op Installeren, dan wordt u doorgestuurd naar de OpenStore-app "
+"op een Ubuntu Touch-apparaat"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
 msgstr ""
-"*Installeren brengt u naar de officiële app-winkel op een Ubuntu Touch-"
-"apparaat"
+"Als u klikt op Installeren, dan wordt u doorgestuurd naar de officiële app-"
+"winkel op een Ubuntu Touch-apparaat"
 
 msgid ""
 "*This webapp injects custom code into the website which can add extra "
 "features or be malicious. Only use this app if you trust the author."
 msgstr ""
-"*Deze webapp voegt extra code toe aan een website, wat kan zorgen voor extra "
-"mogelijkheden, maar het kan ook gevaarlijk zijn. Gebruik deze app alleen als "
-"u de auteur vertrouwt."
+"Deze web-app voegt extra code toe aan de website. Dit kan u extra "
+"mogelijkheden bieden, maar het kan ook gevaarlijk zijn. Gebruik deze app "
+"alleen als u de auteur vertrouwt."
 
 msgid "- Choose a list -"
 msgstr "- Kies een lijst -"
@@ -54,7 +54,7 @@ msgid "All"
 msgstr "Alle"
 
 msgid "All Architectures"
-msgstr "Alle processorarchitecturen"
+msgstr "Alle architecturen"
 
 msgid "All Categories"
 msgstr "Alle categorieën"
@@ -96,7 +96,7 @@ msgid "App"
 msgstr "App"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "App-naam (voorbeeld: com.ubuntu.developer.example)"
+msgstr "App-naam (bijvoorbeeld: com.ubuntu.developer.voorbeeld)"
 
 msgid "App Snaps"
 msgstr "App-Snaps"
@@ -116,7 +116,7 @@ msgid "Architecture:"
 msgstr "Processorarchitectuur:"
 
 msgid "Architectures:"
-msgstr "Processorarchitecturen"
+msgstr "Processorarchitecturen:"
 
 msgid "Are you sure you want to delete this list?"
 msgstr "Weet u zeker dat u deze lijst wilt verwijderen?"
@@ -143,7 +143,7 @@ msgid "Browse Games"
 msgstr "Bladeren door de spellen"
 
 msgid "Browse Scopes"
-msgstr "Bladeren door de scopes"
+msgstr ""
 
 msgid "Browse Snaps"
 msgstr "Bladeren door Snaps"
@@ -178,6 +178,9 @@ msgstr "Bedrijf"
 msgid "Confinement:"
 msgstr "Opsluiting:"
 
+msgid "Contact:"
+msgstr "Contactpersoon:"
+
 msgid "Containing:"
 msgstr "Bevat:"
 
@@ -188,8 +191,8 @@ msgstr ""
 
 msgid "Could not connect to Caxton at this time, please try again later"
 msgstr ""
-"Er momenteel geen verbinding worden gemaakt met Caxton. Probeer het later "
-"opnieuw."
+"Er kan momenteel geen verbinding worden gemaakt met Caxton. Probeer het "
+"later opnieuw."
 
 msgid "Could not create a new list at this time, please try again later"
 msgstr ""
@@ -197,11 +200,11 @@ msgstr ""
 
 msgid "Could not delete the list at this time, please try again later"
 msgstr ""
-"De lijst kan momenteel niet worden verwijderd; probeer het later opnieuw"
+"De lijst kan momenteel niet worden verwijderd. Probeer het later opnieuw."
 
 msgid "Could not download app data, click to retry"
 msgstr ""
-"De appgegevens konden niet worden gedownload; klik om opnieuw te proberen"
+"De app-gegevens kunnen niet worden gedownload; klik om opnieuw te proberen."
 
 msgid "Could not download app list, click to retry"
 msgstr "De applijst kan niet worden gedownload; klik om opnieuw te proberen"
@@ -243,6 +246,9 @@ msgstr "Creëren"
 msgid "Create List"
 msgstr "Lijst creëren"
 
+msgid "Database"
+msgstr "Database"
+
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -253,7 +259,7 @@ msgid "Desktop File:"
 msgstr "Bureaubladbestand:"
 
 msgid "Dev Mode"
-msgstr "Ontw.modus"
+msgstr "Ontwikkelaarsmodus"
 
 msgid "Developer Tools"
 msgstr "Hulpmiddelen voor ontwikkelaars"
@@ -283,7 +289,7 @@ msgid "Download"
 msgstr "Downloaden"
 
 msgid "Downloading the snap will not give you automatic updates"
-msgstr "Door het downloaden van de Snap krijgt u geen automatische updates"
+msgstr ""
 
 msgid "Edit"
 msgstr "Bewerken"
@@ -293,6 +299,9 @@ msgstr "Lijst bewerken"
 
 msgid "Education"
 msgstr "Educatie"
+
+msgid "Email Contact"
+msgstr "E-mailcontactpersoon"
 
 msgid "Email Support"
 msgstr "E-mail-ondersteuning"
@@ -359,7 +368,7 @@ msgid "Get a QR scanner for your Ubuntu Touch device"
 msgstr "Installeer een QR-code-scanner op uw Ubuntu Touch-apparaat"
 
 msgid "Go there now"
-msgstr "Ga naar de scannerapp-pagina"
+msgstr "Ga naar de app-pagina"
 
 msgid "Graphics"
 msgstr "Grafisch"
@@ -386,13 +395,13 @@ msgid "Help translate!"
 msgstr "Help met vertalen!"
 
 msgid "Highest Heart Rating"
-msgstr "Hoogste hart-waardering"
+msgstr "Hoogste hartwaardering"
 
 msgid "Highest Star Rating"
-msgstr "Hoogste ster-waardering"
+msgstr "Hoogste sterwaardering"
 
 msgid "How can I help improve this site?"
-msgstr "Hoe kan ik helpen met het verbeteren van deze website?"
+msgstr "Hoe kan ik helpen deze website te verbeteren?"
 
 msgid "How do I install phone apps and scopes?"
 msgstr "Hoe installeer ik telefoonapps en -scopes?"
@@ -409,7 +418,7 @@ msgstr "Als u code wilt bijdragen, bezoek dan de GitHub-broncodepagina."
 
 msgid "If you want to help translate, visit the Launchpad project."
 msgstr ""
-"Als u wilt helpen bij het vertalen, bezoek dan de Launchpad-projectpagina."
+"Als u wilt helpen met vertalen, bezoek dan de Launchpad-projectpagina."
 
 msgid ""
 "If you want to submit bugs or feature requests visit the GitHub issues page."
@@ -424,7 +433,8 @@ msgid ""
 "If you would like to contribute monetarily, there are multiple options for "
 "donating."
 msgstr ""
-"Als u finanicieel wilt bijdragen, kunt u op meerdere manieren doneren."
+"Wilt u een financiële bijdrage leveren? Er zijn meerdere manieren om te "
+"doneren."
 
 msgid "Info"
 msgstr "Informatie"
@@ -434,11 +444,14 @@ msgstr "Installeren"
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
-"Installeren zal u begeleiden naar het GNOME Softwarecentrum (indien "
-"geïnstalleerd)"
+"Als u klikt op Installeren, dan wordt u doorgestuurd naar het GNOME "
+"Softwarecentrum (indien geïnstalleerd)."
+
+msgid "Internet of Things"
+msgstr "Internet of Things"
 
 msgid "It is possible to have a negative heart rating."
-msgstr "Het is mogelijk om een negatieve hart-waardering te hebben."
+msgstr "Het is mogelijk om een negatieve hartwaardering te hebben."
 
 msgid "Kernel Snap"
 msgstr "Kernel-Snap"
@@ -471,10 +484,10 @@ msgid "List Name:"
 msgstr "Lijstnaam:"
 
 msgid "Load more reviews"
-msgstr "Laad meer reviews"
+msgstr "Meer recensies laden"
 
 msgid "Loading reviews..."
-msgstr "Bezig met laden van reviews..."
+msgstr "Bezig met laden van recensies..."
 
 msgid "Log In"
 msgstr "Inloggen"
@@ -486,16 +499,22 @@ msgid "Log in via Ubuntu"
 msgstr "Inloggen met uw Ubuntu-account"
 
 msgid "Lowest Heart Rating"
-msgstr "Laagste hart-waardering"
+msgstr "Laagste hartwaardering"
 
 msgid "Lowest Star Rating"
-msgstr "Laagste ster-waardering"
+msgstr "Laagste sterwaardering"
+
+msgid "Media"
+msgstr "Media"
 
 msgid "Media & Video"
 msgstr "Media & Video"
 
 msgid "Medical"
 msgstr "Medisch"
+
+msgid "Messaging"
+msgstr "Berichten"
 
 msgid "Missing an app?"
 msgstr "Mist u een app?"
@@ -565,7 +584,7 @@ msgid "No lists, create one!"
 msgstr "Er zijn geen lijsten; creëer er één!"
 
 msgid "No reviews yet!"
-msgstr "Er zijn nog geen reviews!"
+msgstr "Er zijn nog geen recensies!"
 
 msgid "None Yet"
 msgstr "Nog geen"
@@ -580,10 +599,10 @@ msgid "OEM Snaps"
 msgstr "OEM-Snaps"
 
 msgid "OS Snap"
-msgstr "Besturingssysteem-Snap"
+msgstr "Systeem-Snap"
 
 msgid "OS Snaps"
-msgstr "Besturingssysteem-Snaps"
+msgstr "Systeem-Snaps"
 
 msgid "Oldest"
 msgstr "Oudste"
@@ -592,10 +611,13 @@ msgid "Oldest Update"
 msgstr "Minst recente update"
 
 msgid "Open Source"
-msgstr "Open bron"
+msgstr "Open-bron"
 
 msgid "Opens Urls"
 msgstr "Opent URL's"
+
+msgid "Ops"
+msgstr "Ops"
 
 msgid "Permissions"
 msgstr "Toegangsrechten"
@@ -833,7 +855,7 @@ msgstr "Reizen & Lokaal"
 msgid "Type:"
 msgstr "Soort:"
 
-msgid "Universal Accesss/Accessibility"
+msgid "Universal Access/Accessibility"
 msgstr "Universele toegang/Toegankelijkheid"
 
 msgid "Unknown"

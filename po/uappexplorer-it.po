@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2017-05-02 16:35+0000\n"
 "Last-Translator: Mike <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: it\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
@@ -177,6 +177,9 @@ msgstr "Società"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "Contenuto:"
 
@@ -242,6 +245,9 @@ msgstr "Crea"
 msgid "Create List"
 msgstr "Crea elenco"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Rimuovi"
 
@@ -292,6 +298,9 @@ msgstr "Modifica elenco"
 
 msgid "Education"
 msgstr "Istruzione"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Email supporto"
@@ -434,6 +443,9 @@ msgstr "Installa"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "E' possibile avere un punteggio cuore negativo."
 
@@ -488,11 +500,17 @@ msgstr "Valutazione cuore peggiore"
 msgid "Lowest Star Rating"
 msgstr "Valutazione stella peggiore"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Multimedia e video"
 
 msgid "Medical"
 msgstr "Medicina"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "Manca un applicazione?"
@@ -592,6 +610,9 @@ msgstr "Open Source"
 
 msgid "Opens Urls"
 msgstr "Url aperti"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -825,8 +846,8 @@ msgstr "Viaggi e info locali"
 msgid "Type:"
 msgstr "Tipo:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Accesso/accessibilità universale"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Sconosciuto"

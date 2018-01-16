@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2017-02-14 11:41+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
+"PO-Revision-Date: 2018-01-01 01:48+0000\n"
+"Last-Translator: Adolfo Jayme <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
@@ -52,7 +52,7 @@ msgid "All Architectures"
 msgstr "Todas las arquitecturas"
 
 msgid "All Categories"
-msgstr ""
+msgstr "Todas las categorías"
 
 msgid "All Frameworks"
 msgstr "Todas las estructuras"
@@ -159,7 +159,7 @@ msgid "Changelog"
 msgstr "Registro de cambios"
 
 msgid "Classic"
-msgstr ""
+msgstr "Clásico"
 
 msgid "Close"
 msgstr "Cerrar"
@@ -172,6 +172,9 @@ msgstr "Empresa"
 
 msgid "Confinement:"
 msgstr ""
+
+msgid "Contact:"
+msgstr "Contacto:"
 
 msgid "Containing:"
 msgstr "Que contiene:"
@@ -237,6 +240,9 @@ msgstr "Crear"
 msgid "Create List"
 msgstr "Crear lista"
 
+msgid "Database"
+msgstr "Base de datos"
+
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -287,6 +293,9 @@ msgstr "Editar lista"
 
 msgid "Education"
 msgstr "Educación"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Email de soporte"
@@ -431,6 +440,9 @@ msgstr "Instalar"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Es posible tener una clasificacion negativa de corazón"
 
@@ -485,11 +497,17 @@ msgstr "La menor clasificación de corazón"
 msgid "Lowest Star Rating"
 msgstr "La menor clasificacion de estrella"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Multimedia"
 
 msgid "Medical"
 msgstr "Medicina"
+
+msgid "Messaging"
+msgstr "Mensajería"
 
 msgid "Missing an app?"
 msgstr "¿Falta una aplicación?"
@@ -586,6 +604,9 @@ msgstr "Open Source"
 
 msgid "Opens Urls"
 msgstr "Abrir Urls"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Permisos"
@@ -726,7 +747,7 @@ msgid "Status"
 msgstr "Estado"
 
 msgid "Strict"
-msgstr ""
+msgstr "Estricto"
 
 msgid "Support:"
 msgstr "Asistencia técnica:"
@@ -821,8 +842,8 @@ msgstr "Viajes y local"
 msgid "Type:"
 msgstr "Tipo:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Acceso universal/Accesibilidad"
+msgid "Universal Access/Accessibility"
+msgstr "Acceso universal/accesibilidad"
 
 msgid "Unknown"
 msgstr "Desconocido"

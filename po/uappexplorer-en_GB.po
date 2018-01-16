@@ -7,20 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
-"PO-Revision-Date: 2016-05-19 17:53+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
+"PO-Revision-Date: 2017-11-29 08:27+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: en_GB\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
+"*Install will take you to the OpenStore app on an Ubuntu Touch device"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -53,22 +54,22 @@ msgid "All Architectures"
 msgstr "All Architectures"
 
 msgid "All Categories"
-msgstr ""
+msgstr "All Categories"
 
 msgid "All Frameworks"
 msgstr "All Frameworks"
 
 msgid "All Snaps"
-msgstr ""
+msgstr "All Snaps"
 
 msgid "All Types"
-msgstr ""
+msgstr "All Types"
 
 msgid "Any Architecture"
 msgstr "Any Architecture"
 
 msgid "Any Confinement"
-msgstr ""
+msgstr "Any Confinement"
 
 msgid "Any License"
 msgstr "Any Licence"
@@ -95,7 +96,7 @@ msgid "App Name (example: com.ubuntu.developer.example)"
 msgstr "App Name (example: com.ubuntu.developer.example)"
 
 msgid "App Snaps"
-msgstr ""
+msgstr "App Snaps"
 
 msgid "Apps"
 msgstr "Apps"
@@ -122,7 +123,7 @@ msgid "Author"
 msgstr "Author"
 
 msgid "Available from the OpenStore!"
-msgstr ""
+msgstr "Available from the OpenStore!"
 
 msgid "Books & Comics"
 msgstr "Books & Comics"
@@ -140,7 +141,7 @@ msgid "Browse Scopes"
 msgstr "Browse Scopes"
 
 msgid "Browse Snaps"
-msgstr ""
+msgstr "Browse Snaps"
 
 msgid "Business"
 msgstr "Business"
@@ -158,7 +159,7 @@ msgid "Changelog"
 msgstr "Changelog"
 
 msgid "Classic"
-msgstr ""
+msgstr "Classic"
 
 msgid "Close"
 msgstr "Close"
@@ -170,7 +171,10 @@ msgid "Company"
 msgstr "Company"
 
 msgid "Confinement:"
-msgstr ""
+msgstr "Confinement:"
+
+msgid "Contact:"
+msgstr "Contact:"
 
 msgid "Containing:"
 msgstr "Containing:"
@@ -194,10 +198,10 @@ msgid "Could not download app list, click to retry"
 msgstr "Could not download app list, click to retry"
 
 msgid "Could not download snap data, click to retry"
-msgstr ""
+msgstr "Could not download snap data, click to retry"
 
 msgid "Could not download snap list, click to retry"
-msgstr ""
+msgstr "Could not download snap list, click to retry"
 
 msgid "Could not find the requested app"
 msgstr "Could not find the requested app"
@@ -223,6 +227,9 @@ msgstr "Create"
 msgid "Create List"
 msgstr "Create List"
 
+msgid "Database"
+msgstr "Database"
+
 msgid "Delete"
 msgstr "Delete"
 
@@ -233,7 +240,7 @@ msgid "Desktop File:"
 msgstr "Desktop File:"
 
 msgid "Dev Mode"
-msgstr ""
+msgstr "Dev Mode"
 
 msgid "Developer Tools"
 msgstr "Developer Tools"
@@ -262,7 +269,7 @@ msgid "Download"
 msgstr "Download"
 
 msgid "Downloading the snap will not give you automatic updates"
-msgstr ""
+msgstr "Downloading the snap will not give you automatic updates"
 
 msgid "Edit"
 msgstr "Edit"
@@ -272,6 +279,9 @@ msgstr "Edit List"
 
 msgid "Education"
 msgstr "Education"
+
+msgid "Email Contact"
+msgstr "Email Contact"
 
 msgid "Email Support"
 msgstr "Email Support"
@@ -305,7 +315,7 @@ msgid "Food & Drink"
 msgstr "Food & Drink"
 
 msgid "For more information, visit snapcraft.io"
-msgstr ""
+msgstr "For more information, visit snapcraft.io"
 
 msgid "For version:"
 msgstr "For version:"
@@ -314,10 +324,10 @@ msgid "Found the requested app"
 msgstr "Found the requested app"
 
 msgid "Framework Snap"
-msgstr ""
+msgstr "Framework Snap"
 
 msgid "Framework Snaps"
-msgstr ""
+msgstr "Framework Snaps"
 
 msgid "Framework:"
 msgstr "Framework:"
@@ -326,10 +336,10 @@ msgid "Free"
 msgstr "Free"
 
 msgid "Gadget Snap"
-msgstr ""
+msgstr "Gadget Snap"
 
 msgid "Gadget Snaps"
-msgstr ""
+msgstr "Gadget Snaps"
 
 msgid "Games"
 msgstr "Games"
@@ -374,7 +384,7 @@ msgid "How can I help improve this site?"
 msgstr "How can I help improve this site?"
 
 msgid "How do I install phone apps and scopes?"
-msgstr ""
+msgstr "How do I install phone apps and scopes?"
 
 msgid "How is the popularity determined?"
 msgstr "How is the popularity determined?"
@@ -410,16 +420,19 @@ msgid "Install"
 msgstr "Install"
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
-msgstr ""
+msgstr "Install will take you to the GNOME Software Centre (if installed)"
+
+msgid "Internet of Things"
+msgstr "Internet of Things"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "It is possible to have a negative heart rating."
 
 msgid "Kernel Snap"
-msgstr ""
+msgstr "Kernel Snap"
 
 msgid "Kernel Snaps"
-msgstr ""
+msgstr "Kernel Snaps"
 
 msgid "Language"
 msgstr "Language"
@@ -466,11 +479,17 @@ msgstr "Lowest Heart Rating"
 msgid "Lowest Star Rating"
 msgstr "Lowest Star Rating"
 
+msgid "Media"
+msgstr "Media"
+
 msgid "Media & Video"
 msgstr "Media & Video"
 
 msgid "Medical"
 msgstr "Medical"
+
+msgid "Messaging"
+msgstr "Messaging"
 
 msgid "Missing an app?"
 msgstr "Missing an app?"
@@ -485,7 +504,7 @@ msgid "More Info"
 msgstr "More Info"
 
 msgid "More Snaps by:"
-msgstr ""
+msgstr "More Snaps by:"
 
 msgid "Most Expensive (USD)"
 msgstr "Most Expensive (USD)"
@@ -509,13 +528,16 @@ msgid "New List"
 msgstr "New List"
 
 msgid "New Snaps"
-msgstr ""
+msgstr "New Snaps"
 
 msgid ""
 "New apps are fetched from the official appstore every few hours, you can "
 "either wait until the new apps are fetched or use the request form to "
 "request that the app be found early."
 msgstr ""
+"New apps are fetched from the official appstore every few hours, you can "
+"either wait until the new apps are fetched or use the request form to "
+"request that the app be found early."
 
 msgid "Newest"
 msgstr "Newest"
@@ -539,22 +561,22 @@ msgid "No reviews yet!"
 msgstr "No reviews yet!"
 
 msgid "None Yet"
-msgstr ""
+msgstr "None Yet"
 
 msgid "Not available in the OpenStore"
-msgstr ""
+msgstr "Not available in the OpenStore"
 
 msgid "OEM Snap"
-msgstr ""
+msgstr "OEM Snap"
 
 msgid "OEM Snaps"
-msgstr ""
+msgstr "OEM Snaps"
 
 msgid "OS Snap"
-msgstr ""
+msgstr "OS Snap"
 
 msgid "OS Snaps"
-msgstr ""
+msgstr "OS Snaps"
 
 msgid "Oldest"
 msgstr "Oldest"
@@ -567,6 +589,9 @@ msgstr "Open Source"
 
 msgid "Opens Urls"
 msgstr "Opens URLs"
+
+msgid "Ops"
+msgstr "Ops"
 
 msgid "Permissions"
 msgstr "Permissions"
@@ -603,7 +628,7 @@ msgid "QR Code"
 msgstr "QR Code"
 
 msgid "RSS Feeds"
-msgstr ""
+msgstr "RSS Feeds"
 
 msgid "Reference"
 msgstr "Reference"
@@ -630,10 +655,10 @@ msgid "Screenshots"
 msgstr "Screenshots"
 
 msgid "Search phone apps"
-msgstr ""
+msgstr "Search phone apps"
 
 msgid "Search snaps"
-msgstr ""
+msgstr "Search snaps"
 
 msgid "Send via Caxton"
 msgstr "Send via Caxton"
@@ -666,13 +691,13 @@ msgid "Similar Apps"
 msgstr "Similar Apps"
 
 msgid "Similar Snaps"
-msgstr ""
+msgstr "Similar Snaps"
 
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 msgid "Snaps"
-msgstr ""
+msgstr "Snaps"
 
 msgid ""
 "Snaps are a new type of Linux package designed to be cross distribution and "
@@ -680,9 +705,13 @@ msgid ""
 "desktop and server distributions and eventually will be available for Ubuntu "
 "Touch."
 msgstr ""
+"Snaps are a new type of Linux package designed to be cross distribution and "
+"more secure compared to traditional packages. Snaps are available on many "
+"desktop and server distributions and eventually will be available for Ubuntu "
+"Touch."
 
 msgid "Social Media"
-msgstr ""
+msgstr "Social Media"
 
 msgid "Social Networking"
 msgstr "Social Networking"
@@ -700,10 +729,10 @@ msgid "Star Rating"
 msgstr "Star Rating"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Strict"
-msgstr ""
+msgstr "Strict"
 
 msgid "Support:"
 msgstr "Support:"
@@ -715,7 +744,7 @@ msgid "Thank you!"
 msgstr "Thank you!"
 
 msgid "The app you are trying to find does not exist or has been removed."
-msgstr ""
+msgstr "The app you are trying to find does not exist or has been removed."
 
 msgid ""
 "The heart rating is similar to the star rating, but it rewards apps for "
@@ -727,7 +756,7 @@ msgstr ""
 "heart rating than an app with only a few 5 star ratings."
 
 msgid "The snap you are trying to find does not exist or has been removed."
-msgstr ""
+msgstr "The snap you are trying to find does not exist or has been removed."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -795,7 +824,7 @@ msgstr "Travel & Local"
 msgid "Type:"
 msgstr "Type:"
 
-msgid "Universal Accesss/Accessibility"
+msgid "Universal Access/Accessibility"
 msgstr "Universal Access/Accessibility"
 
 msgid "Unknown"
@@ -841,7 +870,7 @@ msgid "Welcome"
 msgstr "Welcome"
 
 msgid "What are snaps?"
-msgstr ""
+msgstr "What are snaps?"
 
 msgid "What do I do if I find copyright or trademark infringing content?"
 msgstr "What do I do if I find copyright or trademark infringing content?"
@@ -882,7 +911,7 @@ msgstr ""
 "settings"
 
 msgid "app snaps"
-msgstr ""
+msgstr "app snaps"
 
 msgid "apps"
 msgid_plural "apps"
@@ -890,10 +919,10 @@ msgstr[0] "apps"
 msgstr[1] "apps"
 
 msgid "framework snaps"
-msgstr ""
+msgstr "framework snaps"
 
 msgid "gadget snaps"
-msgstr ""
+msgstr "gadget snaps"
 
 msgid "games"
 msgid_plural "games"
@@ -901,13 +930,13 @@ msgstr[0] "games"
 msgstr[1] "games"
 
 msgid "kernel snaps"
-msgstr ""
+msgstr "kernel snaps"
 
 msgid "oem snaps"
-msgstr ""
+msgstr "oem snaps"
 
 msgid "os snaps"
-msgstr ""
+msgstr "os snaps"
 
 msgid "phone apps & scopes"
 msgstr "phone apps & scopes"
@@ -918,11 +947,12 @@ msgstr[0] "scopes"
 msgstr[1] "scopes"
 
 msgid "snaps"
-msgstr ""
+msgstr "snaps"
 
 msgid ""
 "uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
 msgstr ""
+"uApp Explorer is the unofficial viewer for snaps and Ubuntu Touch apps."
 
 msgid "web apps"
 msgid_plural "web apps"

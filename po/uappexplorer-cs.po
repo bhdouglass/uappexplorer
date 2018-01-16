@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uappexplorer\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-12 14:00+0000\n"
+"POT-Creation-Date: 2017-09-22 22:30+0000\n"
 "PO-Revision-Date: 2016-06-01 10:06+0000\n"
 "Last-Translator: zubozrout <zubozrout@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-09-18 12:01+0000\n"
-"X-Generator: Launchpad (build 18449)\n"
+"X-Launchpad-Export-Date: 2018-01-16 05:00+0000\n"
+"X-Generator: Launchpad (build 18532)\n"
 "Language: cs\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
@@ -172,6 +172,9 @@ msgstr "Společnost"
 msgid "Confinement:"
 msgstr ""
 
+msgid "Contact:"
+msgstr ""
+
 msgid "Containing:"
 msgstr "Obsahující:"
 
@@ -231,6 +234,9 @@ msgstr "Vytvořit"
 msgid "Create List"
 msgstr "Založit seznam"
 
+msgid "Database"
+msgstr ""
+
 msgid "Delete"
 msgstr "Smazat"
 
@@ -280,6 +286,9 @@ msgstr "Upravit seznam"
 
 msgid "Education"
 msgstr "Vzdělávání"
+
+msgid "Email Contact"
+msgstr ""
 
 msgid "Email Support"
 msgstr "Emailová podpora"
@@ -424,6 +433,9 @@ msgstr "Instalovat"
 msgid "Install will take you to the GNOME Software Center (if installed)"
 msgstr ""
 
+msgid "Internet of Things"
+msgstr ""
+
 msgid "It is possible to have a negative heart rating."
 msgstr "Je možné mít záporné vnitřní hodnocení aplikace"
 
@@ -478,11 +490,17 @@ msgstr "Nejnižší vnitřní hodnocení"
 msgid "Lowest Star Rating"
 msgstr "Nejnižší počet hvězd"
 
+msgid "Media"
+msgstr ""
+
 msgid "Media & Video"
 msgstr "Media a Video"
 
 msgid "Medical"
 msgstr "Lékařství"
+
+msgid "Messaging"
+msgstr ""
 
 msgid "Missing an app?"
 msgstr "Chybí vám nějaká aplikace?"
@@ -579,6 +597,9 @@ msgstr "Otevřený zdrojový kód"
 
 msgid "Opens Urls"
 msgstr "Otevře odkazy"
+
+msgid "Ops"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Oprávnění"
@@ -811,8 +832,8 @@ msgstr "Cestování a Okolí"
 msgid "Type:"
 msgstr "Typ aplikace:"
 
-msgid "Universal Accesss/Accessibility"
-msgstr "Univerzální přístup/Přístupnost"
+msgid "Universal Access/Accessibility"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Neznámý"
