@@ -50,7 +50,7 @@ function sanitize(html) {
 let propertyMap = {
     id: function(click, id) {
         click.name = id;
-        click.url = 'https://open.uappexplorer.com/app/' + id;
+        click.url = 'https://open-store.io/app/' + id;
     },
     name: 'title',
     author: 'author',

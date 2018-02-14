@@ -5,7 +5,7 @@ const logger = require('../../logger');
 
 const axios = require('axios');
 
-const OPENSTORE_URL = 'https://open.uappexplorer.com/api/v1/apps';
+const OPENSTORE_URL = 'https://open-store.io/api/v1/apps';
 class OpenStoreApi {
     list(url, results) {
         url = url ? url : OPENSTORE_URL + '?limit=100';
