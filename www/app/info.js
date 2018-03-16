@@ -447,7 +447,7 @@ module.exports = {
     }, {
       'name': 'Dutch',
       'code': 'nl',
-      'untranslated': 19,
+      'untranslated': 2,
     }, {
       'name': 'English (UK)',
       'code': 'en_GB',
@@ -463,11 +463,11 @@ module.exports = {
     }, {
       'name': 'German',
       'code': 'de',
-      'untranslated': 20,
+      'untranslated': 0,
     }, {
       'name': 'Greek',
       'code': 'el',
-      'untranslated': 11,
+      'untranslated': 0,
     }, {
       'name': 'Hungarian',
       'code': 'hu',
@@ -511,7 +511,7 @@ module.exports = {
     }, {
       'name': 'Spanish',
       'code': 'es',
-      'untranslated': 20,
+      'untranslated': 1,
     }, {
       'name': 'Swedish',
       'code': 'sv',
