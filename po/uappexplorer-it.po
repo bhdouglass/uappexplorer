@@ -20,7 +20,8 @@ msgstr ""
 "Language: it\n"
 
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
-msgstr ""
+msgstr "*L'installazione vi porterà sull'app OpenStore del dispositivo Ubuntu "
+"Touch"
 
 msgid ""
 "*Install will take you to the official appstore on an Ubuntu Touch device"
@@ -52,28 +53,28 @@ msgid "All"
 msgstr "Tutto"
 
 msgid "All Architectures"
-msgstr "italiano"
+msgstr "Tutte le Architetture"
 
 msgid "All Categories"
-msgstr ""
+msgstr "Tutte le Categorie"
 
 msgid "All Frameworks"
-msgstr "italiano"
+msgstr "Tutti i Fraework"
 
 msgid "All Snaps"
-msgstr "Tutto gli snap"
+msgstr "Tutti gli Snap"
 
 msgid "All Types"
-msgstr "Tutti i tipi"
+msgstr "Tutti i Tipi"
 
 msgid "Any Architecture"
-msgstr "italiano"
+msgstr "Qualsiasi Architettura"
 
 msgid "Any Confinement"
-msgstr ""
+msgstr "Qualsiasi Confinamento"
 
 msgid "Any License"
-msgstr "italiano"
+msgstr "Qualsiasi Licenza"
 
 msgid ""
 "Any requests to remove copyright or trademark infringing content should be "
@@ -89,16 +90,16 @@ msgstr ""
 "tab Supporto nella pagina della propria App). uApp Explorer non è affiliata "
 "con Canonical e non ospita nessuna delle app. uApp Explorer mostra solamente "
 "informazioni pubblicamente disponibili riguardo l'appstore ufficiale di "
-"Ubuntu Touch"
+"Ubuntu Touch."
 
 msgid "App"
 msgstr "Applicazione"
 
 msgid "App Name (example: com.ubuntu.developer.example)"
-msgstr "italiano"
+msgstr "Nome Applicazione (esempio:c om.ubuntu.developer.example) "
 
 msgid "App Snaps"
-msgstr "Snap di app"
+msgstr "Snap di App"
 
 msgid "Apps"
 msgstr "App"
@@ -127,7 +128,7 @@ msgid "Author"
 msgstr "Autore"
 
 msgid "Available from the OpenStore!"
-msgstr ""
+msgstr "Disponibile dall'OpenStore"
 
 msgid "Books & Comics"
 msgstr "Libri e fumetti"
@@ -163,7 +164,7 @@ msgid "Changelog"
 msgstr "Elenco modifiche"
 
 msgid "Classic"
-msgstr ""
+msgstr "Classico"
 
 msgid "Close"
 msgstr "Chiudi"
@@ -175,10 +176,10 @@ msgid "Company"
 msgstr "Società"
 
 msgid "Confinement:"
-msgstr ""
+msgstr "Confinamento:"
 
 msgid "Contact:"
-msgstr ""
+msgstr "Contatto:"
 
 msgid "Containing:"
 msgstr "Contenuto:"
@@ -210,10 +211,10 @@ msgid "Could not download app list, click to retry"
 msgstr "Impossibile scaricare l'elenco applicazioni, fare clic per riprovare"
 
 msgid "Could not download snap data, click to retry"
-msgstr ""
+msgstr "Impossibile scaricare i dati dello snap, fare clic per riprovare"
 
 msgid "Could not download snap list, click to retry"
-msgstr ""
+msgstr "Impossibile scaricare la lista snap, fare clic per riprovare"
 
 msgid "Could not find the requested app"
 msgstr "Impossibile trovare l'applicazione richiesta"
@@ -246,7 +247,7 @@ msgid "Create List"
 msgstr "Crea elenco"
 
 msgid "Database"
-msgstr ""
+msgstr "Database"
 
 msgid "Delete"
 msgstr "Rimuovi"
@@ -258,7 +259,7 @@ msgid "Desktop File:"
 msgstr "File desktop"
 
 msgid "Dev Mode"
-msgstr ""
+msgstr "Modalità Dev"
 
 msgid "Developer Tools"
 msgstr "Strumenti per lo sviluppo"
@@ -288,7 +289,7 @@ msgid "Download"
 msgstr "Scarica"
 
 msgid "Downloading the snap will not give you automatic updates"
-msgstr ""
+msgstr "Scaricando lo snap non si avranno aggiornamenti automatici"
 
 msgid "Edit"
 msgstr "Modifica"
@@ -300,7 +301,7 @@ msgid "Education"
 msgstr "Istruzione"
 
 msgid "Email Contact"
-msgstr ""
+msgstr "Contatto Email"
 
 msgid "Email Support"
 msgstr "Email supporto"
@@ -344,10 +345,10 @@ msgid "Found the requested app"
 msgstr "Applicazione richiesta trovata"
 
 msgid "Framework Snap"
-msgstr ""
+msgstr "Snap di Framework"
 
 msgid "Framework Snaps"
-msgstr ""
+msgstr "Snap di Framework"
 
 msgid "Framework:"
 msgstr "Framework:"
@@ -356,10 +357,10 @@ msgid "Free"
 msgstr "Gratuito"
 
 msgid "Gadget Snap"
-msgstr ""
+msgstr "Snap di Gadget"
 
 msgid "Gadget Snaps"
-msgstr ""
+msgstr "Snap di Gadget"
 
 msgid "Games"
 msgstr "Giochi"
@@ -441,10 +442,10 @@ msgid "Install"
 msgstr "Installa"
 
 msgid "Install will take you to the GNOME Software Center (if installed)"
-msgstr ""
+msgstr "L'installazione vi porterà allo Gnome Software Center (se installato)"
 
 msgid "Internet of Things"
-msgstr ""
+msgstr "Internet of Things"
 
 msgid "It is possible to have a negative heart rating."
 msgstr "E' possibile avere un punteggio cuore negativo."
@@ -501,7 +502,7 @@ msgid "Lowest Star Rating"
 msgstr "Valutazione stella peggiore"
 
 msgid "Media"
-msgstr ""
+msgstr "Multimedia"
 
 msgid "Media & Video"
 msgstr "Multimedia e video"
@@ -510,10 +511,10 @@ msgid "Medical"
 msgstr "Medicina"
 
 msgid "Messaging"
-msgstr ""
+msgstr "Messaggistica"
 
 msgid "Missing an app?"
-msgstr "Manca un applicazione?"
+msgstr "Manca un'applicazione?"
 
 msgid "Monthly Popularity"
 msgstr "Popolarità mensile"
@@ -525,7 +526,7 @@ msgid "More Info"
 msgstr "Ulteriori Informazioni"
 
 msgid "More Snaps by:"
-msgstr ""
+msgstr "Altri Snap da:"
 
 msgid "Most Expensive (USD)"
 msgstr "Più costoso (USD)"
@@ -557,8 +558,8 @@ msgid ""
 "request that the app be found early."
 msgstr ""
 "Le nuove app vengono prese dallo store ufficiale ogni poche ore, puoi sia "
-"aspettare che le nuove app siano prese oppure usare il modulo di richiesta "
-"per richiedere che quell'app sia trovata prima."
+"aspettare che le nuove app siano recuperata oppure usare il modulo di "
+"richiesta per richiedere che quell'app sia trovata prima."
 
 msgid "Newest"
 msgstr "Più recente"
@@ -582,10 +583,10 @@ msgid "No reviews yet!"
 msgstr "Ancora nessuna recensione!"
 
 msgid "None Yet"
-msgstr ""
+msgstr "Ancora nessuan"
 
 msgid "Not available in the OpenStore"
-msgstr ""
+msgstr "Non disponibile nell'OpenStore"
 
 msgid "OEM Snap"
 msgstr "OEM Snap"
@@ -612,7 +613,7 @@ msgid "Opens Urls"
 msgstr "Url aperti"
 
 msgid "Ops"
-msgstr ""
+msgstr "Ops"
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -626,7 +627,9 @@ msgstr "Effettuare l'accesso per inviare tramite Caxton"
 msgid ""
 "Popularity is based on the number of 4 and 5 star reviews given to and app "
 "during the current month."
-msgstr "P"
+msgstr 
+"La popolarità è basata sul numero di recensioni con 4 o 5 stelle date all'app"
+"durante il mese corrente"
 
 msgid "Previous App:"
 msgstr "Applicazione precedente:"
@@ -674,10 +677,10 @@ msgid "Screenshots"
 msgstr "Screenshots"
 
 msgid "Search phone apps"
-msgstr ""
+msgstr "Cerca app per smartphone"
 
 msgid "Search snaps"
-msgstr ""
+msgstr "Cerca snap"
 
 msgid "Send via Caxton"
 msgstr "Invia tramite Caxton"
@@ -710,7 +713,7 @@ msgid "Similar Apps"
 msgstr "Applicazioni simili"
 
 msgid "Similar Snaps"
-msgstr ""
+msgstr "Snap Simili"
 
 msgid "Snap"
 msgstr "Snap"
@@ -724,10 +727,10 @@ msgid ""
 "desktop and server distributions and eventually will be available for Ubuntu "
 "Touch."
 msgstr ""
-"Gli Snap sono un nuovo tipo di pacchetti per Linux disegnati per essere *** "
-"e più sicuri comparati ai tradizionali pacchetti. gli Snap sono disponibili "
-"su molte distribuzioni desktop e server e prima o poi saranno disponibili su "
-"Ubuntu Touch"
+"Gli Snap sono un nuovo tipo di pacchetti per Linux disegnati per essere multi "
+"distribuzione e più sicuri comparati ai tradizionali pacchetti. gli Snap sono "
+"disponibili su molte distribuzioni desktop e server e prima o poi saranno "
+"disponibili su Ubuntu Touch"
 
 msgid "Social Media"
 msgstr "Social Media"
@@ -751,7 +754,7 @@ msgid "Status"
 msgstr "Stato"
 
 msgid "Strict"
-msgstr ""
+msgstr "Ristretto"
 
 msgid "Support:"
 msgstr "Supporto:"
@@ -776,7 +779,7 @@ msgstr ""
 "stelle."
 
 msgid "The snap you are trying to find does not exist or has been removed."
-msgstr ""
+msgstr "Lo snap che stai cercando non esiste o è stato rimosso."
 
 msgid ""
 "The star rating is the Bayesian average of the star ratings that user give "
@@ -786,11 +789,11 @@ msgid ""
 "yet. For more information about the Bayesian average calculation, check out "
 "this article."
 msgstr ""
-"Il numero di stelle è la media bayesiana delle stelle di classificazione che "
-"gli utenti danno a un app quando lasciano una recensione. La media Bayesiana "
-"permette applicazioni con altre recensioni di rango meglio di applicazioni "
-"con meno recensioni. Il numero di stelle può essere compreso tra 1 e 5, dove "
-"0 significa che non c'è stato ancora nessun giudizio. Per ulteriori "
+"Il numero di stelle è la media Bayesiana delle stelle di classificazione che "
+"gli utenti danno a un'app quando lasciano una recensione. La media Bayesiana "
+"permette alle applicazioni con più recensioni di classificarsi meglio delle "
+"applicazioni con meno recensioni. Il numero di stelle può essere compreso tra "
+"1 e 5, dove 0 significa che non c'è stato ancora alcun giudizio. Per ulteriori "
 "informazioni sul calcolo della media Bayesiana, consulta questo articolo."
 
 msgid "This app is on these lists:"
@@ -847,7 +850,7 @@ msgid "Type:"
 msgstr "Tipo:"
 
 msgid "Universal Access/Accessibility"
-msgstr ""
+msgstr "Accesso/Accessibilità Universale"
 
 msgid "Unknown"
 msgstr "Sconosciuto"
@@ -939,10 +942,10 @@ msgstr[0] "applicazione"
 msgstr[1] "applicazioni"
 
 msgid "framework snaps"
-msgstr ""
+msgstr "snap di framework"
 
 msgid "gadget snaps"
-msgstr ""
+msgstr "snap di gadget"
 
 msgid "games"
 msgid_plural "games"
@@ -950,10 +953,10 @@ msgstr[0] "gioco"
 msgstr[1] "giochi"
 
 msgid "kernel snaps"
-msgstr ""
+msgstr "snap di kernel"
 
 msgid "oem snaps"
-msgstr ""
+msgstr "snap oem"
 
 msgid "os snaps"
 msgstr "snap dell'os"
@@ -963,8 +966,8 @@ msgstr "App per telefono & scopes"
 
 msgid "scopes"
 msgid_plural "scopes"
-msgstr[0] "ambito"
-msgstr[1] "ambiti"
+msgstr[0] "scope"
+msgstr[1] "scopes"
 
 msgid "snaps"
 msgstr "snap"
