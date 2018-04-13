@@ -113,7 +113,7 @@ module.exports = React.createClass({
             this.state.info.counts.gadget_snaps,
             '/snaps?type=gadget',
             i18n.t('Browse Gadget Snaps'),
-            'fa fa-laptop background-material-cyan'
+            'fa fa-laptop background-material-deep-purple'
           )}
         </div>
 
