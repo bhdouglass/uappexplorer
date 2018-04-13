@@ -81,29 +81,20 @@ module.exports = React.createClass({
         </div>
         <div className="row">
           {this.renderCell(
-            i18n.t('Apps'),
+            i18n.t('Phone Apps'),
             i18n.t('apps', {count: this.state.info.counts.applications}),
             this.state.info.counts.applications,
             '/apps?type=application',
-            i18n.t('Browse Apps'),
+            i18n.t('Browse Phone Apps'),
             'fa fa-mobile background-material-light-blue'
           )}
 
           {this.renderCell(
-            i18n.t('Scopes'),
-            i18n.t('scopes', {count: this.state.info.counts.scopes}),
-            this.state.info.counts.scopes,
-            '/apps?type=scope',
-            i18n.t('Browse Scopes'),
-            'fa fa-search background-material-deep-orange'
-          )}
-
-          {this.renderCell(
-            i18n.t('Games'),
+            i18n.t('Phone Games'),
             i18n.t('games', {count: this.state.info.counts.games}),
             this.state.info.counts.games,
             '/apps?category=games',
-            i18n.t('Browse Games'),
+            i18n.t('Browse Phone Games'),
             'fa fa-gamepad background-material-light-green'
           )}
 
@@ -115,13 +106,22 @@ module.exports = React.createClass({
             i18n.t('Browse Snaps'),
             'fa fa-laptop background-material-cyan'
           )}
+
+          {this.renderCell(
+            i18n.t('Gadget Snaps'),
+            i18n.t('gadget snaps', {count: this.state.info.counts.snaps}),
+            this.state.info.counts.gadget_snaps,
+            '/snaps?type=gadget',
+            i18n.t('Browse Gadget Snaps'),
+            'fa fa-laptop background-material-cyan'
+          )}
         </div>
 
         <If value={this.state.info.loaded && this.state.info.essentials}>
           <div className="row">
             <div className="col-md-12 text-center">
               <h1>
-                <Link to="/apps?sort=-bayesian_average">{i18n.t('Essential Apps')}</Link>
+                <Link to="/apps?sort=-bayesian_average">{i18n.t('Essential Phone Apps')}</Link>
               </h1>
             </div>
           </div>
@@ -146,25 +146,29 @@ module.exports = React.createClass({
           </div>
         </If>
 
-        <If value={this.state.info.top.apps.length > 0}>
+        <If value={this.state.info['new'].apps.length > 0}>
           <div>
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1><Link to="/apps?sort=-points">{i18n.t('Top Apps')}</Link></h1>
+                <h1><Link to="/apps">{i18n.t('New Phone Apps')}</Link></h1>
               </div>
             </div>
 
-            <AppList apps={this.state.info.top.apps} view="grid" />
+            <AppList apps={this.state.info['new'].apps} view="grid" />
           </div>
         </If>
 
-        <AppRow apps={this.state.info['new'].apps}>
-          <Link to="/apps">{i18n.t('New Apps')}</Link>
-        </AppRow>
+        <If value={this.state.info.new_snaps.apps.length > 0}>
+          <div>
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <h1><Link to="/apps">{i18n.t('New Snaps')}</Link></h1>
+              </div>
+            </div>
 
-        <AppRow apps={this.state.info.new_snaps.apps}>
-          <Link to="/snaps">{i18n.t('New Snaps')}</Link>
-        </AppRow>
+            <AppList apps={this.state.info.new_snaps.apps} view="grid" />
+          </div>
+        </If>
       </div>
     );
   }

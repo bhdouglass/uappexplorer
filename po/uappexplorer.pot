@@ -14,9 +14,6 @@ msgstr ""
 msgid "*Install will take you to the OpenStore app on an Ubuntu Touch device"
 msgstr ""
 
-msgid "*Install will take you to the official appstore on an Ubuntu Touch device"
-msgstr ""
-
 msgid "*This webapp injects custom code into the website which can add extra features or be malicious. Only use this app if you trust the author."
 msgstr ""
 
@@ -104,13 +101,13 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-msgid "Browse Apps"
+msgid "Browse Gadget Snaps"
 msgstr ""
 
-msgid "Browse Games"
+msgid "Browse Phone Apps"
 msgstr ""
 
-msgid "Browse Scopes"
+msgid "Browse Phone Games"
 msgstr ""
 
 msgid "Browse Snaps"
@@ -254,7 +251,7 @@ msgstr ""
 msgid "Entertainment"
 msgstr ""
 
-msgid "Essential Apps"
+msgid "Essential Phone Apps"
 msgstr ""
 
 msgid "FAQ"
@@ -479,6 +476,9 @@ msgstr ""
 msgid "New List"
 msgstr ""
 
+msgid "New Phone Apps"
+msgstr ""
+
 msgid "New Snaps"
 msgstr ""
 
@@ -507,9 +507,6 @@ msgid "No reviews yet!"
 msgstr ""
 
 msgid "None Yet"
-msgstr ""
-
-msgid "Not available in the OpenStore"
 msgstr ""
 
 msgid "OEM Snap"
@@ -689,6 +686,9 @@ msgstr ""
 msgid "The star rating is the Bayesian average of the star ratings that user give to an app when they leave a review. The Bayesian average allows apps with more reviews to rank better than apps with less reviews. The star rating can be between 1 and 5, where a 0 means that there have not been any reviews yet. For more information about the Bayesian average calculation, check out this article."
 msgstr ""
 
+msgid "This app is no longer available for Ubuntu Touch, please encourage the author to publish it in the OpenStore."
+msgstr ""
+
 msgid "This app is on these lists:"
 msgstr ""
 
@@ -708,9 +708,6 @@ msgid "To install an app, visit this site on your Ubuntu Touch device. Find the 
 msgstr ""
 
 msgid "To report a problem or request a new feature visit the issues page for this site on GitHub."
-msgstr ""
-
-msgid "Top Apps"
 msgstr ""
 
 msgid "Total Reviews"

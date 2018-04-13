@@ -44,8 +44,6 @@ function counts(callback) {
 
   async.parallel({
     applications: count({types: {'$in': ['application']}}),
-    webapps: count({types: {'$in': ['webapp']}}),
-    scopes: count({types: {'$in': ['scope']}}),
     games: count({categories: 'games'}),
     snaps: function(callback) {
       db.Snap.count({}, function(err, count) {
@@ -56,7 +54,17 @@ function counts(callback) {
           callback(null, count);
         }
       });
-    }
+    },
+    gadget_snaps: function(callback) {
+        db.Snap.count({type: 'gadget'}, function(err, count) {
+          if (err) {
+            callback(err);
+          }
+          else {
+            callback(null, count);
+          }
+        });
+      }
   }, function(err, results) {
     if (err) {
       callback(err);
@@ -526,19 +534,8 @@ function setup(app, success, error) {
 
       function(callback) {
         apps({query: {
-          sort: '-points',
-          limit: 6,
-          search: null,
-          mini: 'true',
-        }}, function(err, results) {
-          callback(err, 'top', results);
-        });
-      },
-
-      function(callback) {
-        apps({query: {
           sort: '-published_date',
-          limit: 3,
+          limit: 6,
           search: null,
           mini: 'true',
         }}, function(err, results) {
@@ -548,7 +545,7 @@ function setup(app, success, error) {
 
       function(callback) {
         let findQuery = db.Snap.find({});
-        findQuery.limit(3);
+        findQuery.limit(6);
         findQuery.sort('-published_date');
         findQuery.then((snaps) => {
           callback(null, 'new_snaps', {

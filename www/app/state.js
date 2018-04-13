@@ -22,14 +22,9 @@ module.exports = new Baobab({
 
     counts: {
       applications: 0,
-      webapps: 0,
-      scopes: 0,
       games: 0,
-    },
-
-    top: {
-      count: 0,
-      apps: [],
+      snaps: 0,
+      gadget_snaps: 0,
     },
 
     'new': {
