@@ -6,8 +6,9 @@ const config = require('../../config');
 const logger = require('../../logger');
 
 class SnapApi {
-    constructor(url) {
+    constructor(url, domain) {
         this.url = url;
+        this.domain = domain;
     }
 
     listArch(url, arch, section, results) {
@@ -33,7 +34,13 @@ class SnapApi {
             }
 
             if (res.data._links && res.data._links.next && res.data._links.next.href) {
-                return this.listArch(res.data._links.next.href, arch, section, results);
+                let url = res.data._links.next.href;
+
+                // Not sure why these links are coming back so weird, but this fixes it
+                url = url.replace('http://snapdevicegw_cached', this.domain);
+                url = url.replace('https://snapdevicegw_cached', this.domain);
+
+                return this.listArch(url, arch, section, results);
             }
             else {
                 return results;

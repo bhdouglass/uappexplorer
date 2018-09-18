@@ -11,7 +11,7 @@ const logger = require('../../logger');
 
 function fetchSnaps() {
     return Promise.all(config.spider.snaps.stores.map((store) => {
-        let api = new SnapApi(store.url);
+        let api = new SnapApi(store.url, store.domain);
 
         return api.list().then((snaps) => {
             const limit = promiseLimit(config.spider.snaps.rate_limit);
@@ -109,7 +109,8 @@ function fetchSnaps() {
             return ses.bulk(upserts, removals);
         }).then(() => {
             logger.debug('Finished parsing snaps');
-        }).catch(() => {
+        }).catch((err) => {
+            logger.error(err);
             logger.error('Error parsing snaps');
         });
     }));

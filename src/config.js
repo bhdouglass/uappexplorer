@@ -71,6 +71,7 @@ var config = {
                 name: 'Ubuntu Store',
                 id: 'ubuntu',
                 url: 'https://search.apps.ubuntu.com/api/v1/snaps',
+                domain: 'https://search.apps.ubuntu.com',
             }
         ],
     }
