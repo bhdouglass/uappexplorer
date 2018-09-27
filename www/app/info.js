@@ -213,20 +213,32 @@ module.exports = {
         internal_name: 'all',
         name: i18n.t('All Categories'),
       }, {
-        internal_name: 'database',
-        name: i18n.t('Database'),
+        internal_name: 'developers',
+        name: i18n.t('Developers'),
       }, {
-        internal_name: 'internet-of-things',
-        name: i18n.t('Internet of Things'),
+        internal_name: 'finance',
+        name: i18n.t('Finance'),
       }, {
-        internal_name: 'media',
-        name: i18n.t('Media'),
+        internal_name: 'games',
+        name: i18n.t('Games'),
       }, {
-        internal_name: 'messaging',
-        name: i18n.t('Messaging'),
+        internal_name: 'graphics',
+        name: i18n.t('Graphics'),
       }, {
-        internal_name: 'ops',
-        name: i18n.t('Ops'),
+        internal_name: 'music',
+        name: i18n.t('Music'),
+      }, {
+        internal_name: 'productivity',
+        name: i18n.t('Productivity'),
+      }, {
+        internal_name: 'social-networking',
+        name: i18n.t('Social Networking'),
+      }, {
+        internal_name: 'utilities',
+        name: i18n.t('Utilities'),
+      }, {
+        internal_name: 'video',
+        name: i18n.t('Video'),
       }
     ];
   },

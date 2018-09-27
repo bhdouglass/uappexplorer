@@ -76,7 +76,7 @@ module.exports = React.createClass({
       <div className="main">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h1><Link to="/apps">{i18n.t('Browse')}</Link></h1>
+            <h1><Link to="/snaps">{i18n.t('Browse')}</Link></h1>
           </div>
         </div>
         <div className="row">
@@ -117,35 +117,6 @@ module.exports = React.createClass({
           )}
         </div>
 
-        <If value={this.state.info.loaded && this.state.info.essentials}>
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h1>
-                <Link to="/apps?sort=-bayesian_average">{i18n.t('Essential Phone Apps')}</Link>
-              </h1>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="essentials margin-auto">
-              <Slider {...settings}>
-                {this.state.info.essentials.apps.map(function(app) {
-                  var link = '/app/' + app.name;
-
-                  return (
-                    <div className="ubuntu-shape" key={link}>
-                      <img src={app.icon} className="rounded" />
-                      <div className="carousel-caption">
-                        <h3><Link to={link}>{app.title}</Link></h3>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          </div>
-        </If>
-
         <If value={this.state.info['new'].apps.length > 0}>
           <div>
             <div className="row">
@@ -162,7 +133,7 @@ module.exports = React.createClass({
           <div>
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1><Link to="/apps">{i18n.t('New Snaps')}</Link></h1>
+                <h1><Link to="/snaps">{i18n.t('New Snaps')}</Link></h1>
               </div>
             </div>
 
